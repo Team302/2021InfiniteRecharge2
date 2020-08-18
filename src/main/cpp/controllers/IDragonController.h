@@ -1,5 +1,5 @@
 //====================================================================================================================================================
-// Copyright 2019 Lake Orion Robotics FIRST Team 302
+// Copyright 2020 Lake Orion Robotics FIRST Team 302
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
 // to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
@@ -13,22 +13,22 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 //====================================================================================================================================================
 
-//C++ Includes
-#include <memory>
+#pragma once
 
-//Team 302 Includes
-#include <states/climber/ClimberRaise.h>
-#include <states/MechanismState.h>
-#include <subsys/IMechanism.h>
-#include <subsys/MechanismFactory.h>
-#include <controllers/MechanismTargetData.h>
+class MechanismTargetData;
+class IDragonMotorController;
 
-
-ClimberRaise::ClimberRaise(
-    ControlData*                    control,
-    double                          target,
-    MechanismTargetData::SOLENOID   solState
-) : MechanismState( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::CLIMBER), control, target, solState )
+class IDragonController
 {
+    public:
+        IDragonController() = default;
+        virtual ~IDragonController()() = default;
 
-}
+        virtual Init
+        (
+            MechanismTargetData*      target,
+            IDragonMotorController*   motor
+        ) = 0;
+
+        virtual Run() = 0;
+};
