@@ -1,0 +1,171 @@
+\hypertarget{class_super_drive}{}\doxysection{Super\+Drive Class Reference}
+\label{class_super_drive}\index{SuperDrive@{SuperDrive}}
+
+
+{\ttfamily \#include $<$Super\+Drive.\+h$>$}
+
+Inheritance diagram for Super\+Drive\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_super_drive}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_super_drive_a8141ce7485eae0c7dd5f1a4bb67f9e9c}{Init}} (\mbox{\hyperlink{class_primitive_params}{Primitive\+Params}} $\ast$params) override
+\item 
+void \mbox{\hyperlink{class_super_drive_a1720ed2254cf46c03d8ad34e2b38bbfa}{Run}} () override
+\item 
+bool \mbox{\hyperlink{class_super_drive_a3f2c91eb6f751219b900eaa022907b0e}{Is\+Done}} () override
+\item 
+void \mbox{\hyperlink{class_super_drive_aa8baae85dbb3bcfb38f22c25b820562a}{Slow\+Down}} ()
+\item 
+bool \mbox{\hyperlink{class_super_drive_a7055bb29e2de08785fecfe8804e245fe}{Reached\+Target\+Speed}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{class_super_drive_a97309413dd3b3f1d68324476d57daba0}{G\+Y\+R\+O\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+S\+T\+A\+NT}} = 6
+\item 
+const float \mbox{\hyperlink{class_super_drive_aa7ab753722262aae87138667bb0bac2f}{I\+N\+C\+H\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+E\+C\+O\+ND}} = 120
+\item 
+const float \mbox{\hyperlink{class_super_drive_ac415c90fe844cd40e438ec7f05061e32}{M\+I\+N\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+L\+O\+W\+D\+O\+WN}} = 13
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_super_drive_ab57095c722e3cd8396c04297b5463900}{Super\+Drive}} ()
+\item 
+virtual \mbox{\hyperlink{class_super_drive_ace10b7100be6b746d68af9a5cd253741}{$\sim$\+Super\+Drive}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 36 of file Super\+Drive.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_super_drive_ab57095c722e3cd8396c04297b5463900}\label{class_super_drive_ab57095c722e3cd8396c04297b5463900}} 
+\index{SuperDrive@{SuperDrive}!SuperDrive@{SuperDrive}}
+\index{SuperDrive@{SuperDrive}!SuperDrive@{SuperDrive}}
+\doxysubsubsection{\texorpdfstring{SuperDrive()}{SuperDrive()}}
+{\footnotesize\ttfamily Super\+Drive\+::\+Super\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 40 of file Super\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_super_drive_ace10b7100be6b746d68af9a5cd253741}\label{class_super_drive_ace10b7100be6b746d68af9a5cd253741}} 
+\index{SuperDrive@{SuperDrive}!````~SuperDrive@{$\sim$SuperDrive}}
+\index{````~SuperDrive@{$\sim$SuperDrive}!SuperDrive@{SuperDrive}}
+\doxysubsubsection{\texorpdfstring{$\sim$SuperDrive()}{~SuperDrive()}}
+{\footnotesize\ttfamily virtual Super\+Drive\+::$\sim$\+Super\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_super_drive_a8141ce7485eae0c7dd5f1a4bb67f9e9c}\label{class_super_drive_a8141ce7485eae0c7dd5f1a4bb67f9e9c}} 
+\index{SuperDrive@{SuperDrive}!Init@{Init}}
+\index{Init@{Init}!SuperDrive@{SuperDrive}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Super\+Drive\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_primitive_params}{Primitive\+Params}} $\ast$}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+auto cd = make\+\_\+shared$<$\+Control\+Data$>$( Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+P\+E\+::\+P\+E\+R\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+UT, Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+R\+U\+N\+\_\+\+L\+O\+C\+S\+::\+M\+O\+T\+O\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER, string(\char`\"{}\+Super\+Drive\char`\"{}), 12.\+0, 0.\+0, 0.\+0, 0.\+0, 0.\+0, 0.\+0, 0.\+0, 1.\+0, 0.\+0 );
+
+Implements \mbox{\hyperlink{class_i_primitive_abe9e4c3b5a5b806d2c551c0f56a075d2}{I\+Primitive}}.
+
+
+
+Definition at line 57 of file Super\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_super_drive_a3f2c91eb6f751219b900eaa022907b0e}\label{class_super_drive_a3f2c91eb6f751219b900eaa022907b0e}} 
+\index{SuperDrive@{SuperDrive}!IsDone@{IsDone}}
+\index{IsDone@{IsDone}!SuperDrive@{SuperDrive}}
+\doxysubsubsection{\texorpdfstring{IsDone()}{IsDone()}}
+{\footnotesize\ttfamily bool Super\+Drive\+::\+Is\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a5b62801261f9bd974be04217bd86f668}{I\+Primitive}}.
+
+
+
+Definition at line 208 of file Super\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_super_drive_a7055bb29e2de08785fecfe8804e245fe}\label{class_super_drive_a7055bb29e2de08785fecfe8804e245fe}} 
+\index{SuperDrive@{SuperDrive}!ReachedTargetSpeed@{ReachedTargetSpeed}}
+\index{ReachedTargetSpeed@{ReachedTargetSpeed}!SuperDrive@{SuperDrive}}
+\doxysubsubsection{\texorpdfstring{ReachedTargetSpeed()}{ReachedTargetSpeed()}}
+{\footnotesize\ttfamily bool Super\+Drive\+::\+Reached\+Target\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 218 of file Super\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_super_drive_a1720ed2254cf46c03d8ad34e2b38bbfa}\label{class_super_drive_a1720ed2254cf46c03d8ad34e2b38bbfa}} 
+\index{SuperDrive@{SuperDrive}!Run@{Run}}
+\index{Run@{Run}!SuperDrive@{SuperDrive}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Super\+Drive\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a3c34bd0f5ddbfe150ecade13303b6cd6}{I\+Primitive}}.
+
+
+
+Definition at line 128 of file Super\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_super_drive_aa8baae85dbb3bcfb38f22c25b820562a}\label{class_super_drive_aa8baae85dbb3bcfb38f22c25b820562a}} 
+\index{SuperDrive@{SuperDrive}!SlowDown@{SlowDown}}
+\index{SlowDown@{SlowDown}!SuperDrive@{SuperDrive}}
+\doxysubsubsection{\texorpdfstring{SlowDown()}{SlowDown()}}
+{\footnotesize\ttfamily void Super\+Drive\+::\+Slow\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 213 of file Super\+Drive.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_super_drive_a97309413dd3b3f1d68324476d57daba0}\label{class_super_drive_a97309413dd3b3f1d68324476d57daba0}} 
+\index{SuperDrive@{SuperDrive}!GYRO\_CORRECTION\_CONSTANT@{GYRO\_CORRECTION\_CONSTANT}}
+\index{GYRO\_CORRECTION\_CONSTANT@{GYRO\_CORRECTION\_CONSTANT}!SuperDrive@{SuperDrive}}
+\doxysubsubsection{\texorpdfstring{GYRO\_CORRECTION\_CONSTANT}{GYRO\_CORRECTION\_CONSTANT}}
+{\footnotesize\ttfamily const float Super\+Drive\+::\+G\+Y\+R\+O\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+S\+T\+A\+NT = 6}
+
+
+
+Definition at line 45 of file Super\+Drive.\+h.
+
+\mbox{\Hypertarget{class_super_drive_aa7ab753722262aae87138667bb0bac2f}\label{class_super_drive_aa7ab753722262aae87138667bb0bac2f}} 
+\index{SuperDrive@{SuperDrive}!INCHES\_PER\_SECOND\_SECOND@{INCHES\_PER\_SECOND\_SECOND}}
+\index{INCHES\_PER\_SECOND\_SECOND@{INCHES\_PER\_SECOND\_SECOND}!SuperDrive@{SuperDrive}}
+\doxysubsubsection{\texorpdfstring{INCHES\_PER\_SECOND\_SECOND}{INCHES\_PER\_SECOND\_SECOND}}
+{\footnotesize\ttfamily const float Super\+Drive\+::\+I\+N\+C\+H\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+E\+C\+O\+ND = 120}
+
+
+
+Definition at line 46 of file Super\+Drive.\+h.
+
+\mbox{\Hypertarget{class_super_drive_ac415c90fe844cd40e438ec7f05061e32}\label{class_super_drive_ac415c90fe844cd40e438ec7f05061e32}} 
+\index{SuperDrive@{SuperDrive}!MIN\_SPEED\_SLOWDOWN@{MIN\_SPEED\_SLOWDOWN}}
+\index{MIN\_SPEED\_SLOWDOWN@{MIN\_SPEED\_SLOWDOWN}!SuperDrive@{SuperDrive}}
+\doxysubsubsection{\texorpdfstring{MIN\_SPEED\_SLOWDOWN}{MIN\_SPEED\_SLOWDOWN}}
+{\footnotesize\ttfamily const float Super\+Drive\+::\+M\+I\+N\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+L\+O\+W\+D\+O\+WN = 13}
+
+
+
+Definition at line 47 of file Super\+Drive.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/auton/primitives/\mbox{\hyperlink{_super_drive_8h}{Super\+Drive.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/auton/primitives/\mbox{\hyperlink{_super_drive_8cpp}{Super\+Drive.\+cpp}}\end{DoxyCompactItemize}

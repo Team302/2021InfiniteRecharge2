@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team 302 Robot: Class Members - Functions</title>
+<title>Robot: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Team 302 Robot
+   <div id="projectname">Robot
    </div>
   </td>
  </tr>
@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 <li>IDragonAnglePositionSensor()
 : <a class="el" href="class_i_dragon_angle_position_sensor.html#a810d0103e3a97a455d02eae479aa1ad8">IDragonAnglePositionSensor</a>
 </li>
+<li>IDragonController()
+: <a class="el" href="class_i_dragon_controller.html#a705aa4f1f3f60b4494c1f37c9319e224">IDragonController</a>
+</li>
 <li>IDragonDistanceSensor()
 : <a class="el" href="class_i_dragon_distance_sensor.html#ab192c7707e597027b8ddef0183d0e0e2">IDragonDistanceSensor</a>
 </li>
@@ -109,6 +112,21 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 <li>IDragonSensor()
 : <a class="el" href="class_i_dragon_sensor.html#ad5b217a4a40900db84330324383d89c7">IDragonSensor</a>
 </li>
+<li>IMech()
+: <a class="el" href="class_i_mech.html#abc01c2761809f6a477e72da77d99595f">IMech</a>
+</li>
+<li>IMech1IndMotor()
+: <a class="el" href="class_i_mech1_ind_motor.html#ad689c8fd8a34ad4cc0c2360933a13c4c">IMech1IndMotor</a>
+</li>
+<li>IMech1Servo()
+: <a class="el" href="class_i_mech1_servo.html#a2a091e5fed010f533b08ecc6816771bd">IMech1Servo</a>
+</li>
+<li>IMech1Solenoid()
+: <a class="el" href="class_i_mech1_solenoid.html#a8054abbf1019f9580114d2b96eb8a6bf">IMech1Solenoid</a>
+</li>
+<li>IMech2IndMotors()
+: <a class="el" href="class_i_mech2_ind_motors.html#aae994a9575acd84fe641a8566d53a698">IMech2IndMotors</a>
+</li>
 <li>IMechanism()
 : <a class="el" href="class_i_mechanism.html#a22f98b8310ad97e65dd710f3ae4ebcbf">IMechanism</a>
 </li>
@@ -118,23 +136,11 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 <li>Impeller()
 : <a class="el" href="class_impeller.html#a33b858e848272f5e03f0ede9c4cfac4a">Impeller</a>
 </li>
-<li>ImpellerAgitate()
-: <a class="el" href="class_impeller_agitate.html#a71df9df7556fcd0bdb5588bdefcfb7ed">ImpellerAgitate</a>
-</li>
-<li>ImpellerHold()
-: <a class="el" href="class_impeller_hold.html#aef7c3df129e35d6e8f2cb333bfa4a296">ImpellerHold</a>
-</li>
-<li>ImpellerOff()
-: <a class="el" href="class_impeller_off.html#af90661573581e5b0c80b420255a5a034">ImpellerOff</a>
-</li>
 <li>ImpellerState()
 : <a class="el" href="class_impeller_state.html#a1d0e92d2b77c272af0907126b867375c">ImpellerState</a>
 </li>
 <li>ImpellerStateMgrTest()
 : <a class="el" href="class_impeller_state_mgr_test.html#a693227e9ba27c292443f6dc2ea695204">ImpellerStateMgrTest</a>
-</li>
-<li>ImpellerToShooter()
-: <a class="el" href="class_impeller_to_shooter.html#a094d41e700a4bc8d3d128e5612459922">ImpellerToShooter</a>
 </li>
 <li>InchesPerSecondToCounts100ms()
 : <a class="el" href="class_conversion_utils.html#af70fc7530f004e338db5f9035bdc63b8">ConversionUtils</a>
@@ -166,6 +172,7 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 , <a class="el" href="class_drive_to_wall.html#adbc157105a2be56d57e4ab92269aa472">DriveToWall</a>
 , <a class="el" href="class_g_t_a_drive.html#a413998dcf52c14974b530d729ad779cb">GTADrive</a>
 , <a class="el" href="class_hold_position.html#a6059d2b98170913f3051b9a24de13cce">HoldPosition</a>
+, <a class="el" href="class_i_dragon_controller.html#a89d292cf9fe37860e6735a0a119cf3a1">IDragonController</a>
 , <a class="el" href="class_i_mech_controller.html#a43c564581e046a9483e469c6da589db9">IMechController</a>
 , <a class="el" href="class_impeller_state_mgr_test.html#abb0630f575b1b15832975ef8fd4e1234">ImpellerStateMgrTest</a>
 , <a class="el" href="class_intake_state_mgr_test.html#a95ec4b80a7a21f9b115277ad8e9ec9ba">IntakeStateMgrTest</a>
@@ -186,17 +193,8 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 <li>Intake()
 : <a class="el" href="class_intake.html#afc5a65a98967287818a803e07c6b9fbe">Intake</a>
 </li>
-<li>IntakeHPSState()
-: <a class="el" href="class_intake_h_p_s_state.html#aeb4b2a9be80ba2e74953683d7d0a61a5">IntakeHPSState</a>
-</li>
-<li>IntakeOff()
-: <a class="el" href="class_intake_off.html#a555e2c3e222cb7fd1c76804e29763867">IntakeOff</a>
-</li>
-<li>IntakeOn()
-: <a class="el" href="class_intake_on.html#a367a3036c0252cdd6be977736475c7f6">IntakeOn</a>
-</li>
 <li>IntakeState()
-: <a class="el" href="class_intake_state.html#a8db9e7f74dad1a59d87e2a9af76c274a">IntakeState</a>
+: <a class="el" href="class_intake_state.html#ae1195d76d579acabdc080b078ad2f2e1">IntakeState</a>
 </li>
 <li>IntakeStateMgrTest()
 : <a class="el" href="class_intake_state_mgr_test.html#a503bf1b638b23c0f92ccc5af73dcffb0">IntakeStateMgrTest</a>
@@ -249,9 +247,11 @@ $(document).ready(function(){initNavTree('functions_func_i.html','');});
 , <a class="el" href="class_crawler.html#a685d572d347d0d428d2ec8bb220f5b8f">Crawler</a>
 , <a class="el" href="class_drive_train_side.html#a64ddb62d04bb2896356fcf02f7a47502">DriveTrainSide</a>
 , <a class="el" href="class_hook_delivery.html#a585b4a2962ce485130d4cc46e13c0db8">HookDelivery</a>
+, <a class="el" href="class_i_mech1_solenoid.html#a2c9e18c4dfebef5b253bb84d6556fe4a">IMech1Solenoid</a>
 , <a class="el" href="class_i_mechanism.html#a4c0bedb71316054749a276a67d278558">IMechanism</a>
 , <a class="el" href="class_impeller.html#ab4e02f70801e9c4fe3d3fa6668feebcb">Impeller</a>
 , <a class="el" href="class_intake.html#a5bb26ce040e9e83d43c5a6258ba3b033">Intake</a>
+, <a class="el" href="class_mech1_solenoid.html#ab50959e3e879323fa1928c839842cdc7">Mech1Solenoid</a>
 , <a class="el" href="class_shooter.html#affa03878246b56a70b206d83369eefca">Shooter</a>
 , <a class="el" href="class_shooter_hood.html#aa8e379f82db178c324a6e6d6e22b4039">ShooterHood</a>
 , <a class="el" href="class_turret.html#a889d15718a50aaa738f2e94d7bb57c7b">Turret</a>

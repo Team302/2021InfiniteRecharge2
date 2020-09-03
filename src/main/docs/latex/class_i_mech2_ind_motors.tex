@@ -1,0 +1,188 @@
+\hypertarget{class_i_mech2_ind_motors}{}\doxysection{I\+Mech2\+Ind\+Motors Interface Reference}
+\label{class_i_mech2_ind_motors}\index{IMech2IndMotors@{IMech2IndMotors}}
+
+
+This is the interface for mechanisms that have two independently controlled motors.  
+
+
+
+
+{\ttfamily \#include $<$I\+Mech2\+Ind\+Motors.\+h$>$}
+
+Inheritance diagram for I\+Mech2\+Ind\+Motors\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_mech2_ind_motors}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_mech2_ind_motors_a1da8a8c5acef53aece885e984431ee3b}{Update}} ()=0
+\begin{DoxyCompactList}\small\item\em update the output to the mechanism using the current controller and target value(s) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_mech2_ind_motors_a37a3fe93fa4ca711bb96a97100bc0187}{Update\+Targets}} (double primary, double secondary)=0
+\item 
+virtual double \mbox{\hyperlink{class_i_mech2_ind_motors_afc8cfcace7afd4f6c698af2208f9a9b8}{Get\+Primary\+Position}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the current position of the primary motor in the mechanism. The value is in inches or degrees. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_mech2_ind_motors_a9a9b1dd5585600ea1255a8b0f030d768}{Get\+Secondary\+Position}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the current position of the secondary motor in the mechanism. The value is in inches or degrees. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_mech2_ind_motors_aba2df5de0db4ada23cd69521f8419199}{Get\+Primary\+Speed}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the current speed of the primary motor in the mechanism. The value is in inches per second or degrees per second. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_mech2_ind_motors_a41b0aa917183790731e76f39a8f9cc2d}{Get\+Secondary\+Speed}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the current speed of the secondary motor in the mechanism. The value is in inches per second or degrees per second. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_mech2_ind_motors_a9de8f3c889207a96895ff6d6f005bd95}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid)=0
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_mech2_ind_motors_aae994a9575acd84fe641a8566d53a698}{I\+Mech2\+Ind\+Motors}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_i_mech2_ind_motors_a1a48455442ca9739822957d902536712}{$\sim$\+I\+Mech2\+Ind\+Motors}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the interface for mechanisms that have two independently controlled motors. 
+
+Interface for subsystems. 
+
+Definition at line 38 of file I\+Mech2\+Ind\+Motors.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_mech2_ind_motors_aae994a9575acd84fe641a8566d53a698}\label{class_i_mech2_ind_motors_aae994a9575acd84fe641a8566d53a698}} 
+\index{IMech2IndMotors@{IMech2IndMotors}!IMech2IndMotors@{IMech2IndMotors}}
+\index{IMech2IndMotors@{IMech2IndMotors}!IMech2IndMotors@{IMech2IndMotors}}
+\doxysubsubsection{\texorpdfstring{IMech2IndMotors()}{IMech2IndMotors()}}
+{\footnotesize\ttfamily I\+Mech2\+Ind\+Motors\+::\+I\+Mech2\+Ind\+Motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_i_mech2_ind_motors_a1a48455442ca9739822957d902536712}\label{class_i_mech2_ind_motors_a1a48455442ca9739822957d902536712}} 
+\index{IMech2IndMotors@{IMech2IndMotors}!````~IMech2IndMotors@{$\sim$IMech2IndMotors}}
+\index{````~IMech2IndMotors@{$\sim$IMech2IndMotors}!IMech2IndMotors@{IMech2IndMotors}}
+\doxysubsubsection{\texorpdfstring{$\sim$IMech2IndMotors()}{~IMech2IndMotors()}}
+{\footnotesize\ttfamily virtual I\+Mech2\+Ind\+Motors\+::$\sim$\+I\+Mech2\+Ind\+Motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_mech2_ind_motors_afc8cfcace7afd4f6c698af2208f9a9b8}\label{class_i_mech2_ind_motors_afc8cfcace7afd4f6c698af2208f9a9b8}} 
+\index{IMech2IndMotors@{IMech2IndMotors}!GetPrimaryPosition@{GetPrimaryPosition}}
+\index{GetPrimaryPosition@{GetPrimaryPosition}!IMech2IndMotors@{IMech2IndMotors}}
+\doxysubsubsection{\texorpdfstring{GetPrimaryPosition()}{GetPrimaryPosition()}}
+{\footnotesize\ttfamily virtual double I\+Mech2\+Ind\+Motors\+::\+Get\+Primary\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the current position of the primary motor in the mechanism. The value is in inches or degrees. 
+
+\begin{DoxyReturn}{Returns}
+double position in inches (translating mechanisms) or degrees (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech2_ind_motors_ad3a95115015b59120f324ed8e03c81c8}{Mech2\+Ind\+Motors}}.
+
+\mbox{\Hypertarget{class_i_mech2_ind_motors_aba2df5de0db4ada23cd69521f8419199}\label{class_i_mech2_ind_motors_aba2df5de0db4ada23cd69521f8419199}} 
+\index{IMech2IndMotors@{IMech2IndMotors}!GetPrimarySpeed@{GetPrimarySpeed}}
+\index{GetPrimarySpeed@{GetPrimarySpeed}!IMech2IndMotors@{IMech2IndMotors}}
+\doxysubsubsection{\texorpdfstring{GetPrimarySpeed()}{GetPrimarySpeed()}}
+{\footnotesize\ttfamily virtual double I\+Mech2\+Ind\+Motors\+::\+Get\+Primary\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the current speed of the primary motor in the mechanism. The value is in inches per second or degrees per second. 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech2_ind_motors_a48e430220cab35fc853ee9838243cb21}{Mech2\+Ind\+Motors}}.
+
+\mbox{\Hypertarget{class_i_mech2_ind_motors_a9a9b1dd5585600ea1255a8b0f030d768}\label{class_i_mech2_ind_motors_a9a9b1dd5585600ea1255a8b0f030d768}} 
+\index{IMech2IndMotors@{IMech2IndMotors}!GetSecondaryPosition@{GetSecondaryPosition}}
+\index{GetSecondaryPosition@{GetSecondaryPosition}!IMech2IndMotors@{IMech2IndMotors}}
+\doxysubsubsection{\texorpdfstring{GetSecondaryPosition()}{GetSecondaryPosition()}}
+{\footnotesize\ttfamily virtual double I\+Mech2\+Ind\+Motors\+::\+Get\+Secondary\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the current position of the secondary motor in the mechanism. The value is in inches or degrees. 
+
+\begin{DoxyReturn}{Returns}
+double position in inches (translating mechanisms) or degrees (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech2_ind_motors_a0925beb0009c1e598dd3231a7198fbf0}{Mech2\+Ind\+Motors}}.
+
+\mbox{\Hypertarget{class_i_mech2_ind_motors_a41b0aa917183790731e76f39a8f9cc2d}\label{class_i_mech2_ind_motors_a41b0aa917183790731e76f39a8f9cc2d}} 
+\index{IMech2IndMotors@{IMech2IndMotors}!GetSecondarySpeed@{GetSecondarySpeed}}
+\index{GetSecondarySpeed@{GetSecondarySpeed}!IMech2IndMotors@{IMech2IndMotors}}
+\doxysubsubsection{\texorpdfstring{GetSecondarySpeed()}{GetSecondarySpeed()}}
+{\footnotesize\ttfamily virtual double I\+Mech2\+Ind\+Motors\+::\+Get\+Secondary\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the current speed of the secondary motor in the mechanism. The value is in inches per second or degrees per second. 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech2_ind_motors_ab5a23357fc5b2789fdb6c93d9ca9ae79}{Mech2\+Ind\+Motors}}.
+
+\mbox{\Hypertarget{class_i_mech2_ind_motors_a9de8f3c889207a96895ff6d6f005bd95}\label{class_i_mech2_ind_motors_a9de8f3c889207a96895ff6d6f005bd95}} 
+\index{IMech2IndMotors@{IMech2IndMotors}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!IMech2IndMotors@{IMech2IndMotors}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily virtual void I\+Mech2\+Ind\+Motors\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid\+: the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech2_ind_motors_a8b4280e243380336ef54fd26027b5dd9}{Mech2\+Ind\+Motors}}.
+
+\mbox{\Hypertarget{class_i_mech2_ind_motors_a1da8a8c5acef53aece885e984431ee3b}\label{class_i_mech2_ind_motors_a1da8a8c5acef53aece885e984431ee3b}} 
+\index{IMech2IndMotors@{IMech2IndMotors}!Update@{Update}}
+\index{Update@{Update}!IMech2IndMotors@{IMech2IndMotors}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void I\+Mech2\+Ind\+Motors\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+update the output to the mechanism using the current controller and target value(s) 
+
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech2_ind_motors_ad459458d7d1912216d61fa0cb29538db}{Mech2\+Ind\+Motors}}.
+
+\mbox{\Hypertarget{class_i_mech2_ind_motors_a37a3fe93fa4ca711bb96a97100bc0187}\label{class_i_mech2_ind_motors_a37a3fe93fa4ca711bb96a97100bc0187}} 
+\index{IMech2IndMotors@{IMech2IndMotors}!UpdateTargets@{UpdateTargets}}
+\index{UpdateTargets@{UpdateTargets}!IMech2IndMotors@{IMech2IndMotors}}
+\doxysubsubsection{\texorpdfstring{UpdateTargets()}{UpdateTargets()}}
+{\footnotesize\ttfamily virtual void I\+Mech2\+Ind\+Motors\+::\+Update\+Targets (\begin{DoxyParamCaption}\item[{double}]{primary,  }\item[{double}]{secondary }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_mech2_ind_motors_a25c34ffd7866a584800e01e85fc0f22c}{Mech2\+Ind\+Motors}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_i_mech2_ind_motors_8h}{I\+Mech2\+Ind\+Motors.\+h}}\end{DoxyCompactItemize}

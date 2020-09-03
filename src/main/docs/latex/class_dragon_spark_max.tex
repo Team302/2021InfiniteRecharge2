@@ -1,0 +1,420 @@
+\hypertarget{class_dragon_spark_max}{}\doxysection{Dragon\+Spark\+Max Class Reference}
+\label{class_dragon_spark_max}\index{DragonSparkMax@{DragonSparkMax}}
+
+
+{\ttfamily \#include $<$Dragon\+Spark\+Max.\+h$>$}
+
+Inheritance diagram for Dragon\+Spark\+Max\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dragon_spark_max}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dragon_spark_max_af2e693005b42054ccf1e8726575bdea5}{Dragon\+Spark\+Max}} ()=delete
+\item 
+\mbox{\hyperlink{class_dragon_spark_max_a063dcd80824c090bb2fc062a809d98de}{Dragon\+Spark\+Max}} (int id, int pdp\+ID, \mbox{\hyperlink{class_motor_controller_usage_a03b7ee94f8c7e42884d5da8974e3a51a}{Motor\+Controller\+Usage\+::\+M\+O\+T\+O\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+S\+A\+GE}} device\+Type, rev\+::\+C\+A\+N\+Spark\+Max\+::\+Motor\+Type motor\+Type, double gear\+Ratio)
+\item 
+virtual \mbox{\hyperlink{class_dragon_spark_max_a3d3170a3db45ac5e2119e6d7b5d99c33}{$\sim$\+Dragon\+Spark\+Max}} ()=default
+\item 
+double \mbox{\hyperlink{class_dragon_spark_max_a73ec6f1d7783143f62b2b1935b292051}{Get\+Rotations}} () const override
+\begin{DoxyCompactList}\small\item\em Return the number of revolutions the output shaft has spun. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_dragon_spark_max_a112b2519cf850dfbf556118dbf24d350}{Get\+R\+PS}} () const override
+\begin{DoxyCompactList}\small\item\em Return the angular velocity in revolutions per second. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_motor_controller_usage_a03b7ee94f8c7e42884d5da8974e3a51a}{Motor\+Controller\+Usage\+::\+M\+O\+T\+O\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+S\+A\+GE}} \mbox{\hyperlink{class_dragon_spark_max_a0a1ff495bb882e7c5a5ecee6beef728e}{Get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Return the usage of the motor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_dragon_spark_max_a3390286ef0c87a7a7e7bd62c9acfe297}{Get\+ID}} () const override
+\begin{DoxyCompactList}\small\item\em Return the C\+AN ID. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ frc\+::\+Speed\+Controller $>$ \mbox{\hyperlink{class_dragon_spark_max_aa479cc87e8242ca893f47662518f84d1}{Get\+Speed\+Controller}} () const override
+\begin{DoxyCompactList}\small\item\em Return the speedcontroller. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_dragon_spark_max_ab2b22ee7a00b3e6a10125981848944f3}{Get\+Current}} () const override
+\begin{DoxyCompactList}\small\item\em Return the current usage. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ rev\+::\+C\+A\+N\+Spark\+Max $>$ \mbox{\hyperlink{class_dragon_spark_max_aae4682908f0d1d4632305afcc7c29722}{Get\+Spark\+Max}} () const
+\item 
+void \mbox{\hyperlink{class_dragon_spark_max_a47cda85cdba80165e485bb5bf5c41726}{Set\+Control\+Mode}} (\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} mode) override
+\item 
+void \mbox{\hyperlink{class_dragon_spark_max_a38eb54d110601f8fb7bb2e324f549016}{Set}} (double value) override
+\item 
+void \mbox{\hyperlink{class_dragon_spark_max_a30be4189ed4796945e3de09a5e9131e8}{Set\+Rotation\+Offset}} (double rotations) override
+\item 
+void \mbox{\hyperlink{class_dragon_spark_max_a1105074c2d2d7a2f719c8f5e41f02394}{Set\+Voltage\+Ramping}} (double ramping, double ramping\+Closed\+Loop=-\/1) override
+\item 
+void \mbox{\hyperlink{class_dragon_spark_max_af605cf5a714e65639678e41f00445f0c}{Enable\+Current\+Limiting}} (bool enabled) override
+\item 
+void \mbox{\hyperlink{class_dragon_spark_max_ad0f4b822780fc624487285aed3f386e4}{Enable\+Brake\+Mode}} (bool enabled) override
+\item 
+void \mbox{\hyperlink{class_dragon_spark_max_ac6b2718e28d1b81f040ee8efb9786750}{Invert}} (bool inverted) override
+\item 
+void \mbox{\hyperlink{class_dragon_spark_max_a67be736e73bf22920239944c5a9ebc5d}{Set\+Sensor\+Inverted}} (bool inverted) override
+\item 
+void \mbox{\hyperlink{class_dragon_spark_max_a3d5608ab963c80b01dcfbeba3ad71f49}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$control\+Info) override
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dragon_spark_max_af4d2ada3b631fae7e56521dc053f20a6}{Set\+Smart\+Current\+Limiting}} (int limit)
+\item 
+rev\+::\+C\+A\+N\+Error \mbox{\hyperlink{class_dragon_spark_max_a3072bc5a5bb632f67731342f6ff17d42}{Follow}} (\mbox{\hyperlink{class_dragon_spark_max}{Dragon\+Spark\+Max}} $\ast$leader, bool invert=false)
+\item 
+void \mbox{\hyperlink{class_dragon_spark_max_a1efdeaf37e0d6296a155db0a0d5b0239}{Set\+Remote\+Sensor}} (int can\+ID, ctre\+::phoenix\+::motorcontrol\+::\+Remote\+Sensor\+Source device\+Type) override
+\item 
+void \mbox{\hyperlink{class_dragon_spark_max_a8db88ceea2f749de7f6ca866f1a8e764}{Set\+Diameter}} (double diameter) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 25 of file Dragon\+Spark\+Max.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dragon_spark_max_af2e693005b42054ccf1e8726575bdea5}\label{class_dragon_spark_max_af2e693005b42054ccf1e8726575bdea5}} 
+\index{DragonSparkMax@{DragonSparkMax}!DragonSparkMax@{DragonSparkMax}}
+\index{DragonSparkMax@{DragonSparkMax}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{DragonSparkMax()}{DragonSparkMax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Dragon\+Spark\+Max\+::\+Dragon\+Spark\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_dragon_spark_max_a063dcd80824c090bb2fc062a809d98de}\label{class_dragon_spark_max_a063dcd80824c090bb2fc062a809d98de}} 
+\index{DragonSparkMax@{DragonSparkMax}!DragonSparkMax@{DragonSparkMax}}
+\index{DragonSparkMax@{DragonSparkMax}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{DragonSparkMax()}{DragonSparkMax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Dragon\+Spark\+Max\+::\+Dragon\+Spark\+Max (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{pdp\+ID,  }\item[{\mbox{\hyperlink{class_motor_controller_usage_a03b7ee94f8c7e42884d5da8974e3a51a}{Motor\+Controller\+Usage\+::\+M\+O\+T\+O\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+S\+A\+GE}}}]{device\+Type,  }\item[{rev\+::\+C\+A\+N\+Spark\+Max\+::\+Motor\+Type}]{motor\+Type,  }\item[{double}]{gear\+Ratio }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_dragon_spark_max_a3d3170a3db45ac5e2119e6d7b5d99c33}\label{class_dragon_spark_max_a3d3170a3db45ac5e2119e6d7b5d99c33}} 
+\index{DragonSparkMax@{DragonSparkMax}!````~DragonSparkMax@{$\sim$DragonSparkMax}}
+\index{````~DragonSparkMax@{$\sim$DragonSparkMax}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{$\sim$DragonSparkMax()}{~DragonSparkMax()}}
+{\footnotesize\ttfamily virtual Dragon\+Spark\+Max\+::$\sim$\+Dragon\+Spark\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dragon_spark_max_ad0f4b822780fc624487285aed3f386e4}\label{class_dragon_spark_max_ad0f4b822780fc624487285aed3f386e4}} 
+\index{DragonSparkMax@{DragonSparkMax}!EnableBrakeMode@{EnableBrakeMode}}
+\index{EnableBrakeMode@{EnableBrakeMode}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{EnableBrakeMode()}{EnableBrakeMode()}}
+{\footnotesize\ttfamily void Dragon\+Spark\+Max\+::\+Enable\+Brake\+Mode (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_a35b6fe6bc4b6a582d99ec223206e4add}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 203 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_af605cf5a714e65639678e41f00445f0c}\label{class_dragon_spark_max_af605cf5a714e65639678e41f00445f0c}} 
+\index{DragonSparkMax@{DragonSparkMax}!EnableCurrentLimiting@{EnableCurrentLimiting}}
+\index{EnableCurrentLimiting@{EnableCurrentLimiting}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{EnableCurrentLimiting()}{EnableCurrentLimiting()}}
+{\footnotesize\ttfamily void Dragon\+Spark\+Max\+::\+Enable\+Current\+Limiting (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_aabc3307852ea64aebdf940f37cade673}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 197 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a3072bc5a5bb632f67731342f6ff17d42}\label{class_dragon_spark_max_a3072bc5a5bb632f67731342f6ff17d42}} 
+\index{DragonSparkMax@{DragonSparkMax}!Follow@{Follow}}
+\index{Follow@{Follow}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{Follow()}{Follow()}}
+{\footnotesize\ttfamily C\+A\+N\+Error Dragon\+Spark\+Max\+::\+Follow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dragon_spark_max}{Dragon\+Spark\+Max}} $\ast$}]{leader,  }\item[{bool}]{invert = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 214 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_ab2b22ee7a00b3e6a10125981848944f3}\label{class_dragon_spark_max_ab2b22ee7a00b3e6a10125981848944f3}} 
+\index{DragonSparkMax@{DragonSparkMax}!GetCurrent@{GetCurrent}}
+\index{GetCurrent@{GetCurrent}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{GetCurrent()}{GetCurrent()}}
+{\footnotesize\ttfamily double Dragon\+Spark\+Max\+::\+Get\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the current usage. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ amperage usage for the controller 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_a95921146f1d1157bfcbaa568216f94a9}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 68 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a3390286ef0c87a7a7e7bd62c9acfe297}\label{class_dragon_spark_max_a3390286ef0c87a7a7e7bd62c9acfe297}} 
+\index{DragonSparkMax@{DragonSparkMax}!GetID@{GetID}}
+\index{GetID@{GetID}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{GetID()}{GetID()}}
+{\footnotesize\ttfamily int Dragon\+Spark\+Max\+::\+Get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the C\+AN ID. 
+
+\begin{DoxyReturn}{Returns}
+int -\/ C\+AN ID 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_ad70e1b0a007c03cc07a6ee531d6701d6}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 58 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a73ec6f1d7783143f62b2b1935b292051}\label{class_dragon_spark_max_a73ec6f1d7783143f62b2b1935b292051}} 
+\index{DragonSparkMax@{DragonSparkMax}!GetRotations@{GetRotations}}
+\index{GetRotations@{GetRotations}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{GetRotations()}{GetRotations()}}
+{\footnotesize\ttfamily double Dragon\+Spark\+Max\+::\+Get\+Rotations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the number of revolutions the output shaft has spun. 
+
+\begin{DoxyReturn}{Returns}
+double number of revolutions 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_aaebed7f496f5e56709a5dda5d7749782}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 43 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a112b2519cf850dfbf556118dbf24d350}\label{class_dragon_spark_max_a112b2519cf850dfbf556118dbf24d350}} 
+\index{DragonSparkMax@{DragonSparkMax}!GetRPS@{GetRPS}}
+\index{GetRPS@{GetRPS}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{GetRPS()}{GetRPS()}}
+{\footnotesize\ttfamily double Dragon\+Spark\+Max\+::\+Get\+R\+PS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the angular velocity in revolutions per second. 
+
+\begin{DoxyReturn}{Returns}
+double angular velocity in revolutions per second 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_a17ff2a8c53eb525c629ea1dbfe617e72}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 48 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_aae4682908f0d1d4632305afcc7c29722}\label{class_dragon_spark_max_aae4682908f0d1d4632305afcc7c29722}} 
+\index{DragonSparkMax@{DragonSparkMax}!GetSparkMax@{GetSparkMax}}
+\index{GetSparkMax@{GetSparkMax}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{GetSparkMax()}{GetSparkMax()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ C\+A\+N\+Spark\+Max $>$ Dragon\+Spark\+Max\+::\+Get\+Spark\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 231 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_aa479cc87e8242ca893f47662518f84d1}\label{class_dragon_spark_max_aa479cc87e8242ca893f47662518f84d1}} 
+\index{DragonSparkMax@{DragonSparkMax}!GetSpeedController@{GetSpeedController}}
+\index{GetSpeedController@{GetSpeedController}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{GetSpeedController()}{GetSpeedController()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ Speed\+Controller $>$ Dragon\+Spark\+Max\+::\+Get\+Speed\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the speedcontroller. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$frc\+::\+Speed\+Controll$>$ -\/ pointer to the speed controller object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_a1e513a4bd1623bedb289c203a4b0c3fb}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 63 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a0a1ff495bb882e7c5a5ecee6beef728e}\label{class_dragon_spark_max_a0a1ff495bb882e7c5a5ecee6beef728e}} 
+\index{DragonSparkMax@{DragonSparkMax}!GetType@{GetType}}
+\index{GetType@{GetType}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_motor_controller_usage_a03b7ee94f8c7e42884d5da8974e3a51a}{Motor\+Controller\+Usage\+::\+M\+O\+T\+O\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+S\+A\+GE}} Dragon\+Spark\+Max\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the usage of the motor. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_motor_controller_usage_a03b7ee94f8c7e42884d5da8974e3a51a}{Motor\+Controller\+Usage\+::\+M\+O\+T\+O\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+S\+A\+GE}} -\/ what the motor is used for 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_a0b4ae4352bf46cae7d783c4e8c36aa6e}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 53 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_ac6b2718e28d1b81f040ee8efb9786750}\label{class_dragon_spark_max_ac6b2718e28d1b81f040ee8efb9786750}} 
+\index{DragonSparkMax@{DragonSparkMax}!Invert@{Invert}}
+\index{Invert@{Invert}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{Invert()}{Invert()}}
+{\footnotesize\ttfamily void Dragon\+Spark\+Max\+::\+Invert (\begin{DoxyParamCaption}\item[{bool}]{inverted }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_aae1077a659ed6c8f89d565f6411e56a3}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 208 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a38eb54d110601f8fb7bb2e324f549016}\label{class_dragon_spark_max_a38eb54d110601f8fb7bb2e324f549016}} 
+\index{DragonSparkMax@{DragonSparkMax}!Set@{Set}}
+\index{Set@{Set}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily void Dragon\+Spark\+Max\+::\+Set (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_adacee402a923d6a10d50abd1c850138e}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 116 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a3d5608ab963c80b01dcfbeba3ad71f49}\label{class_dragon_spark_max_a3d5608ab963c80b01dcfbeba3ad71f49}} 
+\index{DragonSparkMax@{DragonSparkMax}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily void Dragon\+Spark\+Max\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{control\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid -\/ the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_abdca297c707d0c1f5e36bc0be37396d5}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 245 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a47cda85cdba80165e485bb5bf5c41726}\label{class_dragon_spark_max_a47cda85cdba80165e485bb5bf5c41726}} 
+\index{DragonSparkMax@{DragonSparkMax}!SetControlMode@{SetControlMode}}
+\index{SetControlMode@{SetControlMode}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{SetControlMode()}{SetControlMode()}}
+{\footnotesize\ttfamily void Dragon\+Spark\+Max\+::\+Set\+Control\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_ac1436f0089d933ba4310abca76059e63}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 73 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a8db88ceea2f749de7f6ca866f1a8e764}\label{class_dragon_spark_max_a8db88ceea2f749de7f6ca866f1a8e764}} 
+\index{DragonSparkMax@{DragonSparkMax}!SetDiameter@{SetDiameter}}
+\index{SetDiameter@{SetDiameter}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{SetDiameter()}{SetDiameter()}}
+{\footnotesize\ttfamily void Dragon\+Spark\+Max\+::\+Set\+Diameter (\begin{DoxyParamCaption}\item[{double}]{diameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_ae94b716ecf9b1bb64c7184d904ef9e6d}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 264 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a1efdeaf37e0d6296a155db0a0d5b0239}\label{class_dragon_spark_max_a1efdeaf37e0d6296a155db0a0d5b0239}} 
+\index{DragonSparkMax@{DragonSparkMax}!SetRemoteSensor@{SetRemoteSensor}}
+\index{SetRemoteSensor@{SetRemoteSensor}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{SetRemoteSensor()}{SetRemoteSensor()}}
+{\footnotesize\ttfamily void Dragon\+Spark\+Max\+::\+Set\+Remote\+Sensor (\begin{DoxyParamCaption}\item[{int}]{can\+ID,  }\item[{ctre\+::phoenix\+::motorcontrol\+::\+Remote\+Sensor\+Source}]{device\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_a5f5568cf4e1c64b327795135753678a1}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 255 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a30be4189ed4796945e3de09a5e9131e8}\label{class_dragon_spark_max_a30be4189ed4796945e3de09a5e9131e8}} 
+\index{DragonSparkMax@{DragonSparkMax}!SetRotationOffset@{SetRotationOffset}}
+\index{SetRotationOffset@{SetRotationOffset}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{SetRotationOffset()}{SetRotationOffset()}}
+{\footnotesize\ttfamily void Dragon\+Spark\+Max\+::\+Set\+Rotation\+Offset (\begin{DoxyParamCaption}\item[{double}]{rotations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_ab8ceadc2e3c436b6c5b281e526d4007d}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 180 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a67be736e73bf22920239944c5a9ebc5d}\label{class_dragon_spark_max_a67be736e73bf22920239944c5a9ebc5d}} 
+\index{DragonSparkMax@{DragonSparkMax}!SetSensorInverted@{SetSensorInverted}}
+\index{SetSensorInverted@{SetSensorInverted}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{SetSensorInverted()}{SetSensorInverted()}}
+{\footnotesize\ttfamily void Dragon\+Spark\+Max\+::\+Set\+Sensor\+Inverted (\begin{DoxyParamCaption}\item[{bool}]{inverted }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_a108645163a4c281f5c83b72136fe5cae}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 226 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_af4d2ada3b631fae7e56521dc053f20a6}\label{class_dragon_spark_max_af4d2ada3b631fae7e56521dc053f20a6}} 
+\index{DragonSparkMax@{DragonSparkMax}!SetSmartCurrentLimiting@{SetSmartCurrentLimiting}}
+\index{SetSmartCurrentLimiting@{SetSmartCurrentLimiting}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{SetSmartCurrentLimiting()}{SetSmartCurrentLimiting()}}
+{\footnotesize\ttfamily void Dragon\+Spark\+Max\+::\+Set\+Smart\+Current\+Limiting (\begin{DoxyParamCaption}\item[{int}]{limit }\end{DoxyParamCaption})}
+
+
+
+Definition at line 236 of file Dragon\+Spark\+Max.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_spark_max_a1105074c2d2d7a2f719c8f5e41f02394}\label{class_dragon_spark_max_a1105074c2d2d7a2f719c8f5e41f02394}} 
+\index{DragonSparkMax@{DragonSparkMax}!SetVoltageRamping@{SetVoltageRamping}}
+\index{SetVoltageRamping@{SetVoltageRamping}!DragonSparkMax@{DragonSparkMax}}
+\doxysubsubsection{\texorpdfstring{SetVoltageRamping()}{SetVoltageRamping()}}
+{\footnotesize\ttfamily void Dragon\+Spark\+Max\+::\+Set\+Voltage\+Ramping (\begin{DoxyParamCaption}\item[{double}]{ramping,  }\item[{double}]{ramping\+Closed\+Loop = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_dragon_motor_controller_adf68e251d62ea48a3cf1ca4c395529a6}{I\+Dragon\+Motor\+Controller}}.
+
+
+
+Definition at line 185 of file Dragon\+Spark\+Max.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/\mbox{\hyperlink{_dragon_spark_max_8h}{Dragon\+Spark\+Max.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/\mbox{\hyperlink{_dragon_spark_max_8cpp}{Dragon\+Spark\+Max.\+cpp}}\end{DoxyCompactItemize}

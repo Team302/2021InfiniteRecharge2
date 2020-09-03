@@ -1,0 +1,115 @@
+\hypertarget{class_i_mech}{}\doxysection{I\+Mech Interface Reference}
+\label{class_i_mech}\index{IMech@{IMech}}
+
+
+This is the interface for mechanisms regardless of what control items are available.  
+
+
+
+
+{\ttfamily \#include $<$I\+Mech.\+h$>$}
+
+Inheritance diagram for I\+Mech\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_mech}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{class_i_mech_aa3c52c74a67a5f1caa2c11c13dacccdb}{Get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Indicates the type of mechanism this is. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_i_mech_a696bed03ac45f3da85cbe26e8658e0fd}{Get\+Control\+File\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em indicate the file used to get the control parameters from \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_i_mech_ab817a939691114a20840a82d40f894fa}{Get\+Network\+Table\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em indicate the Network Table name used to setting tracking parameters \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_mech_abc01c2761809f6a477e72da77d99595f}{I\+Mech}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_i_mech_ac415971e67e52e0cd2b3c1aa1312f1a1}{$\sim$\+I\+Mech}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the interface for mechanisms regardless of what control items are available. 
+
+Interface for subsystems. 
+
+Definition at line 38 of file I\+Mech.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_mech_abc01c2761809f6a477e72da77d99595f}\label{class_i_mech_abc01c2761809f6a477e72da77d99595f}} 
+\index{IMech@{IMech}!IMech@{IMech}}
+\index{IMech@{IMech}!IMech@{IMech}}
+\doxysubsubsection{\texorpdfstring{IMech()}{IMech()}}
+{\footnotesize\ttfamily I\+Mech\+::\+I\+Mech (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_i_mech_ac415971e67e52e0cd2b3c1aa1312f1a1}\label{class_i_mech_ac415971e67e52e0cd2b3c1aa1312f1a1}} 
+\index{IMech@{IMech}!````~IMech@{$\sim$IMech}}
+\index{````~IMech@{$\sim$IMech}!IMech@{IMech}}
+\doxysubsubsection{\texorpdfstring{$\sim$IMech()}{~IMech()}}
+{\footnotesize\ttfamily virtual I\+Mech\+::$\sim$\+I\+Mech (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_mech_a696bed03ac45f3da85cbe26e8658e0fd}\label{class_i_mech_a696bed03ac45f3da85cbe26e8658e0fd}} 
+\index{IMech@{IMech}!GetControlFileName@{GetControlFileName}}
+\index{GetControlFileName@{GetControlFileName}!IMech@{IMech}}
+\doxysubsubsection{\texorpdfstring{GetControlFileName()}{GetControlFileName()}}
+{\footnotesize\ttfamily virtual std\+::string I\+Mech\+::\+Get\+Control\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+indicate the file used to get the control parameters from 
+
+\begin{DoxyReturn}{Returns}
+std\+::string the name of the file ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech_a920a923776b0a1b827e5ad689bc6ecf8}{Mech}}.
+
+\mbox{\Hypertarget{class_i_mech_ab817a939691114a20840a82d40f894fa}\label{class_i_mech_ab817a939691114a20840a82d40f894fa}} 
+\index{IMech@{IMech}!GetNetworkTableName@{GetNetworkTableName}}
+\index{GetNetworkTableName@{GetNetworkTableName}!IMech@{IMech}}
+\doxysubsubsection{\texorpdfstring{GetNetworkTableName()}{GetNetworkTableName()}}
+{\footnotesize\ttfamily virtual std\+::string I\+Mech\+::\+Get\+Network\+Table\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+indicate the Network Table name used to setting tracking parameters 
+
+\begin{DoxyReturn}{Returns}
+std\+::string the name of the network table ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech_a502d8be2ff8725323c22371cba93dd37}{Mech}}.
+
+\mbox{\Hypertarget{class_i_mech_aa3c52c74a67a5f1caa2c11c13dacccdb}\label{class_i_mech_aa3c52c74a67a5f1caa2c11c13dacccdb}} 
+\index{IMech@{IMech}!GetType@{GetType}}
+\index{GetType@{GetType}!IMech@{IMech}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} I\+Mech\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Indicates the type of mechanism this is. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech_acb9e3f4091481906e0a191e10f2f0a04}{Mech}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_i_mech_8h}{I\+Mech.\+h}}\end{DoxyCompactItemize}

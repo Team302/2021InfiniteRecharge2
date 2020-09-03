@@ -1,0 +1,434 @@
+\hypertarget{class_dragon_limelight}{}\doxysection{Dragon\+Limelight Class Reference}
+\label{class_dragon_limelight}\index{DragonLimelight@{DragonLimelight}}
+
+
+{\ttfamily \#include $<$Dragon\+Limelight.\+h$>$}
+
+Inheritance diagram for Dragon\+Limelight\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dragon_limelight}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40}{L\+E\+D\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40ad9c257ad846d9e7e5ca111f71660cc6c}{L\+E\+D\+\_\+\+D\+E\+F\+A\+U\+LT}}, 
+\mbox{\hyperlink{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40ae81aad277be42064a5119ae40c133e02}{L\+E\+D\+\_\+\+O\+FF}}, 
+\mbox{\hyperlink{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40a269dc53e2b1a2fd2690580c13abb8deb}{L\+E\+D\+\_\+\+B\+L\+I\+NK}}, 
+\mbox{\hyperlink{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40adbb464c1dcf76bc2aaa7164dfb5ff917}{L\+E\+D\+\_\+\+ON}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_dragon_limelight_aafb5de7911fc118585b3cb32e0c87f13}{C\+A\+M\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{class_dragon_limelight_aafb5de7911fc118585b3cb32e0c87f13a472774a380ad7a07891cf9aaa450663d}{C\+A\+M\+\_\+\+V\+I\+S\+I\+ON}}, 
+\mbox{\hyperlink{class_dragon_limelight_aafb5de7911fc118585b3cb32e0c87f13a12f2fed7bd60b413c0cb428219f74ae7}{C\+A\+M\+\_\+\+D\+R\+I\+V\+ER}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91}{S\+T\+R\+E\+A\+M\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91ac2171c51a110c25a7ccdd8ee94131409}{S\+T\+R\+E\+A\+M\+\_\+\+D\+E\+F\+A\+U\+LT}}, 
+\mbox{\hyperlink{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91aa3927f577d6892bbb53b884731b994fe}{S\+T\+R\+E\+A\+M\+\_\+\+M\+A\+I\+N\+\_\+\+A\+N\+D\+\_\+\+S\+E\+C\+O\+ND}}, 
+\mbox{\hyperlink{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91adb9229484e3c6f059ab6eed5fcc7e184}{S\+T\+R\+E\+A\+M\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+A\+N\+D\+\_\+\+M\+A\+IN}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_dragon_limelight_ad153a8681f6b1f71906fba0a6c4863ed}{S\+N\+A\+P\+S\+H\+O\+T\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{class_dragon_limelight_ad153a8681f6b1f71906fba0a6c4863eda3ca0d71b2c71150a290493d7db061037}{S\+N\+A\+P\+\_\+\+O\+FF}}, 
+\mbox{\hyperlink{class_dragon_limelight_ad153a8681f6b1f71906fba0a6c4863eda3d2a70af357f8d44d7e42fea7e935d42}{S\+N\+A\+P\+\_\+\+ON}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dragon_limelight_a003d6b9c140e33c5d4291075b16c868a}{Dragon\+Limelight}} ()=delete
+\item 
+\mbox{\hyperlink{class_dragon_limelight_a5e786728aa7dfcfae40f57c55d238fbc}{Dragon\+Limelight}} (\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} usage, std\+::string table\+Name, double mounting\+Height, double mounting\+Horizontal\+Offset, double rotation, double mounting\+Angle, double target\+Height, double target\+Height2)
+\item 
+\mbox{\hyperlink{class_dragon_limelight_ad524ba4ce87697fa883882f5c41e9b60}{$\sim$\+Dragon\+Limelight}} ()=default
+\item 
+double \mbox{\hyperlink{class_dragon_limelight_a0db4976887ba1e7dda441b7053ca0f67}{Get\+Distance}} () const override
+\item 
+double \mbox{\hyperlink{class_dragon_limelight_aac8b4e5ba88a7e0539c5b6cbc6974471}{Get\+Confidence}} () const override
+\item 
+bool \mbox{\hyperlink{class_dragon_limelight_a61df6005aac9e2f90bfe5a8ed40f3456}{Has\+Target}} () const
+\item 
+double \mbox{\hyperlink{class_dragon_limelight_a47d04ae8a2230a52887d696109f37eed}{Get\+Target\+Horizontal\+Offset}} () const
+\item 
+double \mbox{\hyperlink{class_dragon_limelight_ae8f2120ffbf5207fd7053860c6a591b0}{Get\+Target\+Vertical\+Offset}} () const
+\item 
+double \mbox{\hyperlink{class_dragon_limelight_a9a5145044d385e7fac479065a54f6e57}{Get\+Target\+Area}} () const
+\item 
+double \mbox{\hyperlink{class_dragon_limelight_a9c2b9b606d2643467df517a786545e49}{Get\+Target\+Skew}} () const
+\item 
+double \mbox{\hyperlink{class_dragon_limelight_a597d5a2a3eed41cdfb400bdb8cc91405}{Get\+Pipeline\+Latency}} () const
+\item 
+double \mbox{\hyperlink{class_dragon_limelight_aa85abbe7363b8c06c09ac5cc31488869}{Estimate\+Target\+Distance}} () const
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_dragon_limelight_a381f0a9dc0d7318e84f29942513845cb}{Get3\+D\+Solve}} () const
+\item 
+\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} \mbox{\hyperlink{class_dragon_limelight_a2a2135361297f084ea5b0bcb2eaa8f92}{Get\+Usage}} () const override
+\item 
+void \mbox{\hyperlink{class_dragon_limelight_abd7c06707d40db5e4ce34142339ed484}{Set\+Target\+Height}} (double target\+Height)
+\item 
+void \mbox{\hyperlink{class_dragon_limelight_a8f80d91a71106af3592ec0975f474aaf}{Set\+L\+E\+D\+Mode}} (\mbox{\hyperlink{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40}{Dragon\+Limelight\+::\+L\+E\+D\+\_\+\+M\+O\+DE}} mode)
+\item 
+void \mbox{\hyperlink{class_dragon_limelight_ac6e89317d90de2e9c7c90eaa9293cab4}{Set\+Cam\+Mode}} (\mbox{\hyperlink{class_dragon_limelight_aafb5de7911fc118585b3cb32e0c87f13}{Dragon\+Limelight\+::\+C\+A\+M\+\_\+\+M\+O\+DE}} mode)
+\item 
+void \mbox{\hyperlink{class_dragon_limelight_a9008ec8358c4f2836b8aa4829e731104}{Set\+Pipeline}} (int pipeline)
+\item 
+void \mbox{\hyperlink{class_dragon_limelight_aa90d53fedc3b0568a434c57b987b6d79}{Set\+Stream\+Mode}} (\mbox{\hyperlink{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91}{Dragon\+Limelight\+::\+S\+T\+R\+E\+A\+M\+\_\+\+M\+O\+DE}} mode)
+\item 
+void \mbox{\hyperlink{class_dragon_limelight_a9854cde1425bf1d0d25ed15b586e599d}{Toggle\+Snapshot}} (\mbox{\hyperlink{class_dragon_limelight_ad153a8681f6b1f71906fba0a6c4863ed}{Dragon\+Limelight\+::\+S\+N\+A\+P\+S\+H\+O\+T\+\_\+\+M\+O\+DE}} toggle)
+\item 
+void \mbox{\hyperlink{class_dragon_limelight_a223f0bdf47eb46ba0085cdbc17a2fbed}{Print\+Values}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 35 of file Dragon\+Limelight.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_dragon_limelight_aafb5de7911fc118585b3cb32e0c87f13}\label{class_dragon_limelight_aafb5de7911fc118585b3cb32e0c87f13}} 
+\index{DragonLimelight@{DragonLimelight}!CAM\_MODE@{CAM\_MODE}}
+\index{CAM\_MODE@{CAM\_MODE}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{CAM\_MODE}{CAM\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_dragon_limelight_aafb5de7911fc118585b3cb32e0c87f13}{Dragon\+Limelight\+::\+C\+A\+M\+\_\+\+M\+O\+DE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAM\_VISION@{CAM\_VISION}!DragonLimelight@{DragonLimelight}}\index{DragonLimelight@{DragonLimelight}!CAM\_VISION@{CAM\_VISION}}}\mbox{\Hypertarget{class_dragon_limelight_aafb5de7911fc118585b3cb32e0c87f13a472774a380ad7a07891cf9aaa450663d}\label{class_dragon_limelight_aafb5de7911fc118585b3cb32e0c87f13a472774a380ad7a07891cf9aaa450663d}} 
+C\+A\+M\+\_\+\+V\+I\+S\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAM\_DRIVER@{CAM\_DRIVER}!DragonLimelight@{DragonLimelight}}\index{DragonLimelight@{DragonLimelight}!CAM\_DRIVER@{CAM\_DRIVER}}}\mbox{\Hypertarget{class_dragon_limelight_aafb5de7911fc118585b3cb32e0c87f13a12f2fed7bd60b413c0cb428219f74ae7}\label{class_dragon_limelight_aafb5de7911fc118585b3cb32e0c87f13a12f2fed7bd60b413c0cb428219f74ae7}} 
+C\+A\+M\+\_\+\+D\+R\+I\+V\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 47 of file Dragon\+Limelight.\+h.
+
+\mbox{\Hypertarget{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40}\label{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40}} 
+\index{DragonLimelight@{DragonLimelight}!LED\_MODE@{LED\_MODE}}
+\index{LED\_MODE@{LED\_MODE}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{LED\_MODE}{LED\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40}{Dragon\+Limelight\+::\+L\+E\+D\+\_\+\+M\+O\+DE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_DEFAULT@{LED\_DEFAULT}!DragonLimelight@{DragonLimelight}}\index{DragonLimelight@{DragonLimelight}!LED\_DEFAULT@{LED\_DEFAULT}}}\mbox{\Hypertarget{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40ad9c257ad846d9e7e5ca111f71660cc6c}\label{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40ad9c257ad846d9e7e5ca111f71660cc6c}} 
+L\+E\+D\+\_\+\+D\+E\+F\+A\+U\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_OFF@{LED\_OFF}!DragonLimelight@{DragonLimelight}}\index{DragonLimelight@{DragonLimelight}!LED\_OFF@{LED\_OFF}}}\mbox{\Hypertarget{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40ae81aad277be42064a5119ae40c133e02}\label{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40ae81aad277be42064a5119ae40c133e02}} 
+L\+E\+D\+\_\+\+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_BLINK@{LED\_BLINK}!DragonLimelight@{DragonLimelight}}\index{DragonLimelight@{DragonLimelight}!LED\_BLINK@{LED\_BLINK}}}\mbox{\Hypertarget{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40a269dc53e2b1a2fd2690580c13abb8deb}\label{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40a269dc53e2b1a2fd2690580c13abb8deb}} 
+L\+E\+D\+\_\+\+B\+L\+I\+NK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_ON@{LED\_ON}!DragonLimelight@{DragonLimelight}}\index{DragonLimelight@{DragonLimelight}!LED\_ON@{LED\_ON}}}\mbox{\Hypertarget{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40adbb464c1dcf76bc2aaa7164dfb5ff917}\label{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40adbb464c1dcf76bc2aaa7164dfb5ff917}} 
+L\+E\+D\+\_\+\+ON&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 39 of file Dragon\+Limelight.\+h.
+
+\mbox{\Hypertarget{class_dragon_limelight_ad153a8681f6b1f71906fba0a6c4863ed}\label{class_dragon_limelight_ad153a8681f6b1f71906fba0a6c4863ed}} 
+\index{DragonLimelight@{DragonLimelight}!SNAPSHOT\_MODE@{SNAPSHOT\_MODE}}
+\index{SNAPSHOT\_MODE@{SNAPSHOT\_MODE}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{SNAPSHOT\_MODE}{SNAPSHOT\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_dragon_limelight_ad153a8681f6b1f71906fba0a6c4863ed}{Dragon\+Limelight\+::\+S\+N\+A\+P\+S\+H\+O\+T\+\_\+\+M\+O\+DE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SNAP\_OFF@{SNAP\_OFF}!DragonLimelight@{DragonLimelight}}\index{DragonLimelight@{DragonLimelight}!SNAP\_OFF@{SNAP\_OFF}}}\mbox{\Hypertarget{class_dragon_limelight_ad153a8681f6b1f71906fba0a6c4863eda3ca0d71b2c71150a290493d7db061037}\label{class_dragon_limelight_ad153a8681f6b1f71906fba0a6c4863eda3ca0d71b2c71150a290493d7db061037}} 
+S\+N\+A\+P\+\_\+\+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SNAP\_ON@{SNAP\_ON}!DragonLimelight@{DragonLimelight}}\index{DragonLimelight@{DragonLimelight}!SNAP\_ON@{SNAP\_ON}}}\mbox{\Hypertarget{class_dragon_limelight_ad153a8681f6b1f71906fba0a6c4863eda3d2a70af357f8d44d7e42fea7e935d42}\label{class_dragon_limelight_ad153a8681f6b1f71906fba0a6c4863eda3d2a70af357f8d44d7e42fea7e935d42}} 
+S\+N\+A\+P\+\_\+\+ON&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 60 of file Dragon\+Limelight.\+h.
+
+\mbox{\Hypertarget{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91}\label{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91}} 
+\index{DragonLimelight@{DragonLimelight}!STREAM\_MODE@{STREAM\_MODE}}
+\index{STREAM\_MODE@{STREAM\_MODE}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{STREAM\_MODE}{STREAM\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91}{Dragon\+Limelight\+::\+S\+T\+R\+E\+A\+M\+\_\+\+M\+O\+DE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STREAM\_DEFAULT@{STREAM\_DEFAULT}!DragonLimelight@{DragonLimelight}}\index{DragonLimelight@{DragonLimelight}!STREAM\_DEFAULT@{STREAM\_DEFAULT}}}\mbox{\Hypertarget{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91ac2171c51a110c25a7ccdd8ee94131409}\label{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91ac2171c51a110c25a7ccdd8ee94131409}} 
+S\+T\+R\+E\+A\+M\+\_\+\+D\+E\+F\+A\+U\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STREAM\_MAIN\_AND\_SECOND@{STREAM\_MAIN\_AND\_SECOND}!DragonLimelight@{DragonLimelight}}\index{DragonLimelight@{DragonLimelight}!STREAM\_MAIN\_AND\_SECOND@{STREAM\_MAIN\_AND\_SECOND}}}\mbox{\Hypertarget{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91aa3927f577d6892bbb53b884731b994fe}\label{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91aa3927f577d6892bbb53b884731b994fe}} 
+S\+T\+R\+E\+A\+M\+\_\+\+M\+A\+I\+N\+\_\+\+A\+N\+D\+\_\+\+S\+E\+C\+O\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STREAM\_SECOND\_AND\_MAIN@{STREAM\_SECOND\_AND\_MAIN}!DragonLimelight@{DragonLimelight}}\index{DragonLimelight@{DragonLimelight}!STREAM\_SECOND\_AND\_MAIN@{STREAM\_SECOND\_AND\_MAIN}}}\mbox{\Hypertarget{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91adb9229484e3c6f059ab6eed5fcc7e184}\label{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91adb9229484e3c6f059ab6eed5fcc7e184}} 
+S\+T\+R\+E\+A\+M\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+A\+N\+D\+\_\+\+M\+A\+IN&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 53 of file Dragon\+Limelight.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dragon_limelight_a003d6b9c140e33c5d4291075b16c868a}\label{class_dragon_limelight_a003d6b9c140e33c5d4291075b16c868a}} 
+\index{DragonLimelight@{DragonLimelight}!DragonLimelight@{DragonLimelight}}
+\index{DragonLimelight@{DragonLimelight}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{DragonLimelight()}{DragonLimelight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Dragon\+Limelight\+::\+Dragon\+Limelight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\DoxyHorRuler
+ Method\+: \mbox{\hyperlink{class_dragon_limelight}{Dragon\+Limelight}} (constructor) \hypertarget{class_dragon_limelight_autotoc_md20}{}\doxysubsubsection{Description\+:    Create the object}\label{class_dragon_limelight_autotoc_md20}
+\mbox{\Hypertarget{class_dragon_limelight_a5e786728aa7dfcfae40f57c55d238fbc}\label{class_dragon_limelight_a5e786728aa7dfcfae40f57c55d238fbc}} 
+\index{DragonLimelight@{DragonLimelight}!DragonLimelight@{DragonLimelight}}
+\index{DragonLimelight@{DragonLimelight}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{DragonLimelight()}{DragonLimelight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Dragon\+Limelight\+::\+Dragon\+Limelight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}}}]{usage,  }\item[{std\+::string}]{table\+Name,  }\item[{double}]{mounting\+Height,  }\item[{double}]{mounting\+Horizontal\+Offset,  }\item[{double}]{rotation,  }\item[{double}]{mounting\+Angle,  }\item[{double}]{target\+Height,  }\item[{double}]{target\+Height2 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mounting\+Height} & {\itshape  -\/ network table name }\\
+\hline
+{\em mounting\+Horizontal\+Offset} & {\itshape {\itshape  -\/ mounting height of the limelight }}\\
+\hline
+{\em rotation} & {\itshape {\itshape {\itshape  -\/ mounting horizontal offset from the middle of the robot }}}\\
+\hline
+{\em mounting\+Angle} & {\itshape {\itshape {\itshape {\itshape  -\/ clockwise rotation of limelight }}}}\\
+\hline
+{\em target\+Height} & {\itshape {\itshape {\itshape {\itshape {\itshape  -\/ mounting angle of the camera }}}}}\\
+\hline
+{\em target\+Height2} & {\itshape {\itshape {\itshape {\itshape {\itshape {\itshape  -\/ height the target {\itshape  -\/ height of second target }}}}}}}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragon_limelight_ad524ba4ce87697fa883882f5c41e9b60}\label{class_dragon_limelight_ad524ba4ce87697fa883882f5c41e9b60}} 
+\index{DragonLimelight@{DragonLimelight}!````~DragonLimelight@{$\sim$DragonLimelight}}
+\index{````~DragonLimelight@{$\sim$DragonLimelight}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{$\sim$DragonLimelight()}{~DragonLimelight()}}
+{\footnotesize\ttfamily Dragon\+Limelight\+::$\sim$\+Dragon\+Limelight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\DoxyHorRuler
+ Method\+: $\sim$\+Dragon\+Limelight (destructor) \hypertarget{class_dragon_limelight_autotoc_md21}{}\doxysubsubsection{Description\+:    Delete the object}\label{class_dragon_limelight_autotoc_md21}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dragon_limelight_aa85abbe7363b8c06c09ac5cc31488869}\label{class_dragon_limelight_aa85abbe7363b8c06c09ac5cc31488869}} 
+\index{DragonLimelight@{DragonLimelight}!EstimateTargetDistance@{EstimateTargetDistance}}
+\index{EstimateTargetDistance@{EstimateTargetDistance}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{EstimateTargetDistance()}{EstimateTargetDistance()}}
+{\footnotesize\ttfamily double Dragon\+Limelight\+::\+Estimate\+Target\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 232 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_a381f0a9dc0d7318e84f29942513845cb}\label{class_dragon_limelight_a381f0a9dc0d7318e84f29942513845cb}} 
+\index{DragonLimelight@{DragonLimelight}!Get3DSolve@{Get3DSolve}}
+\index{Get3DSolve@{Get3DSolve}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{Get3DSolve()}{Get3DSolve()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Dragon\+Limelight\+::\+Get3\+D\+Solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 96 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_aac8b4e5ba88a7e0539c5b6cbc6974471}\label{class_dragon_limelight_aac8b4e5ba88a7e0539c5b6cbc6974471}} 
+\index{DragonLimelight@{DragonLimelight}!GetConfidence@{GetConfidence}}
+\index{GetConfidence@{GetConfidence}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{GetConfidence()}{GetConfidence()}}
+{\footnotesize\ttfamily double Dragon\+Limelight\+::\+Get\+Confidence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\DoxyHorRuler
+ Method\+: Get\+Confidence Description\+: Indicates how accurate the returned value is Returns\+: double 0.\+0 == ignore (sensor has an error) \hypertarget{class_dragon_limelight_autotoc_md23}{}\doxysubsubsection{1.\+0 == very confident}\label{class_dragon_limelight_autotoc_md23}
+\DoxyHorRuler
+ Method\+: Get\+Confidence Description\+: Indicates how accurate the returned value is Returns\+: double 0.\+0 == ignore (sensor has an error) \hypertarget{class_dragon_limelight_autotoc_md18}{}\doxysubsubsection{1.\+0 == very confident}\label{class_dragon_limelight_autotoc_md18}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_sensor_a26335856e226fcaca3ce3954ba846cb7}{I\+Dragon\+Sensor}}.
+
+
+
+Definition at line 86 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_a0db4976887ba1e7dda441b7053ca0f67}\label{class_dragon_limelight_a0db4976887ba1e7dda441b7053ca0f67}} 
+\index{DragonLimelight@{DragonLimelight}!GetDistance@{GetDistance}}
+\index{GetDistance@{GetDistance}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{GetDistance()}{GetDistance()}}
+{\footnotesize\ttfamily double Dragon\+Limelight\+::\+Get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\DoxyHorRuler
+ Method\+: Get\+Distance Description\+: Return the measured distance in inches \hypertarget{class_dragon_limelight_autotoc_md22}{}\doxysubsubsection{Returns\+:     double     Measured Distance}\label{class_dragon_limelight_autotoc_md22}
+\DoxyHorRuler
+ Method\+: Get\+Distance Description\+: Return the measured distance in inches \hypertarget{class_dragon_limelight_autotoc_md17}{}\doxysubsubsection{Returns\+:     double     Measured Distance}\label{class_dragon_limelight_autotoc_md17}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_distance_sensor_a6bd5ec99c747c52a25aaddc874232703}{I\+Dragon\+Distance\+Sensor}}.
+
+
+
+Definition at line 70 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_a597d5a2a3eed41cdfb400bdb8cc91405}\label{class_dragon_limelight_a597d5a2a3eed41cdfb400bdb8cc91405}} 
+\index{DragonLimelight@{DragonLimelight}!GetPipelineLatency@{GetPipelineLatency}}
+\index{GetPipelineLatency@{GetPipelineLatency}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{GetPipelineLatency()}{GetPipelineLatency()}}
+{\footnotesize\ttfamily double Dragon\+Limelight\+::\+Get\+Pipeline\+Latency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 173 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_a9a5145044d385e7fac479065a54f6e57}\label{class_dragon_limelight_a9a5145044d385e7fac479065a54f6e57}} 
+\index{DragonLimelight@{DragonLimelight}!GetTargetArea@{GetTargetArea}}
+\index{GetTargetArea@{GetTargetArea}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{GetTargetArea()}{GetTargetArea()}}
+{\footnotesize\ttfamily double Dragon\+Limelight\+::\+Get\+Target\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 163 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_a47d04ae8a2230a52887d696109f37eed}\label{class_dragon_limelight_a47d04ae8a2230a52887d696109f37eed}} 
+\index{DragonLimelight@{DragonLimelight}!GetTargetHorizontalOffset@{GetTargetHorizontalOffset}}
+\index{GetTargetHorizontalOffset@{GetTargetHorizontalOffset}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{GetTargetHorizontalOffset()}{GetTargetHorizontalOffset()}}
+{\footnotesize\ttfamily double Dragon\+Limelight\+::\+Get\+Target\+Horizontal\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 106 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_a9c2b9b606d2643467df517a786545e49}\label{class_dragon_limelight_a9c2b9b606d2643467df517a786545e49}} 
+\index{DragonLimelight@{DragonLimelight}!GetTargetSkew@{GetTargetSkew}}
+\index{GetTargetSkew@{GetTargetSkew}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{GetTargetSkew()}{GetTargetSkew()}}
+{\footnotesize\ttfamily double Dragon\+Limelight\+::\+Get\+Target\+Skew (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 168 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_ae8f2120ffbf5207fd7053860c6a591b0}\label{class_dragon_limelight_ae8f2120ffbf5207fd7053860c6a591b0}} 
+\index{DragonLimelight@{DragonLimelight}!GetTargetVerticalOffset@{GetTargetVerticalOffset}}
+\index{GetTargetVerticalOffset@{GetTargetVerticalOffset}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{GetTargetVerticalOffset()}{GetTargetVerticalOffset()}}
+{\footnotesize\ttfamily double Dragon\+Limelight\+::\+Get\+Target\+Vertical\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 135 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_a2a2135361297f084ea5b0bcb2eaa8f92}\label{class_dragon_limelight_a2a2135361297f084ea5b0bcb2eaa8f92}} 
+\index{DragonLimelight@{DragonLimelight}!GetUsage@{GetUsage}}
+\index{GetUsage@{GetUsage}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{GetUsage()}{GetUsage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} Dragon\+Limelight\+::\+Get\+Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\DoxyHorRuler
+ Method\+: Get\+Usage Description\+: Indicate what the sensor is used for \hypertarget{class_dragon_limelight_autotoc_md24}{}\doxysubsubsection{Returns\+:     S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+G\+E    sensor usage}\label{class_dragon_limelight_autotoc_md24}
+\DoxyHorRuler
+ Method\+: Get\+Usage Description\+: Indicate what the sensor is used for \hypertarget{class_dragon_limelight_autotoc_md19}{}\doxysubsubsection{Returns\+:     S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+G\+E    sensor usage}\label{class_dragon_limelight_autotoc_md19}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_sensor_a3040df89bae5da661a21d71c1df4ccb4}{I\+Dragon\+Sensor}}.
+
+
+
+Definition at line 183 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_a61df6005aac9e2f90bfe5a8ed40f3456}\label{class_dragon_limelight_a61df6005aac9e2f90bfe5a8ed40f3456}} 
+\index{DragonLimelight@{DragonLimelight}!HasTarget@{HasTarget}}
+\index{HasTarget@{HasTarget}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{HasTarget()}{HasTarget()}}
+{\footnotesize\ttfamily bool Dragon\+Limelight\+::\+Has\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 101 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_a223f0bdf47eb46ba0085cdbc17a2fbed}\label{class_dragon_limelight_a223f0bdf47eb46ba0085cdbc17a2fbed}} 
+\index{DragonLimelight@{DragonLimelight}!PrintValues@{PrintValues}}
+\index{PrintValues@{PrintValues}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{PrintValues()}{PrintValues()}}
+{\footnotesize\ttfamily void Dragon\+Limelight\+::\+Print\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 222 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_ac6e89317d90de2e9c7c90eaa9293cab4}\label{class_dragon_limelight_ac6e89317d90de2e9c7c90eaa9293cab4}} 
+\index{DragonLimelight@{DragonLimelight}!SetCamMode@{SetCamMode}}
+\index{SetCamMode@{SetCamMode}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{SetCamMode()}{SetCamMode()}}
+{\footnotesize\ttfamily void Dragon\+Limelight\+::\+Set\+Cam\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dragon_limelight_aafb5de7911fc118585b3cb32e0c87f13}{Dragon\+Limelight\+::\+C\+A\+M\+\_\+\+M\+O\+DE}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 201 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_a8f80d91a71106af3592ec0975f474aaf}\label{class_dragon_limelight_a8f80d91a71106af3592ec0975f474aaf}} 
+\index{DragonLimelight@{DragonLimelight}!SetLEDMode@{SetLEDMode}}
+\index{SetLEDMode@{SetLEDMode}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{SetLEDMode()}{SetLEDMode()}}
+{\footnotesize\ttfamily void Dragon\+Limelight\+::\+Set\+L\+E\+D\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dragon_limelight_a4968de97dbb55b78eb63a6e3ab398f40}{Dragon\+Limelight\+::\+L\+E\+D\+\_\+\+M\+O\+DE}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 196 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_a9008ec8358c4f2836b8aa4829e731104}\label{class_dragon_limelight_a9008ec8358c4f2836b8aa4829e731104}} 
+\index{DragonLimelight@{DragonLimelight}!SetPipeline@{SetPipeline}}
+\index{SetPipeline@{SetPipeline}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{SetPipeline()}{SetPipeline()}}
+{\footnotesize\ttfamily void Dragon\+Limelight\+::\+Set\+Pipeline (\begin{DoxyParamCaption}\item[{int}]{pipeline }\end{DoxyParamCaption})}
+
+
+
+Definition at line 206 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_aa90d53fedc3b0568a434c57b987b6d79}\label{class_dragon_limelight_aa90d53fedc3b0568a434c57b987b6d79}} 
+\index{DragonLimelight@{DragonLimelight}!SetStreamMode@{SetStreamMode}}
+\index{SetStreamMode@{SetStreamMode}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{SetStreamMode()}{SetStreamMode()}}
+{\footnotesize\ttfamily void Dragon\+Limelight\+::\+Set\+Stream\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dragon_limelight_a7e61244761896139b6cd1c72c5363f91}{Dragon\+Limelight\+::\+S\+T\+R\+E\+A\+M\+\_\+\+M\+O\+DE}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 211 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_abd7c06707d40db5e4ce34142339ed484}\label{class_dragon_limelight_abd7c06707d40db5e4ce34142339ed484}} 
+\index{DragonLimelight@{DragonLimelight}!SetTargetHeight@{SetTargetHeight}}
+\index{SetTargetHeight@{SetTargetHeight}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{SetTargetHeight()}{SetTargetHeight()}}
+{\footnotesize\ttfamily void Dragon\+Limelight\+::\+Set\+Target\+Height (\begin{DoxyParamCaption}\item[{double}]{target\+Height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 189 of file Dragon\+Limelight.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_limelight_a9854cde1425bf1d0d25ed15b586e599d}\label{class_dragon_limelight_a9854cde1425bf1d0d25ed15b586e599d}} 
+\index{DragonLimelight@{DragonLimelight}!ToggleSnapshot@{ToggleSnapshot}}
+\index{ToggleSnapshot@{ToggleSnapshot}!DragonLimelight@{DragonLimelight}}
+\doxysubsubsection{\texorpdfstring{ToggleSnapshot()}{ToggleSnapshot()}}
+{\footnotesize\ttfamily void Dragon\+Limelight\+::\+Toggle\+Snapshot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dragon_limelight_ad153a8681f6b1f71906fba0a6c4863ed}{Dragon\+Limelight\+::\+S\+N\+A\+P\+S\+H\+O\+T\+\_\+\+M\+O\+DE}}}]{toggle }\end{DoxyParamCaption})}
+
+
+
+Definition at line 217 of file Dragon\+Limelight.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/\mbox{\hyperlink{_dragon_limelight_8h}{Dragon\+Limelight.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/\mbox{\hyperlink{_dragon_limelight_8cpp}{Dragon\+Limelight.\+cpp}}\end{DoxyCompactItemize}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team 302 Robot: BallManipulator Class Reference</title>
+<title>Robot: BallManipulator Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Team 302 Robot
+   <div id="projectname">Robot
    </div>
   </td>
  </tr>
@@ -115,7 +115,8 @@ Public Types</h2></td></tr>
 <a class="el" href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4a6dacee08643ab129f905b69e611531f2">TRANSFER_UP</a>, 
 <a class="el" href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4a5512a93c59bfce04c8b9a5e0c42fc395">TRANSFER_DOWN</a>, 
 <br />
-&#160;&#160;<a class="el" href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4a9a093e6e6802b3513eb69230dd590167">MAX_BALL_MANIPULATOR_STATES</a>
+&#160;&#160;<a class="el" href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4a4f38f4c9e857f39f0ae1105d082abd0f">TURRET_TURN_ANGLE</a>, 
+<a class="el" href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4a9a093e6e6802b3513eb69230dd590167">MAX_BALL_MANIPULATOR_STATES</a>
 <br />
  }</td></tr>
 <tr class="separator:a91bf71119c5fecb46b41a90485f7a9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,9 +126,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a565ef49322a8a72a7cc72ae3b19ff4a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_manipulator.html#a565ef49322a8a72a7cc72ae3b19ff4a8">RunCurrentState</a> ()</td></tr>
 <tr class="memdesc:a565ef49322a8a72a7cc72ae3b19ff4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">run the current state  <a href="class_ball_manipulator.html#a565ef49322a8a72a7cc72ae3b19ff4a8">More...</a><br /></td></tr>
 <tr class="separator:a565ef49322a8a72a7cc72ae3b19ff4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6b06504ca8077c1b533895b2793e5a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_manipulator.html#ac6b06504ca8077c1b533895b2793e5a1">SetCurrentState</a> (<a class="el" href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4">BALL_MANIPULATOR_STATE</a> state)</td></tr>
-<tr class="memdesc:ac6b06504ca8077c1b533895b2793e5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the current state, initialize it and run it  <a href="class_ball_manipulator.html#ac6b06504ca8077c1b533895b2793e5a1">More...</a><br /></td></tr>
-<tr class="separator:ac6b06504ca8077c1b533895b2793e5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae27d8d4f4b313b376bea3854c2f90da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_manipulator.html#ae27d8d4f4b313b376bea3854c2f90da7">SetCurrentState</a> (<a class="el" href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4">BALL_MANIPULATOR_STATE</a> state, double turretAngle)</td></tr>
+<tr class="memdesc:ae27d8d4f4b313b376bea3854c2f90da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the current state, initialize it and run it  <a href="class_ball_manipulator.html#ae27d8d4f4b313b376bea3854c2f90da7">More...</a><br /></td></tr>
+<tr class="separator:ae27d8d4f4b313b376bea3854c2f90da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af24249d8efa5c38ef042178da0e40f29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4">BALL_MANIPULATOR_STATE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_manipulator.html#af24249d8efa5c38ef042178da0e40f29">GetCurrentState</a> () const</td></tr>
 <tr class="memdesc:af24249d8efa5c38ef042178da0e40f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the current state  <a href="class_ball_manipulator.html#af24249d8efa5c38ef042178da0e40f29">More...</a><br /></td></tr>
 <tr class="separator:af24249d8efa5c38ef042178da0e40f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,6 +169,7 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a91bf71119c5fecb46b41a90485f7a9a4a7f6b7e8dfed0b9ca0cf7ad84663c4d60"></a>UNJAM_COUNTERCLOCKWISE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a91bf71119c5fecb46b41a90485f7a9a4a6dacee08643ab129f905b69e611531f2"></a>TRANSFER_UP&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a91bf71119c5fecb46b41a90485f7a9a4a5512a93c59bfce04c8b9a5e0c42fc395"></a>TRANSFER_DOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a91bf71119c5fecb46b41a90485f7a9a4a4f38f4c9e857f39f0ae1105d082abd0f"></a>TURRET_TURN_ANGLE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a91bf71119c5fecb46b41a90485f7a9a4a9a093e6e6802b3513eb69230dd590167"></a>MAX_BALL_MANIPULATOR_STATES&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -202,7 +204,7 @@ Static Public Member Functions</h2></td></tr>
 <p>return the current state </p>
 <dl class="section return"><dt>Returns</dt><dd>INTAKE_STATE - the current state </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_ball_manipulator_8h_source.html#l00073">73</a> of file <a class="el" href="_ball_manipulator_8h_source.html">BallManipulator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ball_manipulator_8h_source.html#l00075">75</a> of file <a class="el" href="_ball_manipulator_8h_source.html">BallManipulator.h</a>.</p>
 
 </div>
 </div>
@@ -277,12 +279,12 @@ BallManipulator* singleton class </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_ball_manipulator_8cpp_source.html#l00231">231</a> of file <a class="el" href="_ball_manipulator_8cpp_source.html">BallManipulator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ball_manipulator_8cpp_source.html#l00241">241</a> of file <a class="el" href="_ball_manipulator_8cpp_source.html">BallManipulator.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ac6b06504ca8077c1b533895b2793e5a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6b06504ca8077c1b533895b2793e5a1">&#9670;&nbsp;</a></span>SetCurrentState()</h2>
+<a id="ae27d8d4f4b313b376bea3854c2f90da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae27d8d4f4b313b376bea3854c2f90da7">&#9670;&nbsp;</a></span>SetCurrentState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -291,8 +293,18 @@ BallManipulator* singleton class </dd></dl>
           <td class="memname">void BallManipulator::SetCurrentState </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4">BALL_MANIPULATOR_STATE</a>&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>turretAngle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -313,8 +325,8 @@ void </dd></dl>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>states/<a class="el" href="_ball_manipulator_8h_source.html">BallManipulator.h</a></li>
-<li>states/<a class="el" href="_ball_manipulator_8cpp_source.html">BallManipulator.cpp</a></li>
+<li>C:/robotcm/training2020/src/main/cpp/states/<a class="el" href="_ball_manipulator_8h_source.html">BallManipulator.h</a></li>
+<li>C:/robotcm/training2020/src/main/cpp/states/<a class="el" href="_ball_manipulator_8cpp_source.html">BallManipulator.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

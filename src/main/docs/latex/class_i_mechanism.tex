@@ -1,0 +1,207 @@
+\hypertarget{class_i_mechanism}{}\doxysection{I\+Mechanism Interface Reference}
+\label{class_i_mechanism}\index{IMechanism@{IMechanism}}
+
+
+This is the interface for all subsystems.  
+
+
+
+
+{\ttfamily \#include $<$I\+Mechanism.\+h$>$}
+
+Inheritance diagram for I\+Mechanism\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_i_mechanism}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{class_i_mechanism_a62096808201ffc31609e99dc2fa92d44}{Get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Indicates the type of mechanism this is. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_mechanism_abc72a6d0306a828de6f43418e75c04c0}{Set\+Output}} (\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} control\+Type, double value)=0
+\begin{DoxyCompactList}\small\item\em Run mechanism as defined. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_mechanism_abef1fbd73a24f4f6f3104e255539e0d9}{Activate\+Solenoid}} (bool activate)=0
+\begin{DoxyCompactList}\small\item\em Activate/deactivate pneumatic solenoid. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_i_mechanism_a4c0bedb71316054749a276a67d278558}{Is\+Solenoid\+Activated}} ()=0
+\begin{DoxyCompactList}\small\item\em Check if the pneumatic solenoid is activated. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_mechanism_aa15197ff101d65447516a8f10bb6867d}{Get\+Current\+Position}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the current position of the mechanism. The value is in inches or degrees. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_mechanism_a9a63d6905de4454d78d7e0d1d1e28437}{Get\+Current\+Speed}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the current speed of the mechanism. The value is in inches per second or degrees per second. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_mechanism_acd973ca93855c485ed42d405f2fcba11}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid)=0
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_mechanism_a22f98b8310ad97e65dd710f3ae4ebcbf}{I\+Mechanism}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_i_mechanism_a1c70ef3fdee0c9fa33b70c60b91ca9c0}{$\sim$\+I\+Mechanism}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the interface for all subsystems. 
+
+Interface for subsystems. 
+
+Definition at line 38 of file I\+Mechanism.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_mechanism_a22f98b8310ad97e65dd710f3ae4ebcbf}\label{class_i_mechanism_a22f98b8310ad97e65dd710f3ae4ebcbf}} 
+\index{IMechanism@{IMechanism}!IMechanism@{IMechanism}}
+\index{IMechanism@{IMechanism}!IMechanism@{IMechanism}}
+\doxysubsubsection{\texorpdfstring{IMechanism()}{IMechanism()}}
+{\footnotesize\ttfamily I\+Mechanism\+::\+I\+Mechanism (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_i_mechanism_a1c70ef3fdee0c9fa33b70c60b91ca9c0}\label{class_i_mechanism_a1c70ef3fdee0c9fa33b70c60b91ca9c0}} 
+\index{IMechanism@{IMechanism}!````~IMechanism@{$\sim$IMechanism}}
+\index{````~IMechanism@{$\sim$IMechanism}!IMechanism@{IMechanism}}
+\doxysubsubsection{\texorpdfstring{$\sim$IMechanism()}{~IMechanism()}}
+{\footnotesize\ttfamily virtual I\+Mechanism\+::$\sim$\+I\+Mechanism (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_mechanism_abef1fbd73a24f4f6f3104e255539e0d9}\label{class_i_mechanism_abef1fbd73a24f4f6f3104e255539e0d9}} 
+\index{IMechanism@{IMechanism}!ActivateSolenoid@{ActivateSolenoid}}
+\index{ActivateSolenoid@{ActivateSolenoid}!IMechanism@{IMechanism}}
+\doxysubsubsection{\texorpdfstring{ActivateSolenoid()}{ActivateSolenoid()}}
+{\footnotesize\ttfamily virtual void I\+Mechanism\+::\+Activate\+Solenoid (\begin{DoxyParamCaption}\item[{bool}]{activate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Activate/deactivate pneumatic solenoid. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bool} & -\/ true == extend, false == retract \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_drive_train_side_a628a1bb75d5be4a69b63c1e94eb00f49}{Drive\+Train\+Side}}, \mbox{\hyperlink{class_ball_transfer_a6125b233e84bb18b95028291b8a821fa}{Ball\+Transfer}}, \mbox{\hyperlink{class_hook_delivery_a74370ee13e3c5d1278d0fecc79a2d7b6}{Hook\+Delivery}}, \mbox{\hyperlink{class_impeller_a23b1a612d67bd2c1605ad2ceec867b46}{Impeller}}, \mbox{\hyperlink{class_intake_a6fea3918ef2fdbf5b0368bdd551707cf}{Intake}}, \mbox{\hyperlink{class_control_panel_afabe6a8e741ed9af5d51d50d82cc4263}{Control\+Panel}}, \mbox{\hyperlink{class_shooter_hood_a712e0e8e685521f54e5511f4c5b7d52e}{Shooter\+Hood}}, \mbox{\hyperlink{class_crawler_a035ad72f88ca010f1b0803d93b0c27eb}{Crawler}}, \mbox{\hyperlink{class_climber_ae03ddf335ed70b23d656a623991f575b}{Climber}}, \mbox{\hyperlink{class_shooter_aa307140af6eb905d85f7d1f954de66a1}{Shooter}}, and \mbox{\hyperlink{class_turret_a17cc06df43d730510fb15dee9dc7ba6f}{Turret}}.
+
+\mbox{\Hypertarget{class_i_mechanism_aa15197ff101d65447516a8f10bb6867d}\label{class_i_mechanism_aa15197ff101d65447516a8f10bb6867d}} 
+\index{IMechanism@{IMechanism}!GetCurrentPosition@{GetCurrentPosition}}
+\index{GetCurrentPosition@{GetCurrentPosition}!IMechanism@{IMechanism}}
+\doxysubsubsection{\texorpdfstring{GetCurrentPosition()}{GetCurrentPosition()}}
+{\footnotesize\ttfamily virtual double I\+Mechanism\+::\+Get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the current position of the mechanism. The value is in inches or degrees. 
+
+\begin{DoxyReturn}{Returns}
+double position in inches (translating mechanisms) or degrees (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_drive_train_side_a557590423b84c081762e79c161d55ee9}{Drive\+Train\+Side}}, \mbox{\hyperlink{class_ball_transfer_a439eba26f6912a85ac05fce629fb6b1c}{Ball\+Transfer}}, \mbox{\hyperlink{class_hook_delivery_ad0616602f22ca29c542bf80f2dc04614}{Hook\+Delivery}}, \mbox{\hyperlink{class_impeller_a04b455224bc6145f19b09b5d7ee2f8bc}{Impeller}}, \mbox{\hyperlink{class_intake_a6abaaaed9c70dcefdcdb68097a5f69d6}{Intake}}, \mbox{\hyperlink{class_control_panel_abdff4646934ab23158cfce4261322889}{Control\+Panel}}, \mbox{\hyperlink{class_shooter_hood_a90c27f70b7fb405c155561bc56428306}{Shooter\+Hood}}, \mbox{\hyperlink{class_crawler_a8913fdd2ae5e4a35092d800c1e1db1e4}{Crawler}}, \mbox{\hyperlink{class_climber_a6db6ada50bc8ed96d85006917fcce31e}{Climber}}, \mbox{\hyperlink{class_shooter_aaad97e62b1d45d10cbb6747b1c6a8414}{Shooter}}, and \mbox{\hyperlink{class_turret_a935bb5ade4573d7cb6f72ed1540eff1f}{Turret}}.
+
+\mbox{\Hypertarget{class_i_mechanism_a9a63d6905de4454d78d7e0d1d1e28437}\label{class_i_mechanism_a9a63d6905de4454d78d7e0d1d1e28437}} 
+\index{IMechanism@{IMechanism}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!IMechanism@{IMechanism}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily virtual double I\+Mechanism\+::\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the current speed of the mechanism. The value is in inches per second or degrees per second. 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_drive_train_side_a5b2d55207f0a6244caa19cc5197bac5e}{Drive\+Train\+Side}}, \mbox{\hyperlink{class_ball_transfer_add75fdc81285150babc0c52cf2b371b3}{Ball\+Transfer}}, \mbox{\hyperlink{class_hook_delivery_aa02921655929b415ce42a54900be1f31}{Hook\+Delivery}}, \mbox{\hyperlink{class_impeller_a38948021086ebb2d7f2651a618ece2e5}{Impeller}}, \mbox{\hyperlink{class_intake_a7e3783508ddf079750a1430d6fb2e6cf}{Intake}}, \mbox{\hyperlink{class_control_panel_a99f7157fc32fd4f2f10c2f78ba0e34cd}{Control\+Panel}}, \mbox{\hyperlink{class_shooter_hood_afb58273b6dcb9f64c95c9de355671402}{Shooter\+Hood}}, \mbox{\hyperlink{class_crawler_ab130a9f78a1f752ba1f05ff81b31eece}{Crawler}}, \mbox{\hyperlink{class_climber_a496efc9ed2d6e09c9c8cc9c57748253d}{Climber}}, \mbox{\hyperlink{class_shooter_aa38c7c6e5aa105789119d0770ad0dc8e}{Shooter}}, and \mbox{\hyperlink{class_turret_a56b62c93ee21ac46d6428382d95b02d7}{Turret}}.
+
+\mbox{\Hypertarget{class_i_mechanism_a62096808201ffc31609e99dc2fa92d44}\label{class_i_mechanism_a62096808201ffc31609e99dc2fa92d44}} 
+\index{IMechanism@{IMechanism}!GetType@{GetType}}
+\index{GetType@{GetType}!IMechanism@{IMechanism}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} I\+Mechanism\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Indicates the type of mechanism this is. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_drive_train_side_afb3d28141117ebdf1e00af89e1f90007}{Drive\+Train\+Side}}, \mbox{\hyperlink{class_ball_transfer_a0e9e704cbc3fcb207b7377c3356487c3}{Ball\+Transfer}}, \mbox{\hyperlink{class_hook_delivery_ad8c32f24f1e0601c31fa2c2c0beacedf}{Hook\+Delivery}}, \mbox{\hyperlink{class_impeller_acb60389f253ee9eac8b7ae540dd0e173}{Impeller}}, \mbox{\hyperlink{class_intake_a0b68bd630c53d7db98e220b94d76020a}{Intake}}, \mbox{\hyperlink{class_control_panel_a047cd8db83f38aafa18610af368cdecd}{Control\+Panel}}, \mbox{\hyperlink{class_shooter_hood_a440f815a4ec8edb913ae32bebaf0dd85}{Shooter\+Hood}}, \mbox{\hyperlink{class_crawler_a6a698ca408b8ea3dd905197ebbaf57a6}{Crawler}}, \mbox{\hyperlink{class_climber_a05d4b42803a951054d725f2197a51a3d}{Climber}}, \mbox{\hyperlink{class_turret_ad3f7cc7f9f09a4b2a02fdd13295697d2}{Turret}}, and \mbox{\hyperlink{class_shooter_a031e6b54e1a611eeeb5f0d57f375d279}{Shooter}}.
+
+\mbox{\Hypertarget{class_i_mechanism_a4c0bedb71316054749a276a67d278558}\label{class_i_mechanism_a4c0bedb71316054749a276a67d278558}} 
+\index{IMechanism@{IMechanism}!IsSolenoidActivated@{IsSolenoidActivated}}
+\index{IsSolenoidActivated@{IsSolenoidActivated}!IMechanism@{IMechanism}}
+\doxysubsubsection{\texorpdfstring{IsSolenoidActivated()}{IsSolenoidActivated()}}
+{\footnotesize\ttfamily virtual bool I\+Mechanism\+::\+Is\+Solenoid\+Activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if the pneumatic solenoid is activated. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true == extended, false == retract 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_drive_train_side_a64ddb62d04bb2896356fcf02f7a47502}{Drive\+Train\+Side}}, \mbox{\hyperlink{class_ball_transfer_a97153a52dbe2240fe50ac5ff7a3736b7}{Ball\+Transfer}}, \mbox{\hyperlink{class_hook_delivery_a585b4a2962ce485130d4cc46e13c0db8}{Hook\+Delivery}}, \mbox{\hyperlink{class_impeller_ab4e02f70801e9c4fe3d3fa6668feebcb}{Impeller}}, \mbox{\hyperlink{class_intake_a5bb26ce040e9e83d43c5a6258ba3b033}{Intake}}, \mbox{\hyperlink{class_control_panel_aa963c81fa30b7394ef23bd56d3eeffab}{Control\+Panel}}, \mbox{\hyperlink{class_shooter_hood_aa8e379f82db178c324a6e6d6e22b4039}{Shooter\+Hood}}, \mbox{\hyperlink{class_crawler_a685d572d347d0d428d2ec8bb220f5b8f}{Crawler}}, \mbox{\hyperlink{class_climber_a2195246b6a7d9d1381da682474cc0a92}{Climber}}, \mbox{\hyperlink{class_shooter_affa03878246b56a70b206d83369eefca}{Shooter}}, and \mbox{\hyperlink{class_turret_a889d15718a50aaa738f2e94d7bb57c7b}{Turret}}.
+
+\mbox{\Hypertarget{class_i_mechanism_acd973ca93855c485ed42d405f2fcba11}\label{class_i_mechanism_acd973ca93855c485ed42d405f2fcba11}} 
+\index{IMechanism@{IMechanism}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!IMechanism@{IMechanism}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily virtual void I\+Mechanism\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid\+: the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_drive_train_side_a5a706257d98af9460c245b7f34b61423}{Drive\+Train\+Side}}, \mbox{\hyperlink{class_ball_transfer_a4c99013d442e948437be3564500a07a1}{Ball\+Transfer}}, \mbox{\hyperlink{class_hook_delivery_a26859ed6b8f4ff130c90304ed1325f60}{Hook\+Delivery}}, \mbox{\hyperlink{class_impeller_a91a0410e3ad710c193570639f3149956}{Impeller}}, \mbox{\hyperlink{class_intake_a7871bee1bb586380dc701ffef44e0c8f}{Intake}}, \mbox{\hyperlink{class_control_panel_ac7fc1fccae4a61dea721107f69ab3327}{Control\+Panel}}, \mbox{\hyperlink{class_shooter_hood_a8fb48c3c2f90c97a7d0335ca646d472d}{Shooter\+Hood}}, \mbox{\hyperlink{class_crawler_a146c066dc6064a91e182b92548da4a95}{Crawler}}, \mbox{\hyperlink{class_climber_a5249f9470fa091729d36bb60b1ea7dcf}{Climber}}, \mbox{\hyperlink{class_shooter_aaa12826e26eecab817ad3ca19a52dfdc}{Shooter}}, and \mbox{\hyperlink{class_turret_aeadb069eaf12fdcd6579386be0b4e6c4}{Turret}}.
+
+\mbox{\Hypertarget{class_i_mechanism_abc72a6d0306a828de6f43418e75c04c0}\label{class_i_mechanism_abc72a6d0306a828de6f43418e75c04c0}} 
+\index{IMechanism@{IMechanism}!SetOutput@{SetOutput}}
+\index{SetOutput@{SetOutput}!IMechanism@{IMechanism}}
+\doxysubsubsection{\texorpdfstring{SetOutput()}{SetOutput()}}
+{\footnotesize\ttfamily virtual void I\+Mechanism\+::\+Set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}}]{control\+Type,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Run mechanism as defined. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}} & control\+Type\+: How are the item(s) being controlled \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & value\+: Target (units are based on the control\+Type) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_drive_train_side_a780ffb564264716f6d86e6a089bd3dd3}{Drive\+Train\+Side}}, \mbox{\hyperlink{class_ball_transfer_a8c437223d6e1cd96476294b6f4e9d5bb}{Ball\+Transfer}}, \mbox{\hyperlink{class_hook_delivery_ab6767e268f640b2b404c9474f2a085bc}{Hook\+Delivery}}, \mbox{\hyperlink{class_impeller_a103e6a39e063fa96c1d0ddd3f144e8bb}{Impeller}}, \mbox{\hyperlink{class_intake_a6e1947a3cd657b968e69629792deca69}{Intake}}, \mbox{\hyperlink{class_control_panel_a23d9f02873f94d4cc5299212f091c1fe}{Control\+Panel}}, \mbox{\hyperlink{class_shooter_hood_a9afc90ef461acd6748b1574d2a1770aa}{Shooter\+Hood}}, \mbox{\hyperlink{class_crawler_ad64ee2f80e4777aec721211826e9f92a}{Crawler}}, \mbox{\hyperlink{class_climber_a7bdc1cc3a27ecb23e26bf60c105a4b79}{Climber}}, \mbox{\hyperlink{class_shooter_a5002bb1e9c11195e18c1c62968b5863a}{Shooter}}, and \mbox{\hyperlink{class_turret_a7298ace62d3a39ca1584dd8af86c8aa1}{Turret}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_i_mechanism_8h}{I\+Mechanism.\+h}}\end{DoxyCompactItemize}

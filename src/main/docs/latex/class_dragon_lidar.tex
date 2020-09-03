@@ -1,0 +1,164 @@
+\hypertarget{class_dragon_lidar}{}\doxysection{Dragon\+Lidar Class Reference}
+\label{class_dragon_lidar}\index{DragonLidar@{DragonLidar}}
+
+
+This class takes a L\+I\+D\+AR that is connected to a digital input on the roborio using P\+WM. The high pulse length is measured and converted to distance in \mbox{\hyperlink{class_dragon_lidar_a0b7ff9670fdb521c38f85216c30a98b6}{Get\+Distance()}}. The trigger pin is just used to initialize the lidar. It shouldn\textquotesingle{}t have to be called periodically.  
+
+
+
+
+{\ttfamily \#include $<$Dragon\+Lidar.\+h$>$}
+
+Inheritance diagram for Dragon\+Lidar\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dragon_lidar}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dragon_lidar_ad0df0f24479f9007ff34b7e3618ae57d}{Dragon\+Lidar}} ()=delete
+\begin{DoxyCompactList}\small\item\em Create the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dragon_lidar_a2497dd997ef7375c8926dec617275cc4}{Dragon\+Lidar}} (\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} usage, int input\+Pin, int trigger\+Pin)
+\item 
+virtual \mbox{\hyperlink{class_dragon_lidar_a2d6aef6caadfe14e24cb17d355c4503d}{$\sim$\+Dragon\+Lidar}} ()=default
+\begin{DoxyCompactList}\small\item\em Delete the object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_dragon_lidar_a0b7ff9670fdb521c38f85216c30a98b6}{Get\+Distance}} () const override
+\begin{DoxyCompactList}\small\item\em Return the measured distance in inches. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_dragon_lidar_af61a05912f5a6ef2b05a6aed0b5db02e}{Get\+Confidence}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates how accurate the returned value is. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} \mbox{\hyperlink{class_dragon_lidar_ac6cc307d3dbce27c07ffd779543101d6}{Get\+Usage}} () const override
+\begin{DoxyCompactList}\small\item\em Indicate what the sensor is used for. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class takes a L\+I\+D\+AR that is connected to a digital input on the roborio using P\+WM. The high pulse length is measured and converted to distance in \mbox{\hyperlink{class_dragon_lidar_a0b7ff9670fdb521c38f85216c30a98b6}{Get\+Distance()}}. The trigger pin is just used to initialize the lidar. It shouldn\textquotesingle{}t have to be called periodically. 
+
+Definition at line 43 of file Dragon\+Lidar.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dragon_lidar_ad0df0f24479f9007ff34b7e3618ae57d}\label{class_dragon_lidar_ad0df0f24479f9007ff34b7e3618ae57d}} 
+\index{DragonLidar@{DragonLidar}!DragonLidar@{DragonLidar}}
+\index{DragonLidar@{DragonLidar}!DragonLidar@{DragonLidar}}
+\doxysubsubsection{\texorpdfstring{DragonLidar()}{DragonLidar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Dragon\+Lidar\+::\+Dragon\+Lidar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Create the object. 
+
+Method\+: \mbox{\hyperlink{class_dragon_lidar}{Dragon\+Lidar}} (constructor) 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}}} & usage -\/ what is the lidar being used for \\
+\hline
+{\em int} & input\+Pin -\/ P\+WM ID for the reading the distance \\
+\hline
+{\em int} & trigger\+Pin -\/ P\+WM ID used to initialize the lidar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragon_lidar_a2497dd997ef7375c8926dec617275cc4}\label{class_dragon_lidar_a2497dd997ef7375c8926dec617275cc4}} 
+\index{DragonLidar@{DragonLidar}!DragonLidar@{DragonLidar}}
+\index{DragonLidar@{DragonLidar}!DragonLidar@{DragonLidar}}
+\doxysubsubsection{\texorpdfstring{DragonLidar()}{DragonLidar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Dragon\+Lidar\+::\+Dragon\+Lidar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}}}]{usage,  }\item[{int}]{input\+Pin,  }\item[{int}]{trigger\+Pin }\end{DoxyParamCaption})}
+
+\DoxyHorRuler
+ Method\+: \mbox{\hyperlink{class_dragon_lidar}{Dragon\+Lidar}} (constructor) \hypertarget{class_dragon_lidar_autotoc_md12}{}\doxysubsubsection{Description\+:    Create the object}\label{class_dragon_lidar_autotoc_md12}
+
+
+Definition at line 43 of file Dragon\+Lidar.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_lidar_a2d6aef6caadfe14e24cb17d355c4503d}\label{class_dragon_lidar_a2d6aef6caadfe14e24cb17d355c4503d}} 
+\index{DragonLidar@{DragonLidar}!````~DragonLidar@{$\sim$DragonLidar}}
+\index{````~DragonLidar@{$\sim$DragonLidar}!DragonLidar@{DragonLidar}}
+\doxysubsubsection{\texorpdfstring{$\sim$DragonLidar()}{~DragonLidar()}}
+{\footnotesize\ttfamily virtual Dragon\+Lidar\+::$\sim$\+Dragon\+Lidar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Delete the object. 
+
+Method\+: $\sim$\+Dragon\+Lidar (destructor) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dragon_lidar_af61a05912f5a6ef2b05a6aed0b5db02e}\label{class_dragon_lidar_af61a05912f5a6ef2b05a6aed0b5db02e}} 
+\index{DragonLidar@{DragonLidar}!GetConfidence@{GetConfidence}}
+\index{GetConfidence@{GetConfidence}!DragonLidar@{DragonLidar}}
+\doxysubsubsection{\texorpdfstring{GetConfidence()}{GetConfidence()}}
+{\footnotesize\ttfamily double Dragon\+Lidar\+::\+Get\+Confidence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates how accurate the returned value is. 
+
+Method\+: Get\+Confidence \begin{DoxyReturn}{Returns}
+double 0.\+0 == ignore (sensor has an error), 1.\+0 == very confident ~\newline
+
+\end{DoxyReturn}
+\DoxyHorRuler
+ Method\+: Get\+Confidence Description\+: Indicates how accurate the returned value is Returns\+: double 0.\+0 == ignore (sensor has an error) \hypertarget{class_dragon_lidar_autotoc_md14}{}\doxysubsubsection{1.\+0 == very confident}\label{class_dragon_lidar_autotoc_md14}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_sensor_a26335856e226fcaca3ce3954ba846cb7}{I\+Dragon\+Sensor}}.
+
+
+
+Definition at line 75 of file Dragon\+Lidar.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_lidar_a0b7ff9670fdb521c38f85216c30a98b6}\label{class_dragon_lidar_a0b7ff9670fdb521c38f85216c30a98b6}} 
+\index{DragonLidar@{DragonLidar}!GetDistance@{GetDistance}}
+\index{GetDistance@{GetDistance}!DragonLidar@{DragonLidar}}
+\doxysubsubsection{\texorpdfstring{GetDistance()}{GetDistance()}}
+{\footnotesize\ttfamily double Dragon\+Lidar\+::\+Get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the measured distance in inches. 
+
+Method\+: Get\+Distance \begin{DoxyReturn}{Returns}
+double Measured Distance in inches
+\end{DoxyReturn}
+\DoxyHorRuler
+ Method\+: Get\+Distance Description\+: Return the measured distance in inches \hypertarget{class_dragon_lidar_autotoc_md13}{}\doxysubsubsection{Returns\+:     double     Measured Distance}\label{class_dragon_lidar_autotoc_md13}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_distance_sensor_a6bd5ec99c747c52a25aaddc874232703}{I\+Dragon\+Distance\+Sensor}}.
+
+
+
+Definition at line 62 of file Dragon\+Lidar.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_lidar_ac6cc307d3dbce27c07ffd779543101d6}\label{class_dragon_lidar_ac6cc307d3dbce27c07ffd779543101d6}} 
+\index{DragonLidar@{DragonLidar}!GetUsage@{GetUsage}}
+\index{GetUsage@{GetUsage}!DragonLidar@{DragonLidar}}
+\doxysubsubsection{\texorpdfstring{GetUsage()}{GetUsage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} Dragon\+Lidar\+::\+Get\+Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicate what the sensor is used for. 
+
+Method\+: Get\+Usage \begin{DoxyReturn}{Returns}
+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE sensor usage ~\newline
+
+\end{DoxyReturn}
+\DoxyHorRuler
+ Method\+: Get\+Usage Description\+: Indicate what the sensor is used for \hypertarget{class_dragon_lidar_autotoc_md15}{}\doxysubsubsection{Returns\+:     S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+G\+E    sensor usage}\label{class_dragon_lidar_autotoc_md15}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_sensor_a3040df89bae5da661a21d71c1df4ccb4}{I\+Dragon\+Sensor}}.
+
+
+
+Definition at line 91 of file Dragon\+Lidar.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/\mbox{\hyperlink{_dragon_lidar_8h}{Dragon\+Lidar.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/\mbox{\hyperlink{_dragon_lidar_8cpp}{Dragon\+Lidar.\+cpp}}\end{DoxyCompactItemize}

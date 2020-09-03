@@ -1,0 +1,176 @@
+\hypertarget{class_mech1_ind_motor}{}\doxysection{Mech1\+Ind\+Motor Class Reference}
+\label{class_mech1_ind_motor}\index{Mech1IndMotor@{Mech1IndMotor}}
+
+
+{\ttfamily \#include $<$Mech1\+Ind\+Motor.\+h$>$}
+
+Inheritance diagram for Mech1\+Ind\+Motor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mech1_ind_motor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mech1_ind_motor_a55626a8ad6f24b69b6472465fbcda416}{Update}} () override
+\begin{DoxyCompactList}\small\item\em update the output to the mechanism using the current controller and target value(s) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mech1_ind_motor_a999fd41ccd8773e87018d5e6ac849e84}{Update\+Target}} (double target) override
+\item 
+double \mbox{\hyperlink{class_mech1_ind_motor_a3f2d85ee70cab5942178f9fa15d0abb6}{Get\+Position}} () const override
+\begin{DoxyCompactList}\small\item\em Return the current position of the mechanism. The value is in inches or degrees. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_mech1_ind_motor_af1c04bfbb55bc4fcd9f2972e61ddd7b0}{Get\+Speed}} () const override
+\begin{DoxyCompactList}\small\item\em Get the current speed of the mechanism. The value is in inches per second or degrees per second. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mech1_ind_motor_a8278edecfa6865dad58493ce6f4012e2}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid) override
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mech1_ind_motor_ac6a71d0dfe6c5b6135a15e904ddb865e}{Mech1\+Ind\+Motor}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ motor\+Controller)
+\item 
+\mbox{\hyperlink{class_mech1_ind_motor_a6a226c816d43b227a05bde24d0bd8a34}{Mech1\+Ind\+Motor}} ()=delete
+\item 
+\mbox{\hyperlink{class_mech1_ind_motor_a6b24044173d6bffb08b2752944cc5665}{$\sim$\+Mech1\+Ind\+Motor}} () override=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 35 of file Mech1\+Ind\+Motor.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mech1_ind_motor_ac6a71d0dfe6c5b6135a15e904ddb865e}\label{class_mech1_ind_motor_ac6a71d0dfe6c5b6135a15e904ddb865e}} 
+\index{Mech1IndMotor@{Mech1IndMotor}!Mech1IndMotor@{Mech1IndMotor}}
+\index{Mech1IndMotor@{Mech1IndMotor}!Mech1IndMotor@{Mech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{Mech1IndMotor()}{Mech1IndMotor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Mech1\+Ind\+Motor\+::\+Mech1\+Ind\+Motor (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{motor\+Controller }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file Mech1\+Ind\+Motor.\+cpp.
+
+\mbox{\Hypertarget{class_mech1_ind_motor_a6a226c816d43b227a05bde24d0bd8a34}\label{class_mech1_ind_motor_a6a226c816d43b227a05bde24d0bd8a34}} 
+\index{Mech1IndMotor@{Mech1IndMotor}!Mech1IndMotor@{Mech1IndMotor}}
+\index{Mech1IndMotor@{Mech1IndMotor}!Mech1IndMotor@{Mech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{Mech1IndMotor()}{Mech1IndMotor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Mech1\+Ind\+Motor\+::\+Mech1\+Ind\+Motor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_mech1_ind_motor_a6b24044173d6bffb08b2752944cc5665}\label{class_mech1_ind_motor_a6b24044173d6bffb08b2752944cc5665}} 
+\index{Mech1IndMotor@{Mech1IndMotor}!````~Mech1IndMotor@{$\sim$Mech1IndMotor}}
+\index{````~Mech1IndMotor@{$\sim$Mech1IndMotor}!Mech1IndMotor@{Mech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{$\sim$Mech1IndMotor()}{~Mech1IndMotor()}}
+{\footnotesize\ttfamily Mech1\+Ind\+Motor\+::$\sim$\+Mech1\+Ind\+Motor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mech1_ind_motor_a3f2d85ee70cab5942178f9fa15d0abb6}\label{class_mech1_ind_motor_a3f2d85ee70cab5942178f9fa15d0abb6}} 
+\index{Mech1IndMotor@{Mech1IndMotor}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Mech1IndMotor@{Mech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily double Mech1\+Ind\+Motor\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the current position of the mechanism. The value is in inches or degrees. 
+
+\begin{DoxyReturn}{Returns}
+double position in inches (translating mechanisms) or degrees (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mech1_ind_motor_af2ef42ade0b09e684d99cf7d5cd6e154}{I\+Mech1\+Ind\+Motor}}.
+
+
+
+Definition at line 63 of file Mech1\+Ind\+Motor.\+cpp.
+
+\mbox{\Hypertarget{class_mech1_ind_motor_af1c04bfbb55bc4fcd9f2972e61ddd7b0}\label{class_mech1_ind_motor_af1c04bfbb55bc4fcd9f2972e61ddd7b0}} 
+\index{Mech1IndMotor@{Mech1IndMotor}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!Mech1IndMotor@{Mech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily double Mech1\+Ind\+Motor\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current speed of the mechanism. The value is in inches per second or degrees per second. 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mech1_ind_motor_a6ae1e4e4f8c13903cc690bafed7e8a01}{I\+Mech1\+Ind\+Motor}}.
+
+
+
+Definition at line 71 of file Mech1\+Ind\+Motor.\+cpp.
+
+\mbox{\Hypertarget{class_mech1_ind_motor_a8278edecfa6865dad58493ce6f4012e2}\label{class_mech1_ind_motor_a8278edecfa6865dad58493ce6f4012e2}} 
+\index{Mech1IndMotor@{Mech1IndMotor}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!Mech1IndMotor@{Mech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily void Mech1\+Ind\+Motor\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid\+: the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mech1_ind_motor_adff264c6bb32f6f1d5447844e635373c}{I\+Mech1\+Ind\+Motor}}.
+
+
+
+Definition at line 82 of file Mech1\+Ind\+Motor.\+cpp.
+
+\mbox{\Hypertarget{class_mech1_ind_motor_a55626a8ad6f24b69b6472465fbcda416}\label{class_mech1_ind_motor_a55626a8ad6f24b69b6472465fbcda416}} 
+\index{Mech1IndMotor@{Mech1IndMotor}!Update@{Update}}
+\index{Update@{Update}!Mech1IndMotor@{Mech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Mech1\+Ind\+Motor\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+update the output to the mechanism using the current controller and target value(s) 
+
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mech1_ind_motor_ac2a4fc46e37505f96054a02496e5b5c1}{I\+Mech1\+Ind\+Motor}}.
+
+
+
+Definition at line 46 of file Mech1\+Ind\+Motor.\+cpp.
+
+\mbox{\Hypertarget{class_mech1_ind_motor_a999fd41ccd8773e87018d5e6ac849e84}\label{class_mech1_ind_motor_a999fd41ccd8773e87018d5e6ac849e84}} 
+\index{Mech1IndMotor@{Mech1IndMotor}!UpdateTarget@{UpdateTarget}}
+\index{UpdateTarget@{UpdateTarget}!Mech1IndMotor@{Mech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{UpdateTarget()}{UpdateTarget()}}
+{\footnotesize\ttfamily void Mech1\+Ind\+Motor\+::\+Update\+Target (\begin{DoxyParamCaption}\item[{double}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_mech1_ind_motor_a730d0d96efa4a272289934178aa4146f}{I\+Mech1\+Ind\+Motor}}.
+
+
+
+Definition at line 55 of file Mech1\+Ind\+Motor.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_ind_motor_8h}{Mech1\+Ind\+Motor.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_ind_motor_8cpp}{Mech1\+Ind\+Motor.\+cpp}}\end{DoxyCompactItemize}

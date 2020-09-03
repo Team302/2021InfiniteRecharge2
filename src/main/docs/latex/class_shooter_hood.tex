@@ -1,0 +1,251 @@
+\hypertarget{class_shooter_hood}{}\doxysection{Shooter\+Hood Class Reference}
+\label{class_shooter_hood}\index{ShooterHood@{ShooterHood}}
+
+
+{\ttfamily \#include $<$Shooter\+Hood.\+h$>$}
+
+Inheritance diagram for Shooter\+Hood\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shooter_hood}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{class_shooter_hood_a440f815a4ec8edb913ae32bebaf0dd85}{Get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates the type of mechanism this is. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shooter_hood_a9afc90ef461acd6748b1574d2a1770aa}{Set\+Output}} (\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} control\+Type, double value) override
+\begin{DoxyCompactList}\small\item\em d Run mechanism as defined ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shooter_hood_a712e0e8e685521f54e5511f4c5b7d52e}{Activate\+Solenoid}} (bool activate) override
+\begin{DoxyCompactList}\small\item\em Activate/deactivate pneumatic solenoid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shooter_hood_aa8e379f82db178c324a6e6d6e22b4039}{Is\+Solenoid\+Activated}} () override
+\begin{DoxyCompactList}\small\item\em Check if the pneumatic solenoid is activated. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_shooter_hood_a90c27f70b7fb405c155561bc56428306}{Get\+Current\+Position}} () const override
+\begin{DoxyCompactList}\small\item\em Return the current position of the mechanism. The value is in inches or degrees. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_shooter_hood_afb58273b6dcb9f64c95c9de355671402}{Get\+Current\+Speed}} () const override
+\begin{DoxyCompactList}\small\item\em Get the current speed of the mechanism. The value is in inches per second or degrees per second. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shooter_hood_a8fb48c3c2f90c97a7d0335ca646d472d}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid) override
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shooter_hood_a81123eb53dad8258d0f8b99e503eed5c}{Shooter\+Hood}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ shmotor, std\+::shared\+\_\+ptr$<$ ctre\+::phoenix\+::sensors\+::\+C\+A\+N\+Coder $>$ encoder)
+\item 
+\mbox{\hyperlink{class_shooter_hood_ac66b2feb843b8dccdbe963cc41ea7258}{$\sim$\+Shooter\+Hood}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Copyright 2020 Lake Orion Robotics F\+I\+R\+ST Team 302
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE. ~\newline
+ 
+
+Definition at line 35 of file Shooter\+Hood.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_shooter_hood_a81123eb53dad8258d0f8b99e503eed5c}\label{class_shooter_hood_a81123eb53dad8258d0f8b99e503eed5c}} 
+\index{ShooterHood@{ShooterHood}!ShooterHood@{ShooterHood}}
+\index{ShooterHood@{ShooterHood}!ShooterHood@{ShooterHood}}
+\doxysubsubsection{\texorpdfstring{ShooterHood()}{ShooterHood()}}
+{\footnotesize\ttfamily Shooter\+Hood\+::\+Shooter\+Hood (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{shmotor,  }\item[{std\+::shared\+\_\+ptr$<$ ctre\+::phoenix\+::sensors\+::\+C\+A\+N\+Coder $>$}]{encoder }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file Shooter\+Hood.\+cpp.
+
+\mbox{\Hypertarget{class_shooter_hood_ac66b2feb843b8dccdbe963cc41ea7258}\label{class_shooter_hood_ac66b2feb843b8dccdbe963cc41ea7258}} 
+\index{ShooterHood@{ShooterHood}!````~ShooterHood@{$\sim$ShooterHood}}
+\index{````~ShooterHood@{$\sim$ShooterHood}!ShooterHood@{ShooterHood}}
+\doxysubsubsection{\texorpdfstring{$\sim$ShooterHood()}{~ShooterHood()}}
+{\footnotesize\ttfamily Shooter\+Hood\+::$\sim$\+Shooter\+Hood (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shooter_hood_a712e0e8e685521f54e5511f4c5b7d52e}\label{class_shooter_hood_a712e0e8e685521f54e5511f4c5b7d52e}} 
+\index{ShooterHood@{ShooterHood}!ActivateSolenoid@{ActivateSolenoid}}
+\index{ActivateSolenoid@{ActivateSolenoid}!ShooterHood@{ShooterHood}}
+\doxysubsubsection{\texorpdfstring{ActivateSolenoid()}{ActivateSolenoid()}}
+{\footnotesize\ttfamily void Shooter\+Hood\+::\+Activate\+Solenoid (\begin{DoxyParamCaption}\item[{bool}]{activate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activate/deactivate pneumatic solenoid. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bool} & -\/ true == extend, false == retract \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_abef1fbd73a24f4f6f3104e255539e0d9}{I\+Mechanism}}.
+
+
+
+Definition at line 72 of file Shooter\+Hood.\+cpp.
+
+\mbox{\Hypertarget{class_shooter_hood_a90c27f70b7fb405c155561bc56428306}\label{class_shooter_hood_a90c27f70b7fb405c155561bc56428306}} 
+\index{ShooterHood@{ShooterHood}!GetCurrentPosition@{GetCurrentPosition}}
+\index{GetCurrentPosition@{GetCurrentPosition}!ShooterHood@{ShooterHood}}
+\doxysubsubsection{\texorpdfstring{GetCurrentPosition()}{GetCurrentPosition()}}
+{\footnotesize\ttfamily double Shooter\+Hood\+::\+Get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the current position of the mechanism. The value is in inches or degrees. 
+
+\begin{DoxyReturn}{Returns}
+double position in inches (translating mechanisms) or degrees (rotating mechanisms) ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_aa15197ff101d65447516a8f10bb6867d}{I\+Mechanism}}.
+
+
+
+Definition at line 85 of file Shooter\+Hood.\+cpp.
+
+\mbox{\Hypertarget{class_shooter_hood_afb58273b6dcb9f64c95c9de355671402}\label{class_shooter_hood_afb58273b6dcb9f64c95c9de355671402}} 
+\index{ShooterHood@{ShooterHood}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!ShooterHood@{ShooterHood}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily double Shooter\+Hood\+::\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current speed of the mechanism. The value is in inches per second or degrees per second. 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a9a63d6905de4454d78d7e0d1d1e28437}{I\+Mechanism}}.
+
+
+
+Definition at line 92 of file Shooter\+Hood.\+cpp.
+
+\mbox{\Hypertarget{class_shooter_hood_a440f815a4ec8edb913ae32bebaf0dd85}\label{class_shooter_hood_a440f815a4ec8edb913ae32bebaf0dd85}} 
+\index{ShooterHood@{ShooterHood}!GetType@{GetType}}
+\index{GetType@{GetType}!ShooterHood@{ShooterHood}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} Shooter\+Hood\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates the type of mechanism this is. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a62096808201ffc31609e99dc2fa92d44}{I\+Mechanism}}.
+
+
+
+Definition at line 51 of file Shooter\+Hood.\+cpp.
+
+\mbox{\Hypertarget{class_shooter_hood_aa8e379f82db178c324a6e6d6e22b4039}\label{class_shooter_hood_aa8e379f82db178c324a6e6d6e22b4039}} 
+\index{ShooterHood@{ShooterHood}!IsSolenoidActivated@{IsSolenoidActivated}}
+\index{IsSolenoidActivated@{IsSolenoidActivated}!ShooterHood@{ShooterHood}}
+\doxysubsubsection{\texorpdfstring{IsSolenoidActivated()}{IsSolenoidActivated()}}
+{\footnotesize\ttfamily bool Shooter\+Hood\+::\+Is\+Solenoid\+Activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the pneumatic solenoid is activated. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true == extended, false == retract ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a4c0bedb71316054749a276a67d278558}{I\+Mechanism}}.
+
+
+
+Definition at line 79 of file Shooter\+Hood.\+cpp.
+
+\mbox{\Hypertarget{class_shooter_hood_a8fb48c3c2f90c97a7d0335ca646d472d}\label{class_shooter_hood_a8fb48c3c2f90c97a7d0335ca646d472d}} 
+\index{ShooterHood@{ShooterHood}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!ShooterHood@{ShooterHood}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily void Shooter\+Hood\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid\+: the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_acd973ca93855c485ed42d405f2fcba11}{I\+Mechanism}}.
+
+
+
+Definition at line 101 of file Shooter\+Hood.\+cpp.
+
+\mbox{\Hypertarget{class_shooter_hood_a9afc90ef461acd6748b1574d2a1770aa}\label{class_shooter_hood_a9afc90ef461acd6748b1574d2a1770aa}} 
+\index{ShooterHood@{ShooterHood}!SetOutput@{SetOutput}}
+\index{SetOutput@{SetOutput}!ShooterHood@{ShooterHood}}
+\doxysubsubsection{\texorpdfstring{SetOutput()}{SetOutput()}}
+{\footnotesize\ttfamily void Shooter\+Hood\+::\+Set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}}]{control\+Type,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+d Run mechanism as defined ~\newline
+ 
+
+Run mechanism as defined ~\newline
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}} & control\+Type\+: How are the item(s) being controlled \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & value\+: Target (units are based on the control\+Type) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_abc72a6d0306a828de6f43418e75c04c0}{I\+Mechanism}}.
+
+
+
+Definition at line 60 of file Shooter\+Hood.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_shooter_hood_8h}{Shooter\+Hood.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_shooter_hood_8cpp}{Shooter\+Hood.\+cpp}}\end{DoxyCompactItemize}

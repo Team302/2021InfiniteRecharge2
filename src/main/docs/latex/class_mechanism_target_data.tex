@@ -1,0 +1,283 @@
+\hypertarget{class_mechanism_target_data}{}\doxysection{Mechanism\+Target\+Data Class Reference}
+\label{class_mechanism_target_data}\index{MechanismTargetData@{MechanismTargetData}}
+
+
+{\ttfamily \#include $<$Mechanism\+Target\+Data.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125}{S\+O\+L\+E\+N\+O\+ID}} \{ \mbox{\hyperlink{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125a232b6268676cc583dd75174d1fa8b6af}{N\+O\+NE}}, 
+\mbox{\hyperlink{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125ac066f6d0380783e253cd23ea531027e2}{ON}}, 
+\mbox{\hyperlink{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125af78943e500adad9b931d611143c55d6d}{O\+FF}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mechanism_target_data_a39ee6396cf884252e81f4ad3d1555756}{Mechanism\+Target\+Data}} (std\+::string state, std\+::string controller, double target, \mbox{\hyperlink{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125}{S\+O\+L\+E\+N\+O\+ID}} solenoid, std\+::string failover\+Controller, double failover\+Target)
+\begin{DoxyCompactList}\small\item\em Create the \mbox{\hyperlink{class_control_data}{Control\+Data}} object that is used to control mechanisms. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mechanism_target_data_a2480a79704a3c9cb3625a90f2ce9de5f}{Mechanism\+Target\+Data}} ()=delete
+\item 
+virtual \mbox{\hyperlink{class_mechanism_target_data_a65a02439c3c67324893f7dacc405f7a4}{$\sim$\+Mechanism\+Target\+Data}} ()=default
+\item 
+std\+::string \mbox{\hyperlink{class_mechanism_target_data_a4611ff25ddb6fd0bdb831c2d280bc0fa}{Get\+State\+String}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the state indentier string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_mechanism_target_data_aba306884b9eee7b95187f9955c36626c}{Get\+Controller\+String}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the controller identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$ \mbox{\hyperlink{class_mechanism_target_data_a899cdcaf506a4385c9e81a6870d177f1}{Get\+Controller}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the controller. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_mechanism_target_data_a1ca5146630ae51b3040363631e4d684d}{Get\+Target}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the target value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125}{S\+O\+L\+E\+N\+O\+ID}} \mbox{\hyperlink{class_mechanism_target_data_a3573373ee47500efb618cbcbdc2e8405}{Get\+Solenoid\+State}} () const
+\begin{DoxyCompactList}\small\item\em get the solenoid state \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_mechanism_target_data_ac7a7bbd9670132cd60e9d1d51af1351e}{Get\+Failover\+Controller\+String}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the controller identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$ \mbox{\hyperlink{class_mechanism_target_data_ab954eaca369aa57b67d107eedf0b9e70}{Get\+Failover\+Controller}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the controller. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_mechanism_target_data_a1f83b49fd83c293c1443fcf031b7ad07}{Get\+Failover\+Target}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the target value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mechanism_target_data_aba4da6ec1b211b2f3d788cd6096502e3}{Update}} (std\+::vector$<$ \mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$ $>$ data)
+\begin{DoxyCompactList}\small\item\em update to include \mbox{\hyperlink{class_control_data}{Control\+Data}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 22 of file Mechanism\+Target\+Data.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125}\label{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125}} 
+\index{MechanismTargetData@{MechanismTargetData}!SOLENOID@{SOLENOID}}
+\index{SOLENOID@{SOLENOID}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{SOLENOID}{SOLENOID}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125}{Mechanism\+Target\+Data\+::\+S\+O\+L\+E\+N\+O\+ID}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!MechanismTargetData@{MechanismTargetData}}\index{MechanismTargetData@{MechanismTargetData}!NONE@{NONE}}}\mbox{\Hypertarget{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125a232b6268676cc583dd75174d1fa8b6af}\label{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125a232b6268676cc583dd75174d1fa8b6af}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ON@{ON}!MechanismTargetData@{MechanismTargetData}}\index{MechanismTargetData@{MechanismTargetData}!ON@{ON}}}\mbox{\Hypertarget{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125ac066f6d0380783e253cd23ea531027e2}\label{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125ac066f6d0380783e253cd23ea531027e2}} 
+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OFF@{OFF}!MechanismTargetData@{MechanismTargetData}}\index{MechanismTargetData@{MechanismTargetData}!OFF@{OFF}}}\mbox{\Hypertarget{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125af78943e500adad9b931d611143c55d6d}\label{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125af78943e500adad9b931d611143c55d6d}} 
+O\+FF&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 25 of file Mechanism\+Target\+Data.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mechanism_target_data_a39ee6396cf884252e81f4ad3d1555756}\label{class_mechanism_target_data_a39ee6396cf884252e81f4ad3d1555756}} 
+\index{MechanismTargetData@{MechanismTargetData}!MechanismTargetData@{MechanismTargetData}}
+\index{MechanismTargetData@{MechanismTargetData}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{MechanismTargetData()}{MechanismTargetData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Mechanism\+Target\+Data\+::\+Mechanism\+Target\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{state,  }\item[{std\+::string}]{controller,  }\item[{double}]{target,  }\item[{\mbox{\hyperlink{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125}{S\+O\+L\+E\+N\+O\+ID}}}]{solenoid,  }\item[{std\+::string}]{failover\+Controller,  }\item[{double}]{failover\+Target }\end{DoxyParamCaption})}
+
+
+
+Create the \mbox{\hyperlink{class_control_data}{Control\+Data}} object that is used to control mechanisms. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em state} & -\/ State indentifier \\
+\hline
+\mbox{\texttt{ in}}  & {\em controller} & -\/ controller indentifer \\
+\hline
+\mbox{\texttt{ in}}  & {\em target} & -\/ target value ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em solenoid} & value \\
+\hline
+\mbox{\texttt{ in}}  & {\em failovercontroller} & -\/ controller indentifer if in failover mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em failover\+Target} & -\/ target value if in failover mode \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mechanism_target_data_a2480a79704a3c9cb3625a90f2ce9de5f}\label{class_mechanism_target_data_a2480a79704a3c9cb3625a90f2ce9de5f}} 
+\index{MechanismTargetData@{MechanismTargetData}!MechanismTargetData@{MechanismTargetData}}
+\index{MechanismTargetData@{MechanismTargetData}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{MechanismTargetData()}{MechanismTargetData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Mechanism\+Target\+Data\+::\+Mechanism\+Target\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_mechanism_target_data_a65a02439c3c67324893f7dacc405f7a4}\label{class_mechanism_target_data_a65a02439c3c67324893f7dacc405f7a4}} 
+\index{MechanismTargetData@{MechanismTargetData}!````~MechanismTargetData@{$\sim$MechanismTargetData}}
+\index{````~MechanismTargetData@{$\sim$MechanismTargetData}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{$\sim$MechanismTargetData()}{~MechanismTargetData()}}
+{\footnotesize\ttfamily virtual Mechanism\+Target\+Data\+::$\sim$\+Mechanism\+Target\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mechanism_target_data_a899cdcaf506a4385c9e81a6870d177f1}\label{class_mechanism_target_data_a899cdcaf506a4385c9e81a6870d177f1}} 
+\index{MechanismTargetData@{MechanismTargetData}!GetController@{GetController}}
+\index{GetController@{GetController}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{GetController()}{GetController()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_control_data}{Control\+Data}}$\ast$ Mechanism\+Target\+Data\+::\+Get\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the controller. 
+
+\begin{DoxyReturn}{Returns}
+Control\+Data$\ast$ controller 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Mechanism\+Target\+Data.\+h.
+
+\mbox{\Hypertarget{class_mechanism_target_data_aba306884b9eee7b95187f9955c36626c}\label{class_mechanism_target_data_aba306884b9eee7b95187f9955c36626c}} 
+\index{MechanismTargetData@{MechanismTargetData}!GetControllerString@{GetControllerString}}
+\index{GetControllerString@{GetControllerString}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{GetControllerString()}{GetControllerString()}}
+{\footnotesize\ttfamily std\+::string Mechanism\+Target\+Data\+::\+Get\+Controller\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the controller identifier. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string controller indentifier 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file Mechanism\+Target\+Data.\+h.
+
+\mbox{\Hypertarget{class_mechanism_target_data_ab954eaca369aa57b67d107eedf0b9e70}\label{class_mechanism_target_data_ab954eaca369aa57b67d107eedf0b9e70}} 
+\index{MechanismTargetData@{MechanismTargetData}!GetFailoverController@{GetFailoverController}}
+\index{GetFailoverController@{GetFailoverController}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{GetFailoverController()}{GetFailoverController()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_control_data}{Control\+Data}}$\ast$ Mechanism\+Target\+Data\+::\+Get\+Failover\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the controller. 
+
+\begin{DoxyReturn}{Returns}
+Control\+Data$\ast$ controller 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file Mechanism\+Target\+Data.\+h.
+
+\mbox{\Hypertarget{class_mechanism_target_data_ac7a7bbd9670132cd60e9d1d51af1351e}\label{class_mechanism_target_data_ac7a7bbd9670132cd60e9d1d51af1351e}} 
+\index{MechanismTargetData@{MechanismTargetData}!GetFailoverControllerString@{GetFailoverControllerString}}
+\index{GetFailoverControllerString@{GetFailoverControllerString}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{GetFailoverControllerString()}{GetFailoverControllerString()}}
+{\footnotesize\ttfamily std\+::string Mechanism\+Target\+Data\+::\+Get\+Failover\+Controller\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the controller identifier. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string controller indentifier 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file Mechanism\+Target\+Data.\+h.
+
+\mbox{\Hypertarget{class_mechanism_target_data_a1f83b49fd83c293c1443fcf031b7ad07}\label{class_mechanism_target_data_a1f83b49fd83c293c1443fcf031b7ad07}} 
+\index{MechanismTargetData@{MechanismTargetData}!GetFailoverTarget@{GetFailoverTarget}}
+\index{GetFailoverTarget@{GetFailoverTarget}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{GetFailoverTarget()}{GetFailoverTarget()}}
+{\footnotesize\ttfamily double Mechanism\+Target\+Data\+::\+Get\+Failover\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the target value. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ target value 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Mechanism\+Target\+Data.\+h.
+
+\mbox{\Hypertarget{class_mechanism_target_data_a3573373ee47500efb618cbcbdc2e8405}\label{class_mechanism_target_data_a3573373ee47500efb618cbcbdc2e8405}} 
+\index{MechanismTargetData@{MechanismTargetData}!GetSolenoidState@{GetSolenoidState}}
+\index{GetSolenoidState@{GetSolenoidState}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{GetSolenoidState()}{GetSolenoidState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125}{S\+O\+L\+E\+N\+O\+ID}} Mechanism\+Target\+Data\+::\+Get\+Solenoid\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the solenoid state 
+
+\begin{DoxyReturn}{Returns}
+S\+O\+L\+E\+N\+O\+ID state of the solenoid 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file Mechanism\+Target\+Data.\+h.
+
+\mbox{\Hypertarget{class_mechanism_target_data_a4611ff25ddb6fd0bdb831c2d280bc0fa}\label{class_mechanism_target_data_a4611ff25ddb6fd0bdb831c2d280bc0fa}} 
+\index{MechanismTargetData@{MechanismTargetData}!GetStateString@{GetStateString}}
+\index{GetStateString@{GetStateString}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{GetStateString()}{GetStateString()}}
+{\footnotesize\ttfamily std\+::string Mechanism\+Target\+Data\+::\+Get\+State\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the state indentier string. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string state identifier 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Mechanism\+Target\+Data.\+h.
+
+\mbox{\Hypertarget{class_mechanism_target_data_a1ca5146630ae51b3040363631e4d684d}\label{class_mechanism_target_data_a1ca5146630ae51b3040363631e4d684d}} 
+\index{MechanismTargetData@{MechanismTargetData}!GetTarget@{GetTarget}}
+\index{GetTarget@{GetTarget}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{GetTarget()}{GetTarget()}}
+{\footnotesize\ttfamily double Mechanism\+Target\+Data\+::\+Get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the target value. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ target value 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Mechanism\+Target\+Data.\+h.
+
+\mbox{\Hypertarget{class_mechanism_target_data_aba4da6ec1b211b2f3d788cd6096502e3}\label{class_mechanism_target_data_aba4da6ec1b211b2f3d788cd6096502e3}} 
+\index{MechanismTargetData@{MechanismTargetData}!Update@{Update}}
+\index{Update@{Update}!MechanismTargetData@{MechanismTargetData}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Mechanism\+Target\+Data\+::\+Update (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$ $>$}]{data }\end{DoxyParamCaption})}
+
+
+
+update to include \mbox{\hyperlink{class_control_data}{Control\+Data}} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em std\+::vector$<$\+Control\+Data$\ast$$>$} & -\/ vector of \mbox{\hyperlink{class_control_data}{Control\+Data}} Objects \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file Mechanism\+Target\+Data.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/controllers/\mbox{\hyperlink{_mechanism_target_data_8h}{Mechanism\+Target\+Data.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/controllers/\mbox{\hyperlink{_mechanism_target_data_8cpp}{Mechanism\+Target\+Data.\+cpp}}\end{DoxyCompactItemize}

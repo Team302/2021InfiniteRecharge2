@@ -1,0 +1,248 @@
+\hypertarget{class_control_panel}{}\doxysection{Control\+Panel Class Reference}
+\label{class_control_panel}\index{ControlPanel@{ControlPanel}}
+
+
+{\ttfamily \#include $<$Control\+Panel.\+h$>$}
+
+Inheritance diagram for Control\+Panel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_control_panel}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_control_panel_a6f838fe1c465c905c4ac9ac8d01037f2}{Control\+Panel}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ motorcontroller, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_solenoid}{Dragon\+Solenoid}} $>$ solenoid, rev\+::\+Color\+Sensor\+V3 $\ast$color\+Sensor)
+\item 
+\mbox{\hyperlink{class_control_panel_a8b58eff4ae438b7847c52035957200eb}{Control\+Panel}} ()=delete
+\item 
+virtual \mbox{\hyperlink{class_control_panel_ae26ca57e23827693cc8bc60304cc603a}{$\sim$\+Control\+Panel}} ()=default
+\item 
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{class_control_panel_a047cd8db83f38aafa18610af368cdecd}{Get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates the type of mechanism this is. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_control_panel_a23d9f02873f94d4cc5299212f091c1fe}{Set\+Output}} (\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} control\+Type, double value) override
+\begin{DoxyCompactList}\small\item\em Run mechanism as defined. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_control_panel_afabe6a8e741ed9af5d51d50d82cc4263}{Activate\+Solenoid}} (bool activate) override
+\begin{DoxyCompactList}\small\item\em Activate/deactivate pneumatic solenoid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control_panel_aa963c81fa30b7394ef23bd56d3eeffab}{Is\+Solenoid\+Activated}} () override
+\begin{DoxyCompactList}\small\item\em Check if the pneumatic solenoid is activated. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_panel_abdff4646934ab23158cfce4261322889}{Get\+Current\+Position}} () const override
+\begin{DoxyCompactList}\small\item\em Return the current position of the mechanism. The value is in inches or degrees. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_panel_a99f7157fc32fd4f2f10c2f78ba0e34cd}{Get\+Current\+Speed}} () const override
+\begin{DoxyCompactList}\small\item\em Get the current speed of the mechanism. The value is in inches per second or degrees per second. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_control_panel_ac7fc1fccae4a61dea721107f69ab3327}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid) override
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_control_panel_colors_a4137011ea714732b2ba0c01b9c3f70eb}{Control\+Panel\+Colors\+::\+C\+O\+L\+OR}} \mbox{\hyperlink{class_control_panel_a38e4c0847f8d0d88f8ec51171b49a4ad}{Get\+Color\+Seen}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 25 of file Control\+Panel.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_control_panel_a6f838fe1c465c905c4ac9ac8d01037f2}\label{class_control_panel_a6f838fe1c465c905c4ac9ac8d01037f2}} 
+\index{ControlPanel@{ControlPanel}!ControlPanel@{ControlPanel}}
+\index{ControlPanel@{ControlPanel}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{ControlPanel()}{ControlPanel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Control\+Panel\+::\+Control\+Panel (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{motorcontroller,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_solenoid}{Dragon\+Solenoid}} $>$}]{solenoid,  }\item[{rev\+::\+Color\+Sensor\+V3 $\ast$}]{color\+Sensor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_control_panel_a8b58eff4ae438b7847c52035957200eb}\label{class_control_panel_a8b58eff4ae438b7847c52035957200eb}} 
+\index{ControlPanel@{ControlPanel}!ControlPanel@{ControlPanel}}
+\index{ControlPanel@{ControlPanel}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{ControlPanel()}{ControlPanel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Control\+Panel\+::\+Control\+Panel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_control_panel_ae26ca57e23827693cc8bc60304cc603a}\label{class_control_panel_ae26ca57e23827693cc8bc60304cc603a}} 
+\index{ControlPanel@{ControlPanel}!````~ControlPanel@{$\sim$ControlPanel}}
+\index{````~ControlPanel@{$\sim$ControlPanel}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{$\sim$ControlPanel()}{~ControlPanel()}}
+{\footnotesize\ttfamily virtual Control\+Panel\+::$\sim$\+Control\+Panel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_control_panel_afabe6a8e741ed9af5d51d50d82cc4263}\label{class_control_panel_afabe6a8e741ed9af5d51d50d82cc4263}} 
+\index{ControlPanel@{ControlPanel}!ActivateSolenoid@{ActivateSolenoid}}
+\index{ActivateSolenoid@{ActivateSolenoid}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{ActivateSolenoid()}{ActivateSolenoid()}}
+{\footnotesize\ttfamily void Control\+Panel\+::\+Activate\+Solenoid (\begin{DoxyParamCaption}\item[{bool}]{activate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activate/deactivate pneumatic solenoid. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bool} & -\/ true == extend, false == retract \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_abef1fbd73a24f4f6f3104e255539e0d9}{I\+Mechanism}}.
+
+
+
+Definition at line 92 of file Control\+Panel.\+cpp.
+
+\mbox{\Hypertarget{class_control_panel_a38e4c0847f8d0d88f8ec51171b49a4ad}\label{class_control_panel_a38e4c0847f8d0d88f8ec51171b49a4ad}} 
+\index{ControlPanel@{ControlPanel}!GetColorSeen@{GetColorSeen}}
+\index{GetColorSeen@{GetColorSeen}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{GetColorSeen()}{GetColorSeen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_control_panel_colors_a4137011ea714732b2ba0c01b9c3f70eb}{Control\+Panel\+Colors\+::\+C\+O\+L\+OR}} Control\+Panel\+::\+Get\+Color\+Seen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 161 of file Control\+Panel.\+cpp.
+
+\mbox{\Hypertarget{class_control_panel_abdff4646934ab23158cfce4261322889}\label{class_control_panel_abdff4646934ab23158cfce4261322889}} 
+\index{ControlPanel@{ControlPanel}!GetCurrentPosition@{GetCurrentPosition}}
+\index{GetCurrentPosition@{GetCurrentPosition}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{GetCurrentPosition()}{GetCurrentPosition()}}
+{\footnotesize\ttfamily double Control\+Panel\+::\+Get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the current position of the mechanism. The value is in inches or degrees. 
+
+\begin{DoxyReturn}{Returns}
+double position in inches (translating mechanisms) or degrees (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_aa15197ff101d65447516a8f10bb6867d}{I\+Mechanism}}.
+
+
+
+Definition at line 128 of file Control\+Panel.\+cpp.
+
+\mbox{\Hypertarget{class_control_panel_a99f7157fc32fd4f2f10c2f78ba0e34cd}\label{class_control_panel_a99f7157fc32fd4f2f10c2f78ba0e34cd}} 
+\index{ControlPanel@{ControlPanel}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily double Control\+Panel\+::\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current speed of the mechanism. The value is in inches per second or degrees per second. 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a9a63d6905de4454d78d7e0d1d1e28437}{I\+Mechanism}}.
+
+
+
+Definition at line 140 of file Control\+Panel.\+cpp.
+
+\mbox{\Hypertarget{class_control_panel_a047cd8db83f38aafa18610af368cdecd}\label{class_control_panel_a047cd8db83f38aafa18610af368cdecd}} 
+\index{ControlPanel@{ControlPanel}!GetType@{GetType}}
+\index{GetType@{GetType}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} Control\+Panel\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates the type of mechanism this is. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a62096808201ffc31609e99dc2fa92d44}{I\+Mechanism}}.
+
+
+
+Definition at line 69 of file Control\+Panel.\+cpp.
+
+\mbox{\Hypertarget{class_control_panel_aa963c81fa30b7394ef23bd56d3eeffab}\label{class_control_panel_aa963c81fa30b7394ef23bd56d3eeffab}} 
+\index{ControlPanel@{ControlPanel}!IsSolenoidActivated@{IsSolenoidActivated}}
+\index{IsSolenoidActivated@{IsSolenoidActivated}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{IsSolenoidActivated()}{IsSolenoidActivated()}}
+{\footnotesize\ttfamily bool Control\+Panel\+::\+Is\+Solenoid\+Activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the pneumatic solenoid is activated. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true == extended, false == retract 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a4c0bedb71316054749a276a67d278558}{I\+Mechanism}}.
+
+
+
+Definition at line 108 of file Control\+Panel.\+cpp.
+
+\mbox{\Hypertarget{class_control_panel_ac7fc1fccae4a61dea721107f69ab3327}\label{class_control_panel_ac7fc1fccae4a61dea721107f69ab3327}} 
+\index{ControlPanel@{ControlPanel}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily void Control\+Panel\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid\+: the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_acd973ca93855c485ed42d405f2fcba11}{I\+Mechanism}}.
+
+
+
+Definition at line 154 of file Control\+Panel.\+cpp.
+
+\mbox{\Hypertarget{class_control_panel_a23d9f02873f94d4cc5299212f091c1fe}\label{class_control_panel_a23d9f02873f94d4cc5299212f091c1fe}} 
+\index{ControlPanel@{ControlPanel}!SetOutput@{SetOutput}}
+\index{SetOutput@{SetOutput}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{SetOutput()}{SetOutput()}}
+{\footnotesize\ttfamily void Control\+Panel\+::\+Set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}}]{control\+Type,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Run mechanism as defined. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}} & control\+Type\+: How are the item(s) being controlled \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & value\+: Target (units are based on the control\+Type) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_abc72a6d0306a828de6f43418e75c04c0}{I\+Mechanism}}.
+
+
+
+Definition at line 75 of file Control\+Panel.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_control_panel_8h}{Control\+Panel.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_control_panel_8cpp}{Control\+Panel.\+cpp}}\end{DoxyCompactItemize}

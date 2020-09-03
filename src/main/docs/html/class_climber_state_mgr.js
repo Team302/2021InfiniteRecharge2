@@ -1,9 +1,8 @@
 var class_climber_state_mgr =
 [
     [ "CLIMBER_STATE", "class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3", [
-      [ "HOLD", "class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3ac310765b6b4e9effdfcc1cd0545d4ac2", null ],
-      [ "RAISE", "class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3aaa28af314121fbeebf0839eb4d8c7da5", null ],
-      [ "STOWED", "class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3af4e1e12e8d041e78283784f6efea10c0", null ],
+      [ "OFF", "class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3acf24c2c576c0471692a77c627794ef37", null ],
+      [ "WINCH_UP", "class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3a6e9bf4518d07ae5f083101092e26be4e", null ],
       [ "MAX_INTAKE_STATES", "class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3ad72da3dde6237e84196c873351b03e80", null ]
     ] ],
     [ "GetCurrentState", "class_climber_state_mgr.html#ad283b6a4df806f7483a06fce808ea62b", null ],

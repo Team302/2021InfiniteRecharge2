@@ -1,0 +1,98 @@
+\hypertarget{class_i_mech1_solenoid}{}\doxysection{I\+Mech1\+Solenoid Interface Reference}
+\label{class_i_mech1_solenoid}\index{IMech1Solenoid@{IMech1Solenoid}}
+
+
+Interface for subsystems.  
+
+
+
+
+{\ttfamily \#include $<$I\+Mech1\+Solenoid.\+h$>$}
+
+Inheritance diagram for I\+Mech1\+Solenoid\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_mech1_solenoid}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_mech1_solenoid_a08e5dbbc73217c05e1aaa1797d23c0c2}{Activate\+Solenoid}} (bool activate)=0
+\begin{DoxyCompactList}\small\item\em Activate/deactivate pneumatic solenoid. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_i_mech1_solenoid_a2c9e18c4dfebef5b253bb84d6556fe4a}{Is\+Solenoid\+Activated}} () const =0
+\begin{DoxyCompactList}\small\item\em Check if the pneumatic solenoid is activated. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_mech1_solenoid_a8054abbf1019f9580114d2b96eb8a6bf}{I\+Mech1\+Solenoid}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_i_mech1_solenoid_ae4c82f6560aaf4bee5d2937f8cab8c73}{$\sim$\+I\+Mech1\+Solenoid}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for subsystems. 
+
+Definition at line 38 of file I\+Mech1\+Solenoid.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_mech1_solenoid_a8054abbf1019f9580114d2b96eb8a6bf}\label{class_i_mech1_solenoid_a8054abbf1019f9580114d2b96eb8a6bf}} 
+\index{IMech1Solenoid@{IMech1Solenoid}!IMech1Solenoid@{IMech1Solenoid}}
+\index{IMech1Solenoid@{IMech1Solenoid}!IMech1Solenoid@{IMech1Solenoid}}
+\doxysubsubsection{\texorpdfstring{IMech1Solenoid()}{IMech1Solenoid()}}
+{\footnotesize\ttfamily I\+Mech1\+Solenoid\+::\+I\+Mech1\+Solenoid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_i_mech1_solenoid_ae4c82f6560aaf4bee5d2937f8cab8c73}\label{class_i_mech1_solenoid_ae4c82f6560aaf4bee5d2937f8cab8c73}} 
+\index{IMech1Solenoid@{IMech1Solenoid}!````~IMech1Solenoid@{$\sim$IMech1Solenoid}}
+\index{````~IMech1Solenoid@{$\sim$IMech1Solenoid}!IMech1Solenoid@{IMech1Solenoid}}
+\doxysubsubsection{\texorpdfstring{$\sim$IMech1Solenoid()}{~IMech1Solenoid()}}
+{\footnotesize\ttfamily virtual I\+Mech1\+Solenoid\+::$\sim$\+I\+Mech1\+Solenoid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_mech1_solenoid_a08e5dbbc73217c05e1aaa1797d23c0c2}\label{class_i_mech1_solenoid_a08e5dbbc73217c05e1aaa1797d23c0c2}} 
+\index{IMech1Solenoid@{IMech1Solenoid}!ActivateSolenoid@{ActivateSolenoid}}
+\index{ActivateSolenoid@{ActivateSolenoid}!IMech1Solenoid@{IMech1Solenoid}}
+\doxysubsubsection{\texorpdfstring{ActivateSolenoid()}{ActivateSolenoid()}}
+{\footnotesize\ttfamily virtual void I\+Mech1\+Solenoid\+::\+Activate\+Solenoid (\begin{DoxyParamCaption}\item[{bool}]{activate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Activate/deactivate pneumatic solenoid. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bool} & -\/ true == extend, false == retract \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech1_solenoid_ab5578fc06c59ce48ab7e3eff9a707004}{Mech1\+Solenoid}}.
+
+\mbox{\Hypertarget{class_i_mech1_solenoid_a2c9e18c4dfebef5b253bb84d6556fe4a}\label{class_i_mech1_solenoid_a2c9e18c4dfebef5b253bb84d6556fe4a}} 
+\index{IMech1Solenoid@{IMech1Solenoid}!IsSolenoidActivated@{IsSolenoidActivated}}
+\index{IsSolenoidActivated@{IsSolenoidActivated}!IMech1Solenoid@{IMech1Solenoid}}
+\doxysubsubsection{\texorpdfstring{IsSolenoidActivated()}{IsSolenoidActivated()}}
+{\footnotesize\ttfamily virtual bool I\+Mech1\+Solenoid\+::\+Is\+Solenoid\+Activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if the pneumatic solenoid is activated. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true == extended, false == retract 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech1_solenoid_ab50959e3e879323fa1928c839842cdc7}{Mech1\+Solenoid}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_i_mech1_solenoid_8h}{I\+Mech1\+Solenoid.\+h}}\end{DoxyCompactItemize}

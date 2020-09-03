@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team 302 Robot: VelocityController Class Reference</title>
+<title>Robot: VelocityController Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Team 302 Robot
+   <div id="projectname">Robot
    </div>
   </td>
  </tr>
@@ -87,6 +87,7 @@ $(document).ready(function(){initNavTree('class_velocity_controller.html','');})
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_velocity_controller-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">VelocityController Class Reference</div>  </div>
@@ -100,7 +101,8 @@ Inheritance diagram for VelocityController:</div>
  <div class="center">
   <img src="class_velocity_controller.png" usemap="#VelocityController_map" alt=""/>
   <map id="VelocityController_map" name="VelocityController_map">
-<area href="class_i_mech_controller.html" alt="IMechController" shape="rect" coords="0,0,114,24"/>
+<area href="class_i_mech_controller.html" alt="IMechController" shape="rect" coords="0,0,138,24"/>
+<area href="class_velocity_r_p_s_controller.html" alt="VelocityRPSController" shape="rect" coords="0,112,138,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -108,25 +110,32 @@ Inheritance diagram for VelocityController:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a86c5f295d9a510c2b2fb0c6400812f9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#a86c5f295d9a510c2b2fb0c6400812f9f">VelocityController</a> ()=delete</td></tr>
 <tr class="separator:a86c5f295d9a510c2b2fb0c6400812f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad35f02b427d8dabe4d020f13b444b197"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#ad35f02b427d8dabe4d020f13b444b197">VelocityController</a> (<a class="el" href="class_i_mechanism.html">IMechanism</a> *mechanism, <a class="el" href="class_control_data.html">ControlData</a> *controlData)</td></tr>
-<tr class="separator:ad35f02b427d8dabe4d020f13b444b197"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11cfee224ffc9dadb13a7f40965a45cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#a11cfee224ffc9dadb13a7f40965a45cb">~VelocityController</a> () override</td></tr>
-<tr class="separator:a11cfee224ffc9dadb13a7f40965a45cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4959edb8c862b11090c0a624ae819661"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#a4959edb8c862b11090c0a624ae819661">VelocityController</a> (std::shared_ptr&lt; <a class="el" href="class_i_dragon_motor_controller.html">IDragonMotorController</a> &gt; motor, double target, std::shared_ptr&lt; <a class="el" href="class_control_data.html">ControlData</a> &gt; controlData)</td></tr>
+<tr class="separator:a4959edb8c862b11090c0a624ae819661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad10bdb7a1a3e7739371cf1dd324c7169"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#ad10bdb7a1a3e7739371cf1dd324c7169">~VelocityController</a> ()=default</td></tr>
+<tr class="separator:ad10bdb7a1a3e7739371cf1dd324c7169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe11f0564aea740b84fdec61d1828aa8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#afe11f0564aea740b84fdec61d1828aa8">Init</a> () override</td></tr>
 <tr class="separator:afe11f0564aea740b84fdec61d1828aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6358fc3232691e458f996a8e8f4ce5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a">Run</a> () override</td></tr>
 <tr class="separator:aa6358fc3232691e458f996a8e8f4ce5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3283afc9090bba5644f929fef209967"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#ac3283afc9090bba5644f929fef209967">AtTarget</a> () override</td></tr>
-<tr class="separator:ac3283afc9090bba5644f929fef209967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_mech_controller"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_mech_controller')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_mech_controller.html">IMechController</a></td></tr>
 <tr class="memitem:ab64c0d95b0a45649dd07664b4307f2dc inherit pub_methods_class_i_mech_controller"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mech_controller.html#ab64c0d95b0a45649dd07664b4307f2dc">IMechController</a> ()=default</td></tr>
 <tr class="separator:ab64c0d95b0a45649dd07664b4307f2dc inherit pub_methods_class_i_mech_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a146e04000c38f5a657ff3633e9c9cf4e inherit pub_methods_class_i_mech_controller"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mech_controller.html#a146e04000c38f5a657ff3633e9c9cf4e">~IMechController</a> ()=default</td></tr>
 <tr class="separator:a146e04000c38f5a657ff3633e9c9cf4e inherit pub_methods_class_i_mech_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce7d666e9a752f34a8770830bf4d075 inherit pub_methods_class_i_mech_controller"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mech_controller.html#a5ce7d666e9a752f34a8770830bf4d075">AtTarget</a> ()=0</td></tr>
+<tr class="separator:a5ce7d666e9a752f34a8770830bf4d075 inherit pub_methods_class_i_mech_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a7236bbcd7e85be50ee6512b7c1fa1ed3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#a7236bbcd7e85be50ee6512b7c1fa1ed3">GetRPS</a> () const</td></tr>
+<tr class="separator:a7236bbcd7e85be50ee6512b7c1fa1ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f69365c8c277125757b3b15119bcfc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#a79f69365c8c277125757b3b15119bcfc">GetTarget</a> () const</td></tr>
+<tr class="separator:a79f69365c8c277125757b3b15119bcfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_velocity_controller_8h_source.html#l00007">7</a> of file <a class="el" href="_velocity_controller_8h_source.html">VelocityController.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_velocity_controller_8h_source.html#l00025">25</a> of file <a class="el" href="_velocity_controller_8h_source.html">VelocityController.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a86c5f295d9a510c2b2fb0c6400812f9f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86c5f295d9a510c2b2fb0c6400812f9f">&#9670;&nbsp;</a></span>VelocityController() <span class="overload">[1/2]</span></h2>
@@ -153,8 +162,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad35f02b427d8dabe4d020f13b444b197"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad35f02b427d8dabe4d020f13b444b197">&#9670;&nbsp;</a></span>VelocityController() <span class="overload">[2/2]</span></h2>
+<a id="a4959edb8c862b11090c0a624ae819661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4959edb8c862b11090c0a624ae819661">&#9670;&nbsp;</a></span>VelocityController() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,13 +171,19 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">VelocityController::VelocityController </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_i_mechanism.html">IMechanism</a> *&#160;</td>
-          <td class="paramname"><em>mechanism</em>, </td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_i_dragon_motor_controller.html">IDragonMotorController</a> &gt;&#160;</td>
+          <td class="paramname"><em>motor</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_control_data.html">ControlData</a> *&#160;</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_control_data.html">ControlData</a> &gt;&#160;</td>
           <td class="paramname"><em>controlData</em>&#160;</td>
         </tr>
         <tr>
@@ -179,12 +194,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_velocity_controller_8cpp_source.html#l00008">8</a> of file <a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a>.</p>
-
 </div>
 </div>
-<a id="a11cfee224ffc9dadb13a7f40965a45cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11cfee224ffc9dadb13a7f40965a45cb">&#9670;&nbsp;</a></span>~VelocityController()</h2>
+<a id="ad10bdb7a1a3e7739371cf1dd324c7169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad10bdb7a1a3e7739371cf1dd324c7169">&#9670;&nbsp;</a></span>~VelocityController()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,18 +214,16 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_velocity_controller_8cpp_source.html#l00040">40</a> of file <a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac3283afc9090bba5644f929fef209967"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3283afc9090bba5644f929fef209967">&#9670;&nbsp;</a></span>AtTarget()</h2>
+<a id="a7236bbcd7e85be50ee6512b7c1fa1ed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7236bbcd7e85be50ee6512b7c1fa1ed3">&#9670;&nbsp;</a></span>GetRPS()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -221,22 +232,47 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool VelocityController::AtTarget </td>
+          <td class="memname">double VelocityController::GetRPS </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_i_mech_controller.html#a5ce7d666e9a752f34a8770830bf4d075">IMechController</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_velocity_controller_8cpp_source.html#l00067">67</a> of file <a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_velocity_controller_8cpp_source.html#l00035">35</a> of file <a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a>.</p>
+</div>
+</div>
+<a id="a79f69365c8c277125757b3b15119bcfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79f69365c8c277125757b3b15119bcfc">&#9670;&nbsp;</a></span>GetTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double VelocityController::GetTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_velocity_controller_8h_source.html#l00044">44</a> of file <a class="el" href="_velocity_controller_8h_source.html">VelocityController.h</a>.</p>
 
 </div>
 </div>
@@ -265,7 +301,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_mech_controller.html#a43c564581e046a9483e469c6da589db9">IMechController</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_velocity_controller_8cpp_source.html#l00017">17</a> of file <a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_velocity_controller_8cpp_source.html#l00049">49</a> of file <a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a>.</p>
 
 </div>
 </div>
@@ -294,13 +330,13 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_mech_controller.html#a26c63d8b4ab0539d0f0902b2077356f4">IMechController</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_velocity_controller_8cpp_source.html#l00026">26</a> of file <a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_velocity_controller_8cpp_source.html#l00059">59</a> of file <a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>controllers/mechanisms/<a class="el" href="_velocity_controller_8h_source.html">VelocityController.h</a></li>
-<li>controllers/mechanisms/<a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a></li>
+<li>C:/robotcm/training2020/src/main/cpp/controllers/mechanisms/<a class="el" href="_velocity_controller_8h_source.html">VelocityController.h</a></li>
+<li>C:/robotcm/training2020/src/main/cpp/controllers/mechanisms/<a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

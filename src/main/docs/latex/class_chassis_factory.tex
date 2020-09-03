@@ -1,0 +1,104 @@
+\hypertarget{class_chassis_factory}{}\doxysection{Chassis\+Factory Class Reference}
+\label{class_chassis_factory}\index{ChassisFactory@{ChassisFactory}}
+
+
+{\ttfamily \#include $<$Chassis\+Factory.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4}{C\+H\+A\+S\+S\+I\+S\+\_\+\+T\+Y\+PE}} \{ \mbox{\hyperlink{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4a04e2984c2ce584cae7f95f2847037199}{U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+H\+A\+S\+S\+IS}} = -\/1, 
+\mbox{\hyperlink{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4a5511fb400c76eea4ec245cc086dc382e}{T\+A\+N\+K\+\_\+\+C\+H\+A\+S\+S\+IS}}, 
+\mbox{\hyperlink{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4aa43dc68621d7a5d888a93e794501e204}{M\+E\+C\+A\+N\+U\+M\+\_\+\+C\+H\+A\+S\+S\+IS}}, 
+\mbox{\hyperlink{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4a3bd88897f66247b7c559c09f93edf0b3}{M\+A\+X\+\_\+\+C\+H\+A\+S\+S\+I\+S\+\_\+\+T\+Y\+P\+ES}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_chassis}{I\+Chassis}} $>$ \mbox{\hyperlink{class_chassis_factory_a2723e5db4cec51076c9fb0f9e56badcf}{Get\+I\+Chassis}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_chassis}{I\+Chassis}} $>$ \mbox{\hyperlink{class_chassis_factory_a49b56298c1a0a9dc5bb8f7a0a4ccd1cf}{Create\+Chassis}} (\mbox{\hyperlink{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4}{C\+H\+A\+S\+S\+I\+S\+\_\+\+T\+Y\+PE}} type, double wheel\+Diameter, double wheel\+Base, double track, const \mbox{\hyperlink{_i_dragon_motor_controller_map_8h_a36a6214ec089416c4f6b97db3690d9b5}{I\+Dragon\+Motor\+Controller\+Map}} \&motors)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_chassis_factory}{Chassis\+Factory}} $\ast$ \mbox{\hyperlink{class_chassis_factory_a654b3190a697e11c31d4e0288eb335a6}{Get\+Chassis\+Factory}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file Chassis\+Factory.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4}\label{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4}} 
+\index{ChassisFactory@{ChassisFactory}!CHASSIS\_TYPE@{CHASSIS\_TYPE}}
+\index{CHASSIS\_TYPE@{CHASSIS\_TYPE}!ChassisFactory@{ChassisFactory}}
+\doxysubsubsection{\texorpdfstring{CHASSIS\_TYPE}{CHASSIS\_TYPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4}{Chassis\+Factory\+::\+C\+H\+A\+S\+S\+I\+S\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNKNOWN\_CHASSIS@{UNKNOWN\_CHASSIS}!ChassisFactory@{ChassisFactory}}\index{ChassisFactory@{ChassisFactory}!UNKNOWN\_CHASSIS@{UNKNOWN\_CHASSIS}}}\mbox{\Hypertarget{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4a04e2984c2ce584cae7f95f2847037199}\label{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4a04e2984c2ce584cae7f95f2847037199}} 
+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+H\+A\+S\+S\+IS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TANK\_CHASSIS@{TANK\_CHASSIS}!ChassisFactory@{ChassisFactory}}\index{ChassisFactory@{ChassisFactory}!TANK\_CHASSIS@{TANK\_CHASSIS}}}\mbox{\Hypertarget{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4a5511fb400c76eea4ec245cc086dc382e}\label{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4a5511fb400c76eea4ec245cc086dc382e}} 
+T\+A\+N\+K\+\_\+\+C\+H\+A\+S\+S\+IS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MECANUM\_CHASSIS@{MECANUM\_CHASSIS}!ChassisFactory@{ChassisFactory}}\index{ChassisFactory@{ChassisFactory}!MECANUM\_CHASSIS@{MECANUM\_CHASSIS}}}\mbox{\Hypertarget{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4aa43dc68621d7a5d888a93e794501e204}\label{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4aa43dc68621d7a5d888a93e794501e204}} 
+M\+E\+C\+A\+N\+U\+M\+\_\+\+C\+H\+A\+S\+S\+IS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_CHASSIS\_TYPES@{MAX\_CHASSIS\_TYPES}!ChassisFactory@{ChassisFactory}}\index{ChassisFactory@{ChassisFactory}!MAX\_CHASSIS\_TYPES@{MAX\_CHASSIS\_TYPES}}}\mbox{\Hypertarget{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4a3bd88897f66247b7c559c09f93edf0b3}\label{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4a3bd88897f66247b7c559c09f93edf0b3}} 
+M\+A\+X\+\_\+\+C\+H\+A\+S\+S\+I\+S\+\_\+\+T\+Y\+P\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 14 of file Chassis\+Factory.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_chassis_factory_a49b56298c1a0a9dc5bb8f7a0a4ccd1cf}\label{class_chassis_factory_a49b56298c1a0a9dc5bb8f7a0a4ccd1cf}} 
+\index{ChassisFactory@{ChassisFactory}!CreateChassis@{CreateChassis}}
+\index{CreateChassis@{CreateChassis}!ChassisFactory@{ChassisFactory}}
+\doxysubsubsection{\texorpdfstring{CreateChassis()}{CreateChassis()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_chassis}{I\+Chassis}} $>$ Chassis\+Factory\+::\+Create\+Chassis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chassis_factory_ac7a9d3e5c5b09915503114b2112702d4}{Chassis\+Factory\+::\+C\+H\+A\+S\+S\+I\+S\+\_\+\+T\+Y\+PE}}}]{type,  }\item[{double}]{wheel\+Diameter,  }\item[{double}]{wheel\+Base,  }\item[{double}]{track,  }\item[{const \mbox{\hyperlink{_i_dragon_motor_controller_map_8h_a36a6214ec089416c4f6b97db3690d9b5}{I\+Dragon\+Motor\+Controller\+Map}} \&}]{motors }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file Chassis\+Factory.\+cpp.
+
+\mbox{\Hypertarget{class_chassis_factory_a654b3190a697e11c31d4e0288eb335a6}\label{class_chassis_factory_a654b3190a697e11c31d4e0288eb335a6}} 
+\index{ChassisFactory@{ChassisFactory}!GetChassisFactory@{GetChassisFactory}}
+\index{GetChassisFactory@{GetChassisFactory}!ChassisFactory@{ChassisFactory}}
+\doxysubsubsection{\texorpdfstring{GetChassisFactory()}{GetChassisFactory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_chassis_factory}{Chassis\+Factory}} $\ast$ Chassis\+Factory\+::\+Get\+Chassis\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 15 of file Chassis\+Factory.\+cpp.
+
+\mbox{\Hypertarget{class_chassis_factory_a2723e5db4cec51076c9fb0f9e56badcf}\label{class_chassis_factory_a2723e5db4cec51076c9fb0f9e56badcf}} 
+\index{ChassisFactory@{ChassisFactory}!GetIChassis@{GetIChassis}}
+\index{GetIChassis@{GetIChassis}!ChassisFactory@{ChassisFactory}}
+\doxysubsubsection{\texorpdfstring{GetIChassis()}{GetIChassis()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_chassis}{I\+Chassis}} $>$ Chassis\+Factory\+::\+Get\+I\+Chassis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file Chassis\+Factory.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_chassis_factory_8h}{Chassis\+Factory.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_chassis_factory_8cpp}{Chassis\+Factory.\+cpp}}\end{DoxyCompactItemize}

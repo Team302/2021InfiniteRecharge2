@@ -1,0 +1,122 @@
+\hypertarget{class_logger}{}\doxysection{Logger Class Reference}
+\label{class_logger}\index{Logger@{Logger}}
+
+
+\mbox{\hyperlink{_logger_8h}{Logger.\+h}}.  
+
+
+
+
+{\ttfamily \#include $<$Logger.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_logger_a4edb2ae414fe730aa45c9279c07f013a}{L\+O\+G\+G\+E\+R\+\_\+\+O\+P\+T\+I\+ON}} \{ \mbox{\hyperlink{class_logger_a4edb2ae414fe730aa45c9279c07f013aacbcdf0940aae87a9c60c0c310aaf0836}{C\+O\+N\+S\+O\+LE}}, 
+\mbox{\hyperlink{class_logger_a4edb2ae414fe730aa45c9279c07f013aa30505ac45161ab12db3907e4236a7417}{D\+A\+S\+H\+B\+O\+A\+RD}}, 
+\mbox{\hyperlink{class_logger_a4edb2ae414fe730aa45c9279c07f013aa79d5b0f7ae29658e8a44668f40fb59be}{E\+A\+T\+\_\+\+IT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_logger_a81e0fa4eef4a980adb91577eac4bdebd}{Set\+Logging\+Option}} (\mbox{\hyperlink{class_logger_a4edb2ae414fe730aa45c9279c07f013a}{L\+O\+G\+G\+E\+R\+\_\+\+O\+P\+T\+I\+ON}} option)
+\item 
+void \mbox{\hyperlink{class_logger_a98d7aec19dcdfb9d8faa46d83d927883}{Log\+Error}} (const std\+::string \&location\+Identifier, const std\+::string \&message)
+\item 
+void \mbox{\hyperlink{class_logger_a258aeb4010abaae86c40b35d6cceed5e}{On\+Dash}} (const std\+::string \&location\+Identifier, const std\+::string \&message)
+\item 
+void \mbox{\hyperlink{class_logger_aca97721e0531390ab459dafe49697cee}{On\+Dash}} (const std\+::string \&location\+Identifier, bool value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_logger}{Logger}} $\ast$ \mbox{\hyperlink{class_logger_ae85cfbef8b7e6940475a5012fa1935c6}{Get\+Logger}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{_logger_8h}{Logger.\+h}}. 
+
+File Description\+: This logs error messages 
+
+Definition at line 40 of file Logger.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_logger_a4edb2ae414fe730aa45c9279c07f013a}\label{class_logger_a4edb2ae414fe730aa45c9279c07f013a}} 
+\index{Logger@{Logger}!LOGGER\_OPTION@{LOGGER\_OPTION}}
+\index{LOGGER\_OPTION@{LOGGER\_OPTION}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{LOGGER\_OPTION}{LOGGER\_OPTION}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_logger_a4edb2ae414fe730aa45c9279c07f013a}{Logger\+::\+L\+O\+G\+G\+E\+R\+\_\+\+O\+P\+T\+I\+ON}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONSOLE@{CONSOLE}!Logger@{Logger}}\index{Logger@{Logger}!CONSOLE@{CONSOLE}}}\mbox{\Hypertarget{class_logger_a4edb2ae414fe730aa45c9279c07f013aacbcdf0940aae87a9c60c0c310aaf0836}\label{class_logger_a4edb2ae414fe730aa45c9279c07f013aacbcdf0940aae87a9c60c0c310aaf0836}} 
+C\+O\+N\+S\+O\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DASHBOARD@{DASHBOARD}!Logger@{Logger}}\index{Logger@{Logger}!DASHBOARD@{DASHBOARD}}}\mbox{\Hypertarget{class_logger_a4edb2ae414fe730aa45c9279c07f013aa30505ac45161ab12db3907e4236a7417}\label{class_logger_a4edb2ae414fe730aa45c9279c07f013aa30505ac45161ab12db3907e4236a7417}} 
+D\+A\+S\+H\+B\+O\+A\+RD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EAT\_IT@{EAT\_IT}!Logger@{Logger}}\index{Logger@{Logger}!EAT\_IT@{EAT\_IT}}}\mbox{\Hypertarget{class_logger_a4edb2ae414fe730aa45c9279c07f013aa79d5b0f7ae29658e8a44668f40fb59be}\label{class_logger_a4edb2ae414fe730aa45c9279c07f013aa79d5b0f7ae29658e8a44668f40fb59be}} 
+E\+A\+T\+\_\+\+IT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 44 of file Logger.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_logger_ae85cfbef8b7e6940475a5012fa1935c6}\label{class_logger_ae85cfbef8b7e6940475a5012fa1935c6}} 
+\index{Logger@{Logger}!GetLogger@{GetLogger}}
+\index{GetLogger@{GetLogger}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{GetLogger()}{GetLogger()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_logger}{Logger}} $\ast$ Logger\+::\+Get\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method\+: Get\+Logger Description\+: Find or create the singleton logger Returns\+: Logger$\ast$ pointer to the logger 
+
+Definition at line 52 of file Logger.\+cpp.
+
+\mbox{\Hypertarget{class_logger_a98d7aec19dcdfb9d8faa46d83d927883}\label{class_logger_a98d7aec19dcdfb9d8faa46d83d927883}} 
+\index{Logger@{Logger}!LogError@{LogError}}
+\index{LogError@{LogError}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{LogError()}{LogError()}}
+{\footnotesize\ttfamily void Logger\+::\+Log\+Error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{location\+Identifier,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Definition at line 71 of file Logger.\+cpp.
+
+\mbox{\Hypertarget{class_logger_aca97721e0531390ab459dafe49697cee}\label{class_logger_aca97721e0531390ab459dafe49697cee}} 
+\index{Logger@{Logger}!OnDash@{OnDash}}
+\index{OnDash@{OnDash}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{OnDash()}{OnDash()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Logger\+::\+On\+Dash (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{location\+Identifier,  }\item[{bool}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_logger_a258aeb4010abaae86c40b35d6cceed5e}\label{class_logger_a258aeb4010abaae86c40b35d6cceed5e}} 
+\index{Logger@{Logger}!OnDash@{OnDash}}
+\index{OnDash@{OnDash}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{OnDash()}{OnDash()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Logger\+::\+On\+Dash (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{location\+Identifier,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_logger_a81e0fa4eef4a980adb91577eac4bdebd}\label{class_logger_a81e0fa4eef4a980adb91577eac4bdebd}} 
+\index{Logger@{Logger}!SetLoggingOption@{SetLoggingOption}}
+\index{SetLoggingOption@{SetLoggingOption}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{SetLoggingOption()}{SetLoggingOption()}}
+{\footnotesize\ttfamily void Logger\+::\+Set\+Logging\+Option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_logger_a4edb2ae414fe730aa45c9279c07f013a}{L\+O\+G\+G\+E\+R\+\_\+\+O\+P\+T\+I\+ON}}}]{option }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file Logger.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/utils/\mbox{\hyperlink{_logger_8h}{Logger.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/utils/\mbox{\hyperlink{_logger_8cpp}{Logger.\+cpp}}\end{DoxyCompactItemize}

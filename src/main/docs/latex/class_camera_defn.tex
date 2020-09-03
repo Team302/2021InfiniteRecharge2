@@ -1,0 +1,138 @@
+\hypertarget{class_camera_defn}{}\doxysection{Camera\+Defn Class Reference}
+\label{class_camera_defn}\index{CameraDefn@{CameraDefn}}
+
+
+{\ttfamily \#include $<$Camera\+Defn.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4}{P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT}} \{ \newline
+\mbox{\hyperlink{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4afaf34eb85e7d84088421a1df36137b1b}{U\+N\+K\+N\+O\+W\+N\+\_\+\+P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT}} = -\/1, 
+\mbox{\hyperlink{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4a12e3f1d0bb158aa1c9bbfccac535e664}{K\+M\+J\+P\+EG}}, 
+\mbox{\hyperlink{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4a371a130906411963c7ed4765ac1660ce}{K\+Y\+U\+YV}}, 
+\mbox{\hyperlink{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4af8c7e974f08d3cc644d930ce538b484c}{K\+R\+G\+B565}}, 
+\newline
+\mbox{\hyperlink{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4af292ba903b61feaceee67526e570c750}{K\+B\+GR}}, 
+\mbox{\hyperlink{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4ac501e7a516d4d12bc33fd69a72eefc2f}{K\+G\+R\+AY}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera_defn_aacd73655612b6174cd0560f05b117a4a}{Camera\+Defn}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_camera_defn_a9a3f9d7828ed9434865786ac2b3d8be1}{$\sim$\+Camera\+Defn}} ()=default
+\item 
+cs\+::\+Usb\+Camera \mbox{\hyperlink{class_camera_defn_ae6f1d09bfca714a4e1a2c61683605ca9}{Parse\+X\+ML}} (pugi\+::xml\+\_\+node camera\+Node)
+\begin{DoxyCompactList}\small\item\em Parse a Camera X\+ML element.... \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler
+\hypertarget{class_camera_defn_autotoc_md68}{}\doxysubsubsection{Create a camera for streaming from an X\+M\+L definition}\label{class_camera_defn_autotoc_md68}
+\DoxyHorRuler
+\hypertarget{class_camera_defn_autotoc_md70}{}\doxysubsubsection{Create a camera for streaming from an X\+M\+L definition}\label{class_camera_defn_autotoc_md70}
+
+
+Definition at line 30 of file Camera\+Defn.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4}\label{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4}} 
+\index{CameraDefn@{CameraDefn}!PIXEL\_FORMAT@{PIXEL\_FORMAT}}
+\index{PIXEL\_FORMAT@{PIXEL\_FORMAT}!CameraDefn@{CameraDefn}}
+\doxysubsubsection{\texorpdfstring{PIXEL\_FORMAT}{PIXEL\_FORMAT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4}{Camera\+Defn\+::\+P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNKNOWN\_PIXEL\_FORMAT@{UNKNOWN\_PIXEL\_FORMAT}!CameraDefn@{CameraDefn}}\index{CameraDefn@{CameraDefn}!UNKNOWN\_PIXEL\_FORMAT@{UNKNOWN\_PIXEL\_FORMAT}}}\mbox{\Hypertarget{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4afaf34eb85e7d84088421a1df36137b1b}\label{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4afaf34eb85e7d84088421a1df36137b1b}} 
+U\+N\+K\+N\+O\+W\+N\+\_\+\+P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KMJPEG@{KMJPEG}!CameraDefn@{CameraDefn}}\index{CameraDefn@{CameraDefn}!KMJPEG@{KMJPEG}}}\mbox{\Hypertarget{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4a12e3f1d0bb158aa1c9bbfccac535e664}\label{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4a12e3f1d0bb158aa1c9bbfccac535e664}} 
+K\+M\+J\+P\+EG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KYUYV@{KYUYV}!CameraDefn@{CameraDefn}}\index{CameraDefn@{CameraDefn}!KYUYV@{KYUYV}}}\mbox{\Hypertarget{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4a371a130906411963c7ed4765ac1660ce}\label{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4a371a130906411963c7ed4765ac1660ce}} 
+K\+Y\+U\+YV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KRGB565@{KRGB565}!CameraDefn@{CameraDefn}}\index{CameraDefn@{CameraDefn}!KRGB565@{KRGB565}}}\mbox{\Hypertarget{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4af8c7e974f08d3cc644d930ce538b484c}\label{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4af8c7e974f08d3cc644d930ce538b484c}} 
+K\+R\+G\+B565&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KBGR@{KBGR}!CameraDefn@{CameraDefn}}\index{CameraDefn@{CameraDefn}!KBGR@{KBGR}}}\mbox{\Hypertarget{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4af292ba903b61feaceee67526e570c750}\label{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4af292ba903b61feaceee67526e570c750}} 
+K\+B\+GR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KGRAY@{KGRAY}!CameraDefn@{CameraDefn}}\index{CameraDefn@{CameraDefn}!KGRAY@{KGRAY}}}\mbox{\Hypertarget{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4ac501e7a516d4d12bc33fd69a72eefc2f}\label{class_camera_defn_ae29ffe10b5b70b63317bbb86366d7be4ac501e7a516d4d12bc33fd69a72eefc2f}} 
+K\+G\+R\+AY&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 35 of file Camera\+Defn.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_camera_defn_aacd73655612b6174cd0560f05b117a4a}\label{class_camera_defn_aacd73655612b6174cd0560f05b117a4a}} 
+\index{CameraDefn@{CameraDefn}!CameraDefn@{CameraDefn}}
+\index{CameraDefn@{CameraDefn}!CameraDefn@{CameraDefn}}
+\doxysubsubsection{\texorpdfstring{CameraDefn()}{CameraDefn()}}
+{\footnotesize\ttfamily Camera\+Defn\+::\+Camera\+Defn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_camera_defn_a9a3f9d7828ed9434865786ac2b3d8be1}\label{class_camera_defn_a9a3f9d7828ed9434865786ac2b3d8be1}} 
+\index{CameraDefn@{CameraDefn}!````~CameraDefn@{$\sim$CameraDefn}}
+\index{````~CameraDefn@{$\sim$CameraDefn}!CameraDefn@{CameraDefn}}
+\doxysubsubsection{\texorpdfstring{$\sim$CameraDefn()}{~CameraDefn()}}
+{\footnotesize\ttfamily virtual Camera\+Defn\+::$\sim$\+Camera\+Defn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_defn_ae6f1d09bfca714a4e1a2c61683605ca9}\label{class_camera_defn_ae6f1d09bfca714a4e1a2c61683605ca9}} 
+\index{CameraDefn@{CameraDefn}!ParseXML@{ParseXML}}
+\index{ParseXML@{ParseXML}!CameraDefn@{CameraDefn}}
+\doxysubsubsection{\texorpdfstring{ParseXML()}{ParseXML()}}
+{\footnotesize\ttfamily cs\+::\+Usb\+Camera Camera\+Defn\+::\+Parse\+X\+ML (\begin{DoxyParamCaption}\item[{pugi\+::xml\+\_\+node}]{camera\+Node }\end{DoxyParamCaption})}
+
+
+
+Parse a Camera X\+ML element.... 
+
+\DoxyHorRuler
+ Method\+: Parse\+X\+ML 
+\begin{DoxyParams}{Parameters}
+{\em pugi\+::xml\+\_\+node} & camera\+Node X\+ML $<$camera node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+\hypertarget{class_camera_defn_autotoc_md71}{}\doxysubsubsection{cs\+::\+Usb\+Camera U\+S\+B camera reference}\label{class_camera_defn_autotoc_md71}
+\DoxyHorRuler
+ Method\+: Parse\+X\+ML 
+\begin{DoxyParams}{Parameters}
+{\em pugi\+::xml\+\_\+node} & camera\+Node X\+ML $<$camera node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+\hypertarget{class_camera_defn_autotoc_md69}{}\doxysubsubsection{cs\+::\+Usb\+Camera U\+S\+B camera reference}\label{class_camera_defn_autotoc_md69}
+
+
+Definition at line 52 of file Camera\+Defn.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/xmlhw/\mbox{\hyperlink{_camera_defn_8h}{Camera\+Defn.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/xmlhw/\mbox{\hyperlink{_camera_defn_8cpp}{Camera\+Defn.\+cpp}}\end{DoxyCompactItemize}

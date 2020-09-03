@@ -2,7 +2,7 @@ var searchData=
 [
   ['magenta_2569',['MAGENTA',['../class_l_e_d.html#ae47fb1c1cbe847bee7fb8b6c19486f70ac01785f981e1087e94e8f2bab274b1e6',1,'LED']]],
   ['main_5flimelight_2570',['MAIN_LIMELIGHT',['../class_i_dragon_sensor.html#a48f04b4f71b0f27f8330fd82a26b5fe9a2dc0986d1a2867bbc7d8e92d0c704db3',1,'IDragonSensor']]],
-  ['manual_2571',['MANUAL',['../class_control_panel_state_mgr.html#a87648a2688942ba2bbbaee7adb895c3aacd85675d02fd10bf8b52490ff81443d1',1,'ControlPanelStateMgr::MANUAL()'],['../class_hook_delivery_state_mgr.html#a1db52ff9a2c43a81d323dd3ae9a88223ac8f9ecca652538bc9b74f6b2e6164a09',1,'HookDeliveryStateMgr::MANUAL()'],['../class_shooter_hood_state_mgr.html#ae13e856863447b4380950e00d27d0516af202be2be3a8149075a13aa6757dff00',1,'ShooterHoodStateMgr::MANUAL()']]],
+  ['manual_2571',['MANUAL',['../class_control_panel_state_mgr.html#a87648a2688942ba2bbbaee7adb895c3aacd85675d02fd10bf8b52490ff81443d1',1,'ControlPanelStateMgr::MANUAL()'],['../class_shooter_hood_state_mgr.html#ae13e856863447b4380950e00d27d0516af202be2be3a8149075a13aa6757dff00',1,'ShooterHoodStateMgr::MANUAL()']]],
   ['manual_5faim_2572',['MANUAL_AIM',['../class_turret_state_mgr.html#aa185afc9e9d378aca360e2f2376c1b98aeeb2a5101bf41ce410113c70b546c91a',1,'TurretStateMgr']]],
   ['manual_5fhook_5fcontrol_5fdown_2573',['MANUAL_HOOK_CONTROL_DOWN',['../class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15a1ac5b9576cebd04b7b4a23a8c0f348f4',1,'TeleopControl']]],
   ['manual_5fhook_5fcontrol_5fup_2574',['MANUAL_HOOK_CONTROL_UP',['../class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15a243fe7aea7f9cdc8b5fcb1cf61055915',1,'TeleopControl']]],

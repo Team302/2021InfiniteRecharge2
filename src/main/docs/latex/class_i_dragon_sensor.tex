@@ -1,0 +1,128 @@
+\hypertarget{class_i_dragon_sensor}{}\doxysection{I\+Dragon\+Sensor Class Reference}
+\label{class_i_dragon_sensor}\index{IDragonSensor@{IDragonSensor}}
+
+
+{\ttfamily \#include $<$I\+Dragon\+Sensor.\+h$>$}
+
+Inheritance diagram for I\+Dragon\+Sensor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.891892cm]{class_i_dragon_sensor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} \{ \newline
+\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9aa96ab0d2414159647879dfb522c7415d}{U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+E\+N\+S\+OR}} = -\/1, 
+\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9a2dc0986d1a2867bbc7d8e92d0c704db3}{M\+A\+I\+N\+\_\+\+L\+I\+M\+E\+L\+I\+G\+HT}}, 
+\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9af1c618e0eb4f3b102dcab19d971be852}{F\+O\+R\+W\+A\+R\+D\+\_\+\+S\+E\+N\+S\+OR}}, 
+\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9a795d5fd6a2cf04238e4ad9f5834f0efe}{R\+E\+A\+R\+W\+A\+R\+D\+\_\+\+S\+E\+N\+S\+OR}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9a32fc08369675005db967d48ee0fcca4b}{M\+A\+X\+\_\+\+S\+E\+N\+S\+O\+RS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_dragon_sensor_ad5b217a4a40900db84330324383d89c7}{I\+Dragon\+Sensor}} ()=default
+\item 
+\mbox{\hyperlink{class_i_dragon_sensor_a2bdc48d7becd14702bef6447e9110954}{$\sim$\+I\+Dragon\+Sensor}} ()=default
+\item 
+virtual double \mbox{\hyperlink{class_i_dragon_sensor_a26335856e226fcaca3ce3954ba846cb7}{Get\+Confidence}} () const =0
+\item 
+virtual \mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} \mbox{\hyperlink{class_i_dragon_sensor_a3040df89bae5da661a21d71c1df4ccb4}{Get\+Usage}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Inteface\+: \mbox{\hyperlink{class_i_dragon_sensor}{I\+Dragon\+Sensor}} Description\+: This inteface provides a common set of methods for all sensors 
+
+Definition at line 32 of file I\+Dragon\+Sensor.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}\label{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}} 
+\index{IDragonSensor@{IDragonSensor}!SENSOR\_USAGE@{SENSOR\_USAGE}}
+\index{SENSOR\_USAGE@{SENSOR\_USAGE}!IDragonSensor@{IDragonSensor}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_USAGE}{SENSOR\_USAGE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNKNOWN\_SENSOR@{UNKNOWN\_SENSOR}!IDragonSensor@{IDragonSensor}}\index{IDragonSensor@{IDragonSensor}!UNKNOWN\_SENSOR@{UNKNOWN\_SENSOR}}}\mbox{\Hypertarget{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9aa96ab0d2414159647879dfb522c7415d}\label{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9aa96ab0d2414159647879dfb522c7415d}} 
+U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+E\+N\+S\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAIN\_LIMELIGHT@{MAIN\_LIMELIGHT}!IDragonSensor@{IDragonSensor}}\index{IDragonSensor@{IDragonSensor}!MAIN\_LIMELIGHT@{MAIN\_LIMELIGHT}}}\mbox{\Hypertarget{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9a2dc0986d1a2867bbc7d8e92d0c704db3}\label{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9a2dc0986d1a2867bbc7d8e92d0c704db3}} 
+M\+A\+I\+N\+\_\+\+L\+I\+M\+E\+L\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORWARD\_SENSOR@{FORWARD\_SENSOR}!IDragonSensor@{IDragonSensor}}\index{IDragonSensor@{IDragonSensor}!FORWARD\_SENSOR@{FORWARD\_SENSOR}}}\mbox{\Hypertarget{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9af1c618e0eb4f3b102dcab19d971be852}\label{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9af1c618e0eb4f3b102dcab19d971be852}} 
+F\+O\+R\+W\+A\+R\+D\+\_\+\+S\+E\+N\+S\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REARWARD\_SENSOR@{REARWARD\_SENSOR}!IDragonSensor@{IDragonSensor}}\index{IDragonSensor@{IDragonSensor}!REARWARD\_SENSOR@{REARWARD\_SENSOR}}}\mbox{\Hypertarget{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9a795d5fd6a2cf04238e4ad9f5834f0efe}\label{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9a795d5fd6a2cf04238e4ad9f5834f0efe}} 
+R\+E\+A\+R\+W\+A\+R\+D\+\_\+\+S\+E\+N\+S\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_SENSORS@{MAX\_SENSORS}!IDragonSensor@{IDragonSensor}}\index{IDragonSensor@{IDragonSensor}!MAX\_SENSORS@{MAX\_SENSORS}}}\mbox{\Hypertarget{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9a32fc08369675005db967d48ee0fcca4b}\label{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9a32fc08369675005db967d48ee0fcca4b}} 
+M\+A\+X\+\_\+\+S\+E\+N\+S\+O\+RS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 36 of file I\+Dragon\+Sensor.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_dragon_sensor_ad5b217a4a40900db84330324383d89c7}\label{class_i_dragon_sensor_ad5b217a4a40900db84330324383d89c7}} 
+\index{IDragonSensor@{IDragonSensor}!IDragonSensor@{IDragonSensor}}
+\index{IDragonSensor@{IDragonSensor}!IDragonSensor@{IDragonSensor}}
+\doxysubsubsection{\texorpdfstring{IDragonSensor()}{IDragonSensor()}}
+{\footnotesize\ttfamily I\+Dragon\+Sensor\+::\+I\+Dragon\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\DoxyHorRuler
+ Method\+: \mbox{\hyperlink{class_i_dragon_sensor}{I\+Dragon\+Sensor}} \hypertarget{class_i_dragon_sensor_autotoc_md60}{}\doxysubsubsection{Description\+: Constructor for the interface}\label{class_i_dragon_sensor_autotoc_md60}
+\mbox{\Hypertarget{class_i_dragon_sensor_a2bdc48d7becd14702bef6447e9110954}\label{class_i_dragon_sensor_a2bdc48d7becd14702bef6447e9110954}} 
+\index{IDragonSensor@{IDragonSensor}!````~IDragonSensor@{$\sim$IDragonSensor}}
+\index{````~IDragonSensor@{$\sim$IDragonSensor}!IDragonSensor@{IDragonSensor}}
+\doxysubsubsection{\texorpdfstring{$\sim$IDragonSensor()}{~IDragonSensor()}}
+{\footnotesize\ttfamily I\+Dragon\+Sensor\+::$\sim$\+I\+Dragon\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\DoxyHorRuler
+ Method\+: $\sim$\+I\+Dragon\+Sensor \hypertarget{class_i_dragon_sensor_autotoc_md61}{}\doxysubsubsection{Description\+: Destructor for the interface}\label{class_i_dragon_sensor_autotoc_md61}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_dragon_sensor_a26335856e226fcaca3ce3954ba846cb7}\label{class_i_dragon_sensor_a26335856e226fcaca3ce3954ba846cb7}} 
+\index{IDragonSensor@{IDragonSensor}!GetConfidence@{GetConfidence}}
+\index{GetConfidence@{GetConfidence}!IDragonSensor@{IDragonSensor}}
+\doxysubsubsection{\texorpdfstring{GetConfidence()}{GetConfidence()}}
+{\footnotesize\ttfamily virtual double I\+Dragon\+Sensor\+::\+Get\+Confidence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\DoxyHorRuler
+ Method\+: Get\+Confidence Description\+: Indicates how accurate the returned value is Returns\+: double 0.\+0 == ignore (sensor has an error) \hypertarget{class_i_dragon_sensor_autotoc_md62}{}\doxysubsubsection{1.\+0 == very confident}\label{class_i_dragon_sensor_autotoc_md62}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_limelight_aac8b4e5ba88a7e0539c5b6cbc6974471}{Dragon\+Limelight}}, \mbox{\hyperlink{class_dragon_lidar_af61a05912f5a6ef2b05a6aed0b5db02e}{Dragon\+Lidar}}, \mbox{\hyperlink{class_dragon_ultrasonic_a917536d6949803565bbc330bdcc3a795}{Dragon\+Ultrasonic}}, and \mbox{\hyperlink{class_dragon_ultrasonic_p_w_m_a5454884e3a3a2468c73f395db955985f}{Dragon\+Ultrasonic\+P\+WM}}.
+
+\mbox{\Hypertarget{class_i_dragon_sensor_a3040df89bae5da661a21d71c1df4ccb4}\label{class_i_dragon_sensor_a3040df89bae5da661a21d71c1df4ccb4}} 
+\index{IDragonSensor@{IDragonSensor}!GetUsage@{GetUsage}}
+\index{GetUsage@{GetUsage}!IDragonSensor@{IDragonSensor}}
+\doxysubsubsection{\texorpdfstring{GetUsage()}{GetUsage()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} I\+Dragon\+Sensor\+::\+Get\+Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\DoxyHorRuler
+ Method\+: Get\+Usage Description\+: Indicate what the sensor is used for \hypertarget{class_i_dragon_sensor_autotoc_md63}{}\doxysubsubsection{Returns\+:     S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+G\+E    sensor usage}\label{class_i_dragon_sensor_autotoc_md63}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_limelight_a2a2135361297f084ea5b0bcb2eaa8f92}{Dragon\+Limelight}}, \mbox{\hyperlink{class_dragon_lidar_ac6cc307d3dbce27c07ffd779543101d6}{Dragon\+Lidar}}, \mbox{\hyperlink{class_dragon_ultrasonic_adeaf9ce4af7270c5b3e54a9919cc50a1}{Dragon\+Ultrasonic}}, and \mbox{\hyperlink{class_dragon_ultrasonic_p_w_m_ad618781c45fd1f5b85216279828eca10}{Dragon\+Ultrasonic\+P\+WM}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/interfaces/\mbox{\hyperlink{_i_dragon_sensor_8h}{I\+Dragon\+Sensor.\+h}}\end{DoxyCompactItemize}

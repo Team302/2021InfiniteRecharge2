@@ -1,0 +1,85 @@
+\hypertarget{class_pigeon_factory}{}\doxysection{Pigeon\+Factory Class Reference}
+\label{class_pigeon_factory}\index{PigeonFactory@{PigeonFactory}}
+
+
+This creates the pigeon.  
+
+
+
+
+{\ttfamily \#include $<$Pigeon\+Factory.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dragon_pigeon}{Dragon\+Pigeon}} $\ast$ \mbox{\hyperlink{class_pigeon_factory_a6ee5db14924132c7cbfb26ce72262cdf}{Get\+Pigeon}} () const
+\item 
+\mbox{\hyperlink{class_dragon_pigeon}{Dragon\+Pigeon}} $\ast$ \mbox{\hyperlink{class_pigeon_factory_a3ffcabd54ad444b8ab7addac9c5f36d4}{Create\+Pigeon}} (int can\+ID)
+\begin{DoxyCompactList}\small\item\em Create the requested analog input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_pigeon_factory}{Pigeon\+Factory}} $\ast$ \mbox{\hyperlink{class_pigeon_factory_ac70f2642bb631a0d6b0957f4e8d14dca}{Get\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Find or create the analog input factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This creates the pigeon. 
+
+This controls the creation of analog inputs. 
+
+Definition at line 31 of file Pigeon\+Factory.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pigeon_factory_a3ffcabd54ad444b8ab7addac9c5f36d4}\label{class_pigeon_factory_a3ffcabd54ad444b8ab7addac9c5f36d4}} 
+\index{PigeonFactory@{PigeonFactory}!CreatePigeon@{CreatePigeon}}
+\index{CreatePigeon@{CreatePigeon}!PigeonFactory@{PigeonFactory}}
+\doxysubsubsection{\texorpdfstring{CreatePigeon()}{CreatePigeon()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dragon_pigeon}{Dragon\+Pigeon}} $\ast$ Pigeon\+Factory\+::\+Create\+Pigeon (\begin{DoxyParamCaption}\item[{int}]{can\+ID }\end{DoxyParamCaption})}
+
+
+
+Create the requested analog input. 
+
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr$<$\+Dragon\+Pigeon$>$ the mechanism or nullptr if mechanism doesn\textquotesingle{}t exist and cannot be created. 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file Pigeon\+Factory.\+cpp.
+
+\mbox{\Hypertarget{class_pigeon_factory_ac70f2642bb631a0d6b0957f4e8d14dca}\label{class_pigeon_factory_ac70f2642bb631a0d6b0957f4e8d14dca}} 
+\index{PigeonFactory@{PigeonFactory}!GetFactory@{GetFactory}}
+\index{GetFactory@{GetFactory}!PigeonFactory@{PigeonFactory}}
+\doxysubsubsection{\texorpdfstring{GetFactory()}{GetFactory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pigeon_factory}{Pigeon\+Factory}} $\ast$ Pigeon\+Factory\+::\+Get\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find or create the analog input factory. 
+
+\begin{DoxyReturn}{Returns}
+Pigeon\+Factory$\ast$ pointer to the factory 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Pigeon\+Factory.\+cpp.
+
+\mbox{\Hypertarget{class_pigeon_factory_a6ee5db14924132c7cbfb26ce72262cdf}\label{class_pigeon_factory_a6ee5db14924132c7cbfb26ce72262cdf}} 
+\index{PigeonFactory@{PigeonFactory}!GetPigeon@{GetPigeon}}
+\index{GetPigeon@{GetPigeon}!PigeonFactory@{PigeonFactory}}
+\doxysubsubsection{\texorpdfstring{GetPigeon()}{GetPigeon()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dragon_pigeon}{Dragon\+Pigeon}} $\ast$ Pigeon\+Factory\+::\+Get\+Pigeon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 76 of file Pigeon\+Factory.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/factories/\mbox{\hyperlink{_pigeon_factory_8h}{Pigeon\+Factory.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/factories/\mbox{\hyperlink{_pigeon_factory_8cpp}{Pigeon\+Factory.\+cpp}}\end{DoxyCompactItemize}

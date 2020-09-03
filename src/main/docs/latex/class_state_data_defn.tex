@@ -1,0 +1,85 @@
+\hypertarget{class_state_data_defn}{}\doxysection{State\+Data\+Defn Class Reference}
+\label{class_state_data_defn}\index{StateDataDefn@{StateDataDefn}}
+
+
+\mbox{\hyperlink{_state_data_defn_8h}{State\+Data\+Defn.\+h}}.  
+
+
+
+
+{\ttfamily \#include $<$State\+Data\+Defn.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_state_data_defn_af44ab953d7e93c28ad74c59476af8eb2}{State\+Data\+Defn}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_state_data_defn_a3ae8c46550aa710a0def7c7027183cae}{$\sim$\+State\+Data\+Defn}} ()=default
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_mechanism_target_data}{Mechanism\+Target\+Data}} $\ast$ $>$ \mbox{\hyperlink{class_state_data_defn_aa224b720fe85884b708b31f8d3998222}{Parse\+X\+ML}} (\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} mechanism)
+\begin{DoxyCompactList}\small\item\em Parse a mechanism\+State.\+xml file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{_state_data_defn_8h}{State\+Data\+Defn.\+h}}. 
+
+Copyright 2019 Lake Orion Robotics F\+I\+R\+ST Team 302
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE. File Description\+: Top-\/level X\+ML parsing file for the state data. This definition will construct objects to help set the state targets and control modes.
+
+This parsing leverages the 3rd party Open Source Pugixml library (\href{https://pugixml.org/}{\texttt{ https\+://pugixml.\+org/}}).
+
+The state definition X\+ML files are in\+: /home/lvuser/config/states/\+X\+XX.xml where the X\+XX is the mechanism name. 
+
+Definition at line 37 of file State\+Data\+Defn.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_state_data_defn_af44ab953d7e93c28ad74c59476af8eb2}\label{class_state_data_defn_af44ab953d7e93c28ad74c59476af8eb2}} 
+\index{StateDataDefn@{StateDataDefn}!StateDataDefn@{StateDataDefn}}
+\index{StateDataDefn@{StateDataDefn}!StateDataDefn@{StateDataDefn}}
+\doxysubsubsection{\texorpdfstring{StateDataDefn()}{StateDataDefn()}}
+{\footnotesize\ttfamily State\+Data\+Defn\+::\+State\+Data\+Defn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_state_data_defn_a3ae8c46550aa710a0def7c7027183cae}\label{class_state_data_defn_a3ae8c46550aa710a0def7c7027183cae}} 
+\index{StateDataDefn@{StateDataDefn}!````~StateDataDefn@{$\sim$StateDataDefn}}
+\index{````~StateDataDefn@{$\sim$StateDataDefn}!StateDataDefn@{StateDataDefn}}
+\doxysubsubsection{\texorpdfstring{$\sim$StateDataDefn()}{~StateDataDefn()}}
+{\footnotesize\ttfamily virtual State\+Data\+Defn\+::$\sim$\+State\+Data\+Defn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_state_data_defn_aa224b720fe85884b708b31f8d3998222}\label{class_state_data_defn_aa224b720fe85884b708b31f8d3998222}} 
+\index{StateDataDefn@{StateDataDefn}!ParseXML@{ParseXML}}
+\index{ParseXML@{ParseXML}!StateDataDefn@{StateDataDefn}}
+\doxysubsubsection{\texorpdfstring{ParseXML()}{ParseXML()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_mechanism_target_data}{Mechanism\+Target\+Data}} $\ast$ $>$ State\+Data\+Defn\+::\+Parse\+X\+ML (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}}}]{mechanism }\end{DoxyParamCaption})}
+
+
+
+Parse a mechanism\+State.\+xml file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}}} & -\/ mechanism that the states are for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+state data 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file State\+Data\+Defn.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/xmlmechdata/\mbox{\hyperlink{_state_data_defn_8h}{State\+Data\+Defn.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/xmlmechdata/\mbox{\hyperlink{_state_data_defn_8cpp}{State\+Data\+Defn.\+cpp}}\end{DoxyCompactItemize}

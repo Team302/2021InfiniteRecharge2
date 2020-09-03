@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team 302 Robot: ClimberStateMgr Class Reference</title>
+<title>Robot: ClimberStateMgr Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Team 302 Robot
+   <div id="projectname">Robot
    </div>
   </td>
  </tr>
@@ -99,9 +99,8 @@ $(document).ready(function(){initNavTree('class_climber_state_mgr.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a406d1b07b9bc04fa00c43dd9672315a3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3">CLIMBER_STATE</a> { <a class="el" href="class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3ac310765b6b4e9effdfcc1cd0545d4ac2">HOLD</a>, 
-<a class="el" href="class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3aaa28af314121fbeebf0839eb4d8c7da5">RAISE</a>, 
-<a class="el" href="class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3af4e1e12e8d041e78283784f6efea10c0">STOWED</a>, 
+<tr class="memitem:a406d1b07b9bc04fa00c43dd9672315a3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3">CLIMBER_STATE</a> { <a class="el" href="class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3acf24c2c576c0471692a77c627794ef37">OFF</a>, 
+<a class="el" href="class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3a6e9bf4518d07ae5f083101092e26be4e">WINCH_UP</a>, 
 <a class="el" href="class_climber_state_mgr.html#a406d1b07b9bc04fa00c43dd9672315a3ad72da3dde6237e84196c873351b03e80">MAX_INTAKE_STATES</a>
  }</td></tr>
 <tr class="separator:a406d1b07b9bc04fa00c43dd9672315a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,9 +139,8 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a406d1b07b9bc04fa00c43dd9672315a3ac310765b6b4e9effdfcc1cd0545d4ac2"></a>HOLD&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a406d1b07b9bc04fa00c43dd9672315a3aaa28af314121fbeebf0839eb4d8c7da5"></a>RAISE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a406d1b07b9bc04fa00c43dd9672315a3af4e1e12e8d041e78283784f6efea10c0"></a>STOWED&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a406d1b07b9bc04fa00c43dd9672315a3acf24c2c576c0471692a77c627794ef37"></a>OFF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a406d1b07b9bc04fa00c43dd9672315a3a6e9bf4518d07ae5f083101092e26be4e"></a>WINCH_UP&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a406d1b07b9bc04fa00c43dd9672315a3ad72da3dde6237e84196c873351b03e80"></a>MAX_INTAKE_STATES&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -207,7 +205,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Find or create the <a class="el" href="class_climber.html" title="The Climber subsystem. Includes pneumatic extender and winch.">Climber</a> State Manager. </p>
 <dl class="section return"><dt>Returns</dt><dd>AnalogInputFactory* pointer to the factory </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_climber_state_mgr_8cpp_source.html#l00040">40</a> of file <a class="el" href="_climber_state_mgr_8cpp_source.html">ClimberStateMgr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_climber_state_mgr_8cpp_source.html#l00039">39</a> of file <a class="el" href="_climber_state_mgr_8cpp_source.html">ClimberStateMgr.cpp</a>.</p>
 
 </div>
 </div>
@@ -229,7 +227,7 @@ Static Public Member Functions</h2></td></tr>
 <p>run the current state </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_climber_state_mgr_8cpp_source.html#l00139">139</a> of file <a class="el" href="_climber_state_mgr_8cpp_source.html">ClimberStateMgr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_climber_state_mgr_8cpp_source.html#l00119">119</a> of file <a class="el" href="_climber_state_mgr_8cpp_source.html">ClimberStateMgr.cpp</a>.</p>
 
 </div>
 </div>
@@ -271,13 +269,13 @@ Static Public Member Functions</h2></td></tr>
 <dd>
 void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_climber_state_mgr_8cpp_source.html#l00176">176</a> of file <a class="el" href="_climber_state_mgr_8cpp_source.html">ClimberStateMgr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_climber_state_mgr_8cpp_source.html#l00147">147</a> of file <a class="el" href="_climber_state_mgr_8cpp_source.html">ClimberStateMgr.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>states/climber/<a class="el" href="_climber_state_mgr_8h_source.html">ClimberStateMgr.h</a></li>
-<li>states/climber/<a class="el" href="_climber_state_mgr_8cpp_source.html">ClimberStateMgr.cpp</a></li>
+<li>C:/robotcm/training2020/src/main/cpp/states/climber/<a class="el" href="_climber_state_mgr_8h_source.html">ClimberStateMgr.h</a></li>
+<li>C:/robotcm/training2020/src/main/cpp/states/climber/<a class="el" href="_climber_state_mgr_8cpp_source.html">ClimberStateMgr.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

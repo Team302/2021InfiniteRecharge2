@@ -1,0 +1,147 @@
+\hypertarget{class_chassis_state_mgr}{}\doxysection{Chassis\+State\+Mgr Class Reference}
+\label{class_chassis_state_mgr}\index{ChassisStateMgr@{ChassisStateMgr}}
+
+
+{\ttfamily \#include $<$Chassis\+State\+Mgr.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4}{C\+H\+A\+S\+S\+I\+S\+\_\+\+S\+T\+A\+TE}} \{ \mbox{\hyperlink{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4acfdc47a0cb6c9fbd05acd16530580438}{A\+U\+T\+ON}}, 
+\mbox{\hyperlink{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4ae264b2edf87d81a349001e4d184763a7}{T\+E\+L\+E\+OP}}, 
+\mbox{\hyperlink{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4af5f2c0cf847126026206a39ef7b96e98}{D\+R\+I\+V\+E\+R\+\_\+\+A\+S\+S\+I\+S\+T\+\_\+\+D\+R\+I\+V\+E\+\_\+\+T\+O\+\_\+\+L\+O\+A\+D\+I\+N\+G\+\_\+\+S\+T\+A\+T\+I\+ON}}, 
+\mbox{\hyperlink{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4a4ea7b8f81fdb10beeb3641a38c7bb180}{M\+A\+X\+\_\+\+C\+H\+A\+S\+S\+I\+S\+\_\+\+S\+T\+A\+T\+ES}}
+ \}
+\begin{DoxyCompactList}\small\item\em States the Chassis can be in. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_chassis_state_mgr_a16e107db442bbb345f22ccb44b7dd7fc}{Chassis\+State\+Mgr}} ()
+\begin{DoxyCompactList}\small\item\em create chassis states \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_chassis_state_mgr_ac5c821136e187f2057a9c4b956975df8}{Init}} ()
+\begin{DoxyCompactList}\small\item\em initialize this object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_chassis_state_mgr_ac2fceaadcb51a3a1076b53d26cd69a83}{Run\+Current\+State}} ()
+\begin{DoxyCompactList}\small\item\em run the current state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_chassis_state_mgr_aee10455f341306f03501a486e83a78cc}{Set\+State}} (\mbox{\hyperlink{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4}{C\+H\+A\+S\+S\+I\+S\+\_\+\+S\+T\+A\+TE}} state)
+\begin{DoxyCompactList}\small\item\em change the state of the chassis \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 32 of file Chassis\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4}\label{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4}} 
+\index{ChassisStateMgr@{ChassisStateMgr}!CHASSIS\_STATE@{CHASSIS\_STATE}}
+\index{CHASSIS\_STATE@{CHASSIS\_STATE}!ChassisStateMgr@{ChassisStateMgr}}
+\doxysubsubsection{\texorpdfstring{CHASSIS\_STATE}{CHASSIS\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4}{Chassis\+State\+Mgr\+::\+C\+H\+A\+S\+S\+I\+S\+\_\+\+S\+T\+A\+TE}}}
+
+
+
+States the Chassis can be in. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AUTON@{AUTON}!ChassisStateMgr@{ChassisStateMgr}}\index{ChassisStateMgr@{ChassisStateMgr}!AUTON@{AUTON}}}\mbox{\Hypertarget{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4acfdc47a0cb6c9fbd05acd16530580438}\label{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4acfdc47a0cb6c9fbd05acd16530580438}} 
+A\+U\+T\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TELEOP@{TELEOP}!ChassisStateMgr@{ChassisStateMgr}}\index{ChassisStateMgr@{ChassisStateMgr}!TELEOP@{TELEOP}}}\mbox{\Hypertarget{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4ae264b2edf87d81a349001e4d184763a7}\label{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4ae264b2edf87d81a349001e4d184763a7}} 
+T\+E\+L\+E\+OP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DRIVER\_ASSIST\_DRIVE\_TO\_LOADING\_STATION@{DRIVER\_ASSIST\_DRIVE\_TO\_LOADING\_STATION}!ChassisStateMgr@{ChassisStateMgr}}\index{ChassisStateMgr@{ChassisStateMgr}!DRIVER\_ASSIST\_DRIVE\_TO\_LOADING\_STATION@{DRIVER\_ASSIST\_DRIVE\_TO\_LOADING\_STATION}}}\mbox{\Hypertarget{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4af5f2c0cf847126026206a39ef7b96e98}\label{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4af5f2c0cf847126026206a39ef7b96e98}} 
+D\+R\+I\+V\+E\+R\+\_\+\+A\+S\+S\+I\+S\+T\+\_\+\+D\+R\+I\+V\+E\+\_\+\+T\+O\+\_\+\+L\+O\+A\+D\+I\+N\+G\+\_\+\+S\+T\+A\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_CHASSIS\_STATES@{MAX\_CHASSIS\_STATES}!ChassisStateMgr@{ChassisStateMgr}}\index{ChassisStateMgr@{ChassisStateMgr}!MAX\_CHASSIS\_STATES@{MAX\_CHASSIS\_STATES}}}\mbox{\Hypertarget{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4a4ea7b8f81fdb10beeb3641a38c7bb180}\label{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4a4ea7b8f81fdb10beeb3641a38c7bb180}} 
+M\+A\+X\+\_\+\+C\+H\+A\+S\+S\+I\+S\+\_\+\+S\+T\+A\+T\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 37 of file Chassis\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_chassis_state_mgr_a16e107db442bbb345f22ccb44b7dd7fc}\label{class_chassis_state_mgr_a16e107db442bbb345f22ccb44b7dd7fc}} 
+\index{ChassisStateMgr@{ChassisStateMgr}!ChassisStateMgr@{ChassisStateMgr}}
+\index{ChassisStateMgr@{ChassisStateMgr}!ChassisStateMgr@{ChassisStateMgr}}
+\doxysubsubsection{\texorpdfstring{ChassisStateMgr()}{ChassisStateMgr()}}
+{\footnotesize\ttfamily Chassis\+State\+Mgr\+::\+Chassis\+State\+Mgr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create chassis states 
+
+
+
+Definition at line 35 of file Chassis\+State\+Mgr.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_chassis_state_mgr_ac5c821136e187f2057a9c4b956975df8}\label{class_chassis_state_mgr_ac5c821136e187f2057a9c4b956975df8}} 
+\index{ChassisStateMgr@{ChassisStateMgr}!Init@{Init}}
+\index{Init@{Init}!ChassisStateMgr@{ChassisStateMgr}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Chassis\+State\+Mgr\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initialize this object 
+
+
+
+Definition at line 54 of file Chassis\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_chassis_state_mgr_ac2fceaadcb51a3a1076b53d26cd69a83}\label{class_chassis_state_mgr_ac2fceaadcb51a3a1076b53d26cd69a83}} 
+\index{ChassisStateMgr@{ChassisStateMgr}!RunCurrentState@{RunCurrentState}}
+\index{RunCurrentState@{RunCurrentState}!ChassisStateMgr@{ChassisStateMgr}}
+\doxysubsubsection{\texorpdfstring{RunCurrentState()}{RunCurrentState()}}
+{\footnotesize\ttfamily void Chassis\+State\+Mgr\+::\+Run\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+run the current state 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file Chassis\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_chassis_state_mgr_aee10455f341306f03501a486e83a78cc}\label{class_chassis_state_mgr_aee10455f341306f03501a486e83a78cc}} 
+\index{ChassisStateMgr@{ChassisStateMgr}!SetState@{SetState}}
+\index{SetState@{SetState}!ChassisStateMgr@{ChassisStateMgr}}
+\doxysubsubsection{\texorpdfstring{SetState()}{SetState()}}
+{\footnotesize\ttfamily void Chassis\+State\+Mgr\+::\+Set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chassis_state_mgr_aa0a242007069f6ac807a0bffda4011b4}{Chassis\+State\+Mgr\+::\+C\+H\+A\+S\+S\+I\+S\+\_\+\+S\+T\+A\+TE}}}]{state }\end{DoxyParamCaption})}
+
+
+
+change the state of the chassis 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em C\+H\+A\+S\+S\+I\+S\+\_\+\+S\+T\+A\+TE} & the state to put the chassis in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file Chassis\+State\+Mgr.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/states/chassis/\mbox{\hyperlink{_chassis_state_mgr_8h}{Chassis\+State\+Mgr.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/states/chassis/\mbox{\hyperlink{_chassis_state_mgr_8cpp}{Chassis\+State\+Mgr.\+cpp}}\end{DoxyCompactItemize}

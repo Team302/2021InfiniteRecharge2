@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team 302 Robot: auton/primitives/DriveDistance.cpp Source File</title>
+<title>Robot: C:/robotcm/training2020/src/main/cpp/auton/primitives/DriveDistance.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Team 302 Robot
+   <div id="projectname">Robot
    </div>
   </td>
  </tr>
@@ -176,18 +176,18 @@ $(document).ready(function(){initNavTree('_drive_distance_8cpp_source.html','');
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>() -&gt; LogError(<span class="keywordtype">string</span>(<span class="stringliteral">&quot;DriveDistance::Run()&quot;</span>), <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Arrived!&quot;</span>));</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="class_super_drive.html#a1720ed2254cf46c03d8ad34e2b38bbfa">SuperDrive::Run</a>();</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (m_arcing) </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">//if (m_arcing)</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">//{</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">//Calculate progress from 0 to 1</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">float</span> progress = abs( <a class="code" href="class_chassis_factory.html#a654b3190a697e11c31d4e0288eb335a6">ChassisFactory::GetChassisFactory</a>()-&gt;GetIChassis()-&gt;GetCurrentPosition() - m_initialDistance);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        progress /= abs(m_targetDistance); <span class="comment">//progress = progress / targetDistance</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">//float progress = abs( ChassisFactory::GetChassisFactory()-&gt;GetIChassis()-&gt;GetCurrentPosition() - m_initialDistance);</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="comment">//progress /= abs(m_targetDistance); //progress = progress / targetDistance</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">float</span> newTargetHeading = 0;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">//float newTargetHeading = 0;</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="comment">//Linear interpolation between start heading and end heading based on progress</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        newTargetHeading += (1.0 - progress) * m_startHeading;<span class="comment">// newTargetheading = newTargetHeading + (1.0 - progress) * m_startHeading</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        newTargetHeading += (progress) * m_endHeading;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">//newTargetHeading += (1.0 - progress) * m_startHeading;// newTargetheading = newTargetHeading + (1.0 - progress) * m_startHeading</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="comment">//newTargetHeading += (progress) * m_endHeading;</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="comment">//ChassisFactory::GetChassisFactory()-&gt;GetIChassis()-&gt;SetTargetHeading(newTargetHeading);</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">//}</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    CalculateSlowDownDistance();</div>
@@ -272,12 +272,12 @@ $(document).ready(function(){initNavTree('_drive_distance_8cpp_source.html','');
 <div class="ttc" id="a_primitive_params_8h_html"><div class="ttname"><a href="_primitive_params_8h.html">PrimitiveParams.h</a></div></div>
 <div class="ttc" id="anamespacefrc_html"><div class="ttname"><a href="namespacefrc.html">frc</a></div><div class="ttdef"><b>Definition:</b> <a href="_do_nothing_8h_source.html#l00034">DoNothing.h:34</a></div></div>
 <div class="ttc" id="a_control_modes_8h_html"><div class="ttname"><a href="_control_modes_8h.html">ControlModes.h</a></div></div>
-<div class="ttc" id="aclass_super_drive_html_aa8baae85dbb3bcfb38f22c25b820562a"><div class="ttname"><a href="class_super_drive.html#aa8baae85dbb3bcfb38f22c25b820562a">SuperDrive::SlowDown</a></div><div class="ttdeci">void SlowDown()</div><div class="ttdef"><b>Definition:</b> <a href="_super_drive_8cpp_source.html#l00210">SuperDrive.cpp:210</a></div></div>
-<div class="ttc" id="aclass_super_drive_html_a1720ed2254cf46c03d8ad34e2b38bbfa"><div class="ttname"><a href="class_super_drive.html#a1720ed2254cf46c03d8ad34e2b38bbfa">SuperDrive::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_super_drive_8cpp_source.html#l00126">SuperDrive.cpp:126</a></div></div>
+<div class="ttc" id="aclass_super_drive_html_aa8baae85dbb3bcfb38f22c25b820562a"><div class="ttname"><a href="class_super_drive.html#aa8baae85dbb3bcfb38f22c25b820562a">SuperDrive::SlowDown</a></div><div class="ttdeci">void SlowDown()</div><div class="ttdef"><b>Definition:</b> <a href="_super_drive_8cpp_source.html#l00213">SuperDrive.cpp:213</a></div></div>
+<div class="ttc" id="aclass_super_drive_html_a1720ed2254cf46c03d8ad34e2b38bbfa"><div class="ttname"><a href="class_super_drive.html#a1720ed2254cf46c03d8ad34e2b38bbfa">SuperDrive::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_super_drive_8cpp_source.html#l00128">SuperDrive.cpp:128</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6d3eafb1b2af494c48c5eff1d916bff.html">auton</a></li><li class="navelem"><a class="el" href="dir_d1eff68d22c03a4c79b32822dd1a90d8.html">primitives</a></li><li class="navelem"><a class="el" href="_drive_distance_8cpp.html">DriveDistance.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_4401199a54cb40c0637ceb8dd0f3c5fd.html">robotcm</a></li><li class="navelem"><a class="el" href="dir_24d5b6e083bf191a3f38d4ae9f1a0592.html">training2020</a></li><li class="navelem"><a class="el" href="dir_6cae7cc3464d42f3e134af4325c5ce6e.html">src</a></li><li class="navelem"><a class="el" href="dir_32a1028ae0a47e7b34b3c8fd0b05a58d.html">main</a></li><li class="navelem"><a class="el" href="dir_9dee27190e861708e732c03adc0229f4.html">cpp</a></li><li class="navelem"><a class="el" href="dir_ad2b7f4d39d64c4cee9623c2385c7832.html">auton</a></li><li class="navelem"><a class="el" href="dir_a587b8601296eef3d4268557965198f3.html">primitives</a></li><li class="navelem"><a class="el" href="_drive_distance_8cpp.html">DriveDistance.cpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

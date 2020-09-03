@@ -1,0 +1,160 @@
+\hypertarget{class_ball_transfer_state_mgr}{}\doxysection{Ball\+Transfer\+State\+Mgr Class Reference}
+\label{class_ball_transfer_state_mgr}\index{BallTransferStateMgr@{BallTransferStateMgr}}
+
+
+{\ttfamily \#include $<$Ball\+Transfer\+State\+Mgr.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2}{B\+A\+L\+L\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \{ \newline
+\mbox{\hyperlink{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2a93d64f24d9b112ca41ec976620f89f37}{O\+FF}}, 
+\mbox{\hyperlink{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2a4fa620c23f074a5d1569ba7b0d754f23}{T\+O\+\_\+\+I\+M\+P\+E\+L\+L\+ER}}, 
+\mbox{\hyperlink{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2a0449df8b81f76e2885ee4e87e1e176a0}{T\+O\+\_\+\+S\+H\+O\+O\+T\+ER}}, 
+\mbox{\hyperlink{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2afa0abdd1dbd011407ec694c2e52d2a53}{E\+J\+E\+CT}}, 
+\newline
+\mbox{\hyperlink{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2a937062ee9e05c25adcbe3f1336281705}{M\+A\+X\+\_\+\+B\+A\+L\+L\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+T\+ES}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ball_transfer_state_mgr_ae9a3c67861dc9c3c1f8afafff3313a24}{Run\+Current\+State}} ()
+\begin{DoxyCompactList}\small\item\em run the current state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_transfer_state_mgr_a4ad4576d1df79e2e9749be0a6ec0daa6}{Set\+Current\+State}} (\mbox{\hyperlink{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2}{B\+A\+L\+L\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} state, bool run)
+\begin{DoxyCompactList}\small\item\em set the current state, initialize it and run it \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2}{B\+A\+L\+L\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{class_ball_transfer_state_mgr_a8e3bfb4df043294473e16315bc1d802c}{Get\+Current\+State}} () const
+\begin{DoxyCompactList}\small\item\em return the current state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_ball_transfer_state_mgr}{Ball\+Transfer\+State\+Mgr}} $\ast$ \mbox{\hyperlink{class_ball_transfer_state_mgr_abdb31e4aabc0a13ef56908ad433e26b7}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Find or create the state manmanager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 31 of file Ball\+Transfer\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2}\label{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2}} 
+\index{BallTransferStateMgr@{BallTransferStateMgr}!BALL\_TRANSFER\_STATE@{BALL\_TRANSFER\_STATE}}
+\index{BALL\_TRANSFER\_STATE@{BALL\_TRANSFER\_STATE}!BallTransferStateMgr@{BallTransferStateMgr}}
+\doxysubsubsection{\texorpdfstring{BALL\_TRANSFER\_STATE}{BALL\_TRANSFER\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2}{Ball\+Transfer\+State\+Mgr\+::\+B\+A\+L\+L\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+TE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OFF@{OFF}!BallTransferStateMgr@{BallTransferStateMgr}}\index{BallTransferStateMgr@{BallTransferStateMgr}!OFF@{OFF}}}\mbox{\Hypertarget{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2a93d64f24d9b112ca41ec976620f89f37}\label{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2a93d64f24d9b112ca41ec976620f89f37}} 
+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TO\_IMPELLER@{TO\_IMPELLER}!BallTransferStateMgr@{BallTransferStateMgr}}\index{BallTransferStateMgr@{BallTransferStateMgr}!TO\_IMPELLER@{TO\_IMPELLER}}}\mbox{\Hypertarget{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2a4fa620c23f074a5d1569ba7b0d754f23}\label{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2a4fa620c23f074a5d1569ba7b0d754f23}} 
+T\+O\+\_\+\+I\+M\+P\+E\+L\+L\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TO\_SHOOTER@{TO\_SHOOTER}!BallTransferStateMgr@{BallTransferStateMgr}}\index{BallTransferStateMgr@{BallTransferStateMgr}!TO\_SHOOTER@{TO\_SHOOTER}}}\mbox{\Hypertarget{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2a0449df8b81f76e2885ee4e87e1e176a0}\label{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2a0449df8b81f76e2885ee4e87e1e176a0}} 
+T\+O\+\_\+\+S\+H\+O\+O\+T\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EJECT@{EJECT}!BallTransferStateMgr@{BallTransferStateMgr}}\index{BallTransferStateMgr@{BallTransferStateMgr}!EJECT@{EJECT}}}\mbox{\Hypertarget{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2afa0abdd1dbd011407ec694c2e52d2a53}\label{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2afa0abdd1dbd011407ec694c2e52d2a53}} 
+E\+J\+E\+CT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_BALL\_TRANSFER\_STATES@{MAX\_BALL\_TRANSFER\_STATES}!BallTransferStateMgr@{BallTransferStateMgr}}\index{BallTransferStateMgr@{BallTransferStateMgr}!MAX\_BALL\_TRANSFER\_STATES@{MAX\_BALL\_TRANSFER\_STATES}}}\mbox{\Hypertarget{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2a937062ee9e05c25adcbe3f1336281705}\label{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2a937062ee9e05c25adcbe3f1336281705}} 
+M\+A\+X\+\_\+\+B\+A\+L\+L\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+T\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 35 of file Ball\+Transfer\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ball_transfer_state_mgr_a8e3bfb4df043294473e16315bc1d802c}\label{class_ball_transfer_state_mgr_a8e3bfb4df043294473e16315bc1d802c}} 
+\index{BallTransferStateMgr@{BallTransferStateMgr}!GetCurrentState@{GetCurrentState}}
+\index{GetCurrentState@{GetCurrentState}!BallTransferStateMgr@{BallTransferStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetCurrentState()}{GetCurrentState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2}{B\+A\+L\+L\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} Ball\+Transfer\+State\+Mgr\+::\+Get\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the current state 
+
+\begin{DoxyReturn}{Returns}
+B\+A\+L\+L\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+TE -\/ the current state 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file Ball\+Transfer\+State\+Mgr.\+h.
+
+\mbox{\Hypertarget{class_ball_transfer_state_mgr_abdb31e4aabc0a13ef56908ad433e26b7}\label{class_ball_transfer_state_mgr_abdb31e4aabc0a13ef56908ad433e26b7}} 
+\index{BallTransferStateMgr@{BallTransferStateMgr}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!BallTransferStateMgr@{BallTransferStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ball_transfer_state_mgr}{Ball\+Transfer\+State\+Mgr}} $\ast$ Ball\+Transfer\+State\+Mgr\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find or create the state manmanager. 
+
+\begin{DoxyReturn}{Returns}
+Ball\+Transfer\+State\+Mgr$\ast$ pointer to the state manager 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file Ball\+Transfer\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_ball_transfer_state_mgr_ae9a3c67861dc9c3c1f8afafff3313a24}\label{class_ball_transfer_state_mgr_ae9a3c67861dc9c3c1f8afafff3313a24}} 
+\index{BallTransferStateMgr@{BallTransferStateMgr}!RunCurrentState@{RunCurrentState}}
+\index{RunCurrentState@{RunCurrentState}!BallTransferStateMgr@{BallTransferStateMgr}}
+\doxysubsubsection{\texorpdfstring{RunCurrentState()}{RunCurrentState()}}
+{\footnotesize\ttfamily void Ball\+Transfer\+State\+Mgr\+::\+Run\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+run the current state 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 142 of file Ball\+Transfer\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_ball_transfer_state_mgr_a4ad4576d1df79e2e9749be0a6ec0daa6}\label{class_ball_transfer_state_mgr_a4ad4576d1df79e2e9749be0a6ec0daa6}} 
+\index{BallTransferStateMgr@{BallTransferStateMgr}!SetCurrentState@{SetCurrentState}}
+\index{SetCurrentState@{SetCurrentState}!BallTransferStateMgr@{BallTransferStateMgr}}
+\doxysubsubsection{\texorpdfstring{SetCurrentState()}{SetCurrentState()}}
+{\footnotesize\ttfamily void Ball\+Transfer\+State\+Mgr\+::\+Set\+Current\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ball_transfer_state_mgr_a60f3deceead6d874baae678a4fc7acb2}{B\+A\+L\+L\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+TE}}}]{state\+Enum,  }\item[{bool}]{run }\end{DoxyParamCaption})}
+
+
+
+set the current state, initialize it and run it 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em B\+A\+L\+L\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+TE} & -\/ state to set \\
+\hline
+\mbox{\texttt{ in}}  & {\em run} & -\/ true means run, false just initialize it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+
+void 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file Ball\+Transfer\+State\+Mgr.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/states/balltransfer/\mbox{\hyperlink{_ball_transfer_state_mgr_8h}{Ball\+Transfer\+State\+Mgr.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/states/balltransfer/\mbox{\hyperlink{_ball_transfer_state_mgr_8cpp}{Ball\+Transfer\+State\+Mgr.\+cpp}}\end{DoxyCompactItemize}

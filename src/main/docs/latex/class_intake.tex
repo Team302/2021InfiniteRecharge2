@@ -1,0 +1,241 @@
+\hypertarget{class_intake}{}\doxysection{Intake Class Reference}
+\label{class_intake}\index{Intake@{Intake}}
+
+
+{\ttfamily \#include $<$Intake.\+h$>$}
+
+Inheritance diagram for Intake\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_intake}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_intake_afc5a65a98967287818a803e07c6b9fbe}{Intake}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ motor\+Controller, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_solenoid}{Dragon\+Solenoid}} $>$ solenoid)
+\item 
+\mbox{\hyperlink{class_intake_ae1aee2c821aad67fee455c0810a5e6b2}{Intake}} ()=delete
+\item 
+virtual \mbox{\hyperlink{class_intake_ae9d9dd2e817597f78513c491413edd5d}{$\sim$\+Intake}} ()=default
+\item 
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{class_intake_a0b68bd630c53d7db98e220b94d76020a}{Get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates the type of mechanism this is. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_intake_a6e1947a3cd657b968e69629792deca69}{Set\+Output}} (\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} control\+Type, double value) override
+\begin{DoxyCompactList}\small\item\em Run mechanism as defined. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_intake_a6fea3918ef2fdbf5b0368bdd551707cf}{Activate\+Solenoid}} (bool activate) override
+\begin{DoxyCompactList}\small\item\em Activate/deactivate pneumatic solenoid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_intake_a5bb26ce040e9e83d43c5a6258ba3b033}{Is\+Solenoid\+Activated}} () override
+\begin{DoxyCompactList}\small\item\em Check if the pneumatic solenoid is activated. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_intake_a6abaaaed9c70dcefdcdb68097a5f69d6}{Get\+Current\+Position}} () const override
+\begin{DoxyCompactList}\small\item\em Return the current position of the mechanism. The value is in inches or degrees. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_intake_a7e3783508ddf079750a1430d6fb2e6cf}{Get\+Current\+Speed}} () const override
+\begin{DoxyCompactList}\small\item\em Get the current speed of the mechanism. The value is in inches per second or degrees per second. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_intake_a7871bee1bb586380dc701ffef44e0c8f}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid) override
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 33 of file Intake.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_intake_afc5a65a98967287818a803e07c6b9fbe}\label{class_intake_afc5a65a98967287818a803e07c6b9fbe}} 
+\index{Intake@{Intake}!Intake@{Intake}}
+\index{Intake@{Intake}!Intake@{Intake}}
+\doxysubsubsection{\texorpdfstring{Intake()}{Intake()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Intake\+::\+Intake (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{motor\+Controller,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_solenoid}{Dragon\+Solenoid}} $>$}]{solenoid }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file Intake.\+cpp.
+
+\mbox{\Hypertarget{class_intake_ae1aee2c821aad67fee455c0810a5e6b2}\label{class_intake_ae1aee2c821aad67fee455c0810a5e6b2}} 
+\index{Intake@{Intake}!Intake@{Intake}}
+\index{Intake@{Intake}!Intake@{Intake}}
+\doxysubsubsection{\texorpdfstring{Intake()}{Intake()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Intake\+::\+Intake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_intake_ae9d9dd2e817597f78513c491413edd5d}\label{class_intake_ae9d9dd2e817597f78513c491413edd5d}} 
+\index{Intake@{Intake}!````~Intake@{$\sim$Intake}}
+\index{````~Intake@{$\sim$Intake}!Intake@{Intake}}
+\doxysubsubsection{\texorpdfstring{$\sim$Intake()}{~Intake()}}
+{\footnotesize\ttfamily virtual Intake\+::$\sim$\+Intake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_intake_a6fea3918ef2fdbf5b0368bdd551707cf}\label{class_intake_a6fea3918ef2fdbf5b0368bdd551707cf}} 
+\index{Intake@{Intake}!ActivateSolenoid@{ActivateSolenoid}}
+\index{ActivateSolenoid@{ActivateSolenoid}!Intake@{Intake}}
+\doxysubsubsection{\texorpdfstring{ActivateSolenoid()}{ActivateSolenoid()}}
+{\footnotesize\ttfamily void Intake\+::\+Activate\+Solenoid (\begin{DoxyParamCaption}\item[{bool}]{activate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activate/deactivate pneumatic solenoid. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bool} & -\/ true == extend, false == retract \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_abef1fbd73a24f4f6f3104e255539e0d9}{I\+Mechanism}}.
+
+
+
+Definition at line 73 of file Intake.\+cpp.
+
+\mbox{\Hypertarget{class_intake_a6abaaaed9c70dcefdcdb68097a5f69d6}\label{class_intake_a6abaaaed9c70dcefdcdb68097a5f69d6}} 
+\index{Intake@{Intake}!GetCurrentPosition@{GetCurrentPosition}}
+\index{GetCurrentPosition@{GetCurrentPosition}!Intake@{Intake}}
+\doxysubsubsection{\texorpdfstring{GetCurrentPosition()}{GetCurrentPosition()}}
+{\footnotesize\ttfamily double Intake\+::\+Get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the current position of the mechanism. The value is in inches or degrees. 
+
+\begin{DoxyReturn}{Returns}
+double position in inches (translating mechanisms) or degrees (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_aa15197ff101d65447516a8f10bb6867d}{I\+Mechanism}}.
+
+
+
+Definition at line 109 of file Intake.\+cpp.
+
+\mbox{\Hypertarget{class_intake_a7e3783508ddf079750a1430d6fb2e6cf}\label{class_intake_a7e3783508ddf079750a1430d6fb2e6cf}} 
+\index{Intake@{Intake}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!Intake@{Intake}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily double Intake\+::\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current speed of the mechanism. The value is in inches per second or degrees per second. 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a9a63d6905de4454d78d7e0d1d1e28437}{I\+Mechanism}}.
+
+
+
+Definition at line 121 of file Intake.\+cpp.
+
+\mbox{\Hypertarget{class_intake_a0b68bd630c53d7db98e220b94d76020a}\label{class_intake_a0b68bd630c53d7db98e220b94d76020a}} 
+\index{Intake@{Intake}!GetType@{GetType}}
+\index{GetType@{GetType}!Intake@{Intake}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} Intake\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates the type of mechanism this is. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a62096808201ffc31609e99dc2fa92d44}{I\+Mechanism}}.
+
+
+
+Definition at line 52 of file Intake.\+cpp.
+
+\mbox{\Hypertarget{class_intake_a5bb26ce040e9e83d43c5a6258ba3b033}\label{class_intake_a5bb26ce040e9e83d43c5a6258ba3b033}} 
+\index{Intake@{Intake}!IsSolenoidActivated@{IsSolenoidActivated}}
+\index{IsSolenoidActivated@{IsSolenoidActivated}!Intake@{Intake}}
+\doxysubsubsection{\texorpdfstring{IsSolenoidActivated()}{IsSolenoidActivated()}}
+{\footnotesize\ttfamily bool Intake\+::\+Is\+Solenoid\+Activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the pneumatic solenoid is activated. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true == extended, false == retract 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a4c0bedb71316054749a276a67d278558}{I\+Mechanism}}.
+
+
+
+Definition at line 89 of file Intake.\+cpp.
+
+\mbox{\Hypertarget{class_intake_a7871bee1bb586380dc701ffef44e0c8f}\label{class_intake_a7871bee1bb586380dc701ffef44e0c8f}} 
+\index{Intake@{Intake}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!Intake@{Intake}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily void Intake\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid\+: the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_acd973ca93855c485ed42d405f2fcba11}{I\+Mechanism}}.
+
+
+
+Definition at line 134 of file Intake.\+cpp.
+
+\mbox{\Hypertarget{class_intake_a6e1947a3cd657b968e69629792deca69}\label{class_intake_a6e1947a3cd657b968e69629792deca69}} 
+\index{Intake@{Intake}!SetOutput@{SetOutput}}
+\index{SetOutput@{SetOutput}!Intake@{Intake}}
+\doxysubsubsection{\texorpdfstring{SetOutput()}{SetOutput()}}
+{\footnotesize\ttfamily void Intake\+::\+Set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}}]{control\+Type,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Run mechanism as defined. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}} & control\+Type\+: How are the item(s) being controlled \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & value\+: Target (units are based on the control\+Type) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_abc72a6d0306a828de6f43418e75c04c0}{I\+Mechanism}}.
+
+
+
+Definition at line 58 of file Intake.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_intake_8h}{Intake.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_intake_8cpp}{Intake.\+cpp}}\end{DoxyCompactItemize}

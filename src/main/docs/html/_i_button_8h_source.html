@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team 302 Robot: gamepad/button/IButton.h Source File</title>
+<title>Robot: C:/robotcm/training2020/src/main/cpp/gamepad/button/IButton.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Team 302 Robot
+   <div id="projectname">Robot
    </div>
   </td>
  </tr>
@@ -138,8 +138,8 @@ $(document).ready(function(){initNavTree('_i_button_8h_source.html','');});
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="class_i_button.html#a521c75988151b8b0e53deda4295e079c">IButton</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="class_i_button.html#a521c75988151b8b0e53deda4295e079c">IButton</a>(<span class="keyword">const</span> <a class="code" href="class_i_button.html">IButton</a>&amp; that);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="class_i_button.html">IButton</a>&amp; <a class="code" href="class_i_button.html#a94fbbe3941c8ab6ae1363751960a8473">operator= </a>(<span class="keyword">const</span> <a class="code" href="class_i_button.html">IButton</a>&amp; that);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="class_i_button.html#a521c75988151b8b0e53deda4295e079c">IButton</a>(<span class="keyword">const</span> <a class="code" href="class_i_button.html">IButton</a>&amp; that) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="class_i_button.html">IButton</a>&amp; <a class="code" href="class_i_button.html#ae75920901f8c37dc7290f27e709035dd">operator= </a>(<span class="keyword">const</span> <a class="code" href="class_i_button.html">IButton</a>&amp; that) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_i_button.html#ae08c2464ff8ddcec256b86f64bc49ee1">~IButton</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
@@ -148,15 +148,15 @@ $(document).ready(function(){initNavTree('_i_button_8h_source.html','');});
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_i_button_html_a393bd71900c7cb4df69e371bcc7ca123"><div class="ttname"><a href="class_i_button.html#a393bd71900c7cb4df69e371bcc7ca123">IButton::WasButtonReleased</a></div><div class="ttdeci">virtual bool WasButtonReleased() const =0</div><div class="ttdoc">Method: WasButtonReleased Description: Read whether the button was released since the last query....</div></div>
 <div class="ttc" id="aclass_i_button_html_afe76bfef9fc9fe1b426a8b7010c816f8"><div class="ttname"><a href="class_i_button.html#afe76bfef9fc9fe1b426a8b7010c816f8">IButton::IsButtonPressed</a></div><div class="ttdeci">virtual bool IsButtonPressed() const =0</div><div class="ttdoc">Method: IsButtonPressed Description: Read the button and return true if it is pressed and false if it...</div></div>
+<div class="ttc" id="aclass_i_button_html_ae75920901f8c37dc7290f27e709035dd"><div class="ttname"><a href="class_i_button.html#ae75920901f8c37dc7290f27e709035dd">IButton::operator=</a></div><div class="ttdeci">IButton &amp; operator=(const IButton &amp;that)=delete</div></div>
 <div class="ttc" id="aclass_i_button_html_a4bafcd42d1f576f892d22a110e801018"><div class="ttname"><a href="class_i_button.html#a4bafcd42d1f576f892d22a110e801018">IButton::WasButtonPressed</a></div><div class="ttdeci">virtual bool WasButtonPressed() const =0</div><div class="ttdoc">Method: WasButtonPressed Description: Read whether the button was pressed since the last query....</div></div>
 <div class="ttc" id="aclass_i_button_html"><div class="ttname"><a href="class_i_button.html">IButton</a></div><div class="ttdoc">Class: IButton Description: This interface is for treating gamepad inputs as digital inputs.</div><div class="ttdef"><b>Definition:</b> <a href="_i_button_8h_source.html#l00034">IButton.h:34</a></div></div>
 <div class="ttc" id="aclass_i_button_html_ae08c2464ff8ddcec256b86f64bc49ee1"><div class="ttname"><a href="class_i_button.html#ae08c2464ff8ddcec256b86f64bc49ee1">IButton::~IButton</a></div><div class="ttdeci">virtual ~IButton()=default</div></div>
-<div class="ttc" id="aclass_i_button_html_a94fbbe3941c8ab6ae1363751960a8473"><div class="ttname"><a href="class_i_button.html#a94fbbe3941c8ab6ae1363751960a8473">IButton::operator=</a></div><div class="ttdeci">IButton &amp; operator=(const IButton &amp;that)</div></div>
 <div class="ttc" id="aclass_i_button_html_a521c75988151b8b0e53deda4295e079c"><div class="ttname"><a href="class_i_button.html#a521c75988151b8b0e53deda4295e079c">IButton::IButton</a></div><div class="ttdeci">IButton()=default</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_53c954e57fe35aa0adebf3a01f80ac39.html">gamepad</a></li><li class="navelem"><a class="el" href="dir_c3c0133548725493ed0950dfe8f7359e.html">button</a></li><li class="navelem"><a class="el" href="_i_button_8h.html">IButton.h</a></li>
+    <li class="navelem"><a class="el" href="dir_4401199a54cb40c0637ceb8dd0f3c5fd.html">robotcm</a></li><li class="navelem"><a class="el" href="dir_24d5b6e083bf191a3f38d4ae9f1a0592.html">training2020</a></li><li class="navelem"><a class="el" href="dir_6cae7cc3464d42f3e134af4325c5ce6e.html">src</a></li><li class="navelem"><a class="el" href="dir_32a1028ae0a47e7b34b3c8fd0b05a58d.html">main</a></li><li class="navelem"><a class="el" href="dir_9dee27190e861708e732c03adc0229f4.html">cpp</a></li><li class="navelem"><a class="el" href="dir_55f9fe2ae681eaf02a5e71d6d5a2606d.html">gamepad</a></li><li class="navelem"><a class="el" href="dir_bf556f54ee5befff907016fb791bd40c.html">button</a></li><li class="navelem"><a class="el" href="_i_button_8h.html">IButton.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

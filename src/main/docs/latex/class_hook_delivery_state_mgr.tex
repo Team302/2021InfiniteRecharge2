@@ -1,0 +1,153 @@
+\hypertarget{class_hook_delivery_state_mgr}{}\doxysection{Hook\+Delivery\+State\+Mgr Class Reference}
+\label{class_hook_delivery_state_mgr}\index{HookDeliveryStateMgr@{HookDeliveryStateMgr}}
+
+
+{\ttfamily \#include $<$Hook\+Delivery\+State\+Mgr.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223}{H\+O\+O\+K\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+T\+A\+TE}} \{ \mbox{\hyperlink{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223a4b30167cff2f6e856ed4d147bc1075c3}{UP}}, 
+\mbox{\hyperlink{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223a4346b0f5a33cd5633c657c17e0bf1a37}{D\+O\+WN}}, 
+\mbox{\hyperlink{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223a9718f558e711e8b8cfe7da2d4990891b}{O\+FF}}, 
+\mbox{\hyperlink{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223a5789a6f0ffb633dd7a3cd187d475d683}{M\+A\+X\+\_\+\+H\+O\+O\+K\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+T\+A\+T\+ES}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_hook_delivery_state_mgr_a1bea5d4e3346944f0bca45271369ecf2}{Run\+Current\+State}} ()
+\begin{DoxyCompactList}\small\item\em run the current state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hook_delivery_state_mgr_af6247c117f8cfa564020c0b4c16eee32}{Set\+Current\+State}} (\mbox{\hyperlink{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223}{H\+O\+O\+K\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+T\+A\+TE}} state, bool run)
+\begin{DoxyCompactList}\small\item\em set the current state, initialize it and run it \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223}{H\+O\+O\+K\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{class_hook_delivery_state_mgr_a8c71bbb013dfbf3acd311e6ea4155efa}{Get\+Current\+State}} () const
+\begin{DoxyCompactList}\small\item\em return the current state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_hook_delivery_state_mgr}{Hook\+Delivery\+State\+Mgr}} $\ast$ \mbox{\hyperlink{class_hook_delivery_state_mgr_a9b4b45cebe3b6eb814158733dad00d00}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Find or create the state manmanager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 31 of file Hook\+Delivery\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223}\label{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223}} 
+\index{HookDeliveryStateMgr@{HookDeliveryStateMgr}!HOOK\_DELIVERY\_STATE@{HOOK\_DELIVERY\_STATE}}
+\index{HOOK\_DELIVERY\_STATE@{HOOK\_DELIVERY\_STATE}!HookDeliveryStateMgr@{HookDeliveryStateMgr}}
+\doxysubsubsection{\texorpdfstring{HOOK\_DELIVERY\_STATE}{HOOK\_DELIVERY\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223}{Hook\+Delivery\+State\+Mgr\+::\+H\+O\+O\+K\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+T\+A\+TE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UP@{UP}!HookDeliveryStateMgr@{HookDeliveryStateMgr}}\index{HookDeliveryStateMgr@{HookDeliveryStateMgr}!UP@{UP}}}\mbox{\Hypertarget{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223a4b30167cff2f6e856ed4d147bc1075c3}\label{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223a4b30167cff2f6e856ed4d147bc1075c3}} 
+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOWN@{DOWN}!HookDeliveryStateMgr@{HookDeliveryStateMgr}}\index{HookDeliveryStateMgr@{HookDeliveryStateMgr}!DOWN@{DOWN}}}\mbox{\Hypertarget{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223a4346b0f5a33cd5633c657c17e0bf1a37}\label{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223a4346b0f5a33cd5633c657c17e0bf1a37}} 
+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OFF@{OFF}!HookDeliveryStateMgr@{HookDeliveryStateMgr}}\index{HookDeliveryStateMgr@{HookDeliveryStateMgr}!OFF@{OFF}}}\mbox{\Hypertarget{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223a9718f558e711e8b8cfe7da2d4990891b}\label{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223a9718f558e711e8b8cfe7da2d4990891b}} 
+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_HOOK\_DELIVERY\_STATES@{MAX\_HOOK\_DELIVERY\_STATES}!HookDeliveryStateMgr@{HookDeliveryStateMgr}}\index{HookDeliveryStateMgr@{HookDeliveryStateMgr}!MAX\_HOOK\_DELIVERY\_STATES@{MAX\_HOOK\_DELIVERY\_STATES}}}\mbox{\Hypertarget{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223a5789a6f0ffb633dd7a3cd187d475d683}\label{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223a5789a6f0ffb633dd7a3cd187d475d683}} 
+M\+A\+X\+\_\+\+H\+O\+O\+K\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+T\+A\+T\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 35 of file Hook\+Delivery\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hook_delivery_state_mgr_a8c71bbb013dfbf3acd311e6ea4155efa}\label{class_hook_delivery_state_mgr_a8c71bbb013dfbf3acd311e6ea4155efa}} 
+\index{HookDeliveryStateMgr@{HookDeliveryStateMgr}!GetCurrentState@{GetCurrentState}}
+\index{GetCurrentState@{GetCurrentState}!HookDeliveryStateMgr@{HookDeliveryStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetCurrentState()}{GetCurrentState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223}{H\+O\+O\+K\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+T\+A\+TE}} Hook\+Delivery\+State\+Mgr\+::\+Get\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the current state 
+
+\begin{DoxyReturn}{Returns}
+H\+O\+O\+K\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+T\+A\+TE -\/ the current state 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file Hook\+Delivery\+State\+Mgr.\+h.
+
+\mbox{\Hypertarget{class_hook_delivery_state_mgr_a9b4b45cebe3b6eb814158733dad00d00}\label{class_hook_delivery_state_mgr_a9b4b45cebe3b6eb814158733dad00d00}} 
+\index{HookDeliveryStateMgr@{HookDeliveryStateMgr}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!HookDeliveryStateMgr@{HookDeliveryStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_hook_delivery_state_mgr}{Hook\+Delivery\+State\+Mgr}} $\ast$ Hook\+Delivery\+State\+Mgr\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find or create the state manmanager. 
+
+\begin{DoxyReturn}{Returns}
+Hook\+Delivery\+State\+Mgr$\ast$ pointer to the state manager 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Hook\+Delivery\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_hook_delivery_state_mgr_a1bea5d4e3346944f0bca45271369ecf2}\label{class_hook_delivery_state_mgr_a1bea5d4e3346944f0bca45271369ecf2}} 
+\index{HookDeliveryStateMgr@{HookDeliveryStateMgr}!RunCurrentState@{RunCurrentState}}
+\index{RunCurrentState@{RunCurrentState}!HookDeliveryStateMgr@{HookDeliveryStateMgr}}
+\doxysubsubsection{\texorpdfstring{RunCurrentState()}{RunCurrentState()}}
+{\footnotesize\ttfamily void Hook\+Delivery\+State\+Mgr\+::\+Run\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+run the current state 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 164 of file Hook\+Delivery\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_hook_delivery_state_mgr_af6247c117f8cfa564020c0b4c16eee32}\label{class_hook_delivery_state_mgr_af6247c117f8cfa564020c0b4c16eee32}} 
+\index{HookDeliveryStateMgr@{HookDeliveryStateMgr}!SetCurrentState@{SetCurrentState}}
+\index{SetCurrentState@{SetCurrentState}!HookDeliveryStateMgr@{HookDeliveryStateMgr}}
+\doxysubsubsection{\texorpdfstring{SetCurrentState()}{SetCurrentState()}}
+{\footnotesize\ttfamily void Hook\+Delivery\+State\+Mgr\+::\+Set\+Current\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_hook_delivery_state_mgr_a1db52ff9a2c43a81d323dd3ae9a88223}{H\+O\+O\+K\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+T\+A\+TE}}}]{state\+Enum,  }\item[{bool}]{run }\end{DoxyParamCaption})}
+
+
+
+set the current state, initialize it and run it 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em H\+O\+O\+K\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+T\+A\+TE} & -\/ state to set \\
+\hline
+\mbox{\texttt{ in}}  & {\em run} & -\/ true means run, false just initialize it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+
+void 
+\end{DoxyReturn}
+
+
+Definition at line 218 of file Hook\+Delivery\+State\+Mgr.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/states/hookdelivery/\mbox{\hyperlink{_hook_delivery_state_mgr_8h}{Hook\+Delivery\+State\+Mgr.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/states/hookdelivery/\mbox{\hyperlink{_hook_delivery_state_mgr_8cpp}{Hook\+Delivery\+State\+Mgr.\+cpp}}\end{DoxyCompactItemize}

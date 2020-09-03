@@ -1,0 +1,211 @@
+\hypertarget{class_robot}{}\doxysection{Robot Class Reference}
+\label{class_robot}\index{Robot@{Robot}}
+
+
+\mbox{\hyperlink{_robot_8h}{Robot.\+h}}.  
+
+
+
+
+{\ttfamily \#include $<$Robot.\+h$>$}
+
+Inheritance diagram for Robot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_robot}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_robot_a136b20cc34a9cda8da9ef2c85646f747}{Robot}} ()=default
+\item 
+\mbox{\hyperlink{class_robot_a359bc5b345fc76b9451abfeea4cad6e4}{$\sim$\+Robot}} ()=default
+\item 
+void \mbox{\hyperlink{class_robot_a66f23dae271748d525cf3ab046375f79}{Robot\+Init}} () override
+\begin{DoxyCompactList}\small\item\em The main robot code. The Init methods get called when that state gets entered and then the Periodic methods get called every 20 milliseconds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_robot_a8fad82c2250bcfb83b743b5c0dd6ed27}{Robot\+Periodic}} () override
+\begin{DoxyCompactList}\small\item\em This function is called every robot packet, no matter the mode. This is used for items like diagnostics that run during disabled, autonomous, teleoperated and test modes (states). T\+His runs after the specific state periodic methods and before the Live\+Window and Smart\+Dashboard updating. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_robot_a2136cfc015936285218c8a8db984d6bc}{Autonomous\+Init}} () override
+\begin{DoxyCompactList}\small\item\em This initializes the autonomous state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_robot_ac11143dd674e0e02fef5329e2df24830}{Autonomous\+Periodic}} () override
+\begin{DoxyCompactList}\small\item\em Runs every 20 milliseconds when the autonomous state is active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_robot_aa3e246794bfbbb4406fc87f351762038}{Teleop\+Init}} () override
+\begin{DoxyCompactList}\small\item\em This initializes the teleoperated state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_robot_a324322627c63b3870daf7c7ddc5bea63}{Teleop\+Periodic}} () override
+\begin{DoxyCompactList}\small\item\em Runs every 20 milliseconds when the teleoperated state is active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_robot_a9ac222d45d30a6d0c572fd36d18c6ccc}{Test\+Init}} () override
+\begin{DoxyCompactList}\small\item\em This initializes the test state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_robot_af0ac44a962e609e9b042285e699d1db8}{Test\+Periodic}} () override
+\begin{DoxyCompactList}\small\item\em Runs every 20 milliseconds when the test state is active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{_robot_8h}{Robot.\+h}}. 
+
+File Description\+: Top-\/level robot code that controls the various states of the robot. It is our specific implementation of the frc\+::\+Timed\+Robot.
+
+Top-\/level robot code that controls the various states of the robot. It is our specific implementation of the frc\+::\+Timed\+Robot. 
+
+Definition at line 66 of file Robot.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_robot_a136b20cc34a9cda8da9ef2c85646f747}\label{class_robot_a136b20cc34a9cda8da9ef2c85646f747}} 
+\index{Robot@{Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{Robot()}{Robot()}}
+{\footnotesize\ttfamily Robot\+::\+Robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_robot_a359bc5b345fc76b9451abfeea4cad6e4}\label{class_robot_a359bc5b345fc76b9451abfeea4cad6e4}} 
+\index{Robot@{Robot}!````~Robot@{$\sim$Robot}}
+\index{````~Robot@{$\sim$Robot}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{$\sim$Robot()}{~Robot()}}
+{\footnotesize\ttfamily Robot\+::$\sim$\+Robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_robot_a2136cfc015936285218c8a8db984d6bc}\label{class_robot_a2136cfc015936285218c8a8db984d6bc}} 
+\index{Robot@{Robot}!AutonomousInit@{AutonomousInit}}
+\index{AutonomousInit@{AutonomousInit}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{AutonomousInit()}{AutonomousInit()}}
+{\footnotesize\ttfamily void Robot\+::\+Autonomous\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+This initializes the autonomous state. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Robot.\+cpp.
+
+\mbox{\Hypertarget{class_robot_ac11143dd674e0e02fef5329e2df24830}\label{class_robot_ac11143dd674e0e02fef5329e2df24830}} 
+\index{Robot@{Robot}!AutonomousPeriodic@{AutonomousPeriodic}}
+\index{AutonomousPeriodic@{AutonomousPeriodic}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{AutonomousPeriodic()}{AutonomousPeriodic()}}
+{\footnotesize\ttfamily void Robot\+::\+Autonomous\+Periodic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Runs every 20 milliseconds when the autonomous state is active. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file Robot.\+cpp.
+
+\mbox{\Hypertarget{class_robot_a66f23dae271748d525cf3ab046375f79}\label{class_robot_a66f23dae271748d525cf3ab046375f79}} 
+\index{Robot@{Robot}!RobotInit@{RobotInit}}
+\index{RobotInit@{RobotInit}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{RobotInit()}{RobotInit()}}
+{\footnotesize\ttfamily void Robot\+::\+Robot\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+The main robot code. The Init methods get called when that state gets entered and then the Periodic methods get called every 20 milliseconds. 
+
+When the robot gets created this gets called. It initializes the robot subsystems (hardware). \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file Robot.\+cpp.
+
+\mbox{\Hypertarget{class_robot_a8fad82c2250bcfb83b743b5c0dd6ed27}\label{class_robot_a8fad82c2250bcfb83b743b5c0dd6ed27}} 
+\index{Robot@{Robot}!RobotPeriodic@{RobotPeriodic}}
+\index{RobotPeriodic@{RobotPeriodic}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{RobotPeriodic()}{RobotPeriodic()}}
+{\footnotesize\ttfamily void Robot\+::\+Robot\+Periodic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+This function is called every robot packet, no matter the mode. This is used for items like diagnostics that run during disabled, autonomous, teleoperated and test modes (states). T\+His runs after the specific state periodic methods and before the Live\+Window and Smart\+Dashboard updating. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file Robot.\+cpp.
+
+\mbox{\Hypertarget{class_robot_aa3e246794bfbbb4406fc87f351762038}\label{class_robot_aa3e246794bfbbb4406fc87f351762038}} 
+\index{Robot@{Robot}!TeleopInit@{TeleopInit}}
+\index{TeleopInit@{TeleopInit}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{TeleopInit()}{TeleopInit()}}
+{\footnotesize\ttfamily void Robot\+::\+Teleop\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+This initializes the teleoperated state. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file Robot.\+cpp.
+
+\mbox{\Hypertarget{class_robot_a324322627c63b3870daf7c7ddc5bea63}\label{class_robot_a324322627c63b3870daf7c7ddc5bea63}} 
+\index{Robot@{Robot}!TeleopPeriodic@{TeleopPeriodic}}
+\index{TeleopPeriodic@{TeleopPeriodic}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{TeleopPeriodic()}{TeleopPeriodic()}}
+{\footnotesize\ttfamily void Robot\+::\+Teleop\+Periodic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Runs every 20 milliseconds when the teleoperated state is active. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 144 of file Robot.\+cpp.
+
+\mbox{\Hypertarget{class_robot_a9ac222d45d30a6d0c572fd36d18c6ccc}\label{class_robot_a9ac222d45d30a6d0c572fd36d18c6ccc}} 
+\index{Robot@{Robot}!TestInit@{TestInit}}
+\index{TestInit@{TestInit}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{TestInit()}{TestInit()}}
+{\footnotesize\ttfamily void Robot\+::\+Test\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+This initializes the test state. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+else if ( m\+\_\+test\+Selected == m\+\_\+shooter\+Test ) \{ m\+\_\+current\+Test = S\+H\+O\+O\+T\+ER; m\+\_\+shooter\+State\+Mgr\+Test = new \mbox{\hyperlink{class_shooter_state_mgr_test}{Shooter\+State\+Mgr\+Test()}}; \}
+
+Definition at line 158 of file Robot.\+cpp.
+
+\mbox{\Hypertarget{class_robot_af0ac44a962e609e9b042285e699d1db8}\label{class_robot_af0ac44a962e609e9b042285e699d1db8}} 
+\index{Robot@{Robot}!TestPeriodic@{TestPeriodic}}
+\index{TestPeriodic@{TestPeriodic}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{TestPeriodic()}{TestPeriodic()}}
+{\footnotesize\ttfamily void Robot\+::\+Test\+Periodic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Runs every 20 milliseconds when the test state is active. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+case S\+H\+O\+O\+T\+ER\+: if ( !m\+\_\+shooter\+State\+Mgr\+Test-\/$>$Is\+Done() ) \{ m\+\_\+shooter\+State\+Mgr\+Test-\/$>$Periodic(); \} break;
+
+Definition at line 202 of file Robot.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/\mbox{\hyperlink{_robot_8h}{Robot.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/\mbox{\hyperlink{_robot_8cpp}{Robot.\+cpp}}\end{DoxyCompactItemize}

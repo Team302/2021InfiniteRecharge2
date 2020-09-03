@@ -1,0 +1,225 @@
+\hypertarget{class_hook_delivery}{}\doxysection{Hook\+Delivery Class Reference}
+\label{class_hook_delivery}\index{HookDelivery@{HookDelivery}}
+
+
+{\ttfamily \#include $<$Hook\+Delivery.\+h$>$}
+
+Inheritance diagram for Hook\+Delivery\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_hook_delivery}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hook_delivery_aee299a7f5b6787ed7ee1873bebe08bb8}{Hook\+Delivery}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ motor\+Controller)
+\item 
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{class_hook_delivery_ad8c32f24f1e0601c31fa2c2c0beacedf}{Get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates the type of mechanism this is. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hook_delivery_ab6767e268f640b2b404c9474f2a085bc}{Set\+Output}} (\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} control\+Type, double value) override
+\begin{DoxyCompactList}\small\item\em Run mechanism as defined. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hook_delivery_a74370ee13e3c5d1278d0fecc79a2d7b6}{Activate\+Solenoid}} (bool activate) override
+\begin{DoxyCompactList}\small\item\em Activate/deactivate pneumatic solenoid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_hook_delivery_a585b4a2962ce485130d4cc46e13c0db8}{Is\+Solenoid\+Activated}} () override
+\begin{DoxyCompactList}\small\item\em Check if the pneumatic solenoid is activated. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_hook_delivery_ad0616602f22ca29c542bf80f2dc04614}{Get\+Current\+Position}} () const override
+\begin{DoxyCompactList}\small\item\em Return the current position of the mechanism. The value is in inches or degrees. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_hook_delivery_aa02921655929b415ce42a54900be1f31}{Get\+Current\+Speed}} () const override
+\begin{DoxyCompactList}\small\item\em Get the current speed of the mechanism. The value is in inches per second or degrees per second. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hook_delivery_a26859ed6b8f4ff130c90304ed1325f60}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid) override
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 42 of file Hook\+Delivery.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_hook_delivery_aee299a7f5b6787ed7ee1873bebe08bb8}\label{class_hook_delivery_aee299a7f5b6787ed7ee1873bebe08bb8}} 
+\index{HookDelivery@{HookDelivery}!HookDelivery@{HookDelivery}}
+\index{HookDelivery@{HookDelivery}!HookDelivery@{HookDelivery}}
+\doxysubsubsection{\texorpdfstring{HookDelivery()}{HookDelivery()}}
+{\footnotesize\ttfamily Hook\+Delivery\+::\+Hook\+Delivery (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{motor\+Controller }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file Hook\+Delivery.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hook_delivery_a74370ee13e3c5d1278d0fecc79a2d7b6}\label{class_hook_delivery_a74370ee13e3c5d1278d0fecc79a2d7b6}} 
+\index{HookDelivery@{HookDelivery}!ActivateSolenoid@{ActivateSolenoid}}
+\index{ActivateSolenoid@{ActivateSolenoid}!HookDelivery@{HookDelivery}}
+\doxysubsubsection{\texorpdfstring{ActivateSolenoid()}{ActivateSolenoid()}}
+{\footnotesize\ttfamily void Hook\+Delivery\+::\+Activate\+Solenoid (\begin{DoxyParamCaption}\item[{bool}]{activate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activate/deactivate pneumatic solenoid. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bool} & -\/ true == extend, false == retract \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_abef1fbd73a24f4f6f3104e255539e0d9}{I\+Mechanism}}.
+
+
+
+Definition at line 67 of file Hook\+Delivery.\+cpp.
+
+\mbox{\Hypertarget{class_hook_delivery_ad0616602f22ca29c542bf80f2dc04614}\label{class_hook_delivery_ad0616602f22ca29c542bf80f2dc04614}} 
+\index{HookDelivery@{HookDelivery}!GetCurrentPosition@{GetCurrentPosition}}
+\index{GetCurrentPosition@{GetCurrentPosition}!HookDelivery@{HookDelivery}}
+\doxysubsubsection{\texorpdfstring{GetCurrentPosition()}{GetCurrentPosition()}}
+{\footnotesize\ttfamily double Hook\+Delivery\+::\+Get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the current position of the mechanism. The value is in inches or degrees. 
+
+\begin{DoxyReturn}{Returns}
+double position in inches (translating mechanisms) or degrees (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_aa15197ff101d65447516a8f10bb6867d}{I\+Mechanism}}.
+
+
+
+Definition at line 84 of file Hook\+Delivery.\+cpp.
+
+\mbox{\Hypertarget{class_hook_delivery_aa02921655929b415ce42a54900be1f31}\label{class_hook_delivery_aa02921655929b415ce42a54900be1f31}} 
+\index{HookDelivery@{HookDelivery}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!HookDelivery@{HookDelivery}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily double Hook\+Delivery\+::\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current speed of the mechanism. The value is in inches per second or degrees per second. 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a9a63d6905de4454d78d7e0d1d1e28437}{I\+Mechanism}}.
+
+
+
+Definition at line 93 of file Hook\+Delivery.\+cpp.
+
+\mbox{\Hypertarget{class_hook_delivery_ad8c32f24f1e0601c31fa2c2c0beacedf}\label{class_hook_delivery_ad8c32f24f1e0601c31fa2c2c0beacedf}} 
+\index{HookDelivery@{HookDelivery}!GetType@{GetType}}
+\index{GetType@{GetType}!HookDelivery@{HookDelivery}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} Hook\+Delivery\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates the type of mechanism this is. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a62096808201ffc31609e99dc2fa92d44}{I\+Mechanism}}.
+
+
+
+Definition at line 44 of file Hook\+Delivery.\+cpp.
+
+\mbox{\Hypertarget{class_hook_delivery_a585b4a2962ce485130d4cc46e13c0db8}\label{class_hook_delivery_a585b4a2962ce485130d4cc46e13c0db8}} 
+\index{HookDelivery@{HookDelivery}!IsSolenoidActivated@{IsSolenoidActivated}}
+\index{IsSolenoidActivated@{IsSolenoidActivated}!HookDelivery@{HookDelivery}}
+\doxysubsubsection{\texorpdfstring{IsSolenoidActivated()}{IsSolenoidActivated()}}
+{\footnotesize\ttfamily bool Hook\+Delivery\+::\+Is\+Solenoid\+Activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the pneumatic solenoid is activated. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true == extended, false == retract 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a4c0bedb71316054749a276a67d278558}{I\+Mechanism}}.
+
+
+
+Definition at line 75 of file Hook\+Delivery.\+cpp.
+
+\mbox{\Hypertarget{class_hook_delivery_a26859ed6b8f4ff130c90304ed1325f60}\label{class_hook_delivery_a26859ed6b8f4ff130c90304ed1325f60}} 
+\index{HookDelivery@{HookDelivery}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!HookDelivery@{HookDelivery}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily void Hook\+Delivery\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid\+: the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_acd973ca93855c485ed42d405f2fcba11}{I\+Mechanism}}.
+
+
+
+Definition at line 103 of file Hook\+Delivery.\+cpp.
+
+\mbox{\Hypertarget{class_hook_delivery_ab6767e268f640b2b404c9474f2a085bc}\label{class_hook_delivery_ab6767e268f640b2b404c9474f2a085bc}} 
+\index{HookDelivery@{HookDelivery}!SetOutput@{SetOutput}}
+\index{SetOutput@{SetOutput}!HookDelivery@{HookDelivery}}
+\doxysubsubsection{\texorpdfstring{SetOutput()}{SetOutput()}}
+{\footnotesize\ttfamily void Hook\+Delivery\+::\+Set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}}]{control\+Type,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Run mechanism as defined. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}} & control\+Type\+: How are the item(s) being controlled \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & value\+: Target (units are based on the control\+Type) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_abc72a6d0306a828de6f43418e75c04c0}{I\+Mechanism}}.
+
+
+
+Definition at line 50 of file Hook\+Delivery.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_hook_delivery_8h}{Hook\+Delivery.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_hook_delivery_8cpp}{Hook\+Delivery.\+cpp}}\end{DoxyCompactItemize}

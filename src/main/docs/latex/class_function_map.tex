@@ -1,0 +1,230 @@
+\hypertarget{class_function_map}{}\doxysection{Function\+Map Class Reference}
+\label{class_function_map}\index{FunctionMap@{FunctionMap}}
+
+
+This defines the mapping from a single function to its controller (index and mode) and button or axis ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$Function\+Map.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_function_map_a4a9239f3325a6ab34e873128a6907f23}{Function\+Map}} ()
+\begin{DoxyCompactList}\small\item\em The contructor initializes the object to default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_function_map_af2d31c6096f0dc21416e8b5a1eba6bb6}{Function\+Map}} (\mbox{\hyperlink{class_teleop_control_a7d4c2a365d8eaf21214611064c8a3a15}{Teleop\+Control\+::\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} function, int controller\+Index, \mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} axis\+ID, \mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4d}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+D\+E\+A\+D\+B\+A\+ND}} dead\+Band, \mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}} profile, \mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} button\+ID, \mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+M\+O\+DE}} button\+Type)
+\begin{DoxyCompactList}\small\item\em The contructor initializes the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_function_map_ad070d8c587a130a85d32bf2b8182ad43}{$\sim$\+Function\+Map}} ()=default
+\item 
+\mbox{\hyperlink{class_teleop_control_a7d4c2a365d8eaf21214611064c8a3a15}{Teleop\+Control\+::\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} \mbox{\hyperlink{class_function_map_abeec0d56933b9c74170f01cc18f7e8c2}{Get\+Function}} () const
+\begin{DoxyCompactList}\small\item\em Returns the function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_function_map_a7afc0c9b431b4690efc5cfd9f8a5278a}{Get\+Controller\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Returns the controller index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} \mbox{\hyperlink{class_function_map_ae3ec9af0d21dda3e4eb1ed1844b0acf7}{Get\+Axis\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Returns the axis identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4d}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+D\+E\+A\+D\+B\+A\+ND}} \mbox{\hyperlink{class_function_map_a65f53c85ce65e326e477708ae7112b7f}{Get\+Deadband}} () const
+\begin{DoxyCompactList}\small\item\em Returns the axis deadband type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}} \mbox{\hyperlink{class_function_map_accbfed173e6350996f1222ad0931bdf8}{Get\+Profile}} () const
+\begin{DoxyCompactList}\small\item\em Returns the axis profile type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} \mbox{\hyperlink{class_function_map_a69e8cfd05e646937d27e0e35ab944773}{Get\+Button\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Returns the button identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+M\+O\+DE}} \mbox{\hyperlink{class_function_map_a93aba53b7a167e3d44d5814a183e0e4f}{Get\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em Returns the button mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This defines the mapping from a single function to its controller (index and mode) and button or axis ~\newline
+ 
+
+Definition at line 31 of file Function\+Map.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_function_map_a4a9239f3325a6ab34e873128a6907f23}\label{class_function_map_a4a9239f3325a6ab34e873128a6907f23}} 
+\index{FunctionMap@{FunctionMap}!FunctionMap@{FunctionMap}}
+\index{FunctionMap@{FunctionMap}!FunctionMap@{FunctionMap}}
+\doxysubsubsection{\texorpdfstring{FunctionMap()}{FunctionMap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Function\+Map\+::\+Function\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The contructor initializes the object to default values. 
+
+
+
+Definition at line 33 of file Function\+Map.\+cpp.
+
+\mbox{\Hypertarget{class_function_map_af2d31c6096f0dc21416e8b5a1eba6bb6}\label{class_function_map_af2d31c6096f0dc21416e8b5a1eba6bb6}} 
+\index{FunctionMap@{FunctionMap}!FunctionMap@{FunctionMap}}
+\index{FunctionMap@{FunctionMap}!FunctionMap@{FunctionMap}}
+\doxysubsubsection{\texorpdfstring{FunctionMap()}{FunctionMap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Function\+Map\+::\+Function\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_teleop_control_a7d4c2a365d8eaf21214611064c8a3a15}{Teleop\+Control\+::\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}]{function,  }\item[{int}]{controller\+Index,  }\item[{\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}]{axis\+ID,  }\item[{\mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4d}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+D\+E\+A\+D\+B\+A\+ND}}}]{dead\+Band,  }\item[{\mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}}}]{profile,  }\item[{\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}]{button\+ID,  }\item[{\mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+M\+O\+DE}}}]{button\+Type }\end{DoxyParamCaption})}
+
+
+
+The contructor initializes the object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_teleop_control_a7d4c2a365d8eaf21214611064c8a3a15}{Teleop\+Control\+::\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}} & function -\/ the function this maps to \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & controller\+Index -\/ the controller number starting from 0 this applies to \\
+\hline
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}} & axis\+ID -\/ the axis ID this maps to \\
+\hline
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4d}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+D\+E\+A\+D\+B\+A\+ND}}} & deadband -\/ the deadband type this axis should have \\
+\hline
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}}} & profile -\/ the profile type this axis should have \\
+\hline
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}} & button\+ID -\/ the button ID this maps to \\
+\hline
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+M\+O\+DE}}} & button\+Type -\/ the type of button this should beS \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Function\+Map.\+cpp.
+
+\mbox{\Hypertarget{class_function_map_ad070d8c587a130a85d32bf2b8182ad43}\label{class_function_map_ad070d8c587a130a85d32bf2b8182ad43}} 
+\index{FunctionMap@{FunctionMap}!````~FunctionMap@{$\sim$FunctionMap}}
+\index{````~FunctionMap@{$\sim$FunctionMap}!FunctionMap@{FunctionMap}}
+\doxysubsubsection{\texorpdfstring{$\sim$FunctionMap()}{~FunctionMap()}}
+{\footnotesize\ttfamily Function\+Map\+::$\sim$\+Function\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_function_map_ae3ec9af0d21dda3e4eb1ed1844b0acf7}\label{class_function_map_ae3ec9af0d21dda3e4eb1ed1844b0acf7}} 
+\index{FunctionMap@{FunctionMap}!GetAxisID@{GetAxisID}}
+\index{GetAxisID@{GetAxisID}!FunctionMap@{FunctionMap}}
+\doxysubsubsection{\texorpdfstring{GetAxisID()}{GetAxisID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} Function\+Map\+::\+Get\+Axis\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the axis identifier. 
+
+\begin{DoxyReturn}{Returns}
+int the axis this is valid for (U\+N\+D\+E\+F\+I\+N\+E\+D\+\_\+\+A\+X\+IS means this isn\textquotesingle{}t using an axis) ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file Function\+Map.\+cpp.
+
+\mbox{\Hypertarget{class_function_map_a69e8cfd05e646937d27e0e35ab944773}\label{class_function_map_a69e8cfd05e646937d27e0e35ab944773}} 
+\index{FunctionMap@{FunctionMap}!GetButtonID@{GetButtonID}}
+\index{GetButtonID@{GetButtonID}!FunctionMap@{FunctionMap}}
+\doxysubsubsection{\texorpdfstring{GetButtonID()}{GetButtonID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} Function\+Map\+::\+Get\+Button\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the button identifier. 
+
+\begin{DoxyReturn}{Returns}
+int the button this is valid for (U\+N\+D\+E\+F\+I\+N\+E\+D\+\_\+\+B\+U\+T\+T\+ON means this isn\textquotesingle{}t using a button) ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Function\+Map.\+cpp.
+
+\mbox{\Hypertarget{class_function_map_a7afc0c9b431b4690efc5cfd9f8a5278a}\label{class_function_map_a7afc0c9b431b4690efc5cfd9f8a5278a}} 
+\index{FunctionMap@{FunctionMap}!GetControllerIndex@{GetControllerIndex}}
+\index{GetControllerIndex@{GetControllerIndex}!FunctionMap@{FunctionMap}}
+\doxysubsubsection{\texorpdfstring{GetControllerIndex()}{GetControllerIndex()}}
+{\footnotesize\ttfamily int Function\+Map\+::\+Get\+Controller\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the controller index. 
+
+\begin{DoxyReturn}{Returns}
+int the controller number starting from 0 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file Function\+Map.\+cpp.
+
+\mbox{\Hypertarget{class_function_map_a65f53c85ce65e326e477708ae7112b7f}\label{class_function_map_a65f53c85ce65e326e477708ae7112b7f}} 
+\index{FunctionMap@{FunctionMap}!GetDeadband@{GetDeadband}}
+\index{GetDeadband@{GetDeadband}!FunctionMap@{FunctionMap}}
+\doxysubsubsection{\texorpdfstring{GetDeadband()}{GetDeadband()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4d}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+D\+E\+A\+D\+B\+A\+ND}} Function\+Map\+::\+Get\+Deadband (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the axis deadband type. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4d}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+D\+E\+A\+D\+B\+A\+ND}} the axis deadband type ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Function\+Map.\+cpp.
+
+\mbox{\Hypertarget{class_function_map_abeec0d56933b9c74170f01cc18f7e8c2}\label{class_function_map_abeec0d56933b9c74170f01cc18f7e8c2}} 
+\index{FunctionMap@{FunctionMap}!GetFunction@{GetFunction}}
+\index{GetFunction@{GetFunction}!FunctionMap@{FunctionMap}}
+\doxysubsubsection{\texorpdfstring{GetFunction()}{GetFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_teleop_control_a7d4c2a365d8eaf21214611064c8a3a15}{Teleop\+Control\+::\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} Function\+Map\+::\+Get\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the function. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_teleop_control_a7d4c2a365d8eaf21214611064c8a3a15}{Teleop\+Control\+::\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} the function this object is defining 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file Function\+Map.\+cpp.
+
+\mbox{\Hypertarget{class_function_map_a93aba53b7a167e3d44d5814a183e0e4f}\label{class_function_map_a93aba53b7a167e3d44d5814a183e0e4f}} 
+\index{FunctionMap@{FunctionMap}!GetMode@{GetMode}}
+\index{GetMode@{GetMode}!FunctionMap@{FunctionMap}}
+\doxysubsubsection{\texorpdfstring{GetMode()}{GetMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+M\+O\+DE}} Function\+Map\+::\+Get\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the button mode. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+M\+O\+DE}} the button mode ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line 123 of file Function\+Map.\+cpp.
+
+\mbox{\Hypertarget{class_function_map_accbfed173e6350996f1222ad0931bdf8}\label{class_function_map_accbfed173e6350996f1222ad0931bdf8}} 
+\index{FunctionMap@{FunctionMap}!GetProfile@{GetProfile}}
+\index{GetProfile@{GetProfile}!FunctionMap@{FunctionMap}}
+\doxysubsubsection{\texorpdfstring{GetProfile()}{GetProfile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}} Function\+Map\+::\+Get\+Profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the axis profile type. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}} the axis profile type ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file Function\+Map.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/\mbox{\hyperlink{_function_map_8h}{Function\+Map.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/\mbox{\hyperlink{_function_map_8cpp}{Function\+Map.\+cpp}}\end{DoxyCompactItemize}

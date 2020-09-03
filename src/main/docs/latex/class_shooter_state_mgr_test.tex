@@ -1,0 +1,129 @@
+\hypertarget{class_shooter_state_mgr_test}{}\doxysection{Shooter\+State\+Mgr\+Test Class Reference}
+\label{class_shooter_state_mgr_test}\index{ShooterStateMgrTest@{ShooterStateMgrTest}}
+
+
+Tests for \mbox{\hyperlink{class_shooter_state_mgr}{Shooter\+State\+Mgr}}. There are three states\+: O\+FF, G\+E\+T\+\_\+\+R\+E\+A\+DY, and S\+H\+O\+OT. This will run each for 15 seconds each; running G\+E\+T\+\_\+\+R\+E\+A\+DY, then S\+H\+O\+OT and finally O\+FF.  
+
+
+
+
+{\ttfamily \#include $<$Shooter\+State\+Mgr\+Test.\+h$>$}
+
+Inheritance diagram for Shooter\+State\+Mgr\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shooter_state_mgr_test}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shooter_state_mgr_test_a6ab48705dfd4ba47a5c141a461ca0424}{Shooter\+State\+Mgr\+Test}} ()
+\item 
+\mbox{\hyperlink{class_shooter_state_mgr_test_aefb78321c029424f73a6b3d1d22eff16}{$\sim$\+Shooter\+State\+Mgr\+Test}} ()=default
+\item 
+void \mbox{\hyperlink{class_shooter_state_mgr_test_a85016fe388c963ed93f8b1dbb018c809}{Init}} () override
+\begin{DoxyCompactList}\small\item\em Initialize the test setup. This will be called from \mbox{\hyperlink{class_robot_a9ac222d45d30a6d0c572fd36d18c6ccc}{Robot\+::\+Test\+Init()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shooter_state_mgr_test_a1465bcce1ef2d62e62db1f0ecb1ca333}{Periodic}} () override
+\begin{DoxyCompactList}\small\item\em Run the test. This will be called from \mbox{\hyperlink{class_robot_af0ac44a962e609e9b042285e699d1db8}{Robot\+::\+Test\+Periodic()}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shooter_state_mgr_test_a82f2f680e75b5f6fc42937a470cc8b8c}{Is\+Done}} () override
+\begin{DoxyCompactList}\small\item\em Indicate whether the test has completed or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tests for \mbox{\hyperlink{class_shooter_state_mgr}{Shooter\+State\+Mgr}}. There are three states\+: O\+FF, G\+E\+T\+\_\+\+R\+E\+A\+DY, and S\+H\+O\+OT. This will run each for 15 seconds each; running G\+E\+T\+\_\+\+R\+E\+A\+DY, then S\+H\+O\+OT and finally O\+FF. 
+
+Definition at line 33 of file Shooter\+State\+Mgr\+Test.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_shooter_state_mgr_test_a6ab48705dfd4ba47a5c141a461ca0424}\label{class_shooter_state_mgr_test_a6ab48705dfd4ba47a5c141a461ca0424}} 
+\index{ShooterStateMgrTest@{ShooterStateMgrTest}!ShooterStateMgrTest@{ShooterStateMgrTest}}
+\index{ShooterStateMgrTest@{ShooterStateMgrTest}!ShooterStateMgrTest@{ShooterStateMgrTest}}
+\doxysubsubsection{\texorpdfstring{ShooterStateMgrTest()}{ShooterStateMgrTest()}}
+{\footnotesize\ttfamily Shooter\+State\+Mgr\+Test\+::\+Shooter\+State\+Mgr\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file Shooter\+State\+Mgr\+Test.\+cpp.
+
+\mbox{\Hypertarget{class_shooter_state_mgr_test_aefb78321c029424f73a6b3d1d22eff16}\label{class_shooter_state_mgr_test_aefb78321c029424f73a6b3d1d22eff16}} 
+\index{ShooterStateMgrTest@{ShooterStateMgrTest}!````~ShooterStateMgrTest@{$\sim$ShooterStateMgrTest}}
+\index{````~ShooterStateMgrTest@{$\sim$ShooterStateMgrTest}!ShooterStateMgrTest@{ShooterStateMgrTest}}
+\doxysubsubsection{\texorpdfstring{$\sim$ShooterStateMgrTest()}{~ShooterStateMgrTest()}}
+{\footnotesize\ttfamily Shooter\+State\+Mgr\+Test\+::$\sim$\+Shooter\+State\+Mgr\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shooter_state_mgr_test_a85016fe388c963ed93f8b1dbb018c809}\label{class_shooter_state_mgr_test_a85016fe388c963ed93f8b1dbb018c809}} 
+\index{ShooterStateMgrTest@{ShooterStateMgrTest}!Init@{Init}}
+\index{Init@{Init}!ShooterStateMgrTest@{ShooterStateMgrTest}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Shooter\+State\+Mgr\+Test\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialize the test setup. This will be called from \mbox{\hyperlink{class_robot_a9ac222d45d30a6d0c572fd36d18c6ccc}{Robot\+::\+Test\+Init()}} 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_state_test_a6926767a434eddbcb9f696b966b45723}{I\+State\+Test}}.
+
+
+
+Definition at line 49 of file Shooter\+State\+Mgr\+Test.\+cpp.
+
+\mbox{\Hypertarget{class_shooter_state_mgr_test_a82f2f680e75b5f6fc42937a470cc8b8c}\label{class_shooter_state_mgr_test_a82f2f680e75b5f6fc42937a470cc8b8c}} 
+\index{ShooterStateMgrTest@{ShooterStateMgrTest}!IsDone@{IsDone}}
+\index{IsDone@{IsDone}!ShooterStateMgrTest@{ShooterStateMgrTest}}
+\doxysubsubsection{\texorpdfstring{IsDone()}{IsDone()}}
+{\footnotesize\ttfamily bool Shooter\+State\+Mgr\+Test\+::\+Is\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicate whether the test has completed or not. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true\+: test has completed, false\+: test is still running 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_state_test_a5dd3562131388a25108609fe82831921}{I\+State\+Test}}.
+
+
+
+Definition at line 90 of file Shooter\+State\+Mgr\+Test.\+cpp.
+
+\mbox{\Hypertarget{class_shooter_state_mgr_test_a1465bcce1ef2d62e62db1f0ecb1ca333}\label{class_shooter_state_mgr_test_a1465bcce1ef2d62e62db1f0ecb1ca333}} 
+\index{ShooterStateMgrTest@{ShooterStateMgrTest}!Periodic@{Periodic}}
+\index{Periodic@{Periodic}!ShooterStateMgrTest@{ShooterStateMgrTest}}
+\doxysubsubsection{\texorpdfstring{Periodic()}{Periodic()}}
+{\footnotesize\ttfamily void Shooter\+State\+Mgr\+Test\+::\+Periodic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Run the test. This will be called from \mbox{\hyperlink{class_robot_af0ac44a962e609e9b042285e699d1db8}{Robot\+::\+Test\+Periodic()}} 
+
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_state_test_aeea6d9f3dda71a47f98ae57e4e9ea598}{I\+State\+Test}}.
+
+
+
+Definition at line 58 of file Shooter\+State\+Mgr\+Test.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/test/\mbox{\hyperlink{_shooter_state_mgr_test_8h}{Shooter\+State\+Mgr\+Test.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/test/\mbox{\hyperlink{_shooter_state_mgr_test_8cpp}{Shooter\+State\+Mgr\+Test.\+cpp}}\end{DoxyCompactItemize}

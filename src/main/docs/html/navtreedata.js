@@ -22,7 +22,7 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "Team 302 Robot", "index.html", [
+  [ "Robot", "index.html", [
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -55,14 +55,14 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_analog_axis_8cpp.html",
-"_dragon_limelight_8cpp.html",
-"_lidar_defn_8cpp.html",
-"_toggle_button_8h.html",
-"class_control_data_defn.html#ac2b5103565cfea91b4aa352c443aed98",
-"class_dragon_limelight.html#ad524ba4ce87697fa883882f5c41e9b60",
-"class_hold_turret_position.html#a759d7432e3d32253775197b3680076a1",
-"class_impeller_state_mgr.html",
-"class_robot.html#a8fad82c2250bcfb83b743b5c0dd6ed27",
+"_dragon_pigeon_8cpp.html",
+"_linear_profile_8h_source.html",
+"_velocity_controller_8cpp_source.html",
+"class_control_panel.html#ae26ca57e23827693cc8bc60304cc603a",
+"class_dragon_servo.html#a0edace387d66129bceed4397276d2d25",
+"class_i_button.html",
+"class_impeller_state_mgr.html#ac7900fc564754454bb9309032667c8b9a50706e7392e1bc9e8059459301521fea",
+"class_primitive_params.html#a651874aee3001802b288b020e9d713ab",
 "class_turret_state_mgr.html#aa185afc9e9d378aca360e2f2376c1b98"
 ];
 

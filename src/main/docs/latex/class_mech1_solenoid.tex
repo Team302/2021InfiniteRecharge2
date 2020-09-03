@@ -1,0 +1,114 @@
+\hypertarget{class_mech1_solenoid}{}\doxysection{Mech1\+Solenoid Class Reference}
+\label{class_mech1_solenoid}\index{Mech1Solenoid@{Mech1Solenoid}}
+
+
+{\ttfamily \#include $<$Mech1\+Solenoid.\+h$>$}
+
+Inheritance diagram for Mech1\+Solenoid\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mech1_solenoid}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mech1_solenoid_a1c6a5eedf2a02aba882588f5c532b5b0}{Mech1\+Solenoid}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_solenoid}{Dragon\+Solenoid}} $>$ solenoid)
+\item 
+\mbox{\hyperlink{class_mech1_solenoid_a5b2bc8ec09feaa5a36ddea1a1fb4a6cc}{Mech1\+Solenoid}} ()=delete
+\item 
+virtual \mbox{\hyperlink{class_mech1_solenoid_a058ca461f490052397ebb42149033302}{$\sim$\+Mech1\+Solenoid}} ()=default
+\item 
+void \mbox{\hyperlink{class_mech1_solenoid_ab5578fc06c59ce48ab7e3eff9a707004}{Activate\+Solenoid}} (bool activate) override
+\begin{DoxyCompactList}\small\item\em Activate/deactivate pneumatic solenoid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_mech1_solenoid_ab50959e3e879323fa1928c839842cdc7}{Is\+Solenoid\+Activated}} () const override
+\begin{DoxyCompactList}\small\item\em Check if the pneumatic solenoid is activated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 30 of file Mech1\+Solenoid.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mech1_solenoid_a1c6a5eedf2a02aba882588f5c532b5b0}\label{class_mech1_solenoid_a1c6a5eedf2a02aba882588f5c532b5b0}} 
+\index{Mech1Solenoid@{Mech1Solenoid}!Mech1Solenoid@{Mech1Solenoid}}
+\index{Mech1Solenoid@{Mech1Solenoid}!Mech1Solenoid@{Mech1Solenoid}}
+\doxysubsubsection{\texorpdfstring{Mech1Solenoid()}{Mech1Solenoid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Mech1\+Solenoid\+::\+Mech1\+Solenoid (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_solenoid}{Dragon\+Solenoid}} $>$}]{solenoid }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file Mech1\+Solenoid.\+cpp.
+
+\mbox{\Hypertarget{class_mech1_solenoid_a5b2bc8ec09feaa5a36ddea1a1fb4a6cc}\label{class_mech1_solenoid_a5b2bc8ec09feaa5a36ddea1a1fb4a6cc}} 
+\index{Mech1Solenoid@{Mech1Solenoid}!Mech1Solenoid@{Mech1Solenoid}}
+\index{Mech1Solenoid@{Mech1Solenoid}!Mech1Solenoid@{Mech1Solenoid}}
+\doxysubsubsection{\texorpdfstring{Mech1Solenoid()}{Mech1Solenoid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Mech1\+Solenoid\+::\+Mech1\+Solenoid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_mech1_solenoid_a058ca461f490052397ebb42149033302}\label{class_mech1_solenoid_a058ca461f490052397ebb42149033302}} 
+\index{Mech1Solenoid@{Mech1Solenoid}!````~Mech1Solenoid@{$\sim$Mech1Solenoid}}
+\index{````~Mech1Solenoid@{$\sim$Mech1Solenoid}!Mech1Solenoid@{Mech1Solenoid}}
+\doxysubsubsection{\texorpdfstring{$\sim$Mech1Solenoid()}{~Mech1Solenoid()}}
+{\footnotesize\ttfamily virtual Mech1\+Solenoid\+::$\sim$\+Mech1\+Solenoid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mech1_solenoid_ab5578fc06c59ce48ab7e3eff9a707004}\label{class_mech1_solenoid_ab5578fc06c59ce48ab7e3eff9a707004}} 
+\index{Mech1Solenoid@{Mech1Solenoid}!ActivateSolenoid@{ActivateSolenoid}}
+\index{ActivateSolenoid@{ActivateSolenoid}!Mech1Solenoid@{Mech1Solenoid}}
+\doxysubsubsection{\texorpdfstring{ActivateSolenoid()}{ActivateSolenoid()}}
+{\footnotesize\ttfamily void Mech1\+Solenoid\+::\+Activate\+Solenoid (\begin{DoxyParamCaption}\item[{bool}]{activate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activate/deactivate pneumatic solenoid. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bool} & -\/ true == extend, false == retract \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mech1_solenoid_a08e5dbbc73217c05e1aaa1797d23c0c2}{I\+Mech1\+Solenoid}}.
+
+
+
+Definition at line 51 of file Mech1\+Solenoid.\+cpp.
+
+\mbox{\Hypertarget{class_mech1_solenoid_ab50959e3e879323fa1928c839842cdc7}\label{class_mech1_solenoid_ab50959e3e879323fa1928c839842cdc7}} 
+\index{Mech1Solenoid@{Mech1Solenoid}!IsSolenoidActivated@{IsSolenoidActivated}}
+\index{IsSolenoidActivated@{IsSolenoidActivated}!Mech1Solenoid@{Mech1Solenoid}}
+\doxysubsubsection{\texorpdfstring{IsSolenoidActivated()}{IsSolenoidActivated()}}
+{\footnotesize\ttfamily bool Mech1\+Solenoid\+::\+Is\+Solenoid\+Activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the pneumatic solenoid is activated. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true == extended, false == retracted 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mech1_solenoid_a2c9e18c4dfebef5b253bb84d6556fe4a}{I\+Mech1\+Solenoid}}.
+
+
+
+Definition at line 64 of file Mech1\+Solenoid.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_solenoid_8h}{Mech1\+Solenoid.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_solenoid_8cpp}{Mech1\+Solenoid.\+cpp}}\end{DoxyCompactItemize}

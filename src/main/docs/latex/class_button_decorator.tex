@@ -1,0 +1,156 @@
+\hypertarget{class_button_decorator}{}\doxysection{Button\+Decorator Class Reference}
+\label{class_button_decorator}\index{ButtonDecorator@{ButtonDecorator}}
+
+
+Class\+: \mbox{\hyperlink{class_button_decorator}{Button\+Decorator}} Description\+: This is a decorator for modifying button behavior.  
+
+
+
+
+{\ttfamily \#include $<$Button\+Decorator.\+h$>$}
+
+Inheritance diagram for Button\+Decorator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_button_decorator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_button_decorator_ab45d2c847a52d4f083c58656b34aa864}{Is\+Button\+Pressed}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Is\+Button\+Pressed Description\+: Read the button and return true if it is pressed and false if it isn\textquotesingle{}t. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_button_decorator_a8da383207ae4e4288f412685eeac4047}{Was\+Button\+Released}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Was\+Button\+Released Description\+: Read whether the button was released since the last query. This is only valid for digital buttons (normal buttons and bumpers). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_button_decorator_a5c0a9115aff442b38166000d86d98ad5}{Was\+Button\+Pressed}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Was\+Button\+Pressed Description\+: Read whether the button was pressed since the last query. This is only valid for digital buttons (normal buttons and bumpers). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_button_decorator_a43dcac2d3ff9e8733cedb6d718ecd2c2}{Button\+Decorator}} (\mbox{\hyperlink{class_i_button}{I\+Button}} $\ast$button)
+\item 
+\mbox{\hyperlink{class_button_decorator_a50424ed5459781d9c67cfa2fe51090a1}{Button\+Decorator}} ()=delete
+\item 
+\mbox{\hyperlink{class_button_decorator_a3d84e0e8d74f8ff09922260f65e70dfb}{$\sim$\+Button\+Decorator}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_button}{I\+Button}} $\ast$ \mbox{\hyperlink{class_button_decorator_a6532bf7fb303e28e29ef5b9f669a7741}{Get\+Button}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class\+: \mbox{\hyperlink{class_button_decorator}{Button\+Decorator}} Description\+: This is a decorator for modifying button behavior. 
+
+
+
+Definition at line 37 of file Button\+Decorator.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_button_decorator_a43dcac2d3ff9e8733cedb6d718ecd2c2}\label{class_button_decorator_a43dcac2d3ff9e8733cedb6d718ecd2c2}} 
+\index{ButtonDecorator@{ButtonDecorator}!ButtonDecorator@{ButtonDecorator}}
+\index{ButtonDecorator@{ButtonDecorator}!ButtonDecorator@{ButtonDecorator}}
+\doxysubsubsection{\texorpdfstring{ButtonDecorator()}{ButtonDecorator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Button\+Decorator\+::\+Button\+Decorator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_button}{I\+Button}} $\ast$}]{button }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file Button\+Decorator.\+cpp.
+
+\mbox{\Hypertarget{class_button_decorator_a50424ed5459781d9c67cfa2fe51090a1}\label{class_button_decorator_a50424ed5459781d9c67cfa2fe51090a1}} 
+\index{ButtonDecorator@{ButtonDecorator}!ButtonDecorator@{ButtonDecorator}}
+\index{ButtonDecorator@{ButtonDecorator}!ButtonDecorator@{ButtonDecorator}}
+\doxysubsubsection{\texorpdfstring{ButtonDecorator()}{ButtonDecorator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Button\+Decorator\+::\+Button\+Decorator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_button_decorator_a3d84e0e8d74f8ff09922260f65e70dfb}\label{class_button_decorator_a3d84e0e8d74f8ff09922260f65e70dfb}} 
+\index{ButtonDecorator@{ButtonDecorator}!````~ButtonDecorator@{$\sim$ButtonDecorator}}
+\index{````~ButtonDecorator@{$\sim$ButtonDecorator}!ButtonDecorator@{ButtonDecorator}}
+\doxysubsubsection{\texorpdfstring{$\sim$ButtonDecorator()}{~ButtonDecorator()}}
+{\footnotesize\ttfamily Button\+Decorator\+::$\sim$\+Button\+Decorator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_button_decorator_a6532bf7fb303e28e29ef5b9f669a7741}\label{class_button_decorator_a6532bf7fb303e28e29ef5b9f669a7741}} 
+\index{ButtonDecorator@{ButtonDecorator}!GetButton@{GetButton}}
+\index{GetButton@{GetButton}!ButtonDecorator@{ButtonDecorator}}
+\doxysubsubsection{\texorpdfstring{GetButton()}{GetButton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_button}{I\+Button}}$\ast$ Button\+Decorator\+::\+Get\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 72 of file Button\+Decorator.\+h.
+
+\mbox{\Hypertarget{class_button_decorator_ab45d2c847a52d4f083c58656b34aa864}\label{class_button_decorator_ab45d2c847a52d4f083c58656b34aa864}} 
+\index{ButtonDecorator@{ButtonDecorator}!IsButtonPressed@{IsButtonPressed}}
+\index{IsButtonPressed@{IsButtonPressed}!ButtonDecorator@{ButtonDecorator}}
+\doxysubsubsection{\texorpdfstring{IsButtonPressed()}{IsButtonPressed()}}
+{\footnotesize\ttfamily bool Button\+Decorator\+::\+Is\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Is\+Button\+Pressed Description\+: Read the button and return true if it is pressed and false if it isn\textquotesingle{}t. 
+
+
+
+Implements \mbox{\hyperlink{class_i_button_afe76bfef9fc9fe1b426a8b7010c816f8}{I\+Button}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_toggle_button_a0c511c3d7701fa2efb72ad3373583d60}{Toggle\+Button}}.
+
+
+
+Definition at line 36 of file Button\+Decorator.\+cpp.
+
+\mbox{\Hypertarget{class_button_decorator_a5c0a9115aff442b38166000d86d98ad5}\label{class_button_decorator_a5c0a9115aff442b38166000d86d98ad5}} 
+\index{ButtonDecorator@{ButtonDecorator}!WasButtonPressed@{WasButtonPressed}}
+\index{WasButtonPressed@{WasButtonPressed}!ButtonDecorator@{ButtonDecorator}}
+\doxysubsubsection{\texorpdfstring{WasButtonPressed()}{WasButtonPressed()}}
+{\footnotesize\ttfamily bool Button\+Decorator\+::\+Was\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Was\+Button\+Pressed Description\+: Read whether the button was pressed since the last query. This is only valid for digital buttons (normal buttons and bumpers). 
+
+
+
+Implements \mbox{\hyperlink{class_i_button_a4bafcd42d1f576f892d22a110e801018}{I\+Button}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_toggle_button_a2c2fce329db846a93bf9038059fe3723}{Toggle\+Button}}.
+
+
+
+Definition at line 56 of file Button\+Decorator.\+cpp.
+
+\mbox{\Hypertarget{class_button_decorator_a8da383207ae4e4288f412685eeac4047}\label{class_button_decorator_a8da383207ae4e4288f412685eeac4047}} 
+\index{ButtonDecorator@{ButtonDecorator}!WasButtonReleased@{WasButtonReleased}}
+\index{WasButtonReleased@{WasButtonReleased}!ButtonDecorator@{ButtonDecorator}}
+\doxysubsubsection{\texorpdfstring{WasButtonReleased()}{WasButtonReleased()}}
+{\footnotesize\ttfamily bool Button\+Decorator\+::\+Was\+Button\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Was\+Button\+Released Description\+: Read whether the button was released since the last query. This is only valid for digital buttons (normal buttons and bumpers). 
+
+
+
+Implements \mbox{\hyperlink{class_i_button_a393bd71900c7cb4df69e371bcc7ca123}{I\+Button}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_toggle_button_aa14f837826248eb45f9b1b5efe3bb81c}{Toggle\+Button}}.
+
+
+
+Definition at line 46 of file Button\+Decorator.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/button/\mbox{\hyperlink{_button_decorator_8h}{Button\+Decorator.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/button/\mbox{\hyperlink{_button_decorator_8cpp}{Button\+Decorator.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,160 @@
+\hypertarget{class_impeller_state_mgr}{}\doxysection{Impeller\+State\+Mgr Class Reference}
+\label{class_impeller_state_mgr}\index{ImpellerStateMgr@{ImpellerStateMgr}}
+
+
+{\ttfamily \#include $<$Impeller\+State\+Mgr.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9}{I\+M\+P\+E\+L\+L\+E\+R\+\_\+\+S\+T\+A\+TE}} \{ \newline
+\mbox{\hyperlink{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9a6786a0578acbd854064884cec87cc2ff}{O\+FF}}, 
+\mbox{\hyperlink{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9a10905cd75f2029980fa1b555f7fb7431}{H\+O\+LD}}, 
+\mbox{\hyperlink{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9a50706e7392e1bc9e8059459301521fea}{A\+G\+I\+T\+A\+TE}}, 
+\mbox{\hyperlink{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9aaa0bda4a4865af4782dc9740d015c135}{T\+O\+\_\+\+S\+H\+O\+O\+T\+ER}}, 
+\newline
+\mbox{\hyperlink{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9a527a033668d71cb573789847c236ca9b}{M\+A\+X\+\_\+\+I\+M\+P\+E\+L\+L\+E\+R\+\_\+\+S\+T\+A\+T\+ES}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_impeller_state_mgr_a493984fe4706c183ac8ba822f2e7d2c0}{Run\+Current\+State}} ()
+\begin{DoxyCompactList}\small\item\em run the current state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_impeller_state_mgr_afd05b5a5b87575f74f8f82eae0f915ce}{Set\+Current\+State}} (\mbox{\hyperlink{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9}{I\+M\+P\+E\+L\+L\+E\+R\+\_\+\+S\+T\+A\+TE}} state, bool run)
+\begin{DoxyCompactList}\small\item\em set the current state, initialize it and run it \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9}{I\+M\+P\+E\+L\+L\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{class_impeller_state_mgr_acea55b039f5bdc2db2051440fe613496}{Get\+Current\+State}} () const
+\begin{DoxyCompactList}\small\item\em return the current state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_impeller_state_mgr}{Impeller\+State\+Mgr}} $\ast$ \mbox{\hyperlink{class_impeller_state_mgr_a6abbadb807caa7535c31ff8916ec6369}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Find or create the state manmanager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 30 of file Impeller\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9}\label{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9}} 
+\index{ImpellerStateMgr@{ImpellerStateMgr}!IMPELLER\_STATE@{IMPELLER\_STATE}}
+\index{IMPELLER\_STATE@{IMPELLER\_STATE}!ImpellerStateMgr@{ImpellerStateMgr}}
+\doxysubsubsection{\texorpdfstring{IMPELLER\_STATE}{IMPELLER\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9}{Impeller\+State\+Mgr\+::\+I\+M\+P\+E\+L\+L\+E\+R\+\_\+\+S\+T\+A\+TE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OFF@{OFF}!ImpellerStateMgr@{ImpellerStateMgr}}\index{ImpellerStateMgr@{ImpellerStateMgr}!OFF@{OFF}}}\mbox{\Hypertarget{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9a6786a0578acbd854064884cec87cc2ff}\label{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9a6786a0578acbd854064884cec87cc2ff}} 
+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HOLD@{HOLD}!ImpellerStateMgr@{ImpellerStateMgr}}\index{ImpellerStateMgr@{ImpellerStateMgr}!HOLD@{HOLD}}}\mbox{\Hypertarget{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9a10905cd75f2029980fa1b555f7fb7431}\label{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9a10905cd75f2029980fa1b555f7fb7431}} 
+H\+O\+LD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AGITATE@{AGITATE}!ImpellerStateMgr@{ImpellerStateMgr}}\index{ImpellerStateMgr@{ImpellerStateMgr}!AGITATE@{AGITATE}}}\mbox{\Hypertarget{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9a50706e7392e1bc9e8059459301521fea}\label{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9a50706e7392e1bc9e8059459301521fea}} 
+A\+G\+I\+T\+A\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TO\_SHOOTER@{TO\_SHOOTER}!ImpellerStateMgr@{ImpellerStateMgr}}\index{ImpellerStateMgr@{ImpellerStateMgr}!TO\_SHOOTER@{TO\_SHOOTER}}}\mbox{\Hypertarget{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9aaa0bda4a4865af4782dc9740d015c135}\label{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9aaa0bda4a4865af4782dc9740d015c135}} 
+T\+O\+\_\+\+S\+H\+O\+O\+T\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_IMPELLER\_STATES@{MAX\_IMPELLER\_STATES}!ImpellerStateMgr@{ImpellerStateMgr}}\index{ImpellerStateMgr@{ImpellerStateMgr}!MAX\_IMPELLER\_STATES@{MAX\_IMPELLER\_STATES}}}\mbox{\Hypertarget{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9a527a033668d71cb573789847c236ca9b}\label{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9a527a033668d71cb573789847c236ca9b}} 
+M\+A\+X\+\_\+\+I\+M\+P\+E\+L\+L\+E\+R\+\_\+\+S\+T\+A\+T\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 34 of file Impeller\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_impeller_state_mgr_acea55b039f5bdc2db2051440fe613496}\label{class_impeller_state_mgr_acea55b039f5bdc2db2051440fe613496}} 
+\index{ImpellerStateMgr@{ImpellerStateMgr}!GetCurrentState@{GetCurrentState}}
+\index{GetCurrentState@{GetCurrentState}!ImpellerStateMgr@{ImpellerStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetCurrentState()}{GetCurrentState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9}{I\+M\+P\+E\+L\+L\+E\+R\+\_\+\+S\+T\+A\+TE}} Impeller\+State\+Mgr\+::\+Get\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the current state 
+
+\begin{DoxyReturn}{Returns}
+I\+M\+P\+E\+L\+L\+E\+R\+\_\+\+S\+T\+A\+TE -\/ the current state 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file Impeller\+State\+Mgr.\+h.
+
+\mbox{\Hypertarget{class_impeller_state_mgr_a6abbadb807caa7535c31ff8916ec6369}\label{class_impeller_state_mgr_a6abbadb807caa7535c31ff8916ec6369}} 
+\index{ImpellerStateMgr@{ImpellerStateMgr}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!ImpellerStateMgr@{ImpellerStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_impeller_state_mgr}{Impeller\+State\+Mgr}} $\ast$ Impeller\+State\+Mgr\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find or create the state manmanager. 
+
+\begin{DoxyReturn}{Returns}
+Impeller\+State\+Mgr$\ast$ pointer to the state manager 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Impeller\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_impeller_state_mgr_a493984fe4706c183ac8ba822f2e7d2c0}\label{class_impeller_state_mgr_a493984fe4706c183ac8ba822f2e7d2c0}} 
+\index{ImpellerStateMgr@{ImpellerStateMgr}!RunCurrentState@{RunCurrentState}}
+\index{RunCurrentState@{RunCurrentState}!ImpellerStateMgr@{ImpellerStateMgr}}
+\doxysubsubsection{\texorpdfstring{RunCurrentState()}{RunCurrentState()}}
+{\footnotesize\ttfamily void Impeller\+State\+Mgr\+::\+Run\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+run the current state 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 144 of file Impeller\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_impeller_state_mgr_afd05b5a5b87575f74f8f82eae0f915ce}\label{class_impeller_state_mgr_afd05b5a5b87575f74f8f82eae0f915ce}} 
+\index{ImpellerStateMgr@{ImpellerStateMgr}!SetCurrentState@{SetCurrentState}}
+\index{SetCurrentState@{SetCurrentState}!ImpellerStateMgr@{ImpellerStateMgr}}
+\doxysubsubsection{\texorpdfstring{SetCurrentState()}{SetCurrentState()}}
+{\footnotesize\ttfamily void Impeller\+State\+Mgr\+::\+Set\+Current\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_impeller_state_mgr_ac7900fc564754454bb9309032667c8b9}{I\+M\+P\+E\+L\+L\+E\+R\+\_\+\+S\+T\+A\+TE}}}]{state\+Enum,  }\item[{bool}]{run }\end{DoxyParamCaption})}
+
+
+
+set the current state, initialize it and run it 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I\+M\+P\+E\+L\+L\+E\+R\+\_\+\+S\+T\+A\+TE} & -\/ state to set \\
+\hline
+\mbox{\texttt{ in}}  & {\em run} & -\/ true means run, false just initialize it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+
+void 
+\end{DoxyReturn}
+
+
+Definition at line 257 of file Impeller\+State\+Mgr.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/states/impeller/\mbox{\hyperlink{_impeller_state_mgr_8h}{Impeller\+State\+Mgr.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/states/impeller/\mbox{\hyperlink{_impeller_state_mgr_8cpp}{Impeller\+State\+Mgr.\+cpp}}\end{DoxyCompactItemize}

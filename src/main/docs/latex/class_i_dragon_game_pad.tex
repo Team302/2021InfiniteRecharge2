@@ -1,0 +1,655 @@
+\hypertarget{class_i_dragon_game_pad}{}\doxysection{I\+Dragon\+Game\+Pad Class Reference}
+\label{class_i_dragon_game_pad}\index{IDragonGamePad@{IDragonGamePad}}
+
+
+{\ttfamily \#include $<$I\+Dragon\+Game\+Pad.\+h$>$}
+
+Inheritance diagram for I\+Dragon\+Game\+Pad\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_dragon_game_pad}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} \{ \newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a686bc2a101683a20a3596914ac8ae4f4}{U\+N\+D\+E\+F\+I\+N\+E\+D\+\_\+\+B\+U\+T\+T\+ON}} = -\/1, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a7f91fc6ad8dc59022aa9f5140d3814d9}{A\+\_\+\+B\+U\+T\+T\+ON}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a275b3e03f06e457d4b8da624ac83318e}{B\+\_\+\+B\+U\+T\+T\+ON}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29af58d60f9898f740cad672ce5eb91a12c}{X\+\_\+\+B\+U\+T\+T\+ON}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ab74a93048c6bbac440696a26eb242023}{Y\+\_\+\+B\+U\+T\+T\+ON}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a97412b9da5fd28b4595c690b1d1694b5}{L\+E\+F\+T\+\_\+\+B\+U\+M\+P\+ER}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29acfd29830cf152743137623f3f5defe84}{R\+I\+G\+H\+T\+\_\+\+B\+U\+M\+P\+ER}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29aadf965f98331089bcd7cfea300b4bf61}{B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6a2b8447edff11e5db1c651092c6ef72}{S\+E\+L\+E\+C\+T\+\_\+\+B\+U\+T\+T\+ON}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ab9e2c5ce44e11958de5f894268c2bcc7}{S\+T\+A\+R\+T\+\_\+\+B\+U\+T\+T\+ON}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a9cfa3827180b055a7c1e01ef8ad99d84}{L\+E\+F\+T\+\_\+\+S\+T\+I\+C\+K\+\_\+\+P\+R\+E\+S\+S\+ED}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ae78e3918d5595c4b75852c1678ff1cf9}{R\+I\+G\+H\+T\+\_\+\+S\+T\+I\+C\+K\+\_\+\+P\+R\+E\+S\+S\+ED}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a06a6a981299aad01ece8ba6b7c2804ac}{L\+E\+F\+T\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+P\+R\+E\+S\+S\+ED}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a01a23344318d7619d324f2b97b026028}{R\+I\+G\+H\+T\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+P\+R\+E\+S\+S\+ED}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29aebf8c1a2f04ed3ee5d5f9226f96b7910}{P\+O\+V\+\_\+0}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a076dc6d80a047bf3a11ad747e60b3fec}{P\+O\+V\+\_\+45}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a5352cf5e8f5fbeadf511ae7f2b929e2a}{P\+O\+V\+\_\+90}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a46e30450d38cf286ac26adc0af2140c2}{P\+O\+V\+\_\+135}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ae1b455d3156ccf633a1964c46ccedb96}{P\+O\+V\+\_\+180}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a52d0a8fb968499f4c0b5d83e3eb3dc7d}{P\+O\+V\+\_\+225}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6e50edf982f4f01ce242849fd1a63bb6}{P\+O\+V\+\_\+270}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29acf1136017414251bc229ca2c2a747792}{P\+O\+V\+\_\+315}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a01fe08124414e826ebd4787c372d07db}{G\+A\+M\+E\+P\+A\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+18}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a17ae1e0e7692ef9d89d33921e99a59a8}{G\+A\+M\+E\+P\+A\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+19}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ae4f26dd3f6ef04fb1de86244f3f7bd1d}{G\+A\+M\+E\+P\+A\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+20}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29aa71c9e42d1b8a13b8d2b0511098c0efe}{G\+A\+M\+E\+P\+A\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+21}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ad17203bf93c78af4a34cc36b7ae04b08}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+14\+\_\+\+UP}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a62eac2dcb5b8b13a0ef056b72fecc4ca}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+14\+\_\+\+D\+O\+WN}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a234d076a548cd69e2824a6b981e32d62}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+15\+\_\+\+UP}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a78922084764f528e11a2732d18ee1f97}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+15\+\_\+\+D\+O\+WN}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a0bbc9c1778f9db41a3a611298e23bf81}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+1}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6c5b8a2d9949ca0174b59a6351a5dd30}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+2}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29af7caa447e70b571ce91681e3cca21283}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+3}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a50085d90ca1258e45dc1d86ab03715c4}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+4}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6dad4543955b8814dc3700295003ca48}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+5}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29afa26de2e2f050467c3e5113bc3b87aca}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+6}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6718284e5949d3c614fdfe347baae934}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+7}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a21cb188970f9a31856dabdf6a69ce39a}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+8}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a44cf8456f7b9ba857469e7b8ea80a7de}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+9}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a22701277a551ff711aa386103807e9a3}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+10}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a153560b587b71e0d8917d2d5c75f8f28}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+11}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a488bb7a560ce337df5d688d5cd86327c}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+12}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a429f99880d35846f9ff968f5cee315a5}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+13}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a77ae654fca5be4404110f52d440c10d4}{G\+A\+M\+E\+P\+A\+D\+\_\+\+D\+I\+A\+L\+\_\+22}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a397eebf29dfd0225835c815419d964fe}{G\+A\+M\+E\+P\+A\+D\+\_\+\+D\+I\+A\+L\+\_\+23}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a95d6ef7a815a839dbfebe2d7245e50c6}{G\+A\+M\+E\+P\+A\+D\+\_\+\+D\+I\+A\+L\+\_\+24}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a2a476080d622fba7e2f1ee2ce8dfbfec}{G\+A\+M\+E\+P\+A\+D\+\_\+\+D\+I\+A\+L\+\_\+25}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29abcb358b0b55426562b3586cc09012cb6}{G\+A\+M\+E\+P\+A\+D\+\_\+\+D\+I\+A\+L\+\_\+26}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a4cb565fec44dca432d70b12b366e616c}{G\+A\+M\+E\+P\+A\+D\+\_\+\+D\+I\+A\+L\+\_\+27}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a56902af14a0e54397012681017f7b977}{G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+I\+G\+\_\+\+R\+E\+D\+\_\+\+B\+U\+T\+T\+ON}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a5d9a7d02c0a8246a6ac9742803d81b32}{M\+A\+X\+\_\+\+B\+U\+T\+T\+O\+NS}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417}{B\+U\+T\+T\+O\+N\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417a5876a014da9715eaecbed186b59a99e9}{S\+T\+A\+N\+D\+A\+RD}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417a660f4c6d114c6065c25f3c515da5e2a2}{T\+O\+G\+G\+LE}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417a1fbdce8be1674fbac4d1d8d0582c8800}{M\+A\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+O\+D\+ES}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} \{ \newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972bac4b73cf2814ada0f668d675161b714c9}{U\+N\+D\+E\+F\+I\+N\+E\+D\+\_\+\+A\+X\+IS}} = -\/1, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba649aed3456717ea172697c04fe515c24}{L\+E\+F\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+X}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972bae6595eebe0d1467763413301be6b7857}{L\+E\+F\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+Y}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba64230e31a56a01d54faac319d737e8b8}{R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+X}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba5289d0253bb61fbc856b06a7a9d31b8b}{R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+Y}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba4956746524a095076eff3b4091490101}{L\+E\+F\+T\+\_\+\+T\+R\+I\+G\+G\+ER}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba26713a41f0806636f52dd86aa53d13ee}{R\+I\+G\+H\+T\+\_\+\+T\+R\+I\+G\+G\+ER}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972baadd9f0dba0b34861f8d781f932484ad3}{G\+A\+M\+E\+P\+A\+D\+\_\+\+A\+X\+I\+S\+\_\+16}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba4ee872f30dd02e43ae2b63502b224f23}{G\+A\+M\+E\+P\+A\+D\+\_\+\+A\+X\+I\+S\+\_\+17}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba239d67826c1cb9ad49920f81f2a9cc93}{L\+E\+F\+T\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+A\+X\+IS}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba8d89ea1ffb066d737dad9ebfcad6a335}{R\+I\+G\+H\+T\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+A\+X\+IS}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972babc5ab0261bc4571189b827fe59c7eef2}{D\+I\+A\+L\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+A\+X\+IS}}, 
+\newline
+\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba832596d4e94c2c06494a7f92cd489a5b}{M\+A\+X\+\_\+\+A\+X\+IS}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4d}{A\+X\+I\+S\+\_\+\+D\+E\+A\+D\+B\+A\+ND}} \{ \mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4da91e446db67ef7981f8f84bc6d78d51db}{N\+O\+NE}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4da9a0bdfb5fa2dd0b963e77ea82f2012c8}{A\+P\+P\+L\+Y\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+D\+E\+A\+D\+B\+A\+ND}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4da48e19565e5136daf64ad8e9f48d5f844}{A\+P\+P\+L\+Y\+\_\+\+S\+C\+A\+L\+E\+D\+\_\+\+D\+E\+A\+D\+B\+A\+ND}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4da3e9cb3dad8d2ac03edb396a797968c01}{M\+A\+X\+\_\+\+D\+E\+A\+D\+B\+A\+N\+DS}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676}{A\+X\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}} \{ \mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676abdde71687676a038262ff33d2492bcbf}{L\+I\+N\+E\+AR}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676a7d94c01ced44b8a2c7a121e96c369ebc}{S\+Q\+U\+A\+R\+ED}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676a356559cd793745311f007aa46a127033}{C\+U\+B\+ED}}, 
+\mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676a7fc93528fdb8c6e235b2c5879c2597bf}{M\+A\+X\+\_\+\+P\+R\+O\+F\+I\+L\+ES}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_dragon_game_pad_af9eb9c48d80b094748b724294d00fef1}{I\+Dragon\+Game\+Pad}} ()=default
+\item 
+\mbox{\hyperlink{class_i_dragon_game_pad_aa2ff875139b5000058d17f6afd4860cb}{$\sim$\+I\+Dragon\+Game\+Pad}} ()=default
+\item 
+virtual double \mbox{\hyperlink{class_i_dragon_game_pad_aa707bbbb824aeca55d260a9efc95f23e}{Get\+Axis\+Value}} (\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} axis) const =0
+\item 
+virtual bool \mbox{\hyperlink{class_i_dragon_game_pad_ad02cf839ae313c2e70ea8258e6d6d738}{Is\+Button\+Pressed}} (\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} button) const =0
+\item 
+virtual bool \mbox{\hyperlink{class_i_dragon_game_pad_a8b62f3bcf3a8fbfcdbd18cac65519720}{Was\+Button\+Released}} (\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} button) const =0
+\begin{DoxyCompactList}\small\item\em Method\+: Was\+Button\+Released Description\+: Read whether the button was released since the last query. This is only valid for digital buttons (normal buttons and bumpers). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_i_dragon_game_pad_aff0121c0eee282fa27d0849795fcce91}{Was\+Button\+Pressed}} (\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} button) const =0
+\begin{DoxyCompactList}\small\item\em Method\+: Was\+Button\+Pressed Description\+: Read whether the button was pressed since the last query. This is only valid for digital buttons (normal buttons and bumpers). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_dragon_game_pad_a487befc3794be0ee1729fc2a6833f2bd}{Set\+Axis\+Deadband}} (\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} axis, \mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4d}{A\+X\+I\+S\+\_\+\+D\+E\+A\+D\+B\+A\+ND}} type)=0
+\begin{DoxyCompactList}\small\item\em Method\+: Set\+Axis\+Deadband Description\+: Specify what deadband behavior is desired such as none, standard, standard with scaling. Returns\+: void \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_dragon_game_pad_ac0f51e1292e7a3b17962642e2a5a0445}{Set\+Axis\+Profile}} (\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} axis, \mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676}{A\+X\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}} curve)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_dragon_game_pad_a471db7f67ec6604d042195ab65231116}{Set\+Axis\+Scale}} (\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} axis, float scale\+Factor)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_dragon_game_pad_a0fc4a2d497a912d10ab2755018b43445}{Set\+Button\+Mode}} (\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}} button, \mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417}{B\+U\+T\+T\+O\+N\+\_\+\+M\+O\+DE}} mode)=0
+\begin{DoxyCompactList}\small\item\em Method\+: Set\+Button\+Mode Description\+: Specify how the button should behave. Examples include (but not limited to)\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 36 of file I\+Dragon\+Game\+Pad.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4d}\label{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4d}} 
+\index{IDragonGamePad@{IDragonGamePad}!AXIS\_DEADBAND@{AXIS\_DEADBAND}}
+\index{AXIS\_DEADBAND@{AXIS\_DEADBAND}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{AXIS\_DEADBAND}{AXIS\_DEADBAND}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4d}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+D\+E\+A\+D\+B\+A\+ND}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!NONE@{NONE}}}\mbox{\Hypertarget{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4da91e446db67ef7981f8f84bc6d78d51db}\label{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4da91e446db67ef7981f8f84bc6d78d51db}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{APPLY\_STANDARD\_DEADBAND@{APPLY\_STANDARD\_DEADBAND}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!APPLY\_STANDARD\_DEADBAND@{APPLY\_STANDARD\_DEADBAND}}}\mbox{\Hypertarget{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4da9a0bdfb5fa2dd0b963e77ea82f2012c8}\label{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4da9a0bdfb5fa2dd0b963e77ea82f2012c8}} 
+A\+P\+P\+L\+Y\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+D\+E\+A\+D\+B\+A\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{APPLY\_SCALED\_DEADBAND@{APPLY\_SCALED\_DEADBAND}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!APPLY\_SCALED\_DEADBAND@{APPLY\_SCALED\_DEADBAND}}}\mbox{\Hypertarget{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4da48e19565e5136daf64ad8e9f48d5f844}\label{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4da48e19565e5136daf64ad8e9f48d5f844}} 
+A\+P\+P\+L\+Y\+\_\+\+S\+C\+A\+L\+E\+D\+\_\+\+D\+E\+A\+D\+B\+A\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_DEADBANDS@{MAX\_DEADBANDS}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!MAX\_DEADBANDS@{MAX\_DEADBANDS}}}\mbox{\Hypertarget{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4da3e9cb3dad8d2ac03edb396a797968c01}\label{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4da3e9cb3dad8d2ac03edb396a797968c01}} 
+M\+A\+X\+\_\+\+D\+E\+A\+D\+B\+A\+N\+DS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 124 of file I\+Dragon\+Game\+Pad.\+h.
+
+\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}} 
+\index{IDragonGamePad@{IDragonGamePad}!AXIS\_IDENTIFIER@{AXIS\_IDENTIFIER}}
+\index{AXIS\_IDENTIFIER@{AXIS\_IDENTIFIER}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{AXIS\_IDENTIFIER}{AXIS\_IDENTIFIER}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNDEFINED\_AXIS@{UNDEFINED\_AXIS}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!UNDEFINED\_AXIS@{UNDEFINED\_AXIS}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972bac4b73cf2814ada0f668d675161b714c9}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972bac4b73cf2814ada0f668d675161b714c9}} 
+U\+N\+D\+E\+F\+I\+N\+E\+D\+\_\+\+A\+X\+IS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_JOYSTICK\_X@{LEFT\_JOYSTICK\_X}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!LEFT\_JOYSTICK\_X@{LEFT\_JOYSTICK\_X}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba649aed3456717ea172697c04fe515c24}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba649aed3456717ea172697c04fe515c24}} 
+L\+E\+F\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_JOYSTICK\_Y@{LEFT\_JOYSTICK\_Y}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!LEFT\_JOYSTICK\_Y@{LEFT\_JOYSTICK\_Y}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972bae6595eebe0d1467763413301be6b7857}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972bae6595eebe0d1467763413301be6b7857}} 
+L\+E\+F\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_JOYSTICK\_X@{RIGHT\_JOYSTICK\_X}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!RIGHT\_JOYSTICK\_X@{RIGHT\_JOYSTICK\_X}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba64230e31a56a01d54faac319d737e8b8}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba64230e31a56a01d54faac319d737e8b8}} 
+R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_JOYSTICK\_Y@{RIGHT\_JOYSTICK\_Y}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!RIGHT\_JOYSTICK\_Y@{RIGHT\_JOYSTICK\_Y}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba5289d0253bb61fbc856b06a7a9d31b8b}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba5289d0253bb61fbc856b06a7a9d31b8b}} 
+R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_TRIGGER@{LEFT\_TRIGGER}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!LEFT\_TRIGGER@{LEFT\_TRIGGER}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba4956746524a095076eff3b4091490101}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba4956746524a095076eff3b4091490101}} 
+L\+E\+F\+T\+\_\+\+T\+R\+I\+G\+G\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_TRIGGER@{RIGHT\_TRIGGER}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!RIGHT\_TRIGGER@{RIGHT\_TRIGGER}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba26713a41f0806636f52dd86aa53d13ee}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba26713a41f0806636f52dd86aa53d13ee}} 
+R\+I\+G\+H\+T\+\_\+\+T\+R\+I\+G\+G\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_AXIS\_16@{GAMEPAD\_AXIS\_16}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_AXIS\_16@{GAMEPAD\_AXIS\_16}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972baadd9f0dba0b34861f8d781f932484ad3}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972baadd9f0dba0b34861f8d781f932484ad3}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+A\+X\+I\+S\+\_\+16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_AXIS\_17@{GAMEPAD\_AXIS\_17}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_AXIS\_17@{GAMEPAD\_AXIS\_17}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba4ee872f30dd02e43ae2b63502b224f23}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba4ee872f30dd02e43ae2b63502b224f23}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+A\+X\+I\+S\+\_\+17&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_ANALOG\_BUTTON\_AXIS@{LEFT\_ANALOG\_BUTTON\_AXIS}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!LEFT\_ANALOG\_BUTTON\_AXIS@{LEFT\_ANALOG\_BUTTON\_AXIS}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba239d67826c1cb9ad49920f81f2a9cc93}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba239d67826c1cb9ad49920f81f2a9cc93}} 
+L\+E\+F\+T\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+A\+X\+IS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_ANALOG\_BUTTON\_AXIS@{RIGHT\_ANALOG\_BUTTON\_AXIS}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!RIGHT\_ANALOG\_BUTTON\_AXIS@{RIGHT\_ANALOG\_BUTTON\_AXIS}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba8d89ea1ffb066d737dad9ebfcad6a335}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba8d89ea1ffb066d737dad9ebfcad6a335}} 
+R\+I\+G\+H\+T\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+A\+X\+IS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIAL\_ANALOG\_BUTTON\_AXIS@{DIAL\_ANALOG\_BUTTON\_AXIS}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!DIAL\_ANALOG\_BUTTON\_AXIS@{DIAL\_ANALOG\_BUTTON\_AXIS}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972babc5ab0261bc4571189b827fe59c7eef2}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972babc5ab0261bc4571189b827fe59c7eef2}} 
+D\+I\+A\+L\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+A\+X\+IS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_AXIS@{MAX\_AXIS}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!MAX\_AXIS@{MAX\_AXIS}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba832596d4e94c2c06494a7f92cd489a5b}\label{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972ba832596d4e94c2c06494a7f92cd489a5b}} 
+M\+A\+X\+\_\+\+A\+X\+IS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 103 of file I\+Dragon\+Game\+Pad.\+h.
+
+\mbox{\Hypertarget{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676}\label{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676}} 
+\index{IDragonGamePad@{IDragonGamePad}!AXIS\_PROFILE@{AXIS\_PROFILE}}
+\index{AXIS\_PROFILE@{AXIS\_PROFILE}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{AXIS\_PROFILE}{AXIS\_PROFILE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676}{I\+Dragon\+Game\+Pad\+::\+A\+X\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LINEAR@{LINEAR}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!LINEAR@{LINEAR}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676abdde71687676a038262ff33d2492bcbf}\label{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676abdde71687676a038262ff33d2492bcbf}} 
+L\+I\+N\+E\+AR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SQUARED@{SQUARED}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!SQUARED@{SQUARED}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676a7d94c01ced44b8a2c7a121e96c369ebc}\label{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676a7d94c01ced44b8a2c7a121e96c369ebc}} 
+S\+Q\+U\+A\+R\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CUBED@{CUBED}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!CUBED@{CUBED}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676a356559cd793745311f007aa46a127033}\label{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676a356559cd793745311f007aa46a127033}} 
+C\+U\+B\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_PROFILES@{MAX\_PROFILES}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!MAX\_PROFILES@{MAX\_PROFILES}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676a7fc93528fdb8c6e235b2c5879c2597bf}\label{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676a7fc93528fdb8c6e235b2c5879c2597bf}} 
+M\+A\+X\+\_\+\+P\+R\+O\+F\+I\+L\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 132 of file I\+Dragon\+Game\+Pad.\+h.
+
+\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}} 
+\index{IDragonGamePad@{IDragonGamePad}!BUTTON\_IDENTIFIER@{BUTTON\_IDENTIFIER}}
+\index{BUTTON\_IDENTIFIER@{BUTTON\_IDENTIFIER}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{BUTTON\_IDENTIFIER}{BUTTON\_IDENTIFIER}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNDEFINED\_BUTTON@{UNDEFINED\_BUTTON}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!UNDEFINED\_BUTTON@{UNDEFINED\_BUTTON}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a686bc2a101683a20a3596914ac8ae4f4}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a686bc2a101683a20a3596914ac8ae4f4}} 
+U\+N\+D\+E\+F\+I\+N\+E\+D\+\_\+\+B\+U\+T\+T\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\_BUTTON@{A\_BUTTON}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!A\_BUTTON@{A\_BUTTON}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a7f91fc6ad8dc59022aa9f5140d3814d9}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a7f91fc6ad8dc59022aa9f5140d3814d9}} 
+A\+\_\+\+B\+U\+T\+T\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_BUTTON@{B\_BUTTON}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!B\_BUTTON@{B\_BUTTON}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a275b3e03f06e457d4b8da624ac83318e}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a275b3e03f06e457d4b8da624ac83318e}} 
+B\+\_\+\+B\+U\+T\+T\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\_BUTTON@{X\_BUTTON}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!X\_BUTTON@{X\_BUTTON}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29af58d60f9898f740cad672ce5eb91a12c}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29af58d60f9898f740cad672ce5eb91a12c}} 
+X\+\_\+\+B\+U\+T\+T\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Y\_BUTTON@{Y\_BUTTON}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!Y\_BUTTON@{Y\_BUTTON}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ab74a93048c6bbac440696a26eb242023}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ab74a93048c6bbac440696a26eb242023}} 
+Y\+\_\+\+B\+U\+T\+T\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_BUMPER@{LEFT\_BUMPER}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!LEFT\_BUMPER@{LEFT\_BUMPER}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a97412b9da5fd28b4595c690b1d1694b5}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a97412b9da5fd28b4595c690b1d1694b5}} 
+L\+E\+F\+T\+\_\+\+B\+U\+M\+P\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_BUMPER@{RIGHT\_BUMPER}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!RIGHT\_BUMPER@{RIGHT\_BUMPER}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29acfd29830cf152743137623f3f5defe84}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29acfd29830cf152743137623f3f5defe84}} 
+R\+I\+G\+H\+T\+\_\+\+B\+U\+M\+P\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BACK\_BUTTON@{BACK\_BUTTON}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!BACK\_BUTTON@{BACK\_BUTTON}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29aadf965f98331089bcd7cfea300b4bf61}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29aadf965f98331089bcd7cfea300b4bf61}} 
+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SELECT\_BUTTON@{SELECT\_BUTTON}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!SELECT\_BUTTON@{SELECT\_BUTTON}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6a2b8447edff11e5db1c651092c6ef72}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6a2b8447edff11e5db1c651092c6ef72}} 
+S\+E\+L\+E\+C\+T\+\_\+\+B\+U\+T\+T\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{START\_BUTTON@{START\_BUTTON}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!START\_BUTTON@{START\_BUTTON}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ab9e2c5ce44e11958de5f894268c2bcc7}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ab9e2c5ce44e11958de5f894268c2bcc7}} 
+S\+T\+A\+R\+T\+\_\+\+B\+U\+T\+T\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_STICK\_PRESSED@{LEFT\_STICK\_PRESSED}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!LEFT\_STICK\_PRESSED@{LEFT\_STICK\_PRESSED}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a9cfa3827180b055a7c1e01ef8ad99d84}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a9cfa3827180b055a7c1e01ef8ad99d84}} 
+L\+E\+F\+T\+\_\+\+S\+T\+I\+C\+K\+\_\+\+P\+R\+E\+S\+S\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_STICK\_PRESSED@{RIGHT\_STICK\_PRESSED}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!RIGHT\_STICK\_PRESSED@{RIGHT\_STICK\_PRESSED}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ae78e3918d5595c4b75852c1678ff1cf9}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ae78e3918d5595c4b75852c1678ff1cf9}} 
+R\+I\+G\+H\+T\+\_\+\+S\+T\+I\+C\+K\+\_\+\+P\+R\+E\+S\+S\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_TRIGGER\_PRESSED@{LEFT\_TRIGGER\_PRESSED}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!LEFT\_TRIGGER\_PRESSED@{LEFT\_TRIGGER\_PRESSED}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a06a6a981299aad01ece8ba6b7c2804ac}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a06a6a981299aad01ece8ba6b7c2804ac}} 
+L\+E\+F\+T\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+P\+R\+E\+S\+S\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_TRIGGER\_PRESSED@{RIGHT\_TRIGGER\_PRESSED}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!RIGHT\_TRIGGER\_PRESSED@{RIGHT\_TRIGGER\_PRESSED}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a01a23344318d7619d324f2b97b026028}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a01a23344318d7619d324f2b97b026028}} 
+R\+I\+G\+H\+T\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+P\+R\+E\+S\+S\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POV\_0@{POV\_0}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!POV\_0@{POV\_0}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29aebf8c1a2f04ed3ee5d5f9226f96b7910}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29aebf8c1a2f04ed3ee5d5f9226f96b7910}} 
+P\+O\+V\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POV\_45@{POV\_45}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!POV\_45@{POV\_45}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a076dc6d80a047bf3a11ad747e60b3fec}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a076dc6d80a047bf3a11ad747e60b3fec}} 
+P\+O\+V\+\_\+45&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POV\_90@{POV\_90}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!POV\_90@{POV\_90}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a5352cf5e8f5fbeadf511ae7f2b929e2a}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a5352cf5e8f5fbeadf511ae7f2b929e2a}} 
+P\+O\+V\+\_\+90&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POV\_135@{POV\_135}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!POV\_135@{POV\_135}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a46e30450d38cf286ac26adc0af2140c2}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a46e30450d38cf286ac26adc0af2140c2}} 
+P\+O\+V\+\_\+135&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POV\_180@{POV\_180}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!POV\_180@{POV\_180}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ae1b455d3156ccf633a1964c46ccedb96}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ae1b455d3156ccf633a1964c46ccedb96}} 
+P\+O\+V\+\_\+180&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POV\_225@{POV\_225}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!POV\_225@{POV\_225}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a52d0a8fb968499f4c0b5d83e3eb3dc7d}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a52d0a8fb968499f4c0b5d83e3eb3dc7d}} 
+P\+O\+V\+\_\+225&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POV\_270@{POV\_270}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!POV\_270@{POV\_270}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6e50edf982f4f01ce242849fd1a63bb6}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6e50edf982f4f01ce242849fd1a63bb6}} 
+P\+O\+V\+\_\+270&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POV\_315@{POV\_315}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!POV\_315@{POV\_315}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29acf1136017414251bc229ca2c2a747792}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29acf1136017414251bc229ca2c2a747792}} 
+P\+O\+V\+\_\+315&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_SWITCH\_18@{GAMEPAD\_SWITCH\_18}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_SWITCH\_18@{GAMEPAD\_SWITCH\_18}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a01fe08124414e826ebd4787c372d07db}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a01fe08124414e826ebd4787c372d07db}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+18&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_SWITCH\_19@{GAMEPAD\_SWITCH\_19}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_SWITCH\_19@{GAMEPAD\_SWITCH\_19}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a17ae1e0e7692ef9d89d33921e99a59a8}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a17ae1e0e7692ef9d89d33921e99a59a8}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+19&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_SWITCH\_20@{GAMEPAD\_SWITCH\_20}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_SWITCH\_20@{GAMEPAD\_SWITCH\_20}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ae4f26dd3f6ef04fb1de86244f3f7bd1d}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ae4f26dd3f6ef04fb1de86244f3f7bd1d}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+20&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_SWITCH\_21@{GAMEPAD\_SWITCH\_21}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_SWITCH\_21@{GAMEPAD\_SWITCH\_21}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29aa71c9e42d1b8a13b8d2b0511098c0efe}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29aa71c9e42d1b8a13b8d2b0511098c0efe}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+21&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_14\_UP@{GAMEPAD\_BUTTON\_14\_UP}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_14\_UP@{GAMEPAD\_BUTTON\_14\_UP}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ad17203bf93c78af4a34cc36b7ae04b08}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29ad17203bf93c78af4a34cc36b7ae04b08}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+14\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_14\_DOWN@{GAMEPAD\_BUTTON\_14\_DOWN}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_14\_DOWN@{GAMEPAD\_BUTTON\_14\_DOWN}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a62eac2dcb5b8b13a0ef056b72fecc4ca}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a62eac2dcb5b8b13a0ef056b72fecc4ca}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+14\+\_\+\+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_15\_UP@{GAMEPAD\_BUTTON\_15\_UP}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_15\_UP@{GAMEPAD\_BUTTON\_15\_UP}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a234d076a548cd69e2824a6b981e32d62}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a234d076a548cd69e2824a6b981e32d62}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+15\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_15\_DOWN@{GAMEPAD\_BUTTON\_15\_DOWN}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_15\_DOWN@{GAMEPAD\_BUTTON\_15\_DOWN}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a78922084764f528e11a2732d18ee1f97}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a78922084764f528e11a2732d18ee1f97}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+15\+\_\+\+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_1@{GAMEPAD\_BUTTON\_1}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_1@{GAMEPAD\_BUTTON\_1}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a0bbc9c1778f9db41a3a611298e23bf81}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a0bbc9c1778f9db41a3a611298e23bf81}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_2@{GAMEPAD\_BUTTON\_2}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_2@{GAMEPAD\_BUTTON\_2}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6c5b8a2d9949ca0174b59a6351a5dd30}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6c5b8a2d9949ca0174b59a6351a5dd30}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_3@{GAMEPAD\_BUTTON\_3}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_3@{GAMEPAD\_BUTTON\_3}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29af7caa447e70b571ce91681e3cca21283}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29af7caa447e70b571ce91681e3cca21283}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_4@{GAMEPAD\_BUTTON\_4}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_4@{GAMEPAD\_BUTTON\_4}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a50085d90ca1258e45dc1d86ab03715c4}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a50085d90ca1258e45dc1d86ab03715c4}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_5@{GAMEPAD\_BUTTON\_5}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_5@{GAMEPAD\_BUTTON\_5}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6dad4543955b8814dc3700295003ca48}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6dad4543955b8814dc3700295003ca48}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_6@{GAMEPAD\_BUTTON\_6}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_6@{GAMEPAD\_BUTTON\_6}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29afa26de2e2f050467c3e5113bc3b87aca}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29afa26de2e2f050467c3e5113bc3b87aca}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_7@{GAMEPAD\_BUTTON\_7}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_7@{GAMEPAD\_BUTTON\_7}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6718284e5949d3c614fdfe347baae934}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a6718284e5949d3c614fdfe347baae934}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_8@{GAMEPAD\_BUTTON\_8}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_8@{GAMEPAD\_BUTTON\_8}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a21cb188970f9a31856dabdf6a69ce39a}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a21cb188970f9a31856dabdf6a69ce39a}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_9@{GAMEPAD\_BUTTON\_9}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_9@{GAMEPAD\_BUTTON\_9}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a44cf8456f7b9ba857469e7b8ea80a7de}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a44cf8456f7b9ba857469e7b8ea80a7de}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_10@{GAMEPAD\_BUTTON\_10}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_10@{GAMEPAD\_BUTTON\_10}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a22701277a551ff711aa386103807e9a3}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a22701277a551ff711aa386103807e9a3}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_11@{GAMEPAD\_BUTTON\_11}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_11@{GAMEPAD\_BUTTON\_11}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a153560b587b71e0d8917d2d5c75f8f28}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a153560b587b71e0d8917d2d5c75f8f28}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_12@{GAMEPAD\_BUTTON\_12}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_12@{GAMEPAD\_BUTTON\_12}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a488bb7a560ce337df5d688d5cd86327c}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a488bb7a560ce337df5d688d5cd86327c}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BUTTON\_13@{GAMEPAD\_BUTTON\_13}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BUTTON\_13@{GAMEPAD\_BUTTON\_13}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a429f99880d35846f9ff968f5cee315a5}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a429f99880d35846f9ff968f5cee315a5}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+13&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_DIAL\_22@{GAMEPAD\_DIAL\_22}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_DIAL\_22@{GAMEPAD\_DIAL\_22}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a77ae654fca5be4404110f52d440c10d4}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a77ae654fca5be4404110f52d440c10d4}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+D\+I\+A\+L\+\_\+22&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_DIAL\_23@{GAMEPAD\_DIAL\_23}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_DIAL\_23@{GAMEPAD\_DIAL\_23}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a397eebf29dfd0225835c815419d964fe}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a397eebf29dfd0225835c815419d964fe}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+D\+I\+A\+L\+\_\+23&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_DIAL\_24@{GAMEPAD\_DIAL\_24}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_DIAL\_24@{GAMEPAD\_DIAL\_24}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a95d6ef7a815a839dbfebe2d7245e50c6}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a95d6ef7a815a839dbfebe2d7245e50c6}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+D\+I\+A\+L\+\_\+24&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_DIAL\_25@{GAMEPAD\_DIAL\_25}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_DIAL\_25@{GAMEPAD\_DIAL\_25}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a2a476080d622fba7e2f1ee2ce8dfbfec}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a2a476080d622fba7e2f1ee2ce8dfbfec}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+D\+I\+A\+L\+\_\+25&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_DIAL\_26@{GAMEPAD\_DIAL\_26}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_DIAL\_26@{GAMEPAD\_DIAL\_26}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29abcb358b0b55426562b3586cc09012cb6}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29abcb358b0b55426562b3586cc09012cb6}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+D\+I\+A\+L\+\_\+26&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_DIAL\_27@{GAMEPAD\_DIAL\_27}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_DIAL\_27@{GAMEPAD\_DIAL\_27}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a4cb565fec44dca432d70b12b366e616c}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a4cb565fec44dca432d70b12b366e616c}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+D\+I\+A\+L\+\_\+27&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAMEPAD\_BIG\_RED\_BUTTON@{GAMEPAD\_BIG\_RED\_BUTTON}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!GAMEPAD\_BIG\_RED\_BUTTON@{GAMEPAD\_BIG\_RED\_BUTTON}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a56902af14a0e54397012681017f7b977}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a56902af14a0e54397012681017f7b977}} 
+G\+A\+M\+E\+P\+A\+D\+\_\+\+B\+I\+G\+\_\+\+R\+E\+D\+\_\+\+B\+U\+T\+T\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_BUTTONS@{MAX\_BUTTONS}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!MAX\_BUTTONS@{MAX\_BUTTONS}}}\mbox{\Hypertarget{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a5d9a7d02c0a8246a6ac9742803d81b32}\label{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29a5d9a7d02c0a8246a6ac9742803d81b32}} 
+M\+A\+X\+\_\+\+B\+U\+T\+T\+O\+NS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 39 of file I\+Dragon\+Game\+Pad.\+h.
+
+\mbox{\Hypertarget{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417}\label{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417}} 
+\index{IDragonGamePad@{IDragonGamePad}!BUTTON\_MODE@{BUTTON\_MODE}}
+\index{BUTTON\_MODE@{BUTTON\_MODE}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{BUTTON\_MODE}{BUTTON\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417}{I\+Dragon\+Game\+Pad\+::\+B\+U\+T\+T\+O\+N\+\_\+\+M\+O\+DE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STANDARD@{STANDARD}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!STANDARD@{STANDARD}}}\mbox{\Hypertarget{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417a5876a014da9715eaecbed186b59a99e9}\label{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417a5876a014da9715eaecbed186b59a99e9}} 
+S\+T\+A\+N\+D\+A\+RD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOGGLE@{TOGGLE}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!TOGGLE@{TOGGLE}}}\mbox{\Hypertarget{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417a660f4c6d114c6065c25f3c515da5e2a2}\label{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417a660f4c6d114c6065c25f3c515da5e2a2}} 
+T\+O\+G\+G\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_BUTTON\_MODES@{MAX\_BUTTON\_MODES}!IDragonGamePad@{IDragonGamePad}}\index{IDragonGamePad@{IDragonGamePad}!MAX\_BUTTON\_MODES@{MAX\_BUTTON\_MODES}}}\mbox{\Hypertarget{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417a1fbdce8be1674fbac4d1d8d0582c8800}\label{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417a1fbdce8be1674fbac4d1d8d0582c8800}} 
+M\+A\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+O\+D\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 96 of file I\+Dragon\+Game\+Pad.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_dragon_game_pad_af9eb9c48d80b094748b724294d00fef1}\label{class_i_dragon_game_pad_af9eb9c48d80b094748b724294d00fef1}} 
+\index{IDragonGamePad@{IDragonGamePad}!IDragonGamePad@{IDragonGamePad}}
+\index{IDragonGamePad@{IDragonGamePad}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{IDragonGamePad()}{IDragonGamePad()}}
+{\footnotesize\ttfamily I\+Dragon\+Game\+Pad\+::\+I\+Dragon\+Game\+Pad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_i_dragon_game_pad_aa2ff875139b5000058d17f6afd4860cb}\label{class_i_dragon_game_pad_aa2ff875139b5000058d17f6afd4860cb}} 
+\index{IDragonGamePad@{IDragonGamePad}!````~IDragonGamePad@{$\sim$IDragonGamePad}}
+\index{````~IDragonGamePad@{$\sim$IDragonGamePad}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{$\sim$IDragonGamePad()}{~IDragonGamePad()}}
+{\footnotesize\ttfamily I\+Dragon\+Game\+Pad\+::$\sim$\+I\+Dragon\+Game\+Pad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_dragon_game_pad_aa707bbbb824aeca55d260a9efc95f23e}\label{class_i_dragon_game_pad_aa707bbbb824aeca55d260a9efc95f23e}} 
+\index{IDragonGamePad@{IDragonGamePad}!GetAxisValue@{GetAxisValue}}
+\index{GetAxisValue@{GetAxisValue}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{GetAxisValue()}{GetAxisValue()}}
+{\footnotesize\ttfamily virtual double I\+Dragon\+Game\+Pad\+::\+Get\+Axis\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}]{axis }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\DoxyHorRuler
+ Method\+: Get\+Axis\+Value Description\+: Return the current value (between -\/1.\+0 and 1.\+0) for the requested axis. \hypertarget{class_i_dragon_game_pad_autotoc_md8}{}\doxysubsubsection{Returns\+:     double   -\/ current axis value}\label{class_i_dragon_game_pad_autotoc_md8}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_gamepad_a8942fb6acb85fff749481a6e998c9204}{Dragon\+Gamepad}}, and \mbox{\hyperlink{class_dragon_x_box_a5a19f917c04a23b64624c2760d9cac8b}{Dragon\+X\+Box}}.
+
+\mbox{\Hypertarget{class_i_dragon_game_pad_ad02cf839ae313c2e70ea8258e6d6d738}\label{class_i_dragon_game_pad_ad02cf839ae313c2e70ea8258e6d6d738}} 
+\index{IDragonGamePad@{IDragonGamePad}!IsButtonPressed@{IsButtonPressed}}
+\index{IsButtonPressed@{IsButtonPressed}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{IsButtonPressed()}{IsButtonPressed()}}
+{\footnotesize\ttfamily virtual bool I\+Dragon\+Game\+Pad\+::\+Is\+Button\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}]{button }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\DoxyHorRuler
+ Method\+: Is\+Button\+Pressed Description\+: Return whether the requested button is selected (true) or not (false) Returns\+: bool true -\/ button is pressed \hypertarget{class_i_dragon_game_pad_autotoc_md9}{}\doxysubsubsection{false -\/ button is not pressed}\label{class_i_dragon_game_pad_autotoc_md9}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_x_box_a2e82523d2e1d76d6c3a8e86d019a3d4e}{Dragon\+X\+Box}}, and \mbox{\hyperlink{class_dragon_gamepad_a736e3af20879da0b6c9ab71608968be7}{Dragon\+Gamepad}}.
+
+\mbox{\Hypertarget{class_i_dragon_game_pad_a487befc3794be0ee1729fc2a6833f2bd}\label{class_i_dragon_game_pad_a487befc3794be0ee1729fc2a6833f2bd}} 
+\index{IDragonGamePad@{IDragonGamePad}!SetAxisDeadband@{SetAxisDeadband}}
+\index{SetAxisDeadband@{SetAxisDeadband}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{SetAxisDeadband()}{SetAxisDeadband()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Game\+Pad\+::\+Set\+Axis\+Deadband (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}]{axis,  }\item[{\mbox{\hyperlink{class_i_dragon_game_pad_afde07811ccdd7565bc40c381adecee4d}{A\+X\+I\+S\+\_\+\+D\+E\+A\+D\+B\+A\+ND}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method\+: Set\+Axis\+Deadband Description\+: Specify what deadband behavior is desired such as none, standard, standard with scaling. Returns\+: void 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & {\itshape  -\/ axis to modify {\itshape  -\/ deadband option }}\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_x_box_a24c136c43190bafa852455835c8f9d56}{Dragon\+X\+Box}}, and \mbox{\hyperlink{class_dragon_gamepad_af03d2edf95e4fd043059134e05ae807c}{Dragon\+Gamepad}}.
+
+\mbox{\Hypertarget{class_i_dragon_game_pad_ac0f51e1292e7a3b17962642e2a5a0445}\label{class_i_dragon_game_pad_ac0f51e1292e7a3b17962642e2a5a0445}} 
+\index{IDragonGamePad@{IDragonGamePad}!SetAxisProfile@{SetAxisProfile}}
+\index{SetAxisProfile@{SetAxisProfile}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{SetAxisProfile()}{SetAxisProfile()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Game\+Pad\+::\+Set\+Axis\+Profile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}]{axis,  }\item[{\mbox{\hyperlink{class_i_dragon_game_pad_a3b3c3165d9fc69500bd69ba575216676}{A\+X\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}}}]{curve }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\DoxyHorRuler
+ Method\+: Set\+Profile Description\+: Specify the profile curve used for setting the sensitivity of the axis. By default, this is linear, but a cubic curve would give more control when the axis is barely pressed (e.\+g. if it were moved 50\% forward, instead of returning 0.\+5, it would return 0.\+5 $\ast$ 0.\+5 $\ast$ 0.\+5 or .125, but when the axis was moved all the way forward, it would return the same value -- 1.\+0. Since it is cubed, it retains the sign.
+
+This affects values returned from Get\+Axis calls. \hypertarget{class_i_dragon_game_pad_autotoc_md10}{}\doxysubsubsection{Returns\+:     void}\label{class_i_dragon_game_pad_autotoc_md10}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_x_box_a82af2dd78979078b136da5d07a4182c8}{Dragon\+X\+Box}}, and \mbox{\hyperlink{class_dragon_gamepad_aa206d96358046a54318db0ff82db648d}{Dragon\+Gamepad}}.
+
+\mbox{\Hypertarget{class_i_dragon_game_pad_a471db7f67ec6604d042195ab65231116}\label{class_i_dragon_game_pad_a471db7f67ec6604d042195ab65231116}} 
+\index{IDragonGamePad@{IDragonGamePad}!SetAxisScale@{SetAxisScale}}
+\index{SetAxisScale@{SetAxisScale}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{SetAxisScale()}{SetAxisScale()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Game\+Pad\+::\+Set\+Axis\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_game_pad_a6ba0408b15301dd149474ebad9b4972b}{A\+X\+I\+S\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}]{axis,  }\item[{float}]{scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\DoxyHorRuler
+ Method\+: Set\+Scale Description\+: Scale the returned value to a range between the specified negative scale factor and the scale factor. This is used to reduce the maximum value returned.
+
+This affects values returned from Get\+Axis calls. \hypertarget{class_i_dragon_game_pad_autotoc_md11}{}\doxysubsubsection{Returns\+:     void}\label{class_i_dragon_game_pad_autotoc_md11}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_x_box_a05f594a2bdc751aef180e34637116e61}{Dragon\+X\+Box}}, and \mbox{\hyperlink{class_dragon_gamepad_a4c621d8b78609c4b52cefbc09b881975}{Dragon\+Gamepad}}.
+
+\mbox{\Hypertarget{class_i_dragon_game_pad_a0fc4a2d497a912d10ab2755018b43445}\label{class_i_dragon_game_pad_a0fc4a2d497a912d10ab2755018b43445}} 
+\index{IDragonGamePad@{IDragonGamePad}!SetButtonMode@{SetButtonMode}}
+\index{SetButtonMode@{SetButtonMode}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{SetButtonMode()}{SetButtonMode()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Game\+Pad\+::\+Set\+Button\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}]{button,  }\item[{\mbox{\hyperlink{class_i_dragon_game_pad_af3915fb49841ce1fc53b35c9e24d3417}{B\+U\+T\+T\+O\+N\+\_\+\+M\+O\+DE}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method\+: Set\+Button\+Mode Description\+: Specify how the button should behave. Examples include (but not limited to)\+: 
+
+
+\begin{DoxyItemize}
+\item pressed / not pressed
+\item toggle Returns\+: void
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em mode} & {\itshape  -\/ button to check {\itshape  -\/ button behavior }}\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_x_box_a40119662c127dd11a27fb2085d4719f0}{Dragon\+X\+Box}}, and \mbox{\hyperlink{class_dragon_gamepad_aedddee103b3f859b9d94944eb89c9011}{Dragon\+Gamepad}}.
+
+\mbox{\Hypertarget{class_i_dragon_game_pad_aff0121c0eee282fa27d0849795fcce91}\label{class_i_dragon_game_pad_aff0121c0eee282fa27d0849795fcce91}} 
+\index{IDragonGamePad@{IDragonGamePad}!WasButtonPressed@{WasButtonPressed}}
+\index{WasButtonPressed@{WasButtonPressed}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{WasButtonPressed()}{WasButtonPressed()}}
+{\footnotesize\ttfamily virtual bool I\+Dragon\+Game\+Pad\+::\+Was\+Button\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}]{button }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method\+: Was\+Button\+Pressed Description\+: Read whether the button was pressed since the last query. This is only valid for digital buttons (normal buttons and bumpers). 
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_x_box_ae9bf51169ee1993f0dc6d10540b72bda}{Dragon\+X\+Box}}, and \mbox{\hyperlink{class_dragon_gamepad_a954798e159dab694fbd6c48a96c36657}{Dragon\+Gamepad}}.
+
+\mbox{\Hypertarget{class_i_dragon_game_pad_a8b62f3bcf3a8fbfcdbd18cac65519720}\label{class_i_dragon_game_pad_a8b62f3bcf3a8fbfcdbd18cac65519720}} 
+\index{IDragonGamePad@{IDragonGamePad}!WasButtonReleased@{WasButtonReleased}}
+\index{WasButtonReleased@{WasButtonReleased}!IDragonGamePad@{IDragonGamePad}}
+\doxysubsubsection{\texorpdfstring{WasButtonReleased()}{WasButtonReleased()}}
+{\footnotesize\ttfamily virtual bool I\+Dragon\+Game\+Pad\+::\+Was\+Button\+Released (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_game_pad_a07a7fc32b5cb69f2019006c0eb0f7d29}{B\+U\+T\+T\+O\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}]{button }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method\+: Was\+Button\+Released Description\+: Read whether the button was released since the last query. This is only valid for digital buttons (normal buttons and bumpers). 
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_gamepad_afb3895ef1ce1f46c7fd9b1070ca30e64}{Dragon\+Gamepad}}, and \mbox{\hyperlink{class_dragon_x_box_aac33e2bcc8b07104f7e0a0a178d47070}{Dragon\+X\+Box}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/\mbox{\hyperlink{_i_dragon_game_pad_8h}{I\+Dragon\+Game\+Pad.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,103 @@
+\hypertarget{class_i_primitive}{}\doxysection{I\+Primitive Class Reference}
+\label{class_i_primitive}\index{IPrimitive@{IPrimitive}}
+
+
+{\ttfamily \#include $<$I\+Primitive.\+h$>$}
+
+Inheritance diagram for I\+Primitive\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_i_primitive}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_primitive_aa67f91faaa42e0a8b1b80b905dd42cad}{I\+Primitive}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_i_primitive_a8079fb4001c84b6e715ffe521fd45897}{$\sim$\+I\+Primitive}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_i_primitive_abe9e4c3b5a5b806d2c551c0f56a075d2}{Init}} (\mbox{\hyperlink{class_primitive_params}{Primitive\+Params}} $\ast$Parms)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_primitive_a3c34bd0f5ddbfe150ecade13303b6cd6}{Run}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{class_i_primitive_a5b62801261f9bd974be04217bd86f668}{Is\+Done}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{class_i_primitive_acd3b9501892b1950113c63ccb699cb37}{L\+O\+O\+P\+\_\+\+L\+E\+N\+G\+TH}} = 0.\+020
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 21 of file I\+Primitive.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_primitive_aa67f91faaa42e0a8b1b80b905dd42cad}\label{class_i_primitive_aa67f91faaa42e0a8b1b80b905dd42cad}} 
+\index{IPrimitive@{IPrimitive}!IPrimitive@{IPrimitive}}
+\index{IPrimitive@{IPrimitive}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{IPrimitive()}{IPrimitive()}}
+{\footnotesize\ttfamily I\+Primitive\+::\+I\+Primitive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_i_primitive_a8079fb4001c84b6e715ffe521fd45897}\label{class_i_primitive_a8079fb4001c84b6e715ffe521fd45897}} 
+\index{IPrimitive@{IPrimitive}!````~IPrimitive@{$\sim$IPrimitive}}
+\index{````~IPrimitive@{$\sim$IPrimitive}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{$\sim$IPrimitive()}{~IPrimitive()}}
+{\footnotesize\ttfamily virtual I\+Primitive\+::$\sim$\+I\+Primitive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_primitive_abe9e4c3b5a5b806d2c551c0f56a075d2}\label{class_i_primitive_abe9e4c3b5a5b806d2c551c0f56a075d2}} 
+\index{IPrimitive@{IPrimitive}!Init@{Init}}
+\index{Init@{Init}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily virtual void I\+Primitive\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_primitive_params}{Primitive\+Params}} $\ast$}]{Parms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_do_nothing_aa05ad0a633ed8380cc8725b9b7747660}{Do\+Nothing}}, \mbox{\hyperlink{class_drive_to_target_a6ec218d441ef1c263d8c417ca5933af8}{Drive\+To\+Target}}, \mbox{\hyperlink{class_turn_angle_a80a892d30883e9b570227eece66bf36c}{Turn\+Angle}}, \mbox{\hyperlink{class_super_drive_a8141ce7485eae0c7dd5f1a4bb67f9e9c}{Super\+Drive}}, \mbox{\hyperlink{class_drive_time_a88957150638e73a701191d9caa7515f6}{Drive\+Time}}, \mbox{\hyperlink{class_drive_to_wall_adbc157105a2be56d57e4ab92269aa472}{Drive\+To\+Wall}}, \mbox{\hyperlink{class_auto_shoot_a9e48ceffaed7f5e04b04cf1ce73417f6}{Auto\+Shoot}}, \mbox{\hyperlink{class_hold_position_a6059d2b98170913f3051b9a24de13cce}{Hold\+Position}}, and \mbox{\hyperlink{class_drive_distance_a7a4a90ed63d01052a9bfb8b13b402fc7}{Drive\+Distance}}.
+
+\mbox{\Hypertarget{class_i_primitive_a5b62801261f9bd974be04217bd86f668}\label{class_i_primitive_a5b62801261f9bd974be04217bd86f668}} 
+\index{IPrimitive@{IPrimitive}!IsDone@{IsDone}}
+\index{IsDone@{IsDone}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{IsDone()}{IsDone()}}
+{\footnotesize\ttfamily virtual bool I\+Primitive\+::\+Is\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_do_nothing_a921cf984d26cf9991de393a609719188}{Do\+Nothing}}, \mbox{\hyperlink{class_auto_shoot_a30f8488b0503c60a2d72a164d779bc78}{Auto\+Shoot}}, \mbox{\hyperlink{class_turn_angle_ad423fdd2e504132a5eda6edd997b3859}{Turn\+Angle}}, \mbox{\hyperlink{class_drive_to_target_a5620ac5a9477525bee0b2b38563c3801}{Drive\+To\+Target}}, \mbox{\hyperlink{class_super_drive_a3f2c91eb6f751219b900eaa022907b0e}{Super\+Drive}}, \mbox{\hyperlink{class_drive_time_a2cb7c304e83f109a7f35f719a5b95495}{Drive\+Time}}, \mbox{\hyperlink{class_hold_position_a33c4a23d63999bc25845e7dd0ef2fdab}{Hold\+Position}}, \mbox{\hyperlink{class_drive_to_wall_adfb42e55ae1c6ca096422d020df0154b}{Drive\+To\+Wall}}, and \mbox{\hyperlink{class_drive_distance_acbd6bfcdbecd3b81ddb9201d8025f0d6}{Drive\+Distance}}.
+
+\mbox{\Hypertarget{class_i_primitive_a3c34bd0f5ddbfe150ecade13303b6cd6}\label{class_i_primitive_a3c34bd0f5ddbfe150ecade13303b6cd6}} 
+\index{IPrimitive@{IPrimitive}!Run@{Run}}
+\index{Run@{Run}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily virtual void I\+Primitive\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_do_nothing_ac38d4823e478cbfab5903ffbad04a778}{Do\+Nothing}}, \mbox{\hyperlink{class_turn_angle_a8f9d1e8c5ac87f444cbe0972a62f527b}{Turn\+Angle}}, \mbox{\hyperlink{class_drive_to_target_a38a22ee94a41374f2985b94e92c54163}{Drive\+To\+Target}}, \mbox{\hyperlink{class_auto_shoot_a5d750b5ae64e1364cdb80828a4a46bd4}{Auto\+Shoot}}, \mbox{\hyperlink{class_super_drive_a1720ed2254cf46c03d8ad34e2b38bbfa}{Super\+Drive}}, \mbox{\hyperlink{class_drive_time_a5d686a5f2ffa3fd6a0429b7841aeb0c7}{Drive\+Time}}, \mbox{\hyperlink{class_drive_to_wall_a84d6951824f71f2b7a0c75e681dd6517}{Drive\+To\+Wall}}, \mbox{\hyperlink{class_hold_position_ae6bb9e7d3948d36e724293e252607030}{Hold\+Position}}, and \mbox{\hyperlink{class_drive_distance_a5658e8083b0b1cc87580297e173a9a27}{Drive\+Distance}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_i_primitive_acd3b9501892b1950113c63ccb699cb37}\label{class_i_primitive_acd3b9501892b1950113c63ccb699cb37}} 
+\index{IPrimitive@{IPrimitive}!LOOP\_LENGTH@{LOOP\_LENGTH}}
+\index{LOOP\_LENGTH@{LOOP\_LENGTH}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{LOOP\_LENGTH}{LOOP\_LENGTH}}
+{\footnotesize\ttfamily const float I\+Primitive\+::\+L\+O\+O\+P\+\_\+\+L\+E\+N\+G\+TH = 0.\+020}
+
+
+
+Definition at line 24 of file I\+Primitive.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/auton/primitives/\mbox{\hyperlink{_i_primitive_8h}{I\+Primitive.\+h}}\end{DoxyCompactItemize}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team 302 Robot: auton/AutonSelector.cpp Source File</title>
+<title>Robot: C:/robotcm/training2020/src/main/cpp/auton/AutonSelector.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Team 302 Robot
+   <div id="projectname">Robot
    </div>
   </td>
  </tr>
@@ -154,64 +154,60 @@ $(document).ready(function(){initNavTree('_auton_selector_8cpp_source.html','');
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">//---------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> AutonSelector::FindXMLFileNames()</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    DIR* directory;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">struct </span>dirent* files;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    directory = opendir(<span class="stringliteral">&quot;/home/lvuser/auton/&quot;</span>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (directory != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">bool</span> moreFiles = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">while</span> (moreFiles)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            files = readdir(directory);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> (files == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                moreFiles = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    DIR* directory = opendir(<span class="stringliteral">&quot;/home/lvuser/auton/&quot;</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (directory != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">bool</span> moreFiles = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">while</span> (moreFiles)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keyword">struct </span>dirent* files = readdir(directory);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">if</span> (files != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keyword">auto</span> filename = string( files-&gt;d_name);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordflow">if</span> ( filename != <span class="stringliteral">&quot;.&quot;</span> &amp;&amp; filename != <span class="stringliteral">&quot;..&quot;</span> &amp;&amp; filename != <span class="stringliteral">&quot;auton.dtd&quot;</span> )</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    m_xmlFiles.emplace_back(<span class="keywordtype">string</span>(files-&gt;d_name));</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                }</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keyword">auto</span> filename = string( files-&gt;d_name);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">if</span> ( filename != <span class="stringliteral">&quot;.&quot;</span> &amp;&amp; filename != <span class="stringliteral">&quot;..&quot;</span> &amp;&amp; filename != <span class="stringliteral">&quot;auton.dtd&quot;</span> )</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    m_xmlFiles.emplace_back(<span class="keywordtype">string</span>(files-&gt;d_name));</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            } </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">// error condition need to handle</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                moreFiles = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">// error condition need to handle</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">//---------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">// Method:      PutChoicesOnDashboard</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">// Description: This puts the list of files in the m_csvFiles attribute</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">//              up on the dashboard for selection.</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">// Returns:     void</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">//---------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">// Method:      PutChoicesOnDashboard</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">// Description: This puts the list of files in the m_csvFiles attribute</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">//              up on the dashboard for selection.</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">// Returns:     void</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">//---------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">void</span> AutonSelector::PutChoicesOnDashboard()</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">auto</span> gotDefault = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> inx = 0; inx &lt; m_xmlFiles.size(); ++inx)</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">if</span>(m_xmlFiles[inx] != <span class="stringliteral">&quot;.&quot;</span> &amp;&amp; m_xmlFiles[inx] != <span class="stringliteral">&quot;..&quot;</span>)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">if</span> ( !gotDefault )</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordtype">void</span> AutonSelector::PutChoicesOnDashboard()</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">auto</span> gotDefault = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> inx = 0; inx &lt; m_xmlFiles.size(); ++inx)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">if</span>(m_xmlFiles[inx] != <span class="stringliteral">&quot;.&quot;</span> &amp;&amp; m_xmlFiles[inx] != <span class="stringliteral">&quot;..&quot;</span>)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">if</span> ( !gotDefault )</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                m_chooser.SetDefaultOption(  m_xmlFiles[inx], m_xmlFiles[inx] );</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                gotDefault = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                m_chooser.SetDefaultOption(  m_xmlFiles[inx], m_xmlFiles[inx] );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                m_chooser.AddOption( m_xmlFiles[inx], m_xmlFiles[inx]); </div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                m_chooser.AddOption( m_xmlFiles[inx], m_xmlFiles[inx]); </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    frc::SmartDashboard::PutData(<span class="stringliteral">&quot;Auto Modes&quot;</span>, &amp;m_chooser);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    frc::SmartDashboard::PutData(<span class="stringliteral">&quot;Auto Modes&quot;</span>, &amp;m_chooser);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_auton_selector_html_a9fa26e20a353c431eb637736b620319a"><div class="ttname"><a href="class_auton_selector.html#a9fa26e20a353c431eb637736b620319a">AutonSelector::AutonSelector</a></div><div class="ttdeci">AutonSelector()</div><div class="ttdef"><b>Definition:</b> <a href="_auton_selector_8cpp_source.html#l00037">AutonSelector.cpp:37</a></div></div>
@@ -221,7 +217,7 @@ $(document).ready(function(){initNavTree('_auton_selector_8cpp_source.html','');
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6d3eafb1b2af494c48c5eff1d916bff.html">auton</a></li><li class="navelem"><a class="el" href="_auton_selector_8cpp.html">AutonSelector.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_4401199a54cb40c0637ceb8dd0f3c5fd.html">robotcm</a></li><li class="navelem"><a class="el" href="dir_24d5b6e083bf191a3f38d4ae9f1a0592.html">training2020</a></li><li class="navelem"><a class="el" href="dir_6cae7cc3464d42f3e134af4325c5ce6e.html">src</a></li><li class="navelem"><a class="el" href="dir_32a1028ae0a47e7b34b3c8fd0b05a58d.html">main</a></li><li class="navelem"><a class="el" href="dir_9dee27190e861708e732c03adc0229f4.html">cpp</a></li><li class="navelem"><a class="el" href="dir_ad2b7f4d39d64c4cee9623c2385c7832.html">auton</a></li><li class="navelem"><a class="el" href="_auton_selector_8cpp.html">AutonSelector.cpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

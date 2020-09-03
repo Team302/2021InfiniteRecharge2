@@ -1,0 +1,153 @@
+\hypertarget{class_intake_state_mgr}{}\doxysection{Intake\+State\+Mgr Class Reference}
+\label{class_intake_state_mgr}\index{IntakeStateMgr@{IntakeStateMgr}}
+
+
+{\ttfamily \#include $<$Intake\+State\+Mgr.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56c}{I\+N\+T\+A\+K\+E\+\_\+\+S\+T\+A\+TE}} \{ \mbox{\hyperlink{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56ca8ebaf448652ce307bb0332e236495a99}{O\+FF}}, 
+\mbox{\hyperlink{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56caf6d21481875c74e75a8d895516b88649}{ON}}, 
+\mbox{\hyperlink{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56caf4913ff1c5a47384d35664ab9b2ebcef}{H\+U\+M\+A\+N\+P\+L\+A\+Y\+ER}}, 
+\mbox{\hyperlink{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56ca820efa88b53ddab362a6f41b2b843e3a}{M\+A\+X\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+\+S\+T\+A\+T\+ES}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_intake_state_mgr_ac27ccde795f471c38f5ae0c123e1ada3}{Run\+Current\+State}} ()
+\begin{DoxyCompactList}\small\item\em run the current state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_intake_state_mgr_a1e25c496c344124e7a52b7bbdfa09f87}{Set\+Current\+State}} (\mbox{\hyperlink{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56c}{I\+N\+T\+A\+K\+E\+\_\+\+S\+T\+A\+TE}} state, bool run)
+\begin{DoxyCompactList}\small\item\em set the current state, initialize it and run it \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56c}{I\+N\+T\+A\+K\+E\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{class_intake_state_mgr_ab830ea475e60fca1e06fbff31a4c7980}{Get\+Current\+State}} () const
+\begin{DoxyCompactList}\small\item\em return the current state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_intake_state_mgr}{Intake\+State\+Mgr}} $\ast$ \mbox{\hyperlink{class_intake_state_mgr_a9e8b03c92d18d2c115f8f352d63569fe}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Find or create the state manmanager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 29 of file Intake\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56c}\label{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56c}} 
+\index{IntakeStateMgr@{IntakeStateMgr}!INTAKE\_STATE@{INTAKE\_STATE}}
+\index{INTAKE\_STATE@{INTAKE\_STATE}!IntakeStateMgr@{IntakeStateMgr}}
+\doxysubsubsection{\texorpdfstring{INTAKE\_STATE}{INTAKE\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56c}{Intake\+State\+Mgr\+::\+I\+N\+T\+A\+K\+E\+\_\+\+S\+T\+A\+TE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OFF@{OFF}!IntakeStateMgr@{IntakeStateMgr}}\index{IntakeStateMgr@{IntakeStateMgr}!OFF@{OFF}}}\mbox{\Hypertarget{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56ca8ebaf448652ce307bb0332e236495a99}\label{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56ca8ebaf448652ce307bb0332e236495a99}} 
+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ON@{ON}!IntakeStateMgr@{IntakeStateMgr}}\index{IntakeStateMgr@{IntakeStateMgr}!ON@{ON}}}\mbox{\Hypertarget{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56caf6d21481875c74e75a8d895516b88649}\label{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56caf6d21481875c74e75a8d895516b88649}} 
+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HUMANPLAYER@{HUMANPLAYER}!IntakeStateMgr@{IntakeStateMgr}}\index{IntakeStateMgr@{IntakeStateMgr}!HUMANPLAYER@{HUMANPLAYER}}}\mbox{\Hypertarget{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56caf4913ff1c5a47384d35664ab9b2ebcef}\label{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56caf4913ff1c5a47384d35664ab9b2ebcef}} 
+H\+U\+M\+A\+N\+P\+L\+A\+Y\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_INTAKE\_STATES@{MAX\_INTAKE\_STATES}!IntakeStateMgr@{IntakeStateMgr}}\index{IntakeStateMgr@{IntakeStateMgr}!MAX\_INTAKE\_STATES@{MAX\_INTAKE\_STATES}}}\mbox{\Hypertarget{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56ca820efa88b53ddab362a6f41b2b843e3a}\label{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56ca820efa88b53ddab362a6f41b2b843e3a}} 
+M\+A\+X\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+\+S\+T\+A\+T\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 33 of file Intake\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_intake_state_mgr_ab830ea475e60fca1e06fbff31a4c7980}\label{class_intake_state_mgr_ab830ea475e60fca1e06fbff31a4c7980}} 
+\index{IntakeStateMgr@{IntakeStateMgr}!GetCurrentState@{GetCurrentState}}
+\index{GetCurrentState@{GetCurrentState}!IntakeStateMgr@{IntakeStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetCurrentState()}{GetCurrentState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56c}{I\+N\+T\+A\+K\+E\+\_\+\+S\+T\+A\+TE}} Intake\+State\+Mgr\+::\+Get\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the current state 
+
+\begin{DoxyReturn}{Returns}
+I\+N\+T\+A\+K\+E\+\_\+\+S\+T\+A\+TE -\/ the current state 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file Intake\+State\+Mgr.\+h.
+
+\mbox{\Hypertarget{class_intake_state_mgr_a9e8b03c92d18d2c115f8f352d63569fe}\label{class_intake_state_mgr_a9e8b03c92d18d2c115f8f352d63569fe}} 
+\index{IntakeStateMgr@{IntakeStateMgr}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!IntakeStateMgr@{IntakeStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_intake_state_mgr}{Intake\+State\+Mgr}} $\ast$ Intake\+State\+Mgr\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find or create the state manmanager. 
+
+\begin{DoxyReturn}{Returns}
+Intake\+State\+Mgr$\ast$ pointer to the state manager 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Intake\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_intake_state_mgr_ac27ccde795f471c38f5ae0c123e1ada3}\label{class_intake_state_mgr_ac27ccde795f471c38f5ae0c123e1ada3}} 
+\index{IntakeStateMgr@{IntakeStateMgr}!RunCurrentState@{RunCurrentState}}
+\index{RunCurrentState@{RunCurrentState}!IntakeStateMgr@{IntakeStateMgr}}
+\doxysubsubsection{\texorpdfstring{RunCurrentState()}{RunCurrentState()}}
+{\footnotesize\ttfamily void Intake\+State\+Mgr\+::\+Run\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+run the current state 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 128 of file Intake\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_intake_state_mgr_a1e25c496c344124e7a52b7bbdfa09f87}\label{class_intake_state_mgr_a1e25c496c344124e7a52b7bbdfa09f87}} 
+\index{IntakeStateMgr@{IntakeStateMgr}!SetCurrentState@{SetCurrentState}}
+\index{SetCurrentState@{SetCurrentState}!IntakeStateMgr@{IntakeStateMgr}}
+\doxysubsubsection{\texorpdfstring{SetCurrentState()}{SetCurrentState()}}
+{\footnotesize\ttfamily void Intake\+State\+Mgr\+::\+Set\+Current\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_intake_state_mgr_aaa5d73e08f73a95dca5c6aaa1de6b56c}{I\+N\+T\+A\+K\+E\+\_\+\+S\+T\+A\+TE}}}]{state\+Enum,  }\item[{bool}]{run }\end{DoxyParamCaption})}
+
+
+
+set the current state, initialize it and run it 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I\+N\+T\+A\+K\+E\+\_\+\+S\+T\+A\+TE} & -\/ state to set \\
+\hline
+\mbox{\texttt{ in}}  & {\em run} & -\/ true means run, false just initialize it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+
+void 
+\end{DoxyReturn}
+
+
+Definition at line 163 of file Intake\+State\+Mgr.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/states/intake/\mbox{\hyperlink{_intake_state_mgr_8h}{Intake\+State\+Mgr.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/states/intake/\mbox{\hyperlink{_intake_state_mgr_8cpp}{Intake\+State\+Mgr.\+cpp}}\end{DoxyCompactItemize}

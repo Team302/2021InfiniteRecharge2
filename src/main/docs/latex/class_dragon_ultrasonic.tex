@@ -1,0 +1,123 @@
+\hypertarget{class_dragon_ultrasonic}{}\doxysection{Dragon\+Ultrasonic Class Reference}
+\label{class_dragon_ultrasonic}\index{DragonUltrasonic@{DragonUltrasonic}}
+
+
+{\ttfamily \#include $<$Dragon\+Ultrasonic.\+h$>$}
+
+Inheritance diagram for Dragon\+Ultrasonic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dragon_ultrasonic}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dragon_ultrasonic_ab5271484e95aebeee21ee441e4b325ce}{Dragon\+Ultrasonic}} (\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} usage, int analog\+In\+Channel)
+\item 
+\mbox{\hyperlink{class_dragon_ultrasonic_a8fe7feb3c650938d4ff7e70771752792}{Dragon\+Ultrasonic}} ()=delete
+\item 
+virtual \mbox{\hyperlink{class_dragon_ultrasonic_ae9f25470c506d1a5f770d4f580523e61}{$\sim$\+Dragon\+Ultrasonic}} ()=default
+\item 
+double \mbox{\hyperlink{class_dragon_ultrasonic_a3c2820cf4af3d050c57e896224582197}{Get\+Distance}} () const override
+\item 
+double \mbox{\hyperlink{class_dragon_ultrasonic_a917536d6949803565bbc330bdcc3a795}{Get\+Confidence}} () const override
+\item 
+\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} \mbox{\hyperlink{class_dragon_ultrasonic_adeaf9ce4af7270c5b3e54a9919cc50a1}{Get\+Usage}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 42 of file Dragon\+Ultrasonic.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dragon_ultrasonic_ab5271484e95aebeee21ee441e4b325ce}\label{class_dragon_ultrasonic_ab5271484e95aebeee21ee441e4b325ce}} 
+\index{DragonUltrasonic@{DragonUltrasonic}!DragonUltrasonic@{DragonUltrasonic}}
+\index{DragonUltrasonic@{DragonUltrasonic}!DragonUltrasonic@{DragonUltrasonic}}
+\doxysubsubsection{\texorpdfstring{DragonUltrasonic()}{DragonUltrasonic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Dragon\+Ultrasonic\+::\+Dragon\+Ultrasonic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}}}]{usage,  }\item[{int}]{analog\+In\+Channel }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file Dragon\+Ultrasonic.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_ultrasonic_a8fe7feb3c650938d4ff7e70771752792}\label{class_dragon_ultrasonic_a8fe7feb3c650938d4ff7e70771752792}} 
+\index{DragonUltrasonic@{DragonUltrasonic}!DragonUltrasonic@{DragonUltrasonic}}
+\index{DragonUltrasonic@{DragonUltrasonic}!DragonUltrasonic@{DragonUltrasonic}}
+\doxysubsubsection{\texorpdfstring{DragonUltrasonic()}{DragonUltrasonic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Dragon\+Ultrasonic\+::\+Dragon\+Ultrasonic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_dragon_ultrasonic_ae9f25470c506d1a5f770d4f580523e61}\label{class_dragon_ultrasonic_ae9f25470c506d1a5f770d4f580523e61}} 
+\index{DragonUltrasonic@{DragonUltrasonic}!````~DragonUltrasonic@{$\sim$DragonUltrasonic}}
+\index{````~DragonUltrasonic@{$\sim$DragonUltrasonic}!DragonUltrasonic@{DragonUltrasonic}}
+\doxysubsubsection{\texorpdfstring{$\sim$DragonUltrasonic()}{~DragonUltrasonic()}}
+{\footnotesize\ttfamily virtual Dragon\+Ultrasonic\+::$\sim$\+Dragon\+Ultrasonic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dragon_ultrasonic_a917536d6949803565bbc330bdcc3a795}\label{class_dragon_ultrasonic_a917536d6949803565bbc330bdcc3a795}} 
+\index{DragonUltrasonic@{DragonUltrasonic}!GetConfidence@{GetConfidence}}
+\index{GetConfidence@{GetConfidence}!DragonUltrasonic@{DragonUltrasonic}}
+\doxysubsubsection{\texorpdfstring{GetConfidence()}{GetConfidence()}}
+{\footnotesize\ttfamily double Dragon\+Ultrasonic\+::\+Get\+Confidence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\DoxyHorRuler
+ Method\+: Get\+Confidence Description\+: Indicates how accurate the returned value is Returns\+: double 0.\+0 == ignore (sensor has an error) \hypertarget{class_dragon_ultrasonic_autotoc_md41}{}\doxysubsubsection{1.\+0 == very confident}\label{class_dragon_ultrasonic_autotoc_md41}
+\DoxyHorRuler
+ Method\+: Get\+Confidence Description\+: Indicates how accurate the returned value is Returns\+: double 0.\+0 == ignore (sensor has an error) \hypertarget{class_dragon_ultrasonic_autotoc_md38}{}\doxysubsubsection{1.\+0 == very confident}\label{class_dragon_ultrasonic_autotoc_md38}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_sensor_a26335856e226fcaca3ce3954ba846cb7}{I\+Dragon\+Sensor}}.
+
+
+
+Definition at line 66 of file Dragon\+Ultrasonic.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_ultrasonic_a3c2820cf4af3d050c57e896224582197}\label{class_dragon_ultrasonic_a3c2820cf4af3d050c57e896224582197}} 
+\index{DragonUltrasonic@{DragonUltrasonic}!GetDistance@{GetDistance}}
+\index{GetDistance@{GetDistance}!DragonUltrasonic@{DragonUltrasonic}}
+\doxysubsubsection{\texorpdfstring{GetDistance()}{GetDistance()}}
+{\footnotesize\ttfamily double Dragon\+Ultrasonic\+::\+Get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\DoxyHorRuler
+ Method\+: Get\+Distance Description\+: Return the measured distance in inches \hypertarget{class_dragon_ultrasonic_autotoc_md40}{}\doxysubsubsection{Returns\+:     double     Measured Distance}\label{class_dragon_ultrasonic_autotoc_md40}
+\DoxyHorRuler
+ Method\+: Get\+Distance Description\+: Return the measured distance in inches \hypertarget{class_dragon_ultrasonic_autotoc_md37}{}\doxysubsubsection{Returns\+:     double     Measured Distance}\label{class_dragon_ultrasonic_autotoc_md37}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_distance_sensor_a6bd5ec99c747c52a25aaddc874232703}{I\+Dragon\+Distance\+Sensor}}.
+
+
+
+Definition at line 53 of file Dragon\+Ultrasonic.\+cpp.
+
+\mbox{\Hypertarget{class_dragon_ultrasonic_adeaf9ce4af7270c5b3e54a9919cc50a1}\label{class_dragon_ultrasonic_adeaf9ce4af7270c5b3e54a9919cc50a1}} 
+\index{DragonUltrasonic@{DragonUltrasonic}!GetUsage@{GetUsage}}
+\index{GetUsage@{GetUsage}!DragonUltrasonic@{DragonUltrasonic}}
+\doxysubsubsection{\texorpdfstring{GetUsage()}{GetUsage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} Dragon\+Ultrasonic\+::\+Get\+Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\DoxyHorRuler
+ Method\+: Get\+Usage Description\+: Indicate what the sensor is used for \hypertarget{class_dragon_ultrasonic_autotoc_md42}{}\doxysubsubsection{Returns\+:     S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+G\+E    sensor usage}\label{class_dragon_ultrasonic_autotoc_md42}
+\DoxyHorRuler
+ Method\+: Get\+Usage Description\+: Indicate what the sensor is used for \hypertarget{class_dragon_ultrasonic_autotoc_md39}{}\doxysubsubsection{Returns\+:     S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+G\+E    sensor usage}\label{class_dragon_ultrasonic_autotoc_md39}
+
+
+Implements \mbox{\hyperlink{class_i_dragon_sensor_a3040df89bae5da661a21d71c1df4ccb4}{I\+Dragon\+Sensor}}.
+
+
+
+Definition at line 76 of file Dragon\+Ultrasonic.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/\mbox{\hyperlink{_dragon_ultrasonic_8h}{Dragon\+Ultrasonic.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/\mbox{\hyperlink{_dragon_ultrasonic_8cpp}{Dragon\+Ultrasonic.\+cpp}}\end{DoxyCompactItemize}

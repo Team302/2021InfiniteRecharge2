@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team 302 Robot: controllers/mechanisms/IMechController.h Source File</title>
+<title>Robot: C:/robotcm/training2020/src/main/cpp/controllers/mechanisms/IMechController.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Team 302 Robot
+   <div id="projectname">Robot
    </div>
   </td>
  </tr>
@@ -89,28 +89,42 @@ $(document).ready(function(){initNavTree('_i_mech_controller_8h_source.html','')
 <div class="title">IMechController.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_i_mech_controller_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mechanism_8h.html">subsys/IMechanism.h</a>&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_data_8h.html">controllers/ControlData.h</a>&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_i_mech_controller.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_mech_controller.html">IMechController</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="class_i_mech_controller.html#ab64c0d95b0a45649dd07664b4307f2dc">IMechController</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_i_mech_controller.html#a146e04000c38f5a657ff3633e9c9cf4e">~IMechController</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_mech_controller.html#a43c564581e046a9483e469c6da589db9">Init</a>() = 0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_mech_controller.html#a26c63d8b4ab0539d0f0902b2077356f4">Run</a>() = 0;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_i_mech_controller.html#a5ce7d666e9a752f34a8770830bf4d075">AtTarget</a>() = 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<a href="_i_mech_controller_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//====================================================================================================================================================</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Copyright 2020 Lake Orion Robotics FIRST Team 302</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), </span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, </span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF </span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE </span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//====================================================================================================================================================</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// C++ includes</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// Team 302 includes</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_i_mech_controller.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_mech_controller.html">IMechController</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_i_mech_controller.html#ab64c0d95b0a45649dd07664b4307f2dc">IMechController</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_i_mech_controller.html#a146e04000c38f5a657ff3633e9c9cf4e">~IMechController</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_mech_controller.html#a43c564581e046a9483e469c6da589db9">Init</a>() = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_mech_controller.html#a26c63d8b4ab0539d0f0902b2077356f4">Run</a>() = 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_i_mech_controller.html#a5ce7d666e9a752f34a8770830bf4d075">AtTarget</a>() = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="a_i_mechanism_8h_html"><div class="ttname"><a href="_i_mechanism_8h.html">IMechanism.h</a></div></div>
-<div class="ttc" id="a_control_data_8h_html"><div class="ttname"><a href="_control_data_8h.html">ControlData.h</a></div></div>
 <div class="ttc" id="aclass_i_mech_controller_html_a146e04000c38f5a657ff3633e9c9cf4e"><div class="ttname"><a href="class_i_mech_controller.html#a146e04000c38f5a657ff3633e9c9cf4e">IMechController::~IMechController</a></div><div class="ttdeci">virtual ~IMechController()=default</div></div>
-<div class="ttc" id="aclass_i_mech_controller_html"><div class="ttname"><a href="class_i_mech_controller.html">IMechController</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_mech_controller_8h_source.html#l00006">IMechController.h:6</a></div></div>
+<div class="ttc" id="aclass_i_mech_controller_html"><div class="ttname"><a href="class_i_mech_controller.html">IMechController</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_mech_controller_8h_source.html#l00022">IMechController.h:22</a></div></div>
 <div class="ttc" id="aclass_i_mech_controller_html_a5ce7d666e9a752f34a8770830bf4d075"><div class="ttname"><a href="class_i_mech_controller.html#a5ce7d666e9a752f34a8770830bf4d075">IMechController::AtTarget</a></div><div class="ttdeci">virtual bool AtTarget()=0</div></div>
 <div class="ttc" id="aclass_i_mech_controller_html_ab64c0d95b0a45649dd07664b4307f2dc"><div class="ttname"><a href="class_i_mech_controller.html#ab64c0d95b0a45649dd07664b4307f2dc">IMechController::IMechController</a></div><div class="ttdeci">IMechController()=default</div></div>
 <div class="ttc" id="aclass_i_mech_controller_html_a43c564581e046a9483e469c6da589db9"><div class="ttname"><a href="class_i_mech_controller.html#a43c564581e046a9483e469c6da589db9">IMechController::Init</a></div><div class="ttdeci">virtual void Init()=0</div></div>
@@ -118,7 +132,7 @@ $(document).ready(function(){initNavTree('_i_mech_controller_8h_source.html','')
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_87b6ed4386158a4d6cd0ecd5fb5bd5c2.html">controllers</a></li><li class="navelem"><a class="el" href="dir_ad9163eccb036a47942ba3f16d790d30.html">mechanisms</a></li><li class="navelem"><a class="el" href="_i_mech_controller_8h.html">IMechController.h</a></li>
+    <li class="navelem"><a class="el" href="dir_4401199a54cb40c0637ceb8dd0f3c5fd.html">robotcm</a></li><li class="navelem"><a class="el" href="dir_24d5b6e083bf191a3f38d4ae9f1a0592.html">training2020</a></li><li class="navelem"><a class="el" href="dir_6cae7cc3464d42f3e134af4325c5ce6e.html">src</a></li><li class="navelem"><a class="el" href="dir_32a1028ae0a47e7b34b3c8fd0b05a58d.html">main</a></li><li class="navelem"><a class="el" href="dir_9dee27190e861708e732c03adc0229f4.html">cpp</a></li><li class="navelem"><a class="el" href="dir_6be6e401d224ba1f5b6ab04db1c4cafe.html">controllers</a></li><li class="navelem"><a class="el" href="dir_4ac72befe9e446009ca209129e96768e.html">mechanisms</a></li><li class="navelem"><a class="el" href="_i_mech_controller_8h.html">IMechController.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

@@ -1,0 +1,117 @@
+\hypertarget{class_velocity_controller}{}\doxysection{Velocity\+Controller Class Reference}
+\label{class_velocity_controller}\index{VelocityController@{VelocityController}}
+
+
+{\ttfamily \#include $<$Velocity\+Controller.\+h$>$}
+
+Inheritance diagram for Velocity\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_velocity_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_velocity_controller_a86c5f295d9a510c2b2fb0c6400812f9f}{Velocity\+Controller}} ()=delete
+\item 
+\mbox{\hyperlink{class_velocity_controller_a4959edb8c862b11090c0a624ae819661}{Velocity\+Controller}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ motor, double target, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_control_data}{Control\+Data}} $>$ control\+Data)
+\item 
+\mbox{\hyperlink{class_velocity_controller_ad10bdb7a1a3e7739371cf1dd324c7169}{$\sim$\+Velocity\+Controller}} ()=default
+\item 
+void \mbox{\hyperlink{class_velocity_controller_afe11f0564aea740b84fdec61d1828aa8}{Init}} () override
+\item 
+void \mbox{\hyperlink{class_velocity_controller_aa6358fc3232691e458f996a8e8f4ce5a}{Run}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_velocity_controller_a7236bbcd7e85be50ee6512b7c1fa1ed3}{Get\+R\+PS}} () const
+\item 
+double \mbox{\hyperlink{class_velocity_controller_a79f69365c8c277125757b3b15119bcfc}{Get\+Target}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 25 of file Velocity\+Controller.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_velocity_controller_a86c5f295d9a510c2b2fb0c6400812f9f}\label{class_velocity_controller_a86c5f295d9a510c2b2fb0c6400812f9f}} 
+\index{VelocityController@{VelocityController}!VelocityController@{VelocityController}}
+\index{VelocityController@{VelocityController}!VelocityController@{VelocityController}}
+\doxysubsubsection{\texorpdfstring{VelocityController()}{VelocityController()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Velocity\+Controller\+::\+Velocity\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_velocity_controller_a4959edb8c862b11090c0a624ae819661}\label{class_velocity_controller_a4959edb8c862b11090c0a624ae819661}} 
+\index{VelocityController@{VelocityController}!VelocityController@{VelocityController}}
+\index{VelocityController@{VelocityController}!VelocityController@{VelocityController}}
+\doxysubsubsection{\texorpdfstring{VelocityController()}{VelocityController()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Velocity\+Controller\+::\+Velocity\+Controller (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{motor,  }\item[{double}]{target,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_control_data}{Control\+Data}} $>$}]{control\+Data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_velocity_controller_ad10bdb7a1a3e7739371cf1dd324c7169}\label{class_velocity_controller_ad10bdb7a1a3e7739371cf1dd324c7169}} 
+\index{VelocityController@{VelocityController}!````~VelocityController@{$\sim$VelocityController}}
+\index{````~VelocityController@{$\sim$VelocityController}!VelocityController@{VelocityController}}
+\doxysubsubsection{\texorpdfstring{$\sim$VelocityController()}{~VelocityController()}}
+{\footnotesize\ttfamily Velocity\+Controller\+::$\sim$\+Velocity\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_velocity_controller_a7236bbcd7e85be50ee6512b7c1fa1ed3}\label{class_velocity_controller_a7236bbcd7e85be50ee6512b7c1fa1ed3}} 
+\index{VelocityController@{VelocityController}!GetRPS@{GetRPS}}
+\index{GetRPS@{GetRPS}!VelocityController@{VelocityController}}
+\doxysubsubsection{\texorpdfstring{GetRPS()}{GetRPS()}}
+{\footnotesize\ttfamily double Velocity\+Controller\+::\+Get\+R\+PS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 67 of file Velocity\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_velocity_controller_a79f69365c8c277125757b3b15119bcfc}\label{class_velocity_controller_a79f69365c8c277125757b3b15119bcfc}} 
+\index{VelocityController@{VelocityController}!GetTarget@{GetTarget}}
+\index{GetTarget@{GetTarget}!VelocityController@{VelocityController}}
+\doxysubsubsection{\texorpdfstring{GetTarget()}{GetTarget()}}
+{\footnotesize\ttfamily double Velocity\+Controller\+::\+Get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 44 of file Velocity\+Controller.\+h.
+
+\mbox{\Hypertarget{class_velocity_controller_afe11f0564aea740b84fdec61d1828aa8}\label{class_velocity_controller_afe11f0564aea740b84fdec61d1828aa8}} 
+\index{VelocityController@{VelocityController}!Init@{Init}}
+\index{Init@{Init}!VelocityController@{VelocityController}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Velocity\+Controller\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_mech_controller_a43c564581e046a9483e469c6da589db9}{I\+Mech\+Controller}}.
+
+
+
+Definition at line 49 of file Velocity\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_velocity_controller_aa6358fc3232691e458f996a8e8f4ce5a}\label{class_velocity_controller_aa6358fc3232691e458f996a8e8f4ce5a}} 
+\index{VelocityController@{VelocityController}!Run@{Run}}
+\index{Run@{Run}!VelocityController@{VelocityController}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Velocity\+Controller\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_mech_controller_a26c63d8b4ab0539d0f0902b2077356f4}{I\+Mech\+Controller}}.
+
+
+
+Definition at line 59 of file Velocity\+Controller.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/controllers/mechanisms/\mbox{\hyperlink{_velocity_controller_8h}{Velocity\+Controller.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/controllers/mechanisms/\mbox{\hyperlink{_velocity_controller_8cpp}{Velocity\+Controller.\+cpp}}\end{DoxyCompactItemize}

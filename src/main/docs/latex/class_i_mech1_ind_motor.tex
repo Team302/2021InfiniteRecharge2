@@ -1,0 +1,150 @@
+\hypertarget{class_i_mech1_ind_motor}{}\doxysection{I\+Mech1\+Ind\+Motor Interface Reference}
+\label{class_i_mech1_ind_motor}\index{IMech1IndMotor@{IMech1IndMotor}}
+
+
+This is the interface for mechanisms that have one independently controlled motor.  
+
+
+
+
+{\ttfamily \#include $<$I\+Mech1\+Ind\+Motor.\+h$>$}
+
+Inheritance diagram for I\+Mech1\+Ind\+Motor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_mech1_ind_motor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_mech1_ind_motor_ac2a4fc46e37505f96054a02496e5b5c1}{Update}} ()=0
+\begin{DoxyCompactList}\small\item\em update the output to the mechanism using the current controller and target value(s) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_mech1_ind_motor_a730d0d96efa4a272289934178aa4146f}{Update\+Target}} (double target)=0
+\item 
+virtual double \mbox{\hyperlink{class_i_mech1_ind_motor_af2ef42ade0b09e684d99cf7d5cd6e154}{Get\+Position}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the current position of the mechanism. The value is in inches or degrees. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_mech1_ind_motor_a6ae1e4e4f8c13903cc690bafed7e8a01}{Get\+Speed}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the current speed of the mechanism. The value is in inches per second or degrees per second. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_mech1_ind_motor_adff264c6bb32f6f1d5447844e635373c}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid)=0
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_mech1_ind_motor_ad689c8fd8a34ad4cc0c2360933a13c4c}{I\+Mech1\+Ind\+Motor}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_i_mech1_ind_motor_a6f3bd73d4c8e79d328e9c3b4df35fead}{$\sim$\+I\+Mech1\+Ind\+Motor}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the interface for mechanisms that have one independently controlled motor. 
+
+Interface for subsystems. 
+
+Definition at line 38 of file I\+Mech1\+Ind\+Motor.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_mech1_ind_motor_ad689c8fd8a34ad4cc0c2360933a13c4c}\label{class_i_mech1_ind_motor_ad689c8fd8a34ad4cc0c2360933a13c4c}} 
+\index{IMech1IndMotor@{IMech1IndMotor}!IMech1IndMotor@{IMech1IndMotor}}
+\index{IMech1IndMotor@{IMech1IndMotor}!IMech1IndMotor@{IMech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{IMech1IndMotor()}{IMech1IndMotor()}}
+{\footnotesize\ttfamily I\+Mech1\+Ind\+Motor\+::\+I\+Mech1\+Ind\+Motor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_i_mech1_ind_motor_a6f3bd73d4c8e79d328e9c3b4df35fead}\label{class_i_mech1_ind_motor_a6f3bd73d4c8e79d328e9c3b4df35fead}} 
+\index{IMech1IndMotor@{IMech1IndMotor}!````~IMech1IndMotor@{$\sim$IMech1IndMotor}}
+\index{````~IMech1IndMotor@{$\sim$IMech1IndMotor}!IMech1IndMotor@{IMech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{$\sim$IMech1IndMotor()}{~IMech1IndMotor()}}
+{\footnotesize\ttfamily virtual I\+Mech1\+Ind\+Motor\+::$\sim$\+I\+Mech1\+Ind\+Motor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_mech1_ind_motor_af2ef42ade0b09e684d99cf7d5cd6e154}\label{class_i_mech1_ind_motor_af2ef42ade0b09e684d99cf7d5cd6e154}} 
+\index{IMech1IndMotor@{IMech1IndMotor}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!IMech1IndMotor@{IMech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily virtual double I\+Mech1\+Ind\+Motor\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the current position of the mechanism. The value is in inches or degrees. 
+
+\begin{DoxyReturn}{Returns}
+double position in inches (translating mechanisms) or degrees (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech1_ind_motor_a3f2d85ee70cab5942178f9fa15d0abb6}{Mech1\+Ind\+Motor}}.
+
+\mbox{\Hypertarget{class_i_mech1_ind_motor_a6ae1e4e4f8c13903cc690bafed7e8a01}\label{class_i_mech1_ind_motor_a6ae1e4e4f8c13903cc690bafed7e8a01}} 
+\index{IMech1IndMotor@{IMech1IndMotor}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!IMech1IndMotor@{IMech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily virtual double I\+Mech1\+Ind\+Motor\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the current speed of the mechanism. The value is in inches per second or degrees per second. 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech1_ind_motor_af1c04bfbb55bc4fcd9f2972e61ddd7b0}{Mech1\+Ind\+Motor}}.
+
+\mbox{\Hypertarget{class_i_mech1_ind_motor_adff264c6bb32f6f1d5447844e635373c}\label{class_i_mech1_ind_motor_adff264c6bb32f6f1d5447844e635373c}} 
+\index{IMech1IndMotor@{IMech1IndMotor}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!IMech1IndMotor@{IMech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily virtual void I\+Mech1\+Ind\+Motor\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid\+: the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech1_ind_motor_a8278edecfa6865dad58493ce6f4012e2}{Mech1\+Ind\+Motor}}.
+
+\mbox{\Hypertarget{class_i_mech1_ind_motor_ac2a4fc46e37505f96054a02496e5b5c1}\label{class_i_mech1_ind_motor_ac2a4fc46e37505f96054a02496e5b5c1}} 
+\index{IMech1IndMotor@{IMech1IndMotor}!Update@{Update}}
+\index{Update@{Update}!IMech1IndMotor@{IMech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void I\+Mech1\+Ind\+Motor\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+update the output to the mechanism using the current controller and target value(s) 
+
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_mech1_ind_motor_a55626a8ad6f24b69b6472465fbcda416}{Mech1\+Ind\+Motor}}.
+
+\mbox{\Hypertarget{class_i_mech1_ind_motor_a730d0d96efa4a272289934178aa4146f}\label{class_i_mech1_ind_motor_a730d0d96efa4a272289934178aa4146f}} 
+\index{IMech1IndMotor@{IMech1IndMotor}!UpdateTarget@{UpdateTarget}}
+\index{UpdateTarget@{UpdateTarget}!IMech1IndMotor@{IMech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{UpdateTarget()}{UpdateTarget()}}
+{\footnotesize\ttfamily virtual void I\+Mech1\+Ind\+Motor\+::\+Update\+Target (\begin{DoxyParamCaption}\item[{double}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_mech1_ind_motor_a999fd41ccd8773e87018d5e6ac849e84}{Mech1\+Ind\+Motor}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_i_mech1_ind_motor_8h}{I\+Mech1\+Ind\+Motor.\+h}}\end{DoxyCompactItemize}

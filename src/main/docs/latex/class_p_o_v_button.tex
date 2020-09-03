@@ -1,0 +1,126 @@
+\hypertarget{class_p_o_v_button}{}\doxysection{P\+O\+V\+Button Class Reference}
+\label{class_p_o_v_button}\index{POVButton@{POVButton}}
+
+
+Class\+: \mbox{\hyperlink{class_p_o_v_button}{P\+O\+V\+Button}} Description\+: This is the P\+O\+V/\+D\+P\+AD button on a gamepad.  
+
+
+
+
+{\ttfamily \#include $<$P\+O\+V\+Button.\+h$>$}
+
+Inheritance diagram for P\+O\+V\+Button\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_p_o_v_button}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_o_v_button_ad11616bbe54411079bc37ed93fb8ab55}{P\+O\+V\+Button}} (frc\+::\+Generic\+H\+ID $\ast$gamepad, int button\+ID)
+\begin{DoxyCompactList}\small\item\em Class\+: \mbox{\hyperlink{class_p_o_v_button}{P\+O\+V\+Button}} Description\+: This is the P\+O\+V/\+D\+P\+AD button on a gamepad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_p_o_v_button_a3abe58c3923464a631a9b0e1d5b65466}{$\sim$\+P\+O\+V\+Button}} ()=default
+\item 
+bool \mbox{\hyperlink{class_p_o_v_button_a6c921d66a46b93ae1cfed1187a670176}{Is\+Button\+Pressed}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Is\+Button\+Pressed Description\+: Read the button and return true if it is pressed and false if it isn\textquotesingle{}t. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_p_o_v_button_a3bdbdb773897cf56ff2990dbba580650}{Was\+Button\+Released}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Was\+Button\+Released Description\+: Read whether the button was released since the last query. This is only valid for digital buttons (normal buttons and bumpers). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_p_o_v_button_a339f7d441c6ba892c9e6087f56e9174f}{Was\+Button\+Pressed}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Was\+Button\+Pressed Description\+: Read whether the button was pressed since the last query. This is only valid for digital buttons (normal buttons and bumpers). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class\+: \mbox{\hyperlink{class_p_o_v_button}{P\+O\+V\+Button}} Description\+: This is the P\+O\+V/\+D\+P\+AD button on a gamepad. 
+
+
+
+Definition at line 38 of file P\+O\+V\+Button.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_o_v_button_ad11616bbe54411079bc37ed93fb8ab55}\label{class_p_o_v_button_ad11616bbe54411079bc37ed93fb8ab55}} 
+\index{POVButton@{POVButton}!POVButton@{POVButton}}
+\index{POVButton@{POVButton}!POVButton@{POVButton}}
+\doxysubsubsection{\texorpdfstring{POVButton()}{POVButton()}}
+{\footnotesize\ttfamily P\+O\+V\+Button\+::\+P\+O\+V\+Button (\begin{DoxyParamCaption}\item[{frc\+::\+Generic\+H\+ID $\ast$}]{gamepad,  }\item[{int}]{button\+ID }\end{DoxyParamCaption})}
+
+
+
+Class\+: \mbox{\hyperlink{class_p_o_v_button}{P\+O\+V\+Button}} Description\+: This is the P\+O\+V/\+D\+P\+AD button on a gamepad. 
+
+
+
+Definition at line 29 of file P\+O\+V\+Button.\+cpp.
+
+\mbox{\Hypertarget{class_p_o_v_button_a3abe58c3923464a631a9b0e1d5b65466}\label{class_p_o_v_button_a3abe58c3923464a631a9b0e1d5b65466}} 
+\index{POVButton@{POVButton}!````~POVButton@{$\sim$POVButton}}
+\index{````~POVButton@{$\sim$POVButton}!POVButton@{POVButton}}
+\doxysubsubsection{\texorpdfstring{$\sim$POVButton()}{~POVButton()}}
+{\footnotesize\ttfamily P\+O\+V\+Button\+::$\sim$\+P\+O\+V\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_o_v_button_a6c921d66a46b93ae1cfed1187a670176}\label{class_p_o_v_button_a6c921d66a46b93ae1cfed1187a670176}} 
+\index{POVButton@{POVButton}!IsButtonPressed@{IsButtonPressed}}
+\index{IsButtonPressed@{IsButtonPressed}!POVButton@{POVButton}}
+\doxysubsubsection{\texorpdfstring{IsButtonPressed()}{IsButtonPressed()}}
+{\footnotesize\ttfamily bool P\+O\+V\+Button\+::\+Is\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Is\+Button\+Pressed Description\+: Read the button and return true if it is pressed and false if it isn\textquotesingle{}t. 
+
+
+
+Implements \mbox{\hyperlink{class_i_button_afe76bfef9fc9fe1b426a8b7010c816f8}{I\+Button}}.
+
+
+
+Definition at line 44 of file P\+O\+V\+Button.\+cpp.
+
+\mbox{\Hypertarget{class_p_o_v_button_a339f7d441c6ba892c9e6087f56e9174f}\label{class_p_o_v_button_a339f7d441c6ba892c9e6087f56e9174f}} 
+\index{POVButton@{POVButton}!WasButtonPressed@{WasButtonPressed}}
+\index{WasButtonPressed@{WasButtonPressed}!POVButton@{POVButton}}
+\doxysubsubsection{\texorpdfstring{WasButtonPressed()}{WasButtonPressed()}}
+{\footnotesize\ttfamily bool P\+O\+V\+Button\+::\+Was\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Was\+Button\+Pressed Description\+: Read whether the button was pressed since the last query. This is only valid for digital buttons (normal buttons and bumpers). 
+
+
+
+Implements \mbox{\hyperlink{class_i_button_a4bafcd42d1f576f892d22a110e801018}{I\+Button}}.
+
+
+
+Definition at line 59 of file P\+O\+V\+Button.\+cpp.
+
+\mbox{\Hypertarget{class_p_o_v_button_a3bdbdb773897cf56ff2990dbba580650}\label{class_p_o_v_button_a3bdbdb773897cf56ff2990dbba580650}} 
+\index{POVButton@{POVButton}!WasButtonReleased@{WasButtonReleased}}
+\index{WasButtonReleased@{WasButtonReleased}!POVButton@{POVButton}}
+\doxysubsubsection{\texorpdfstring{WasButtonReleased()}{WasButtonReleased()}}
+{\footnotesize\ttfamily bool P\+O\+V\+Button\+::\+Was\+Button\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Was\+Button\+Released Description\+: Read whether the button was released since the last query. This is only valid for digital buttons (normal buttons and bumpers). 
+
+
+
+Implements \mbox{\hyperlink{class_i_button_a393bd71900c7cb4df69e371bcc7ca123}{I\+Button}}.
+
+
+
+Definition at line 54 of file P\+O\+V\+Button.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/button/\mbox{\hyperlink{_p_o_v_button_8h}{P\+O\+V\+Button.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/button/\mbox{\hyperlink{_p_o_v_button_8cpp}{P\+O\+V\+Button.\+cpp}}\end{DoxyCompactItemize}

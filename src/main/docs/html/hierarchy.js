@@ -65,6 +65,7 @@ var hierarchy =
       [ "ScaledDeadbandValue", "class_scaled_deadband_value.html", null ]
     ] ],
     [ "IDragonAnglePositionSensor", "class_i_dragon_angle_position_sensor.html", null ],
+    [ "IDragonController", "class_i_dragon_controller.html", null ],
     [ "IDragonDistanceSensor", "class_i_dragon_distance_sensor.html", [
       [ "DragonLidar", "class_dragon_lidar.html", null ],
       [ "DragonLimelight", "class_dragon_limelight.html", null ],
@@ -86,6 +87,22 @@ var hierarchy =
       [ "DragonUltrasonic", "class_dragon_ultrasonic.html", null ],
       [ "DragonUltrasonicPWM", "class_dragon_ultrasonic_p_w_m.html", null ]
     ] ],
+    [ "IMech", "class_i_mech.html", [
+      [ "Mech", "class_mech.html", null ]
+    ] ],
+    [ "IMech1IndMotor", "class_i_mech1_ind_motor.html", [
+      [ "Mech1IndMotor", "class_mech1_ind_motor.html", null ]
+    ] ],
+    [ "IMech1IndSolenoid", "interface_i_mech1_ind_solenoid.html", null ],
+    [ "IMech1Servo", "class_i_mech1_servo.html", [
+      [ "Mech1Servo", "class_mech1_servo.html", null ]
+    ] ],
+    [ "IMech1Solenoid", "class_i_mech1_solenoid.html", [
+      [ "Mech1Solenoid", "class_mech1_solenoid.html", null ]
+    ] ],
+    [ "IMech2IndMotors", "class_i_mech2_ind_motors.html", [
+      [ "Mech2IndMotors", "class_mech2_ind_motors.html", null ]
+    ] ],
     [ "IMechanism", "class_i_mechanism.html", [
       [ "BallTransfer", "class_ball_transfer.html", null ],
       [ "Climber", "class_climber.html", null ],
@@ -100,7 +117,9 @@ var hierarchy =
       [ "Turret", "class_turret.html", null ]
     ] ],
     [ "IMechController", "class_i_mech_controller.html", [
-      [ "VelocityController", "class_velocity_controller.html", null ]
+      [ "VelocityController", "class_velocity_controller.html", [
+        [ "VelocityRPSController", "class_velocity_r_p_s_controller.html", null ]
+      ] ]
     ] ],
     [ "ImpellerStateMgr", "class_impeller_state_mgr.html", null ],
     [ "IntakeStateMgr", "class_intake_state_mgr.html", null ],
@@ -139,31 +158,16 @@ var hierarchy =
         [ "BallTransferState", "class_ball_transfer_state.html", null ],
         [ "BallTransferToImpeller", "class_ball_transfer_to_impeller.html", null ],
         [ "BallTransferToShooter", "class_ball_transfer_to_shooter.html", null ],
-        [ "ClimberHold", "class_climber_hold.html", null ],
-        [ "ClimberRaise", "class_climber_raise.html", null ],
         [ "ClimberState", "class_climber_state.html", null ],
-        [ "ClimberStowed", "class_climber_stowed.html", null ],
         [ "ControlPanelState", "class_control_panel_state.html", null ],
         [ "HoldTurretPosition", "class_hold_turret_position.html", null ],
         [ "HookDeliveryManualState", "class_hook_delivery_manual_state.html", null ],
         [ "HookDeliveryState", "class_hook_delivery_state.html", null ],
-        [ "ImpellerAgitate", "class_impeller_agitate.html", null ],
-        [ "ImpellerHold", "class_impeller_hold.html", null ],
-        [ "ImpellerOff", "class_impeller_off.html", null ],
         [ "ImpellerState", "class_impeller_state.html", null ],
-        [ "ImpellerToShooter", "class_impeller_to_shooter.html", null ],
-        [ "IntakeHPSState", "class_intake_h_p_s_state.html", null ],
-        [ "IntakeOff", "class_intake_off.html", null ],
-        [ "IntakeOn", "class_intake_on.html", null ],
         [ "IntakeState", "class_intake_state.html", null ],
-        [ "ShooterGetReady", "class_shooter_get_ready.html", null ],
-        [ "ShooterHoodHoldPosition", "class_shooter_hood_hold_position.html", null ],
-        [ "ShooterHoodMoveDown", "class_shooter_hood_move_down.html", null ],
-        [ "ShooterHoodMoveUp", "class_shooter_hood_move_up.html", null ],
         [ "ShooterHoodState", "class_shooter_hood_state.html", null ],
-        [ "ShooterOff", "class_shooter_off.html", null ],
-        [ "ShooterShoot", "class_shooter_shoot.html", null ],
-        [ "ShooterState", "class_shooter_state.html", null ]
+        [ "ShooterState", "class_shooter_state.html", null ],
+        [ "TurretTurnAngle", "class_turret_turn_angle.html", null ]
       ] ],
       [ "ShooterHoodManual", "class_shooter_hood_manual.html", null ],
       [ "ShooterSaveState", "class_shooter_save_state.html", null ],

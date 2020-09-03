@@ -1,0 +1,244 @@
+\hypertarget{class_i_chassis}{}\doxysection{I\+Chassis Interface Reference}
+\label{class_i_chassis}\index{IChassis@{IChassis}}
+
+
+Interface for differential drives.  
+
+
+
+
+{\ttfamily \#include $<$I\+Chassis.\+h$>$}
+
+Inheritance diagram for I\+Chassis\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_chassis}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_chassis_a98a230f90ea350636f7b720efba18d8a}{Set\+Output}} (\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} control\+Type, double left\+Value, double right\+Value)=0
+\begin{DoxyCompactList}\small\item\em Run chassis. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_chassis_ac1978a942d42934c78784c7099edb538}{Get\+Current\+Position}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the current position of the center of the \mbox{\hyperlink{class_dragon_chassis}{Dragon\+Chassis}} in inches. ~\newline
+ \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_chassis_a42018bc4f59f4e80bcaa801a2ba296eb}{Get\+Current\+Left\+Position}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the current position of the left side of the \mbox{\hyperlink{class_dragon_chassis}{Dragon\+Chassis}} in inches. ~\newline
+ \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_chassis_a035b8170ae23c7d6461a77479ec89d1b}{Get\+Current\+Right\+Position}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the current position of the right side of the \mbox{\hyperlink{class_dragon_chassis}{Dragon\+Chassis}} in inches. ~\newline
+ \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_chassis_a022a02c30026eb8f9d169332a448f9d1}{Get\+Current\+Speed}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the current speed of the center of the \mbox{\hyperlink{class_dragon_chassis}{Dragon\+Chassis}} in inches per second. ~\newline
+ \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_chassis_a62a089df26ba1267f7509318fa54f21d}{Get\+Current\+Left\+Speed}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the current speed of the left side of the \mbox{\hyperlink{class_dragon_chassis}{Dragon\+Chassis}} in inches per second. ~\newline
+ \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_chassis_a757ef3421a2a88c0c7d00e84d1c87313}{Get\+Current\+Right\+Speed}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the current speed of the right side of the \mbox{\hyperlink{class_dragon_chassis}{Dragon\+Chassis}} in inches per second. ~\newline
+ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_chassis_a64b0c5e1c4aa54ecfac53c7677b184e7}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid)=0
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_chassis_aef1d1542c93a347d2a4915f50085bd8a}{Get\+Wheel\+Diameter}} () const =0
+\item 
+\mbox{\hyperlink{class_i_chassis_af4d7d56ee1cd2e0a249402941e3c8f48}{I\+Chassis}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_i_chassis_a251e92765c8e297490b62875b4c2fd1f}{$\sim$\+I\+Chassis}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for differential drives. 
+
+Definition at line 34 of file I\+Chassis.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_chassis_af4d7d56ee1cd2e0a249402941e3c8f48}\label{class_i_chassis_af4d7d56ee1cd2e0a249402941e3c8f48}} 
+\index{IChassis@{IChassis}!IChassis@{IChassis}}
+\index{IChassis@{IChassis}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{IChassis()}{IChassis()}}
+{\footnotesize\ttfamily I\+Chassis\+::\+I\+Chassis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_i_chassis_a251e92765c8e297490b62875b4c2fd1f}\label{class_i_chassis_a251e92765c8e297490b62875b4c2fd1f}} 
+\index{IChassis@{IChassis}!````~IChassis@{$\sim$IChassis}}
+\index{````~IChassis@{$\sim$IChassis}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{$\sim$IChassis()}{~IChassis()}}
+{\footnotesize\ttfamily virtual I\+Chassis\+::$\sim$\+I\+Chassis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_chassis_a42018bc4f59f4e80bcaa801a2ba296eb}\label{class_i_chassis_a42018bc4f59f4e80bcaa801a2ba296eb}} 
+\index{IChassis@{IChassis}!GetCurrentLeftPosition@{GetCurrentLeftPosition}}
+\index{GetCurrentLeftPosition@{GetCurrentLeftPosition}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{GetCurrentLeftPosition()}{GetCurrentLeftPosition()}}
+{\footnotesize\ttfamily virtual double I\+Chassis\+::\+Get\+Current\+Left\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the current position of the left side of the \mbox{\hyperlink{class_dragon_chassis}{Dragon\+Chassis}} in inches. ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+double position in inches of the left side of the chassis 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_chassis_a17a96d5df8c06046dc24e2d84940baad}{Dragon\+Chassis}}.
+
+\mbox{\Hypertarget{class_i_chassis_a62a089df26ba1267f7509318fa54f21d}\label{class_i_chassis_a62a089df26ba1267f7509318fa54f21d}} 
+\index{IChassis@{IChassis}!GetCurrentLeftSpeed@{GetCurrentLeftSpeed}}
+\index{GetCurrentLeftSpeed@{GetCurrentLeftSpeed}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{GetCurrentLeftSpeed()}{GetCurrentLeftSpeed()}}
+{\footnotesize\ttfamily virtual double I\+Chassis\+::\+Get\+Current\+Left\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the current speed of the left side of the \mbox{\hyperlink{class_dragon_chassis}{Dragon\+Chassis}} in inches per second. ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches per second of the left side of the chassis 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_chassis_af7f34790a7ae5ab604214486359d4dcb}{Dragon\+Chassis}}.
+
+\mbox{\Hypertarget{class_i_chassis_ac1978a942d42934c78784c7099edb538}\label{class_i_chassis_ac1978a942d42934c78784c7099edb538}} 
+\index{IChassis@{IChassis}!GetCurrentPosition@{GetCurrentPosition}}
+\index{GetCurrentPosition@{GetCurrentPosition}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{GetCurrentPosition()}{GetCurrentPosition()}}
+{\footnotesize\ttfamily virtual double I\+Chassis\+::\+Get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the current position of the center of the \mbox{\hyperlink{class_dragon_chassis}{Dragon\+Chassis}} in inches. ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+double position in inches of the center of the chassis 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_chassis_acef48e705afedea9337b90272bae5a80}{Dragon\+Chassis}}.
+
+\mbox{\Hypertarget{class_i_chassis_a035b8170ae23c7d6461a77479ec89d1b}\label{class_i_chassis_a035b8170ae23c7d6461a77479ec89d1b}} 
+\index{IChassis@{IChassis}!GetCurrentRightPosition@{GetCurrentRightPosition}}
+\index{GetCurrentRightPosition@{GetCurrentRightPosition}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{GetCurrentRightPosition()}{GetCurrentRightPosition()}}
+{\footnotesize\ttfamily virtual double I\+Chassis\+::\+Get\+Current\+Right\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the current position of the right side of the \mbox{\hyperlink{class_dragon_chassis}{Dragon\+Chassis}} in inches. ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+double position in inches of the right side of the chassis 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_chassis_aca949d9c42fdb5fa948a8fd7b5918e1d}{Dragon\+Chassis}}.
+
+\mbox{\Hypertarget{class_i_chassis_a757ef3421a2a88c0c7d00e84d1c87313}\label{class_i_chassis_a757ef3421a2a88c0c7d00e84d1c87313}} 
+\index{IChassis@{IChassis}!GetCurrentRightSpeed@{GetCurrentRightSpeed}}
+\index{GetCurrentRightSpeed@{GetCurrentRightSpeed}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{GetCurrentRightSpeed()}{GetCurrentRightSpeed()}}
+{\footnotesize\ttfamily virtual double I\+Chassis\+::\+Get\+Current\+Right\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the current speed of the right side of the \mbox{\hyperlink{class_dragon_chassis}{Dragon\+Chassis}} in inches per second. ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches per second of the right side of the chassis 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_chassis_af8880818f285216514de50c8a400678e}{Dragon\+Chassis}}.
+
+\mbox{\Hypertarget{class_i_chassis_a022a02c30026eb8f9d169332a448f9d1}\label{class_i_chassis_a022a02c30026eb8f9d169332a448f9d1}} 
+\index{IChassis@{IChassis}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily virtual double I\+Chassis\+::\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the current speed of the center of the \mbox{\hyperlink{class_dragon_chassis}{Dragon\+Chassis}} in inches per second. ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches per second of the center of the chassis 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_chassis_a54c251e24c4a4504f1363e17239a4fbc}{Dragon\+Chassis}}.
+
+\mbox{\Hypertarget{class_i_chassis_aef1d1542c93a347d2a4915f50085bd8a}\label{class_i_chassis_aef1d1542c93a347d2a4915f50085bd8a}} 
+\index{IChassis@{IChassis}!GetWheelDiameter@{GetWheelDiameter}}
+\index{GetWheelDiameter@{GetWheelDiameter}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{GetWheelDiameter()}{GetWheelDiameter()}}
+{\footnotesize\ttfamily virtual double I\+Chassis\+::\+Get\+Wheel\+Diameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_chassis_a53e2d52a02a6653a0ecb0de910271e45}{Dragon\+Chassis}}.
+
+\mbox{\Hypertarget{class_i_chassis_a64b0c5e1c4aa54ecfac53c7677b184e7}\label{class_i_chassis_a64b0c5e1c4aa54ecfac53c7677b184e7}} 
+\index{IChassis@{IChassis}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily virtual void I\+Chassis\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid\+: the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_chassis_a0db28ff16679b084010cb4cd706c598e}{Dragon\+Chassis}}.
+
+\mbox{\Hypertarget{class_i_chassis_a98a230f90ea350636f7b720efba18d8a}\label{class_i_chassis_a98a230f90ea350636f7b720efba18d8a}} 
+\index{IChassis@{IChassis}!SetOutput@{SetOutput}}
+\index{SetOutput@{SetOutput}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{SetOutput()}{SetOutput()}}
+{\footnotesize\ttfamily virtual void I\+Chassis\+::\+Set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}}]{control\+Type,  }\item[{double}]{left\+Value,  }\item[{double}]{right\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Run chassis. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}} & control\+Type\+: How are the item(s) being controlled \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & left\+Vvalue\+: Left side target (units are based on the control\+Type) \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & right\+Value\+: Right side target (units are based on the control\+Type) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_chassis_a39dce0dd0a51b21be140226cc1e9931a}{Dragon\+Chassis}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_i_chassis_8h}{I\+Chassis.\+h}}\end{DoxyCompactItemize}

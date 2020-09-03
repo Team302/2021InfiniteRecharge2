@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team 302 Robot: controllers/ControlData.cpp Source File</title>
+<title>Robot: C:/robotcm/training2020/src/main/cpp/controllers/ControlData.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Team 302 Robot
+   <div id="projectname">Robot
    </div>
   </td>
  </tr>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('_control_data_8cpp_source.html','');})
 </div><!--header-->
 <div class="contents">
 <a href="_control_data_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//====================================================================================================================================================</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Copyright 2019 Lake Orion Robotics FIRST Team 302</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Copyright 2020 Lake Orion Robotics FIRST Team 302</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), </span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, </span></div>
@@ -128,19 +128,20 @@ $(document).ready(function(){initNavTree('_control_data_8cpp_source.html','');})
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">double</span>                                      peakVal,</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">double</span>                                      nominalVal</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;) : m_mode( mode ),</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    m_identifier( identifier ),</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    m_proportional( proportional ),</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    m_integral( integral ),</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    m_derivative( derivative ),</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    m_feedforward( feedforward ),</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    m_iZone( integralZone ),</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    m_maxAcceleration( maxAcceleration ),</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    m_cruiseVelocity( cruiseVelocity ),</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    m_peakValue( peakVal ),</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    m_nominalValue( nominalVal )</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    m_runLoc( server ),</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    m_identifier( identifier ),</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    m_proportional( proportional ),</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    m_integral( integral ),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    m_derivative( derivative ),</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    m_feedforward( feedforward ),</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    m_iZone( integralZone ),</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    m_maxAcceleration( maxAcceleration ),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    m_cruiseVelocity( cruiseVelocity ),</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    m_peakValue( peakVal ),</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    m_nominalValue( nominalVal )</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_control_modes_html_a6d6123ab559a2a754b1a8d46fc078487"><div class="ttname"><a href="class_control_modes.html#a6d6123ab559a2a754b1a8d46fc078487">ControlModes::CONTROL_RUN_LOCS</a></div><div class="ttdeci">CONTROL_RUN_LOCS</div><div class="ttdef"><b>Definition:</b> <a href="_control_modes_8h_source.html#l00040">ControlModes.h:40</a></div></div>
@@ -151,7 +152,7 @@ $(document).ready(function(){initNavTree('_control_data_8cpp_source.html','');})
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_87b6ed4386158a4d6cd0ecd5fb5bd5c2.html">controllers</a></li><li class="navelem"><a class="el" href="_control_data_8cpp.html">ControlData.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_4401199a54cb40c0637ceb8dd0f3c5fd.html">robotcm</a></li><li class="navelem"><a class="el" href="dir_24d5b6e083bf191a3f38d4ae9f1a0592.html">training2020</a></li><li class="navelem"><a class="el" href="dir_6cae7cc3464d42f3e134af4325c5ce6e.html">src</a></li><li class="navelem"><a class="el" href="dir_32a1028ae0a47e7b34b3c8fd0b05a58d.html">main</a></li><li class="navelem"><a class="el" href="dir_9dee27190e861708e732c03adc0229f4.html">cpp</a></li><li class="navelem"><a class="el" href="dir_6be6e401d224ba1f5b6ab04db1c4cafe.html">controllers</a></li><li class="navelem"><a class="el" href="_control_data_8cpp.html">ControlData.cpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

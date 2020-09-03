@@ -1,0 +1,305 @@
+\hypertarget{class_arcade_drive}{}\doxysection{Arcade\+Drive Class Reference}
+\label{class_arcade_drive}\index{ArcadeDrive@{ArcadeDrive}}
+
+
+{\ttfamily \#include $<$Arcade\+Drive.\+h$>$}
+
+Inheritance diagram for Arcade\+Drive\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_arcade_drive}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_arcade_drive_a25967baf04ef247f67aff2f4297d99d8}{Arcade\+Drive}} ()
+\begin{DoxyCompactList}\small\item\em initialize the object and validate the necessary items are not nullptrs \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_arcade_drive_a5c96aff37fe5d0af942276288451f5e2}{$\sim$\+Arcade\+Drive}} ()=default
+\item 
+void \mbox{\hyperlink{class_arcade_drive_ae7f039013a505a09abc8f7203f6fd063}{Set\+Curvature\+Based}} (bool Curvature\+Based)
+\begin{DoxyCompactList}\small\item\em toggle between curvature and normal modes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_arcade_drive_ad498acb6a567ee09fe1976bc09cbae6e}{Init}} () override
+\begin{DoxyCompactList}\small\item\em initialize the profiles for the various gamepad inputs \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_arcade_drive_a5e545344cf8ad3566f3ffbb571d75eab}{Run}} () override
+\begin{DoxyCompactList}\small\item\em calculate the output for the wheels on the chassis from the throttle and steer components \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_arcade_drive_a4bc91dcea5ccecad1ec5531d2e5ca469}{At\+Target}} () const override
+\begin{DoxyCompactList}\small\item\em indicates that we are not at our target \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{class_arcade_drive_ade85686198528341067ef4d09b3ae166}{Get\+Throttle}} ()
+\begin{DoxyCompactList}\small\item\em get the throttle component from the game controller \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_arcade_drive_a79fe9f851e62b7abdb54eecbda36b165}{Get\+Steer}} ()
+\begin{DoxyCompactList}\small\item\em get the steer component from the game controller \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_arcade_drive_a780d74c9d07285eab84982e60053bcab}{Normal\+Drive}} (double throttle, double steer, double $\ast$left, double $\ast$right)
+\begin{DoxyCompactList}\small\item\em calculate the normal output values for the wheels on the chassis from the throttle and steer components \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_arcade_drive_af97807eb188bc6c561d80469a364bf83}{Curvature\+Drive}} (double throttle, double steer, double $\ast$left, double $\ast$right)
+\begin{DoxyCompactList}\small\item\em calculate the curvature-\/based output values for the wheels on the chassis from the throttle and steer components as well as the quick turn input \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_teleop_control}{Teleop\+Control}} $\ast$ \mbox{\hyperlink{class_arcade_drive_acb1a70e9c3bea7f2f156301cfb86bdf8}{Get\+Controller}} () const
+\begin{DoxyCompactList}\small\item\em return the teleop controller mapper \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_chassis}{I\+Chassis}} $>$ \mbox{\hyperlink{class_arcade_drive_ac912ea0a5abb34cdf5a6469dc7288296}{Get\+Chassis}} () const
+\begin{DoxyCompactList}\small\item\em return the chassis \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 30 of file Arcade\+Drive.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_arcade_drive_a25967baf04ef247f67aff2f4297d99d8}\label{class_arcade_drive_a25967baf04ef247f67aff2f4297d99d8}} 
+\index{ArcadeDrive@{ArcadeDrive}!ArcadeDrive@{ArcadeDrive}}
+\index{ArcadeDrive@{ArcadeDrive}!ArcadeDrive@{ArcadeDrive}}
+\doxysubsubsection{\texorpdfstring{ArcadeDrive()}{ArcadeDrive()}}
+{\footnotesize\ttfamily Arcade\+Drive\+::\+Arcade\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initialize the object and validate the necessary items are not nullptrs 
+
+
+
+Definition at line 35 of file Arcade\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_arcade_drive_a5c96aff37fe5d0af942276288451f5e2}\label{class_arcade_drive_a5c96aff37fe5d0af942276288451f5e2}} 
+\index{ArcadeDrive@{ArcadeDrive}!````~ArcadeDrive@{$\sim$ArcadeDrive}}
+\index{````~ArcadeDrive@{$\sim$ArcadeDrive}!ArcadeDrive@{ArcadeDrive}}
+\doxysubsubsection{\texorpdfstring{$\sim$ArcadeDrive()}{~ArcadeDrive()}}
+{\footnotesize\ttfamily Arcade\+Drive\+::$\sim$\+Arcade\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_arcade_drive_a4bc91dcea5ccecad1ec5531d2e5ca469}\label{class_arcade_drive_a4bc91dcea5ccecad1ec5531d2e5ca469}} 
+\index{ArcadeDrive@{ArcadeDrive}!AtTarget@{AtTarget}}
+\index{AtTarget@{AtTarget}!ArcadeDrive@{ArcadeDrive}}
+\doxysubsubsection{\texorpdfstring{AtTarget()}{AtTarget()}}
+{\footnotesize\ttfamily bool Arcade\+Drive\+::\+At\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+indicates that we are not at our target 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_state_a15624686c47f28cf90f76bb28e938937}{I\+State}}.
+
+
+
+Definition at line 104 of file Arcade\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_arcade_drive_af97807eb188bc6c561d80469a364bf83}\label{class_arcade_drive_af97807eb188bc6c561d80469a364bf83}} 
+\index{ArcadeDrive@{ArcadeDrive}!CurvatureDrive@{CurvatureDrive}}
+\index{CurvatureDrive@{CurvatureDrive}!ArcadeDrive@{ArcadeDrive}}
+\doxysubsubsection{\texorpdfstring{CurvatureDrive()}{CurvatureDrive()}}
+{\footnotesize\ttfamily void Arcade\+Drive\+::\+Curvature\+Drive (\begin{DoxyParamCaption}\item[{double}]{throttle,  }\item[{double}]{steer,  }\item[{double $\ast$}]{left,  }\item[{double $\ast$}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+calculate the curvature-\/based output values for the wheels on the chassis from the throttle and steer components as well as the quick turn input 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thtottie} & -\/ forward/backward value between -\/1.\+0 and 1.\+0 \\
+\hline
+\mbox{\texttt{ in}}  & {\em steer} & -\/ turning value between -\/1.\+0 and 1.\+0 \\
+\hline
+\mbox{\texttt{ out}}  & {\em left} & -\/ calculated value to set to the left wheels \\
+\hline
+\mbox{\texttt{ out}}  & {\em right} & -\/ calculated value to set to the right wheels \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 161 of file Arcade\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_arcade_drive_ac912ea0a5abb34cdf5a6469dc7288296}\label{class_arcade_drive_ac912ea0a5abb34cdf5a6469dc7288296}} 
+\index{ArcadeDrive@{ArcadeDrive}!GetChassis@{GetChassis}}
+\index{GetChassis@{GetChassis}!ArcadeDrive@{ArcadeDrive}}
+\doxysubsubsection{\texorpdfstring{GetChassis()}{GetChassis()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_i_chassis}{I\+Chassis}}$>$ Arcade\+Drive\+::\+Get\+Chassis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+return the chassis 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+I\+Chassis$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file Arcade\+Drive.\+h.
+
+\mbox{\Hypertarget{class_arcade_drive_acb1a70e9c3bea7f2f156301cfb86bdf8}\label{class_arcade_drive_acb1a70e9c3bea7f2f156301cfb86bdf8}} 
+\index{ArcadeDrive@{ArcadeDrive}!GetController@{GetController}}
+\index{GetController@{GetController}!ArcadeDrive@{ArcadeDrive}}
+\doxysubsubsection{\texorpdfstring{GetController()}{GetController()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_teleop_control}{Teleop\+Control}}$\ast$ Arcade\+Drive\+::\+Get\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+return the teleop controller mapper 
+
+\begin{DoxyReturn}{Returns}
+Teleop\+Control$\ast$ -\/ controller mapper 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Arcade\+Drive.\+h.
+
+\mbox{\Hypertarget{class_arcade_drive_a79fe9f851e62b7abdb54eecbda36b165}\label{class_arcade_drive_a79fe9f851e62b7abdb54eecbda36b165}} 
+\index{ArcadeDrive@{ArcadeDrive}!GetSteer@{GetSteer}}
+\index{GetSteer@{GetSteer}!ArcadeDrive@{ArcadeDrive}}
+\doxysubsubsection{\texorpdfstring{GetSteer()}{GetSteer()}}
+{\footnotesize\ttfamily double Arcade\+Drive\+::\+Get\+Steer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+get the steer component from the game controller 
+
+\begin{DoxyReturn}{Returns}
+double -\/ steer value between -\/1.\+0 and 1.\+0 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_t_a_drive_a0f50c172e24c8f9fc901320c71d1b53c}{G\+T\+A\+Drive}}.
+
+
+
+Definition at line 120 of file Arcade\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_arcade_drive_ade85686198528341067ef4d09b3ae166}\label{class_arcade_drive_ade85686198528341067ef4d09b3ae166}} 
+\index{ArcadeDrive@{ArcadeDrive}!GetThrottle@{GetThrottle}}
+\index{GetThrottle@{GetThrottle}!ArcadeDrive@{ArcadeDrive}}
+\doxysubsubsection{\texorpdfstring{GetThrottle()}{GetThrottle()}}
+{\footnotesize\ttfamily double Arcade\+Drive\+::\+Get\+Throttle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+get the throttle component from the game controller 
+
+\begin{DoxyReturn}{Returns}
+double -\/ throttle value between -\/1.\+0 and 1.\+0 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_t_a_drive_a87797574579b59e0618c8b2a274d7982}{G\+T\+A\+Drive}}.
+
+
+
+Definition at line 112 of file Arcade\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_arcade_drive_ad498acb6a567ee09fe1976bc09cbae6e}\label{class_arcade_drive_ad498acb6a567ee09fe1976bc09cbae6e}} 
+\index{ArcadeDrive@{ArcadeDrive}!Init@{Init}}
+\index{Init@{Init}!ArcadeDrive@{ArcadeDrive}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Arcade\+Drive\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialize the profiles for the various gamepad inputs 
+
+\begin{DoxyReturn}{Returns}
+void ~\newline
+
+
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_state_ac1400e68fde2f088873f5ec283309977}{I\+State}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_t_a_drive_a413998dcf52c14974b530d729ad779cb}{G\+T\+A\+Drive}}.
+
+
+
+Definition at line 68 of file Arcade\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_arcade_drive_a780d74c9d07285eab84982e60053bcab}\label{class_arcade_drive_a780d74c9d07285eab84982e60053bcab}} 
+\index{ArcadeDrive@{ArcadeDrive}!NormalDrive@{NormalDrive}}
+\index{NormalDrive@{NormalDrive}!ArcadeDrive@{ArcadeDrive}}
+\doxysubsubsection{\texorpdfstring{NormalDrive()}{NormalDrive()}}
+{\footnotesize\ttfamily void Arcade\+Drive\+::\+Normal\+Drive (\begin{DoxyParamCaption}\item[{double}]{throttle,  }\item[{double}]{steer,  }\item[{double $\ast$}]{left,  }\item[{double $\ast$}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+calculate the normal output values for the wheels on the chassis from the throttle and steer components 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thtottie} & -\/ forward/backward value between -\/1.\+0 and 1.\+0 \\
+\hline
+\mbox{\texttt{ in}}  & {\em steer} & -\/ turning value between -\/1.\+0 and 1.\+0 \\
+\hline
+\mbox{\texttt{ out}}  & {\em left} & -\/ calculated value to set to the left wheels \\
+\hline
+\mbox{\texttt{ out}}  & {\em right} & -\/ calculated value to set to the right wheels \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file Arcade\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_arcade_drive_a5e545344cf8ad3566f3ffbb571d75eab}\label{class_arcade_drive_a5e545344cf8ad3566f3ffbb571d75eab}} 
+\index{ArcadeDrive@{ArcadeDrive}!Run@{Run}}
+\index{Run@{Run}!ArcadeDrive@{ArcadeDrive}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Arcade\+Drive\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+calculate the output for the wheels on the chassis from the throttle and steer components 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_state_a1dc31736da7d9e9322c1cc417672ea0f}{I\+State}}.
+
+
+
+Definition at line 80 of file Arcade\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_arcade_drive_ae7f039013a505a09abc8f7203f6fd063}\label{class_arcade_drive_ae7f039013a505a09abc8f7203f6fd063}} 
+\index{ArcadeDrive@{ArcadeDrive}!SetCurvatureBased@{SetCurvatureBased}}
+\index{SetCurvatureBased@{SetCurvatureBased}!ArcadeDrive@{ArcadeDrive}}
+\doxysubsubsection{\texorpdfstring{SetCurvatureBased()}{SetCurvatureBased()}}
+{\footnotesize\ttfamily void Arcade\+Drive\+::\+Set\+Curvature\+Based (\begin{DoxyParamCaption}\item[{bool}]{curvature\+Based }\end{DoxyParamCaption})}
+
+
+
+toggle between curvature and normal modes 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em true} & -\/ use curvature-\/based driving, false use normal (default) drive mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file Arcade\+Drive.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/states/chassis/\mbox{\hyperlink{_arcade_drive_8h}{Arcade\+Drive.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/states/chassis/\mbox{\hyperlink{_arcade_drive_8cpp}{Arcade\+Drive.\+cpp}}\end{DoxyCompactItemize}

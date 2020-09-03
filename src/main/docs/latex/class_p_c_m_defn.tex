@@ -1,0 +1,83 @@
+\hypertarget{class_p_c_m_defn}{}\doxysection{P\+C\+M\+Defn Class Reference}
+\label{class_p_c_m_defn}\index{PCMDefn@{PCMDefn}}
+
+
+X\+ML parsing for the P\+CM node in the \mbox{\hyperlink{class_robot}{Robot}} definition xml file. Upon successful parsing, it will create a P\+CM singleton object. The parsing leverages the 3rd party Open Source Pugixml library (\href{https://pugixml.org/}{\texttt{ https\+://pugixml.\+org/}}).  
+
+
+
+
+{\ttfamily \#include $<$P\+C\+M\+Defn.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_c_m_defn_a74b75fefd1e3fee1edd2a68602fa6f85}{P\+C\+M\+Defn}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_p_c_m_defn_a067cb769323ba002ceba36a48805f4d8}{$\sim$\+P\+C\+M\+Defn}} ()=default
+\item 
+frc\+::\+Compressor $\ast$ \mbox{\hyperlink{class_p_c_m_defn_a05de8779255e615f4a0aa787b1c43817}{Parse\+X\+ML}} (pugi\+::xml\+\_\+node P\+D\+P\+Node)
+\begin{DoxyCompactList}\small\item\em Parse a pcm X\+ML element and create a Power\+Distribution\+Panel$\ast$ from its definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+X\+ML parsing for the P\+CM node in the \mbox{\hyperlink{class_robot}{Robot}} definition xml file. Upon successful parsing, it will create a P\+CM singleton object. The parsing leverages the 3rd party Open Source Pugixml library (\href{https://pugixml.org/}{\texttt{ https\+://pugixml.\+org/}}). 
+
+X\+ML parsing for the P\+CM node in the \mbox{\hyperlink{class_robot}{Robot}} definition xml file. Upon successful parsing, it will create a Compressor object and solenoid objects. The parsing leverages the 3rd party Open Source Pugixml library (\href{https://pugixml.org/}{\texttt{ https\+://pugixml.\+org/}}). 
+
+Definition at line 37 of file P\+C\+M\+Defn.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_c_m_defn_a74b75fefd1e3fee1edd2a68602fa6f85}\label{class_p_c_m_defn_a74b75fefd1e3fee1edd2a68602fa6f85}} 
+\index{PCMDefn@{PCMDefn}!PCMDefn@{PCMDefn}}
+\index{PCMDefn@{PCMDefn}!PCMDefn@{PCMDefn}}
+\doxysubsubsection{\texorpdfstring{PCMDefn()}{PCMDefn()}}
+{\footnotesize\ttfamily P\+C\+M\+Defn\+::\+P\+C\+M\+Defn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_p_c_m_defn_a067cb769323ba002ceba36a48805f4d8}\label{class_p_c_m_defn_a067cb769323ba002ceba36a48805f4d8}} 
+\index{PCMDefn@{PCMDefn}!````~PCMDefn@{$\sim$PCMDefn}}
+\index{````~PCMDefn@{$\sim$PCMDefn}!PCMDefn@{PCMDefn}}
+\doxysubsubsection{\texorpdfstring{$\sim$PCMDefn()}{~PCMDefn()}}
+{\footnotesize\ttfamily virtual P\+C\+M\+Defn\+::$\sim$\+P\+C\+M\+Defn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c_m_defn_a05de8779255e615f4a0aa787b1c43817}\label{class_p_c_m_defn_a05de8779255e615f4a0aa787b1c43817}} 
+\index{PCMDefn@{PCMDefn}!ParseXML@{ParseXML}}
+\index{ParseXML@{ParseXML}!PCMDefn@{PCMDefn}}
+\doxysubsubsection{\texorpdfstring{ParseXML()}{ParseXML()}}
+{\footnotesize\ttfamily Compressor $\ast$ P\+C\+M\+Defn\+::\+Parse\+X\+ML (\begin{DoxyParamCaption}\item[{pugi\+::xml\+\_\+node}]{P\+D\+P\+Node }\end{DoxyParamCaption})}
+
+
+
+Parse a pcm X\+ML element and create a Power\+Distribution\+Panel$\ast$ from its definition. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em xml\+\_\+node} & P\+D\+P\+Node the $<$P\+DP element in the xml document \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Power\+Distribution\+Panel$\ast$ P\+DP object
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em xml\+\_\+node} & P\+C\+M\+Node the $<$P\+CM element in the xml document \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Compressor$\ast$ P\+CM object 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file P\+C\+M\+Defn.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/xmlhw/\mbox{\hyperlink{_p_c_m_defn_8h}{P\+C\+M\+Defn.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/xmlhw/\mbox{\hyperlink{_p_c_m_defn_8cpp}{P\+C\+M\+Defn.\+cpp}}\end{DoxyCompactItemize}

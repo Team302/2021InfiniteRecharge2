@@ -1,0 +1,303 @@
+\hypertarget{class_control_data}{}\doxysection{Control\+Data Class Reference}
+\label{class_control_data}\index{ControlData@{ControlData}}
+
+
+{\ttfamily \#include $<$Control\+Data.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_control_data_ad623b082611e817d34bc721b5eb197af}{Control\+Data}} (\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} mode, \mbox{\hyperlink{class_control_modes_a6d6123ab559a2a754b1a8d46fc078487}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+R\+U\+N\+\_\+\+L\+O\+CS}} server, std\+::string indentifier, double proportional, double integral, double derivative, double feedforward, double integral\+Zone, double max\+Acceleration, double cruise\+Velocity, double peak\+Value, double nominal\+Value)
+\begin{DoxyCompactList}\small\item\em Create the \mbox{\hyperlink{class_control_data}{Control\+Data}} object that is used to control mechanisms. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_control_data_aaa47e895701543d53f2a14ac533bc9b6}{$\sim$\+Control\+Data}} ()=default
+\item 
+\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{class_control_data_a3e7157f943ecefb04cb30c274bf9a330}{Get\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the Control Type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_control_modes_a6d6123ab559a2a754b1a8d46fc078487}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+R\+U\+N\+\_\+\+L\+O\+CS}} \mbox{\hyperlink{class_control_data_a63bfe2e61c429f5bdf75f9201a075481}{Get\+Run\+Loc}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve where to run the controller on. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_control_data_adf5ce6319e2035f19991a4ede226ef6f}{Get\+Identifier}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the identifier. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_data_a905b66966177981526553ca8145f560f}{GetP}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the P coefficient for a P\+I\+D-\/based control mode. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_data_ae1e28d9f875136cef18597294645503a}{GetI}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the I coefficient for a P\+I\+D-\/based control mode. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_data_acbaf81f6f7dab5edcf4fcc445caf0dcd}{GetD}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the D coefficient for a P\+I\+D-\/based control mode. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_data_adbe7269501e2db1374a5f697da0fbe09}{GetF}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the Feed-\/forwared coefficient for a P\+I\+D-\/based control mode. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_data_a040e2073bdf59bb349088da5d45322ae}{Get\+I\+Zone}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the izone for a P\+I\+D-\/based control mode (where the intregal is reset) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_data_a75861c8f8b2fbe8ba22e134c660cdaf9}{Get\+Max\+Acceleration}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the max acceleration for a trapezoid control mode. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_data_aada3659777868036d560a428ea55bcdf}{Get\+Cruise\+Velocity}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the cruise velocity for a trapezoid control mode. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_data_ad63cd22d187b4b30d27d8482a8ee3b8f}{Get\+Peak\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the peak value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_control_data_a4352d6d0bcf6a75a8de2c42cf90689ea}{Get\+Nominal\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the nominal value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 22 of file Control\+Data.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_control_data_ad623b082611e817d34bc721b5eb197af}\label{class_control_data_ad623b082611e817d34bc721b5eb197af}} 
+\index{ControlData@{ControlData}!ControlData@{ControlData}}
+\index{ControlData@{ControlData}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{ControlData()}{ControlData()}}
+{\footnotesize\ttfamily Control\+Data\+::\+Control\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}}]{mode,  }\item[{\mbox{\hyperlink{class_control_modes_a6d6123ab559a2a754b1a8d46fc078487}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+R\+U\+N\+\_\+\+L\+O\+CS}}}]{server,  }\item[{std\+::string}]{indentifier,  }\item[{double}]{proportional,  }\item[{double}]{integral,  }\item[{double}]{derivative,  }\item[{double}]{feedforward,  }\item[{double}]{integral\+Zone,  }\item[{double}]{max\+Acceleration,  }\item[{double}]{cruise\+Velocity,  }\item[{double}]{peak\+Value,  }\item[{double}]{nominal\+Value }\end{DoxyParamCaption})}
+
+
+
+Create the \mbox{\hyperlink{class_control_data}{Control\+Data}} object that is used to control mechanisms. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mode} & -\/ control mode \\
+\hline
+\mbox{\texttt{ in}}  & {\em server} & -\/ where to run the controller on \\
+\hline
+\mbox{\texttt{ in}}  & {\em indentifier} & -\/ mapping identifier for this controller \\
+\hline
+\mbox{\texttt{ in}}  & {\em proportional} & -\/ p coefficient for a P\+I\+D-\/based controller \\
+\hline
+\mbox{\texttt{ in}}  & {\em integral} & -\/ i coefficient for a P\+I\+D-\/based controller \\
+\hline
+\mbox{\texttt{ in}}  & {\em derivative} & -\/ d coefficient for a P\+I\+D-\/based controller \\
+\hline
+\mbox{\texttt{ in}}  & {\em feedforward} & -\/ f coefficient for a P\+I\+D-\/based controller \\
+\hline
+\mbox{\texttt{ in}}  & {\em integral\+Zone} & -\/ range of the integral for a P\+I\+D-\/based controller \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+Acceleration} & -\/ maximum acceleration \\
+\hline
+\mbox{\texttt{ in}}  & {\em cruise\+Velocity} & -\/ cruise velocity \\
+\hline
+\mbox{\texttt{ in}}  & {\em peak\+Value} & -\/ peak value \\
+\hline
+\mbox{\texttt{ in}}  & {\em nominal\+Value} & -\/ nominal value ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_control_data_aaa47e895701543d53f2a14ac533bc9b6}\label{class_control_data_aaa47e895701543d53f2a14ac533bc9b6}} 
+\index{ControlData@{ControlData}!````~ControlData@{$\sim$ControlData}}
+\index{````~ControlData@{$\sim$ControlData}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{$\sim$ControlData()}{~ControlData()}}
+{\footnotesize\ttfamily virtual Control\+Data\+::$\sim$\+Control\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_control_data_aada3659777868036d560a428ea55bcdf}\label{class_control_data_aada3659777868036d560a428ea55bcdf}} 
+\index{ControlData@{ControlData}!GetCruiseVelocity@{GetCruiseVelocity}}
+\index{GetCruiseVelocity@{GetCruiseVelocity}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{GetCruiseVelocity()}{GetCruiseVelocity()}}
+{\footnotesize\ttfamily double Control\+Data\+::\+Get\+Cruise\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the cruise velocity for a trapezoid control mode. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ cruise velocity 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file Control\+Data.\+h.
+
+\mbox{\Hypertarget{class_control_data_acbaf81f6f7dab5edcf4fcc445caf0dcd}\label{class_control_data_acbaf81f6f7dab5edcf4fcc445caf0dcd}} 
+\index{ControlData@{ControlData}!GetD@{GetD}}
+\index{GetD@{GetD}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{GetD()}{GetD()}}
+{\footnotesize\ttfamily double Control\+Data\+::\+GetD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the D coefficient for a P\+I\+D-\/based control mode. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ D coefficient 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file Control\+Data.\+h.
+
+\mbox{\Hypertarget{class_control_data_adbe7269501e2db1374a5f697da0fbe09}\label{class_control_data_adbe7269501e2db1374a5f697da0fbe09}} 
+\index{ControlData@{ControlData}!GetF@{GetF}}
+\index{GetF@{GetF}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{GetF()}{GetF()}}
+{\footnotesize\ttfamily double Control\+Data\+::\+GetF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the Feed-\/forwared coefficient for a P\+I\+D-\/based control mode. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ F coefficient 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Control\+Data.\+h.
+
+\mbox{\Hypertarget{class_control_data_ae1e28d9f875136cef18597294645503a}\label{class_control_data_ae1e28d9f875136cef18597294645503a}} 
+\index{ControlData@{ControlData}!GetI@{GetI}}
+\index{GetI@{GetI}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{GetI()}{GetI()}}
+{\footnotesize\ttfamily double Control\+Data\+::\+GetI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the I coefficient for a P\+I\+D-\/based control mode. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ I coefficient 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file Control\+Data.\+h.
+
+\mbox{\Hypertarget{class_control_data_adf5ce6319e2035f19991a4ede226ef6f}\label{class_control_data_adf5ce6319e2035f19991a4ede226ef6f}} 
+\index{ControlData@{ControlData}!GetIdentifier@{GetIdentifier}}
+\index{GetIdentifier@{GetIdentifier}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{GetIdentifier()}{GetIdentifier()}}
+{\footnotesize\ttfamily std\+::string Control\+Data\+::\+Get\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the identifier. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string the identifier 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Control\+Data.\+h.
+
+\mbox{\Hypertarget{class_control_data_a040e2073bdf59bb349088da5d45322ae}\label{class_control_data_a040e2073bdf59bb349088da5d45322ae}} 
+\index{ControlData@{ControlData}!GetIZone@{GetIZone}}
+\index{GetIZone@{GetIZone}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{GetIZone()}{GetIZone()}}
+{\footnotesize\ttfamily double Control\+Data\+::\+Get\+I\+Zone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the izone for a P\+I\+D-\/based control mode (where the intregal is reset) 
+
+\begin{DoxyReturn}{Returns}
+double -\/ izone value 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file Control\+Data.\+h.
+
+\mbox{\Hypertarget{class_control_data_a75861c8f8b2fbe8ba22e134c660cdaf9}\label{class_control_data_a75861c8f8b2fbe8ba22e134c660cdaf9}} 
+\index{ControlData@{ControlData}!GetMaxAcceleration@{GetMaxAcceleration}}
+\index{GetMaxAcceleration@{GetMaxAcceleration}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{GetMaxAcceleration()}{GetMaxAcceleration()}}
+{\footnotesize\ttfamily double Control\+Data\+::\+Get\+Max\+Acceleration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the max acceleration for a trapezoid control mode. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ max acceleration 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file Control\+Data.\+h.
+
+\mbox{\Hypertarget{class_control_data_a3e7157f943ecefb04cb30c274bf9a330}\label{class_control_data_a3e7157f943ecefb04cb30c274bf9a330}} 
+\index{ControlData@{ControlData}!GetMode@{GetMode}}
+\index{GetMode@{GetMode}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{GetMode()}{GetMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} Control\+Data\+::\+Get\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the Control Type. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file Control\+Data.\+h.
+
+\mbox{\Hypertarget{class_control_data_a4352d6d0bcf6a75a8de2c42cf90689ea}\label{class_control_data_a4352d6d0bcf6a75a8de2c42cf90689ea}} 
+\index{ControlData@{ControlData}!GetNominalValue@{GetNominalValue}}
+\index{GetNominalValue@{GetNominalValue}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{GetNominalValue()}{GetNominalValue()}}
+{\footnotesize\ttfamily double Control\+Data\+::\+Get\+Nominal\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the nominal value. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ nominal value 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file Control\+Data.\+h.
+
+\mbox{\Hypertarget{class_control_data_a905b66966177981526553ca8145f560f}\label{class_control_data_a905b66966177981526553ca8145f560f}} 
+\index{ControlData@{ControlData}!GetP@{GetP}}
+\index{GetP@{GetP}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{GetP()}{GetP()}}
+{\footnotesize\ttfamily double Control\+Data\+::\+GetP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the P coefficient for a P\+I\+D-\/based control mode. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ P coefficient 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file Control\+Data.\+h.
+
+\mbox{\Hypertarget{class_control_data_ad63cd22d187b4b30d27d8482a8ee3b8f}\label{class_control_data_ad63cd22d187b4b30d27d8482a8ee3b8f}} 
+\index{ControlData@{ControlData}!GetPeakValue@{GetPeakValue}}
+\index{GetPeakValue@{GetPeakValue}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{GetPeakValue()}{GetPeakValue()}}
+{\footnotesize\ttfamily double Control\+Data\+::\+Get\+Peak\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the peak value. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ peak value 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file Control\+Data.\+h.
+
+\mbox{\Hypertarget{class_control_data_a63bfe2e61c429f5bdf75f9201a075481}\label{class_control_data_a63bfe2e61c429f5bdf75f9201a075481}} 
+\index{ControlData@{ControlData}!GetRunLoc@{GetRunLoc}}
+\index{GetRunLoc@{GetRunLoc}!ControlData@{ControlData}}
+\doxysubsubsection{\texorpdfstring{GetRunLoc()}{GetRunLoc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_control_modes_a6d6123ab559a2a754b1a8d46fc078487}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+R\+U\+N\+\_\+\+L\+O\+CS}} Control\+Data\+::\+Get\+Run\+Loc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve where to run the controller on. 
+
+\begin{DoxyReturn}{Returns}
+Conrol\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+R\+U\+N\+\_\+\+L\+O\+CS 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Control\+Data.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/controllers/\mbox{\hyperlink{_control_data_8h}{Control\+Data.\+h}}\end{DoxyCompactItemize}

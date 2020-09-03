@@ -1,7 +1,7 @@
 var class_control_panel_color_turn =
 [
     [ "ControlPanelColorTurn", "class_control_panel_color_turn.html#a1b11839cd1fa494abf9e4137d7b8e7fc", null ],
-    [ "ControlPanelColorTurn", "class_control_panel_color_turn.html#a5bd0eb27e640b80d06767bd144a2b1e3", null ],
+    [ "ControlPanelColorTurn", "class_control_panel_color_turn.html#a30db921daefb592c682387c9bebcf05c", null ],
     [ "~ControlPanelColorTurn", "class_control_panel_color_turn.html#a6b739828fbb4a8d58320f49f77433f33", null ],
     [ "AtTarget", "class_control_panel_color_turn.html#a9564bfc327c0801e434ff365e59450da", null ],
     [ "Init", "class_control_panel_color_turn.html#aad7bdf43ec5b4d8da2c4552aa5b46eda", null ],

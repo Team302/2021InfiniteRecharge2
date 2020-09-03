@@ -1,0 +1,71 @@
+\hypertarget{class_analog_input_factory}{}\doxysection{Analog\+Input\+Factory Class Reference}
+\label{class_analog_input_factory}\index{AnalogInputFactory@{AnalogInputFactory}}
+
+
+This controls the creation of analog inputs.  
+
+
+
+
+{\ttfamily \#include $<$Analog\+Input\+Factory.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_analog_input}{Dragon\+Analog\+Input}} $>$ \mbox{\hyperlink{class_analog_input_factory_ac9f6a5f11eb78aea303f29c084d9a4d0}{Create\+Input}} (std\+::string usage, int analog\+ID, float voltage\+Min, float voltage\+Max, float output\+Min, float output\+Max)
+\begin{DoxyCompactList}\small\item\em Create the requested analog input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_analog_input_factory}{Analog\+Input\+Factory}} $\ast$ \mbox{\hyperlink{class_analog_input_factory_ab34638380d3af42b8a1ded73e548a65b}{Get\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Find or create the analog input factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This controls the creation of analog inputs. 
+
+Definition at line 37 of file Analog\+Input\+Factory.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_analog_input_factory_ac9f6a5f11eb78aea303f29c084d9a4d0}\label{class_analog_input_factory_ac9f6a5f11eb78aea303f29c084d9a4d0}} 
+\index{AnalogInputFactory@{AnalogInputFactory}!CreateInput@{CreateInput}}
+\index{CreateInput@{CreateInput}!AnalogInputFactory@{AnalogInputFactory}}
+\doxysubsubsection{\texorpdfstring{CreateInput()}{CreateInput()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_analog_input}{Dragon\+Analog\+Input}} $>$ Analog\+Input\+Factory\+::\+Create\+Input (\begin{DoxyParamCaption}\item[{std\+::string}]{usage,  }\item[{int}]{analog\+ID,  }\item[{float}]{voltage\+Min,  }\item[{float}]{voltage\+Max,  }\item[{float}]{output\+Min,  }\item[{float}]{output\+Max }\end{DoxyParamCaption})}
+
+
+
+Create the requested analog input. 
+
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr$<$\+Dragon\+Analog\+Input$>$ the mechanism or nullptr if mechanism doesn\textquotesingle{}t exist and cannot be created. 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file Analog\+Input\+Factory.\+cpp.
+
+\mbox{\Hypertarget{class_analog_input_factory_ab34638380d3af42b8a1ded73e548a65b}\label{class_analog_input_factory_ab34638380d3af42b8a1ded73e548a65b}} 
+\index{AnalogInputFactory@{AnalogInputFactory}!GetFactory@{GetFactory}}
+\index{GetFactory@{GetFactory}!AnalogInputFactory@{AnalogInputFactory}}
+\doxysubsubsection{\texorpdfstring{GetFactory()}{GetFactory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_analog_input_factory}{Analog\+Input\+Factory}} $\ast$ Analog\+Input\+Factory\+::\+Get\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find or create the analog input factory. 
+
+\begin{DoxyReturn}{Returns}
+Analog\+Input\+Factory$\ast$ pointer to the factory 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Analog\+Input\+Factory.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/factories/\mbox{\hyperlink{_analog_input_factory_8h}{Analog\+Input\+Factory.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/factories/\mbox{\hyperlink{_analog_input_factory_8cpp}{Analog\+Input\+Factory.\+cpp}}\end{DoxyCompactItemize}

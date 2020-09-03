@@ -85,8 +85,10 @@ class IDragonMotorController
             ctre::phoenix::motorcontrol::RemoteSensorSource deviceType
         ) = 0;
 
-    protected:
         IDragonMotorController() = default;
         virtual ~IDragonMotorController() = default;
+
+    protected:
+
 };
 

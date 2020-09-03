@@ -1,0 +1,148 @@
+\hypertarget{class_climber_state_mgr}{}\doxysection{Climber\+State\+Mgr Class Reference}
+\label{class_climber_state_mgr}\index{ClimberStateMgr@{ClimberStateMgr}}
+
+
+{\ttfamily \#include $<$Climber\+State\+Mgr.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3}{C\+L\+I\+M\+B\+E\+R\+\_\+\+S\+T\+A\+TE}} \{ \mbox{\hyperlink{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3acf24c2c576c0471692a77c627794ef37}{O\+FF}}, 
+\mbox{\hyperlink{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3a6e9bf4518d07ae5f083101092e26be4e}{W\+I\+N\+C\+H\+\_\+\+UP}}, 
+\mbox{\hyperlink{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3ad72da3dde6237e84196c873351b03e80}{M\+A\+X\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+\+S\+T\+A\+T\+ES}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_climber_state_mgr_a84fb88d51e0aae2bcbc68e93840bb13a}{Run\+Current\+State}} ()
+\begin{DoxyCompactList}\small\item\em run the current state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climber_state_mgr_afd67f6cf449a5bb2ac0284167868731d}{Set\+Current\+State}} (\mbox{\hyperlink{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3}{C\+L\+I\+M\+B\+E\+R\+\_\+\+S\+T\+A\+TE}} state, bool run)
+\begin{DoxyCompactList}\small\item\em set the current state, initialize it and run it \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3}{C\+L\+I\+M\+B\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{class_climber_state_mgr_ad283b6a4df806f7483a06fce808ea62b}{Get\+Current\+State}} () const
+\begin{DoxyCompactList}\small\item\em return the current state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_climber_state_mgr}{Climber\+State\+Mgr}} $\ast$ \mbox{\hyperlink{class_climber_state_mgr_a09be58b6566a388fa3199f46b95437db}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Find or create the \mbox{\hyperlink{class_climber}{Climber}} State Manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 29 of file Climber\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3}\label{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3}} 
+\index{ClimberStateMgr@{ClimberStateMgr}!CLIMBER\_STATE@{CLIMBER\_STATE}}
+\index{CLIMBER\_STATE@{CLIMBER\_STATE}!ClimberStateMgr@{ClimberStateMgr}}
+\doxysubsubsection{\texorpdfstring{CLIMBER\_STATE}{CLIMBER\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3}{Climber\+State\+Mgr\+::\+C\+L\+I\+M\+B\+E\+R\+\_\+\+S\+T\+A\+TE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OFF@{OFF}!ClimberStateMgr@{ClimberStateMgr}}\index{ClimberStateMgr@{ClimberStateMgr}!OFF@{OFF}}}\mbox{\Hypertarget{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3acf24c2c576c0471692a77c627794ef37}\label{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3acf24c2c576c0471692a77c627794ef37}} 
+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WINCH\_UP@{WINCH\_UP}!ClimberStateMgr@{ClimberStateMgr}}\index{ClimberStateMgr@{ClimberStateMgr}!WINCH\_UP@{WINCH\_UP}}}\mbox{\Hypertarget{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3a6e9bf4518d07ae5f083101092e26be4e}\label{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3a6e9bf4518d07ae5f083101092e26be4e}} 
+W\+I\+N\+C\+H\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_INTAKE\_STATES@{MAX\_INTAKE\_STATES}!ClimberStateMgr@{ClimberStateMgr}}\index{ClimberStateMgr@{ClimberStateMgr}!MAX\_INTAKE\_STATES@{MAX\_INTAKE\_STATES}}}\mbox{\Hypertarget{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3ad72da3dde6237e84196c873351b03e80}\label{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3ad72da3dde6237e84196c873351b03e80}} 
+M\+A\+X\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+\+S\+T\+A\+T\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 33 of file Climber\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_climber_state_mgr_ad283b6a4df806f7483a06fce808ea62b}\label{class_climber_state_mgr_ad283b6a4df806f7483a06fce808ea62b}} 
+\index{ClimberStateMgr@{ClimberStateMgr}!GetCurrentState@{GetCurrentState}}
+\index{GetCurrentState@{GetCurrentState}!ClimberStateMgr@{ClimberStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetCurrentState()}{GetCurrentState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3}{C\+L\+I\+M\+B\+E\+R\+\_\+\+S\+T\+A\+TE}} Climber\+State\+Mgr\+::\+Get\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the current state 
+
+\begin{DoxyReturn}{Returns}
+C\+L\+I\+M\+B\+E\+R\+\_\+\+S\+T\+A\+TE -\/ the current state 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Climber\+State\+Mgr.\+h.
+
+\mbox{\Hypertarget{class_climber_state_mgr_a09be58b6566a388fa3199f46b95437db}\label{class_climber_state_mgr_a09be58b6566a388fa3199f46b95437db}} 
+\index{ClimberStateMgr@{ClimberStateMgr}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!ClimberStateMgr@{ClimberStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_climber_state_mgr}{Climber\+State\+Mgr}} $\ast$ Climber\+State\+Mgr\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find or create the \mbox{\hyperlink{class_climber}{Climber}} State Manager. 
+
+\begin{DoxyReturn}{Returns}
+Analog\+Input\+Factory$\ast$ pointer to the factory 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Climber\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_climber_state_mgr_a84fb88d51e0aae2bcbc68e93840bb13a}\label{class_climber_state_mgr_a84fb88d51e0aae2bcbc68e93840bb13a}} 
+\index{ClimberStateMgr@{ClimberStateMgr}!RunCurrentState@{RunCurrentState}}
+\index{RunCurrentState@{RunCurrentState}!ClimberStateMgr@{ClimberStateMgr}}
+\doxysubsubsection{\texorpdfstring{RunCurrentState()}{RunCurrentState()}}
+{\footnotesize\ttfamily void Climber\+State\+Mgr\+::\+Run\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+run the current state 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file Climber\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_climber_state_mgr_afd67f6cf449a5bb2ac0284167868731d}\label{class_climber_state_mgr_afd67f6cf449a5bb2ac0284167868731d}} 
+\index{ClimberStateMgr@{ClimberStateMgr}!SetCurrentState@{SetCurrentState}}
+\index{SetCurrentState@{SetCurrentState}!ClimberStateMgr@{ClimberStateMgr}}
+\doxysubsubsection{\texorpdfstring{SetCurrentState()}{SetCurrentState()}}
+{\footnotesize\ttfamily void Climber\+State\+Mgr\+::\+Set\+Current\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_climber_state_mgr_a406d1b07b9bc04fa00c43dd9672315a3}{C\+L\+I\+M\+B\+E\+R\+\_\+\+S\+T\+A\+TE}}}]{state\+Enum,  }\item[{bool}]{run }\end{DoxyParamCaption})}
+
+
+
+set the current state, initialize it and run it 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em C\+L\+I\+M\+B\+E\+R\+\_\+\+S\+T\+A\+TE} & -\/ state to set \\
+\hline
+\mbox{\texttt{ in}}  & {\em run} & -\/ true means run, false just initialize it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+
+void 
+\end{DoxyReturn}
+
+
+Definition at line 147 of file Climber\+State\+Mgr.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/states/climber/\mbox{\hyperlink{_climber_state_mgr_8h}{Climber\+State\+Mgr.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/states/climber/\mbox{\hyperlink{_climber_state_mgr_8cpp}{Climber\+State\+Mgr.\+cpp}}\end{DoxyCompactItemize}

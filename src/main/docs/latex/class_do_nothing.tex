@@ -1,0 +1,144 @@
+\hypertarget{class_do_nothing}{}\doxysection{Do\+Nothing Class Reference}
+\label{class_do_nothing}\index{DoNothing@{DoNothing}}
+
+
+This is an auton primitive that causes the chassis to not drive ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$Do\+Nothing.\+h$>$}
+
+Inheritance diagram for Do\+Nothing\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_do_nothing}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_do_nothing_abf265c7a54cd2b174ff759099e34b8fb}{Do\+Nothing}} ()
+\begin{DoxyCompactList}\small\item\em constructor that creates/initializes the object \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_do_nothing_af812915bf260d88d799c40fc38a6fc8e}{$\sim$\+Do\+Nothing}} ()=default
+\begin{DoxyCompactList}\small\item\em destructor, clean up the memory from this object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_do_nothing_aa05ad0a633ed8380cc8725b9b7747660}{Init}} (\mbox{\hyperlink{class_primitive_params}{Primitive\+Params}} $\ast$params) override
+\begin{DoxyCompactList}\small\item\em initialize this usage of the primitive \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_do_nothing_ac38d4823e478cbfab5903ffbad04a778}{Run}} () override
+\begin{DoxyCompactList}\small\item\em run the primitive (periodic routine) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_do_nothing_a921cf984d26cf9991de393a609719188}{Is\+Done}} () override
+\begin{DoxyCompactList}\small\item\em check if the end condition has been met \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This is an auton primitive that causes the chassis to not drive ~\newline
+ 
+
+Definition at line 45 of file Do\+Nothing.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_do_nothing_abf265c7a54cd2b174ff759099e34b8fb}\label{class_do_nothing_abf265c7a54cd2b174ff759099e34b8fb}} 
+\index{DoNothing@{DoNothing}!DoNothing@{DoNothing}}
+\index{DoNothing@{DoNothing}!DoNothing@{DoNothing}}
+\doxysubsubsection{\texorpdfstring{DoNothing()}{DoNothing()}}
+{\footnotesize\ttfamily Do\+Nothing\+::\+Do\+Nothing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+constructor that creates/initializes the object 
+
+
+
+Definition at line 47 of file Do\+Nothing.\+cpp.
+
+\mbox{\Hypertarget{class_do_nothing_af812915bf260d88d799c40fc38a6fc8e}\label{class_do_nothing_af812915bf260d88d799c40fc38a6fc8e}} 
+\index{DoNothing@{DoNothing}!````~DoNothing@{$\sim$DoNothing}}
+\index{````~DoNothing@{$\sim$DoNothing}!DoNothing@{DoNothing}}
+\doxysubsubsection{\texorpdfstring{$\sim$DoNothing()}{~DoNothing()}}
+{\footnotesize\ttfamily virtual Do\+Nothing\+::$\sim$\+Do\+Nothing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+destructor, clean up the memory from this object 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_do_nothing_aa05ad0a633ed8380cc8725b9b7747660}\label{class_do_nothing_aa05ad0a633ed8380cc8725b9b7747660}} 
+\index{DoNothing@{DoNothing}!Init@{Init}}
+\index{Init@{Init}!DoNothing@{DoNothing}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Do\+Nothing\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_primitive_params}{Primitive\+Params}} $\ast$}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialize this usage of the primitive 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Primitive\+Parms$\ast$} & params the drive parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_abe9e4c3b5a5b806d2c551c0f56a075d2}{I\+Primitive}}.
+
+
+
+Definition at line 57 of file Do\+Nothing.\+cpp.
+
+\mbox{\Hypertarget{class_do_nothing_a921cf984d26cf9991de393a609719188}\label{class_do_nothing_a921cf984d26cf9991de393a609719188}} 
+\index{DoNothing@{DoNothing}!IsDone@{IsDone}}
+\index{IsDone@{IsDone}!DoNothing@{DoNothing}}
+\doxysubsubsection{\texorpdfstring{IsDone()}{IsDone()}}
+{\footnotesize\ttfamily bool Do\+Nothing\+::\+Is\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+check if the end condition has been met 
+
+\begin{DoxyReturn}{Returns}
+bool true means the end condition was reached, false means it hasn\textquotesingle{}t 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a5b62801261f9bd974be04217bd86f668}{I\+Primitive}}.
+
+
+
+Definition at line 81 of file Do\+Nothing.\+cpp.
+
+\mbox{\Hypertarget{class_do_nothing_ac38d4823e478cbfab5903ffbad04a778}\label{class_do_nothing_ac38d4823e478cbfab5903ffbad04a778}} 
+\index{DoNothing@{DoNothing}!Run@{Run}}
+\index{Run@{Run}!DoNothing@{DoNothing}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Do\+Nothing\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+run the primitive (periodic routine) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a3c34bd0f5ddbfe150ecade13303b6cd6}{I\+Primitive}}.
+
+
+
+Definition at line 66 of file Do\+Nothing.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/auton/primitives/\mbox{\hyperlink{_do_nothing_8h}{Do\+Nothing.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/auton/primitives/\mbox{\hyperlink{_do_nothing_8cpp}{Do\+Nothing.\+cpp}}\end{DoxyCompactItemize}

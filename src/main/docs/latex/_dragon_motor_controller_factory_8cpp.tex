@@ -1,0 +1,17 @@
+\hypertarget{_dragon_motor_controller_factory_8cpp}{}\doxysection{C\+:/robotcm/training2020/src/main/cpp/hw/factories/\+Dragon\+Motor\+Controller\+Factory.cpp File Reference}
+\label{_dragon_motor_controller_factory_8cpp}\index{C:/robotcm/training2020/src/main/cpp/hw/factories/DragonMotorControllerFactory.cpp@{C:/robotcm/training2020/src/main/cpp/hw/factories/DragonMotorControllerFactory.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$subsys/\+I\+Mechanism.\+h$>$}\newline
+{\ttfamily \#include $<$hw/factories/\+Dragon\+Motor\+Controller\+Factory.\+h$>$}\newline
+{\ttfamily \#include $<$hw/usages/\+Motor\+Controller\+Usage.\+h$>$}\newline
+{\ttfamily \#include $<$xmlhw/\+Motor\+Defn.\+h$>$}\newline
+{\ttfamily \#include $<$hw/\+Dragon\+Talon.\+h$>$}\newline
+{\ttfamily \#include $<$hw/\+Dragon\+Falcon.\+h$>$}\newline
+{\ttfamily \#include $<$hw/\+Dragon\+Spark\+Max.\+h$>$}\newline
+{\ttfamily \#include $<$utils/\+Logger.\+h$>$}\newline
+{\ttfamily \#include $<$ctre/phoenix/motorcontrol/can/\+Talon\+S\+R\+X.\+h$>$}\newline
+{\ttfamily \#include $<$ctre/phoenix/motorcontrol/can/\+Talon\+F\+X.\+h$>$}\newline
+{\ttfamily \#include $<$ctre/phoenix/motorcontrol/\+Feedback\+Device.\+h$>$}\newline
+{\ttfamily \#include $<$rev/\+C\+A\+N\+Spark\+Max.\+h$>$}\newline

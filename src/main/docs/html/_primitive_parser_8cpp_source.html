@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team 302 Robot: auton/PrimitiveParser.cpp Source File</title>
+<title>Robot: C:/robotcm/training2020/src/main/cpp/auton/PrimitiveParser.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Team 302 Robot
+   <div id="projectname">Robot
    </div>
   </td>
  </tr>
@@ -128,58 +128,58 @@ $(document).ready(function(){initNavTree('_primitive_parser_8cpp_source.html',''
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;)</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="_primitive_params_8h.html#a29ca4db89e72d0b0489aa4a2562045ed">PrimitiveParamsVector</a> paramVector;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="_primitive_params_8h.html#a29ca4db89e72d0b0489aa4a2562045ed">PrimitiveParamsVector</a> paramVector;   <span class="comment">//  output</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dc">PRIMITIVE_IDENTIFIER</a>        primitiveType = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca44a63c3b48a5e29e57af1ba4893c8678">UNKNOWN_PRIMITIVE</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">float</span>                       time = 15.0;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">float</span>                       distance = 0.0;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">float</span>                       heading = 0.0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">float</span>                       startDriveSpeed = 0.0;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">float</span>                       endDriveSpeed = 0.0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">float</span>                       xloc = 0.0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">float</span>                       yloc = 0.0;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4">BallManipulator::BALL_MANIPULATOR_STATE</a> ballState = BallManipulator::BALL_MANIPULATOR_STATE::OFF;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">float</span>                       turretAngle = 0.0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> hasError = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">string</span> fulldirfile = string(<span class="stringliteral">&quot;/home/lvuser/auton/&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    fulldirfile += fileName;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// initialize the xml string to enum maps</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    map&lt;string, PRIMITIVE_IDENTIFIER&gt; primStringToEnumMap;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;DO_NOTHING&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dcaa3c06bc7e4d652a970cab72026c6fed1">DO_NOTHING</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;HOLD_POSITION&quot;</span>]  = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca8b045ada4084b1a31ad00174fdda0f41">HOLD_POSITION</a>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;DRIVE_DISTANCE&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca7021af1a324c0f7122d43ac5e7b5f03e">DRIVE_DISTANCE</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;DRIVE_TIME&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca7898fbf6aaf783378fe66d59f9bf9b46">DRIVE_TIME</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;DRIVE_TO_WALL&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca3aae85b99d2b329a6047aaec5b555681">DRIVE_TO_WALL</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;TURN_ANGLE_ABS&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca04869d144dae5ecb8bbc92d0d3bc7d5f">TURN_ANGLE_ABS</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;TURN_ANGLE_REL&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca42009b131c97b945b3327be55bfceb13">TURN_ANGLE_REL</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;AUTO_SHOOT&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dcab125963850fa5d66063b8dff563f62a0">AUTO_SHOOT</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">string</span> fulldirfile = string(<span class="stringliteral">&quot;/home/lvuser/auton/&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    fulldirfile += fileName;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// initialize the xml string to enum maps</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    map&lt;string, PRIMITIVE_IDENTIFIER&gt; primStringToEnumMap;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;DO_NOTHING&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dcaa3c06bc7e4d652a970cab72026c6fed1">DO_NOTHING</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;HOLD_POSITION&quot;</span>]  = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca8b045ada4084b1a31ad00174fdda0f41">HOLD_POSITION</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;DRIVE_DISTANCE&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca7021af1a324c0f7122d43ac5e7b5f03e">DRIVE_DISTANCE</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;DRIVE_TIME&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca7898fbf6aaf783378fe66d59f9bf9b46">DRIVE_TIME</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;DRIVE_TO_WALL&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca3aae85b99d2b329a6047aaec5b555681">DRIVE_TO_WALL</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;TURN_ANGLE_ABS&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca04869d144dae5ecb8bbc92d0d3bc7d5f">TURN_ANGLE_ABS</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;TURN_ANGLE_REL&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca42009b131c97b945b3327be55bfceb13">TURN_ANGLE_REL</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    primStringToEnumMap[<span class="stringliteral">&quot;AUTO_SHOOT&quot;</span>] = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dcab125963850fa5d66063b8dff563f62a0">AUTO_SHOOT</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    map&lt;string, BallManipulator::BALL_MANIPULATOR_STATE&gt; ballStringToEnumMap;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;OFF&quot;</span>] = BallManipulator::BALL_MANIPULATOR_STATE::OFF;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;INTAKE&quot;</span>]  = BallManipulator::BALL_MANIPULATOR_STATE::INTAKE;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;INTAKE_HUMAN_PLAYER&quot;</span>] = BallManipulator::BALL_MANIPULATOR_STATE::INTAKE_HUMAN_PLAYER;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;HOLD&quot;</span>] = BallManipulator::BALL_MANIPULATOR_STATE::HOLD;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;GET_READY_TO_SHOOT&quot;</span>] = BallManipulator::BALL_MANIPULATOR_STATE::GET_READY_TO_SHOOT;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;SHOOT&quot;</span>] = BallManipulator::BALL_MANIPULATOR_STATE::SHOOT;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;SHOOT_AUTON&quot;</span>] = BallManipulator::BALL_MANIPULATOR_STATE::SHOOT_AUTON;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;TURRET_TURN_ANGLE&quot;</span>] = <a class="code" href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4a4f38f4c9e857f39f0ae1105d082abd0f">BallManipulator::TURRET_TURN_ANGLE</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    map&lt;string, BallManipulator::BALL_MANIPULATOR_STATE&gt; ballStringToEnumMap;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;OFF&quot;</span>] = BallManipulator::BALL_MANIPULATOR_STATE::OFF;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;INTAKE&quot;</span>]  = BallManipulator::BALL_MANIPULATOR_STATE::INTAKE;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;INTAKE_HUMAN_PLAYER&quot;</span>] = BallManipulator::BALL_MANIPULATOR_STATE::INTAKE_HUMAN_PLAYER;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;HOLD&quot;</span>] = BallManipulator::BALL_MANIPULATOR_STATE::HOLD;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;GET_READY_TO_SHOOT&quot;</span>] = BallManipulator::BALL_MANIPULATOR_STATE::GET_READY_TO_SHOOT;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;SHOOT&quot;</span>] = BallManipulator::BALL_MANIPULATOR_STATE::SHOOT;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    ballStringToEnumMap[<span class="stringliteral">&quot;SHOOT_AUTON&quot;</span>] = BallManipulator::BALL_MANIPULATOR_STATE::SHOOT_AUTON;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    xml_document doc;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    xml_parse_result result = doc.load_file( fulldirfile.c_str() );</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span> ( result )</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>(<span class="stringliteral">&quot;PrimitiveParser::ParseXML&quot;</span>), <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Parse Successful&quot;</span>));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        xml_node auton = doc.root();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">for</span> (xml_node node = auton.first_child(); node; node = node.next_sibling())</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>(<span class="stringliteral">&quot;PrimitiveParser::ParseXML&quot;</span>), <span class="keywordtype">string</span>(node.name()));</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">for</span> (xml_node primitiveNode = node.first_child(); primitiveNode; primitiveNode = primitiveNode.next_sibling())</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>(<span class="stringliteral">&quot;PrimitiveParser::ParseXML&quot;</span>), <span class="keywordtype">string</span>(primitiveNode.name()));</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordflow">if</span> ( strcmp( primitiveNode.name(), <span class="stringliteral">&quot;primitive&quot;</span>) == 0 )</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    xml_document doc;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    xml_parse_result result = doc.load_file( fulldirfile.c_str() );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> ( result )</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>(<span class="stringliteral">&quot;PrimitiveParser::ParseXML&quot;</span>), <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Parse Successful&quot;</span>));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        xml_node auton = doc.root();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">for</span> (xml_node node = auton.first_child(); node; node = node.next_sibling())</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>(<span class="stringliteral">&quot;PrimitiveParser::ParseXML&quot;</span>), <span class="keywordtype">string</span>(node.name()));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">for</span> (xml_node primitiveNode = node.first_child(); primitiveNode; primitiveNode = primitiveNode.next_sibling())</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>(<span class="stringliteral">&quot;PrimitiveParser::ParseXML&quot;</span>), <span class="keywordtype">string</span>(primitiveNode.name()));</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordflow">if</span> ( strcmp( primitiveNode.name(), <span class="stringliteral">&quot;primitive&quot;</span>) == 0 )</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dc">PRIMITIVE_IDENTIFIER</a> primitiveType = <a class="code" href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca44a63c3b48a5e29e57af1ba4893c8678">UNKNOWN_PRIMITIVE</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    <span class="keywordtype">float</span> time = 15.0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    <span class="keywordtype">float</span> distance = 0.0;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    <span class="keywordtype">float</span> heading = 0.0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    <span class="keywordtype">float</span> startDriveSpeed = 0.0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    <span class="keywordtype">float</span> endDriveSpeed = 0.0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="keywordtype">float</span> xloc = 0.0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    <span class="keywordtype">float</span> yloc = 0.0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <a class="code" href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4">BallManipulator::BALL_MANIPULATOR_STATE</a> ballState = BallManipulator::BALL_MANIPULATOR_STATE::OFF;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    <span class="keywordtype">float</span> turretAngle = 0.0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    <span class="keywordtype">bool</span> hasError = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    <span class="keywordflow">for</span> (xml_attribute attr = primitiveNode.first_attribute(); attr; attr = attr.next_attribute())</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    {</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        <span class="keywordflow">if</span> ( strcmp( attr.name(), <span class="stringliteral">&quot;id&quot;</span> ) == 0 )</div>
@@ -303,10 +303,11 @@ $(document).ready(function(){initNavTree('_primitive_parser_8cpp_source.html',''
 <div class="ttc" id="a_primitive_enums_8h_html"><div class="ttname"><a href="_primitive_enums_8h.html">PrimitiveEnums.h</a></div></div>
 <div class="ttc" id="anamespacepugi_html"><div class="ttname"><a href="namespacepugi.html">pugi</a></div><div class="ttdef"><b>Definition:</b> <a href="_color_sensor_defn_8h_source.html#l00008">ColorSensorDefn.h:8</a></div></div>
 <div class="ttc" id="a_primitive_enums_8h_html_a35fa04dbcd6e8ebd76550c9b14ade0dca42009b131c97b945b3327be55bfceb13"><div class="ttname"><a href="_primitive_enums_8h.html#a35fa04dbcd6e8ebd76550c9b14ade0dca42009b131c97b945b3327be55bfceb13">TURN_ANGLE_REL</a></div><div class="ttdef"><b>Definition:</b> <a href="_primitive_enums_8h_source.html#l00038">PrimitiveEnums.h:38</a></div></div>
+<div class="ttc" id="aclass_ball_manipulator_html_a91bf71119c5fecb46b41a90485f7a9a4a4f38f4c9e857f39f0ae1105d082abd0f"><div class="ttname"><a href="class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4a4f38f4c9e857f39f0ae1105d082abd0f">BallManipulator::TURRET_TURN_ANGLE</a></div><div class="ttdef"><b>Definition:</b> <a href="_ball_manipulator_8h_source.html#l00051">BallManipulator.h:51</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e6d3eafb1b2af494c48c5eff1d916bff.html">auton</a></li><li class="navelem"><a class="el" href="_primitive_parser_8cpp.html">PrimitiveParser.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_4401199a54cb40c0637ceb8dd0f3c5fd.html">robotcm</a></li><li class="navelem"><a class="el" href="dir_24d5b6e083bf191a3f38d4ae9f1a0592.html">training2020</a></li><li class="navelem"><a class="el" href="dir_6cae7cc3464d42f3e134af4325c5ce6e.html">src</a></li><li class="navelem"><a class="el" href="dir_32a1028ae0a47e7b34b3c8fd0b05a58d.html">main</a></li><li class="navelem"><a class="el" href="dir_9dee27190e861708e732c03adc0229f4.html">cpp</a></li><li class="navelem"><a class="el" href="dir_ad2b7f4d39d64c4cee9623c2385c7832.html">auton</a></li><li class="navelem"><a class="el" href="_primitive_parser_8cpp.html">PrimitiveParser.cpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

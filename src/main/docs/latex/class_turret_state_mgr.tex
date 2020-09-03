@@ -1,0 +1,170 @@
+\hypertarget{class_turret_state_mgr}{}\doxysection{Turret\+State\+Mgr Class Reference}
+\label{class_turret_state_mgr}\index{TurretStateMgr@{TurretStateMgr}}
+
+
+{\ttfamily \#include $<$Turret\+State\+Mgr.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98}{T\+U\+R\+R\+E\+T\+\_\+\+S\+T\+A\+TE}} \{ \newline
+\mbox{\hyperlink{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98a187f8fdd26136f4012c473534805dc15}{H\+O\+LD}}, 
+\mbox{\hyperlink{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98a54bef97d298e8ca2bc34c29999dc81ea}{L\+I\+M\+E\+L\+I\+G\+H\+T\+\_\+\+A\+IM}}, 
+\mbox{\hyperlink{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98aeeb2a5101bf41ce410113c70b546c91a}{M\+A\+N\+U\+A\+L\+\_\+\+A\+IM}}, 
+\mbox{\hyperlink{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98ae5e8528c4563bcd397a154b28fc8b1ba}{T\+U\+R\+N\+\_\+\+A\+N\+G\+LE}}, 
+\newline
+\mbox{\hyperlink{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98a6899ca987c0c625ba905301aa83d2a51}{M\+A\+X\+\_\+\+T\+U\+R\+R\+E\+T\+\_\+\+S\+T\+A\+T\+ES}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_turret_state_mgr_a6c0df093d2070fa547eb5855c5d9a9e2}{Run\+Current\+State}} ()
+\begin{DoxyCompactList}\small\item\em run the current state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turret_state_mgr_a0d02699d1deedcf645dfe3e71278e32c}{Set\+Current\+State}} (\mbox{\hyperlink{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98}{T\+U\+R\+R\+E\+T\+\_\+\+S\+T\+A\+TE}} state, bool run, double turret\+Angle)
+\begin{DoxyCompactList}\small\item\em set the current state, initialize it and run it \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98}{T\+U\+R\+R\+E\+T\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{class_turret_state_mgr_accdae0fe99a3ebc30ad4b8cedbc6b178}{Get\+Current\+State}} () const
+\begin{DoxyCompactList}\small\item\em return the current state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turret_state_mgr_a79a43204337f787919606f0480a62087}{Set\+Approx\+Target\+Angle}} (double angle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_turret_state_mgr}{Turret\+State\+Mgr}} $\ast$ \mbox{\hyperlink{class_turret_state_mgr_a7c52205efc0588ef437b3943cb161d99}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Find or create the state manmanager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 15 of file Turret\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98}\label{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98}} 
+\index{TurretStateMgr@{TurretStateMgr}!TURRET\_STATE@{TURRET\_STATE}}
+\index{TURRET\_STATE@{TURRET\_STATE}!TurretStateMgr@{TurretStateMgr}}
+\doxysubsubsection{\texorpdfstring{TURRET\_STATE}{TURRET\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98}{Turret\+State\+Mgr\+::\+T\+U\+R\+R\+E\+T\+\_\+\+S\+T\+A\+TE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HOLD@{HOLD}!TurretStateMgr@{TurretStateMgr}}\index{TurretStateMgr@{TurretStateMgr}!HOLD@{HOLD}}}\mbox{\Hypertarget{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98a187f8fdd26136f4012c473534805dc15}\label{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98a187f8fdd26136f4012c473534805dc15}} 
+H\+O\+LD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIMELIGHT\_AIM@{LIMELIGHT\_AIM}!TurretStateMgr@{TurretStateMgr}}\index{TurretStateMgr@{TurretStateMgr}!LIMELIGHT\_AIM@{LIMELIGHT\_AIM}}}\mbox{\Hypertarget{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98a54bef97d298e8ca2bc34c29999dc81ea}\label{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98a54bef97d298e8ca2bc34c29999dc81ea}} 
+L\+I\+M\+E\+L\+I\+G\+H\+T\+\_\+\+A\+IM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MANUAL\_AIM@{MANUAL\_AIM}!TurretStateMgr@{TurretStateMgr}}\index{TurretStateMgr@{TurretStateMgr}!MANUAL\_AIM@{MANUAL\_AIM}}}\mbox{\Hypertarget{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98aeeb2a5101bf41ce410113c70b546c91a}\label{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98aeeb2a5101bf41ce410113c70b546c91a}} 
+M\+A\+N\+U\+A\+L\+\_\+\+A\+IM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TURN\_ANGLE@{TURN\_ANGLE}!TurretStateMgr@{TurretStateMgr}}\index{TurretStateMgr@{TurretStateMgr}!TURN\_ANGLE@{TURN\_ANGLE}}}\mbox{\Hypertarget{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98ae5e8528c4563bcd397a154b28fc8b1ba}\label{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98ae5e8528c4563bcd397a154b28fc8b1ba}} 
+T\+U\+R\+N\+\_\+\+A\+N\+G\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_TURRET\_STATES@{MAX\_TURRET\_STATES}!TurretStateMgr@{TurretStateMgr}}\index{TurretStateMgr@{TurretStateMgr}!MAX\_TURRET\_STATES@{MAX\_TURRET\_STATES}}}\mbox{\Hypertarget{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98a6899ca987c0c625ba905301aa83d2a51}\label{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98a6899ca987c0c625ba905301aa83d2a51}} 
+M\+A\+X\+\_\+\+T\+U\+R\+R\+E\+T\+\_\+\+S\+T\+A\+T\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 17 of file Turret\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_turret_state_mgr_accdae0fe99a3ebc30ad4b8cedbc6b178}\label{class_turret_state_mgr_accdae0fe99a3ebc30ad4b8cedbc6b178}} 
+\index{TurretStateMgr@{TurretStateMgr}!GetCurrentState@{GetCurrentState}}
+\index{GetCurrentState@{GetCurrentState}!TurretStateMgr@{TurretStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetCurrentState()}{GetCurrentState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98}{T\+U\+R\+R\+E\+T\+\_\+\+S\+T\+A\+TE}} Turret\+State\+Mgr\+::\+Get\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the current state 
+
+\begin{DoxyReturn}{Returns}
+S\+H\+O\+O\+T\+E\+R\+\_\+\+H\+O\+O\+D\+\_\+\+S\+T\+A\+TE -\/ the current state 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file Turret\+State\+Mgr.\+h.
+
+\mbox{\Hypertarget{class_turret_state_mgr_a7c52205efc0588ef437b3943cb161d99}\label{class_turret_state_mgr_a7c52205efc0588ef437b3943cb161d99}} 
+\index{TurretStateMgr@{TurretStateMgr}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!TurretStateMgr@{TurretStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turret_state_mgr}{Turret\+State\+Mgr}} $\ast$ Turret\+State\+Mgr\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find or create the state manmanager. 
+
+\begin{DoxyReturn}{Returns}
+Turret\+State\+Mgr$\ast$ pointer to the state manager 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file Turret\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_turret_state_mgr_a6c0df093d2070fa547eb5855c5d9a9e2}\label{class_turret_state_mgr_a6c0df093d2070fa547eb5855c5d9a9e2}} 
+\index{TurretStateMgr@{TurretStateMgr}!RunCurrentState@{RunCurrentState}}
+\index{RunCurrentState@{RunCurrentState}!TurretStateMgr@{TurretStateMgr}}
+\doxysubsubsection{\texorpdfstring{RunCurrentState()}{RunCurrentState()}}
+{\footnotesize\ttfamily void Turret\+State\+Mgr\+::\+Run\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+run the current state 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file Turret\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_turret_state_mgr_a79a43204337f787919606f0480a62087}\label{class_turret_state_mgr_a79a43204337f787919606f0480a62087}} 
+\index{TurretStateMgr@{TurretStateMgr}!SetApproxTargetAngle@{SetApproxTargetAngle}}
+\index{SetApproxTargetAngle@{SetApproxTargetAngle}!TurretStateMgr@{TurretStateMgr}}
+\doxysubsubsection{\texorpdfstring{SetApproxTargetAngle()}{SetApproxTargetAngle()}}
+{\footnotesize\ttfamily void Turret\+State\+Mgr\+::\+Set\+Approx\+Target\+Angle (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 50 of file Turret\+State\+Mgr.\+h.
+
+\mbox{\Hypertarget{class_turret_state_mgr_a0d02699d1deedcf645dfe3e71278e32c}\label{class_turret_state_mgr_a0d02699d1deedcf645dfe3e71278e32c}} 
+\index{TurretStateMgr@{TurretStateMgr}!SetCurrentState@{SetCurrentState}}
+\index{SetCurrentState@{SetCurrentState}!TurretStateMgr@{TurretStateMgr}}
+\doxysubsubsection{\texorpdfstring{SetCurrentState()}{SetCurrentState()}}
+{\footnotesize\ttfamily void Turret\+State\+Mgr\+::\+Set\+Current\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turret_state_mgr_aa185afc9e9d378aca360e2f2376c1b98}{T\+U\+R\+R\+E\+T\+\_\+\+S\+T\+A\+TE}}}]{state,  }\item[{bool}]{run,  }\item[{double}]{turret\+Angle }\end{DoxyParamCaption})}
+
+
+
+set the current state, initialize it and run it 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+H\+O\+O\+T\+E\+R\+\_\+\+H\+O\+O\+D\+\_\+\+S\+T\+A\+TE} & -\/ state to set \\
+\hline
+\mbox{\texttt{ in}}  & {\em run} & -\/ true means run, false just initialize it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 144 of file Turret\+State\+Mgr.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/states/turret/\mbox{\hyperlink{_turret_state_mgr_8h}{Turret\+State\+Mgr.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/states/turret/\mbox{\hyperlink{_turret_state_mgr_8cpp}{Turret\+State\+Mgr.\+cpp}}\end{DoxyCompactItemize}

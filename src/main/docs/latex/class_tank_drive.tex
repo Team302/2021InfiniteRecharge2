@@ -1,0 +1,122 @@
+\hypertarget{class_tank_drive}{}\doxysection{Tank\+Drive Class Reference}
+\label{class_tank_drive}\index{TankDrive@{TankDrive}}
+
+
+Drive differential chassis with one joystick controlling each side of the robot.  
+
+
+
+
+{\ttfamily \#include $<$Tank\+Drive.\+h$>$}
+
+Inheritance diagram for Tank\+Drive\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tank_drive}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tank_drive_aa60aae817ddee667161e9fa4e65b164c}{Tank\+Drive}} ()
+\begin{DoxyCompactList}\small\item\em initialize the object \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tank_drive_a6afe0182758e4981114b3f5cd6ae703f}{$\sim$\+Tank\+Drive}} ()=default
+\begin{DoxyCompactList}\small\item\em clean up memory \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tank_drive_aa718326cc925af2a786c1ee1f8bd4125}{Init}} () override
+\item 
+void \mbox{\hyperlink{class_tank_drive_a44a489fce4ca4fa40c9e0c4b8ae8ffd3}{Run}} () override
+\begin{DoxyCompactList}\small\item\em Read two joysticks and drive a differential chassis (each joystick drives a separate side) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tank_drive_a29255349e6f4769fc817134021e19b6c}{At\+Target}} () const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Drive differential chassis with one joystick controlling each side of the robot. 
+
+Definition at line 34 of file Tank\+Drive.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tank_drive_aa60aae817ddee667161e9fa4e65b164c}\label{class_tank_drive_aa60aae817ddee667161e9fa4e65b164c}} 
+\index{TankDrive@{TankDrive}!TankDrive@{TankDrive}}
+\index{TankDrive@{TankDrive}!TankDrive@{TankDrive}}
+\doxysubsubsection{\texorpdfstring{TankDrive()}{TankDrive()}}
+{\footnotesize\ttfamily Tank\+Drive\+::\+Tank\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initialize the object 
+
+
+
+Definition at line 37 of file Tank\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_tank_drive_a6afe0182758e4981114b3f5cd6ae703f}\label{class_tank_drive_a6afe0182758e4981114b3f5cd6ae703f}} 
+\index{TankDrive@{TankDrive}!````~TankDrive@{$\sim$TankDrive}}
+\index{````~TankDrive@{$\sim$TankDrive}!TankDrive@{TankDrive}}
+\doxysubsubsection{\texorpdfstring{$\sim$TankDrive()}{~TankDrive()}}
+{\footnotesize\ttfamily Tank\+Drive\+::$\sim$\+Tank\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+clean up memory 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tank_drive_a29255349e6f4769fc817134021e19b6c}\label{class_tank_drive_a29255349e6f4769fc817134021e19b6c}} 
+\index{TankDrive@{TankDrive}!AtTarget@{AtTarget}}
+\index{AtTarget@{AtTarget}!TankDrive@{TankDrive}}
+\doxysubsubsection{\texorpdfstring{AtTarget()}{AtTarget()}}
+{\footnotesize\ttfamily bool Tank\+Drive\+::\+At\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_state_a15624686c47f28cf90f76bb28e938937}{I\+State}}.
+
+
+
+Definition at line 72 of file Tank\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_tank_drive_aa718326cc925af2a786c1ee1f8bd4125}\label{class_tank_drive_aa718326cc925af2a786c1ee1f8bd4125}} 
+\index{TankDrive@{TankDrive}!Init@{Init}}
+\index{Init@{Init}!TankDrive@{TankDrive}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Tank\+Drive\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_state_ac1400e68fde2f088873f5ec283309977}{I\+State}}.
+
+
+
+Definition at line 52 of file Tank\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_tank_drive_a44a489fce4ca4fa40c9e0c4b8ae8ffd3}\label{class_tank_drive_a44a489fce4ca4fa40c9e0c4b8ae8ffd3}} 
+\index{TankDrive@{TankDrive}!Run@{Run}}
+\index{Run@{Run}!TankDrive@{TankDrive}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Tank\+Drive\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Read two joysticks and drive a differential chassis (each joystick drives a separate side) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_state_a1dc31736da7d9e9322c1cc417672ea0f}{I\+State}}.
+
+
+
+Definition at line 62 of file Tank\+Drive.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/states/chassis/\mbox{\hyperlink{_tank_drive_8h}{Tank\+Drive.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/states/chassis/\mbox{\hyperlink{_tank_drive_8cpp}{Tank\+Drive.\+cpp}}\end{DoxyCompactItemize}

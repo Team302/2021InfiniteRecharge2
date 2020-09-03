@@ -1,0 +1,94 @@
+\hypertarget{class_hardware_i_d_validation}{}\doxysection{Hardware\+I\+D\+Validation Class Reference}
+\label{class_hardware_i_d_validation}\index{HardwareIDValidation@{HardwareIDValidation}}
+
+
+\mbox{\hyperlink{_hardware_i_d_validation_8h}{Hardware\+I\+D\+Validation.\+h}}.  
+
+
+
+
+{\ttfamily \#include $<$Hardware\+I\+D\+Validation.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_hardware_i_d_validation_ab6c13f88201571587dc8de99b4937e65}{Validate\+C\+A\+N\+ID}} (int can\+ID, std\+::string method\+ID)
+\item 
+static bool \mbox{\hyperlink{class_hardware_i_d_validation_a0aadb44d067609e1df994e06145f5f9f}{Validate\+P\+D\+P\+ID}} (int pdp\+ID, std\+::string method\+ID)
+\item 
+static bool \mbox{\hyperlink{class_hardware_i_d_validation_a703f456923391db2a37e0c1160acc209}{Validate\+D\+I\+O\+ID}} (int dio\+ID, std\+::string method\+ID)
+\item 
+static bool \mbox{\hyperlink{class_hardware_i_d_validation_a800acffe0043d9ba504c527d0ade5eda}{Validate\+Solenoid\+Channel}} (int channel, std\+::string method\+ID)
+\item 
+static bool \mbox{\hyperlink{class_hardware_i_d_validation_a404d9c89d42c4a474ce9b7919456ea7d}{Validate\+ID}} (int id, int min\+ID, int max\+ID, std\+::string method\+ID, std\+::string error\+Msg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{_hardware_i_d_validation_8h}{Hardware\+I\+D\+Validation.\+h}}. 
+
+File Description\+: This will validate the various hardware I\+Ds against the valid values. 
+
+Definition at line 38 of file Hardware\+I\+D\+Validation.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hardware_i_d_validation_ab6c13f88201571587dc8de99b4937e65}\label{class_hardware_i_d_validation_ab6c13f88201571587dc8de99b4937e65}} 
+\index{HardwareIDValidation@{HardwareIDValidation}!ValidateCANID@{ValidateCANID}}
+\index{ValidateCANID@{ValidateCANID}!HardwareIDValidation@{HardwareIDValidation}}
+\doxysubsubsection{\texorpdfstring{ValidateCANID()}{ValidateCANID()}}
+{\footnotesize\ttfamily bool Hardware\+I\+D\+Validation\+::\+Validate\+C\+A\+N\+ID (\begin{DoxyParamCaption}\item[{int}]{can\+ID,  }\item[{std\+::string}]{method\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method\+: Validate\+C\+A\+N\+ID Description\+: Check the C\+AN ID against the valid range. If it is invalid the logger utility will be called. Returns\+: bool true -\/ valid false -\/ invalid 
+
+Definition at line 47 of file Hardware\+I\+D\+Validation.\+cpp.
+
+\mbox{\Hypertarget{class_hardware_i_d_validation_a703f456923391db2a37e0c1160acc209}\label{class_hardware_i_d_validation_a703f456923391db2a37e0c1160acc209}} 
+\index{HardwareIDValidation@{HardwareIDValidation}!ValidateDIOID@{ValidateDIOID}}
+\index{ValidateDIOID@{ValidateDIOID}!HardwareIDValidation@{HardwareIDValidation}}
+\doxysubsubsection{\texorpdfstring{ValidateDIOID()}{ValidateDIOID()}}
+{\footnotesize\ttfamily bool Hardware\+I\+D\+Validation\+::\+Validate\+D\+I\+O\+ID (\begin{DoxyParamCaption}\item[{int}]{dio\+ID,  }\item[{std\+::string}]{method\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method\+: Validate\+D\+I\+O\+ID Description\+: Check the Digitial IO ID against the valid range. If it is invalid the logger utility will be called. Returns\+: bool true -\/ valid false -\/ invalid
+
+Method\+: Validate\+D\+I\+O\+ID Description\+: Check the D\+IO ID against the valid range. If it is invalid the logger utility will be called. Returns\+: bool true -\/ valid false -\/ invalid 
+
+Definition at line 84 of file Hardware\+I\+D\+Validation.\+cpp.
+
+\mbox{\Hypertarget{class_hardware_i_d_validation_a404d9c89d42c4a474ce9b7919456ea7d}\label{class_hardware_i_d_validation_a404d9c89d42c4a474ce9b7919456ea7d}} 
+\index{HardwareIDValidation@{HardwareIDValidation}!ValidateID@{ValidateID}}
+\index{ValidateID@{ValidateID}!HardwareIDValidation@{HardwareIDValidation}}
+\doxysubsubsection{\texorpdfstring{ValidateID()}{ValidateID()}}
+{\footnotesize\ttfamily bool Hardware\+I\+D\+Validation\+::\+Validate\+ID (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{min\+ID,  }\item[{int}]{max\+ID,  }\item[{std\+::string}]{method\+ID,  }\item[{std\+::string}]{error\+Msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method\+: Validate\+ID Description\+: Check the ID against the valid range. If it is invalid the logger utility will be called. Returns\+: bool true -\/ valid false -\/ invalid 
+
+Definition at line 112 of file Hardware\+I\+D\+Validation.\+cpp.
+
+\mbox{\Hypertarget{class_hardware_i_d_validation_a0aadb44d067609e1df994e06145f5f9f}\label{class_hardware_i_d_validation_a0aadb44d067609e1df994e06145f5f9f}} 
+\index{HardwareIDValidation@{HardwareIDValidation}!ValidatePDPID@{ValidatePDPID}}
+\index{ValidatePDPID@{ValidatePDPID}!HardwareIDValidation@{HardwareIDValidation}}
+\doxysubsubsection{\texorpdfstring{ValidatePDPID()}{ValidatePDPID()}}
+{\footnotesize\ttfamily bool Hardware\+I\+D\+Validation\+::\+Validate\+P\+D\+P\+ID (\begin{DoxyParamCaption}\item[{int}]{pdp\+ID,  }\item[{std\+::string}]{method\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method\+: Validate\+P\+D\+P\+ID Description\+: Check the P\+DP ID against the valid range. If it is invalid the logger utility will be called. Returns\+: bool true -\/ valid false -\/ invalid 
+
+Definition at line 65 of file Hardware\+I\+D\+Validation.\+cpp.
+
+\mbox{\Hypertarget{class_hardware_i_d_validation_a800acffe0043d9ba504c527d0ade5eda}\label{class_hardware_i_d_validation_a800acffe0043d9ba504c527d0ade5eda}} 
+\index{HardwareIDValidation@{HardwareIDValidation}!ValidateSolenoidChannel@{ValidateSolenoidChannel}}
+\index{ValidateSolenoidChannel@{ValidateSolenoidChannel}!HardwareIDValidation@{HardwareIDValidation}}
+\doxysubsubsection{\texorpdfstring{ValidateSolenoidChannel()}{ValidateSolenoidChannel()}}
+{\footnotesize\ttfamily bool Hardware\+I\+D\+Validation\+::\+Validate\+Solenoid\+Channel (\begin{DoxyParamCaption}\item[{int}]{channel,  }\item[{std\+::string}]{method\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 94 of file Hardware\+I\+D\+Validation.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/utils/\mbox{\hyperlink{_hardware_i_d_validation_8h}{Hardware\+I\+D\+Validation.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/utils/\mbox{\hyperlink{_hardware_i_d_validation_8cpp}{Hardware\+I\+D\+Validation.\+cpp}}\end{DoxyCompactItemize}

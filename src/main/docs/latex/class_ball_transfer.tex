@@ -1,0 +1,225 @@
+\hypertarget{class_ball_transfer}{}\doxysection{Ball\+Transfer Class Reference}
+\label{class_ball_transfer}\index{BallTransfer@{BallTransfer}}
+
+
+{\ttfamily \#include $<$Ball\+Transfer.\+h$>$}
+
+Inheritance diagram for Ball\+Transfer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ball_transfer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ball_transfer_a9ec97e88767744887b31728d871c9af3}{Ball\+Transfer}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ motor\+Controller)
+\item 
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{class_ball_transfer_a0e9e704cbc3fcb207b7377c3356487c3}{Get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates the type of mechanism this is. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_transfer_a8c437223d6e1cd96476294b6f4e9d5bb}{Set\+Output}} (\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} control\+Type, double value) override
+\begin{DoxyCompactList}\small\item\em Run mechanism as defined. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_transfer_a6125b233e84bb18b95028291b8a821fa}{Activate\+Solenoid}} (bool activate) override
+\begin{DoxyCompactList}\small\item\em Activate/deactivate pneumatic solenoid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ball_transfer_a97153a52dbe2240fe50ac5ff7a3736b7}{Is\+Solenoid\+Activated}} () override
+\begin{DoxyCompactList}\small\item\em Check if the pneumatic solenoid is activated. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_ball_transfer_a439eba26f6912a85ac05fce629fb6b1c}{Get\+Current\+Position}} () const override
+\begin{DoxyCompactList}\small\item\em Return the current position of the mechanism. The value is in inches or degrees. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_ball_transfer_add75fdc81285150babc0c52cf2b371b3}{Get\+Current\+Speed}} () const override
+\begin{DoxyCompactList}\small\item\em Get the current speed of the mechanism. The value is in inches per second or degrees per second. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_transfer_a4c99013d442e948437be3564500a07a1}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid) override
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 42 of file Ball\+Transfer.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ball_transfer_a9ec97e88767744887b31728d871c9af3}\label{class_ball_transfer_a9ec97e88767744887b31728d871c9af3}} 
+\index{BallTransfer@{BallTransfer}!BallTransfer@{BallTransfer}}
+\index{BallTransfer@{BallTransfer}!BallTransfer@{BallTransfer}}
+\doxysubsubsection{\texorpdfstring{BallTransfer()}{BallTransfer()}}
+{\footnotesize\ttfamily Ball\+Transfer\+::\+Ball\+Transfer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{motor\+Controller }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file Ball\+Transfer.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ball_transfer_a6125b233e84bb18b95028291b8a821fa}\label{class_ball_transfer_a6125b233e84bb18b95028291b8a821fa}} 
+\index{BallTransfer@{BallTransfer}!ActivateSolenoid@{ActivateSolenoid}}
+\index{ActivateSolenoid@{ActivateSolenoid}!BallTransfer@{BallTransfer}}
+\doxysubsubsection{\texorpdfstring{ActivateSolenoid()}{ActivateSolenoid()}}
+{\footnotesize\ttfamily void Ball\+Transfer\+::\+Activate\+Solenoid (\begin{DoxyParamCaption}\item[{bool}]{activate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activate/deactivate pneumatic solenoid. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bool} & -\/ true == extend, false == retract \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_abef1fbd73a24f4f6f3104e255539e0d9}{I\+Mechanism}}.
+
+
+
+Definition at line 67 of file Ball\+Transfer.\+cpp.
+
+\mbox{\Hypertarget{class_ball_transfer_a439eba26f6912a85ac05fce629fb6b1c}\label{class_ball_transfer_a439eba26f6912a85ac05fce629fb6b1c}} 
+\index{BallTransfer@{BallTransfer}!GetCurrentPosition@{GetCurrentPosition}}
+\index{GetCurrentPosition@{GetCurrentPosition}!BallTransfer@{BallTransfer}}
+\doxysubsubsection{\texorpdfstring{GetCurrentPosition()}{GetCurrentPosition()}}
+{\footnotesize\ttfamily double Ball\+Transfer\+::\+Get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the current position of the mechanism. The value is in inches or degrees. 
+
+\begin{DoxyReturn}{Returns}
+double position in inches (translating mechanisms) or degrees (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_aa15197ff101d65447516a8f10bb6867d}{I\+Mechanism}}.
+
+
+
+Definition at line 84 of file Ball\+Transfer.\+cpp.
+
+\mbox{\Hypertarget{class_ball_transfer_add75fdc81285150babc0c52cf2b371b3}\label{class_ball_transfer_add75fdc81285150babc0c52cf2b371b3}} 
+\index{BallTransfer@{BallTransfer}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!BallTransfer@{BallTransfer}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily double Ball\+Transfer\+::\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current speed of the mechanism. The value is in inches per second or degrees per second. 
+
+\begin{DoxyReturn}{Returns}
+double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a9a63d6905de4454d78d7e0d1d1e28437}{I\+Mechanism}}.
+
+
+
+Definition at line 93 of file Ball\+Transfer.\+cpp.
+
+\mbox{\Hypertarget{class_ball_transfer_a0e9e704cbc3fcb207b7377c3356487c3}\label{class_ball_transfer_a0e9e704cbc3fcb207b7377c3356487c3}} 
+\index{BallTransfer@{BallTransfer}!GetType@{GetType}}
+\index{GetType@{GetType}!BallTransfer@{BallTransfer}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} Ball\+Transfer\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates the type of mechanism this is. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a62096808201ffc31609e99dc2fa92d44}{I\+Mechanism}}.
+
+
+
+Definition at line 44 of file Ball\+Transfer.\+cpp.
+
+\mbox{\Hypertarget{class_ball_transfer_a97153a52dbe2240fe50ac5ff7a3736b7}\label{class_ball_transfer_a97153a52dbe2240fe50ac5ff7a3736b7}} 
+\index{BallTransfer@{BallTransfer}!IsSolenoidActivated@{IsSolenoidActivated}}
+\index{IsSolenoidActivated@{IsSolenoidActivated}!BallTransfer@{BallTransfer}}
+\doxysubsubsection{\texorpdfstring{IsSolenoidActivated()}{IsSolenoidActivated()}}
+{\footnotesize\ttfamily bool Ball\+Transfer\+::\+Is\+Solenoid\+Activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the pneumatic solenoid is activated. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true == extended, false == retract 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a4c0bedb71316054749a276a67d278558}{I\+Mechanism}}.
+
+
+
+Definition at line 75 of file Ball\+Transfer.\+cpp.
+
+\mbox{\Hypertarget{class_ball_transfer_a4c99013d442e948437be3564500a07a1}\label{class_ball_transfer_a4c99013d442e948437be3564500a07a1}} 
+\index{BallTransfer@{BallTransfer}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!BallTransfer@{BallTransfer}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily void Ball\+Transfer\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid\+: the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_acd973ca93855c485ed42d405f2fcba11}{I\+Mechanism}}.
+
+
+
+Definition at line 103 of file Ball\+Transfer.\+cpp.
+
+\mbox{\Hypertarget{class_ball_transfer_a8c437223d6e1cd96476294b6f4e9d5bb}\label{class_ball_transfer_a8c437223d6e1cd96476294b6f4e9d5bb}} 
+\index{BallTransfer@{BallTransfer}!SetOutput@{SetOutput}}
+\index{SetOutput@{SetOutput}!BallTransfer@{BallTransfer}}
+\doxysubsubsection{\texorpdfstring{SetOutput()}{SetOutput()}}
+{\footnotesize\ttfamily void Ball\+Transfer\+::\+Set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}}]{control\+Type,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Run mechanism as defined. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}} & control\+Type\+: How are the item(s) being controlled \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & value\+: Target (units are based on the control\+Type) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_abc72a6d0306a828de6f43418e75c04c0}{I\+Mechanism}}.
+
+
+
+Definition at line 50 of file Ball\+Transfer.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_ball_transfer_8h}{Ball\+Transfer.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_ball_transfer_8cpp}{Ball\+Transfer.\+cpp}}\end{DoxyCompactItemize}

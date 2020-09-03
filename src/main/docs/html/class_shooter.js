@@ -7,5 +7,6 @@ var class_shooter =
     [ "GetType", "class_shooter.html#a031e6b54e1a611eeeb5f0d57f375d279", null ],
     [ "IsSolenoidActivated", "class_shooter.html#affa03878246b56a70b206d83369eefca", null ],
     [ "SetControlConstants", "class_shooter.html#aaa12826e26eecab817ad3ca19a52dfdc", null ],
+    [ "SetOutput", "class_shooter.html#a3744531d29636a579a1e390677f1a81e", null ],
     [ "SetOutput", "class_shooter.html#a5002bb1e9c11195e18c1c62968b5863a", null ]
 ];

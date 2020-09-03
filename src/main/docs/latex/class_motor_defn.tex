@@ -1,0 +1,84 @@
+\hypertarget{class_motor_defn}{}\doxysection{Motor\+Defn Class Reference}
+\label{class_motor_defn}\index{MotorDefn@{MotorDefn}}
+
+
+\mbox{\hyperlink{_motor_defn_8h}{Motor\+Defn.\+h}}.  
+
+
+
+
+{\ttfamily \#include $<$Motor\+Defn.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_motor_defn_a8d63b22641b61dbe1688ccf37406d28f}{Motor\+Defn}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_motor_defn_a74c9eb273250e0f0c766030b6fd6b5fc}{$\sim$\+Motor\+Defn}} ()=default
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ \mbox{\hyperlink{class_motor_defn_a41d1bdea7f06ba470b4330278b1ad1ce}{Parse\+X\+ML}} (pugi\+::xml\+\_\+node motor\+Node)
+\begin{DoxyCompactList}\small\item\em \+: Parse a motor X\+ML element and create a motor controller from its definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{_motor_defn_8h}{Motor\+Defn.\+h}}. 
+
+X\+ML parsing for motor definitions. This definition will construct the motor controllers. This parsing leverages the 3rd party Open Source Pugixml library (\href{https://pugixml.org/}{\texttt{ https\+://pugixml.\+org/}}).
+
+File Description\+: This will parse the motor (controller) definition X\+ML and create a motor controller object. 
+
+Definition at line 43 of file Motor\+Defn.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_motor_defn_a8d63b22641b61dbe1688ccf37406d28f}\label{class_motor_defn_a8d63b22641b61dbe1688ccf37406d28f}} 
+\index{MotorDefn@{MotorDefn}!MotorDefn@{MotorDefn}}
+\index{MotorDefn@{MotorDefn}!MotorDefn@{MotorDefn}}
+\doxysubsubsection{\texorpdfstring{MotorDefn()}{MotorDefn()}}
+{\footnotesize\ttfamily Motor\+Defn\+::\+Motor\+Defn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_motor_defn_a74c9eb273250e0f0c766030b6fd6b5fc}\label{class_motor_defn_a74c9eb273250e0f0c766030b6fd6b5fc}} 
+\index{MotorDefn@{MotorDefn}!````~MotorDefn@{$\sim$MotorDefn}}
+\index{````~MotorDefn@{$\sim$MotorDefn}!MotorDefn@{MotorDefn}}
+\doxysubsubsection{\texorpdfstring{$\sim$MotorDefn()}{~MotorDefn()}}
+{\footnotesize\ttfamily virtual Motor\+Defn\+::$\sim$\+Motor\+Defn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_motor_defn_a41d1bdea7f06ba470b4330278b1ad1ce}\label{class_motor_defn_a41d1bdea7f06ba470b4330278b1ad1ce}} 
+\index{MotorDefn@{MotorDefn}!ParseXML@{ParseXML}}
+\index{ParseXML@{ParseXML}!MotorDefn@{MotorDefn}}
+\doxysubsubsection{\texorpdfstring{ParseXML()}{ParseXML()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ Motor\+Defn\+::\+Parse\+X\+ML (\begin{DoxyParamCaption}\item[{pugi\+::xml\+\_\+node}]{motor\+Node }\end{DoxyParamCaption})}
+
+
+
+\+: Parse a motor X\+ML element and create a motor controller from its definition. 
+
+\DoxyHorRuler
+ Method\+: Parse\+X\+ML Description\+: Parse a motor X\+ML element and create a \mbox{\hyperlink{class_dragon_talon}{Dragon\+Talon}} from its definition. Returns\+: Dragon\+Talon$\ast$ motor controller (or nullptr if X\+ML \hypertarget{class_motor_defn_autotoc_md74}{}\doxysubsubsection{is ill-\/formed)}\label{class_motor_defn_autotoc_md74}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em xml\+\_\+node} & motor node in the xml file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+shared\+\_\+ptr$<$\+I\+Dragon\+Motor\+Controller$>$ motor controller or nullptr if there is an error in the definition 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em motor\+Node} & {\itshape  -\/ xml motor node }\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file Motor\+Defn.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/xmlhw/\mbox{\hyperlink{_motor_defn_8h}{Motor\+Defn.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/xmlhw/\mbox{\hyperlink{_motor_defn_8cpp}{Motor\+Defn.\+cpp}}\end{DoxyCompactItemize}

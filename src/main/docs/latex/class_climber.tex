@@ -1,0 +1,292 @@
+\hypertarget{class_climber}{}\doxysection{Climber Class Reference}
+\label{class_climber}\index{Climber@{Climber}}
+
+
+The \mbox{\hyperlink{class_climber}{Climber}} subsystem. Includes pneumatic extender and winch.  
+
+
+
+
+{\ttfamily \#include $<$Climber.\+h$>$}
+
+Inheritance diagram for Climber\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_climber}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_climber_a52a291c97dbcad56794493d518d0c42b}{Climber}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ master\+Motor, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_solenoid}{Dragon\+Solenoid}} $>$ master\+Solenoid, double winch\+Diameter)
+\begin{DoxyCompactList}\small\item\em Create and initialize the \mbox{\hyperlink{class_climber}{Climber}} sub-\/mechanism. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_climber_a5d98791705b1e9d5626cc31220ab3bb0}{Climber}} ()=delete
+\item 
+virtual \mbox{\hyperlink{class_climber_aa3ac373169be2eac9efd6e817ca6fa29}{$\sim$\+Climber}} ()=default
+\begin{DoxyCompactList}\small\item\em Clean up memory when this object gets deleted. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{class_climber_a05d4b42803a951054d725f2197a51a3d}{Get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates that this is \mbox{\hyperlink{class_climber}{Climber}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climber_a7bdc1cc3a27ecb23e26bf60c105a4b79}{Set\+Output}} (\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} control\+Type, double value) override
+\begin{DoxyCompactList}\small\item\em Run the \mbox{\hyperlink{class_climber}{Climber}} as defined. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climber_ae03ddf335ed70b23d656a623991f575b}{Activate\+Solenoid}} (bool activate) override
+\begin{DoxyCompactList}\small\item\em Activate/deactivate the extender solenoid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_climber_a2195246b6a7d9d1381da682474cc0a92}{Is\+Solenoid\+Activated}} () override
+\begin{DoxyCompactList}\small\item\em Check to see if the solenoid is activated. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_climber_a6db6ada50bc8ed96d85006917fcce31e}{Get\+Current\+Position}} () const override
+\begin{DoxyCompactList}\small\item\em Return the current position of the climber in inches (positive is forward, negative is backward) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_climber_a496efc9ed2d6e09c9c8cc9c57748253d}{Get\+Current\+Speed}} () const override
+\begin{DoxyCompactList}\small\item\em Return the current position of the climber in inches (positive is forward, negative is backward) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climber_a5249f9470fa091729d36bb60b1ea7dcf}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid) override
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_climber}{Climber}} subsystem. Includes pneumatic extender and winch. 
+
+This is the climber sub-\/system. 
+
+Definition at line 16 of file Climber.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_climber_a52a291c97dbcad56794493d518d0c42b}\label{class_climber_a52a291c97dbcad56794493d518d0c42b}} 
+\index{Climber@{Climber}!Climber@{Climber}}
+\index{Climber@{Climber}!Climber@{Climber}}
+\doxysubsubsection{\texorpdfstring{Climber()}{Climber()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Climber\+::\+Climber (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{master\+Motor,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_solenoid}{Dragon\+Solenoid}} $>$}]{master\+Solenoid,  }\item[{double}]{winch\+Diameter }\end{DoxyParamCaption})}
+
+
+
+Create and initialize the \mbox{\hyperlink{class_climber}{Climber}} sub-\/mechanism. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em std\+::shared\+\_\+ptr$<$\+I\+Dragon\+Motor\+Controller$>$} & master\+Motor -\/ master motor for the \mbox{\hyperlink{class_climber}{Climber}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em std\+::shared\+\_\+ptr$<$\+Dragon\+Solenoid$>$} & master\+Solenoid -\/ master solenoid for the \mbox{\hyperlink{class_climber}{Climber}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & $\ast$$\ast$ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_climber_a5d98791705b1e9d5626cc31220ab3bb0}\label{class_climber_a5d98791705b1e9d5626cc31220ab3bb0}} 
+\index{Climber@{Climber}!Climber@{Climber}}
+\index{Climber@{Climber}!Climber@{Climber}}
+\doxysubsubsection{\texorpdfstring{Climber()}{Climber()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Climber\+::\+Climber (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_climber_aa3ac373169be2eac9efd6e817ca6fa29}\label{class_climber_aa3ac373169be2eac9efd6e817ca6fa29}} 
+\index{Climber@{Climber}!````~Climber@{$\sim$Climber}}
+\index{````~Climber@{$\sim$Climber}!Climber@{Climber}}
+\doxysubsubsection{\texorpdfstring{$\sim$Climber()}{~Climber()}}
+{\footnotesize\ttfamily virtual Climber\+::$\sim$\+Climber (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Clean up memory when this object gets deleted. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_climber_ae03ddf335ed70b23d656a623991f575b}\label{class_climber_ae03ddf335ed70b23d656a623991f575b}} 
+\index{Climber@{Climber}!ActivateSolenoid@{ActivateSolenoid}}
+\index{ActivateSolenoid@{ActivateSolenoid}!Climber@{Climber}}
+\doxysubsubsection{\texorpdfstring{ActivateSolenoid()}{ActivateSolenoid()}}
+{\footnotesize\ttfamily void Climber\+::\+Activate\+Solenoid (\begin{DoxyParamCaption}\item[{bool}]{activate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activate/deactivate the extender solenoid. 
+
+Activate/\+Deactivate the extender Solenoid.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bool} & -\/ true == extended, false == retracted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bool} & -\/ true == extend, false == retract \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_abef1fbd73a24f4f6f3104e255539e0d9}{I\+Mechanism}}.
+
+
+
+Definition at line 84 of file Climber.\+cpp.
+
+\mbox{\Hypertarget{class_climber_a6db6ada50bc8ed96d85006917fcce31e}\label{class_climber_a6db6ada50bc8ed96d85006917fcce31e}} 
+\index{Climber@{Climber}!GetCurrentPosition@{GetCurrentPosition}}
+\index{GetCurrentPosition@{GetCurrentPosition}!Climber@{Climber}}
+\doxysubsubsection{\texorpdfstring{GetCurrentPosition()}{GetCurrentPosition()}}
+{\footnotesize\ttfamily double Climber\+::\+Get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the current position of the climber in inches (positive is forward, negative is backward) 
+
+Return the current position of the climber in inches.
+
+\begin{DoxyReturn}{Returns}
+double position in inches
+
+double position in inches (positive is forward, negative is backward) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_aa15197ff101d65447516a8f10bb6867d}{I\+Mechanism}}.
+
+
+
+Definition at line 118 of file Climber.\+cpp.
+
+\mbox{\Hypertarget{class_climber_a496efc9ed2d6e09c9c8cc9c57748253d}\label{class_climber_a496efc9ed2d6e09c9c8cc9c57748253d}} 
+\index{Climber@{Climber}!GetCurrentSpeed@{GetCurrentSpeed}}
+\index{GetCurrentSpeed@{GetCurrentSpeed}!Climber@{Climber}}
+\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
+{\footnotesize\ttfamily double Climber\+::\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return the current position of the climber in inches (positive is forward, negative is backward) 
+
+return the current speed of the climber in degrees per second.
+
+\begin{DoxyReturn}{Returns}
+double speed in inches
+
+double speed in degrees per second 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a9a63d6905de4454d78d7e0d1d1e28437}{I\+Mechanism}}.
+
+
+
+Definition at line 136 of file Climber.\+cpp.
+
+\mbox{\Hypertarget{class_climber_a05d4b42803a951054d725f2197a51a3d}\label{class_climber_a05d4b42803a951054d725f2197a51a3d}} 
+\index{Climber@{Climber}!GetType@{GetType}}
+\index{GetType@{GetType}!Climber@{Climber}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} Climber\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates that this is \mbox{\hyperlink{class_climber}{Climber}}. 
+
+\begin{DoxyReturn}{Returns}
+I\+Mechanism\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+P\+E\+::\+C\+L\+I\+M\+B\+ER 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a62096808201ffc31609e99dc2fa92d44}{I\+Mechanism}}.
+
+
+
+Definition at line 50 of file Climber.\+cpp.
+
+\mbox{\Hypertarget{class_climber_a2195246b6a7d9d1381da682474cc0a92}\label{class_climber_a2195246b6a7d9d1381da682474cc0a92}} 
+\index{Climber@{Climber}!IsSolenoidActivated@{IsSolenoidActivated}}
+\index{IsSolenoidActivated@{IsSolenoidActivated}!Climber@{Climber}}
+\doxysubsubsection{\texorpdfstring{IsSolenoidActivated()}{IsSolenoidActivated()}}
+{\footnotesize\ttfamily bool Climber\+::\+Is\+Solenoid\+Activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check to see if the solenoid is activated. 
+
+Check if the extender solenoid is activated.
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true == extended, false == retracted 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_a4c0bedb71316054749a276a67d278558}{I\+Mechanism}}.
+
+
+
+Definition at line 101 of file Climber.\+cpp.
+
+\mbox{\Hypertarget{class_climber_a5249f9470fa091729d36bb60b1ea7dcf}\label{class_climber_a5249f9470fa091729d36bb60b1ea7dcf}} 
+\index{Climber@{Climber}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!Climber@{Climber}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily void Climber\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid -\/ the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_acd973ca93855c485ed42d405f2fcba11}{I\+Mechanism}}.
+
+
+
+Definition at line 157 of file Climber.\+cpp.
+
+\mbox{\Hypertarget{class_climber_a7bdc1cc3a27ecb23e26bf60c105a4b79}\label{class_climber_a7bdc1cc3a27ecb23e26bf60c105a4b79}} 
+\index{Climber@{Climber}!SetOutput@{SetOutput}}
+\index{SetOutput@{SetOutput}!Climber@{Climber}}
+\doxysubsubsection{\texorpdfstring{SetOutput()}{SetOutput()}}
+{\footnotesize\ttfamily void Climber\+::\+Set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}}]{control\+Type,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Run the \mbox{\hyperlink{class_climber}{Climber}} as defined. 
+
+Run winch motor as defined.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}} & control\+Type \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}} & control\+Type\+: How the winch is being controlled \\
+\hline
+\mbox{\texttt{ in}}  & {\em double} & value\+: Target (units are based on control\+Type) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mechanism_abc72a6d0306a828de6f43418e75c04c0}{I\+Mechanism}}.
+
+
+
+Definition at line 60 of file Climber.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_climber_8h}{Climber.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_climber_8cpp}{Climber.\+cpp}}\end{DoxyCompactItemize}

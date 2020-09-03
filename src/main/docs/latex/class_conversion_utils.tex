@@ -1,0 +1,515 @@
+\hypertarget{class_conversion_utils}{}\doxysection{Conversion\+Utils Class Reference}
+\label{class_conversion_utils}\index{ConversionUtils@{ConversionUtils}}
+
+
+Collection to convert a number between different units.  
+
+
+
+
+{\ttfamily \#include $<$Conversion\+Utils.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_conversion_utils_a45c0c1984d40e35516a6a197fa92e41d}{Conversion\+Utils}} ()=delete
+\item 
+\mbox{\hyperlink{class_conversion_utils_a2b46e1af18c297b52a485047c207b1eb}{$\sim$\+Conversion\+Utils}} ()=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{class_conversion_utils_a4bd289896b2039702f40746d79ec6a1c}{Revolutions\+To\+Degrees}} (double revolutions)
+\begin{DoxyCompactList}\small\item\em Convert from revolutions to Degrees. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_ab3e9940cbfec069c4f3eeef36404e301}{Degrees\+Torevolutions}} (double degrees)
+\begin{DoxyCompactList}\small\item\em Convert from Degrees to revolutions. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_a29aefb5e9b5850d6ef3feffb74aa562a}{Degrees\+To\+Counts}} (double degrees, int counts\+Per\+Rev)
+\begin{DoxyCompactList}\small\item\em Convert from degrees to counts. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_a3b13a2c19176bdb70d255a49a897b413}{Revolutions\+To\+Counts}} (double revs, int counts\+Per\+Rev)
+\begin{DoxyCompactList}\small\item\em Convert from revolutions to counts. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_a88081e5db3c8826aa7b0fbd6ec41488f}{Counts\+To\+Degrees}} (int counts, int counts\+Per\+Rev)
+\begin{DoxyCompactList}\small\item\em Convert from counts to degrees. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_a2ebd64af426c685b78a55ab81132a206}{Counts\+To\+Revolutions}} (int counts, int counts\+Per\+Rev)
+\begin{DoxyCompactList}\small\item\em Convert from counts to revolutions. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_a91d67dc74c69ea16d1fa196787a52306}{Revolutions\+To\+Inches}} (double revolutions, double diameter)
+\begin{DoxyCompactList}\small\item\em Convert from revolutions to Inches. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_a7d464ea695ee8b8db8050c9d6c62b8e5}{Inches\+To\+Revolutions}} (double inches, double diameter)
+\begin{DoxyCompactList}\small\item\em Convert from Inches to revolutions. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_a670a8bf9153f635319013682db943c62}{Counts\+To\+Inches}} (int counts, int counts\+Per\+Rev, double diameter)
+\begin{DoxyCompactList}\small\item\em Convert from counts to Inches. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_ab128d6e3cd0a77e87017ece5fcd4270d}{Inches\+To\+Counts}} (double inches, int counts\+Per\+Rev, double diameter)
+\begin{DoxyCompactList}\small\item\em Convert from Inches to counts. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_ae291baad7c7b580021b5d132bfe798b1}{R\+P\+S\+To\+Degrees\+Per\+Second}} (double rps)
+\begin{DoxyCompactList}\small\item\em Convert from R\+PS to Degrees per second. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_a7ca7eeabc23785f846d6192a7bbf4411}{R\+P\+S\+To\+Counts100ms}} (double rps, int counts\+Per\+Rev)
+\begin{DoxyCompactList}\small\item\em Convert from R\+PS to units/100ms (ctre units) \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_a29fbc9fabd571ac65af3ebc8ab23324c}{Degrees\+Per\+Second\+To\+R\+PS}} (double degrees\+Per\+Second)
+\begin{DoxyCompactList}\small\item\em Convert from Degrees per second to R\+PS. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_ae2ea65f967b72203e35cabcfab1e4c88}{Degrees\+Per\+Second\+To\+Counts100ms}} (double degrees\+Per\+Second, int counts\+Per\+Rev)
+\begin{DoxyCompactList}\small\item\em Convert from Degrees per second to units/100ms (ctre units) \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_adfcc98b85bed02cca67b1269ea97893b}{Counts\+Per100ms\+To\+R\+PS}} (double counts\+Per100ms, int counts\+Per\+Rev)
+\begin{DoxyCompactList}\small\item\em Convert from counts per 100ms (ctre units) to revolutions per second. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_a593af444c3e4ff832343e3fb585c427c}{R\+P\+S\+To\+Inches\+Per\+Second}} (double rps, double diameter)
+\begin{DoxyCompactList}\small\item\em Convert from R\+PS to inches per second. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_a601de7594ad502dc14dda9ed2c4d2801}{Inches\+Per\+Second\+To\+R\+PS}} (double inches\+Per\+Second, double diameter)
+\begin{DoxyCompactList}\small\item\em Convert from inches per second to R\+PS. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_conversion_utils_af70fc7530f004e338db5f9035bdc63b8}{Inches\+Per\+Second\+To\+Counts100ms}} (double inches\+Per\+Second, int counts\+Per\+Rev, double diameter)
+\begin{DoxyCompactList}\small\item\em Convert from inches per second to units/100ms (ctre units) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Collection to convert a number between different units. 
+
+Definition at line 32 of file Conversion\+Utils.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_conversion_utils_a45c0c1984d40e35516a6a197fa92e41d}\label{class_conversion_utils_a45c0c1984d40e35516a6a197fa92e41d}} 
+\index{ConversionUtils@{ConversionUtils}!ConversionUtils@{ConversionUtils}}
+\index{ConversionUtils@{ConversionUtils}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{ConversionUtils()}{ConversionUtils()}}
+{\footnotesize\ttfamily Conversion\+Utils\+::\+Conversion\+Utils (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_conversion_utils_a2b46e1af18c297b52a485047c207b1eb}\label{class_conversion_utils_a2b46e1af18c297b52a485047c207b1eb}} 
+\index{ConversionUtils@{ConversionUtils}!````~ConversionUtils@{$\sim$ConversionUtils}}
+\index{````~ConversionUtils@{$\sim$ConversionUtils}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{$\sim$ConversionUtils()}{~ConversionUtils()}}
+{\footnotesize\ttfamily Conversion\+Utils\+::$\sim$\+Conversion\+Utils (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_conversion_utils_adfcc98b85bed02cca67b1269ea97893b}\label{class_conversion_utils_adfcc98b85bed02cca67b1269ea97893b}} 
+\index{ConversionUtils@{ConversionUtils}!CountsPer100msToRPS@{CountsPer100msToRPS}}
+\index{CountsPer100msToRPS@{CountsPer100msToRPS}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{CountsPer100msToRPS()}{CountsPer100msToRPS()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Counts\+Per100ms\+To\+R\+PS (\begin{DoxyParamCaption}\item[{double}]{counts\+Per100ms,  }\item[{int}]{counts\+Per\+Rev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from counts per 100ms (ctre units) to revolutions per second. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em counts} & per 100ms \\
+\hline
+\mbox{\texttt{ in}}  & {\em counts} & per revolution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double R\+PS 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_a88081e5db3c8826aa7b0fbd6ec41488f}\label{class_conversion_utils_a88081e5db3c8826aa7b0fbd6ec41488f}} 
+\index{ConversionUtils@{ConversionUtils}!CountsToDegrees@{CountsToDegrees}}
+\index{CountsToDegrees@{CountsToDegrees}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{CountsToDegrees()}{CountsToDegrees()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Counts\+To\+Degrees (\begin{DoxyParamCaption}\item[{int}]{counts,  }\item[{int}]{counts\+Per\+Rev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from counts to degrees. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em degrees} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em counts} & per revolution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double units 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_a670a8bf9153f635319013682db943c62}\label{class_conversion_utils_a670a8bf9153f635319013682db943c62}} 
+\index{ConversionUtils@{ConversionUtils}!CountsToInches@{CountsToInches}}
+\index{CountsToInches@{CountsToInches}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{CountsToInches()}{CountsToInches()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Counts\+To\+Inches (\begin{DoxyParamCaption}\item[{int}]{counts,  }\item[{int}]{counts\+Per\+Rev,  }\item[{double}]{diameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from counts to Inches. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em counts} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em counts} & per revolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em diameter} & in inches \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double position in inches 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_a2ebd64af426c685b78a55ab81132a206}\label{class_conversion_utils_a2ebd64af426c685b78a55ab81132a206}} 
+\index{ConversionUtils@{ConversionUtils}!CountsToRevolutions@{CountsToRevolutions}}
+\index{CountsToRevolutions@{CountsToRevolutions}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{CountsToRevolutions()}{CountsToRevolutions()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Counts\+To\+Revolutions (\begin{DoxyParamCaption}\item[{int}]{counts,  }\item[{int}]{counts\+Per\+Rev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from counts to revolutions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em revolutions} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em counts} & per revolution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double units 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_ae2ea65f967b72203e35cabcfab1e4c88}\label{class_conversion_utils_ae2ea65f967b72203e35cabcfab1e4c88}} 
+\index{ConversionUtils@{ConversionUtils}!DegreesPerSecondToCounts100ms@{DegreesPerSecondToCounts100ms}}
+\index{DegreesPerSecondToCounts100ms@{DegreesPerSecondToCounts100ms}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{DegreesPerSecondToCounts100ms()}{DegreesPerSecondToCounts100ms()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Degrees\+Per\+Second\+To\+Counts100ms (\begin{DoxyParamCaption}\item[{double}]{degrees\+Per\+Second,  }\item[{int}]{counts\+Per\+Rev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from Degrees per second to units/100ms (ctre units) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Degrees} & per second \\
+\hline
+\mbox{\texttt{ in}}  & {\em counts} & per revolution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double revolutions per second 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_a29fbc9fabd571ac65af3ebc8ab23324c}\label{class_conversion_utils_a29fbc9fabd571ac65af3ebc8ab23324c}} 
+\index{ConversionUtils@{ConversionUtils}!DegreesPerSecondToRPS@{DegreesPerSecondToRPS}}
+\index{DegreesPerSecondToRPS@{DegreesPerSecondToRPS}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{DegreesPerSecondToRPS()}{DegreesPerSecondToRPS()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Degrees\+Per\+Second\+To\+R\+PS (\begin{DoxyParamCaption}\item[{double}]{degrees\+Per\+Second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from Degrees per second to R\+PS. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Degrees} & per second \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double revolutions per second 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_a29aefb5e9b5850d6ef3feffb74aa562a}\label{class_conversion_utils_a29aefb5e9b5850d6ef3feffb74aa562a}} 
+\index{ConversionUtils@{ConversionUtils}!DegreesToCounts@{DegreesToCounts}}
+\index{DegreesToCounts@{DegreesToCounts}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{DegreesToCounts()}{DegreesToCounts()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Degrees\+To\+Counts (\begin{DoxyParamCaption}\item[{double}]{degrees,  }\item[{int}]{counts\+Per\+Rev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from degrees to counts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em degrees} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em counts} & per revolution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double units 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_ab3e9940cbfec069c4f3eeef36404e301}\label{class_conversion_utils_ab3e9940cbfec069c4f3eeef36404e301}} 
+\index{ConversionUtils@{ConversionUtils}!DegreesTorevolutions@{DegreesTorevolutions}}
+\index{DegreesTorevolutions@{DegreesTorevolutions}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{DegreesTorevolutions()}{DegreesTorevolutions()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Degrees\+Torevolutions (\begin{DoxyParamCaption}\item[{double}]{degrees }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from Degrees to revolutions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Degrees} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double number of revolutions 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_af70fc7530f004e338db5f9035bdc63b8}\label{class_conversion_utils_af70fc7530f004e338db5f9035bdc63b8}} 
+\index{ConversionUtils@{ConversionUtils}!InchesPerSecondToCounts100ms@{InchesPerSecondToCounts100ms}}
+\index{InchesPerSecondToCounts100ms@{InchesPerSecondToCounts100ms}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{InchesPerSecondToCounts100ms()}{InchesPerSecondToCounts100ms()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Inches\+Per\+Second\+To\+Counts100ms (\begin{DoxyParamCaption}\item[{double}]{inches\+Per\+Second,  }\item[{int}]{counts\+Per\+Rev,  }\item[{double}]{diameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from inches per second to units/100ms (ctre units) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em inches} & per second \\
+\hline
+\mbox{\texttt{ in}}  & {\em counts} & per revolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em diameter} & in inches \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double revolutions per second 
+\end{DoxyReturn}
+
+
+Definition at line 156 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_a601de7594ad502dc14dda9ed2c4d2801}\label{class_conversion_utils_a601de7594ad502dc14dda9ed2c4d2801}} 
+\index{ConversionUtils@{ConversionUtils}!InchesPerSecondToRPS@{InchesPerSecondToRPS}}
+\index{InchesPerSecondToRPS@{InchesPerSecondToRPS}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{InchesPerSecondToRPS()}{InchesPerSecondToRPS()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Inches\+Per\+Second\+To\+R\+PS (\begin{DoxyParamCaption}\item[{double}]{inches\+Per\+Second,  }\item[{double}]{diameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from inches per second to R\+PS. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em inches} & per second \\
+\hline
+\mbox{\texttt{ in}}  & {\em diameter} & in inches \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double revolutions per second 
+\end{DoxyReturn}
+
+
+Definition at line 149 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_ab128d6e3cd0a77e87017ece5fcd4270d}\label{class_conversion_utils_ab128d6e3cd0a77e87017ece5fcd4270d}} 
+\index{ConversionUtils@{ConversionUtils}!InchesToCounts@{InchesToCounts}}
+\index{InchesToCounts@{InchesToCounts}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{InchesToCounts()}{InchesToCounts()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Inches\+To\+Counts (\begin{DoxyParamCaption}\item[{double}]{inches,  }\item[{int}]{counts\+Per\+Rev,  }\item[{double}]{diameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from Inches to counts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Inches} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em diameter} & in inches \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double number of revolutions 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_a7d464ea695ee8b8db8050c9d6c62b8e5}\label{class_conversion_utils_a7d464ea695ee8b8db8050c9d6c62b8e5}} 
+\index{ConversionUtils@{ConversionUtils}!InchesToRevolutions@{InchesToRevolutions}}
+\index{InchesToRevolutions@{InchesToRevolutions}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{InchesToRevolutions()}{InchesToRevolutions()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Inches\+To\+Revolutions (\begin{DoxyParamCaption}\item[{double}]{inches,  }\item[{double}]{diameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from Inches to revolutions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Inches} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em diameter} & in inches \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double number of revolutions 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_a3b13a2c19176bdb70d255a49a897b413}\label{class_conversion_utils_a3b13a2c19176bdb70d255a49a897b413}} 
+\index{ConversionUtils@{ConversionUtils}!RevolutionsToCounts@{RevolutionsToCounts}}
+\index{RevolutionsToCounts@{RevolutionsToCounts}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{RevolutionsToCounts()}{RevolutionsToCounts()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Revolutions\+To\+Counts (\begin{DoxyParamCaption}\item[{double}]{revs,  }\item[{int}]{counts\+Per\+Rev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from revolutions to counts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em revolutions} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em counts} & per revolution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double units 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_a4bd289896b2039702f40746d79ec6a1c}\label{class_conversion_utils_a4bd289896b2039702f40746d79ec6a1c}} 
+\index{ConversionUtils@{ConversionUtils}!RevolutionsToDegrees@{RevolutionsToDegrees}}
+\index{RevolutionsToDegrees@{RevolutionsToDegrees}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{RevolutionsToDegrees()}{RevolutionsToDegrees()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Revolutions\+To\+Degrees (\begin{DoxyParamCaption}\item[{double}]{revolutions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from revolutions to Degrees. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em revolutions} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double angle in degrees 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_a91d67dc74c69ea16d1fa196787a52306}\label{class_conversion_utils_a91d67dc74c69ea16d1fa196787a52306}} 
+\index{ConversionUtils@{ConversionUtils}!RevolutionsToInches@{RevolutionsToInches}}
+\index{RevolutionsToInches@{RevolutionsToInches}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{RevolutionsToInches()}{RevolutionsToInches()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+Revolutions\+To\+Inches (\begin{DoxyParamCaption}\item[{double}]{revolutions,  }\item[{double}]{diameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from revolutions to Inches. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em revolutions} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em diameter} & in inches \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double position in inches 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_a7ca7eeabc23785f846d6192a7bbf4411}\label{class_conversion_utils_a7ca7eeabc23785f846d6192a7bbf4411}} 
+\index{ConversionUtils@{ConversionUtils}!RPSToCounts100ms@{RPSToCounts100ms}}
+\index{RPSToCounts100ms@{RPSToCounts100ms}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{RPSToCounts100ms()}{RPSToCounts100ms()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+R\+P\+S\+To\+Counts100ms (\begin{DoxyParamCaption}\item[{double}]{rps,  }\item[{int}]{counts\+Per\+Rev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from R\+PS to units/100ms (ctre units) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em revolutions} & per second \\
+\hline
+\mbox{\texttt{ in}}  & {\em counts} & per revolution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double units / 100 ms 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_ae291baad7c7b580021b5d132bfe798b1}\label{class_conversion_utils_ae291baad7c7b580021b5d132bfe798b1}} 
+\index{ConversionUtils@{ConversionUtils}!RPSToDegreesPerSecond@{RPSToDegreesPerSecond}}
+\index{RPSToDegreesPerSecond@{RPSToDegreesPerSecond}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{RPSToDegreesPerSecond()}{RPSToDegreesPerSecond()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+R\+P\+S\+To\+Degrees\+Per\+Second (\begin{DoxyParamCaption}\item[{double}]{rps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from R\+PS to Degrees per second. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em revolutions} & per second \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double degrees per second 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file Conversion\+Utils.\+h.
+
+\mbox{\Hypertarget{class_conversion_utils_a593af444c3e4ff832343e3fb585c427c}\label{class_conversion_utils_a593af444c3e4ff832343e3fb585c427c}} 
+\index{ConversionUtils@{ConversionUtils}!RPSToInchesPerSecond@{RPSToInchesPerSecond}}
+\index{RPSToInchesPerSecond@{RPSToInchesPerSecond}!ConversionUtils@{ConversionUtils}}
+\doxysubsubsection{\texorpdfstring{RPSToInchesPerSecond()}{RPSToInchesPerSecond()}}
+{\footnotesize\ttfamily static double Conversion\+Utils\+::\+R\+P\+S\+To\+Inches\+Per\+Second (\begin{DoxyParamCaption}\item[{double}]{rps,  }\item[{double}]{diameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from R\+PS to inches per second. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em revolutions} & per second \\
+\hline
+\mbox{\texttt{ in}}  & {\em diameter} & in inches \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double inches per second 
+\end{DoxyReturn}
+
+
+Definition at line 142 of file Conversion\+Utils.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/utils/\mbox{\hyperlink{_conversion_utils_8h}{Conversion\+Utils.\+h}}\end{DoxyCompactItemize}

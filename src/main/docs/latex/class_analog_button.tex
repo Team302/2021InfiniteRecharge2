@@ -1,0 +1,130 @@
+\hypertarget{class_analog_button}{}\doxysection{Analog\+Button Class Reference}
+\label{class_analog_button}\index{AnalogButton@{AnalogButton}}
+
+
+Class\+: \mbox{\hyperlink{class_analog_button}{Analog\+Button}} Description\+: This is treats an analog axis as a button.  
+
+
+
+
+{\ttfamily \#include $<$Analog\+Button.\+h$>$}
+
+Inheritance diagram for Analog\+Button\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_analog_button}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_analog_button_a461e9e50f46ee8f8195786a5588ca23b}{Analog\+Button}} (\mbox{\hyperlink{class_analog_axis}{Analog\+Axis}} $\ast$axis)
+\item 
+\mbox{\hyperlink{class_analog_button_a373f2f4b9d6d42be62b4485e0432310c}{Analog\+Button}} (\mbox{\hyperlink{class_analog_axis}{Analog\+Axis}} $\ast$axis, double min\+Value, double max\+Value)
+\begin{DoxyCompactList}\small\item\em Class\+: \mbox{\hyperlink{class_analog_button}{Analog\+Button}} Description\+: This treats a analog input as a button on a gamepad. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_analog_button_a530a96e393a6267bf84beaf9392390c7}{Is\+Button\+Pressed}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Is\+Button\+Pressed Description\+: Read the button and return true if it is pressed and false if it isn\textquotesingle{}t. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_analog_button_a7ceceff63efb81b6f1444c8bb5084b70}{Was\+Button\+Released}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Was\+Button\+Released Description\+: Read whether the button was released since the last query. This is only valid for digital buttons (normal buttons and bumpers). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_analog_button_a13e844532f6cd9216d8f9b275d66c897}{Was\+Button\+Pressed}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Was\+Button\+Pressed Description\+: Read whether the button was pressed since the last query. This is only valid for digital buttons (normal buttons and bumpers). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class\+: \mbox{\hyperlink{class_analog_button}{Analog\+Button}} Description\+: This is treats an analog axis as a button. 
+
+
+
+Definition at line 38 of file Analog\+Button.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_analog_button_a461e9e50f46ee8f8195786a5588ca23b}\label{class_analog_button_a461e9e50f46ee8f8195786a5588ca23b}} 
+\index{AnalogButton@{AnalogButton}!AnalogButton@{AnalogButton}}
+\index{AnalogButton@{AnalogButton}!AnalogButton@{AnalogButton}}
+\doxysubsubsection{\texorpdfstring{AnalogButton()}{AnalogButton()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Analog\+Button\+::\+Analog\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_analog_axis}{Analog\+Axis}} $\ast$}]{axis }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file Analog\+Button.\+cpp.
+
+\mbox{\Hypertarget{class_analog_button_a373f2f4b9d6d42be62b4485e0432310c}\label{class_analog_button_a373f2f4b9d6d42be62b4485e0432310c}} 
+\index{AnalogButton@{AnalogButton}!AnalogButton@{AnalogButton}}
+\index{AnalogButton@{AnalogButton}!AnalogButton@{AnalogButton}}
+\doxysubsubsection{\texorpdfstring{AnalogButton()}{AnalogButton()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Analog\+Button\+::\+Analog\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_analog_axis}{Analog\+Axis}} $\ast$}]{axis,  }\item[{double}]{min\+Value,  }\item[{double}]{max\+Value }\end{DoxyParamCaption})}
+
+
+
+Class\+: \mbox{\hyperlink{class_analog_button}{Analog\+Button}} Description\+: This treats a analog input as a button on a gamepad. 
+
+
+
+Definition at line 33 of file Analog\+Button.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_analog_button_a530a96e393a6267bf84beaf9392390c7}\label{class_analog_button_a530a96e393a6267bf84beaf9392390c7}} 
+\index{AnalogButton@{AnalogButton}!IsButtonPressed@{IsButtonPressed}}
+\index{IsButtonPressed@{IsButtonPressed}!AnalogButton@{AnalogButton}}
+\doxysubsubsection{\texorpdfstring{IsButtonPressed()}{IsButtonPressed()}}
+{\footnotesize\ttfamily bool Analog\+Button\+::\+Is\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Is\+Button\+Pressed Description\+: Read the button and return true if it is pressed and false if it isn\textquotesingle{}t. 
+
+
+
+Implements \mbox{\hyperlink{class_i_button_afe76bfef9fc9fe1b426a8b7010c816f8}{I\+Button}}.
+
+
+
+Definition at line 59 of file Analog\+Button.\+cpp.
+
+\mbox{\Hypertarget{class_analog_button_a13e844532f6cd9216d8f9b275d66c897}\label{class_analog_button_a13e844532f6cd9216d8f9b275d66c897}} 
+\index{AnalogButton@{AnalogButton}!WasButtonPressed@{WasButtonPressed}}
+\index{WasButtonPressed@{WasButtonPressed}!AnalogButton@{AnalogButton}}
+\doxysubsubsection{\texorpdfstring{WasButtonPressed()}{WasButtonPressed()}}
+{\footnotesize\ttfamily bool Analog\+Button\+::\+Was\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Was\+Button\+Pressed Description\+: Read whether the button was pressed since the last query. This is only valid for digital buttons (normal buttons and bumpers). 
+
+
+
+Implements \mbox{\hyperlink{class_i_button_a4bafcd42d1f576f892d22a110e801018}{I\+Button}}.
+
+
+
+Definition at line 75 of file Analog\+Button.\+cpp.
+
+\mbox{\Hypertarget{class_analog_button_a7ceceff63efb81b6f1444c8bb5084b70}\label{class_analog_button_a7ceceff63efb81b6f1444c8bb5084b70}} 
+\index{AnalogButton@{AnalogButton}!WasButtonReleased@{WasButtonReleased}}
+\index{WasButtonReleased@{WasButtonReleased}!AnalogButton@{AnalogButton}}
+\doxysubsubsection{\texorpdfstring{WasButtonReleased()}{WasButtonReleased()}}
+{\footnotesize\ttfamily bool Analog\+Button\+::\+Was\+Button\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Was\+Button\+Released Description\+: Read whether the button was released since the last query. This is only valid for digital buttons (normal buttons and bumpers). 
+
+
+
+Implements \mbox{\hyperlink{class_i_button_a393bd71900c7cb4df69e371bcc7ca123}{I\+Button}}.
+
+
+
+Definition at line 70 of file Analog\+Button.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/button/\mbox{\hyperlink{_analog_button_8h}{Analog\+Button.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/button/\mbox{\hyperlink{_analog_button_8cpp}{Analog\+Button.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,153 @@
+\hypertarget{class_shooter_state_mgr}{}\doxysection{Shooter\+State\+Mgr Class Reference}
+\label{class_shooter_state_mgr}\index{ShooterStateMgr@{ShooterStateMgr}}
+
+
+{\ttfamily \#include $<$Shooter\+State\+Mgr.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670}{S\+H\+O\+O\+T\+E\+R\+\_\+\+S\+T\+A\+TE}} \{ \mbox{\hyperlink{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670a7b11253c228d45fe55fb99f8945f7a2f}{O\+FF}}, 
+\mbox{\hyperlink{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670a5eaa1911895b76c49e3a062a7a412420}{G\+E\+T\+\_\+\+R\+E\+A\+DY}}, 
+\mbox{\hyperlink{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670a4b6acf6863504e99e128dec35a0e7d95}{S\+H\+O\+OT}}, 
+\mbox{\hyperlink{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670a46cc9c3a6b213cb552941a6508728f79}{M\+A\+X\+\_\+\+S\+H\+O\+O\+T\+E\+R\+\_\+\+S\+T\+A\+T\+ES}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_shooter_state_mgr_ac2efdc7eb599adf95df2e0d5a46e35d3}{Run\+Current\+State}} ()
+\begin{DoxyCompactList}\small\item\em run the current state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shooter_state_mgr_a523f0b84850fbc069340877decdae99d}{Set\+Current\+State}} (\mbox{\hyperlink{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670}{S\+H\+O\+O\+T\+E\+R\+\_\+\+S\+T\+A\+TE}} state, bool run)
+\begin{DoxyCompactList}\small\item\em set the current state, initialize it and run it \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670}{S\+H\+O\+O\+T\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{class_shooter_state_mgr_a46e44a74e38681367c030ae5e36f5ac7}{Get\+Current\+State}} () const
+\begin{DoxyCompactList}\small\item\em return the current state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_shooter_state_mgr}{Shooter\+State\+Mgr}} $\ast$ \mbox{\hyperlink{class_shooter_state_mgr_abba6227d6df85ca7f35b2c19378d6578}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Find or create the state manmanager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 29 of file Shooter\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670}\label{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670}} 
+\index{ShooterStateMgr@{ShooterStateMgr}!SHOOTER\_STATE@{SHOOTER\_STATE}}
+\index{SHOOTER\_STATE@{SHOOTER\_STATE}!ShooterStateMgr@{ShooterStateMgr}}
+\doxysubsubsection{\texorpdfstring{SHOOTER\_STATE}{SHOOTER\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670}{Shooter\+State\+Mgr\+::\+S\+H\+O\+O\+T\+E\+R\+\_\+\+S\+T\+A\+TE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OFF@{OFF}!ShooterStateMgr@{ShooterStateMgr}}\index{ShooterStateMgr@{ShooterStateMgr}!OFF@{OFF}}}\mbox{\Hypertarget{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670a7b11253c228d45fe55fb99f8945f7a2f}\label{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670a7b11253c228d45fe55fb99f8945f7a2f}} 
+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GET\_READY@{GET\_READY}!ShooterStateMgr@{ShooterStateMgr}}\index{ShooterStateMgr@{ShooterStateMgr}!GET\_READY@{GET\_READY}}}\mbox{\Hypertarget{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670a5eaa1911895b76c49e3a062a7a412420}\label{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670a5eaa1911895b76c49e3a062a7a412420}} 
+G\+E\+T\+\_\+\+R\+E\+A\+DY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHOOT@{SHOOT}!ShooterStateMgr@{ShooterStateMgr}}\index{ShooterStateMgr@{ShooterStateMgr}!SHOOT@{SHOOT}}}\mbox{\Hypertarget{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670a4b6acf6863504e99e128dec35a0e7d95}\label{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670a4b6acf6863504e99e128dec35a0e7d95}} 
+S\+H\+O\+OT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_SHOOTER\_STATES@{MAX\_SHOOTER\_STATES}!ShooterStateMgr@{ShooterStateMgr}}\index{ShooterStateMgr@{ShooterStateMgr}!MAX\_SHOOTER\_STATES@{MAX\_SHOOTER\_STATES}}}\mbox{\Hypertarget{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670a46cc9c3a6b213cb552941a6508728f79}\label{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670a46cc9c3a6b213cb552941a6508728f79}} 
+M\+A\+X\+\_\+\+S\+H\+O\+O\+T\+E\+R\+\_\+\+S\+T\+A\+T\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 33 of file Shooter\+State\+Mgr.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shooter_state_mgr_a46e44a74e38681367c030ae5e36f5ac7}\label{class_shooter_state_mgr_a46e44a74e38681367c030ae5e36f5ac7}} 
+\index{ShooterStateMgr@{ShooterStateMgr}!GetCurrentState@{GetCurrentState}}
+\index{GetCurrentState@{GetCurrentState}!ShooterStateMgr@{ShooterStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetCurrentState()}{GetCurrentState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670}{S\+H\+O\+O\+T\+E\+R\+\_\+\+S\+T\+A\+TE}} Shooter\+State\+Mgr\+::\+Get\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the current state 
+
+\begin{DoxyReturn}{Returns}
+S\+H\+O\+O\+T\+E\+R\+\_\+\+S\+T\+A\+TE -\/ the current state 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file Shooter\+State\+Mgr.\+h.
+
+\mbox{\Hypertarget{class_shooter_state_mgr_abba6227d6df85ca7f35b2c19378d6578}\label{class_shooter_state_mgr_abba6227d6df85ca7f35b2c19378d6578}} 
+\index{ShooterStateMgr@{ShooterStateMgr}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!ShooterStateMgr@{ShooterStateMgr}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shooter_state_mgr}{Shooter\+State\+Mgr}} $\ast$ Shooter\+State\+Mgr\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find or create the state manmanager. 
+
+\begin{DoxyReturn}{Returns}
+Shooter\+State\+Mgr$\ast$ pointer to the state manager 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file Shooter\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_shooter_state_mgr_ac2efdc7eb599adf95df2e0d5a46e35d3}\label{class_shooter_state_mgr_ac2efdc7eb599adf95df2e0d5a46e35d3}} 
+\index{ShooterStateMgr@{ShooterStateMgr}!RunCurrentState@{RunCurrentState}}
+\index{RunCurrentState@{RunCurrentState}!ShooterStateMgr@{ShooterStateMgr}}
+\doxysubsubsection{\texorpdfstring{RunCurrentState()}{RunCurrentState()}}
+{\footnotesize\ttfamily void Shooter\+State\+Mgr\+::\+Run\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+run the current state 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file Shooter\+State\+Mgr.\+cpp.
+
+\mbox{\Hypertarget{class_shooter_state_mgr_a523f0b84850fbc069340877decdae99d}\label{class_shooter_state_mgr_a523f0b84850fbc069340877decdae99d}} 
+\index{ShooterStateMgr@{ShooterStateMgr}!SetCurrentState@{SetCurrentState}}
+\index{SetCurrentState@{SetCurrentState}!ShooterStateMgr@{ShooterStateMgr}}
+\doxysubsubsection{\texorpdfstring{SetCurrentState()}{SetCurrentState()}}
+{\footnotesize\ttfamily void Shooter\+State\+Mgr\+::\+Set\+Current\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shooter_state_mgr_aaf1212bf0ab2ee8a79e315bd1401b670}{S\+H\+O\+O\+T\+E\+R\+\_\+\+S\+T\+A\+TE}}}]{state\+Enum,  }\item[{bool}]{run }\end{DoxyParamCaption})}
+
+
+
+set the current state, initialize it and run it 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+H\+O\+O\+T\+E\+R\+\_\+\+S\+T\+A\+TE} & -\/ state to set \\
+\hline
+\mbox{\texttt{ in}}  & {\em run} & -\/ true means run, false just initialize it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+
+void 
+\end{DoxyReturn}
+
+
+Definition at line 164 of file Shooter\+State\+Mgr.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/states/shooter/\mbox{\hyperlink{_shooter_state_mgr_8h}{Shooter\+State\+Mgr.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/states/shooter/\mbox{\hyperlink{_shooter_state_mgr_8cpp}{Shooter\+State\+Mgr.\+cpp}}\end{DoxyCompactItemize}

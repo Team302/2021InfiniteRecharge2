@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team 302 Robot: states/intake/IntakeStateMgr.cpp Source File</title>
+<title>Robot: C:/robotcm/training2020/src/main/cpp/states/intake/IntakeStateMgr.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Team 302 Robot
+   <div id="projectname">Robot
    </div>
   </td>
  </tr>
@@ -229,47 +229,46 @@ $(document).ready(function(){initNavTree('_intake_state_mgr_8cpp_source.html',''
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            {</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <a class="code" href="class_intake_state_mgr.html#a1e25c496c344124e7a52b7bbdfa09f87">SetCurrentState</a>( INTAKE_STATE::OFF, <span class="keyword">false</span> );</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="comment">/*else if ( controller-&gt;IsButtonPressed( TeleopControl::FUNCTION_IDENTIFIER::INTAKE_HUMAN_PLAYER))</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">            {</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">                SetCurrentState( INTAKE_STATE::HUMANPLAYER, false );</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">            }</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">            */</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a258aeb4010abaae86c40b35d6cceed5e">OnDash</a>(<span class="keywordtype">string</span>(<span class="stringliteral">&quot;Intake State&quot;</span>), to_string(m_currentStateEnum));</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="comment">// run the current state</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">if</span> ( m_currentState != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            m_currentState-&gt;<a class="code" href="class_i_state.html#a1dc31736da7d9e9322c1cc417672ea0f">Run</a>();</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_intake_state_mgr.html#a1e25c496c344124e7a52b7bbdfa09f87">IntakeStateMgr::SetCurrentState</a></div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_intake_state_mgr.html#a1e25c496c344124e7a52b7bbdfa09f87">  164</a></span>&#160;(</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="class_intake_state_mgr.html#aaa5d73e08f73a95dca5c6aaa1de6b56c">INTAKE_STATE</a>    stateEnum,</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">bool</span>            run</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;)</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">auto</span> state = m_stateVector[stateEnum];</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">if</span> ( state != <span class="keyword">nullptr</span> &amp;&amp; state != m_currentState )</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        m_currentState = state;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        m_currentStateEnum = stateEnum;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        m_currentState-&gt;Init();</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">if</span> ( run )</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;GetIMechanism( MechanismTypes::MECHANISM_TYPE::INTAKE) != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                m_currentState-&gt;Run();</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( controller-&gt;IsButtonPressed( TeleopControl::FUNCTION_IDENTIFIER::INTAKE_HUMAN_PLAYER))</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <a class="code" href="class_intake_state_mgr.html#a1e25c496c344124e7a52b7bbdfa09f87">SetCurrentState</a>( INTAKE_STATE::HUMANPLAYER, <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a258aeb4010abaae86c40b35d6cceed5e">OnDash</a>(<span class="keywordtype">string</span>(<span class="stringliteral">&quot;Intake State&quot;</span>), to_string(m_currentStateEnum));</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="comment">// run the current state</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">if</span> ( m_currentState != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            m_currentState-&gt;<a class="code" href="class_i_state.html#a1dc31736da7d9e9322c1cc417672ea0f">Run</a>();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_intake_state_mgr.html#a1e25c496c344124e7a52b7bbdfa09f87">IntakeStateMgr::SetCurrentState</a></div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="class_intake_state_mgr.html#a1e25c496c344124e7a52b7bbdfa09f87">  163</a></span>&#160;(</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="class_intake_state_mgr.html#aaa5d73e08f73a95dca5c6aaa1de6b56c">INTAKE_STATE</a>    stateEnum,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">bool</span>            run</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;{</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keyword">auto</span> state = m_stateVector[stateEnum];</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">if</span> ( state != <span class="keyword">nullptr</span> &amp;&amp; state != m_currentState )</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        m_currentState = state;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        m_currentStateEnum = stateEnum;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        m_currentState-&gt;Init();</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">if</span> ( run )</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;GetIMechanism( MechanismTypes::MECHANISM_TYPE::INTAKE) != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                m_currentState-&gt;Run();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="a_intake_state_8h_html"><div class="ttname"><a href="_intake_state_8h.html">IntakeState.h</a></div></div>
@@ -287,7 +286,7 @@ $(document).ready(function(){initNavTree('_intake_state_mgr_8cpp_source.html',''
 <div class="ttc" id="a_i_state_8h_html"><div class="ttname"><a href="_i_state_8h.html">IState.h</a></div></div>
 <div class="ttc" id="a_intake_state_mgr_8h_html"><div class="ttname"><a href="_intake_state_mgr_8h.html">IntakeStateMgr.h</a></div></div>
 <div class="ttc" id="aclass_logger_html_ae85cfbef8b7e6940475a5012fa1935c6"><div class="ttname"><a href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a></div><div class="ttdeci">static Logger * GetLogger()</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00052">Logger.cpp:52</a></div></div>
-<div class="ttc" id="aclass_intake_state_mgr_html_a1e25c496c344124e7a52b7bbdfa09f87"><div class="ttname"><a href="class_intake_state_mgr.html#a1e25c496c344124e7a52b7bbdfa09f87">IntakeStateMgr::SetCurrentState</a></div><div class="ttdeci">void SetCurrentState(INTAKE_STATE state, bool run)</div><div class="ttdoc">set the current state, initialize it and run it</div><div class="ttdef"><b>Definition:</b> <a href="_intake_state_mgr_8cpp_source.html#l00164">IntakeStateMgr.cpp:164</a></div></div>
+<div class="ttc" id="aclass_intake_state_mgr_html_a1e25c496c344124e7a52b7bbdfa09f87"><div class="ttname"><a href="class_intake_state_mgr.html#a1e25c496c344124e7a52b7bbdfa09f87">IntakeStateMgr::SetCurrentState</a></div><div class="ttdeci">void SetCurrentState(INTAKE_STATE state, bool run)</div><div class="ttdoc">set the current state, initialize it and run it</div><div class="ttdef"><b>Definition:</b> <a href="_intake_state_mgr_8cpp_source.html#l00163">IntakeStateMgr.cpp:163</a></div></div>
 <div class="ttc" id="aclass_intake_state_mgr_html_aaa5d73e08f73a95dca5c6aaa1de6b56c"><div class="ttname"><a href="class_intake_state_mgr.html#aaa5d73e08f73a95dca5c6aaa1de6b56c">IntakeStateMgr::INTAKE_STATE</a></div><div class="ttdeci">INTAKE_STATE</div><div class="ttdef"><b>Definition:</b> <a href="_intake_state_mgr_8h_source.html#l00033">IntakeStateMgr.h:33</a></div></div>
 <div class="ttc" id="aclass_teleop_control_html_abcca1fa489e538a5f42c920747a4f598"><div class="ttname"><a href="class_teleop_control.html#abcca1fa489e538a5f42c920747a4f598">TeleopControl::GetInstance</a></div><div class="ttdeci">static TeleopControl * GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_teleop_control_8cpp_source.html#l00044">TeleopControl.cpp:44</a></div></div>
 <div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00072">MechanismFactory.cpp:72</a></div></div>
@@ -297,7 +296,7 @@ $(document).ready(function(){initNavTree('_intake_state_mgr_8cpp_source.html',''
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_128f75dce35ba73c52fc2f45d15b5117.html">states</a></li><li class="navelem"><a class="el" href="dir_4c0c69b8e30550a039bc9c87abfd1709.html">intake</a></li><li class="navelem"><a class="el" href="_intake_state_mgr_8cpp.html">IntakeStateMgr.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_4401199a54cb40c0637ceb8dd0f3c5fd.html">robotcm</a></li><li class="navelem"><a class="el" href="dir_24d5b6e083bf191a3f38d4ae9f1a0592.html">training2020</a></li><li class="navelem"><a class="el" href="dir_6cae7cc3464d42f3e134af4325c5ce6e.html">src</a></li><li class="navelem"><a class="el" href="dir_32a1028ae0a47e7b34b3c8fd0b05a58d.html">main</a></li><li class="navelem"><a class="el" href="dir_9dee27190e861708e732c03adc0229f4.html">cpp</a></li><li class="navelem"><a class="el" href="dir_dd826b5722b1978ffe9ff1b461caa75e.html">states</a></li><li class="navelem"><a class="el" href="dir_f1477de3c3929e76fd4c2eb1d195a52c.html">intake</a></li><li class="navelem"><a class="el" href="_intake_state_mgr_8cpp.html">IntakeStateMgr.cpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

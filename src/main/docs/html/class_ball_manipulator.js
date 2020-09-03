@@ -13,10 +13,11 @@ var class_ball_manipulator =
       [ "UNJAM_COUNTERCLOCKWISE", "class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4a7f6b7e8dfed0b9ca0cf7ad84663c4d60", null ],
       [ "TRANSFER_UP", "class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4a6dacee08643ab129f905b69e611531f2", null ],
       [ "TRANSFER_DOWN", "class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4a5512a93c59bfce04c8b9a5e0c42fc395", null ],
+      [ "TURRET_TURN_ANGLE", "class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4a4f38f4c9e857f39f0ae1105d082abd0f", null ],
       [ "MAX_BALL_MANIPULATOR_STATES", "class_ball_manipulator.html#a91bf71119c5fecb46b41a90485f7a9a4a9a093e6e6802b3513eb69230dd590167", null ]
     ] ],
     [ "GetCurrentState", "class_ball_manipulator.html#af24249d8efa5c38ef042178da0e40f29", null ],
     [ "RunCurrentState", "class_ball_manipulator.html#a565ef49322a8a72a7cc72ae3b19ff4a8", null ],
     [ "SetApproxAngle", "class_ball_manipulator.html#a9ba3e69926ef2b3a46793b49adf4003a", null ],
-    [ "SetCurrentState", "class_ball_manipulator.html#ac6b06504ca8077c1b533895b2793e5a1", null ]
+    [ "SetCurrentState", "class_ball_manipulator.html#ae27d8d4f4b313b376bea3854c2f90da7", null ]
 ];

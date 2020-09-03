@@ -1,0 +1,118 @@
+\hypertarget{class_digital_button}{}\doxysection{Digital\+Button Class Reference}
+\label{class_digital_button}\index{DigitalButton@{DigitalButton}}
+
+
+Class\+: \mbox{\hyperlink{class_digital_button}{Digital\+Button}} Description\+: This is the standard button on a gamepad.  
+
+
+
+
+{\ttfamily \#include $<$Digital\+Button.\+h$>$}
+
+Inheritance diagram for Digital\+Button\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_digital_button}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_digital_button_afe7a772eda4fe4a25d39cac80afeef6e}{Digital\+Button}} (frc\+::\+Generic\+H\+ID $\ast$gamepad, int button\+ID)
+\begin{DoxyCompactList}\small\item\em Class\+: \mbox{\hyperlink{class_digital_button}{Digital\+Button}} Description\+: This is the standard button on a gamepad. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_digital_button_a38a9bfab8ffba48ef485988e5d695574}{Is\+Button\+Pressed}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Is\+Button\+Pressed Description\+: Read the button and return true if it is pressed and false if it isn\textquotesingle{}t. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_digital_button_ac831a002ec5f8e79cb3303bcb8e2c999}{Was\+Button\+Released}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Was\+Button\+Released Description\+: Read whether the button was released since the last query. This is only valid for digital buttons (normal buttons and bumpers). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_digital_button_a5ed1ab58178e4244dffe551df62afa32}{Was\+Button\+Pressed}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Was\+Button\+Pressed Description\+: Read whether the button was pressed since the last query. This is only valid for digital buttons (normal buttons and bumpers). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class\+: \mbox{\hyperlink{class_digital_button}{Digital\+Button}} Description\+: This is the standard button on a gamepad. 
+
+
+
+Definition at line 38 of file Digital\+Button.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_digital_button_afe7a772eda4fe4a25d39cac80afeef6e}\label{class_digital_button_afe7a772eda4fe4a25d39cac80afeef6e}} 
+\index{DigitalButton@{DigitalButton}!DigitalButton@{DigitalButton}}
+\index{DigitalButton@{DigitalButton}!DigitalButton@{DigitalButton}}
+\doxysubsubsection{\texorpdfstring{DigitalButton()}{DigitalButton()}}
+{\footnotesize\ttfamily Digital\+Button\+::\+Digital\+Button (\begin{DoxyParamCaption}\item[{frc\+::\+Generic\+H\+ID $\ast$}]{gamepad,  }\item[{int}]{button\+ID }\end{DoxyParamCaption})}
+
+
+
+Class\+: \mbox{\hyperlink{class_digital_button}{Digital\+Button}} Description\+: This is the standard button on a gamepad. 
+
+
+
+Definition at line 42 of file Digital\+Button.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_digital_button_a38a9bfab8ffba48ef485988e5d695574}\label{class_digital_button_a38a9bfab8ffba48ef485988e5d695574}} 
+\index{DigitalButton@{DigitalButton}!IsButtonPressed@{IsButtonPressed}}
+\index{IsButtonPressed@{IsButtonPressed}!DigitalButton@{DigitalButton}}
+\doxysubsubsection{\texorpdfstring{IsButtonPressed()}{IsButtonPressed()}}
+{\footnotesize\ttfamily bool Digital\+Button\+::\+Is\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Is\+Button\+Pressed Description\+: Read the button and return true if it is pressed and false if it isn\textquotesingle{}t. 
+
+
+
+Implements \mbox{\hyperlink{class_i_button_afe76bfef9fc9fe1b426a8b7010c816f8}{I\+Button}}.
+
+
+
+Definition at line 57 of file Digital\+Button.\+cpp.
+
+\mbox{\Hypertarget{class_digital_button_a5ed1ab58178e4244dffe551df62afa32}\label{class_digital_button_a5ed1ab58178e4244dffe551df62afa32}} 
+\index{DigitalButton@{DigitalButton}!WasButtonPressed@{WasButtonPressed}}
+\index{WasButtonPressed@{WasButtonPressed}!DigitalButton@{DigitalButton}}
+\doxysubsubsection{\texorpdfstring{WasButtonPressed()}{WasButtonPressed()}}
+{\footnotesize\ttfamily bool Digital\+Button\+::\+Was\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Was\+Button\+Pressed Description\+: Read whether the button was pressed since the last query. This is only valid for digital buttons (normal buttons and bumpers). 
+
+
+
+Implements \mbox{\hyperlink{class_i_button_a4bafcd42d1f576f892d22a110e801018}{I\+Button}}.
+
+
+
+Definition at line 84 of file Digital\+Button.\+cpp.
+
+\mbox{\Hypertarget{class_digital_button_ac831a002ec5f8e79cb3303bcb8e2c999}\label{class_digital_button_ac831a002ec5f8e79cb3303bcb8e2c999}} 
+\index{DigitalButton@{DigitalButton}!WasButtonReleased@{WasButtonReleased}}
+\index{WasButtonReleased@{WasButtonReleased}!DigitalButton@{DigitalButton}}
+\doxysubsubsection{\texorpdfstring{WasButtonReleased()}{WasButtonReleased()}}
+{\footnotesize\ttfamily bool Digital\+Button\+::\+Was\+Button\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Was\+Button\+Released Description\+: Read whether the button was released since the last query. This is only valid for digital buttons (normal buttons and bumpers). 
+
+
+
+Implements \mbox{\hyperlink{class_i_button_a393bd71900c7cb4df69e371bcc7ca123}{I\+Button}}.
+
+
+
+Definition at line 74 of file Digital\+Button.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/button/\mbox{\hyperlink{_digital_button_8h}{Digital\+Button.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/button/\mbox{\hyperlink{_digital_button_8cpp}{Digital\+Button.\+cpp}}\end{DoxyCompactItemize}

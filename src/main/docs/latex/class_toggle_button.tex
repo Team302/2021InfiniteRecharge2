@@ -1,0 +1,130 @@
+\hypertarget{class_toggle_button}{}\doxysection{Toggle\+Button Class Reference}
+\label{class_toggle_button}\index{ToggleButton@{ToggleButton}}
+
+
+Class\+: \mbox{\hyperlink{class_button_decorator}{Button\+Decorator}} Description\+: This is a decorator for modifying button behavior.  
+
+
+
+
+{\ttfamily \#include $<$Toggle\+Button.\+h$>$}
+
+Inheritance diagram for Toggle\+Button\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_toggle_button}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_toggle_button_a55fd13a0f9e74ea36277128f931c49af}{Toggle\+Button}} (\mbox{\hyperlink{class_i_button}{I\+Button}} $\ast$button)
+\item 
+\mbox{\hyperlink{class_toggle_button_a2438d204f6afa486b70e9dfc91cdd755}{Toggle\+Button}} ()=delete
+\item 
+\mbox{\hyperlink{class_toggle_button_a3f3a7a4240bb785a7fcbf871f93dd3f8}{$\sim$\+Toggle\+Button}} ()=default
+\item 
+bool \mbox{\hyperlink{class_toggle_button_a0c511c3d7701fa2efb72ad3373583d60}{Is\+Button\+Pressed}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Is\+Button\+Pressed Description\+: Read the button and return true if it is pressed and false if it isn\textquotesingle{}t. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_toggle_button_aa14f837826248eb45f9b1b5efe3bb81c}{Was\+Button\+Released}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Was\+Button\+Released Description\+: Read whether the button was released since the last query. This is only valid for digital buttons (normal buttons and bumpers). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_toggle_button_a2c2fce329db846a93bf9038059fe3723}{Was\+Button\+Pressed}} () const override
+\begin{DoxyCompactList}\small\item\em Method\+: Was\+Button\+Pressed Description\+: Read whether the button was pressed since the last query. This is only valid for digital buttons (normal buttons and bumpers). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class\+: \mbox{\hyperlink{class_button_decorator}{Button\+Decorator}} Description\+: This is a decorator for modifying button behavior. 
+
+
+
+Definition at line 36 of file Toggle\+Button.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_toggle_button_a55fd13a0f9e74ea36277128f931c49af}\label{class_toggle_button_a55fd13a0f9e74ea36277128f931c49af}} 
+\index{ToggleButton@{ToggleButton}!ToggleButton@{ToggleButton}}
+\index{ToggleButton@{ToggleButton}!ToggleButton@{ToggleButton}}
+\doxysubsubsection{\texorpdfstring{ToggleButton()}{ToggleButton()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Toggle\+Button\+::\+Toggle\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_button}{I\+Button}} $\ast$}]{button }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file Toggle\+Button.\+cpp.
+
+\mbox{\Hypertarget{class_toggle_button_a2438d204f6afa486b70e9dfc91cdd755}\label{class_toggle_button_a2438d204f6afa486b70e9dfc91cdd755}} 
+\index{ToggleButton@{ToggleButton}!ToggleButton@{ToggleButton}}
+\index{ToggleButton@{ToggleButton}!ToggleButton@{ToggleButton}}
+\doxysubsubsection{\texorpdfstring{ToggleButton()}{ToggleButton()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Toggle\+Button\+::\+Toggle\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_toggle_button_a3f3a7a4240bb785a7fcbf871f93dd3f8}\label{class_toggle_button_a3f3a7a4240bb785a7fcbf871f93dd3f8}} 
+\index{ToggleButton@{ToggleButton}!````~ToggleButton@{$\sim$ToggleButton}}
+\index{````~ToggleButton@{$\sim$ToggleButton}!ToggleButton@{ToggleButton}}
+\doxysubsubsection{\texorpdfstring{$\sim$ToggleButton()}{~ToggleButton()}}
+{\footnotesize\ttfamily Toggle\+Button\+::$\sim$\+Toggle\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_toggle_button_a0c511c3d7701fa2efb72ad3373583d60}\label{class_toggle_button_a0c511c3d7701fa2efb72ad3373583d60}} 
+\index{ToggleButton@{ToggleButton}!IsButtonPressed@{IsButtonPressed}}
+\index{IsButtonPressed@{IsButtonPressed}!ToggleButton@{ToggleButton}}
+\doxysubsubsection{\texorpdfstring{IsButtonPressed()}{IsButtonPressed()}}
+{\footnotesize\ttfamily bool Toggle\+Button\+::\+Is\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Is\+Button\+Pressed Description\+: Read the button and return true if it is pressed and false if it isn\textquotesingle{}t. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_button_decorator_ab45d2c847a52d4f083c58656b34aa864}{Button\+Decorator}}.
+
+
+
+Definition at line 29 of file Toggle\+Button.\+cpp.
+
+\mbox{\Hypertarget{class_toggle_button_a2c2fce329db846a93bf9038059fe3723}\label{class_toggle_button_a2c2fce329db846a93bf9038059fe3723}} 
+\index{ToggleButton@{ToggleButton}!WasButtonPressed@{WasButtonPressed}}
+\index{WasButtonPressed@{WasButtonPressed}!ToggleButton@{ToggleButton}}
+\doxysubsubsection{\texorpdfstring{WasButtonPressed()}{WasButtonPressed()}}
+{\footnotesize\ttfamily bool Toggle\+Button\+::\+Was\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Was\+Button\+Pressed Description\+: Read whether the button was pressed since the last query. This is only valid for digital buttons (normal buttons and bumpers). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_button_decorator_a5c0a9115aff442b38166000d86d98ad5}{Button\+Decorator}}.
+
+
+
+Definition at line 58 of file Toggle\+Button.\+cpp.
+
+\mbox{\Hypertarget{class_toggle_button_aa14f837826248eb45f9b1b5efe3bb81c}\label{class_toggle_button_aa14f837826248eb45f9b1b5efe3bb81c}} 
+\index{ToggleButton@{ToggleButton}!WasButtonReleased@{WasButtonReleased}}
+\index{WasButtonReleased@{WasButtonReleased}!ToggleButton@{ToggleButton}}
+\doxysubsubsection{\texorpdfstring{WasButtonReleased()}{WasButtonReleased()}}
+{\footnotesize\ttfamily bool Toggle\+Button\+::\+Was\+Button\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method\+: Was\+Button\+Released Description\+: Read whether the button was released since the last query. This is only valid for digital buttons (normal buttons and bumpers). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_button_decorator_a8da383207ae4e4288f412685eeac4047}{Button\+Decorator}}.
+
+
+
+Definition at line 53 of file Toggle\+Button.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/button/\mbox{\hyperlink{_toggle_button_8h}{Toggle\+Button.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/gamepad/button/\mbox{\hyperlink{_toggle_button_8cpp}{Toggle\+Button.\+cpp}}\end{DoxyCompactItemize}

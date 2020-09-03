@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Team 302 Robot: Class Members - Functions</title>
+<title>Robot: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Team 302 Robot
+   <div id="projectname">Robot
    </div>
   </td>
  </tr>
@@ -111,6 +111,8 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 </li>
 <li>SetAngle()
 : <a class="el" href="class_dragon_servo.html#ae0793a737303c3d5d4b3be3ae2e6f4bf">DragonServo</a>
+, <a class="el" href="class_i_mech1_servo.html#a44ff0d0c6d10b00c3902f2ca75244979">IMech1Servo</a>
+, <a class="el" href="class_mech1_servo.html#aaa38cb6df7d5cb9fb880d6436d077f75">Mech1Servo</a>
 </li>
 <li>SetApproxAngle()
 : <a class="el" href="class_ball_manipulator.html#a9ba3e69926ef2b3a46793b49adf4003a">BallManipulator</a>
@@ -167,9 +169,13 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 , <a class="el" href="class_hook_delivery.html#a26859ed6b8f4ff130c90304ed1325f60">HookDelivery</a>
 , <a class="el" href="class_i_chassis.html#a64b0c5e1c4aa54ecfac53c7677b184e7">IChassis</a>
 , <a class="el" href="class_i_dragon_motor_controller.html#abdca297c707d0c1f5e36bc0be37396d5">IDragonMotorController</a>
+, <a class="el" href="class_i_mech1_ind_motor.html#adff264c6bb32f6f1d5447844e635373c">IMech1IndMotor</a>
+, <a class="el" href="class_i_mech2_ind_motors.html#a9de8f3c889207a96895ff6d6f005bd95">IMech2IndMotors</a>
 , <a class="el" href="class_i_mechanism.html#acd973ca93855c485ed42d405f2fcba11">IMechanism</a>
 , <a class="el" href="class_impeller.html#a91a0410e3ad710c193570639f3149956">Impeller</a>
 , <a class="el" href="class_intake.html#a7871bee1bb586380dc701ffef44e0c8f">Intake</a>
+, <a class="el" href="class_mech1_ind_motor.html#a8278edecfa6865dad58493ce6f4012e2">Mech1IndMotor</a>
+, <a class="el" href="class_mech2_ind_motors.html#a8b4280e243380336ef54fd26027b5dd9">Mech2IndMotors</a>
 , <a class="el" href="class_shooter.html#aaa12826e26eecab817ad3ca19a52dfdc">Shooter</a>
 , <a class="el" href="class_shooter_hood.html#a8fb48c3c2f90c97a7d0335ca646d472d">ShooterHood</a>
 , <a class="el" href="class_turret.html#aeadb069eaf12fdcd6579386be0b4e6c4">Turret</a>
@@ -181,7 +187,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 , <a class="el" href="class_i_dragon_motor_controller.html#ac1436f0089d933ba4310abca76059e63">IDragonMotorController</a>
 </li>
 <li>SetCurrentState()
-: <a class="el" href="class_ball_manipulator.html#ac6b06504ca8077c1b533895b2793e5a1">BallManipulator</a>
+: <a class="el" href="class_ball_manipulator.html#ae27d8d4f4b313b376bea3854c2f90da7">BallManipulator</a>
 , <a class="el" href="class_ball_transfer_state_mgr.html#a4ad4576d1df79e2e9749be0a6ec0daa6">BallTransferStateMgr</a>
 , <a class="el" href="class_climber_state_mgr.html#afd67f6cf449a5bb2ac0284167868731d">ClimberStateMgr</a>
 , <a class="el" href="class_control_panel_state_mgr.html#a31133fcec10aec96a451555e40e41658">ControlPanelStateMgr</a>
@@ -190,7 +196,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 , <a class="el" href="class_intake_state_mgr.html#a1e25c496c344124e7a52b7bbdfa09f87">IntakeStateMgr</a>
 , <a class="el" href="class_shooter_hood_state_mgr.html#a2d6262e573c83bb178742eb36588c7f4">ShooterHoodStateMgr</a>
 , <a class="el" href="class_shooter_state_mgr.html#a523f0b84850fbc069340877decdae99d">ShooterStateMgr</a>
-, <a class="el" href="class_turret_state_mgr.html#af55d845dff66699c6a9a0d4542707426">TurretStateMgr</a>
+, <a class="el" href="class_turret_state_mgr.html#a0d02699d1deedcf645dfe3e71278e32c">TurretStateMgr</a>
 </li>
 <li>SetCurvatureBased()
 : <a class="el" href="class_arcade_drive.html#ae7f039013a505a09abc8f7203f6fd063">ArcadeDrive</a>
@@ -292,38 +298,20 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 <li>Shooter()
 : <a class="el" href="class_shooter.html#ad334e2512e5524bc886236e96d75bef4">Shooter</a>
 </li>
-<li>ShooterGetReady()
-: <a class="el" href="class_shooter_get_ready.html#a62c75b580781cf73506ae6faed2f4432">ShooterGetReady</a>
-</li>
 <li>ShooterHood()
 : <a class="el" href="class_shooter_hood.html#a81123eb53dad8258d0f8b99e503eed5c">ShooterHood</a>
 </li>
-<li>ShooterHoodHoldPosition()
-: <a class="el" href="class_shooter_hood_hold_position.html#a3051b3c7a3b65c8e61eac152d72e3901">ShooterHoodHoldPosition</a>
-</li>
 <li>ShooterHoodManual()
-: <a class="el" href="class_shooter_hood_manual.html#a81d68e67dcef1ad6d81dbce23807aa43">ShooterHoodManual</a>
-</li>
-<li>ShooterHoodMoveDown()
-: <a class="el" href="class_shooter_hood_move_down.html#a892fc245dff4c813ff84641bacaddede">ShooterHoodMoveDown</a>
-</li>
-<li>ShooterHoodMoveUp()
-: <a class="el" href="class_shooter_hood_move_up.html#a58ff145645b3a24857eecd0b9cc4031f">ShooterHoodMoveUp</a>
+: <a class="el" href="class_shooter_hood_manual.html#a523e67f3894b568d253ddae465fe1ac0">ShooterHoodManual</a>
 </li>
 <li>ShooterHoodState()
 : <a class="el" href="class_shooter_hood_state.html#aa3e67e85cfa2d44e8f803c474844c03b">ShooterHoodState</a>
 </li>
-<li>ShooterOff()
-: <a class="el" href="class_shooter_off.html#a3b5fdefa1348761a18629449e474733c">ShooterOff</a>
-</li>
 <li>ShooterSaveState()
 : <a class="el" href="class_shooter_save_state.html#aaf9dd2f9b05f38ab513bd05108d649da">ShooterSaveState</a>
 </li>
-<li>ShooterShoot()
-: <a class="el" href="class_shooter_shoot.html#abdad2970e6e24b2dbf0db8b6bf959317">ShooterShoot</a>
-</li>
 <li>ShooterState()
-: <a class="el" href="class_shooter_state.html#a2fb4e7ea24eea69c8a0804b2bef70946">ShooterState</a>
+: <a class="el" href="class_shooter_state.html#a083ce3135c990443a3319af663c83caf">ShooterState</a>
 </li>
 <li>ShooterStateMgrTest()
 : <a class="el" href="class_shooter_state_mgr_test.html#a6ab48705dfd4ba47a5c141a461ca0424">ShooterStateMgrTest</a>

@@ -1,0 +1,109 @@
+\hypertarget{class_distance_sensor_factory}{}\doxysection{Distance\+Sensor\+Factory Class Reference}
+\label{class_distance_sensor_factory}\index{DistanceSensorFactory@{DistanceSensorFactory}}
+
+
+This factory constructs distance sensors.  
+
+
+
+
+{\ttfamily \#include $<$Distance\+Sensor\+Factory.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_distance_sensor}{I\+Dragon\+Distance\+Sensor}} $>$ \mbox{\hyperlink{class_distance_sensor_factory_a433cac9d3711d99a953369dc15dd9dd3}{Get\+Sensor}} (\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} usage)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_distance_sensor}{I\+Dragon\+Distance\+Sensor}} $>$ \mbox{\hyperlink{class_distance_sensor_factory_abed212830b8102a823dec5b742945556}{Create\+Sensor}} (\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}} usage, int input\+Pin, int trigger\+Pin, int analog\+Input\+Pin, int i2c\+ID, int can\+ID, std\+::string table\+Name, double mounting\+Height, double mounting\+Horizontal\+Offset, double mounting\+Angle, double target\+Height)
+\begin{DoxyCompactList}\small\item\em Create a distance sensor from the inputs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_distance_sensor_factory}{Distance\+Sensor\+Factory}} $\ast$ \mbox{\hyperlink{class_distance_sensor_factory_ac26949a95d6b5582d689f3d2100dff3e}{Get\+Factory}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This factory constructs distance sensors. 
+
+Definition at line 40 of file Distance\+Sensor\+Factory.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_distance_sensor_factory_abed212830b8102a823dec5b742945556}\label{class_distance_sensor_factory_abed212830b8102a823dec5b742945556}} 
+\index{DistanceSensorFactory@{DistanceSensorFactory}!CreateSensor@{CreateSensor}}
+\index{CreateSensor@{CreateSensor}!DistanceSensorFactory@{DistanceSensorFactory}}
+\doxysubsubsection{\texorpdfstring{CreateSensor()}{CreateSensor()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_distance_sensor}{I\+Dragon\+Distance\+Sensor}} $>$ Distance\+Sensor\+Factory\+::\+Create\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}}}]{usage,  }\item[{int}]{input\+Pin,  }\item[{int}]{trigger\+Pin,  }\item[{int}]{analog\+Input\+Pin,  }\item[{int}]{i2c\+ID,  }\item[{int}]{can\+ID,  }\item[{std\+::string}]{table\+Name,  }\item[{double}]{mounting\+Height,  }\item[{double}]{mounting\+Horizontal\+Offset,  }\item[{double}]{mounting\+Angle,  }\item[{double}]{target\+Height }\end{DoxyParamCaption})}
+
+
+
+Create a distance sensor from the inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}}} & usage ~\newline
+ \\
+\hline
+{\em int} & pwm\+Input\+Pin (lidar or ultrasonic 3) \\
+\hline
+{\em int} & pwm\+Trigger\+Pin (lidar) \\
+\hline
+{\em int} & analog\+Pin (ultrasonic) \\
+\hline
+{\em int} & i2c\+ID (rev 2M) \\
+\hline
+{\em int} & can\+ID (playing with fusion time of flight) \\
+\hline
+{\em std\+::string} & table\+Name (limelight) network table name \\
+\hline
+{\em double} & mounting\+Height in inches (limelight) \\
+\hline
+{\em double} & mounting\+Horizontal\+Offset in inches (limelight) \\
+\hline
+{\em double} & mounting\+Angle in degrees (limelight) \\
+\hline
+{\em double} & target\+Height in inches (limelight) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+I\+Dragon\+Distance\+Sensor$>$ sensor 
+\end{DoxyReturn}
+\begin{DoxyVerb}if ( inputPin > -1 && triggerPin > -1 )  // create lidar
+{
+\end{DoxyVerb}
+ todo validate the pins/usage sensor = make\+\_\+shared$<$\+I\+Dragon\+Distance\+Sensor$>$( new Dragon\+Lidar( usage, input\+Pin, trigger\+Pin ) ); \} else if ( analog\+Input\+Pin $>$ -\/ 1 ) // create ultrasonic \{ todo validate the channel sensor = make\+\_\+shared$<$\+I\+Dragon\+Distance\+Sensor$>$( new Dragon\+Ultrasonic( usage, analog\+Input\+Pin ) ); \} else if ( input\+Pin $>$ -\/1 ) // create ultrasonic\+P\+WM \{ todo validate the pwm pin sensor = make\+\_\+shared$<$\+I\+Dragon\+Distance\+Sensor$>$( new Dragon\+Ultrasonic\+P\+W\+M( usage, input\+Pin ) ); \} else if ( i2c\+ID $>$ -\/1 ) // create Rev 2M \{ todo validate the i2c todo create the sensor \begin{DoxyVerb}}
+else if ( canID > -1 )  // create playing with fusion time of flight sensor
+{
+\end{DoxyVerb}
+ todo validate the i2c todo create the sensor \begin{DoxyVerb}}
+else if ( !tableName.empty() )
+{
+\end{DoxyVerb}
+ todo validate inputs sensor = make\+\_\+shared$<$\+I\+Dragon\+Distance\+Sensor$>$( new Dragon\+Limelight( usage, table\+Name, mounting\+Height, mounting\+Horizontal\+Offset, mounting\+Angle, target\+Height) ); \} else \{ \mbox{\hyperlink{class_logger_ae85cfbef8b7e6940475a5012fa1935c6}{Logger\+::\+Get\+Logger()}}-\/$>$Log\+Error( string( \char`\"{}\+Distance\+Sensor\+Factory\+::\+Create\+Sensor\char`\"{}), string(\char`\"{}unknown sensor\char`\"{}) ); \}
+
+Definition at line 91 of file Distance\+Sensor\+Factory.\+cpp.
+
+\mbox{\Hypertarget{class_distance_sensor_factory_ac26949a95d6b5582d689f3d2100dff3e}\label{class_distance_sensor_factory_ac26949a95d6b5582d689f3d2100dff3e}} 
+\index{DistanceSensorFactory@{DistanceSensorFactory}!GetFactory@{GetFactory}}
+\index{GetFactory@{GetFactory}!DistanceSensorFactory@{DistanceSensorFactory}}
+\doxysubsubsection{\texorpdfstring{GetFactory()}{GetFactory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_distance_sensor_factory}{Distance\+Sensor\+Factory}} $\ast$ Distance\+Sensor\+Factory\+::\+Get\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 48 of file Distance\+Sensor\+Factory.\+cpp.
+
+\mbox{\Hypertarget{class_distance_sensor_factory_a433cac9d3711d99a953369dc15dd9dd3}\label{class_distance_sensor_factory_a433cac9d3711d99a953369dc15dd9dd3}} 
+\index{DistanceSensorFactory@{DistanceSensorFactory}!GetSensor@{GetSensor}}
+\index{GetSensor@{GetSensor}!DistanceSensorFactory@{DistanceSensorFactory}}
+\doxysubsubsection{\texorpdfstring{GetSensor()}{GetSensor()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_i_dragon_distance_sensor}{I\+Dragon\+Distance\+Sensor}}$>$ Distance\+Sensor\+Factory\+::\+Get\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_dragon_sensor_a48f04b4f71b0f27f8330fd82a26b5fe9}{I\+Dragon\+Sensor\+::\+S\+E\+N\+S\+O\+R\+\_\+\+U\+S\+A\+GE}}}]{usage }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/factories/\mbox{\hyperlink{_distance_sensor_factory_8h}{Distance\+Sensor\+Factory.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/factories/\mbox{\hyperlink{_distance_sensor_factory_8cpp}{Distance\+Sensor\+Factory.\+cpp}}\end{DoxyCompactItemize}

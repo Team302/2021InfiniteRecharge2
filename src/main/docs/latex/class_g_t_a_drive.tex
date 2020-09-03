@@ -1,0 +1,122 @@
+\hypertarget{class_g_t_a_drive}{}\doxysection{G\+T\+A\+Drive Class Reference}
+\label{class_g_t_a_drive}\index{GTADrive@{GTADrive}}
+
+
+{\ttfamily \#include $<$G\+T\+A\+Drive.\+h$>$}
+
+Inheritance diagram for G\+T\+A\+Drive\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_g_t_a_drive}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_t_a_drive_ac7b277783785fb86d40ecf4b122e47dc}{G\+T\+A\+Drive}} ()=default
+\item 
+\mbox{\hyperlink{class_g_t_a_drive_ac43ab40e11881fad5c3fc1be8226982c}{$\sim$\+G\+T\+A\+Drive}} ()=default
+\item 
+void \mbox{\hyperlink{class_g_t_a_drive_a413998dcf52c14974b530d729ad779cb}{Init}} () override
+\begin{DoxyCompactList}\small\item\em initialize the profiles for the various gamepad inputs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_g_t_a_drive_a87797574579b59e0618c8b2a274d7982}{Get\+Throttle}} () override
+\begin{DoxyCompactList}\small\item\em get the throttle component from the game controller \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_g_t_a_drive_a0f50c172e24c8f9fc901320c71d1b53c}{Get\+Steer}} () override
+\begin{DoxyCompactList}\small\item\em get the steer component from the game controller \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 26 of file G\+T\+A\+Drive.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_t_a_drive_ac7b277783785fb86d40ecf4b122e47dc}\label{class_g_t_a_drive_ac7b277783785fb86d40ecf4b122e47dc}} 
+\index{GTADrive@{GTADrive}!GTADrive@{GTADrive}}
+\index{GTADrive@{GTADrive}!GTADrive@{GTADrive}}
+\doxysubsubsection{\texorpdfstring{GTADrive()}{GTADrive()}}
+{\footnotesize\ttfamily G\+T\+A\+Drive\+::\+G\+T\+A\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_g_t_a_drive_ac43ab40e11881fad5c3fc1be8226982c}\label{class_g_t_a_drive_ac43ab40e11881fad5c3fc1be8226982c}} 
+\index{GTADrive@{GTADrive}!````~GTADrive@{$\sim$GTADrive}}
+\index{````~GTADrive@{$\sim$GTADrive}!GTADrive@{GTADrive}}
+\doxysubsubsection{\texorpdfstring{$\sim$GTADrive()}{~GTADrive()}}
+{\footnotesize\ttfamily G\+T\+A\+Drive\+::$\sim$\+G\+T\+A\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_t_a_drive_a0f50c172e24c8f9fc901320c71d1b53c}\label{class_g_t_a_drive_a0f50c172e24c8f9fc901320c71d1b53c}} 
+\index{GTADrive@{GTADrive}!GetSteer@{GetSteer}}
+\index{GetSteer@{GetSteer}!GTADrive@{GTADrive}}
+\doxysubsubsection{\texorpdfstring{GetSteer()}{GetSteer()}}
+{\footnotesize\ttfamily double G\+T\+A\+Drive\+::\+Get\+Steer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+get the steer component from the game controller 
+
+\begin{DoxyReturn}{Returns}
+double -\/ steer value between -\/1.\+0 and 1.\+0 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_arcade_drive_a79fe9f851e62b7abdb54eecbda36b165}{Arcade\+Drive}}.
+
+
+
+Definition at line 66 of file G\+T\+A\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_g_t_a_drive_a87797574579b59e0618c8b2a274d7982}\label{class_g_t_a_drive_a87797574579b59e0618c8b2a274d7982}} 
+\index{GTADrive@{GTADrive}!GetThrottle@{GetThrottle}}
+\index{GetThrottle@{GetThrottle}!GTADrive@{GTADrive}}
+\doxysubsubsection{\texorpdfstring{GetThrottle()}{GetThrottle()}}
+{\footnotesize\ttfamily double G\+T\+A\+Drive\+::\+Get\+Throttle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+get the throttle component from the game controller 
+
+\begin{DoxyReturn}{Returns}
+double -\/ throttle value between -\/1.\+0 and 1.\+0 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_arcade_drive_ade85686198528341067ef4d09b3ae166}{Arcade\+Drive}}.
+
+
+
+Definition at line 50 of file G\+T\+A\+Drive.\+cpp.
+
+\mbox{\Hypertarget{class_g_t_a_drive_a413998dcf52c14974b530d729ad779cb}\label{class_g_t_a_drive_a413998dcf52c14974b530d729ad779cb}} 
+\index{GTADrive@{GTADrive}!Init@{Init}}
+\index{Init@{Init}!GTADrive@{GTADrive}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void G\+T\+A\+Drive\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+initialize the profiles for the various gamepad inputs 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_arcade_drive_ad498acb6a567ee09fe1976bc09cbae6e}{Arcade\+Drive}}.
+
+
+
+Definition at line 36 of file G\+T\+A\+Drive.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/states/chassis/\mbox{\hyperlink{_g_t_a_drive_8h}{G\+T\+A\+Drive.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/states/chassis/\mbox{\hyperlink{_g_t_a_drive_8cpp}{G\+T\+A\+Drive.\+cpp}}\end{DoxyCompactItemize}

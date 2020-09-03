@@ -1,0 +1,129 @@
+\hypertarget{class_ball_transfer_state_mgr_test}{}\doxysection{Ball\+Transfer\+State\+Mgr\+Test Class Reference}
+\label{class_ball_transfer_state_mgr_test}\index{BallTransferStateMgrTest@{BallTransferStateMgrTest}}
+
+
+Tests for \mbox{\hyperlink{class_ball_transfer_state_mgr}{Ball\+Transfer\+State\+Mgr}}. There are three states\+: O\+FF, T\+O\+\_\+\+I\+M\+P\+E\+L\+L\+ER, and T\+O\+\_\+\+S\+H\+O\+O\+T\+ER. This will run each for 15 seconds. running T\+O\+\_\+\+I\+M\+P\+E\+L\+L\+ER, then O\+FF and finally T\+O\+\_\+\+S\+H\+O\+O\+T\+ER.  
+
+
+
+
+{\ttfamily \#include $<$Ball\+Transfer\+State\+Mgr\+Test.\+h$>$}
+
+Inheritance diagram for Ball\+Transfer\+State\+Mgr\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ball_transfer_state_mgr_test}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ball_transfer_state_mgr_test_a52c3ea920df528e26e3108b2cbca8d11}{Ball\+Transfer\+State\+Mgr\+Test}} ()
+\item 
+\mbox{\hyperlink{class_ball_transfer_state_mgr_test_a695836bc42ee5b5fc2deb45a9d75a6b6}{$\sim$\+Ball\+Transfer\+State\+Mgr\+Test}} ()=default
+\item 
+void \mbox{\hyperlink{class_ball_transfer_state_mgr_test_ac214f8fa30ecd791d4b873b5ebc92b62}{Init}} () override
+\begin{DoxyCompactList}\small\item\em Initialize the test setup. This will be called from \mbox{\hyperlink{class_robot_a9ac222d45d30a6d0c572fd36d18c6ccc}{Robot\+::\+Test\+Init()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ball_transfer_state_mgr_test_af88015f17e728810b7aedc89d229d163}{Periodic}} () override
+\begin{DoxyCompactList}\small\item\em Run the test. This will be called from \mbox{\hyperlink{class_robot_af0ac44a962e609e9b042285e699d1db8}{Robot\+::\+Test\+Periodic()}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ball_transfer_state_mgr_test_a8012de21e229fc147eca366cea16f2fc}{Is\+Done}} () override
+\begin{DoxyCompactList}\small\item\em Indicate whether the test has completed or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tests for \mbox{\hyperlink{class_ball_transfer_state_mgr}{Ball\+Transfer\+State\+Mgr}}. There are three states\+: O\+FF, T\+O\+\_\+\+I\+M\+P\+E\+L\+L\+ER, and T\+O\+\_\+\+S\+H\+O\+O\+T\+ER. This will run each for 15 seconds. running T\+O\+\_\+\+I\+M\+P\+E\+L\+L\+ER, then O\+FF and finally T\+O\+\_\+\+S\+H\+O\+O\+T\+ER. 
+
+Definition at line 33 of file Ball\+Transfer\+State\+Mgr\+Test.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ball_transfer_state_mgr_test_a52c3ea920df528e26e3108b2cbca8d11}\label{class_ball_transfer_state_mgr_test_a52c3ea920df528e26e3108b2cbca8d11}} 
+\index{BallTransferStateMgrTest@{BallTransferStateMgrTest}!BallTransferStateMgrTest@{BallTransferStateMgrTest}}
+\index{BallTransferStateMgrTest@{BallTransferStateMgrTest}!BallTransferStateMgrTest@{BallTransferStateMgrTest}}
+\doxysubsubsection{\texorpdfstring{BallTransferStateMgrTest()}{BallTransferStateMgrTest()}}
+{\footnotesize\ttfamily Ball\+Transfer\+State\+Mgr\+Test\+::\+Ball\+Transfer\+State\+Mgr\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file Ball\+Transfer\+State\+Mgr\+Test.\+cpp.
+
+\mbox{\Hypertarget{class_ball_transfer_state_mgr_test_a695836bc42ee5b5fc2deb45a9d75a6b6}\label{class_ball_transfer_state_mgr_test_a695836bc42ee5b5fc2deb45a9d75a6b6}} 
+\index{BallTransferStateMgrTest@{BallTransferStateMgrTest}!````~BallTransferStateMgrTest@{$\sim$BallTransferStateMgrTest}}
+\index{````~BallTransferStateMgrTest@{$\sim$BallTransferStateMgrTest}!BallTransferStateMgrTest@{BallTransferStateMgrTest}}
+\doxysubsubsection{\texorpdfstring{$\sim$BallTransferStateMgrTest()}{~BallTransferStateMgrTest()}}
+{\footnotesize\ttfamily Ball\+Transfer\+State\+Mgr\+Test\+::$\sim$\+Ball\+Transfer\+State\+Mgr\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ball_transfer_state_mgr_test_ac214f8fa30ecd791d4b873b5ebc92b62}\label{class_ball_transfer_state_mgr_test_ac214f8fa30ecd791d4b873b5ebc92b62}} 
+\index{BallTransferStateMgrTest@{BallTransferStateMgrTest}!Init@{Init}}
+\index{Init@{Init}!BallTransferStateMgrTest@{BallTransferStateMgrTest}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Ball\+Transfer\+State\+Mgr\+Test\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialize the test setup. This will be called from \mbox{\hyperlink{class_robot_a9ac222d45d30a6d0c572fd36d18c6ccc}{Robot\+::\+Test\+Init()}} 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_state_test_a6926767a434eddbcb9f696b966b45723}{I\+State\+Test}}.
+
+
+
+Definition at line 50 of file Ball\+Transfer\+State\+Mgr\+Test.\+cpp.
+
+\mbox{\Hypertarget{class_ball_transfer_state_mgr_test_a8012de21e229fc147eca366cea16f2fc}\label{class_ball_transfer_state_mgr_test_a8012de21e229fc147eca366cea16f2fc}} 
+\index{BallTransferStateMgrTest@{BallTransferStateMgrTest}!IsDone@{IsDone}}
+\index{IsDone@{IsDone}!BallTransferStateMgrTest@{BallTransferStateMgrTest}}
+\doxysubsubsection{\texorpdfstring{IsDone()}{IsDone()}}
+{\footnotesize\ttfamily bool Ball\+Transfer\+State\+Mgr\+Test\+::\+Is\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicate whether the test has completed or not. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true\+: test has completed, false\+: test is still running 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_state_test_a5dd3562131388a25108609fe82831921}{I\+State\+Test}}.
+
+
+
+Definition at line 91 of file Ball\+Transfer\+State\+Mgr\+Test.\+cpp.
+
+\mbox{\Hypertarget{class_ball_transfer_state_mgr_test_af88015f17e728810b7aedc89d229d163}\label{class_ball_transfer_state_mgr_test_af88015f17e728810b7aedc89d229d163}} 
+\index{BallTransferStateMgrTest@{BallTransferStateMgrTest}!Periodic@{Periodic}}
+\index{Periodic@{Periodic}!BallTransferStateMgrTest@{BallTransferStateMgrTest}}
+\doxysubsubsection{\texorpdfstring{Periodic()}{Periodic()}}
+{\footnotesize\ttfamily void Ball\+Transfer\+State\+Mgr\+Test\+::\+Periodic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Run the test. This will be called from \mbox{\hyperlink{class_robot_af0ac44a962e609e9b042285e699d1db8}{Robot\+::\+Test\+Periodic()}} 
+
+\begin{DoxyReturn}{Returns}
+void ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_state_test_aeea6d9f3dda71a47f98ae57e4e9ea598}{I\+State\+Test}}.
+
+
+
+Definition at line 59 of file Ball\+Transfer\+State\+Mgr\+Test.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/test/\mbox{\hyperlink{_ball_transfer_state_mgr_test_8h}{Ball\+Transfer\+State\+Mgr\+Test.\+h}}\item 
+C\+:/robotcm/training2020/src/main/cpp/test/\mbox{\hyperlink{_ball_transfer_state_mgr_test_8cpp}{Ball\+Transfer\+State\+Mgr\+Test.\+cpp}}\end{DoxyCompactItemize}

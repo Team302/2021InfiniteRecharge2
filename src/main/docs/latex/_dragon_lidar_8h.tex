@@ -1,0 +1,17 @@
+\hypertarget{_dragon_lidar_8h}{}\doxysection{C\+:/robotcm/training2020/src/main/cpp/hw/\+Dragon\+Lidar.h File Reference}
+\label{_dragon_lidar_8h}\index{C:/robotcm/training2020/src/main/cpp/hw/DragonLidar.h@{C:/robotcm/training2020/src/main/cpp/hw/DragonLidar.h}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$networktables/\+Network\+Table\+Instance.\+h$>$}\newline
+{\ttfamily \#include $<$networktables/\+Network\+Table.\+h$>$}\newline
+{\ttfamily \#include $<$networktables/\+Network\+Table\+Entry.\+h$>$}\newline
+{\ttfamily \#include $<$frc/\+Counter.\+h$>$}\newline
+{\ttfamily \#include $<$frc/\+Digital\+Output.\+h$>$}\newline
+{\ttfamily \#include $<$hw/interfaces/\+I\+Dragon\+Sensor.\+h$>$}\newline
+{\ttfamily \#include $<$hw/interfaces/\+I\+Dragon\+Distance\+Sensor.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_dragon_lidar}{Dragon\+Lidar}}
+\begin{DoxyCompactList}\small\item\em This class takes a L\+I\+D\+AR that is connected to a digital input on the roborio using P\+WM. The high pulse length is measured and converted to distance in \mbox{\hyperlink{class_dragon_lidar_a0b7ff9670fdb521c38f85216c30a98b6}{Get\+Distance()}}. The trigger pin is just used to initialize the lidar. It shouldn\textquotesingle{}t have to be called periodically. \end{DoxyCompactList}\end{DoxyCompactItemize}

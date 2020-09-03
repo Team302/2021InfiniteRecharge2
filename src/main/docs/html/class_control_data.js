@@ -12,5 +12,6 @@ var class_control_data =
     [ "GetMode", "class_control_data.html#a3e7157f943ecefb04cb30c274bf9a330", null ],
     [ "GetNominalValue", "class_control_data.html#a4352d6d0bcf6a75a8de2c42cf90689ea", null ],
     [ "GetP", "class_control_data.html#a905b66966177981526553ca8145f560f", null ],
-    [ "GetPeakValue", "class_control_data.html#ad63cd22d187b4b30d27d8482a8ee3b8f", null ]
+    [ "GetPeakValue", "class_control_data.html#ad63cd22d187b4b30d27d8482a8ee3b8f", null ],
+    [ "GetRunLoc", "class_control_data.html#a63bfe2e61c429f5bdf75f9201a075481", null ]
 ];

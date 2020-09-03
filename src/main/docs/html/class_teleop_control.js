@@ -54,8 +54,12 @@ var class_teleop_control =
       [ "UNJAM_COUNTERCLOCKWISE", "class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15ad857b31c41423f3bd5c2875b4644ef60", null ],
       [ "TRANSFER_UP", "class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15a37cb8c550225fe2a15285a12362c7509", null ],
       [ "TRANSFER_DOWN", "class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15a137228a8cf13eebde2b42af30712a0bf", null ],
+      [ "HOOK_DELIVERY_UP", "class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15a089cf78bd819785bfb0b94515b453047", null ],
+      [ "HOOK_DELIVERY_DOWN", "class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15a939cd7935302dd42dbd410a79fc6e948", null ],
       [ "MANUAL_HOOK_CONTROL_UP", "class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15a243fe7aea7f9cdc8b5fcb1cf61055915", null ],
       [ "MANUAL_HOOK_CONTROL_DOWN", "class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15a1ac5b9576cebd04b7b4a23a8c0f348f4", null ],
+      [ "CLIMBER_OFF", "class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15ab8345c35be05a539e62943adb62c72ab", null ],
+      [ "CLIMBER_WINCH_UP", "class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15a81571b6f3a67d6230f552cfa992cba48", null ],
       [ "MAX_FUNCTIONS", "class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15af0a71fc177d1cdf5d455aa154441aafb", null ]
     ] ],
     [ "GetAxisValue", "class_teleop_control.html#a9c6affa7d87ae898c531e567fce73b15", null ],

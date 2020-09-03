@@ -1,0 +1,312 @@
+\hypertarget{class_i_dragon_motor_controller}{}\doxysection{I\+Dragon\+Motor\+Controller Interface Reference}
+\label{class_i_dragon_motor_controller}\index{IDragonMotorController@{IDragonMotorController}}
+
+
+The general interface to motor controllers so that the specific mechanisms that use motors, don\textquotesingle{}t need to special case what motor controller is being used.  
+
+
+
+
+{\ttfamily \#include $<$I\+Dragon\+Motor\+Controller.\+h$>$}
+
+Inheritance diagram for I\+Dragon\+Motor\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_dragon_motor_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{class_i_dragon_motor_controller_aaebed7f496f5e56709a5dda5d7749782}{Get\+Rotations}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the number of revolutions the output shaft has spun. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_dragon_motor_controller_a17ff2a8c53eb525c629ea1dbfe617e72}{Get\+R\+PS}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the angular velocity in revolutions per second. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_motor_controller_usage_a03b7ee94f8c7e42884d5da8974e3a51a}{Motor\+Controller\+Usage\+::\+M\+O\+T\+O\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+S\+A\+GE}} \mbox{\hyperlink{class_i_dragon_motor_controller_a0b4ae4352bf46cae7d783c4e8c36aa6e}{Get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the usage of the motor. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_i_dragon_motor_controller_a95921146f1d1157bfcbaa568216f94a9}{Get\+Current}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the current usage. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_i_dragon_motor_controller_ad70e1b0a007c03cc07a6ee531d6701d6}{Get\+ID}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the C\+AN ID. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ frc\+::\+Speed\+Controller $>$ \mbox{\hyperlink{class_i_dragon_motor_controller_a1e513a4bd1623bedb289c203a4b0c3fb}{Get\+Speed\+Controller}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the speedcontroller. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_dragon_motor_controller_ac1436f0089d933ba4310abca76059e63}{Set\+Control\+Mode}} (\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} mode)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_dragon_motor_controller_adacee402a923d6a10d50abd1c850138e}{Set}} (double value)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_dragon_motor_controller_ab8ceadc2e3c436b6c5b281e526d4007d}{Set\+Rotation\+Offset}} (double rotations)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_dragon_motor_controller_adf68e251d62ea48a3cf1ca4c395529a6}{Set\+Voltage\+Ramping}} (double ramping, double closed\+Loop\+Ramping=-\/1)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_dragon_motor_controller_aabc3307852ea64aebdf940f37cade673}{Enable\+Current\+Limiting}} (bool enabled)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_dragon_motor_controller_a35b6fe6bc4b6a582d99ec223206e4add}{Enable\+Brake\+Mode}} (bool enabled)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_dragon_motor_controller_aae1077a659ed6c8f89d565f6411e56a3}{Invert}} (bool inverted)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_dragon_motor_controller_a108645163a4c281f5c83b72136fe5cae}{Set\+Sensor\+Inverted}} (bool inverted)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_dragon_motor_controller_ae94b716ecf9b1bb64c7184d904ef9e6d}{Set\+Diameter}} (double diameter)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_dragon_motor_controller_abdca297c707d0c1f5e36bc0be37396d5}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$control\+Info)=0
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_dragon_motor_controller_a5f5568cf4e1c64b327795135753678a1}{Set\+Remote\+Sensor}} (int can\+ID, ctre\+::phoenix\+::motorcontrol\+::\+Remote\+Sensor\+Source device\+Type)=0
+\item 
+\mbox{\hyperlink{class_i_dragon_motor_controller_abd89e75a66f4aa8ab989b2196e5d912f}{I\+Dragon\+Motor\+Controller}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_i_dragon_motor_controller_a93f40b43658f5744e50292dbf6fc470b}{$\sim$\+I\+Dragon\+Motor\+Controller}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The general interface to motor controllers so that the specific mechanisms that use motors, don\textquotesingle{}t need to special case what motor controller is being used. 
+
+Definition at line 37 of file I\+Dragon\+Motor\+Controller.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_dragon_motor_controller_abd89e75a66f4aa8ab989b2196e5d912f}\label{class_i_dragon_motor_controller_abd89e75a66f4aa8ab989b2196e5d912f}} 
+\index{IDragonMotorController@{IDragonMotorController}!IDragonMotorController@{IDragonMotorController}}
+\index{IDragonMotorController@{IDragonMotorController}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{IDragonMotorController()}{IDragonMotorController()}}
+{\footnotesize\ttfamily I\+Dragon\+Motor\+Controller\+::\+I\+Dragon\+Motor\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_a93f40b43658f5744e50292dbf6fc470b}\label{class_i_dragon_motor_controller_a93f40b43658f5744e50292dbf6fc470b}} 
+\index{IDragonMotorController@{IDragonMotorController}!````~IDragonMotorController@{$\sim$IDragonMotorController}}
+\index{````~IDragonMotorController@{$\sim$IDragonMotorController}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{$\sim$IDragonMotorController()}{~IDragonMotorController()}}
+{\footnotesize\ttfamily virtual I\+Dragon\+Motor\+Controller\+::$\sim$\+I\+Dragon\+Motor\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_dragon_motor_controller_a35b6fe6bc4b6a582d99ec223206e4add}\label{class_i_dragon_motor_controller_a35b6fe6bc4b6a582d99ec223206e4add}} 
+\index{IDragonMotorController@{IDragonMotorController}!EnableBrakeMode@{EnableBrakeMode}}
+\index{EnableBrakeMode@{EnableBrakeMode}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{EnableBrakeMode()}{EnableBrakeMode()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Motor\+Controller\+::\+Enable\+Brake\+Mode (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_af93549d1e2ea03255c46e8aaf6ad6d43}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_ad0f4b822780fc624487285aed3f386e4}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_acc7287b069303565a9b52f84508220d6}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_aabc3307852ea64aebdf940f37cade673}\label{class_i_dragon_motor_controller_aabc3307852ea64aebdf940f37cade673}} 
+\index{IDragonMotorController@{IDragonMotorController}!EnableCurrentLimiting@{EnableCurrentLimiting}}
+\index{EnableCurrentLimiting@{EnableCurrentLimiting}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{EnableCurrentLimiting()}{EnableCurrentLimiting()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Motor\+Controller\+::\+Enable\+Current\+Limiting (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_a8a76c720cf50e2bc79fb7c9f1a1cd771}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_af605cf5a714e65639678e41f00445f0c}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_a11ce6b9a0281ae2dbddf655c2913a133}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_a95921146f1d1157bfcbaa568216f94a9}\label{class_i_dragon_motor_controller_a95921146f1d1157bfcbaa568216f94a9}} 
+\index{IDragonMotorController@{IDragonMotorController}!GetCurrent@{GetCurrent}}
+\index{GetCurrent@{GetCurrent}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{GetCurrent()}{GetCurrent()}}
+{\footnotesize\ttfamily virtual double I\+Dragon\+Motor\+Controller\+::\+Get\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the current usage. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ amperage usage for the controller 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_aef9e7316a70af58f1dc02a9fae5cfd8a}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_ab2b22ee7a00b3e6a10125981848944f3}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_aa5fe4416de572b8c84ee1e063fd1b66e}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_ad70e1b0a007c03cc07a6ee531d6701d6}\label{class_i_dragon_motor_controller_ad70e1b0a007c03cc07a6ee531d6701d6}} 
+\index{IDragonMotorController@{IDragonMotorController}!GetID@{GetID}}
+\index{GetID@{GetID}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{GetID()}{GetID()}}
+{\footnotesize\ttfamily virtual int I\+Dragon\+Motor\+Controller\+::\+Get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the C\+AN ID. 
+
+\begin{DoxyReturn}{Returns}
+int -\/ C\+AN ID 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_a09c99e5934e299873e65068b1c74fd2b}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_a3390286ef0c87a7a7e7bd62c9acfe297}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_a7a7bf5cd79bd0458363892bcdf7f2b46}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_aaebed7f496f5e56709a5dda5d7749782}\label{class_i_dragon_motor_controller_aaebed7f496f5e56709a5dda5d7749782}} 
+\index{IDragonMotorController@{IDragonMotorController}!GetRotations@{GetRotations}}
+\index{GetRotations@{GetRotations}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{GetRotations()}{GetRotations()}}
+{\footnotesize\ttfamily virtual double I\+Dragon\+Motor\+Controller\+::\+Get\+Rotations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the number of revolutions the output shaft has spun. 
+
+\begin{DoxyReturn}{Returns}
+double number of revolutions 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_aee9013f3c3bf7f48d891d650b919253e}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_a73ec6f1d7783143f62b2b1935b292051}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_ae86a7edc78d019aea370ec7f49eddf6c}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_a17ff2a8c53eb525c629ea1dbfe617e72}\label{class_i_dragon_motor_controller_a17ff2a8c53eb525c629ea1dbfe617e72}} 
+\index{IDragonMotorController@{IDragonMotorController}!GetRPS@{GetRPS}}
+\index{GetRPS@{GetRPS}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{GetRPS()}{GetRPS()}}
+{\footnotesize\ttfamily virtual double I\+Dragon\+Motor\+Controller\+::\+Get\+R\+PS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the angular velocity in revolutions per second. 
+
+\begin{DoxyReturn}{Returns}
+double angular velocity in revolutions per second 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_aa376bdad28a3d55b6bcb221887920a63}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_a112b2519cf850dfbf556118dbf24d350}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_a6037fe288a4e4d73e8aefaff347af3eb}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_a1e513a4bd1623bedb289c203a4b0c3fb}\label{class_i_dragon_motor_controller_a1e513a4bd1623bedb289c203a4b0c3fb}} 
+\index{IDragonMotorController@{IDragonMotorController}!GetSpeedController@{GetSpeedController}}
+\index{GetSpeedController@{GetSpeedController}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{GetSpeedController()}{GetSpeedController()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$frc\+::\+Speed\+Controller$>$ I\+Dragon\+Motor\+Controller\+::\+Get\+Speed\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the speedcontroller. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$frc\+::\+Speed\+Controll$>$ -\/ pointer to the speed controller object 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_ab08e23a1e9f07240e0868e8ecb83987e}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_aa479cc87e8242ca893f47662518f84d1}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_aa816f5211ea0e05b88047c131e7d8e0e}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_a0b4ae4352bf46cae7d783c4e8c36aa6e}\label{class_i_dragon_motor_controller_a0b4ae4352bf46cae7d783c4e8c36aa6e}} 
+\index{IDragonMotorController@{IDragonMotorController}!GetType@{GetType}}
+\index{GetType@{GetType}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_motor_controller_usage_a03b7ee94f8c7e42884d5da8974e3a51a}{Motor\+Controller\+Usage\+::\+M\+O\+T\+O\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+S\+A\+GE}} I\+Dragon\+Motor\+Controller\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return the usage of the motor. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_motor_controller_usage_a03b7ee94f8c7e42884d5da8974e3a51a}{Motor\+Controller\+Usage\+::\+M\+O\+T\+O\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+S\+A\+GE}} -\/ what the motor is used for 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_aa60b6c26b3624061e239fe256583ed0e}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_a0a1ff495bb882e7c5a5ecee6beef728e}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_a38bc49d974be18c5bd76c990b8b785c6}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_aae1077a659ed6c8f89d565f6411e56a3}\label{class_i_dragon_motor_controller_aae1077a659ed6c8f89d565f6411e56a3}} 
+\index{IDragonMotorController@{IDragonMotorController}!Invert@{Invert}}
+\index{Invert@{Invert}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{Invert()}{Invert()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Motor\+Controller\+::\+Invert (\begin{DoxyParamCaption}\item[{bool}]{inverted }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_a01a9cbfe59d25b805ec376d94af0cfdd}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_ac6b2718e28d1b81f040ee8efb9786750}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_a916e6d3fa7d6e134e60ee8ad868391b4}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_adacee402a923d6a10d50abd1c850138e}\label{class_i_dragon_motor_controller_adacee402a923d6a10d50abd1c850138e}} 
+\index{IDragonMotorController@{IDragonMotorController}!Set@{Set}}
+\index{Set@{Set}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Motor\+Controller\+::\+Set (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_acf967485e409c54f5932732f276cb44d}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_a38eb54d110601f8fb7bb2e324f549016}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_a32074257a1082666c5c25fbb9cb90d33}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_abdca297c707d0c1f5e36bc0be37396d5}\label{class_i_dragon_motor_controller_abdca297c707d0c1f5e36bc0be37396d5}} 
+\index{IDragonMotorController@{IDragonMotorController}!SetControlConstants@{SetControlConstants}}
+\index{SetControlConstants@{SetControlConstants}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{SetControlConstants()}{SetControlConstants()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Motor\+Controller\+::\+Set\+Control\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{control\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the control constants (e.\+g. P\+I\+DF values). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Control\+Data$\ast$} & pid -\/ the control constants \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_a1504585d6a7671449c274adb254d6aa6}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_a3d5608ab963c80b01dcfbeba3ad71f49}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_a051e7d9a21b9caf9db65bcb2c613808e}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_ac1436f0089d933ba4310abca76059e63}\label{class_i_dragon_motor_controller_ac1436f0089d933ba4310abca76059e63}} 
+\index{IDragonMotorController@{IDragonMotorController}!SetControlMode@{SetControlMode}}
+\index{SetControlMode@{SetControlMode}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{SetControlMode()}{SetControlMode()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Motor\+Controller\+::\+Set\+Control\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_a4a582d3070a1623396dbf5120bb4f390}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_a47cda85cdba80165e485bb5bf5c41726}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_a51ae73cebf47695a4c37cc874d7dd0b3}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_ae94b716ecf9b1bb64c7184d904ef9e6d}\label{class_i_dragon_motor_controller_ae94b716ecf9b1bb64c7184d904ef9e6d}} 
+\index{IDragonMotorController@{IDragonMotorController}!SetDiameter@{SetDiameter}}
+\index{SetDiameter@{SetDiameter}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{SetDiameter()}{SetDiameter()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Motor\+Controller\+::\+Set\+Diameter (\begin{DoxyParamCaption}\item[{double}]{diameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_a58a336a886347ec83d2b393569fc9d19}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_talon_a741ea243997b62373ef198f75846704d}{Dragon\+Talon}}, and \mbox{\hyperlink{class_dragon_spark_max_a8db88ceea2f749de7f6ca866f1a8e764}{Dragon\+Spark\+Max}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_a5f5568cf4e1c64b327795135753678a1}\label{class_i_dragon_motor_controller_a5f5568cf4e1c64b327795135753678a1}} 
+\index{IDragonMotorController@{IDragonMotorController}!SetRemoteSensor@{SetRemoteSensor}}
+\index{SetRemoteSensor@{SetRemoteSensor}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{SetRemoteSensor()}{SetRemoteSensor()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Motor\+Controller\+::\+Set\+Remote\+Sensor (\begin{DoxyParamCaption}\item[{int}]{can\+ID,  }\item[{ctre\+::phoenix\+::motorcontrol\+::\+Remote\+Sensor\+Source}]{device\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_ac2802287e9336cb907c5e0ce77e03d26}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_talon_abfd29c75d1892ea7607114a337fe232b}{Dragon\+Talon}}, and \mbox{\hyperlink{class_dragon_spark_max_a1efdeaf37e0d6296a155db0a0d5b0239}{Dragon\+Spark\+Max}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_ab8ceadc2e3c436b6c5b281e526d4007d}\label{class_i_dragon_motor_controller_ab8ceadc2e3c436b6c5b281e526d4007d}} 
+\index{IDragonMotorController@{IDragonMotorController}!SetRotationOffset@{SetRotationOffset}}
+\index{SetRotationOffset@{SetRotationOffset}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{SetRotationOffset()}{SetRotationOffset()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Motor\+Controller\+::\+Set\+Rotation\+Offset (\begin{DoxyParamCaption}\item[{double}]{rotations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_ab9080ba4bfbada1afa05f9c532564251}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_a30be4189ed4796945e3de09a5e9131e8}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_a50cab200ce935067feed69d862f48156}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_a108645163a4c281f5c83b72136fe5cae}\label{class_i_dragon_motor_controller_a108645163a4c281f5c83b72136fe5cae}} 
+\index{IDragonMotorController@{IDragonMotorController}!SetSensorInverted@{SetSensorInverted}}
+\index{SetSensorInverted@{SetSensorInverted}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{SetSensorInverted()}{SetSensorInverted()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Motor\+Controller\+::\+Set\+Sensor\+Inverted (\begin{DoxyParamCaption}\item[{bool}]{inverted }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_a4efe5d7355a1d82577a8232fdbc9fe7d}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_a67be736e73bf22920239944c5a9ebc5d}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_a87d056ac6683ceec4a985dff184b42e5}{Dragon\+Talon}}.
+
+\mbox{\Hypertarget{class_i_dragon_motor_controller_adf68e251d62ea48a3cf1ca4c395529a6}\label{class_i_dragon_motor_controller_adf68e251d62ea48a3cf1ca4c395529a6}} 
+\index{IDragonMotorController@{IDragonMotorController}!SetVoltageRamping@{SetVoltageRamping}}
+\index{SetVoltageRamping@{SetVoltageRamping}!IDragonMotorController@{IDragonMotorController}}
+\doxysubsubsection{\texorpdfstring{SetVoltageRamping()}{SetVoltageRamping()}}
+{\footnotesize\ttfamily virtual void I\+Dragon\+Motor\+Controller\+::\+Set\+Voltage\+Ramping (\begin{DoxyParamCaption}\item[{double}]{ramping,  }\item[{double}]{closed\+Loop\+Ramping = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_falcon_a596613a088e7d87182377b04ced5b16a}{Dragon\+Falcon}}, \mbox{\hyperlink{class_dragon_spark_max_a1105074c2d2d7a2f719c8f5e41f02394}{Dragon\+Spark\+Max}}, and \mbox{\hyperlink{class_dragon_talon_a1e450e634cd6d34cd0ba8f9bb0aebea1}{Dragon\+Talon}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/robotcm/training2020/src/main/cpp/hw/interfaces/\mbox{\hyperlink{_i_dragon_motor_controller_8h}{I\+Dragon\+Motor\+Controller.\+h}}\end{DoxyCompactItemize}
