@@ -1,6 +1,6 @@
 
 //====================================================================================================================================================
-// Copyright 2019 Lake Orion Robotics FIRST Team 302
+// Copyright 2020 Lake Orion Robotics FIRST Team 302 
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
 // to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
@@ -33,13 +33,24 @@
 
 using namespace std;
 
+/// @brief Create a generic mechanism wiht 2 independent motors 
+/// @param [in] MechanismTypes::MECHANISM_TYPE the type of mechansim
+/// @param [in] std::string the name of the file that will set control parameters for this mechanism
+/// @param [in] std::string the name of the network table for logging information
+/// @param [in] std::shared_ptr<IDragonMotorController> primary motor used by this mechanism
+/// @param [in] std::shared_ptr<IDragonMotorController> secondary motor used by this mechanism
 Mech2IndMotors::Mech2IndMotors
 (
-    unique_ptr<IDragonMotorController>     primaryMotor,
-    unique_ptr<IDragonMotorController>     secondaryMotor
+    MechanismTypes::MECHANISM_TYPE              type,
+    std::string                                 controlFileName,
+    std::string                                 networkTableName,
+    shared_ptr<IDragonMotorController>          primaryMotor,
+    shared_ptr<IDragonMotorController>          secondaryMotor
 ) : IMech2IndMotors(),
-    m_primary( make_unique<Mech1IndMotor>(move(primaryMotor))),
-    m_secondary( make_unique<Mech1IndMotor>(move(secondaryMotor)))
+    m_primary( std::move(primaryMotor)),
+    m_secondary( std::move(secondaryMotor)),
+    m_primaryTarget(0.0),
+    m_secondaryTarget(0.0)
 {
     if ( m_primary.get() == nullptr )
     {
@@ -52,6 +63,28 @@ Mech2IndMotors::Mech2IndMotors
     }
 }
 
+/// @brief          Indicates the type of mechanism this is
+/// @return         MechanismTypes::MECHANISM_TYPE
+MechanismTypes::MECHANISM_TYPE Mech2IndMotors::GetType() const 
+{
+    return m_type;
+}
+
+/// @brief indicate the file used to get the control parameters from
+/// @return std::string the name of the file 
+std::string Mech2IndMotors::GetControlFileName() const 
+{
+    return m_controlFile;
+}
+
+
+/// @brief indicate the network table name used to for logging parameters
+/// @return std::string the name of the network table 
+std::string Mech2IndMotors::GetNetworkTableName() const 
+{
+    return m_ntName;
+}
+
 
 /// @brief update the output to the mechanism using the current controller and target value(s)
 /// @return void 
@@ -59,11 +92,11 @@ void Mech2IndMotors::Update()
 {
     if ( m_primary.get() != nullptr )
     {
-        m_primary.get()->Update();
+        m_primary.get()->Set(m_primaryTarget);
     }
     if ( m_secondary.get() != nullptr )
     {
-        m_secondary.get()->Update();
+        m_secondary.get()->Set(m_secondaryTarget);
     }
 }
 
@@ -74,14 +107,9 @@ void Mech2IndMotors::UpdateTargets
 
 )
 {
-    if ( m_primary.get() != nullptr )
-    {
-        m_primary.get()->UpdateTarget(primary);
-    }
-    if ( m_secondary.get() != nullptr )
-    {
-        m_secondary.get()->UpdateTarget(secondary);
-    }
+    m_primaryTarget = primary;
+    m_secondaryTarget = secondary;
+    Update();
 }
 
 
@@ -89,28 +117,28 @@ void Mech2IndMotors::UpdateTargets
 /// @return double	position in inches (translating mechanisms) or degrees (rotating mechanisms)
 double Mech2IndMotors::GetPrimaryPosition() const 
 {
-    return ( m_primary.get() != nullptr ) ? m_primary.get()->GetPosition() : 0.0;
+    return ( m_primary.get() != nullptr ) ? m_primary.get()->GetRotations() * 360.0 : 0.0;
 }
 
 /// @brief  Return the current position of the secondary motor in the mechanism.  The value is in inches or degrees.
 /// @return double	position in inches (translating mechanisms) or degrees (rotating mechanisms)
 double Mech2IndMotors::GetSecondaryPosition() const 
 {
-    return ( m_secondary.get() != nullptr ) ? m_secondary.get()->GetPosition() : 0.0;
+    return ( m_secondary.get() != nullptr ) ? m_secondary.get()->GetRotations() * 360.0 : 0.0;
 }
 
 /// @brief  Get the current speed of the primary motor in the mechanism.  The value is in inches per second or degrees per second.
 /// @return double	speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms)
 double Mech2IndMotors::GetPrimarySpeed() const 
 {
-    return ( m_primary.get() != nullptr ) ? m_primary.get()->GetSpeed() : 0.0;
+    return ( m_primary.get() != nullptr ) ? m_primary.get()->GetRPS() : 0.0;
 }
 
 /// @brief  Get the current speed of the secondary motor in the mechanism.  The value is in inches per second or degrees per second.
 /// @return double	speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms)
 double Mech2IndMotors::GetSecondarySpeed() const 
 {
-    return ( m_secondary.get() != nullptr ) ? m_secondary.get()->GetSpeed() : 0.0;
+    return ( m_secondary.get() != nullptr ) ? m_secondary.get()->GetRPS() : 0.0;
 }
 
 /// @brief  Set the control constants (e.g. PIDF values).

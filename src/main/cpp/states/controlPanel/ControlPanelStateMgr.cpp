@@ -61,8 +61,6 @@ ControlPanelStateMgr::ControlPanelStateMgr() :m_stateVector(),
                 auto controlData = td->GetController();
                 auto target = td->GetTarget();
                 auto solState = td->GetSolenoidState();
-                auto fbControlData = td->GetFailoverController(); // todo pass through to the states
-                auto fbTarget = td->GetFailoverTarget();  // todo pass through to the states
                 switch ( stateEnum )
                 {
                     case CONTROL_PANEL_STATE::RAISE:
@@ -101,6 +99,7 @@ ControlPanelStateMgr::ControlPanelStateMgr() :m_stateVector(),
                         auto thisState = new ControlPanelManual(controlData, target);
                         m_stateVector[stateEnum] = thisState;
                     }
+                    break;
 
                     default:
                     {

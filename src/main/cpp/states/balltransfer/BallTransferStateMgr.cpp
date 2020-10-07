@@ -1,5 +1,5 @@
 //====================================================================================================================================================
-// Copyright 2019 Lake Orion Robotics FIRST Team 302
+// Copyright 2020 Lake Orion Robotics FIRST Team 302 
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
 // to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
@@ -79,8 +79,6 @@ BallTransferStateMgr::BallTransferStateMgr() : m_currentState(),
                 auto controlData = td->GetController();
                 auto target = td->GetTarget();
                 auto solState = td->GetSolenoidState();
-                auto fbControlData = td->GetFailoverController(); // todo pass through to the states
-                auto fbTarget = td->GetFailoverTarget();  // todo pass through to the states
                 switch ( stateEnum )
                 {
                     case BALL_TRANSFER_STATE::OFF:

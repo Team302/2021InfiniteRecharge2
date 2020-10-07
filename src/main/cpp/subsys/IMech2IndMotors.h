@@ -1,6 +1,6 @@
 
 //====================================================================================================================================================
-// Copyright 2019 Lake Orion Robotics FIRST Team 302
+// Copyright 2020 Lake Orion Robotics FIRST Team 302 
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
 // to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
@@ -22,12 +22,12 @@
 //========================================================================================================
 
 // C++ Includes
-#include <vector>
 
 // FRC includes
 
 // Team 302 includes
 #include <controllers/ControlModes.h>
+#include <subsys/IMech.h>
 #include <subsys/MechanismTypes.h>
 #include <controllers/ControlData.h>
 // Third Party Includes
@@ -35,7 +35,7 @@
 
 ///	 @interface IMech2IndMotors
 ///  @brief	    Interface for subsystems
-class IMech2IndMotors
+class IMech2IndMotors : public IMech
 {
 	public:
         /// @brief update the output to the mechanism using the current controller and target value(s)
@@ -76,7 +76,6 @@ class IMech2IndMotors
 	    IMech2IndMotors() = default;
 	    virtual ~IMech2IndMotors() = default;
 };
-typedef std::vector<IMech2IndMotors*> IMech2IndMotorsVector;
 
 
 

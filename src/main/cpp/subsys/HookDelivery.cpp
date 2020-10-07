@@ -14,95 +14,25 @@
 //====================================================================================================================================================
 
 // C++ Includes
-#include <vector>
 #include <memory>
 #include <string>
+
 // FRC includes
 
 // Team 302 includes
-#include <controllers/ControlModes.h>
-#include <controllers/ControlData.h>
 #include <subsys/HookDelivery.h>
 #include <hw/interfaces/IDragonMotorController.h>
-#include <utils/Logger.h>
+
 // Third Party Includes
+
 using namespace std;
 
 HookDelivery::HookDelivery
-
 (
-    std::shared_ptr<IDragonMotorController>     motorController
-) : m_master ( motorController )
-
+    shared_ptr<IDragonMotorController>     motorController
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::HOOK_DELIVERY, 
+                   string("hookdelivery.xml"), 
+                   string("HookDelivery"), 
+                   move(motorController) )
 {
-    if (m_master.get() == nullptr )
-    {
-        Logger::GetLogger()->LogError( string("HookDelivery constructor"), string("motorController is nullptr"));
-    }
-}
-
-MechanismTypes::MECHANISM_TYPE HookDelivery::GetType() const
-{
-    return MechanismTypes::MECHANISM_TYPE::HOOK_DELIVERY;
-}
-
-void HookDelivery::SetOutput
-(
-    ControlModes::CONTROL_TYPE controlType,
-    double        value 
-)
-{        
-    if ( m_master.get() != nullptr )
-    {
-        m_master.get()->SetControlMode(controlType);
-        m_master.get()->Set( value );
-    }
-    else 
-    {
-        Logger::GetLogger()->LogError( string("HookDelivery::SetOutput"), string("No master") );
-    }
-}
-
-void HookDelivery::ActivateSolenoid
-(
-    bool     activate
-)
-{
-    Logger::GetLogger()->LogError(string("HookDelivery::ActivateSolenoid"), string("Called"));
-}
-
-bool HookDelivery::IsSolenoidActivated
-(
-
-)
-{            
-    Logger::GetLogger()->LogError(string("HookDelivery::IsSolenoidActivated"), string("Called"));
-    return false;
-}
-
-double HookDelivery::GetCurrentPosition
-(
-
-)const
-{
-    Logger::GetLogger()->LogError(string("HookDelivery::GetCurrentPosition"), string("Called"));
-    return 0.0;
-}
-
-double HookDelivery::GetCurrentSpeed
-(
-
-)const
-{
-    Logger::GetLogger()->LogError(string("HookDelivery::GetCurrentSpeed"), string("Called"));
-    return 0.0;
-}
-
-
-void HookDelivery::SetControlConstants
-(
-    ControlData*    pid
-)
-{
-    m_master.get()->SetControlConstants( pid );
 }

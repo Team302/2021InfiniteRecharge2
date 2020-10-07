@@ -1,75 +1,38 @@
-/*----------------------------------------------------------------------------*/
-/* Copyright (c) 2018 FIRST. All Rights Reserved.                             */
-/* Open Source Software - may be modified and shared by FRC teams. The code   */
-/* must be accompanied by the FIRST BSD license file in the root directory of */
-/* the project.                                                               */
-/*----------------------------------------------------------------------------*/
+//====================================================================================================================================================
+// Copyright 2020 Lake Orion Robotics FIRST Team 302
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+// OR OTHER DEALINGS IN THE SOFTWARE.
+//====================================================================================================================================================
 
-#include "subsys/Turret.h"
-#include <subsys/IMechanism.h>
-#include <subsys/MechanismTypes.h>
-#include <controllers/ControlModes.h>
-#include <controllers/ControlData.h>
+// C++ Includes
+#include <memory>
+#include <string>
 
-Turret::Turret(std::shared_ptr<IDragonMotorController> motorController): m_targetPosition(0.0),
-m_targetSpeed(0.0)
+// FRC includes
+
+// Team 302 includes
+#include <subsys/Turret.h>
+#include <hw/interfaces/IDragonMotorController.h>
+
+// Third Party Includes
+
+using namespace std;
+
+Turret::Turret
+(
+    shared_ptr<IDragonMotorController>     motorController
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::TURRET, 
+                   string("turret.xml"), 
+                   string("Turret"), 
+                   move(motorController) )
 {
-    m_turretMotor = motorController;
-    m_initialPosition = GetCurrentPosition();
-}
-
-MechanismTypes::MECHANISM_TYPE Turret::GetType() const
-{
-    return MechanismTypes::TURRET;
-}
-
-void Turret::SetOutput(ControlModes::CONTROL_TYPE controlType, double value)
-{
-    switch(controlType)
-    {
-        case ControlModes::CONTROL_TYPE::POSITION_DEGREES:
-        case ControlModes::CONTROL_TYPE::TRAPEZOID:
-            m_targetPosition = value;
-            break;
-
-        case ControlModes::CONTROL_TYPE::VELOCITY_DEGREES:
-            m_targetSpeed = value;
-            break;
-
-        default:
-            break;
-    }
-
-            
-
-    m_turretMotor.get()->SetControlMode(controlType);
-    m_turretMotor.get()->Set(value);
-
-}
-
-void Turret::ActivateSolenoid(bool activate)
-{
-
-}
-
-bool Turret::IsSolenoidActivated()
-{
-    return false;
-}
-
-double Turret::GetCurrentPosition() const
-{
-    return m_turretMotor.get()->GetRotations() * 360.0;
-}
-
-
-double Turret::GetCurrentSpeed() const
-{
-    return m_turretMotor.get()->GetRPS() * 360.0;
-}
-
-
-void Turret::SetControlConstants(ControlData* pid)
-{
-    m_turretMotor.get()->SetControlConstants(pid);
 }

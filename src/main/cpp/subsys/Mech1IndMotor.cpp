@@ -1,5 +1,5 @@
 //====================================================================================================================================================
-// Copyright 2019 Lake Orion Robotics FIRST Team 302
+// Copyright 2020 Lake Orion Robotics FIRST Team 302 
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
 // to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
@@ -29,10 +29,18 @@
 
 using namespace std;
 
+/// @brief Create a generic mechanism wiht 1 independent motor 
+/// @param [in] MechanismTypes::MECHANISM_TYPE the type of mechansim
+/// @param [in] std::string the name of the file that will set control parameters for this mechanism
+/// @param [in] std::string the name of the network table for logging information
+/// @param [in] std::shared_ptr<IDragonMotorController> motor controller used by this mechanism
 Mech1IndMotor::Mech1IndMotor
 
 (
-    std::unique_ptr<IDragonMotorController>     motorController
+    MechanismTypes::MECHANISM_TYPE              type,
+    std::string                                 controlFileName,
+    std::string                                 networkTableName,
+    std::shared_ptr<IDragonMotorController>     motorController
 ) : m_motor( std::move(motorController) ),
     m_target( 0.0 )
 {
@@ -40,6 +48,28 @@ Mech1IndMotor::Mech1IndMotor
     {
         Logger::GetLogger()->LogError( string( "Mech1IndMotor constructor" ), string( "motorController is nullptr" ) );
     }
+}
+
+/// @brief          Indicates the type of mechanism this is
+/// @return         MechanismTypes::MECHANISM_TYPE
+MechanismTypes::MECHANISM_TYPE Mech1IndMotor::GetType() const 
+{
+    return m_type;
+}
+
+/// @brief indicate the file used to get the control parameters from
+/// @return std::string the name of the file 
+std::string Mech1IndMotor::GetControlFileName() const 
+{
+    return m_controlFile;
+}
+
+
+/// @brief indicate the network table name used to for logging parameters
+/// @return std::string the name of the network table 
+std::string Mech1IndMotor::GetNetworkTableName() const 
+{
+    return m_ntName;
 }
 
 
@@ -57,6 +87,7 @@ void Mech1IndMotor::UpdateTarget
 )
 {
     m_target = target;
+    Update();
 }
 
 

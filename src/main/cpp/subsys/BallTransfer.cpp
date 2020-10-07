@@ -14,95 +14,25 @@
 //====================================================================================================================================================
 
 // C++ Includes
-#include <vector>
 #include <memory>
 #include <string>
+
 // FRC includes
 
 // Team 302 includes
-#include <controllers/ControlModes.h>
-#include <controllers/ControlData.h>
 #include <subsys/BallTransfer.h>
 #include <hw/interfaces/IDragonMotorController.h>
-#include <utils/Logger.h>
+
 // Third Party Includes
+
 using namespace std;
 
 BallTransfer::BallTransfer
-
 (
-    std::shared_ptr<IDragonMotorController>     motorController
-) : m_master ( motorController )
-
+    shared_ptr<IDragonMotorController>     motorController
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::BALL_TRANSFER, 
+                   string("balltransfer.xml"), 
+                   string("BallTransfer"), 
+                   move(motorController) )
 {
-    if (m_master.get() == nullptr )
-    {
-        Logger::GetLogger()->LogError( string("BallTransfer conductor"), string("motorController is nullptr"));
-    }
-}
-
-MechanismTypes::MECHANISM_TYPE BallTransfer::GetType() const
-{
-    return MechanismTypes::MECHANISM_TYPE::BALL_TRANSFER;
-}
-
-void BallTransfer::SetOutput
-(
-    ControlModes::CONTROL_TYPE controlType,
-    double        value 
-)
-{        
-    if ( m_master.get() != nullptr )
-    {
-        m_master.get()->SetControlMode(controlType);
-        m_master.get()->Set( value );
-    }
-    else 
-    {
-        Logger::GetLogger()->LogError( string("BallTransfer::SetOutput"), string("No master") );
-    }
-}
-
-void BallTransfer::ActivateSolenoid
-(
-    bool     activate
-)
-{
-    Logger::GetLogger()->LogError(string("BallTransfer::ActivateSolenoid"), string("Called"));
-}
-
-bool BallTransfer::IsSolenoidActivated
-(
-
-)
-{            
-    Logger::GetLogger()->LogError(string("BallTransfer::IsSolenoidActivated"), string("Called"));
-    return false;
-}
-
-double BallTransfer::GetCurrentPosition
-(
-
-)const
-{
-    Logger::GetLogger()->LogError(string("BallTransfer::GetCurrentPosition"), string("Called"));
-    return 0.0;
-}
-
-double BallTransfer::GetCurrentSpeed
-(
-
-)const
-{
-    Logger::GetLogger()->LogError(string("BallTransfer::GetCurrentSpeed"), string("Called"));
-    return 0.0;
-}
-
-
-void BallTransfer::SetControlConstants
-(
-    ControlData*    pid
-)
-{
-    m_master.get()->SetControlConstants( pid );
 }

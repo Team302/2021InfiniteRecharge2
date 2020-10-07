@@ -1,6 +1,6 @@
 
 //====================================================================================================================================================
-// Copyright 2019 Lake Orion Robotics FIRST Team 302
+// Copyright 2020 Lake Orion Robotics FIRST Team 302 
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
 // to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
@@ -22,12 +22,11 @@
 //========================================================================================================
 
 // C++ Includes
-#include <vector>
 
 // FRC includes
 
 // Team 302 includes
-
+#include <subsys/IMech.h>
 
 
 // Third Party Includes
@@ -35,7 +34,7 @@
 
 ///	 @interface IMech1Servo
 ///  @brief	    Interface for subsystems
-class IMech1Servo
+class IMech1Servo : public IMech
 {
 	public:
         /// @brief      Move servo to the desired angle
@@ -49,7 +48,6 @@ class IMech1Servo
 	    IMech1Servo() = default;
 	    virtual ~IMech1Servo() = default;
 };
-typedef std::vector<IMech1Servo*> IMech1ServoVector;
 
 
 

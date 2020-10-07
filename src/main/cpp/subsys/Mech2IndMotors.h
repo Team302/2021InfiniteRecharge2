@@ -1,6 +1,6 @@
 
 //====================================================================================================================================================
-// Copyright 2019 Lake Orion Robotics FIRST Team 302
+// Copyright 2020 Lake Orion Robotics FIRST Team 302 
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
 // to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
@@ -23,8 +23,8 @@
 // FRC includes
 
 // Team 302 includes
-#include <subsys/Mech1IndMotor.h>
 #include <subsys/IMech2IndMotors.h>
+#include <subsys/Mech1IndMotor.h>
 
 // Third Party Includes
 
@@ -34,6 +34,35 @@ class IDragonMotorController;
 class Mech2IndMotors : public IMech2IndMotors
 {
 	public:
+        /// @brief Create a generic mechanism wiht 2 independent motors 
+        /// @param [in] MechanismTypes::MECHANISM_TYPE the type of mechansim
+        /// @param [in] std::string the name of the file that will set control parameters for this mechanism
+        /// @param [in] std::string the name of the network table for logging information
+        /// @param [in] std::shared_ptr<IDragonMotorController> primary motor used by this mechanism
+        /// @param [in] std::shared_ptr<IDragonMotorController> secondary motor used by this mechanism
+         Mech2IndMotors
+        (
+            MechanismTypes::MECHANISM_TYPE              type,
+            std::string                                 controlFileName,
+            std::string                                 networkTableName,
+            std::shared_ptr<IDragonMotorController>     primaryMotor,
+            std::shared_ptr<IDragonMotorController>     secondaryMotor
+        );
+	    Mech2IndMotors() = delete;
+	    ~Mech2IndMotors() = default;
+
+        /// @brief          Indicates the type of mechanism this is
+        /// @return         MechanismTypes::MECHANISM_TYPE
+        MechanismTypes::MECHANISM_TYPE GetType() const override;
+
+        /// @brief indicate the file used to get the control parameters from
+        /// @return std::string the name of the file 
+        std::string GetControlFileName() const override;
+
+        /// @brief indicate the Network Table name used to setting tracking parameters
+        /// @return std::string the name of the network table 
+        std::string GetNetworkTableName() const override;
+
         /// @brief update the output to the mechanism using the current controller and target value(s)
         /// @return void 
         void Update() override;
@@ -68,17 +97,15 @@ class Mech2IndMotors : public IMech2IndMotors
             ControlData*                                pid                 
         ) override;
 
-        Mech2IndMotors
-        (
-            std::unique_ptr<IDragonMotorController>     primaryMotor,
-            std::unique_ptr<IDragonMotorController>     secondaryMotor
-        );
-	    Mech2IndMotors() = delete;
-	    ~Mech2IndMotors() = default;
 
     private: 
-        std::unique_ptr<Mech1IndMotor>         m_primary;
-        std::unique_ptr<Mech1IndMotor>         m_secondary;
+        MechanismTypes::MECHANISM_TYPE              m_type;
+        std::string                                 m_controlFile;
+        std::string                                 m_ntName;
+        std::shared_ptr<IDragonMotorController>     m_primary;
+        std::shared_ptr<IDragonMotorController>     m_secondary;
+        double                                      m_primaryTarget;
+        double                                      m_secondaryTarget;
         
 };
 
