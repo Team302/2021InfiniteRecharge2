@@ -16,7 +16,7 @@ var searchData=
   ['hook_5fdelivery_5fdown_553',['HOOK_DELIVERY_DOWN',['../class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15a939cd7935302dd42dbd410a79fc6e948',1,'TeleopControl']]],
   ['hook_5fdelivery_5fstate_554',['HOOK_DELIVERY_STATE',['../class_hook_delivery_state_mgr.html#a1db52ff9a2c43a81d323dd3ae9a88223',1,'HookDeliveryStateMgr']]],
   ['hook_5fdelivery_5fup_555',['HOOK_DELIVERY_UP',['../class_teleop_control.html#a7d4c2a365d8eaf21214611064c8a3a15a089cf78bd819785bfb0b94515b453047',1,'TeleopControl']]],
-  ['hookdelivery_556',['HookDelivery',['../class_hook_delivery.html',1,'HookDelivery'],['../class_hook_delivery.html#aee299a7f5b6787ed7ee1873bebe08bb8',1,'HookDelivery::HookDelivery()']]],
+  ['hookdelivery_556',['HookDelivery',['../class_hook_delivery.html',1,'HookDelivery'],['../class_hook_delivery.html#aee299a7f5b6787ed7ee1873bebe08bb8',1,'HookDelivery::HookDelivery(std::shared_ptr&lt; IDragonMotorController &gt; motorController)'],['../class_hook_delivery.html#a72bda529599790303e8e8d5cfa9555af',1,'HookDelivery::HookDelivery()=delete']]],
   ['hookdelivery_2ecpp_557',['HookDelivery.cpp',['../_hook_delivery_8cpp.html',1,'']]],
   ['hookdelivery_2eh_558',['HookDelivery.h',['../_hook_delivery_8h.html',1,'']]],
   ['hookdeliverymanualstate_559',['HookDeliveryManualState',['../class_hook_delivery_manual_state.html',1,'HookDeliveryManualState'],['../class_hook_delivery_manual_state.html#ac92499ba5d136f0400b4fe00be5c6341',1,'HookDeliveryManualState::HookDeliveryManualState()=delete'],['../class_hook_delivery_manual_state.html#a386e1a2f4249f60adb5c51ceb8b2ab64',1,'HookDeliveryManualState::HookDeliveryManualState(ControlData *control, double target, MechanismTargetData::SOLENOID solState)']]],

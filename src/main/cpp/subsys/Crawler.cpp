@@ -13,108 +13,28 @@
 /// OR OTHER DEALINGS IN THE SOFTWARE.
 //====================================================================================================================================================
 
-
-//C++ Includes
-#include <algorithm>
-#include <iostream>
+// C++ Includes
+#include <memory>
 #include <string>
 
-// Team 302 Includes
-#include <hw/interfaces/IDragonMotorController.h>
-#include <subsys/IMechanism.h>
+// FRC includes
+
+// Team 302 includes
 #include <subsys/Crawler.h>
-#include <controllers/ControlModes.h>
-#include <subsys/MechanismTypes.h>
-#include <utils/Logger.h>
+#include <hw/interfaces/IDragonMotorController.h>
+
+// Third Party Includes
 
 using namespace std;
 
 Crawler::Crawler
 (
-    std::shared_ptr<IDragonMotorController>      crawlerMotor
-) : m_crawlerMotor( crawlerMotor ),
-    m_target( 0.0 )
+    std::shared_ptr<IDragonMotorController>      motorController
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::CRAWLER, 
+                   string("crawler.xml"), 
+                   string("CrawlerNT"), 
+                   move(motorController) )
 {
-    if( m_crawlerMotor.get() == nullptr )
-    {
-        Logger::GetLogger()->LogError( string( "Crawler constructor" ), string( "motorMaster is nullptr" ) );
-    }
 }
 
-///@brief Gets the type of the mechanism type
-///@return MechanismTypes::MECHANISM_TYPE::CRAWLER
-MechanismTypes::MECHANISM_TYPE Crawler::GetType() const
-{
-    return MechanismTypes::MECHANISM_TYPE::CRAWLER;
-}
 
-///@brief Run the mechanism as defined
-///@param [in] ControlModes::CONTROL_TYPE controlType
-///@param [in] double value
-void Crawler::SetOutput
-(
-    ControlModes::CONTROL_TYPE controlType,
-    double  value
-)
-{
-    m_target = value;
-    if( m_crawlerMotor != nullptr)
-    {
-        m_crawlerMotor->SetControlMode( controlType );
-        m_crawlerMotor->Set( value );
-        m_target = value;
-    }
-    else
-    {
-        Logger::GetLogger()->LogError( string("Crawler::SetOutput"), string("No motorMaster") );
-    }
-}
-
-///@brief extends or retracts the solenoid
-///@param [in] bool activate: true = extend, false = retract
-///@return void
-void Crawler::ActivateSolenoid
-(
-    bool activate
-)
-{
-    //No Solenoid in Crawler; Nothing to do.
-    Logger::GetLogger()->LogError( string("Crawler::ActivateSolenoid"), string( "Called" ) );
-}
-
-///@brief checks to see if the solenoid is extended or retracted
-///@return false
-bool Crawler::IsSolenoidActivated()
-{
-    Logger::GetLogger()->LogError( string( "Crawler::IsSolenoidActivated" ), string( "Called" ) );
-    return false; //No Solenoid on Crawler
-}
-
-///@brief Retrieves the current position of the mechanism
-///@return double 0.0
-double Crawler::GetCurrentPosition() const
-{
-    Logger::GetLogger()->LogError( string( "Crawler::GetCurrentPosition" ), string( "Called" ) );
-    return 0.0; //no encoder
-}
-
-///@brief Retrieves the target position of the mechanism
-///@return double 0.0
-
-///@brief Retrieves the current speed of the mechanism.
-///@return double 0.0
-double Crawler::GetCurrentSpeed() const
-{
-    Logger::GetLogger()->LogError( string( "Crawler::GetCurrentSpeed" ), string( "Called" ) );
-    return 0.0; //no encoder
-}
-
-///@brief Sets the control constants (i.e PIDF values)
-///@return void
-void Crawler::SetControlConstants
-(
-    ControlData*    pid
-)
-{
-    Logger::GetLogger()->LogError( string( "Crawler::SetControlConstants" ), string("Called") ); 
-}

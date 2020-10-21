@@ -35,7 +35,7 @@
 
 ///	 @interface IMech1Solenoid
 ///  @brief	    Interface for subsystems
-class IMech1Solenoid : public IMech
+class IMech1Solenoid 
 {
 	public:
         /// @brief      Activate/deactivate pneumatic solenoid

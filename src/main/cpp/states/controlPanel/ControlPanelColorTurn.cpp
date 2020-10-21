@@ -179,12 +179,12 @@ void ControlPanelColorTurn::Run()
 //makes the motor turn the number of required degrees
 
 {
-    m_controlPanel -> SetOutput(m_control -> GetMode(), rotations);
+    m_controlPanel -> Update();
 }
 
 bool ControlPanelColorTurn::AtTarget() const                                 //confirms that it worked
 {
-    if (m_controlPanel -> GetCurrentPosition() >= (rotations - 5) &&  m_controlPanel -> GetCurrentPosition() <= (rotations + 5) )
+    if (m_controlPanel -> GetPosition() >= (rotations - 5) &&  m_controlPanel -> GetPosition() <= (rotations + 5) )
     { 
         return true;
     }

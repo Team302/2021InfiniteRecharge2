@@ -15,25 +15,17 @@
 //====================================================================================================================================================
 
 
-
-//========================================================================================================
-/// @interface IMechanism
-/// @brief     This is the interface for all subsystems
-//========================================================================================================
-
 // C++ Includes
-#include <vector>
+#include <memory>
+#include <string>
 
 // FRC includes
 
 // Team 302 includes
-#include <controllers/ControlModes.h>
-#include <subsys/MechanismTypes.h>
-#include <controllers/ControlData.h>
-#include <utils/Logger.h>
-#include <memory>
 #include <subsys/Impeller.h>
 #include <hw/interfaces/IDragonMotorController.h>
+#include <utils/ConversionUtils.h>
+#include <utils/Logger.h>
 
 // Third Party Includes
 #include <ctre/phoenix/sensors/CANCoder.h>
@@ -48,16 +40,17 @@ Impeller::Impeller
 (
     shared_ptr<IDragonMotorController> motor,
     shared_ptr<CANCoder> encoder
-) : m_motor (motor),
-    m_encoder( encoder),
-    m_lastTimeStamp( 0.0 ),
-    m_lastVelocity( 0.0 )
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::IMPELLER, 
+                   string("impeller.xml"), 
+                   string("ImpellerNT"), 
+                   move(motor) ),
+    m_encoder( move(encoder))
 {
-    if ( m_motor.get() != nullptr )
+    if ( motor.get() != nullptr )
     {
-        if ( m_encoder.get() != nullptr )
+        if ( encoder.get() != nullptr )
         {
-            m_motor.get()->SetRemoteSensor( encoder.get()->GetDeviceNumber(), RemoteSensorSource::RemoteSensorSource_CANCoder );
+            motor.get()->SetRemoteSensor( encoder.get()->GetDeviceNumber(), RemoteSensorSource::RemoteSensorSource_CANCoder );
         }
         else
         {
@@ -71,91 +64,18 @@ Impeller::Impeller
 
 }
 
-
-
-
-/// @brief          Indicates the type of mechanism this is
-/// @return         MechanismTypes::MECHANISM_TYPE
-MechanismTypes::MECHANISM_TYPE Impeller::GetType() const
-{
-    return MechanismTypes::MECHANISM_TYPE::IMPELLER;
-}
-
-
-/// @brief      Run mechanism as defined 
-/// @param [in] ControlModes::CONTROL_TYPE   controlType:  How are the item(s) being controlled
-/// @param [in] double                                     value:        Target (units are based on the controlType)
-/// @return     void
-void Impeller::SetOutput
-(
-    ControlModes::CONTROL_TYPE controlType,
-    double value       
-)
-{
-    m_motor.get()->SetControlMode(controlType);
-    m_motor.get()->Set(value);
-    m_target = value;
-}
-
-/// @brief      Activate/deactivate pneumatic solenoid
-/// @param [in] bool - true == extend, false == retract
-/// @return     void 
-void Impeller::ActivateSolenoid 
-(
-    bool     activate
-)
-{
-
-}
-
-/// @brief      Check if the pneumatic solenoid is activated
-/// @return     bool - true == extended, false == retract
-bool Impeller::IsSolenoidActivated()
-{
-    return true;
-}
-
-
 /// @brief  Return the current position of the mechanism.  The value is in inches or degrees.
 /// @return double	position in inches (translating mechanisms) or degrees (rotating mechanisms)
-double Impeller::GetCurrentPosition() const
+double Impeller::GetPosition() const
 {
     return m_encoder.get() != nullptr ? m_encoder.get()->GetAbsolutePosition() : 0.0;
 }
 
 
-/// @brief  Get the current speed of the mechanism.  The value is in inches per second or degrees per second.
-/// @return double	speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms)
-double Impeller::GetCurrentSpeed() const
+/// @brief  Get the current speed of the mechanism.  The value is in degrees per second.
+/// @return double	speed in degrees/second (rotating mechanisms)
+double Impeller::GetSpeed() const
 {
-    double speed = 0.0;
-    if ( m_motor.get() != nullptr && m_motor.get()->GetCurrent() > 10.0 )
-    {
-        speed = 0.0;
-    }
-    else if ( m_encoder.get() != nullptr )
-    {
-        auto vel = m_encoder.get()->GetVelocity();
-        auto time = m_encoder.get()->GetLastTimestamp();
-        if ( time > m_lastTimeStamp )
-        {
-            speed = vel*10.0;
-            m_lastTimeStamp = time;
-            m_lastVelocity = speed;
-        }
-    }
-    return speed;
+    return m_encoder.get() != nullptr ? m_encoder.get()->GetVelocity()*10.0 : 0.0;
 }
 
-
-
-/// @brief  Set the control constants (e.g. PIDF values).
-/// @param [in] ControlData*                                   pid:  the control constants
-/// @return void
-void Impeller::SetControlConstants
-(
-    ControlData*                                pid                 
-)
-{
-    m_motor.get()->SetControlConstants( pid );
-}

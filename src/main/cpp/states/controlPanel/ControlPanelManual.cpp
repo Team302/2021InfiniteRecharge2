@@ -55,8 +55,8 @@ void ControlPanelManual::Run()
 {
 
 auto manipulator = m_controller->GetAxisValue( TeleopControl::FUNCTION_IDENTIFIER::CONTROL_PANEL_MANUAL );
-
-m_control.get()->SetOutput( ControlModes::PERCENT_OUTPUT, manipulator );
+m_control->UpdateTarget(manipulator);
+m_control.get()->Update();
 
 }
 

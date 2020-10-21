@@ -13,34 +13,32 @@ Inheritance diagram for Mech1\+Servo\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_mech1_servo_aaa38cb6df7d5cb9fb880d6436d077f75}{Set\+Angle}} (double angle) override
-\begin{DoxyCompactList}\small\item\em Move servo to the desired angle. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_mech1_servo_a09758a33be2f1b16dc68cc1398c3a4df}{Mech1\+Servo}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_servo}{Dragon\+Servo}} $>$ servo)
-\item 
+\mbox{\hyperlink{class_mech1_servo_a8ca175b8cfcf3eaf0321efda95e19e1f}{Mech1\+Servo}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_servo}{Dragon\+Servo}} $>$ servo)
+\begin{DoxyCompactList}\small\item\em Create a generic mechanism wiht 1 servo. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_mech1_servo_a15d2a06929e1c13b9aeb1c62ed12570c}{Mech1\+Servo}} ()=delete
 \item 
 virtual \mbox{\hyperlink{class_mech1_servo_ac0905eafacb33dd34105225038071a3c}{$\sim$\+Mech1\+Servo}} ()=default
-\end{DoxyCompactItemize}
-
-
-\doxysubsection{Detailed Description}
-
-
-Definition at line 34 of file Mech1\+Servo.\+h.
-
+\item 
+void \mbox{\hyperlink{class_mech1_servo_aaa38cb6df7d5cb9fb880d6436d077f75}{Set\+Angle}} (double angle) override
+\begin{DoxyCompactList}\small\item\em Move servo to the desired angle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_mech1_servo_a09758a33be2f1b16dc68cc1398c3a4df}\label{class_mech1_servo_a09758a33be2f1b16dc68cc1398c3a4df}} 
+\mbox{\Hypertarget{class_mech1_servo_a8ca175b8cfcf3eaf0321efda95e19e1f}\label{class_mech1_servo_a8ca175b8cfcf3eaf0321efda95e19e1f}} 
 \index{Mech1Servo@{Mech1Servo}!Mech1Servo@{Mech1Servo}}
 \index{Mech1Servo@{Mech1Servo}!Mech1Servo@{Mech1Servo}}
 \doxysubsubsection{\texorpdfstring{Mech1Servo()}{Mech1Servo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Mech1\+Servo\+::\+Mech1\+Servo (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_servo}{Dragon\+Servo}} $>$}]{servo }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Mech1\+Servo\+::\+Mech1\+Servo (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_servo}{Dragon\+Servo}} $>$}]{servo }\end{DoxyParamCaption})}
 
 
 
-Definition at line 35 of file Mech1\+Servo.\+cpp.
+Create a generic mechanism wiht 1 servo. 
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em std\+::shared\+\_\+ptr$<$\+Dragon\+Servo$>$} & servo used by this mechanism \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_mech1_servo_a15d2a06929e1c13b9aeb1c62ed12570c}\label{class_mech1_servo_a15d2a06929e1c13b9aeb1c62ed12570c}} 
 \index{Mech1Servo@{Mech1Servo}!Mech1Servo@{Mech1Servo}}
 \index{Mech1Servo@{Mech1Servo}!Mech1Servo@{Mech1Servo}}
@@ -80,11 +78,7 @@ Implements \mbox{\hyperlink{class_i_mech1_servo_a44ff0d0c6d10b00c3902f2ca7524497
 
 
 
-Definition at line 51 of file Mech1\+Servo.\+cpp.
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_servo_8h}{Mech1\+Servo.\+h}}\item 
-C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_servo_8cpp}{Mech1\+Servo.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_servo_8h}{Mech1\+Servo.\+h}}\item 
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_servo_8cpp}{Mech1\+Servo.\+cpp}}\end{DoxyCompactItemize}

@@ -40,123 +40,20 @@ ControlPanel::ControlPanel
     std::shared_ptr<IDragonMotorController>     motorController,
     std::shared_ptr<DragonSolenoid>             solenoid,
     ColorSensorV3*                              colorSensor
-) : IMechanism(), 
-    m_spinner ( motorController ),
-    m_manipulatorExtender (solenoid),
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR, 
+                   string("controlpanel.xml"), 
+                   string("ControlPanelNT"), 
+                   move(motorController) ),
+    Mech1Solenoid(solenoid),
     m_color( colorSensor ),
     m_colorMatcher( new ColorMatch())
 {
-    if (m_spinner.get() == nullptr )
-    {
-        Logger::GetLogger()->LogError( string( "Intake constructor" ), string( "motorController is nullptr" ) );
-    }
-
-    if (m_manipulatorExtender.get() == nullptr )
-    {
-        Logger::GetLogger()->LogError( string( "Intake constructor" ), string( "solenoid is nullptr" ) );
-    }
     m_colorMatcher->AddColorMatch(kBlueTarget);
     m_colorMatcher->AddColorMatch(kGreenTarget);
     m_colorMatcher->AddColorMatch(kRedTarget);
     m_colorMatcher->AddColorMatch(kYellowTarget);
 }
 
-//ControlPanel::~ControlPanel)()
-//{
-//    delete m_spinner;
-//    delete m_manipulatorExtender;
-//}
-MechanismTypes::MECHANISM_TYPE ControlPanel::GetType() const 
-{
-    return MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR;
-}
-
-void ControlPanel::SetOutput
-(
-    ControlModes::CONTROL_TYPE controlType,
-    double                     value       
-)
-{
-    if ( m_spinner.get() != nullptr )
-    {
-        m_spinner.get()->SetControlMode(controlType);
-        m_spinner.get()->Set( value );
-    }
-    else 
-    {
-        Logger::GetLogger()->LogError( string("ControlPanel::SetOutput"), string("No spiner") );
-    }
-}
-
-void ControlPanel::ActivateSolenoid
-(
-    bool activate
-)
-{
-    if ( m_manipulatorExtender.get() != nullptr )
-    {
-        m_manipulatorExtender.get()->Set( activate );
-    }
-    else
-    {
-        Logger::GetLogger()->LogError( string("ControlPanel::ActivateSolenoid"), string("No manipulatorExtender") );
-    }
-    
-}
-
-bool ControlPanel::IsSolenoidActivated
-(
-
-)
-{
-    bool on = false;
-
-    if ( m_manipulatorExtender.get() != nullptr )
-    {
-       on = m_manipulatorExtender.get() -> Get();
-    }
-    else
-    {
-        Logger::GetLogger()->LogError(string("ControlPanel::IsSolenoid"), string("manipulatorExtender"));
-    }
-    
-    return on;
-    
-}
-
-double ControlPanel::GetCurrentPosition 
-(
-
-)const
-{
-    Logger::GetLogger()->LogError(string("ControlPanel::GetCurrentPosition"),string( "Called"));
-    return 0.0;     //subj. to change
-
-}
-
-
-
-double ControlPanel::GetCurrentSpeed
-(
-
-)const
-{
-    Logger::GetLogger()->LogError(string("ControlPanel::GetCurrentSpeed"),string( "Called"));
-    return 0.0;     //subj. to change
-}
-
-
-
-/// @brief  Set the control constants (e.g. PIDF values).
-/// @param [in] ControlData*                                   pid:  the control constants
-/// @return void
-void ControlPanel::SetControlConstants
-(
-    ControlData*                                pid                 
-)
-{
-    m_spinner.get()->SetControlConstants( pid );
-}
 
 ControlPanelColors::COLOR ControlPanel::GetColorSeen()
 {

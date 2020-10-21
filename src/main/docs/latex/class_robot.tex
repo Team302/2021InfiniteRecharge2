@@ -47,10 +47,6 @@ File Description\+: Top-\/level robot code that controls the various states of t
 
 Top-\/level robot code that controls the various states of the robot. It is our specific implementation of the frc\+::\+Timed\+Robot. 
 
-Definition at line 66 of file Robot.\+h.
-
-
-
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_robot_a136b20cc34a9cda8da9ef2c85646f747}\label{class_robot_a136b20cc34a9cda8da9ef2c85646f747}} 
 \index{Robot@{Robot}!Robot@{Robot}}
@@ -80,10 +76,6 @@ This initializes the autonomous state.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-
-
-Definition at line 114 of file Robot.\+cpp.
-
 \mbox{\Hypertarget{class_robot_ac11143dd674e0e02fef5329e2df24830}\label{class_robot_ac11143dd674e0e02fef5329e2df24830}} 
 \index{Robot@{Robot}!AutonomousPeriodic@{AutonomousPeriodic}}
 \index{AutonomousPeriodic@{AutonomousPeriodic}!Robot@{Robot}}
@@ -97,10 +89,6 @@ Runs every 20 milliseconds when the autonomous state is active.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-
-
-Definition at line 122 of file Robot.\+cpp.
-
 \mbox{\Hypertarget{class_robot_a66f23dae271748d525cf3ab046375f79}\label{class_robot_a66f23dae271748d525cf3ab046375f79}} 
 \index{Robot@{Robot}!RobotInit@{RobotInit}}
 \index{RobotInit@{RobotInit}!Robot@{Robot}}
@@ -114,10 +102,6 @@ The main robot code. The Init methods get called when that state gets entered an
 When the robot gets created this gets called. It initializes the robot subsystems (hardware). \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-
-
-Definition at line 64 of file Robot.\+cpp.
-
 \mbox{\Hypertarget{class_robot_a8fad82c2250bcfb83b743b5c0dd6ed27}\label{class_robot_a8fad82c2250bcfb83b743b5c0dd6ed27}} 
 \index{Robot@{Robot}!RobotPeriodic@{RobotPeriodic}}
 \index{RobotPeriodic@{RobotPeriodic}!Robot@{Robot}}
@@ -131,10 +115,6 @@ This function is called every robot packet, no matter the mode. This is used for
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-
-
-Definition at line 106 of file Robot.\+cpp.
-
 \mbox{\Hypertarget{class_robot_aa3e246794bfbbb4406fc87f351762038}\label{class_robot_aa3e246794bfbbb4406fc87f351762038}} 
 \index{Robot@{Robot}!TeleopInit@{TeleopInit}}
 \index{TeleopInit@{TeleopInit}!Robot@{Robot}}
@@ -148,10 +128,6 @@ This initializes the teleoperated state.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-
-
-Definition at line 131 of file Robot.\+cpp.
-
 \mbox{\Hypertarget{class_robot_a324322627c63b3870daf7c7ddc5bea63}\label{class_robot_a324322627c63b3870daf7c7ddc5bea63}} 
 \index{Robot@{Robot}!TeleopPeriodic@{TeleopPeriodic}}
 \index{TeleopPeriodic@{TeleopPeriodic}!Robot@{Robot}}
@@ -165,10 +141,6 @@ Runs every 20 milliseconds when the teleoperated state is active.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-
-
-Definition at line 144 of file Robot.\+cpp.
-
 \mbox{\Hypertarget{class_robot_a9ac222d45d30a6d0c572fd36d18c6ccc}\label{class_robot_a9ac222d45d30a6d0c572fd36d18c6ccc}} 
 \index{Robot@{Robot}!TestInit@{TestInit}}
 \index{TestInit@{TestInit}!Robot@{Robot}}
@@ -182,11 +154,7 @@ This initializes the test state.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-else if ( m\+\_\+test\+Selected == m\+\_\+shooter\+Test ) \{ m\+\_\+current\+Test = S\+H\+O\+O\+T\+ER; m\+\_\+shooter\+State\+Mgr\+Test = new \mbox{\hyperlink{class_shooter_state_mgr_test}{Shooter\+State\+Mgr\+Test()}}; \}
-
-Definition at line 158 of file Robot.\+cpp.
-
-\mbox{\Hypertarget{class_robot_af0ac44a962e609e9b042285e699d1db8}\label{class_robot_af0ac44a962e609e9b042285e699d1db8}} 
+else if ( m\+\_\+test\+Selected == m\+\_\+shooter\+Test ) \{ m\+\_\+current\+Test = S\+H\+O\+O\+T\+ER; m\+\_\+shooter\+State\+Mgr\+Test = new \mbox{\hyperlink{class_shooter_state_mgr_test}{Shooter\+State\+Mgr\+Test()}}; \}\mbox{\Hypertarget{class_robot_af0ac44a962e609e9b042285e699d1db8}\label{class_robot_af0ac44a962e609e9b042285e699d1db8}} 
 \index{Robot@{Robot}!TestPeriodic@{TestPeriodic}}
 \index{TestPeriodic@{TestPeriodic}!Robot@{Robot}}
 \doxysubsubsection{\texorpdfstring{TestPeriodic()}{TestPeriodic()}}
@@ -201,11 +169,7 @@ void
 \end{DoxyReturn}
 case S\+H\+O\+O\+T\+ER\+: if ( !m\+\_\+shooter\+State\+Mgr\+Test-\/$>$Is\+Done() ) \{ m\+\_\+shooter\+State\+Mgr\+Test-\/$>$Periodic(); \} break;
 
-Definition at line 202 of file Robot.\+cpp.
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/robotcm/training2020/src/main/cpp/\mbox{\hyperlink{_robot_8h}{Robot.\+h}}\item 
-C\+:/robotcm/training2020/src/main/cpp/\mbox{\hyperlink{_robot_8cpp}{Robot.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/\mbox{\hyperlink{_robot_8h}{Robot.\+h}}\item 
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/\mbox{\hyperlink{_robot_8cpp}{Robot.\+cpp}}\end{DoxyCompactItemize}

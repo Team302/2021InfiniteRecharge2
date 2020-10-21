@@ -34,7 +34,7 @@
 
 ///	 @interface IMech1Servo
 ///  @brief	    Interface for subsystems
-class IMech1Servo : public IMech
+class IMech1Servo 
 {
 	public:
         /// @brief      Move servo to the desired angle

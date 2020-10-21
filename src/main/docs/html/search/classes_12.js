@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xboxdisplay_1480',['XboxDisplay',['../class_xbox_display.html',1,'']]]
+  ['xboxdisplay_1494',['XboxDisplay',['../class_xbox_display.html',1,'']]]
 ];

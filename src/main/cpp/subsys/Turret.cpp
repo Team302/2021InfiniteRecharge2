@@ -1,5 +1,5 @@
 //====================================================================================================================================================
-// Copyright 2020 Lake Orion Robotics FIRST Team 302
+// Copyright 2020 Lake Orion Robotics FIRST Team 302 
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
 // to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
@@ -16,23 +16,26 @@
 // C++ Includes
 #include <memory>
 #include <string>
-
 // FRC includes
 
 // Team 302 includes
+#include <subsys/Mech1IndMotor.h>
 #include <subsys/Turret.h>
-#include <hw/interfaces/IDragonMotorController.h>
+#include <subsys/MechanismTypes.h>
 
 // Third Party Includes
 
+
 using namespace std;
 
+/// @brief Create the BallTransfer mechanism
+/// @param [in] IDragonMotorController* the motor controller that will run the ball transfer
 Turret::Turret
 (
-    shared_ptr<IDragonMotorController>     motorController
+    shared_ptr<IDragonMotorController>   motorController
 ) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::TURRET, 
-                   string("turret.xml"), 
-                   string("Turret"), 
-                   move(motorController) )
+                    string("turret.xml"), 
+                    string("turretNT"), 
+                    motorController )
 {
 }

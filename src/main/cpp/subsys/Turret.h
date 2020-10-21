@@ -12,12 +12,10 @@
 // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 // OR OTHER DEALINGS IN THE SOFTWARE.
 //====================================================================================================================================================
-
-#pragma once 
+#pragma once
 
 // C++ Includes
 #include <memory>
-
 // FRC includes
 
 // Team 302 includes
@@ -29,12 +27,17 @@ class IDragonMotorController;
 
 class Turret : public Mech1IndMotor
 {
-    public:
+	public:
+        /// @brief Create the Turret mechanism
+        Turret() = delete;
+
+        /// @brief Create the Turret mechanism
+        /// @param [in] IDragonMotorController* the motor controller that will run the turret
         Turret
         (
             std::shared_ptr<IDragonMotorController>   motorController
         );
 
+        /// @brief Destroy the object and free memory
         ~Turret() override = default;
-        Turret() = delete;
 };

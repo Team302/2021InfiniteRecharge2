@@ -32,15 +32,9 @@
 using namespace std;
 
 /// @brief Create a generic mechanism wiht 1 servo 
-/// @param [in] MechanismTypes::MECHANISM_TYPE the type of mechansim
-/// @param [in] std::string the name of the file that will set control parameters for this mechanism
-/// @param [in] std::string the name of the network table for logging information
 /// @param [in] std::shared_ptr<DragonServo> servo used by this mechanism
 Mech1Servo::Mech1Servo
 (
-    MechanismTypes::MECHANISM_TYPE              type,
-    std::string                                 controlFileName,
-    std::string                                 networkTableName,
     std::shared_ptr<DragonServo>                servo
 ) : IMech1Servo(),
     m_servo(std::move(servo)) 
@@ -50,29 +44,6 @@ Mech1Servo::Mech1Servo
         Logger::GetLogger()->LogError( string( "Mech1Servo constructor" ), string( "servo is nullptr" ) );
     }
 }
-
-/// @brief          Indicates the type of mechanism this is
-/// @return         MechanismTypes::MECHANISM_TYPE
-MechanismTypes::MECHANISM_TYPE Mech1Servo::GetType() const 
-{
-    return m_type;
-}
-
-/// @brief indicate the file used to get the control parameters from
-/// @return std::string the name of the file 
-std::string Mech1Servo::GetControlFileName() const 
-{
-    return m_controlFile;
-}
-
-
-/// @brief indicate the network table name used to for logging parameters
-/// @return std::string the name of the network table 
-std::string Mech1Servo::GetNetworkTableName() const 
-{
-    return m_ntName;
-}
-
 
 /// @brief      Move servo to the desired angle
 /// @param [in] double angle: Target angle in degrees

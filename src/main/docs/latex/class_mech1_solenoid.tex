@@ -7,14 +7,14 @@
 Inheritance diagram for Mech1\+Solenoid\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_mech1_solenoid}
+\includegraphics[height=3.000000cm]{class_mech1_solenoid}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_mech1_solenoid_a1c6a5eedf2a02aba882588f5c532b5b0}{Mech1\+Solenoid}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_solenoid}{Dragon\+Solenoid}} $>$ solenoid)
-\item 
+\mbox{\hyperlink{class_mech1_solenoid_a9d984d9d4b097221387c414c442af744}{Mech1\+Solenoid}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_solenoid}{Dragon\+Solenoid}} $>$ solenoid)
+\begin{DoxyCompactList}\small\item\em Create a generic mechanism wiht 1 solenoid. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_mech1_solenoid_a5b2bc8ec09feaa5a36ddea1a1fb4a6cc}{Mech1\+Solenoid}} ()=delete
 \item 
 virtual \mbox{\hyperlink{class_mech1_solenoid_a058ca461f490052397ebb42149033302}{$\sim$\+Mech1\+Solenoid}} ()=default
@@ -25,24 +25,30 @@ bool \mbox{\hyperlink{class_mech1_solenoid_ab50959e3e879323fa1928c839842cdc7}{Is
 \begin{DoxyCompactList}\small\item\em Check if the pneumatic solenoid is activated. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-
-
-Definition at line 30 of file Mech1\+Solenoid.\+h.
-
-
-
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_mech1_solenoid_a1c6a5eedf2a02aba882588f5c532b5b0}\label{class_mech1_solenoid_a1c6a5eedf2a02aba882588f5c532b5b0}} 
+\mbox{\Hypertarget{class_mech1_solenoid_a9d984d9d4b097221387c414c442af744}\label{class_mech1_solenoid_a9d984d9d4b097221387c414c442af744}} 
 \index{Mech1Solenoid@{Mech1Solenoid}!Mech1Solenoid@{Mech1Solenoid}}
 \index{Mech1Solenoid@{Mech1Solenoid}!Mech1Solenoid@{Mech1Solenoid}}
 \doxysubsubsection{\texorpdfstring{Mech1Solenoid()}{Mech1Solenoid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Mech1\+Solenoid\+::\+Mech1\+Solenoid (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_solenoid}{Dragon\+Solenoid}} $>$}]{solenoid }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Mech1\+Solenoid\+::\+Mech1\+Solenoid (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_dragon_solenoid}{Dragon\+Solenoid}} $>$}]{solenoid }\end{DoxyParamCaption})}
 
 
 
-Definition at line 34 of file Mech1\+Solenoid.\+cpp.
+Create a generic mechanism wiht 1 solenoid. 
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em std\+::shared\+\_\+ptr$<$\+Dragon\+Solenoid$>$} & solenoid used by this mechanism\\
+\hline
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}}} & the type of mechansim \\
+\hline
+\mbox{\texttt{ in}}  & {\em std\+::string} & the name of the file that will set control parameters for this mechanism \\
+\hline
+\mbox{\texttt{ in}}  & {\em std\+::string} & the name of the network table for logging information \\
+\hline
+\mbox{\texttt{ in}}  & {\em std\+::shared\+\_\+ptr$<$\+Dragon\+Solenoid$>$} & solenoid used by this mechanism \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_mech1_solenoid_a5b2bc8ec09feaa5a36ddea1a1fb4a6cc}\label{class_mech1_solenoid_a5b2bc8ec09feaa5a36ddea1a1fb4a6cc}} 
 \index{Mech1Solenoid@{Mech1Solenoid}!Mech1Solenoid@{Mech1Solenoid}}
 \index{Mech1Solenoid@{Mech1Solenoid}!Mech1Solenoid@{Mech1Solenoid}}
@@ -81,10 +87,6 @@ void ~\newline
 
 Implements \mbox{\hyperlink{class_i_mech1_solenoid_a08e5dbbc73217c05e1aaa1797d23c0c2}{I\+Mech1\+Solenoid}}.
 
-
-
-Definition at line 51 of file Mech1\+Solenoid.\+cpp.
-
 \mbox{\Hypertarget{class_mech1_solenoid_ab50959e3e879323fa1928c839842cdc7}\label{class_mech1_solenoid_ab50959e3e879323fa1928c839842cdc7}} 
 \index{Mech1Solenoid@{Mech1Solenoid}!IsSolenoidActivated@{IsSolenoidActivated}}
 \index{IsSolenoidActivated@{IsSolenoidActivated}!Mech1Solenoid@{Mech1Solenoid}}
@@ -104,11 +106,7 @@ Implements \mbox{\hyperlink{class_i_mech1_solenoid_a2c9e18c4dfebef5b253bb84d6556
 
 
 
-Definition at line 64 of file Mech1\+Solenoid.\+cpp.
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_solenoid_8h}{Mech1\+Solenoid.\+h}}\item 
-C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_solenoid_8cpp}{Mech1\+Solenoid.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_solenoid_8h}{Mech1\+Solenoid.\+h}}\item 
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_solenoid_8cpp}{Mech1\+Solenoid.\+cpp}}\end{DoxyCompactItemize}

@@ -11,7 +11,7 @@ var searchData=
   ['ballmanipulator_57',['BallManipulator',['../class_ball_manipulator.html',1,'']]],
   ['ballmanipulator_2ecpp_58',['BallManipulator.cpp',['../_ball_manipulator_8cpp.html',1,'']]],
   ['ballmanipulator_2eh_59',['BallManipulator.h',['../_ball_manipulator_8h.html',1,'']]],
-  ['balltransfer_60',['BallTransfer',['../class_ball_transfer.html',1,'BallTransfer'],['../class_ball_transfer.html#a9ec97e88767744887b31728d871c9af3',1,'BallTransfer::BallTransfer()']]],
+  ['balltransfer_60',['BallTransfer',['../class_ball_transfer.html',1,'BallTransfer'],['../class_ball_transfer.html#a9ec97e88767744887b31728d871c9af3',1,'BallTransfer::BallTransfer(std::shared_ptr&lt; IDragonMotorController &gt; motorController)'],['../class_ball_transfer.html#ac58f394d7c8b5911ab0062fec94b073f',1,'BallTransfer::BallTransfer()=delete']]],
   ['balltransfer_2ecpp_61',['BallTransfer.cpp',['../_ball_transfer_8cpp.html',1,'']]],
   ['balltransfer_2eh_62',['BallTransfer.h',['../_ball_transfer_8h.html',1,'']]],
   ['balltransferoff_63',['BallTransferOff',['../class_ball_transfer_off.html',1,'BallTransferOff'],['../class_ball_transfer_off.html#a45f0cbee381443a4802b06fbcc17d94d',1,'BallTransferOff::BallTransferOff()=delete'],['../class_ball_transfer_off.html#accd4408f59fb7b05274f57e723af02c6',1,'BallTransferOff::BallTransferOff(ControlData *control, double target, MechanismTargetData::SOLENOID solState)']]],

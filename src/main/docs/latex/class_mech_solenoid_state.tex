@@ -1,0 +1,103 @@
+\hypertarget{class_mech_solenoid_state}{}\doxysection{Mech\+Solenoid\+State Class Reference}
+\label{class_mech_solenoid_state}\index{MechSolenoidState@{MechSolenoidState}}
+
+
+information about the control (open loop, closed loop position, closed loop velocity, etc.) for a mechanism state  
+
+
+
+
+{\ttfamily \#include $<$Mech\+Solenoid\+State.\+h$>$}
+
+Inheritance diagram for Mech\+Solenoid\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mech_solenoid_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mech_solenoid_state_a7c672d028916995ad38b2cc4021d7d0c}{Mech\+Solenoid\+State}} (\mbox{\hyperlink{class_i_mech1_solenoid}{I\+Mech1\+Solenoid}} $\ast$mechanism, \mbox{\hyperlink{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125}{Mechanism\+Target\+Data\+::\+S\+O\+L\+E\+N\+O\+ID}} sol\+State)
+\item 
+\mbox{\hyperlink{class_mech_solenoid_state_a157703c79ae0051419109a647400e0fe}{Mech\+Solenoid\+State}} ()=delete
+\item 
+\mbox{\hyperlink{class_mech_solenoid_state_ab8ad57c55b5b94e9bcc490feecbbfc16}{$\sim$\+Mech\+Solenoid\+State}} ()=default
+\item 
+void \mbox{\hyperlink{class_mech_solenoid_state_ac455a7af2d5d34d8e88b9d3e6a1d1c0e}{Init}} () override
+\item 
+void \mbox{\hyperlink{class_mech_solenoid_state_a6aa00bc58694260f1a2be9f867473669}{Run}} () override
+\item 
+bool \mbox{\hyperlink{class_mech_solenoid_state_a2d37cf609a2c8c200b100aa27769a4e1}{At\+Target}} () const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+information about the control (open loop, closed loop position, closed loop velocity, etc.) for a mechanism state 
+
+Copyright 2020 Lake Orion Robotics F\+I\+R\+ST Team 302
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mech_solenoid_state_a7c672d028916995ad38b2cc4021d7d0c}\label{class_mech_solenoid_state_a7c672d028916995ad38b2cc4021d7d0c}} 
+\index{MechSolenoidState@{MechSolenoidState}!MechSolenoidState@{MechSolenoidState}}
+\index{MechSolenoidState@{MechSolenoidState}!MechSolenoidState@{MechSolenoidState}}
+\doxysubsubsection{\texorpdfstring{MechSolenoidState()}{MechSolenoidState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Mech\+Solenoid\+State\+::\+Mech\+Solenoid\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_mech1_solenoid}{I\+Mech1\+Solenoid}} $\ast$}]{mechanism,  }\item[{\mbox{\hyperlink{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125}{Mechanism\+Target\+Data\+::\+S\+O\+L\+E\+N\+O\+ID}}}]{sol\+State }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mech_solenoid_state_a157703c79ae0051419109a647400e0fe}\label{class_mech_solenoid_state_a157703c79ae0051419109a647400e0fe}} 
+\index{MechSolenoidState@{MechSolenoidState}!MechSolenoidState@{MechSolenoidState}}
+\index{MechSolenoidState@{MechSolenoidState}!MechSolenoidState@{MechSolenoidState}}
+\doxysubsubsection{\texorpdfstring{MechSolenoidState()}{MechSolenoidState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Mech\+Solenoid\+State\+::\+Mech\+Solenoid\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_mech_solenoid_state_ab8ad57c55b5b94e9bcc490feecbbfc16}\label{class_mech_solenoid_state_ab8ad57c55b5b94e9bcc490feecbbfc16}} 
+\index{MechSolenoidState@{MechSolenoidState}!````~MechSolenoidState@{$\sim$MechSolenoidState}}
+\index{````~MechSolenoidState@{$\sim$MechSolenoidState}!MechSolenoidState@{MechSolenoidState}}
+\doxysubsubsection{\texorpdfstring{$\sim$MechSolenoidState()}{~MechSolenoidState()}}
+{\footnotesize\ttfamily Mech\+Solenoid\+State\+::$\sim$\+Mech\+Solenoid\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mech_solenoid_state_a2d37cf609a2c8c200b100aa27769a4e1}\label{class_mech_solenoid_state_a2d37cf609a2c8c200b100aa27769a4e1}} 
+\index{MechSolenoidState@{MechSolenoidState}!AtTarget@{AtTarget}}
+\index{AtTarget@{AtTarget}!MechSolenoidState@{MechSolenoidState}}
+\doxysubsubsection{\texorpdfstring{AtTarget()}{AtTarget()}}
+{\footnotesize\ttfamily bool Mech\+Solenoid\+State\+::\+At\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_state_a15624686c47f28cf90f76bb28e938937}{I\+State}}.
+
+\mbox{\Hypertarget{class_mech_solenoid_state_ac455a7af2d5d34d8e88b9d3e6a1d1c0e}\label{class_mech_solenoid_state_ac455a7af2d5d34d8e88b9d3e6a1d1c0e}} 
+\index{MechSolenoidState@{MechSolenoidState}!Init@{Init}}
+\index{Init@{Init}!MechSolenoidState@{MechSolenoidState}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Mech\+Solenoid\+State\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_state_ac1400e68fde2f088873f5ec283309977}{I\+State}}.
+
+\mbox{\Hypertarget{class_mech_solenoid_state_a6aa00bc58694260f1a2be9f867473669}\label{class_mech_solenoid_state_a6aa00bc58694260f1a2be9f867473669}} 
+\index{MechSolenoidState@{MechSolenoidState}!Run@{Run}}
+\index{Run@{Run}!MechSolenoidState@{MechSolenoidState}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Mech\+Solenoid\+State\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_state_a1dc31736da7d9e9322c1cc417672ea0f}{I\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/states/\mbox{\hyperlink{_mech_solenoid_state_8h}{Mech\+Solenoid\+State.\+h}}\item 
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/states/\mbox{\hyperlink{_mech_solenoid_state_8cpp}{Mech\+Solenoid\+State.\+cpp}}\end{DoxyCompactItemize}

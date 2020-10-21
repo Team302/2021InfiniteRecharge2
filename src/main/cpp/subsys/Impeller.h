@@ -14,81 +14,24 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 //====================================================================================================================================================
 
-#pragma once
-
-//========================================================================================================
-/// @interface IMechanism
-/// @brief     This is the interface for all subsystems
-//========================================================================================================
+#pragma once 
 
 // C++ Includes
-#include <vector>
+#include <memory>
 
 // FRC includes
 
 // Team 302 includes
-#include <controllers/ControlModes.h>
-#include <subsys/MechanismTypes.h>
-#include <controllers/ControlData.h>
-#include <subsys/IMechanism.h>
-#include <hw/DragonTalon.h>
-#include <hw/interfaces/IDragonMotorController.h>
+#include <subsys/Mech1IndMotor.h>
+
 // Third Party Includes
 #include <ctre/phoenix/sensors/CANCoder.h>
 
-using namespace std;
+class IDragonMotorController;
 
-///	 @interface IMechanism
-///  @brief	    Interface for subsystems
-class Impeller : public IMechanism
+class Impeller : public Mech1IndMotor
 {
 	public:
-
-        /// @brief          Indicates the type of mechanism this is
-        /// @return         MechanismTypes::MECHANISM_TYPE
-        MechanismTypes::MECHANISM_TYPE GetType() const override;
-
-
-        /// @brief      Run mechanism as defined 
-        /// @param [in] ControlModes::CONTROL_TYPE   controlType:  How are the item(s) being controlled
-        /// @param [in] double                                     value:        Target (units are based on the controlType)
-        /// @return     void
-        void SetOutput
-        (
-            ControlModes::CONTROL_TYPE controlType,
-            double                                   value       
-        ) override;
-
-        /// @brief      Activate/deactivate pneumatic solenoid
-        /// @param [in] bool - true == extend, false == retract
-        /// @return     void 
-        void ActivateSolenoid
-        (
-            bool     activate
-        ) override;
-
-        /// @brief      Check if the pneumatic solenoid is activated
-        /// @return     bool - true == extended, false == retract
-        bool IsSolenoidActivated() override;
-
-
-        /// @brief  Return the current position of the mechanism.  The value is in inches or degrees.
-        /// @return double	position in inches (translating mechanisms) or degrees (rotating mechanisms)
-        double GetCurrentPosition() const override;
-
-        /// @brief  Get the current speed of the mechanism.  The value is in inches per second or degrees per second.
-        /// @return double	speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms)
-        double GetCurrentSpeed() const override;
-
-
-        /// @brief  Set the control constants (e.g. PIDF values).
-        /// @param [in] ControlData*                                   pid:  the control constants
-        /// @return void
-        void SetControlConstants
-        (
-            ControlData*                                pid                 
-        ) override;
-
         Impeller() = delete;
         Impeller
         (
@@ -96,13 +39,14 @@ class Impeller : public IMechanism
             std::shared_ptr<ctre::phoenix::sensors::CANCoder> encoder
         );
 
+        ///@brief Return the current position of the impeller in degrees (positive is cw, negative is ccw)
+        ///@return  double position in degrees
+        double GetPosition() const override;
+
+        ///@brief Return the current position of the impeller in degrees per second (positive is cw, negative is ccw)
+        ///@return double speed in degrees per second
+        double GetSpeed() const override;
+
         private:
-        std::shared_ptr<IDragonMotorController> m_motor;
         std::shared_ptr<ctre::phoenix::sensors::CANCoder> m_encoder;
-        double m_target;
-        mutable double m_lastTimeStamp;
-        mutable double m_lastVelocity;
-        
-	
-	//virtual ~Impeller() = default;
 };

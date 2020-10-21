@@ -31,32 +31,14 @@ class Mech1Solenoid : public IMech1Solenoid
 {
     public:
         /// @brief Create a generic mechanism wiht 1 solenoid 
-        /// @param [in] MechanismTypes::MECHANISM_TYPE the type of mechansim
-        /// @param [in] std::string the name of the file that will set control parameters for this mechanism
-        /// @param [in] std::string the name of the network table for logging information
         /// @param [in] std::shared_ptr<DragonSolenoid> solenoid used by this mechanism
          Mech1Solenoid
         (
-            MechanismTypes::MECHANISM_TYPE              type,
-            std::string                                 controlFileName,
-            std::string                                 networkTableName,
             std::shared_ptr<DragonSolenoid>             solenoid
         );
 
         Mech1Solenoid() = delete;
         virtual ~Mech1Solenoid() = default;
-
-        /// @brief          Indicates the type of mechanism this is
-        /// @return         MechanismTypes::MECHANISM_TYPE
-        MechanismTypes::MECHANISM_TYPE GetType() const override;
-
-        /// @brief indicate the file used to get the control parameters from
-        /// @return std::string the name of the file 
-        std::string GetControlFileName() const override;
-
-        /// @brief indicate the Network Table name used to setting tracking parameters
-        /// @return std::string the name of the network table 
-        std::string GetNetworkTableName() const override;
 
         /// @brief      Activate/deactivate pneumatic solenoid
         /// @param [in] bool - true == extend, false == retract
@@ -72,9 +54,5 @@ class Mech1Solenoid : public IMech1Solenoid
 
 
     private:
-
-        MechanismTypes::MECHANISM_TYPE              m_type;
-        std::string                                 m_controlFile;
-        std::string                                 m_ntName;
         std::shared_ptr<DragonSolenoid>             m_solenoid;
 };

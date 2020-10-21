@@ -7,12 +7,24 @@
 Inheritance diagram for Mech2\+Ind\+Motors\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_mech2_ind_motors}
+\includegraphics[height=3.000000cm]{class_mech2_ind_motors}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_mech2_ind_motors_acd6e089e48214bb86558a8e11fed54c8}{Mech2\+Ind\+Motors}} (\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} type, std\+::string control\+File\+Name, std\+::string network\+Table\+Name, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ primary\+Motor, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ secondary\+Motor)
+\begin{DoxyCompactList}\small\item\em Create a generic mechanism wiht 2 independent motors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mech2_ind_motors_aedfdc8de01ac5170deef1c8aae55dfd9}{Mech2\+Ind\+Motors}} ()=delete
+\item 
+\mbox{\hyperlink{class_mech2_ind_motors_affc971e72b8eaa80c56d40e4a751be20}{$\sim$\+Mech2\+Ind\+Motors}} ()=default
+\item 
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{class_mech2_ind_motors_a25c469f281ad76e49274ef54f295968a}{Get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Indicates the type of mechanism this is. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_mech2_ind_motors_ac2446c4efe71d18dc80691ae3dc2dc4c}{Get\+Control\+File\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em indicate the file used to get the control parameters from \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_mech2_ind_motors_a93ee8e2dc100aa0d74b303bbbf3ceed5}{Get\+Network\+Table\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em indicate the Network Table name used to setting tracking parameters \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_mech2_ind_motors_ad459458d7d1912216d61fa0cb29538db}{Update}} () override
 \begin{DoxyCompactList}\small\item\em update the output to the mechanism using the current controller and target value(s) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_mech2_ind_motors_a25c34ffd7866a584800e01e85fc0f22c}{Update\+Targets}} (double primary, double secondary) override
@@ -26,29 +38,33 @@ double \mbox{\hyperlink{class_mech2_ind_motors_a48e430220cab35fc853ee9838243cb21
 double \mbox{\hyperlink{class_mech2_ind_motors_ab5a23357fc5b2789fdb6c93d9ca9ae79}{Get\+Secondary\+Speed}} () const override
 \begin{DoxyCompactList}\small\item\em Get the current speed of the secondary motor in the mechanism. The value is in inches per second or degrees per second. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_mech2_ind_motors_a8b4280e243380336ef54fd26027b5dd9}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid) override
-\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_mech2_ind_motors_adbf943c7019c6249b06fd6550f671b81}{Mech2\+Ind\+Motors}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ primary\+Motor, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ secondary\+Motor)
-\item 
-\mbox{\hyperlink{class_mech2_ind_motors_aedfdc8de01ac5170deef1c8aae55dfd9}{Mech2\+Ind\+Motors}} ()=delete
-\item 
-\mbox{\hyperlink{class_mech2_ind_motors_affc971e72b8eaa80c56d40e4a751be20}{$\sim$\+Mech2\+Ind\+Motors}} ()=default
-\end{DoxyCompactItemize}
-
-
-\doxysubsection{Detailed Description}
-
-
-Definition at line 34 of file Mech2\+Ind\+Motors.\+h.
-
+\begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_mech2_ind_motors_adbf943c7019c6249b06fd6550f671b81}\label{class_mech2_ind_motors_adbf943c7019c6249b06fd6550f671b81}} 
+\mbox{\Hypertarget{class_mech2_ind_motors_acd6e089e48214bb86558a8e11fed54c8}\label{class_mech2_ind_motors_acd6e089e48214bb86558a8e11fed54c8}} 
 \index{Mech2IndMotors@{Mech2IndMotors}!Mech2IndMotors@{Mech2IndMotors}}
 \index{Mech2IndMotors@{Mech2IndMotors}!Mech2IndMotors@{Mech2IndMotors}}
 \doxysubsubsection{\texorpdfstring{Mech2IndMotors()}{Mech2IndMotors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Mech2\+Ind\+Motors\+::\+Mech2\+Ind\+Motors (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{primary\+Motor,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{secondary\+Motor }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Mech2\+Ind\+Motors\+::\+Mech2\+Ind\+Motors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}}}]{type,  }\item[{std\+::string}]{control\+File\+Name,  }\item[{std\+::string}]{network\+Table\+Name,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{primary\+Motor,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{secondary\+Motor }\end{DoxyParamCaption})}
 
+
+
+Create a generic mechanism wiht 2 independent motors. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}}} & the type of mechansim \\
+\hline
+\mbox{\texttt{ in}}  & {\em std\+::string} & the name of the file that will set control parameters for this mechanism \\
+\hline
+\mbox{\texttt{ in}}  & {\em std\+::string} & the name of the network table for logging information \\
+\hline
+\mbox{\texttt{ in}}  & {\em std\+::shared\+\_\+ptr$<$\+I\+Dragon\+Motor\+Controller$>$} & primary motor used by this mechanism \\
+\hline
+\mbox{\texttt{ in}}  & {\em std\+::shared\+\_\+ptr$<$\+I\+Dragon\+Motor\+Controller$>$} & secondary motor used by this mechanism \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_mech2_ind_motors_aedfdc8de01ac5170deef1c8aae55dfd9}\label{class_mech2_ind_motors_aedfdc8de01ac5170deef1c8aae55dfd9}} 
 \index{Mech2IndMotors@{Mech2IndMotors}!Mech2IndMotors@{Mech2IndMotors}}
 \index{Mech2IndMotors@{Mech2IndMotors}!Mech2IndMotors@{Mech2IndMotors}}
@@ -64,6 +80,44 @@ Definition at line 34 of file Mech2\+Ind\+Motors.\+h.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mech2_ind_motors_ac2446c4efe71d18dc80691ae3dc2dc4c}\label{class_mech2_ind_motors_ac2446c4efe71d18dc80691ae3dc2dc4c}} 
+\index{Mech2IndMotors@{Mech2IndMotors}!GetControlFileName@{GetControlFileName}}
+\index{GetControlFileName@{GetControlFileName}!Mech2IndMotors@{Mech2IndMotors}}
+\doxysubsubsection{\texorpdfstring{GetControlFileName()}{GetControlFileName()}}
+{\footnotesize\ttfamily std\+::string Mech2\+Ind\+Motors\+::\+Get\+Control\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+indicate the file used to get the control parameters from 
+
+\begin{DoxyReturn}{Returns}
+std\+::string the name of the file ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mech_a696bed03ac45f3da85cbe26e8658e0fd}{I\+Mech}}.
+
+\mbox{\Hypertarget{class_mech2_ind_motors_a93ee8e2dc100aa0d74b303bbbf3ceed5}\label{class_mech2_ind_motors_a93ee8e2dc100aa0d74b303bbbf3ceed5}} 
+\index{Mech2IndMotors@{Mech2IndMotors}!GetNetworkTableName@{GetNetworkTableName}}
+\index{GetNetworkTableName@{GetNetworkTableName}!Mech2IndMotors@{Mech2IndMotors}}
+\doxysubsubsection{\texorpdfstring{GetNetworkTableName()}{GetNetworkTableName()}}
+{\footnotesize\ttfamily std\+::string Mech2\+Ind\+Motors\+::\+Get\+Network\+Table\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+indicate the Network Table name used to setting tracking parameters 
+
+indicate the network table name used to for logging parameters
+
+\begin{DoxyReturn}{Returns}
+std\+::string the name of the network table ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mech_ab817a939691114a20840a82d40f894fa}{I\+Mech}}.
+
 \mbox{\Hypertarget{class_mech2_ind_motors_ad3a95115015b59120f324ed8e03c81c8}\label{class_mech2_ind_motors_ad3a95115015b59120f324ed8e03c81c8}} 
 \index{Mech2IndMotors@{Mech2IndMotors}!GetPrimaryPosition@{GetPrimaryPosition}}
 \index{GetPrimaryPosition@{GetPrimaryPosition}!Mech2IndMotors@{Mech2IndMotors}}
@@ -80,10 +134,6 @@ double position in inches (translating mechanisms) or degrees (rotating mechanis
 
 
 Implements \mbox{\hyperlink{class_i_mech2_ind_motors_afc8cfcace7afd4f6c698af2208f9a9b8}{I\+Mech2\+Ind\+Motors}}.
-
-
-
-Definition at line 90 of file Mech2\+Ind\+Motors.\+cpp.
 
 \mbox{\Hypertarget{class_mech2_ind_motors_a48e430220cab35fc853ee9838243cb21}\label{class_mech2_ind_motors_a48e430220cab35fc853ee9838243cb21}} 
 \index{Mech2IndMotors@{Mech2IndMotors}!GetPrimarySpeed@{GetPrimarySpeed}}
@@ -102,10 +152,6 @@ double speed in inches/second (translating mechanisms) or degrees/second (rotati
 
 Implements \mbox{\hyperlink{class_i_mech2_ind_motors_aba2df5de0db4ada23cd69521f8419199}{I\+Mech2\+Ind\+Motors}}.
 
-
-
-Definition at line 104 of file Mech2\+Ind\+Motors.\+cpp.
-
 \mbox{\Hypertarget{class_mech2_ind_motors_a0925beb0009c1e598dd3231a7198fbf0}\label{class_mech2_ind_motors_a0925beb0009c1e598dd3231a7198fbf0}} 
 \index{Mech2IndMotors@{Mech2IndMotors}!GetSecondaryPosition@{GetSecondaryPosition}}
 \index{GetSecondaryPosition@{GetSecondaryPosition}!Mech2IndMotors@{Mech2IndMotors}}
@@ -122,10 +168,6 @@ double position in inches (translating mechanisms) or degrees (rotating mechanis
 
 
 Implements \mbox{\hyperlink{class_i_mech2_ind_motors_a9a9b1dd5585600ea1255a8b0f030d768}{I\+Mech2\+Ind\+Motors}}.
-
-
-
-Definition at line 97 of file Mech2\+Ind\+Motors.\+cpp.
 
 \mbox{\Hypertarget{class_mech2_ind_motors_ab5a23357fc5b2789fdb6c93d9ca9ae79}\label{class_mech2_ind_motors_ab5a23357fc5b2789fdb6c93d9ca9ae79}} 
 \index{Mech2IndMotors@{Mech2IndMotors}!GetSecondarySpeed@{GetSecondarySpeed}}
@@ -144,9 +186,22 @@ double speed in inches/second (translating mechanisms) or degrees/second (rotati
 
 Implements \mbox{\hyperlink{class_i_mech2_ind_motors_a41b0aa917183790731e76f39a8f9cc2d}{I\+Mech2\+Ind\+Motors}}.
 
+\mbox{\Hypertarget{class_mech2_ind_motors_a25c469f281ad76e49274ef54f295968a}\label{class_mech2_ind_motors_a25c469f281ad76e49274ef54f295968a}} 
+\index{Mech2IndMotors@{Mech2IndMotors}!GetType@{GetType}}
+\index{GetType@{GetType}!Mech2IndMotors@{Mech2IndMotors}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} Mech2\+Ind\+Motors\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
-Definition at line 111 of file Mech2\+Ind\+Motors.\+cpp.
+
+Indicates the type of mechanism this is. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_mech_aa3c52c74a67a5f1caa2c11c13dacccdb}{I\+Mech}}.
 
 \mbox{\Hypertarget{class_mech2_ind_motors_a8b4280e243380336ef54fd26027b5dd9}\label{class_mech2_ind_motors_a8b4280e243380336ef54fd26027b5dd9}} 
 \index{Mech2IndMotors@{Mech2IndMotors}!SetControlConstants@{SetControlConstants}}
@@ -170,10 +225,6 @@ void
 
 Implements \mbox{\hyperlink{class_i_mech2_ind_motors_a9de8f3c889207a96895ff6d6f005bd95}{I\+Mech2\+Ind\+Motors}}.
 
-
-
-Definition at line 120 of file Mech2\+Ind\+Motors.\+cpp.
-
 \mbox{\Hypertarget{class_mech2_ind_motors_ad459458d7d1912216d61fa0cb29538db}\label{class_mech2_ind_motors_ad459458d7d1912216d61fa0cb29538db}} 
 \index{Mech2IndMotors@{Mech2IndMotors}!Update@{Update}}
 \index{Update@{Update}!Mech2IndMotors@{Mech2IndMotors}}
@@ -192,10 +243,6 @@ void ~\newline
 
 Implements \mbox{\hyperlink{class_i_mech2_ind_motors_a1da8a8c5acef53aece885e984431ee3b}{I\+Mech2\+Ind\+Motors}}.
 
-
-
-Definition at line 58 of file Mech2\+Ind\+Motors.\+cpp.
-
 \mbox{\Hypertarget{class_mech2_ind_motors_a25c34ffd7866a584800e01e85fc0f22c}\label{class_mech2_ind_motors_a25c34ffd7866a584800e01e85fc0f22c}} 
 \index{Mech2IndMotors@{Mech2IndMotors}!UpdateTargets@{UpdateTargets}}
 \index{UpdateTargets@{UpdateTargets}!Mech2IndMotors@{Mech2IndMotors}}
@@ -208,11 +255,7 @@ Implements \mbox{\hyperlink{class_i_mech2_ind_motors_a37a3fe93fa4ca711bb96a97100
 
 
 
-Definition at line 71 of file Mech2\+Ind\+Motors.\+cpp.
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_mech2_ind_motors_8h}{Mech2\+Ind\+Motors.\+h}}\item 
-C\+:/robotcm/training2020/src/main/cpp/subsys/\mbox{\hyperlink{_mech2_ind_motors_8cpp}{Mech2\+Ind\+Motors.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech2_ind_motors_8h}{Mech2\+Ind\+Motors.\+h}}\item 
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech2_ind_motors_8cpp}{Mech2\+Ind\+Motors.\+cpp}}\end{DoxyCompactItemize}

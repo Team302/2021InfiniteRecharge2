@@ -37,9 +37,6 @@ using namespace std;
 /// @param [in] std::shared_ptr<DragonSolenoid> solenoid used by this mechanism
 Mech1Solenoid::Mech1Solenoid
 (
-    MechanismTypes::MECHANISM_TYPE              type,
-    std::string                                 controlFileName,
-    std::string                                 networkTableName,
     std::shared_ptr<DragonSolenoid>             solenoid
 ) : IMech1Solenoid(),
     m_solenoid( std::move(solenoid) )
@@ -48,29 +45,6 @@ Mech1Solenoid::Mech1Solenoid
     {
         Logger::GetLogger()->LogError( string( "Mech1Solenoid constructor" ), string( "solenoid is nullptr" ) );
     }
-}
-
-
-/// @brief          Indicates the type of mechanism this is
-/// @return         MechanismTypes::MECHANISM_TYPE
-MechanismTypes::MECHANISM_TYPE Mech1Solenoid::GetType() const 
-{
-    return m_type;
-}
-
-/// @brief indicate the file used to get the control parameters from
-/// @return std::string the name of the file 
-std::string Mech1Solenoid::GetControlFileName() const 
-{
-    return m_controlFile;
-}
-
-
-/// @brief indicate the network table name used to for logging parameters
-/// @return std::string the name of the network table 
-std::string Mech1Solenoid::GetNetworkTableName() const 
-{
-    return m_ntName;
 }
 
 
