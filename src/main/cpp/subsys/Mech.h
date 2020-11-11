@@ -17,15 +17,18 @@
 #pragma once
 
 // C++ Includes
+#include <memory>
 #include <string>
 
 // FRC includes
+#include <frc2/Timer.h>
 
 // Team 302 includes
 #include <subsys/IMech.h>
 #include <subsys/MechanismTypes.h>
 
 // Third Party Includes
+#include <units/units.h>
 
 
 ///	 @interface IMech
@@ -46,6 +49,18 @@ class Mech : public IMech
         /// @return std::string the name of the network table 
         std::string GetNetworkTableName() const override;
 
+        /// @brief Activates logging key values to network table
+        /// @param [in] int: indicate how many millisecondsBetweenLogging updates to the network table 
+        void ActivateLogging
+        (
+            units::second_t                 millisecondsBetweenLogging
+        ) override final;
+        /// @brief Stop updating the key values to network table
+        void DeactivateLogging() override final;
+
+        /// @brief log data to the network table if it is activated and time period has past
+        void LogData() override;
+
         /// @brief create the general mechanism
         /// @param [in] MechanismTypes::MECHANISM_TYPE the type of mechansim
         /// @param [in] std::string the name of the file that will set control parameters for this mechanism
@@ -63,4 +78,8 @@ class Mech : public IMech
         MechanismTypes::MECHANISM_TYPE  m_type;
         std::string                     m_controlFile;
         std::string                     m_ntName;
+        bool                            m_logging;
+        units::second_t                 m_milliSecondsBetweenLogging;
+        units::second_t                 m_lastTime;
+        std::unique_ptr<frc2::Timer>    m_timer;
 };

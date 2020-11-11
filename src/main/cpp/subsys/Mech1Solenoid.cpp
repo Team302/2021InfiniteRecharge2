@@ -43,7 +43,7 @@ Mech1Solenoid::Mech1Solenoid
 {
     if (m_solenoid.get() == nullptr )
     {
-        Logger::GetLogger()->LogError( string( "Mech1Solenoid constructor" ), string( "solenoid is nullptr" ) );
+        Logger::GetLogger()->LogError( Logger::LOGGER_LEVEL::ERROR_ONCE, string( "Mech1Solenoid constructor" ), string( "solenoid is nullptr" ) );
     }
 }
 

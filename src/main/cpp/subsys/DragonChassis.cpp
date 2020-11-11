@@ -1,8 +1,4 @@
 
-
-
-
-
 //====================================================================================================================================================
 /// Copyright 2020 Lake Orion Robotics FIRST Team 302 
 ///
@@ -150,6 +146,14 @@ double DragonChassis::GetWheelDiameter() const
     return m_wheelDiameter; 
 }
 
+double DragonChassis::GetWheelBase() const 
+{
+    return m_wheelBase;
+}
+double DragonChassis::GetTrack() const 
+{
+    return m_wheelTrack;
+}
 
 
 

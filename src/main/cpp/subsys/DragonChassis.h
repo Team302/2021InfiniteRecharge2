@@ -103,6 +103,8 @@ class DragonChassis : public IChassis
         ) override;
 
         double GetWheelDiameter() const override;
+        double GetWheelBase() const override;
+        double GetTrack() const override;
         
     private:
         IMechanism*                     m_leftSide;

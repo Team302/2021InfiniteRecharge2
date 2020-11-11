@@ -41,7 +41,7 @@ Mech1Servo::Mech1Servo
 {
     if (m_servo.get() == nullptr )
     {
-        Logger::GetLogger()->LogError( string( "Mech1Servo constructor" ), string( "servo is nullptr" ) );
+        Logger::GetLogger()->LogError( Logger::LOGGER_LEVEL::ERROR_ONCE, string( "Mech1Servo constructor" ), string( "servo is nullptr" ) );
     }
 }
 

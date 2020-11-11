@@ -60,9 +60,18 @@ double DragonPigeon::GetRawRoll()
 
 double DragonPigeon::GetRawYaw()
 {
-    double ypr[3];
+    double ypr[3]; // yaw = 0 pitch = 1 roll = 2
     m_pigeon->GetYawPitchRoll(ypr);
-
-    return ypr[0]; // yaw = 0 pitch = 1 roll = 2 
+    double yaw = ypr[0];
+    // normalize it to be between -180 and + 180
+    if ( yaw > 180 )
+    {
+        yaw -= 360.0;
+    }
+    else if ( yaw < -180 )
+    {
+        yaw += 360.0;
+    }
+    return yaw;  
 }
 

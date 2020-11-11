@@ -23,10 +23,12 @@
 
 // Team 302 includes
 #include <auton/primitives/IPrimitive.h>
+#include <controllers/ControlData.h>
 
 // Third Party Includes
 
 class IChassis;
+
 namespace frc
 {
     class Timer;
@@ -37,6 +39,10 @@ class TurnAngle : public IPrimitive
 {
     public:
         TurnAngle();
+        TurnAngle
+        (
+            ControlData*    controlData
+        );
         virtual ~TurnAngle() = default;
 
         void Init(PrimitiveParams* params) override;
@@ -52,11 +58,13 @@ class TurnAngle : public IPrimitive
         std::shared_ptr<IChassis> m_chassis;
    		std::unique_ptr<frc::Timer> m_timer;
 
-        float m_targetAngle;
-        float m_maxTime;
-        float m_leftPos;
-        float m_rightPos;
-        bool m_isDone;
+        double           m_targetAngle;
+        double           m_maxTime;
+        double           m_leftPos;
+        double           m_rightPos;
+        bool             m_isDone;
+        ControlData*     m_control;
+        bool             m_turnRight;
 
         const float ANGLE_THRESH = 2; // +/- threshold for being at angle
         const float MAX_VELOCITY = 20; //inches per second

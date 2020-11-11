@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE statedata SYSTEM "stateData.dtd">
+<statedata>
+	<controlData identifier="openloop" 
+	             mode="PERCENT_OUTPUT"/>
+    <!-- kF: 1023 represents output value to Talon at 100%, 20660 represents Velocity units at 100% output 1023.0/20660.0  = 0.0495 -->	
+    <controlData identifier="velocityclosedloop" 
+	             mode="VELOCITY_RPS"
+				 proportional="0.1"
+                 integral="0.001"
+                 derivative="5.0"
+				 feedforward="0.0495" 
+                 izone="300" />
+	<controlData identifier="positionclosedloop" 
+	             mode="POSITION_DEGREES"
+				 proportional="0.15"
+				 derivative="1.0"/>
+	<controlData identifier="trapezoidprofile" 
+	             mode="TRAPEZOID"
+				 proportional="0.1"
+				 feedforward="0.3"
+                 maxacceleration="1500.0"
+                 cruisevelocity="1500.0"/>
+                
+	<mechanismTarget stateIdentifier="DONOTHING"
+	                 controlDataIdentifier="openloop"
+					 value="0.0"/>
+	<mechanismTarget stateIdentifier="HOLDPOSITION"
+	                 controlDataIdentifier="positionclosedloop"
+					 value="0.0"/>
+	<mechanismTarget stateIdentifier="DRIVEDISTANCE"
+	                 controlDataIdentifier="trapezoidprofile"
+					 value="0.0"/>
+	<mechanismTarget stateIdentifier="DRIVETIME"
+					 controlDataIdentifier="velocityclosedloop"
+				     value="0.0"/>
+	<mechanismTarget stateIdentifier="DRIVETOWALL"
+					 controlDataIdentifier="velocityclosedloop"
+				     value="0.0"/>
+	<mechanismTarget stateIdentifier="TURNTOANGLE"
+					 controlDataIdentifier="trapezoidprofile"
+				     value="0.0"/>
+</statedata>

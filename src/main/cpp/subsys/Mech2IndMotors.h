@@ -19,14 +19,17 @@
 
 // C++ Includes
 #include <memory>
+#include <string>
 
 // FRC includes
+#include <frc2/Timer.h>
 
 // Team 302 includes
 #include <subsys/IMech2IndMotors.h>
 #include <subsys/Mech1IndMotor.h>
 
 // Third Party Includes
+#include <units/units.h>
 
 class ControlData;
 class IDragonMotorController;
@@ -62,6 +65,18 @@ class Mech2IndMotors : public IMech2IndMotors
         /// @brief indicate the Network Table name used to setting tracking parameters
         /// @return std::string the name of the network table 
         std::string GetNetworkTableName() const override;
+
+        /// @brief Activates logging key values to network table
+        /// @param [in] int: indicate how many millisecondsBetweenLogging updates to the network table 
+        void ActivateLogging
+        (
+            units::second_t                 millisecondsBetweenLogging
+        ) override final;
+        /// @brief Stop updating the key values to network table
+        void DeactivateLogging() override final;
+
+        /// @brief log data to the network table if it is activated and time period has past
+        void LogData() override;
 
         /// @brief update the output to the mechanism using the current controller and target value(s)
         /// @return void 
@@ -102,6 +117,10 @@ class Mech2IndMotors : public IMech2IndMotors
         MechanismTypes::MECHANISM_TYPE              m_type;
         std::string                                 m_controlFile;
         std::string                                 m_ntName;
+        bool                                        m_logging;
+        units::second_t                             m_milliSecondsBetweenLogging;
+        units::second_t                             m_lastTime;
+        std::unique_ptr<frc2::Timer>                m_timer;
         std::shared_ptr<IDragonMotorController>     m_primary;
         std::shared_ptr<IDragonMotorController>     m_secondary;
         double                                      m_primaryTarget;

@@ -17,39 +17,40 @@
 #pragma once
 
 // C++ Includes
+#include <vector>
 
 // FRC includes
 
 // Team 302 includes
+#include <auton/PrimitiveEnums.h>
 
 // Third Party Includes
 
-
-
-#include <auton/PrimitiveEnums.h>
 
 class IPrimitive;
 class PrimitiveParams;
 
 class PrimitiveFactory 
 {
-public:
+    public:
+        /// @brief return the singleton factory
+        static PrimitiveFactory* GetInstance();
 
+        /// @brief clean up the singleton factory
+        static void Cleanup();
 
-	PrimitiveFactory();
-	virtual ~PrimitiveFactory();
-	static PrimitiveFactory* GetInstance();
-	IPrimitive* GetIPrimitive(PrimitiveParams* primitivePasser);
+        /// @brief return the primitive of the desired type
+        /// @param [in] PrimitiveParams* pointer to the parameters that identify the primitive to return.
+        IPrimitive* GetIPrimitive(PrimitiveParams* primitivePasser);
 
-private:
-    static PrimitiveFactory* m_instance;
-    IPrimitive* m_doNothing;
-    IPrimitive* m_driveTime;
-    IPrimitive* m_driveDistance;
-    IPrimitive* m_turnAngle;
-    IPrimitive* m_holdPosition;
-    IPrimitive* m_driveToWall;
-    IPrimitive* m_driveLidarDistance;
-    IPrimitive* m_autoShoot;
+    private:
+        /// @brief create the factory 
+        PrimitiveFactory();
+
+        /// @brief delete the factory 
+        virtual ~PrimitiveFactory();
+        
+        static PrimitiveFactory* m_instance;
+        std::vector<IPrimitive*> m_primitives;
 };
 

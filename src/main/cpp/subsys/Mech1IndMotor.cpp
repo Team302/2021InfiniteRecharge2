@@ -15,8 +15,10 @@
 
 // C++ Includes
 #include <memory>
+#include <string>
 
 // FRC includes
+#include <frc2/Timer.h>
 
 // Team 302 includes
 #include <controllers/ControlData.h>
@@ -26,7 +28,9 @@
 #include <utils/Logger.h>
 
 // Third Party Includes
+#include <units/units.h>
 
+using namespace frc2;
 using namespace std;
 
 /// @brief Create a generic mechanism wiht 1 independent motor 
@@ -46,7 +50,7 @@ Mech1IndMotor::Mech1IndMotor
 {
     if (m_motor.get() == nullptr )
     {
-        Logger::GetLogger()->LogError( string( "Mech1IndMotor constructor" ), string( "motorController is nullptr" ) );
+        Logger::GetLogger()->LogError( Logger::LOGGER_LEVEL::ERROR_ONCE, string( "Mech1IndMotor constructor" ), string( "motorController is nullptr" ) );
     }
 }
 
@@ -72,6 +76,35 @@ std::string Mech1IndMotor::GetNetworkTableName() const
     return m_ntName;
 }
 
+/// @brief Activates logging key values to network table
+/// @param [in] int: indicate how many millisecondsBetweenLogging updates to the network table 
+void Mech1IndMotor::ActivateLogging
+(
+    units::second_t     millisecondsBetweenLogging
+) 
+{
+    m_milliSecondsBetweenLogging = millisecondsBetweenLogging;
+    m_logging = true;
+}
+
+/// @brief log data to the network table if it is activated and time period has past
+void Mech1IndMotor::LogData()
+{
+    if(m_logging)
+    {
+        auto currentTime = m_timer.get()->GetFPGATimestamp();
+        if ((currentTime - m_lastTime) > m_milliSecondsBetweenLogging )
+        {
+            // TODO:  update the network table
+        }
+
+    }
+}
+/// @brief Stop updating the key values to network table
+void Mech1IndMotor::DeactivateLogging() 
+{
+    m_logging = false;
+}
 
 void Mech1IndMotor::Update()
 {

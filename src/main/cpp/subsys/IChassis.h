@@ -81,6 +81,8 @@ class IChassis
         ) = 0;
 
         virtual double GetWheelDiameter() const = 0;
+        virtual double GetWheelBase() const = 0;
+        virtual double GetTrack() const = 0;
 
 	IChassis() = default;
 	virtual ~IChassis() = default;

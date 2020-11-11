@@ -14,17 +14,21 @@
 //====================================================================================================================================================
 
 // C++ Includes
+#include <memory>
 #include <string>
 
 // FRC includes
+#include <frc2/Timer.h>
 
 // Team 302 includes
 #include <subsys/Mech.h>
 #include <subsys/MechanismTypes.h>
 #include <utils/Logger.h>
+
 // Third Party Includes
+#include <units/units.h>
 
-
+using namespace frc2;
 using namespace std;
 
 /// @brief create the general mechanism
@@ -39,17 +43,24 @@ Mech::Mech
 ) : IMech(), 
     m_type( type ),
     m_controlFile( controlFileName ),
-    m_ntName( networkTableName )
+    m_ntName( networkTableName ),
+    m_logging(false),
+    m_milliSecondsBetweenLogging(0.020),
+    m_lastTime(0),
+    m_timer()
 {
     if ( controlFileName.empty() )
     {
-        Logger::GetLogger()->LogError( string( "Mech" ), string( "control file name is not specified" ) );
+        Logger::GetLogger()->LogError( Logger::LOGGER_LEVEL::ERROR_ONCE, string( "Mech" ), string( "control file name is not specified" ) );
     }
 
     if ( networkTableName.empty() )
     {
-        Logger::GetLogger()->LogError( string( "Mech" ), string( "network table name is not specified" ) );
+        Logger::GetLogger()->LogError( Logger::LOGGER_LEVEL::ERROR_ONCE, string( "Mech" ), string( "network table name is not specified" ) );
     }
+
+    m_timer = make_unique<Timer>();
+    m_lastTime = m_timer.get()->GetFPGATimestamp();
 
 }
 
@@ -76,3 +87,32 @@ std::string Mech::GetNetworkTableName() const
     return m_ntName;
 }
 
+/// @brief Activates logging key values to network table
+/// @param [in] int: indicate how many millisecondsBetweenLogging updates to the network table 
+void Mech::ActivateLogging
+(
+    units::second_t     millisecondsBetweenLogging
+) 
+{
+    m_milliSecondsBetweenLogging = millisecondsBetweenLogging;
+    m_logging = true;
+}
+
+/// @brief log data to the network table if it is activated and time period has past
+void Mech::LogData()
+{
+    if(m_logging)
+    {
+        auto currentTime = m_timer.get()->GetFPGATimestamp();
+        if ((currentTime - m_lastTime) > m_milliSecondsBetweenLogging )
+        {
+            // TODO:  update the network table
+        }
+
+    }
+}
+/// @brief Stop updating the key values to network table
+void Mech::DeactivateLogging() 
+{
+    m_logging = false;
+}

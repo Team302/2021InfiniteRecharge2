@@ -10,6 +10,7 @@
           integral CDATA "0.0"
           derivative CDATA "0.0"
           feedforward CDATA "0.0"
+          izone CDATA "0.0"
           maxacceleration CDATA "0.0"
           cruisevelocity CDATA "0.0"
 > 
@@ -25,6 +26,7 @@
                                           CONTROLPANELRAISE | CONTROLPANELMANUAL | CONTROLPANELSTOW | CONTROLPANELTURN | CONTROLPANELCOLOR | CONTROLPANELMANUAL |
                                           HOOKDELIVERYOFF | HOOKDELIVERYUP | HOOKDELIVERYDOWN |
                                           CLIMBEROFF | CLIMBERWINCHUP |
+                                          DRIVETRAIN_DONOTHING | DRIVETRAIN_HOLDPOSITION | DRIVETRAIN_DRIVEDISTANCE | DRIVETRAIN_DRIVETIME | DRIVETRAIN_DRIVETOWALL | DRIVETRAIN_TURNTOANGLE |                                         
                                           UNKNOWN ) "UNKNOWN"
           controlDataIdentifier         CDATA #REQUIRED
           value                         CDATA #REQUIRED
