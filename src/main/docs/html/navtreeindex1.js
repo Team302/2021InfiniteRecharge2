@@ -156,16 +156,12 @@ var NAVTREEINDEX1 =
 "_i_dragon_sensor_8h.html":[2,0,0,0,0,0,0,3,1,3],
 "_i_dragon_sensor_8h_source.html":[2,0,0,0,0,0,0,3,1,3],
 "_i_mech1_ind_motor_8h.html":[2,0,0,0,0,0,0,5,18],
-"_i_mech1_ind_motor_8h.html#a4d24288d104ab8471107e0d034ca92e7":[2,0,0,0,0,0,0,5,18,1],
 "_i_mech1_ind_motor_8h_source.html":[2,0,0,0,0,0,0,5,18],
 "_i_mech1_servo_8h.html":[2,0,0,0,0,0,0,5,19],
-"_i_mech1_servo_8h.html#afa35a9d1260fb93de4fb15b062770d46":[2,0,0,0,0,0,0,5,19,1],
 "_i_mech1_servo_8h_source.html":[2,0,0,0,0,0,0,5,19],
 "_i_mech1_solenoid_8h.html":[2,0,0,0,0,0,0,5,20],
-"_i_mech1_solenoid_8h.html#a7ea9c7e10d0f95b4fa682dafd4add4b8":[2,0,0,0,0,0,0,5,20,1],
 "_i_mech1_solenoid_8h_source.html":[2,0,0,0,0,0,0,5,20],
 "_i_mech2_ind_motors_8h.html":[2,0,0,0,0,0,0,5,21],
-"_i_mech2_ind_motors_8h.html#a26efc487b16f4d4639148344ea0f12bd":[2,0,0,0,0,0,0,5,21,1],
 "_i_mech2_ind_motors_8h_source.html":[2,0,0,0,0,0,0,5,21],
 "_i_mech_8h.html":[2,0,0,0,0,0,0,5,17],
 "_i_mech_8h.html#a39e952e6fb8466ea479dec7f0c9a6969":[2,0,0,0,0,0,0,5,17,1],
@@ -249,5 +245,9 @@ var NAVTREEINDEX1 =
 "_limelight_factory_8h_source.html":[2,0,0,0,0,0,0,3,0,17],
 "_linear_profile_8cpp.html":[2,0,0,0,0,0,0,2,0,10],
 "_linear_profile_8cpp_source.html":[2,0,0,0,0,0,0,2,0,10],
-"_linear_profile_8h.html":[2,0,0,0,0,0,0,2,0,11]
+"_linear_profile_8h.html":[2,0,0,0,0,0,0,2,0,11],
+"_linear_profile_8h_source.html":[2,0,0,0,0,0,0,2,0,11],
+"_logger_8cpp.html":[2,0,0,0,0,0,0,7,6],
+"_logger_8cpp_source.html":[2,0,0,0,0,0,0,7,6],
+"_logger_8h.html":[2,0,0,0,0,0,0,7,7]
 };

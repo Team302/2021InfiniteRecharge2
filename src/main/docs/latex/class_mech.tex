@@ -19,12 +19,25 @@ std\+::string \mbox{\hyperlink{class_mech_a920a923776b0a1b827e5ad689bc6ecf8}{Get
 \begin{DoxyCompactList}\small\item\em indicate the file used to get the control parameters from \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_mech_a502d8be2ff8725323c22371cba93dd37}{Get\+Network\+Table\+Name}} () const override
 \begin{DoxyCompactList}\small\item\em indicate the Network Table name used to setting tracking parameters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mech_ad2cfbcb9033be2844d450aeea6a92f78}{Activate\+Logging}} (units\+::second\+\_\+t milliseconds\+Between\+Logging) override final
+\begin{DoxyCompactList}\small\item\em Activates logging key values to network table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mech_ac9ad0746220c95dde4abe97c34710fc2}{Deactivate\+Logging}} () override final
+\begin{DoxyCompactList}\small\item\em Stop updating the key values to network table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mech_ab8e245e9cf0061ef1acf09a9103e41c4}{Log\+Data}} () override
+\begin{DoxyCompactList}\small\item\em log data to the network table if it is activated and time period has past \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_mech_aaa61475edd6f2c2cb42ab5bea0e5c719}{Mech}} (\mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} type, std\+::string control\+File\+Name, std\+::string network\+Table\+Name)
 \begin{DoxyCompactList}\small\item\em create the general mechanism \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_mech_aff77a20e8a7746aef8bac427c60c3586}{Mech}} ()=delete
 \item 
 virtual \mbox{\hyperlink{class_mech_a8214b4f377b97b64c8d93a248bc21460}{$\sim$\+Mech}} ()=default
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 36 of file Mech.\+h.
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -47,6 +60,10 @@ create the general mechanism
 \mbox{\texttt{ in}}  & {\em std\+::string} & the name of the network table for logging information \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 38 of file Mech.\+cpp.
+
 \mbox{\Hypertarget{class_mech_aff77a20e8a7746aef8bac427c60c3586}\label{class_mech_aff77a20e8a7746aef8bac427c60c3586}} 
 \index{Mech@{Mech}!Mech@{Mech}}
 \index{Mech@{Mech}!Mech@{Mech}}
@@ -62,6 +79,48 @@ create the general mechanism
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mech_ad2cfbcb9033be2844d450aeea6a92f78}\label{class_mech_ad2cfbcb9033be2844d450aeea6a92f78}} 
+\index{Mech@{Mech}!ActivateLogging@{ActivateLogging}}
+\index{ActivateLogging@{ActivateLogging}!Mech@{Mech}}
+\doxysubsubsection{\texorpdfstring{ActivateLogging()}{ActivateLogging()}}
+{\footnotesize\ttfamily void Mech\+::\+Activate\+Logging (\begin{DoxyParamCaption}\item[{units\+::second\+\_\+t}]{milliseconds\+Between\+Logging }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activates logging key values to network table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & indicate how many milliseconds\+Between\+Logging updates to the network table ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_mech_ae36bb88f573108e3bd6c462ac73a65a5}{I\+Mech}}.
+
+
+
+Definition at line 92 of file Mech.\+cpp.
+
+\mbox{\Hypertarget{class_mech_ac9ad0746220c95dde4abe97c34710fc2}\label{class_mech_ac9ad0746220c95dde4abe97c34710fc2}} 
+\index{Mech@{Mech}!DeactivateLogging@{DeactivateLogging}}
+\index{DeactivateLogging@{DeactivateLogging}!Mech@{Mech}}
+\doxysubsubsection{\texorpdfstring{DeactivateLogging()}{DeactivateLogging()}}
+{\footnotesize\ttfamily void Mech\+::\+Deactivate\+Logging (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stop updating the key values to network table. 
+
+
+
+Implements \mbox{\hyperlink{class_i_mech_aab6c09d4742d031c1c4e0720df90a6ef}{I\+Mech}}.
+
+
+
+Definition at line 115 of file Mech.\+cpp.
+
 \mbox{\Hypertarget{class_mech_a920a923776b0a1b827e5ad689bc6ecf8}\label{class_mech_a920a923776b0a1b827e5ad689bc6ecf8}} 
 \index{Mech@{Mech}!GetControlFileName@{GetControlFileName}}
 \index{GetControlFileName@{GetControlFileName}!Mech@{Mech}}
@@ -79,6 +138,10 @@ std\+::string the name of the file ~\newline
 
 
 Implements \mbox{\hyperlink{class_i_mech_a696bed03ac45f3da85cbe26e8658e0fd}{I\+Mech}}.
+
+
+
+Definition at line 77 of file Mech.\+cpp.
 
 \mbox{\Hypertarget{class_mech_a502d8be2ff8725323c22371cba93dd37}\label{class_mech_a502d8be2ff8725323c22371cba93dd37}} 
 \index{Mech@{Mech}!GetNetworkTableName@{GetNetworkTableName}}
@@ -100,6 +163,10 @@ std\+::string the name of the network table ~\newline
 
 Implements \mbox{\hyperlink{class_i_mech_ab817a939691114a20840a82d40f894fa}{I\+Mech}}.
 
+
+
+Definition at line 85 of file Mech.\+cpp.
+
 \mbox{\Hypertarget{class_mech_acb9e3f4091481906e0a191e10f2f0a04}\label{class_mech_acb9e3f4091481906e0a191e10f2f0a04}} 
 \index{Mech@{Mech}!GetType@{GetType}}
 \index{GetType@{GetType}!Mech@{Mech}}
@@ -119,7 +186,29 @@ Implements \mbox{\hyperlink{class_i_mech_aa3c52c74a67a5f1caa2c11c13dacccdb}{I\+M
 
 
 
+Definition at line 70 of file Mech.\+cpp.
+
+\mbox{\Hypertarget{class_mech_ab8e245e9cf0061ef1acf09a9103e41c4}\label{class_mech_ab8e245e9cf0061ef1acf09a9103e41c4}} 
+\index{Mech@{Mech}!LogData@{LogData}}
+\index{LogData@{LogData}!Mech@{Mech}}
+\doxysubsubsection{\texorpdfstring{LogData()}{LogData()}}
+{\footnotesize\ttfamily void Mech\+::\+Log\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+log data to the network table if it is activated and time period has past 
+
+
+
+Implements \mbox{\hyperlink{class_i_mech_a8ef8718f9a677623b49da0e2250fa326}{I\+Mech}}.
+
+
+
+Definition at line 102 of file Mech.\+cpp.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech_8h}{Mech.\+h}}\item 
-C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech_8cpp}{Mech.\+cpp}}\end{DoxyCompactItemize}
+/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech_8h}{Mech.\+h}}\item 
+/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech_8cpp}{Mech.\+cpp}}\end{DoxyCompactItemize}

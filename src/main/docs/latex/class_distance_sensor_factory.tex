@@ -26,6 +26,10 @@ static \mbox{\hyperlink{class_distance_sensor_factory}{Distance\+Sensor\+Factory
 \doxysubsection{Detailed Description}
 This factory constructs distance sensors. 
 
+Definition at line 40 of file Distance\+Sensor\+Factory.\+h.
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_distance_sensor_factory_abed212830b8102a823dec5b742945556}\label{class_distance_sensor_factory_abed212830b8102a823dec5b742945556}} 
 \index{DistanceSensorFactory@{DistanceSensorFactory}!CreateSensor@{CreateSensor}}
@@ -77,11 +81,19 @@ else if ( canID > -1 )  // create playing with fusion time of flight sensor
 else if ( !tableName.empty() )
 {
 \end{DoxyVerb}
- todo validate inputs sensor = make\+\_\+shared$<$\+I\+Dragon\+Distance\+Sensor$>$( new Dragon\+Limelight( usage, table\+Name, mounting\+Height, mounting\+Horizontal\+Offset, mounting\+Angle, target\+Height) ); \} else \{ \mbox{\hyperlink{class_logger_ae85cfbef8b7e6940475a5012fa1935c6}{Logger\+::\+Get\+Logger()}}-\/$>$Log\+Error( string( \char`\"{}\+Distance\+Sensor\+Factory\+::\+Create\+Sensor\char`\"{}), string(\char`\"{}unknown sensor\char`\"{}) ); \}\mbox{\Hypertarget{class_distance_sensor_factory_ac26949a95d6b5582d689f3d2100dff3e}\label{class_distance_sensor_factory_ac26949a95d6b5582d689f3d2100dff3e}} 
+ todo validate inputs sensor = make\+\_\+shared$<$\+I\+Dragon\+Distance\+Sensor$>$( new Dragon\+Limelight( usage, table\+Name, mounting\+Height, mounting\+Horizontal\+Offset, mounting\+Angle, target\+Height) ); \} else \{ \mbox{\hyperlink{class_logger_ae85cfbef8b7e6940475a5012fa1935c6}{Logger\+::\+Get\+Logger()}}-\/$>$Log\+Error( string( \char`\"{}\+Distance\+Sensor\+Factory\+::\+Create\+Sensor\char`\"{}), string(\char`\"{}unknown sensor\char`\"{}) ); \}
+
+Definition at line 90 of file Distance\+Sensor\+Factory.\+cpp.
+
+\mbox{\Hypertarget{class_distance_sensor_factory_ac26949a95d6b5582d689f3d2100dff3e}\label{class_distance_sensor_factory_ac26949a95d6b5582d689f3d2100dff3e}} 
 \index{DistanceSensorFactory@{DistanceSensorFactory}!GetFactory@{GetFactory}}
 \index{GetFactory@{GetFactory}!DistanceSensorFactory@{DistanceSensorFactory}}
 \doxysubsubsection{\texorpdfstring{GetFactory()}{GetFactory()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_distance_sensor_factory}{Distance\+Sensor\+Factory}} $\ast$ Distance\+Sensor\+Factory\+::\+Get\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 48 of file Distance\+Sensor\+Factory.\+cpp.
 
 \mbox{\Hypertarget{class_distance_sensor_factory_a433cac9d3711d99a953369dc15dd9dd3}\label{class_distance_sensor_factory_a433cac9d3711d99a953369dc15dd9dd3}} 
 \index{DistanceSensorFactory@{DistanceSensorFactory}!GetSensor@{GetSensor}}
@@ -93,5 +105,5 @@ else if ( !tableName.empty() )
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/hw/factories/\mbox{\hyperlink{_distance_sensor_factory_8h}{Distance\+Sensor\+Factory.\+h}}\item 
-C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/hw/factories/\mbox{\hyperlink{_distance_sensor_factory_8cpp}{Distance\+Sensor\+Factory.\+cpp}}\end{DoxyCompactItemize}
+/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/hw/factories/\mbox{\hyperlink{_distance_sensor_factory_8h}{Distance\+Sensor\+Factory.\+h}}\item 
+/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/hw/factories/\mbox{\hyperlink{_distance_sensor_factory_8cpp}{Distance\+Sensor\+Factory.\+cpp}}\end{DoxyCompactItemize}

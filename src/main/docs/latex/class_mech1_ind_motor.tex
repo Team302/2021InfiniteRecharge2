@@ -25,6 +25,12 @@ std\+::string \mbox{\hyperlink{class_mech1_ind_motor_a288fa2d239e052e868b71395c2
 \begin{DoxyCompactList}\small\item\em indicate the file used to get the control parameters from \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_mech1_ind_motor_a512adb78dcb9d2a8f7cf33dd3e7f75a3}{Get\+Network\+Table\+Name}} () const override
 \begin{DoxyCompactList}\small\item\em indicate the Network Table name used to setting tracking parameters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mech1_ind_motor_a2ea51d20899048beb5776eb677fbda06}{Activate\+Logging}} (units\+::second\+\_\+t milliseconds\+Between\+Logging) override final
+\begin{DoxyCompactList}\small\item\em Activates logging key values to network table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mech1_ind_motor_a14e69788c1af3292dde755421d224250}{Deactivate\+Logging}} () override final
+\begin{DoxyCompactList}\small\item\em Stop updating the key values to network table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mech1_ind_motor_a1b171fd34edb87e31237a40dcec125df}{Log\+Data}} () override
+\begin{DoxyCompactList}\small\item\em log data to the network table if it is activated and time period has past \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_mech1_ind_motor_a55626a8ad6f24b69b6472465fbcda416}{Update}} () override
 \begin{DoxyCompactList}\small\item\em update the output to the mechanism using the current controller and target value(s) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_mech1_ind_motor_a999fd41ccd8773e87018d5e6ac849e84}{Update\+Target}} (double target) override
@@ -35,6 +41,13 @@ double \mbox{\hyperlink{class_mech1_ind_motor_af1c04bfbb55bc4fcd9f2972e61ddd7b0}
 \begin{DoxyCompactList}\small\item\em Get the current speed of the mechanism. The value is in inches per second or degrees per second. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_mech1_ind_motor_a8278edecfa6865dad58493ce6f4012e2}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid) override
 \begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 39 of file Mech1\+Ind\+Motor.\+h.
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -59,6 +72,10 @@ Create a generic mechanism wiht 1 independent motor.
 \mbox{\texttt{ in}}  & {\em std\+::shared\+\_\+ptr$<$\+I\+Dragon\+Motor\+Controller$>$} & motor controller used by this mechanism \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 41 of file Mech1\+Ind\+Motor.\+cpp.
+
 \mbox{\Hypertarget{class_mech1_ind_motor_a6a226c816d43b227a05bde24d0bd8a34}\label{class_mech1_ind_motor_a6a226c816d43b227a05bde24d0bd8a34}} 
 \index{Mech1IndMotor@{Mech1IndMotor}!Mech1IndMotor@{Mech1IndMotor}}
 \index{Mech1IndMotor@{Mech1IndMotor}!Mech1IndMotor@{Mech1IndMotor}}
@@ -74,6 +91,48 @@ Create a generic mechanism wiht 1 independent motor.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mech1_ind_motor_a2ea51d20899048beb5776eb677fbda06}\label{class_mech1_ind_motor_a2ea51d20899048beb5776eb677fbda06}} 
+\index{Mech1IndMotor@{Mech1IndMotor}!ActivateLogging@{ActivateLogging}}
+\index{ActivateLogging@{ActivateLogging}!Mech1IndMotor@{Mech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{ActivateLogging()}{ActivateLogging()}}
+{\footnotesize\ttfamily void Mech1\+Ind\+Motor\+::\+Activate\+Logging (\begin{DoxyParamCaption}\item[{units\+::second\+\_\+t}]{milliseconds\+Between\+Logging }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activates logging key values to network table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & indicate how many milliseconds\+Between\+Logging updates to the network table ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_mech_ae36bb88f573108e3bd6c462ac73a65a5}{I\+Mech}}.
+
+
+
+Definition at line 81 of file Mech1\+Ind\+Motor.\+cpp.
+
+\mbox{\Hypertarget{class_mech1_ind_motor_a14e69788c1af3292dde755421d224250}\label{class_mech1_ind_motor_a14e69788c1af3292dde755421d224250}} 
+\index{Mech1IndMotor@{Mech1IndMotor}!DeactivateLogging@{DeactivateLogging}}
+\index{DeactivateLogging@{DeactivateLogging}!Mech1IndMotor@{Mech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{DeactivateLogging()}{DeactivateLogging()}}
+{\footnotesize\ttfamily void Mech1\+Ind\+Motor\+::\+Deactivate\+Logging (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stop updating the key values to network table. 
+
+
+
+Implements \mbox{\hyperlink{class_i_mech_aab6c09d4742d031c1c4e0720df90a6ef}{I\+Mech}}.
+
+
+
+Definition at line 104 of file Mech1\+Ind\+Motor.\+cpp.
+
 \mbox{\Hypertarget{class_mech1_ind_motor_a288fa2d239e052e868b71395c2db11a3}\label{class_mech1_ind_motor_a288fa2d239e052e868b71395c2db11a3}} 
 \index{Mech1IndMotor@{Mech1IndMotor}!GetControlFileName@{GetControlFileName}}
 \index{GetControlFileName@{GetControlFileName}!Mech1IndMotor@{Mech1IndMotor}}
@@ -91,6 +150,10 @@ std\+::string the name of the file ~\newline
 
 
 Implements \mbox{\hyperlink{class_i_mech_a696bed03ac45f3da85cbe26e8658e0fd}{I\+Mech}}.
+
+
+
+Definition at line 66 of file Mech1\+Ind\+Motor.\+cpp.
 
 \mbox{\Hypertarget{class_mech1_ind_motor_a512adb78dcb9d2a8f7cf33dd3e7f75a3}\label{class_mech1_ind_motor_a512adb78dcb9d2a8f7cf33dd3e7f75a3}} 
 \index{Mech1IndMotor@{Mech1IndMotor}!GetNetworkTableName@{GetNetworkTableName}}
@@ -111,6 +174,10 @@ std\+::string the name of the network table ~\newline
 
 
 Implements \mbox{\hyperlink{class_i_mech_ab817a939691114a20840a82d40f894fa}{I\+Mech}}.
+
+
+
+Definition at line 74 of file Mech1\+Ind\+Motor.\+cpp.
 
 \mbox{\Hypertarget{class_mech1_ind_motor_a3f2d85ee70cab5942178f9fa15d0abb6}\label{class_mech1_ind_motor_a3f2d85ee70cab5942178f9fa15d0abb6}} 
 \index{Mech1IndMotor@{Mech1IndMotor}!GetPosition@{GetPosition}}
@@ -133,6 +200,10 @@ Implements \mbox{\hyperlink{class_i_mech1_ind_motor_af2ef42ade0b09e684d99cf7d5cd
 
 Reimplemented in \mbox{\hyperlink{class_shooter_hood_a0c9bbbff64bcb45ff119818e658045b5}{Shooter\+Hood}}.
 
+
+
+Definition at line 127 of file Mech1\+Ind\+Motor.\+cpp.
+
 \mbox{\Hypertarget{class_mech1_ind_motor_af1c04bfbb55bc4fcd9f2972e61ddd7b0}\label{class_mech1_ind_motor_af1c04bfbb55bc4fcd9f2972e61ddd7b0}} 
 \index{Mech1IndMotor@{Mech1IndMotor}!GetSpeed@{GetSpeed}}
 \index{GetSpeed@{GetSpeed}!Mech1IndMotor@{Mech1IndMotor}}
@@ -154,6 +225,10 @@ Implements \mbox{\hyperlink{class_i_mech1_ind_motor_a6ae1e4e4f8c13903cc690bafed7
 
 Reimplemented in \mbox{\hyperlink{class_shooter_hood_af0c23e222033f6bfa6cec3ff26776f32}{Shooter\+Hood}}.
 
+
+
+Definition at line 135 of file Mech1\+Ind\+Motor.\+cpp.
+
 \mbox{\Hypertarget{class_mech1_ind_motor_a15be2c611560b84ec8d5955cbb09408f}\label{class_mech1_ind_motor_a15be2c611560b84ec8d5955cbb09408f}} 
 \index{Mech1IndMotor@{Mech1IndMotor}!GetType@{GetType}}
 \index{GetType@{GetType}!Mech1IndMotor@{Mech1IndMotor}}
@@ -170,6 +245,28 @@ Indicates the type of mechanism this is.
 
 
 Implements \mbox{\hyperlink{class_i_mech_aa3c52c74a67a5f1caa2c11c13dacccdb}{I\+Mech}}.
+
+
+
+Definition at line 59 of file Mech1\+Ind\+Motor.\+cpp.
+
+\mbox{\Hypertarget{class_mech1_ind_motor_a1b171fd34edb87e31237a40dcec125df}\label{class_mech1_ind_motor_a1b171fd34edb87e31237a40dcec125df}} 
+\index{Mech1IndMotor@{Mech1IndMotor}!LogData@{LogData}}
+\index{LogData@{LogData}!Mech1IndMotor@{Mech1IndMotor}}
+\doxysubsubsection{\texorpdfstring{LogData()}{LogData()}}
+{\footnotesize\ttfamily void Mech1\+Ind\+Motor\+::\+Log\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+log data to the network table if it is activated and time period has past 
+
+
+
+Implements \mbox{\hyperlink{class_i_mech_a8ef8718f9a677623b49da0e2250fa326}{I\+Mech}}.
+
+
+
+Definition at line 91 of file Mech1\+Ind\+Motor.\+cpp.
 
 \mbox{\Hypertarget{class_mech1_ind_motor_a8278edecfa6865dad58493ce6f4012e2}\label{class_mech1_ind_motor_a8278edecfa6865dad58493ce6f4012e2}} 
 \index{Mech1IndMotor@{Mech1IndMotor}!SetControlConstants@{SetControlConstants}}
@@ -193,6 +290,10 @@ void
 
 Implements \mbox{\hyperlink{class_i_mech1_ind_motor_adff264c6bb32f6f1d5447844e635373c}{I\+Mech1\+Ind\+Motor}}.
 
+
+
+Definition at line 145 of file Mech1\+Ind\+Motor.\+cpp.
+
 \mbox{\Hypertarget{class_mech1_ind_motor_a55626a8ad6f24b69b6472465fbcda416}\label{class_mech1_ind_motor_a55626a8ad6f24b69b6472465fbcda416}} 
 \index{Mech1IndMotor@{Mech1IndMotor}!Update@{Update}}
 \index{Update@{Update}!Mech1IndMotor@{Mech1IndMotor}}
@@ -211,6 +312,10 @@ void ~\newline
 
 Implements \mbox{\hyperlink{class_i_mech1_ind_motor_ac2a4fc46e37505f96054a02496e5b5c1}{I\+Mech1\+Ind\+Motor}}.
 
+
+
+Definition at line 109 of file Mech1\+Ind\+Motor.\+cpp.
+
 \mbox{\Hypertarget{class_mech1_ind_motor_a999fd41ccd8773e87018d5e6ac849e84}\label{class_mech1_ind_motor_a999fd41ccd8773e87018d5e6ac849e84}} 
 \index{Mech1IndMotor@{Mech1IndMotor}!UpdateTarget@{UpdateTarget}}
 \index{UpdateTarget@{UpdateTarget}!Mech1IndMotor@{Mech1IndMotor}}
@@ -223,7 +328,11 @@ Implements \mbox{\hyperlink{class_i_mech1_ind_motor_a730d0d96efa4a272289934178aa
 
 
 
+Definition at line 117 of file Mech1\+Ind\+Motor.\+cpp.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_ind_motor_8h}{Mech1\+Ind\+Motor.\+h}}\item 
-C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_ind_motor_8cpp}{Mech1\+Ind\+Motor.\+cpp}}\end{DoxyCompactItemize}
+/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_ind_motor_8h}{Mech1\+Ind\+Motor.\+h}}\item 
+/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_mech1_ind_motor_8cpp}{Mech1\+Ind\+Motor.\+cpp}}\end{DoxyCompactItemize}

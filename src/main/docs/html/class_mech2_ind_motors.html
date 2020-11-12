@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021 Infinite Recharge 2: Mech2IndMotors Class Reference</title>
+<title>2021InfiniteRecharge2: Mech2IndMotors Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021 Infinite Recharge 2
+   <div id="projectname">2021InfiniteRecharge2
    </div>
   </td>
  </tr>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_mech2_ind_motors.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -99,6 +119,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a93ee8e2dc100aa0d74b303bbbf3ceed5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a93ee8e2dc100aa0d74b303bbbf3ceed5">GetNetworkTableName</a> () const override</td></tr>
 <tr class="memdesc:a93ee8e2dc100aa0d74b303bbbf3ceed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicate the Network Table name used to setting tracking parameters  <a href="class_mech2_ind_motors.html#a93ee8e2dc100aa0d74b303bbbf3ceed5">More...</a><br /></td></tr>
 <tr class="separator:a93ee8e2dc100aa0d74b303bbbf3ceed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3d9f04187c82f6ff5d51db27066e3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a9e3d9f04187c82f6ff5d51db27066e3e">ActivateLogging</a> (units::second_t millisecondsBetweenLogging) override final</td></tr>
+<tr class="memdesc:a9e3d9f04187c82f6ff5d51db27066e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates logging key values to network table.  <a href="class_mech2_ind_motors.html#a9e3d9f04187c82f6ff5d51db27066e3e">More...</a><br /></td></tr>
+<tr class="separator:a9e3d9f04187c82f6ff5d51db27066e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529e95c673e272e2b7708c180964937d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a529e95c673e272e2b7708c180964937d">DeactivateLogging</a> () override final</td></tr>
+<tr class="memdesc:a529e95c673e272e2b7708c180964937d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop updating the key values to network table.  <a href="class_mech2_ind_motors.html#a529e95c673e272e2b7708c180964937d">More...</a><br /></td></tr>
+<tr class="separator:a529e95c673e272e2b7708c180964937d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99038563053295d6a563c29e1ecf3b15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a99038563053295d6a563c29e1ecf3b15">LogData</a> () override</td></tr>
+<tr class="memdesc:a99038563053295d6a563c29e1ecf3b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">log data to the network table if it is activated and time period has past  <a href="class_mech2_ind_motors.html#a99038563053295d6a563c29e1ecf3b15">More...</a><br /></td></tr>
+<tr class="separator:a99038563053295d6a563c29e1ecf3b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad459458d7d1912216d61fa0cb29538db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#ad459458d7d1912216d61fa0cb29538db">Update</a> () override</td></tr>
 <tr class="memdesc:ad459458d7d1912216d61fa0cb29538db"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the output to the mechanism using the current controller and target value(s)  <a href="class_mech2_ind_motors.html#ad459458d7d1912216d61fa0cb29538db">More...</a><br /></td></tr>
 <tr class="separator:ad459458d7d1912216d61fa0cb29538db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,7 +159,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac415971e67e52e0cd2b3c1aa1312f1a1 inherit pub_methods_class_i_mech"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mech.html#ac415971e67e52e0cd2b3c1aa1312f1a1">~IMech</a> ()=default</td></tr>
 <tr class="separator:ac415971e67e52e0cd2b3c1aa1312f1a1 inherit pub_methods_class_i_mech"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8h_source.html#l00037">37</a> of file <a class="el" href="_mech2_ind_motors_8h_source.html">Mech2IndMotors.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acd6e089e48214bb86558a8e11fed54c8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd6e089e48214bb86558a8e11fed54c8">&#9670;&nbsp;</a></span>Mech2IndMotors() <span class="overload">[1/2]</span></h2>
 
@@ -240,6 +272,76 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9e3d9f04187c82f6ff5d51db27066e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e3d9f04187c82f6ff5d51db27066e3e">&#9670;&nbsp;</a></span>ActivateLogging()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mech2IndMotors::ActivateLogging </td>
+          <td>(</td>
+          <td class="paramtype">units::second_t&#160;</td>
+          <td class="paramname"><em>millisecondsBetweenLogging</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Activates logging key values to network table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int</td><td>indicate how many millisecondsBetweenLogging updates to the network table <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_i_mech.html#ae36bb88f573108e3bd6c462ac73a65a5">IMech</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00093">93</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a529e95c673e272e2b7708c180964937d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a529e95c673e272e2b7708c180964937d">&#9670;&nbsp;</a></span>DeactivateLogging()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mech2IndMotors::DeactivateLogging </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop updating the key values to network table. </p>
+
+<p>Implements <a class="el" href="class_i_mech.html#aab6c09d4742d031c1c4e0720df90a6ef">IMech</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00116">116</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ac2446c4efe71d18dc80691ae3dc2dc4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac2446c4efe71d18dc80691ae3dc2dc4c">&#9670;&nbsp;</a></span>GetControlFileName()</h2>
 
@@ -268,6 +370,8 @@ Public Member Functions</h2></td></tr>
  </dd></dl>
 
 <p>Implements <a class="el" href="class_i_mech.html#a696bed03ac45f3da85cbe26e8658e0fd">IMech</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00078">78</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
 
 </div>
 </div>
@@ -301,6 +405,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_mech.html#ab817a939691114a20840a82d40f894fa">IMech</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00086">86</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
+
 </div>
 </div>
 <a id="ad3a95115015b59120f324ed8e03c81c8"></a>
@@ -330,6 +436,8 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>double position in inches (translating mechanisms) or degrees (rotating mechanisms) </dd></dl>
 
 <p>Implements <a class="el" href="class_i_mech2_ind_motors.html#afc8cfcace7afd4f6c698af2208f9a9b8">IMech2IndMotors</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00151">151</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
 
 </div>
 </div>
@@ -361,6 +469,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_mech2_ind_motors.html#aba2df5de0db4ada23cd69521f8419199">IMech2IndMotors</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00165">165</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a0925beb0009c1e598dd3231a7198fbf0"></a>
@@ -390,6 +500,8 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>double position in inches (translating mechanisms) or degrees (rotating mechanisms) </dd></dl>
 
 <p>Implements <a class="el" href="class_i_mech2_ind_motors.html#a9a9b1dd5585600ea1255a8b0f030d768">IMech2IndMotors</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00158">158</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
 
 </div>
 </div>
@@ -421,6 +533,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_mech2_ind_motors.html#a41b0aa917183790731e76f39a8f9cc2d">IMech2IndMotors</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00172">172</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a25c469f281ad76e49274ef54f295968a"></a>
@@ -450,6 +564,39 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a> </dd></dl>
 
 <p>Implements <a class="el" href="class_i_mech.html#aa3c52c74a67a5f1caa2c11c13dacccdb">IMech</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00071">71</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a99038563053295d6a563c29e1ecf3b15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99038563053295d6a563c29e1ecf3b15">&#9670;&nbsp;</a></span>LogData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mech2IndMotors::LogData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>log data to the network table if it is activated and time period has past </p>
+
+<p>Implements <a class="el" href="class_i_mech.html#a8ef8718f9a677623b49da0e2250fa326">IMech</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00103">103</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
 
 </div>
 </div>
@@ -488,6 +635,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_mech2_ind_motors.html#a9de8f3c889207a96895ff6d6f005bd95">IMech2IndMotors</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00180">180</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
+
 </div>
 </div>
 <a id="ad459458d7d1912216d61fa0cb29538db"></a>
@@ -518,6 +667,8 @@ Public Member Functions</h2></td></tr>
  </dd></dl>
 
 <p>Implements <a class="el" href="class_i_mech2_ind_motors.html#a1da8a8c5acef53aece885e984431ee3b">IMech2IndMotors</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00124">124</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
 
 </div>
 </div>
@@ -557,16 +708,22 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_mech2_ind_motors.html#a37a3fe93fa4ca711bb96a97100bc0187">IMech2IndMotors</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_mech2_ind_motors_8cpp_source.html#l00136">136</a> of file <a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/<a class="el" href="_mech2_ind_motors_8h_source.html">Mech2IndMotors.h</a></li>
-<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/<a class="el" href="_mech2_ind_motors_8cpp.html">Mech2IndMotors.cpp</a></li>
+<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/<a class="el" href="_mech2_ind_motors_8h_source.html">Mech2IndMotors.h</a></li>
+<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/<a class="el" href="_mech2_ind_motors_8cpp_source.html">Mech2IndMotors.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_mech2_ind_motors.html">Mech2IndMotors</a></li>
+    <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -42,6 +42,10 @@ virtual void \mbox{\hyperlink{class_i_chassis_a64b0c5e1c4aa54ecfac53c7677b184e7}
 \begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_i_chassis_aef1d1542c93a347d2a4915f50085bd8a}{Get\+Wheel\+Diameter}} () const =0
 \item 
+virtual double \mbox{\hyperlink{class_i_chassis_af807aa5e885b101e6a1de7f9911272c7}{Get\+Wheel\+Base}} () const =0
+\item 
+virtual double \mbox{\hyperlink{class_i_chassis_a9e8945bda36c921e9d1b9daa2af5ec6b}{Get\+Track}} () const =0
+\item 
 \mbox{\hyperlink{class_i_chassis_af4d7d56ee1cd2e0a249402941e3c8f48}{I\+Chassis}} ()=default
 \item 
 virtual \mbox{\hyperlink{class_i_chassis_a251e92765c8e297490b62875b4c2fd1f}{$\sim$\+I\+Chassis}} ()=default
@@ -50,6 +54,10 @@ virtual \mbox{\hyperlink{class_i_chassis_a251e92765c8e297490b62875b4c2fd1f}{$\si
 
 \doxysubsection{Detailed Description}
 Interface for differential drives. 
+
+Definition at line 34 of file I\+Chassis.\+h.
+
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_i_chassis_af4d7d56ee1cd2e0a249402941e3c8f48}\label{class_i_chassis_af4d7d56ee1cd2e0a249402941e3c8f48}} 
@@ -175,6 +183,26 @@ double speed in inches per second of the center of the chassis
 
 Implemented in \mbox{\hyperlink{class_dragon_chassis_a54c251e24c4a4504f1363e17239a4fbc}{Dragon\+Chassis}}.
 
+\mbox{\Hypertarget{class_i_chassis_a9e8945bda36c921e9d1b9daa2af5ec6b}\label{class_i_chassis_a9e8945bda36c921e9d1b9daa2af5ec6b}} 
+\index{IChassis@{IChassis}!GetTrack@{GetTrack}}
+\index{GetTrack@{GetTrack}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{GetTrack()}{GetTrack()}}
+{\footnotesize\ttfamily virtual double I\+Chassis\+::\+Get\+Track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_chassis_ada6d173320843444a78ac333b344a9a8}{Dragon\+Chassis}}.
+
+\mbox{\Hypertarget{class_i_chassis_af807aa5e885b101e6a1de7f9911272c7}\label{class_i_chassis_af807aa5e885b101e6a1de7f9911272c7}} 
+\index{IChassis@{IChassis}!GetWheelBase@{GetWheelBase}}
+\index{GetWheelBase@{GetWheelBase}!IChassis@{IChassis}}
+\doxysubsubsection{\texorpdfstring{GetWheelBase()}{GetWheelBase()}}
+{\footnotesize\ttfamily virtual double I\+Chassis\+::\+Get\+Wheel\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_dragon_chassis_ac66a162c5530767ee5cb5900a54d8686}{Dragon\+Chassis}}.
+
 \mbox{\Hypertarget{class_i_chassis_aef1d1542c93a347d2a4915f50085bd8a}\label{class_i_chassis_aef1d1542c93a347d2a4915f50085bd8a}} 
 \index{IChassis@{IChassis}!GetWheelDiameter@{GetWheelDiameter}}
 \index{GetWheelDiameter@{GetWheelDiameter}!IChassis@{IChassis}}
@@ -237,4 +265,4 @@ Implemented in \mbox{\hyperlink{class_dragon_chassis_a39dce0dd0a51b21be140226cc1
 
 The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_i_chassis_8h}{I\+Chassis.\+h}}\end{DoxyCompactItemize}
+/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_i_chassis_8h}{I\+Chassis.\+h}}\end{DoxyCompactItemize}

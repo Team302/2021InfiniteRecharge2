@@ -1,12 +1,8 @@
 var class_shooter_hood =
 [
-    [ "ShooterHood", "class_shooter_hood.html#a81123eb53dad8258d0f8b99e503eed5c", null ],
-    [ "~ShooterHood", "class_shooter_hood.html#ac66b2feb843b8dccdbe963cc41ea7258", null ],
-    [ "ActivateSolenoid", "class_shooter_hood.html#a712e0e8e685521f54e5511f4c5b7d52e", null ],
-    [ "GetCurrentPosition", "class_shooter_hood.html#a90c27f70b7fb405c155561bc56428306", null ],
-    [ "GetCurrentSpeed", "class_shooter_hood.html#afb58273b6dcb9f64c95c9de355671402", null ],
-    [ "GetType", "class_shooter_hood.html#a440f815a4ec8edb913ae32bebaf0dd85", null ],
-    [ "IsSolenoidActivated", "class_shooter_hood.html#aa8e379f82db178c324a6e6d6e22b4039", null ],
-    [ "SetControlConstants", "class_shooter_hood.html#a8fb48c3c2f90c97a7d0335ca646d472d", null ],
-    [ "SetOutput", "class_shooter_hood.html#a9afc90ef461acd6748b1574d2a1770aa", null ]
+    [ "ShooterHood", "class_shooter_hood.html#a7c1c4beb4c8f4fb1ae5e01d7236e63c4", null ],
+    [ "~ShooterHood", "class_shooter_hood.html#af73507f2aea404f22f3fca8612bc7be6", null ],
+    [ "ShooterHood", "class_shooter_hood.html#affc10d9efc941d67fea0e11764f6c537", null ],
+    [ "GetPosition", "class_shooter_hood.html#a0c9bbbff64bcb45ff119818e658045b5", null ],
+    [ "GetSpeed", "class_shooter_hood.html#af0c23e222033f6bfa6cec3ff26776f32", null ]
 ];

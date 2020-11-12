@@ -27,13 +27,23 @@ virtual std\+::string \mbox{\hyperlink{class_i_mech_ab817a939691114a20840a82d40f
 \mbox{\hyperlink{class_i_mech_abc01c2761809f6a477e72da77d99595f}{I\+Mech}} ()=default
 \item 
 virtual \mbox{\hyperlink{class_i_mech_ac415971e67e52e0cd2b3c1aa1312f1a1}{$\sim$\+I\+Mech}} ()=default
-\end{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_mech_ae36bb88f573108e3bd6c462ac73a65a5}{Activate\+Logging}} (units\+::second\+\_\+t milliseconds\+Between\+Logging)=0
+\begin{DoxyCompactList}\small\item\em Activates logging key values to network table. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_mech_aab6c09d4742d031c1c4e0720df90a6ef}{Deactivate\+Logging}} ()=0
+\begin{DoxyCompactList}\small\item\em Stop updating the key values to network table. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_mech_a8ef8718f9a677623b49da0e2250fa326}{Log\+Data}} ()=0
+\begin{DoxyCompactList}\small\item\em log data to the network table if it is activated and time period has past \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 This is the interface for mechanisms regardless of what control items are available. 
 
 Interface for subsystems. 
+
+Definition at line 39 of file I\+Mech.\+h.
+
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_i_mech_abc01c2761809f6a477e72da77d99595f}\label{class_i_mech_abc01c2761809f6a477e72da77d99595f}} 
@@ -51,6 +61,40 @@ Interface for subsystems.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_mech_ae36bb88f573108e3bd6c462ac73a65a5}\label{class_i_mech_ae36bb88f573108e3bd6c462ac73a65a5}} 
+\index{IMech@{IMech}!ActivateLogging@{ActivateLogging}}
+\index{ActivateLogging@{ActivateLogging}!IMech@{IMech}}
+\doxysubsubsection{\texorpdfstring{ActivateLogging()}{ActivateLogging()}}
+{\footnotesize\ttfamily virtual void I\+Mech\+::\+Activate\+Logging (\begin{DoxyParamCaption}\item[{units\+::second\+\_\+t}]{milliseconds\+Between\+Logging }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Activates logging key values to network table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & indicate how many milliseconds\+Between\+Logging updates to the network table ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_mech2_ind_motors_a9e3d9f04187c82f6ff5d51db27066e3e}{Mech2\+Ind\+Motors}}, \mbox{\hyperlink{class_mech1_ind_motor_a2ea51d20899048beb5776eb677fbda06}{Mech1\+Ind\+Motor}}, and \mbox{\hyperlink{class_mech_ad2cfbcb9033be2844d450aeea6a92f78}{Mech}}.
+
+\mbox{\Hypertarget{class_i_mech_aab6c09d4742d031c1c4e0720df90a6ef}\label{class_i_mech_aab6c09d4742d031c1c4e0720df90a6ef}} 
+\index{IMech@{IMech}!DeactivateLogging@{DeactivateLogging}}
+\index{DeactivateLogging@{DeactivateLogging}!IMech@{IMech}}
+\doxysubsubsection{\texorpdfstring{DeactivateLogging()}{DeactivateLogging()}}
+{\footnotesize\ttfamily virtual void I\+Mech\+::\+Deactivate\+Logging (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Stop updating the key values to network table. 
+
+
+
+Implemented in \mbox{\hyperlink{class_mech2_ind_motors_a529e95c673e272e2b7708c180964937d}{Mech2\+Ind\+Motors}}, \mbox{\hyperlink{class_mech1_ind_motor_a14e69788c1af3292dde755421d224250}{Mech1\+Ind\+Motor}}, and \mbox{\hyperlink{class_mech_ac9ad0746220c95dde4abe97c34710fc2}{Mech}}.
+
 \mbox{\Hypertarget{class_i_mech_a696bed03ac45f3da85cbe26e8658e0fd}\label{class_i_mech_a696bed03ac45f3da85cbe26e8658e0fd}} 
 \index{IMech@{IMech}!GetControlFileName@{GetControlFileName}}
 \index{GetControlFileName@{GetControlFileName}!IMech@{IMech}}
@@ -104,8 +148,22 @@ Indicates the type of mechanism this is.
 
 Implemented in \mbox{\hyperlink{class_mech2_ind_motors_a25c469f281ad76e49274ef54f295968a}{Mech2\+Ind\+Motors}}, \mbox{\hyperlink{class_mech1_ind_motor_a15be2c611560b84ec8d5955cbb09408f}{Mech1\+Ind\+Motor}}, and \mbox{\hyperlink{class_mech_acb9e3f4091481906e0a191e10f2f0a04}{Mech}}.
 
+\mbox{\Hypertarget{class_i_mech_a8ef8718f9a677623b49da0e2250fa326}\label{class_i_mech_a8ef8718f9a677623b49da0e2250fa326}} 
+\index{IMech@{IMech}!LogData@{LogData}}
+\index{LogData@{LogData}!IMech@{IMech}}
+\doxysubsubsection{\texorpdfstring{LogData()}{LogData()}}
+{\footnotesize\ttfamily virtual void I\+Mech\+::\+Log\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+log data to the network table if it is activated and time period has past 
+
+
+
+Implemented in \mbox{\hyperlink{class_mech2_ind_motors_a99038563053295d6a563c29e1ecf3b15}{Mech2\+Ind\+Motors}}, \mbox{\hyperlink{class_mech1_ind_motor_a1b171fd34edb87e31237a40dcec125df}{Mech1\+Ind\+Motor}}, and \mbox{\hyperlink{class_mech_ab8e245e9cf0061ef1acf09a9103e41c4}{Mech}}.
+
 
 
 The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_i_mech_8h}{I\+Mech.\+h}}\end{DoxyCompactItemize}
+/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_i_mech_8h}{I\+Mech.\+h}}\end{DoxyCompactItemize}

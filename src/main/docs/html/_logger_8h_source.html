@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021 Infinite Recharge 2: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/utils/Logger.h Source File</title>
+<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/utils/Logger.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021 Infinite Recharge 2
+   <div id="projectname">2021InfiniteRecharge2
    </div>
   </td>
  </tr>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_logger_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_4a8796b0ba1d3dc122873832137fbe4e.html">GitRepos</a></li><li class="navelem"><a class="el" href="dir_83085388841f7ee1a6991263baca55c0.html">2021InfiniteRecharge2</a></li><li class="navelem"><a class="el" href="dir_bb938b4b30481aeb7e6311a20b9b0d8b.html">src</a></li><li class="navelem"><a class="el" href="dir_cf043aa121517e2b1a8dc71d82d0697e.html">main</a></li><li class="navelem"><a class="el" href="dir_2eb0ae2a6f5f12d16e08f1ad17e42ed4.html">cpp</a></li><li class="navelem"><a class="el" href="dir_9932b6b038c3420194ef80daa84e708f.html">utils</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Logger.h</div>  </div>
@@ -93,81 +109,119 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// C++ Includes</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// FRC includes</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// Team 302 includes</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// FRC includes</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// Team 302 includes</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// Third Party Includes</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// Third Party Includes</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_logger.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_logger.html">Logger</a></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013a">   44</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013a">LOGGER_OPTION</a></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aacbcdf0940aae87a9c60c0c310aaf0836">   46</a></span>&#160;            <a class="code" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aacbcdf0940aae87a9c60c0c310aaf0836">CONSOLE</a>,</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aa30505ac45161ab12db3907e4236a7417">   47</a></span>&#160;            <a class="code" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aa30505ac45161ab12db3907e4236a7417">DASHBOARD</a>,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aa79d5b0f7ae29658e8a44668f40fb59be">EAT_IT</a></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aa79d5b0f7ae29658e8a44668f40fb59be">   49</a></span>&#160;        };</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">//=====================================================================================</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"></span>        <span class="comment">//=====================================================================================</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_logger.html">Logger</a>* <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">GetLogger</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_logger.html#a81e0fa4eef4a980adb91577eac4bdebd">SetLoggingOption</a></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        (</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013a">LOGGER_OPTION</a> option    <span class="comment">// &lt;I&gt; - Logging option</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;       (</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">const</span> std::string&amp;   locationIdentifier,     <span class="comment">// &lt;I&gt; - classname or object identifier</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">const</span> std::string&amp;   message                 <span class="comment">// &lt;I&gt; - error message</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;       );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_logger.html#a258aeb4010abaae86c40b35d6cceed5e">   69</a></span>&#160;       <span class="keywordtype">void</span> <a class="code" href="class_logger.html#a258aeb4010abaae86c40b35d6cceed5e">OnDash</a></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;       (</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keyword">const</span> std::string&amp;   locationIdentifier,     <span class="comment">// &lt;I&gt; - classname or object identifier</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keyword">const</span> std::string&amp;   message                 <span class="comment">// &lt;I&gt; - error message</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;       );</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_logger.html#aca97721e0531390ab459dafe49697cee">   74</a></span>&#160;       <span class="keywordtype">void</span> <a class="code" href="class_logger.html#aca97721e0531390ab459dafe49697cee">OnDash</a></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;       (</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keyword">const</span> std::string&amp;   locationIdentifier,     <span class="comment">// &lt;I&gt; - classname or object identifier</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordtype">bool</span>                 value                 <span class="comment">// &lt;I&gt; - error message</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;       );</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="class_logger.html">Logger</a>();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        ~<a class="code" href="class_logger.html">Logger</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013a">LOGGER_OPTION</a> m_level;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_logger.html">Logger</a>* m_instance;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_logger.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_logger.html">Logger</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013a">   47</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013a">LOGGER_OPTION</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aacbcdf0940aae87a9c60c0c310aaf0836">   49</a></span>&#160;            <a class="code" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aacbcdf0940aae87a9c60c0c310aaf0836">CONSOLE</a>,        </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aa30505ac45161ab12db3907e4236a7417">   50</a></span>&#160;            <a class="code" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aa30505ac45161ab12db3907e4236a7417">DASHBOARD</a>,      </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aa79d5b0f7ae29658e8a44668f40fb59be">EAT_IT</a>          </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aa79d5b0f7ae29658e8a44668f40fb59be">   52</a></span>&#160;        };</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822">   56</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822">LOGGER_LEVEL</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822a3ce1bbeb15a3d8e29e4c5e75492a781b">   58</a></span>&#160;            <a class="code" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822a3ce1bbeb15a3d8e29e4c5e75492a781b">ERROR</a>,             </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822abe82a6a06f9dd17b2e78fefb2e8e7e52">   59</a></span>&#160;            <a class="code" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822abe82a6a06f9dd17b2e78fefb2e8e7e52">ERROR_ONCE</a>,        </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822afb1bf96f41b282521d9438106ea11bca">   60</a></span>&#160;            <a class="code" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822afb1bf96f41b282521d9438106ea11bca">WARNING</a>,           </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822ae5c5f850ebeaf48f1409f68f24834c2c">   61</a></span>&#160;            <a class="code" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822ae5c5f850ebeaf48f1409f68f24834c2c">WARNING_ONCE</a>,      </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822a19b617e28d4ad2b9abc7092920b915c0">   62</a></span>&#160;            <a class="code" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822a19b617e28d4ad2b9abc7092920b915c0">PRINT</a>,             </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822a5bcbfd3e01d145344f9684652e7d8faa">PRINT_ONCE</a>         </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822a5bcbfd3e01d145344f9684652e7d8faa">   64</a></span>&#160;        };</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_logger.html">Logger</a>* <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">GetLogger</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_logger.html#a81e0fa4eef4a980adb91577eac4bdebd">SetLoggingOption</a></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        (</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <a class="code" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013a">LOGGER_OPTION</a> option    <span class="comment">// &lt;I&gt; - Logging option</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_logger.html#a017fb8d84e86b95761ff50b33a67d8dd">SetLoggingLevel</a></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        (</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822">LOGGER_LEVEL</a> level    <span class="comment">// &lt;I&gt; - Logging level</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">   87</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        (</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keyword">const</span> std::string&amp;      locationIdentifier,     </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keyword">const</span> std::string&amp;      message                 </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        );</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_logger.html#a94e57f440914047a967572adf4478d99">   97</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_logger.html#a94e57f440914047a967572adf4478d99">LogError</a></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        (</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <a class="code" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822">LOGGER_LEVEL</a>            level,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keyword">const</span> std::string&amp;      locationIdentifier,     </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keyword">const</span> std::string&amp;      message                 </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        );</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_logger.html#a258aeb4010abaae86c40b35d6cceed5e">  108</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_logger.html#a258aeb4010abaae86c40b35d6cceed5e">OnDash</a></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        (</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keyword">const</span> std::string&amp;   locationIdentifier,    </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keyword">const</span> std::string&amp;   message  </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        );              </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_logger.html#aca97721e0531390ab459dafe49697cee">  117</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_logger.html#aca97721e0531390ab459dafe49697cee">OnDash</a></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        (</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keyword">const</span> std::string&amp;   locationIdentifier,     </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordtype">bool</span>                 value                 </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="class_logger.html">Logger</a>();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        ~<a class="code" href="class_logger.html">Logger</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013a">LOGGER_OPTION</a>           m_option;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="class_logger.html#a0cf36c17e25416ff106ff069f2518822">LOGGER_LEVEL</a>            m_level;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        std::set&lt;std::string&gt;   m_alreadyDisplayed;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_logger.html">Logger</a>*          m_instance;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;};</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_logger_html_a81e0fa4eef4a980adb91577eac4bdebd"><div class="ttname"><a href="class_logger.html#a81e0fa4eef4a980adb91577eac4bdebd">Logger::SetLoggingOption</a></div><div class="ttdeci">void SetLoggingOption(LOGGER_OPTION option)</div><div class="ttdef"><b>Definition:</b> Logger.cpp:62</div></div>
-<div class="ttc" id="aclass_logger_html_aca97721e0531390ab459dafe49697cee"><div class="ttname"><a href="class_logger.html#aca97721e0531390ab459dafe49697cee">Logger::OnDash</a></div><div class="ttdeci">void OnDash(const std::string &amp;locationIdentifier, bool value)</div></div>
-<div class="ttc" id="aclass_logger_html_a4edb2ae414fe730aa45c9279c07f013aa79d5b0f7ae29658e8a44668f40fb59be"><div class="ttname"><a href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aa79d5b0f7ae29658e8a44668f40fb59be">Logger::EAT_IT</a></div><div class="ttdeci">@ EAT_IT</div><div class="ttdef"><b>Definition:</b> Logger.h:48</div></div>
-<div class="ttc" id="aclass_logger_html_a4edb2ae414fe730aa45c9279c07f013a"><div class="ttname"><a href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013a">Logger::LOGGER_OPTION</a></div><div class="ttdeci">LOGGER_OPTION</div><div class="ttdef"><b>Definition:</b> Logger.h:45</div></div>
-<div class="ttc" id="aclass_logger_html_a258aeb4010abaae86c40b35d6cceed5e"><div class="ttname"><a href="class_logger.html#a258aeb4010abaae86c40b35d6cceed5e">Logger::OnDash</a></div><div class="ttdeci">void OnDash(const std::string &amp;locationIdentifier, const std::string &amp;message)</div></div>
-<div class="ttc" id="aclass_logger_html_a98d7aec19dcdfb9d8faa46d83d927883"><div class="ttname"><a href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">Logger::LogError</a></div><div class="ttdeci">void LogError(const std::string &amp;locationIdentifier, const std::string &amp;message)</div><div class="ttdef"><b>Definition:</b> Logger.cpp:71</div></div>
-<div class="ttc" id="aclass_logger_html_ae85cfbef8b7e6940475a5012fa1935c6"><div class="ttname"><a href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a></div><div class="ttdeci">static Logger * GetLogger()</div><div class="ttdef"><b>Definition:</b> Logger.cpp:52</div></div>
-<div class="ttc" id="aclass_logger_html"><div class="ttname"><a href="class_logger.html">Logger</a></div><div class="ttdoc">Logger.h.</div><div class="ttdef"><b>Definition:</b> Logger.h:41</div></div>
-<div class="ttc" id="aclass_logger_html_a4edb2ae414fe730aa45c9279c07f013aacbcdf0940aae87a9c60c0c310aaf0836"><div class="ttname"><a href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aacbcdf0940aae87a9c60c0c310aaf0836">Logger::CONSOLE</a></div><div class="ttdeci">@ CONSOLE</div><div class="ttdef"><b>Definition:</b> Logger.h:46</div></div>
-<div class="ttc" id="aclass_logger_html_a4edb2ae414fe730aa45c9279c07f013aa30505ac45161ab12db3907e4236a7417"><div class="ttname"><a href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aa30505ac45161ab12db3907e4236a7417">Logger::DASHBOARD</a></div><div class="ttdeci">@ DASHBOARD</div><div class="ttdef"><b>Definition:</b> Logger.h:47</div></div>
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_logger_html_a0cf36c17e25416ff106ff069f2518822ae5c5f850ebeaf48f1409f68f24834c2c"><div class="ttname"><a href="class_logger.html#a0cf36c17e25416ff106ff069f2518822ae5c5f850ebeaf48f1409f68f24834c2c">Logger::WARNING_ONCE</a></div><div class="ttdeci">@ WARNING_ONCE</div><div class="ttdoc">this is a medium level error we only want to see once</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8h_source.html#l00061">Logger.h:61</a></div></div>
+<div class="ttc" id="aclass_logger_html_a81e0fa4eef4a980adb91577eac4bdebd"><div class="ttname"><a href="class_logger.html#a81e0fa4eef4a980adb91577eac4bdebd">Logger::SetLoggingOption</a></div><div class="ttdeci">void SetLoggingOption(LOGGER_OPTION option)</div><div class="ttdoc">set the option for where the logging messages should be displayed</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00060">Logger.cpp:61</a></div></div>
+<div class="ttc" id="aclass_logger_html_aca97721e0531390ab459dafe49697cee"><div class="ttname"><a href="class_logger.html#aca97721e0531390ab459dafe49697cee">Logger::OnDash</a></div><div class="ttdeci">void OnDash(const std::string &amp;locationIdentifier, bool value)</div><div class="ttdoc">Write a message to the dashboard.</div></div>
+<div class="ttc" id="aclass_logger_html_a0cf36c17e25416ff106ff069f2518822afb1bf96f41b282521d9438106ea11bca"><div class="ttname"><a href="class_logger.html#a0cf36c17e25416ff106ff069f2518822afb1bf96f41b282521d9438106ea11bca">Logger::WARNING</a></div><div class="ttdeci">@ WARNING</div><div class="ttdoc">this is a medium level error</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8h_source.html#l00060">Logger.h:60</a></div></div>
+<div class="ttc" id="aclass_logger_html_a4edb2ae414fe730aa45c9279c07f013aa79d5b0f7ae29658e8a44668f40fb59be"><div class="ttname"><a href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aa79d5b0f7ae29658e8a44668f40fb59be">Logger::EAT_IT</a></div><div class="ttdeci">@ EAT_IT</div><div class="ttdoc">don't write anything (useful at comps where we want to minimize network traffic)</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8h_source.html#l00052">Logger.h:51</a></div></div>
+<div class="ttc" id="aclass_logger_html_a0cf36c17e25416ff106ff069f2518822a5bcbfd3e01d145344f9684652e7d8faa"><div class="ttname"><a href="class_logger.html#a0cf36c17e25416ff106ff069f2518822a5bcbfd3e01d145344f9684652e7d8faa">Logger::PRINT_ONCE</a></div><div class="ttdeci">@ PRINT_ONCE</div><div class="ttdoc">this is an information/debug message we only want to see once</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8h_source.html#l00064">Logger.h:63</a></div></div>
+<div class="ttc" id="aclass_logger_html_a94e57f440914047a967572adf4478d99"><div class="ttname"><a href="class_logger.html#a94e57f440914047a967572adf4478d99">Logger::LogError</a></div><div class="ttdeci">void LogError(LOGGER_LEVEL level, const std::string &amp;locationIdentifier, const std::string &amp;message)</div><div class="ttdoc">log a message</div></div>
+<div class="ttc" id="aclass_logger_html_a0cf36c17e25416ff106ff069f2518822a3ce1bbeb15a3d8e29e4c5e75492a781b"><div class="ttname"><a href="class_logger.html#a0cf36c17e25416ff106ff069f2518822a3ce1bbeb15a3d8e29e4c5e75492a781b">Logger::ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdoc">this is catastrophic</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8h_source.html#l00058">Logger.h:58</a></div></div>
+<div class="ttc" id="aclass_logger_html_a4edb2ae414fe730aa45c9279c07f013a"><div class="ttname"><a href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013a">Logger::LOGGER_OPTION</a></div><div class="ttdeci">LOGGER_OPTION</div><div class="ttdoc">Define where the items being logged should be sent.</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8h_source.html#l00047">Logger.h:48</a></div></div>
+<div class="ttc" id="aclass_logger_html_a0cf36c17e25416ff106ff069f2518822"><div class="ttname"><a href="class_logger.html#a0cf36c17e25416ff106ff069f2518822">Logger::LOGGER_LEVEL</a></div><div class="ttdeci">LOGGER_LEVEL</div><div class="ttdoc">Define what level the message is as well as this can be used to write only the messages of a certain ...</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8h_source.html#l00056">Logger.h:57</a></div></div>
+<div class="ttc" id="aclass_logger_html_a258aeb4010abaae86c40b35d6cceed5e"><div class="ttname"><a href="class_logger.html#a258aeb4010abaae86c40b35d6cceed5e">Logger::OnDash</a></div><div class="ttdeci">void OnDash(const std::string &amp;locationIdentifier, const std::string &amp;message)</div><div class="ttdoc">Write a message to the dashboard.</div></div>
+<div class="ttc" id="aclass_logger_html_a0cf36c17e25416ff106ff069f2518822a19b617e28d4ad2b9abc7092920b915c0"><div class="ttname"><a href="class_logger.html#a0cf36c17e25416ff106ff069f2518822a19b617e28d4ad2b9abc7092920b915c0">Logger::PRINT</a></div><div class="ttdeci">@ PRINT</div><div class="ttdoc">this is an information/debug message</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8h_source.html#l00062">Logger.h:62</a></div></div>
+<div class="ttc" id="aclass_logger_html_a98d7aec19dcdfb9d8faa46d83d927883"><div class="ttname"><a href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">Logger::LogError</a></div><div class="ttdeci">void LogError(const std::string &amp;locationIdentifier, const std::string &amp;message)</div><div class="ttdoc">log a message</div></div>
+<div class="ttc" id="aclass_logger_html_ae85cfbef8b7e6940475a5012fa1935c6"><div class="ttname"><a href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a></div><div class="ttdeci">static Logger * GetLogger()</div><div class="ttdoc">Find or create the singleton logger.</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00049">Logger.cpp:49</a></div></div>
+<div class="ttc" id="aclass_logger_html_a017fb8d84e86b95761ff50b33a67d8dd"><div class="ttname"><a href="class_logger.html#a017fb8d84e86b95761ff50b33a67d8dd">Logger::SetLoggingLevel</a></div><div class="ttdeci">void SetLoggingLevel(LOGGER_LEVEL level)</div><div class="ttdoc">set the level for messages that will be displayed</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00070">Logger.cpp:71</a></div></div>
+<div class="ttc" id="aclass_logger_html"><div class="ttname"><a href="class_logger.html">Logger</a></div><div class="ttdoc">Logger.h.</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8h_source.html#l00041">Logger.h:42</a></div></div>
+<div class="ttc" id="aclass_logger_html_a4edb2ae414fe730aa45c9279c07f013aacbcdf0940aae87a9c60c0c310aaf0836"><div class="ttname"><a href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aacbcdf0940aae87a9c60c0c310aaf0836">Logger::CONSOLE</a></div><div class="ttdeci">@ CONSOLE</div><div class="ttdoc">write to the RoboRio Console</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8h_source.html#l00049">Logger.h:49</a></div></div>
+<div class="ttc" id="aclass_logger_html_a4edb2ae414fe730aa45c9279c07f013aa30505ac45161ab12db3907e4236a7417"><div class="ttname"><a href="class_logger.html#a4edb2ae414fe730aa45c9279c07f013aa30505ac45161ab12db3907e4236a7417">Logger::DASHBOARD</a></div><div class="ttdeci">@ DASHBOARD</div><div class="ttdoc">write to the SmartDashboard</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8h_source.html#l00050">Logger.h:50</a></div></div>
+<div class="ttc" id="aclass_logger_html_a0cf36c17e25416ff106ff069f2518822abe82a6a06f9dd17b2e78fefb2e8e7e52"><div class="ttname"><a href="class_logger.html#a0cf36c17e25416ff106ff069f2518822abe82a6a06f9dd17b2e78fefb2e8e7e52">Logger::ERROR_ONCE</a></div><div class="ttdeci">@ ERROR_ONCE</div><div class="ttdoc">this is catastrophic that we only want to see once</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8h_source.html#l00059">Logger.h:59</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4a8796b0ba1d3dc122873832137fbe4e.html">GitRepos</a></li><li class="navelem"><a class="el" href="dir_83085388841f7ee1a6991263baca55c0.html">2021InfiniteRecharge2</a></li><li class="navelem"><a class="el" href="dir_bb938b4b30481aeb7e6311a20b9b0d8b.html">src</a></li><li class="navelem"><a class="el" href="dir_cf043aa121517e2b1a8dc71d82d0697e.html">main</a></li><li class="navelem"><a class="el" href="dir_2eb0ae2a6f5f12d16e08f1ad17e42ed4.html">cpp</a></li><li class="navelem"><a class="el" href="dir_9932b6b038c3420194ef80daa84e708f.html">utils</a></li><li class="navelem"><a class="el" href="_logger_8h.html">Logger.h</a></li>
+    <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
 </body>
 </html>

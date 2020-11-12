@@ -14,24 +14,55 @@ Inheritance diagram for Turn\+Angle\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_turn_angle_a8cff17364be35148e04ac801c091b31b}{Turn\+Angle}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em construct a Turn Angle primitive that takes in control data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_angle_a6a1d415360ec0082fb4a701b17200bd4}{Turn\+Angle}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$control\+Data)
+\begin{DoxyCompactList}\small\item\em construct a Turn Angle primitive that takes in control data. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_turn_angle_ae4ce91356672270c9ee1c2f17bc8ef93}{$\sim$\+Turn\+Angle}} ()=default
 \item 
 void \mbox{\hyperlink{class_turn_angle_a80a892d30883e9b570227eece66bf36c}{Init}} (\mbox{\hyperlink{class_primitive_params}{Primitive\+Params}} $\ast$params) override
-\item 
+\begin{DoxyCompactList}\small\item\em initialize the primitive with a new set of parameters \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_turn_angle_a8f9d1e8c5ac87f444cbe0972a62f527b}{Run}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em execute the primitive (call from periodic methods) \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_turn_angle_ad423fdd2e504132a5eda6edd997b3859}{Is\+Done}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if the robot has reached its target angle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 38 of file Turn\+Angle.\+h.
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_turn_angle_a8cff17364be35148e04ac801c091b31b}\label{class_turn_angle_a8cff17364be35148e04ac801c091b31b}} 
 \index{TurnAngle@{TurnAngle}!TurnAngle@{TurnAngle}}
 \index{TurnAngle@{TurnAngle}!TurnAngle@{TurnAngle}}
-\doxysubsubsection{\texorpdfstring{TurnAngle()}{TurnAngle()}}
+\doxysubsubsection{\texorpdfstring{TurnAngle()}{TurnAngle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Turn\+Angle\+::\+Turn\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+construct a Turn Angle primitive that takes in control data. 
+
+
+
+Definition at line 47 of file Turn\+Angle.\+cpp.
+
+\mbox{\Hypertarget{class_turn_angle_a6a1d415360ec0082fb4a701b17200bd4}\label{class_turn_angle_a6a1d415360ec0082fb4a701b17200bd4}} 
+\index{TurnAngle@{TurnAngle}!TurnAngle@{TurnAngle}}
+\index{TurnAngle@{TurnAngle}!TurnAngle@{TurnAngle}}
+\doxysubsubsection{\texorpdfstring{TurnAngle()}{TurnAngle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Turn\+Angle\+::\+Turn\+Angle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$}]{control\+Data }\end{DoxyParamCaption})}
+
+
+
+construct a Turn Angle primitive that takes in control data. 
+
+
+
+Definition at line 72 of file Turn\+Angle.\+cpp.
 
 \mbox{\Hypertarget{class_turn_angle_ae4ce91356672270c9ee1c2f17bc8ef93}\label{class_turn_angle_ae4ce91356672270c9ee1c2f17bc8ef93}} 
 \index{TurnAngle@{TurnAngle}!````~TurnAngle@{$\sim$TurnAngle}}
@@ -48,9 +79,22 @@ bool \mbox{\hyperlink{class_turn_angle_ad423fdd2e504132a5eda6edd997b3859}{Is\+Do
 \doxysubsubsection{\texorpdfstring{Init()}{Init()}}
 {\footnotesize\ttfamily void Turn\+Angle\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_primitive_params}{Primitive\+Params}} $\ast$}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
-auto cd = make\+\_\+shared$<$\+Control\+Data$>$( Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+P\+E\+::\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+I\+N\+CH, Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+R\+U\+N\+\_\+\+L\+O\+C\+S\+::\+M\+O\+T\+O\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER, string(\char`\"{}\+Turn\+Angle\char`\"{}), 3.\+0, 0.\+0, 0.\+0, 0.\+0, 0.\+0, 0.\+0, 0.\+0, 1.\+0, 0.\+0 );
+
+
+initialize the primitive with a new set of parameters 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Primitive\+Params$\ast$} & parameters to use for the primitive \\
+\hline
+\end{DoxyParams}
+
 
 Implements \mbox{\hyperlink{class_i_primitive_abe9e4c3b5a5b806d2c551c0f56a075d2}{I\+Primitive}}.
+
+
+
+Definition at line 90 of file Turn\+Angle.\+cpp.
 
 \mbox{\Hypertarget{class_turn_angle_ad423fdd2e504132a5eda6edd997b3859}\label{class_turn_angle_ad423fdd2e504132a5eda6edd997b3859}} 
 \index{TurnAngle@{TurnAngle}!IsDone@{IsDone}}
@@ -60,7 +104,18 @@ Implements \mbox{\hyperlink{class_i_primitive_abe9e4c3b5a5b806d2c551c0f56a075d2}
 
 
 
+Check if the robot has reached its target angle. 
+
+\begin{DoxyReturn}{Returns}
+bool\+: true -\/ reached target (or timed out), false -\/ still going to target 
+\end{DoxyReturn}
+
+
 Implements \mbox{\hyperlink{class_i_primitive_a5b62801261f9bd974be04217bd86f668}{I\+Primitive}}.
+
+
+
+Definition at line 175 of file Turn\+Angle.\+cpp.
 
 \mbox{\Hypertarget{class_turn_angle_a8f9d1e8c5ac87f444cbe0972a62f527b}\label{class_turn_angle_a8f9d1e8c5ac87f444cbe0972a62f527b}} 
 \index{TurnAngle@{TurnAngle}!Run@{Run}}
@@ -70,11 +125,19 @@ Implements \mbox{\hyperlink{class_i_primitive_a5b62801261f9bd974be04217bd86f668}
 
 
 
+execute the primitive (call from periodic methods) 
+
+
+
 Implements \mbox{\hyperlink{class_i_primitive_a3c34bd0f5ddbfe150ecade13303b6cd6}{I\+Primitive}}.
+
+
+
+Definition at line 130 of file Turn\+Angle.\+cpp.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/auton/primitives/\mbox{\hyperlink{_turn_angle_8h}{Turn\+Angle.\+h}}\item 
-C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/auton/primitives/\mbox{\hyperlink{_turn_angle_8cpp}{Turn\+Angle.\+cpp}}\end{DoxyCompactItemize}
+/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/auton/primitives/\mbox{\hyperlink{_turn_angle_8h}{Turn\+Angle.\+h}}\item 
+/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/auton/primitives/\mbox{\hyperlink{_turn_angle_8cpp}{Turn\+Angle.\+cpp}}\end{DoxyCompactItemize}
