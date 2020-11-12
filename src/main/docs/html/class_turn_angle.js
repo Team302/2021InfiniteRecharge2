@@ -1,6 +1,7 @@
 var class_turn_angle =
 [
     [ "TurnAngle", "class_turn_angle.html#a8cff17364be35148e04ac801c091b31b", null ],
+    [ "TurnAngle", "class_turn_angle.html#a6a1d415360ec0082fb4a701b17200bd4", null ],
     [ "~TurnAngle", "class_turn_angle.html#ae4ce91356672270c9ee1c2f17bc8ef93", null ],
     [ "Init", "class_turn_angle.html#a80a892d30883e9b570227eece66bf36c", null ],
     [ "IsDone", "class_turn_angle.html#ad423fdd2e504132a5eda6edd997b3859", null ],

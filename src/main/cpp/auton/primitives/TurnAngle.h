@@ -50,11 +50,6 @@ class TurnAngle : public IPrimitive
         bool IsDone() override;
 
     private:
-        const float PROPORTIONAL_COEFF  = 3.0; //0.5
-        const float INTREGRAL_COEFF     = 0.0;
-        const float DERIVATIVE_COEFF    = 0.0;
-        const float FEET_FORWARD_COEFF  = 0.0;
-
         std::shared_ptr<IChassis> m_chassis;
    		std::unique_ptr<frc::Timer> m_timer;
 
@@ -66,9 +61,6 @@ class TurnAngle : public IPrimitive
         ControlData*     m_control;
         bool             m_turnRight;
 
-        const float ANGLE_THRESH = 2; // +/- threshold for being at angle
-        const float MAX_VELOCITY = 20; //inches per second
-        const float MIN_VELOCITY = 4;
-        const float ANGLE_DIFFERENCE_VELOCITY_MULTIPLIER = 0.7;
+        const double SLOW_PERCENT = 0.2;
+        const double ANGLE_THRESH = 2; // +/- threshold for being at angle
 };
-
