@@ -53,8 +53,6 @@ AnalogInputFactory* AnalogInputFactory::GetFactory()
 }
 
 
-
-
 /// @brief  Create the requested analog input
 /// @return shared_ptr<DragonAnalogInput>   the mechanism or nullptr if mechanism doesn't 
 ///         exist and cannot be created.
