@@ -15,20 +15,21 @@
 //====================================================================================================================================================
 
 // C++ Includes
-#include <memory>
+//#include <memory>
 #include <string>
 
 // FRC includes
 #include <frc/Timer.h>
-#include <units/units.h>
+//#include <units/units.h>
+
 
 // Team 302 includes
 #include <auton/primitives/DoNothing.h>
 #include <auton/PrimitiveParams.h>
 #include <auton/primitives/IPrimitive.h>
 #include <subsys/ChassisFactory.h>
-#include <controllers/ControlModes.h>
-#include <subsys/IMechanism.h>
+//#include <controllers/ControlModes.h>
+//#include <subsys/IMechanism.h>
 #include <utils/Logger.h>
 
 // Third Party Includes
@@ -65,14 +66,13 @@ void DoNothing::Init(PrimitiveParams* params)
 /// @return void
 void DoNothing::Run() 
 {
-	Logger::GetLogger() -> LogError(string("DoNothing::Run()"), string("Arrived!"));
 	if ( m_chassis != nullptr )
 	{
 		m_chassis->SetOutput( ControlModes::CONTROL_TYPE::PERCENT_OUTPUT, 0.0, 0.0 );  
 	}
 	else
 	{
-		Logger::GetLogger()->LogError( string( "DoNothing::Run" ), string( "chassis not found") );
+		Logger::GetLogger()->LogError( Logger::LOGGER_LEVEL::ERROR_ONCE, string( "DoNothing::Run" ), string( "chassis not found") );
 	}
 }
 
