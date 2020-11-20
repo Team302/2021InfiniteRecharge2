@@ -1,6 +1,5 @@
 #pragma once
 #include <states/IState.h>
-#include <subsys/IMechanism.h>
 #include <subsys/MechanismFactory.h>
 #include <controllers/ControlData.h>
 

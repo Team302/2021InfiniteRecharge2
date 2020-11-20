@@ -23,7 +23,7 @@
 
 // Team 302 includes
 #include <hw/interfaces/IDragonMotorController.h>
-#include <subsys/IMechanism.h>
+#include <subsys/Mech1IndMotor.h>
 #include <controllers/ControlModes.h>
 #include <subsys/MechanismTypes.h>
 #include <controllers/ControlData.h>
@@ -32,7 +32,7 @@
 
 /// @class DriveTrainSide
 /// @brief This is the DriveTrainSide sub-mechanism
-class DriveTrainSide : public IMechanism
+class DriveTrainSide : public Mech1IndMotor
 {
     public:
 
@@ -60,34 +60,21 @@ class DriveTrainSide : public IMechanism
         /// @param [in] ControlModes::CONTROL_TYPE   controlType:  How are the item(s) being controlled
         /// @param [in] double                                     value:        Target (units are based on the controlType)
         /// @return     void
-        void SetOutput
+        void Update() override;
+        void UpdateTarget
         (
-            ControlModes::CONTROL_TYPE controlType,
             double                                   value       
         ) override;
 
 
-        /// @brief      Activate/deactivate pneumatic solenoid
-        /// @param [in] bool - true == extend, false == retract
-        /// @return     void 
-        void ActivateSolenoid
-        (
-            bool     activate
-        ) override;
-
-        /// @brief      Check if the pneumatic solenoid is activated
-        /// @return     bool - true == extended, false == retract
-        bool IsSolenoidActivated() override;
-
-
         /// @brief  Return the current position of the DriveTrainSide in inches (positive is forward, negative is backward)
         /// @return double  position in inches
-        double GetCurrentPosition() const override;
+        double GetPosition() const override;
 
 
         /// @brief  Return the current speed of the DriveTrainSide in inches / second (positive is forward, negative is backward)
         /// @return double  speed in inches / second
-        double GetCurrentSpeed() const override;
+        double GetSpeed() const override;
 
 
         /// @brief  Set the control constants (e.g. PIDF values).
@@ -99,8 +86,8 @@ class DriveTrainSide : public IMechanism
         ) override;
         
     private:
-        std::shared_ptr<IDragonMotorController>                 m_master;
-        std::shared_ptr<IDragonMotorController>                 m_slave;
+        std::shared_ptr<IDragonMotorController>                 m_primary;
+        std::shared_ptr<IDragonMotorController>                 m_secondary;
         double                                                  m_wheelSize;
         double                                                  m_target;
 

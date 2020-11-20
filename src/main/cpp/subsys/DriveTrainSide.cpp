@@ -28,7 +28,7 @@
 // Team 302 includes
 #include <hw/factories/DragonMotorControllerFactory.h>        
 #include <hw/interfaces/IDragonMotorController.h>
-#include <subsys/IMechanism.h>
+#include <subsys/Mech1IndMotor.h>
 #include <subsys/DriveTrainSide.h>
 #include <controllers/ControlModes.h>
 #include <subsys/MechanismTypes.h>
@@ -47,13 +47,13 @@ DriveTrainSide::DriveTrainSide
     shared_ptr<IDragonMotorController>                      master,
     shared_ptr<IDragonMotorController>                      follower,
     double                                                  wheelSize
-) : IMechanism(),
-    m_master( master ),
-    m_slave( follower ), 
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::DRIVETRAIN_SIDE, string("drivetrainside.xml"), string("DriveTrainSideNT"), master ),
+    m_primary( master ),
+    m_secondary( follower ), 
     m_wheelSize( wheelSize ),
     m_target( 0.0 )
 {
-    if ( m_master.get() == nullptr ) 
+    if ( m_primary.get() == nullptr ) 
     {
         Logger::GetLogger()->LogError( string( "DriveTrainSide constructor" ), string( "master is nullptr" ) );
     }
@@ -72,18 +72,20 @@ MechanismTypes::MECHANISM_TYPE DriveTrainSide::GetType() const
 /// @param [in] ControlModes::CONTROL_TYPE   controlType:  How are the item(s) being controlled
 /// @param [in] double                                     value:        Target (units are based on the controlType)
 /// @return     void
-void DriveTrainSide::SetOutput
+void DriveTrainSide::Update()
+{
+
+}
+void DriveTrainSide::UpdateTarget
 (
-    ControlModes::CONTROL_TYPE              controlType,
     double                                  value       
 ) 
 {
     m_target = value;
-    if ( m_master.get() != nullptr )
+    if ( m_primary.get() != nullptr )
     {
         // todo map mechanism control mode to motor control mode (create method)
-        m_master.get()->SetControlMode( controlType );
-        m_master.get()->Set( value );
+        m_primary.get()->Set( value );
     }
     else
     {
@@ -92,33 +94,15 @@ void DriveTrainSide::SetOutput
 }
 
 
-/// @brief      Activate/deactivate pneumatic solenoid
-/// @param [in] bool - true == extend, false == retract
-/// @return     void 
-void DriveTrainSide::ActivateSolenoid
-(
-    bool     activate
-)
-{
-    // nothing to do
-}
-
-/// @brief      Check if the pneumatic solenoid is activated
-/// @return     bool - true == extended, false == retract
-bool DriveTrainSide::IsSolenoidActivated()
-{
-    return false;
-}
-
 /// @brief  Return the current position of the DriveTrainSide in inches.  
 /// @return double  position in inches (positive is forward, negative is backward)
-double DriveTrainSide::GetCurrentPosition() const
+double DriveTrainSide::GetPosition() const
 {
     double distance = 0.0;
-    if ( m_master.get() != nullptr )
+    if ( m_primary.get() != nullptr )
     {
         distance = ( m_wheelSize * M_PI );          // distance the wheel travels per revolution
-        auto nRotations = m_master.get()->GetRotations(); // number of rotations
+        auto nRotations = m_primary.get()->GetRotations(); // number of rotations
         distance *= nRotations;                     // distance per revolution * number of revolutions is the distance
     }
     else
@@ -133,13 +117,13 @@ double DriveTrainSide::GetCurrentPosition() const
 ///         don't have a sensor this will return -360 for clockwise rotations and 360 
 ///         for counter-clockwise rotations.
 /// @return double  speed in degrees per second (rotating mechansim)
-double DriveTrainSide::GetCurrentSpeed() const
+double DriveTrainSide::GetSpeed() const
 {
     double speed = 0.0;
-    if ( m_master.get() != nullptr )
+    if ( m_primary.get() != nullptr )
     {
         speed = ( m_wheelSize * M_PI ); // distance the wheel travels per revolution (inches)
-        auto rps = m_master.get()->GetRPS();  // number of rotations per second
+        auto rps = m_primary.get()->GetRPS();  // number of rotations per second
         speed *= rps;                   // distance per revolution * revolutions per second is inches per second
     }
     else
@@ -160,7 +144,7 @@ void DriveTrainSide::SetControlConstants
     ControlData*                                 pid                 
 )
 {
-    m_master.get()->SetControlConstants( pid );
+    m_primary.get()->SetControlConstants( pid );
 }
 
 

@@ -48,8 +48,8 @@ DragonChassis::DragonChassis
     std::shared_ptr<IDragonMotorController>                 rightMaster,
     std::shared_ptr<IDragonMotorController>                 leftFollower,
     std::shared_ptr<IDragonMotorController>                 rightFollower
-) : m_leftSide( new DriveTrainSide( leftMaster, leftFollower, wheelDiameter ) ),
-    m_rightSide( new DriveTrainSide( rightMaster, rightFollower, wheelDiameter ) ),
+) : m_leftSide( make_unique<DriveTrainSide>( leftMaster, leftFollower, wheelDiameter ) ),
+    m_rightSide( make_unique<DriveTrainSide>( rightMaster, rightFollower, wheelDiameter ) ),
     m_wheelBase( wheelBase ),
     m_wheelTrack( track ),
     m_wheelDiameter( wheelDiameter )
@@ -59,8 +59,6 @@ DragonChassis::DragonChassis
 /// @brief clean up memory when this object gets deleted
 DragonChassis::~DragonChassis()
 {
-    delete m_leftSide;
-    delete m_rightSide;
 }
 
 
@@ -76,8 +74,16 @@ void DragonChassis::SetOutput
     double                                   rightValue     
 )
 {
-    m_leftSide->SetOutput( controlType, leftValue );
-    m_rightSide->SetOutput( controlType, rightValue );
+    if ( controlType != m_controlMode )
+    {
+        // todo deal with control mode
+        m_controlMode = controlType;
+    }
+    m_leftSide.get()->UpdateTarget( leftValue );
+    m_rightSide.get()->UpdateTarget( rightValue );
+
+    m_leftSide.get()->Update();
+    m_rightSide.get()->Update();
 }
 
 
@@ -85,21 +91,21 @@ void DragonChassis::SetOutput
 /// @return double  position in inches of the center of the chassis
 double DragonChassis::GetCurrentPosition() const
 {
-    return ( m_leftSide->GetCurrentPosition() + m_rightSide->GetCurrentPosition() ) / 2.0;
+    return ( m_leftSide.get()->GetPosition() + m_rightSide.get()->GetPosition() ) / 2.0;
 }
 
 /// @brief  Return the current position of the left side of the DragonChassis in inches.  
 /// @return double  position in inches of the left side of the chassis
 double DragonChassis::GetCurrentLeftPosition() const
 {
-    return m_leftSide->GetCurrentPosition();
+    return m_leftSide.get()->GetPosition();
 }
 
 /// @brief  Return the current position of the right side of the DragonChassis in inches.  
 /// @return double  position in inches of the right side of the chassis
 double DragonChassis::GetCurrentRightPosition() const
 {
-    return m_rightSide->GetCurrentPosition();
+    return m_rightSide.get()->GetPosition();
 }
 
 
@@ -108,21 +114,21 @@ double DragonChassis::GetCurrentRightPosition() const
 /// @return double  speed in inches per second of the center of the chassis
 double DragonChassis::GetCurrentSpeed() const
 {
-    return ( m_leftSide->GetCurrentSpeed() + m_rightSide->GetCurrentSpeed() ) / 2.0;
+    return ( m_leftSide.get()->GetSpeed() + m_rightSide.get()->GetSpeed() ) / 2.0;
 }
 
 /// @brief  Return the current speed of the left side of the DragonChassis in inches per second.  
 /// @return double  speed in inches per second of the left side of the chassis
 double DragonChassis::GetCurrentLeftSpeed() const
 {
-    return m_leftSide->GetCurrentSpeed();
+    return m_leftSide.get()->GetSpeed();
 }
 
 /// @brief  Return the current speed of the right side of the DragonChassis in inches per second.  
 /// @return double  speed in inches per second of the right side of the chassis
 double DragonChassis::GetCurrentRightSpeed() const
 {
-    return m_rightSide->GetCurrentSpeed();
+    return m_rightSide.get()->GetSpeed();
 }
 
 
@@ -136,8 +142,9 @@ void DragonChassis::SetControlConstants
     ControlData*                                 pid               
 )
 {
-    m_leftSide->SetControlConstants( pid );
-    m_rightSide->SetControlConstants( pid );
+    m_controlMode = pid->GetMode();
+    m_leftSide.get()->SetControlConstants( pid );
+    m_rightSide.get()->SetControlConstants( pid );
 }
 
 double DragonChassis::GetWheelDiameter() const

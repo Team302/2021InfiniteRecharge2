@@ -17,7 +17,6 @@
 
 #include <gamepad/TeleopControl.h>
 #include <states/IState.h>
-#include <subsys/IMechanism.h>
 #include <subsys/MechanismFactory.h>
 #include <subsys/ControlPanel.h>
 #include <states/controlPanel/ControlPanelManual.h>

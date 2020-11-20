@@ -21,7 +21,6 @@
 // FRC includes
 
 // Team302 includes
-#include <subsys/IMechanism.h>
 
 // Third Party includes
 #include <pugixml/pugixml.hpp>

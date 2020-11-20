@@ -51,7 +51,6 @@
 #include <test/ShooterStateMgrTest.h>
 #include <ctre/Phoenix.h>
 #include <gamepad/TeleopControl.h>
-#include <subsys/IMechanism.h>
 #include <hw/factories/LimelightFactory.h>
 #include <subsys/ChassisFactory.h>
 #include <subsys/interfaces/IChassis.h>

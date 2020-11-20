@@ -12,10 +12,9 @@
 
 // Team 302 includes
 #include <states/IState.h>
-#include <subsys/IMechanism.h>
 #include <subsys/MechanismFactory.h>
 #include <states/controlPanel/ControlPanelColorTurn.h>
-#include  <subsys/ControlPanel.h>
+#include <subsys/ControlPanel.h>
 #include <utils/logger.h>
 #include <utils/ControlPanelColors.h>
 #include <utils/FMS.h>

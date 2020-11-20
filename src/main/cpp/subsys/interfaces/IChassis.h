@@ -22,7 +22,6 @@
 // FRC includes
 
 // Team 302 includes
-#include <subsys/IMechanism.h>
 #include <controllers/ControlModes.h>
 #include <subsys/MechanismTypes.h>
 #include <controllers/ControlData.h>

@@ -26,7 +26,6 @@ class ControlData;
 
 // Team 302 includes
 #include <states/IState.h>
-#include <subsys/IMechanism.h>
 #include <subsys/MechanismFactory.h>
 #include <states/IState.h>
 

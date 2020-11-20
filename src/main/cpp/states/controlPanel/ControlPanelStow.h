@@ -10,7 +10,6 @@
 #include <memory>
 
 #include <states/IState.h>
-#include <subsys/IMechanism.h>
 #include <subsys/MechanismFactory.h>
 
 class ControlPanelStow : public IState

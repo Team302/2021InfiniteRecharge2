@@ -8,7 +8,6 @@
 #include <states/controlPanel/ControlPanelStow.h>
 #include <subsys/ControlPanel.h>
 #include <subsys/MechanismFactory.h>
-#include <subsys/IMechanism.h>
 #include <states/IState.h>
 #include <memory>
 

@@ -18,13 +18,14 @@
 
 
 // C++ Includes
+#include <memory>
 
 // FRC includes
 
 // Team 302 includes
 #include <hw/interfaces/IDragonMotorController.h>
 #include <subsys/interfaces/IChassis.h>
-#include <subsys/IMechanism.h>
+#include <subsys/DriveTrainSide.h>
 #include <controllers/ControlModes.h>
 #include <subsys/MechanismTypes.h>
 #include <controllers/ControlData.h>
@@ -107,8 +108,9 @@ class DragonChassis : public IChassis
         double GetTrack() const override;
         
     private:
-        IMechanism*                     m_leftSide;
-        IMechanism*                     m_rightSide;
+        std::unique_ptr<DriveTrainSide> m_leftSide;
+        std::unique_ptr<DriveTrainSide> m_rightSide;
+        ControlModes::CONTROL_TYPE      m_controlMode;
 
         double                          m_wheelBase;
         double                          m_wheelTrack;

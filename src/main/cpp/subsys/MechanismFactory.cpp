@@ -43,7 +43,6 @@
 #include <subsys/ControlPanel.h>
 #include <subsys/MechanismFactory.h>
 #include <subsys/HookDelivery.h>
-#include <subsys/IMechanism.h>
 #include <subsys/MechanismTypes.h>
 #include <subsys/Intake.h>
 #include <utils/Logger.h>
