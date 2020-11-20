@@ -22,26 +22,14 @@
 #include <frc/Timer.h>
 
 // Team 302 includes
-#include <auton/primitives/DoNothing.h>
+#include <auton/primitives/DriveTime.h>
 #include <auton/PrimitiveParams.h>
-#include <auton/primitives/IPrimitive.h>
-#include <subsys/MechanismFactory.h>
-#include <controllers/ControlModes.h>
-#include <subsys/IMechanism.h>
-#include <utils/Logger.h>
 
 // Third Party Includes
 
 
 using namespace std;
 using namespace frc;
-
-//Includes
-//Team302 includes
-#include <auton/primitives/DriveTime.h>
-#include <auton/PrimitiveFactory.h>
-#include <auton/PrimitiveParams.h>
-#include <subsys/MechanismFactory.h>
 
 DriveTime::DriveTime() :
 		SuperDrive(),

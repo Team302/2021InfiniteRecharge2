@@ -15,13 +15,13 @@
 
 
 // C++ includes
+#include <memory>
 #include <string>
 
 // Team 302 includes
 #include <controllers/mechanisms/IMechController.h>
 #include <controllers/mechanisms/VelocityController.h>
 #include <controllers/ControlData.h>
-#include <subsys/IMechanism.h>
 #include <utils/Logger.h>
 
 using namespace std;

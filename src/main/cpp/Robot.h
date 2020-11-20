@@ -54,7 +54,7 @@
 #include <subsys/IMechanism.h>
 #include <hw/factories/LimelightFactory.h>
 #include <subsys/ChassisFactory.h>
-#include <subsys/IChassis.h>
+#include <subsys/interfaces/IChassis.h>
 #include <states/hookdelivery/HookDeliveryStateMgr.h>
 #include <states/climber/ClimberStateMgr.h>
 
@@ -96,17 +96,8 @@ class Robot : public frc::TimedRobot
       ClimberStateMgr*  m_winch;
       HookDeliveryStateMgr* m_hook;
 
-      //std::shared_ptr<IChassis> m_chassis;
-      IMechanism* m_shooterHood;
-      IMechanism* m_turret;
       TeleopControl* m_controller;
-      IMechanism* m_impeller;
-      IMechanism* m_shooter;
       std::shared_ptr<DragonLimelight> m_limelight;
-      TalonFX* m_leftMaster;
-      TalonFX* m_leftSlave;
-      TalonFX* m_rightMaster;
-      TalonFX* m_rightSlave;
 
       TalonSRX* m_cpm;
       TalonSRX* m_climber;

@@ -32,7 +32,7 @@
 #include <hw/DragonPigeon.h>
 #include <hw/factories/PigeonFactory.h>
 #include <subsys/ChassisFactory.h>
-#include <subsys/IChassis.h>
+#include <subsys/interfaces/IChassis.h>
 #include <utils/Logger.h>
 
 // Third Party Includes

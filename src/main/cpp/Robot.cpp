@@ -48,7 +48,7 @@
 #include <subsys/MechanismFactory.h>
 #include <subsys/MechanismTypes.h>
 #include <subsys/ChassisFactory.h>
-#include <subsys/IChassis.h>
+#include <subsys/interfaces/IChassis.h>
 #include <hw/factories/PigeonFactory.h>
 #include <frc/Solenoid.h>
 #include <states/hookdelivery/HookDeliveryStateMgr.h>
@@ -78,10 +78,6 @@ void Robot::RobotInit()
 
 
     m_powerCells = BallManipulator::GetInstance();
-    m_shooterHood = MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::SHOOTER_HOOD);
-    m_turret = MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::TURRET);
-    m_impeller = MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::IMPELLER);
-    m_shooter = MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::SHOOTER);
     m_controller = TeleopControl::GetInstance();
 
     // pick test mode
@@ -145,8 +141,6 @@ void Robot::TeleopPeriodic()
 {
     m_chassisStateMgr->RunCurrentState();
     m_powerCells->RunCurrentState();
-    frc::SmartDashboard::PutNumber("Turret position", m_turret->GetCurrentPosition());
-
     m_winch->RunCurrentState();
     m_hook->RunCurrentState();
 }

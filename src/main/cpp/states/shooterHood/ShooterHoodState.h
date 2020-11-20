@@ -15,12 +15,13 @@
 
 #pragma once
 
-#include <states/MechanismState.h>
+#include <states/Mech1MotorState.h>
 #include <controllers/MechanismTargetData.h>
 
 class ControlData;
 
-class ShooterHoodState : public MechanismState
+
+class ShooterHoodState : public Mech1MotorState
 {
     public:
 
@@ -28,8 +29,7 @@ class ShooterHoodState : public MechanismState
         ShooterHoodState
         (
             ControlData*                    control,
-            double                          target,
-            MechanismTargetData::SOLENOID   solState
+            double                          target
         );
         ~ShooterHoodState() =default;
 };

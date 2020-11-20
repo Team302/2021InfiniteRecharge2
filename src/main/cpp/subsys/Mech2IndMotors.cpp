@@ -25,7 +25,7 @@
 // Team 302 includes
 #include <subsys/Mech1IndMotor.h>
 #include <subsys/Mech2IndMotors.h>
-#include <subsys/IMech2IndMotors.h>
+#include <subsys/interfaces/IMech2IndMotors.h>
 #include <controllers/ControlData.h>
 #include <hw/interfaces/IDragonMotorController.h>
 #include <utils/Logger.h>

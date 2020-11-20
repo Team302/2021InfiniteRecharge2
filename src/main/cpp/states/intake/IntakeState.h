@@ -13,22 +13,16 @@
 /// OR OTHER DEALINGS IN THE SOFTWARE.
 //====================================================================================================================================================
 
-//========================================================================================================
-/// IntakeOff.h
-//========================================================================================================
-///
-/// File Description:
-///     This controls the "off" function of the intake
-///
-//========================================================================================================
-
 #pragma once
 
-#include <controllers/ControlData.h>
-#include <states/MechanismState.h>
+#include <states/IState.h>
+#include <states/Mech1MotorState.h>
+#include <states/MechSolenoidState.h>
 #include <controllers/MechanismTargetData.h>
 
-class IntakeState : public MechanismState
+class ControlData;
+
+class IntakeState : public IState
 {
     public:
 
@@ -41,6 +35,12 @@ class IntakeState : public MechanismState
     IntakeState() = delete;
     ~IntakeState() = default;
 
+        void Init() override;
+        void Run() override;
+        bool AtTarget() const override;
+
+    private:
+        std::unique_ptr<Mech1MotorState>    m_motorState;
+        std::unique_ptr<MechSolenoidState>  m_solenoidState;
+
 };
-
-

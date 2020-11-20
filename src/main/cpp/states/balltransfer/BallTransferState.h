@@ -16,13 +16,11 @@
 
 #pragma once
 
-#include <subsys/IMechanism.h>
-#include <states/IState.h>
-#include <states/MechanismState.h>
-#include <controllers/ControlData.h>
-#include <controllers/MechanismTargetData.h>
+#include <states/Mech1MotorState.h>
 
-class BallTransferState : public MechanismState
+class ControlData;
+
+class BallTransferState : public Mech1MotorState
 {
     public:
 
@@ -30,8 +28,7 @@ class BallTransferState : public MechanismState
         BallTransferState
         (
             ControlData*                    control,
-            double                          target,
-            MechanismTargetData::SOLENOID   solState
+            double                          target
         );
         ~BallTransferState() = default;
 };

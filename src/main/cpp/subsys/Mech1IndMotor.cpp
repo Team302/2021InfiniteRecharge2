@@ -23,12 +23,11 @@
 // Team 302 includes
 #include <controllers/ControlData.h>
 #include <subsys/Mech1IndMotor.h>
-#include <subsys/IMech1IndMotor.h>
+#include <subsys/interfaces/IMech1IndMotor.h>
 #include <hw/interfaces/IDragonMotorController.h>
 #include <utils/Logger.h>
 
 // Third Party Includes
-//#include <units/units.h>
 #include <units/time.h>
 
 using namespace frc2;

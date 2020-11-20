@@ -17,7 +17,7 @@
 #pragma once
 
 #include <controllers/MechanismTargetData.h>
-#include <subsys/IMech1Solenoid.h>
+#include <subsys/interfaces/IMech1Solenoid.h>
 #include <states/IState.h>
 
 

@@ -31,7 +31,7 @@
 // Team302 includes
 #include <hw/interfaces/IDragonMotorController.h>
 #include <subsys/ChassisFactory.h>
-#include <subsys/IChassis.h>
+#include <subsys/interfaces/IChassis.h>
 
 #include <xmlhw/ChassisDefn.h>
 #include <xmlhw/MotorDefn.h>

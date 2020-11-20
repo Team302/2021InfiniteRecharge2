@@ -21,7 +21,7 @@
 // FRC includes
 
 // Team 302 includes
-#include <subsys/IMech1Solenoid.h>
+#include <subsys/interfaces/IMech1Solenoid.h>
 #include <hw/DragonSolenoid.h>
 
 // Third Party Includes

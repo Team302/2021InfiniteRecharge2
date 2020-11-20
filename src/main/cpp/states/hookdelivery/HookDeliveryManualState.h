@@ -16,13 +16,12 @@
 
 #pragma once
 
-#include <subsys/IMechanism.h>
-#include <states/IState.h>
-#include <states/MechanismState.h>
-#include <controllers/ControlData.h>
+#include <states/Mech1MotorState.h>
 #include <controllers/MechanismTargetData.h>
 
-class HookDeliveryManualState : public MechanismState
+class ControlData;
+
+class HookDeliveryManualState : public Mech1MotorState
 {
     public:
 
@@ -30,11 +29,11 @@ class HookDeliveryManualState : public MechanismState
         HookDeliveryManualState
         (
             ControlData*                    control,
-            double                          target,
-            MechanismTargetData::SOLENOID   solState
+            double                          target
         );
         ~HookDeliveryManualState() = default;
 
+        void Init() override;
         void Run() override;
 };
 

@@ -3,7 +3,7 @@
 
 #include <memory>
 
-#include <subsys/IChassis.h>
+#include <subsys/interfaces/IChassis.h>
 #include <hw/interfaces/IDragonMotorController.h>
 #include <hw/usages/IDragonMotorControllerMap.h>
 

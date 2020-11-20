@@ -30,7 +30,7 @@
 
 // Team 302 includes
 #include <subsys/MechanismFactory.h>
-#include <subsys/IMechanism.h>
+#include <subsys/interfaces/IMech.h>
 
 #include <hw/usages/IDragonMotorControllerMap.h>
 #include <hw/usages/AnalogInputMap.h>
@@ -45,7 +45,6 @@
 #include <xmlhw/ServoDefn.h> 
 #include <xmlhw/SolenoidDefn.h>
 
-#include <subsys/IMechanism.h>
 #include <subsys/MechanismTypes.h>
 
 #include <utils/Logger.h>
@@ -66,14 +65,12 @@ using namespace std;
 
 
 /// @brief  Parse a Mechanism XML element and create an IMechanism from its definition.
-/// @return IMechanism*   pointer to the mechanism
-IMechanism* MechanismDefn::ParseXML
+/// @return IMech*   pointer to the mechanism
+void MechanismDefn::ParseXML
 (
     xml_node      mechanismNode
 )
 {
-    // initialize outputs
-    IMechanism* mech = nullptr;
 
     // initialize attributes
     MechanismTypes::MECHANISM_TYPE type = MechanismTypes::UNKNOWN_MECHANISM;
@@ -225,8 +222,6 @@ IMechanism* MechanismDefn::ParseXML
     if ( !hasError )
     {
         MechanismFactory* factory =  MechanismFactory::GetMechanismFactory();
-        mech = factory->CreateIMechanism( type, motors, solenoids, servos, digitalInputs, analogInputs, colorSensor, canCoder );
+        factory->CreateIMechanism( type, motors, solenoids, servos, digitalInputs, analogInputs, colorSensor, canCoder );
     }
-
-    return mech;
 }

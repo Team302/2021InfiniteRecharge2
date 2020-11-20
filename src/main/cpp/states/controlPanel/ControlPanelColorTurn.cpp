@@ -34,16 +34,12 @@ ControlPanelColorTurn::ControlPanelColorTurn
 
 {
     auto factory = MechanismFactory::GetMechanismFactory();
-
-    m_controlPanel = dynamic_cast < ControlPanel* >( factory -> GetIMechanism(MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR));
-
-    
-
+    m_controlPanel = factory -> GetControlPanel();  
 }
 
 void ControlPanelColorTurn::Init()
 {
-    auto currentColor = m_controlPanel -> GetColorSeen();
+    auto currentColor = m_controlPanel.get() -> GetColorSeen();
     auto targetColor = FMS::GetFMS() -> GetColor();
 
     // Figure out the number of colors the wheel has to spin by.
@@ -179,12 +175,12 @@ void ControlPanelColorTurn::Run()
 //makes the motor turn the number of required degrees
 
 {
-    m_controlPanel -> Update();
+    m_controlPanel.get() -> Update();
 }
 
 bool ControlPanelColorTurn::AtTarget() const                                 //confirms that it worked
 {
-    if (m_controlPanel -> GetPosition() >= (rotations - 5) &&  m_controlPanel -> GetPosition() <= (rotations + 5) )
+    if (m_controlPanel.get() -> GetPosition() >= (rotations - 5) &&  m_controlPanel.get() -> GetPosition() <= (rotations + 5) )
     { 
         return true;
     }

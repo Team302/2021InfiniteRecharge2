@@ -19,22 +19,18 @@
 // FRC includes
 
 // Team 302 includes
+#include <controllers/ControlData.h>
 #include <states/balltransfer/BallTransferState.h>
-#include <states/MechanismState.h>
-#include <subsys/IMechanism.h>
+#include <states/Mech1MotorState.h>
 #include <subsys/MechanismFactory.h>
-#include <controllers/MechanismTargetData.h>
 
 // Third Party Includes
-
-using namespace std;
 
 
 BallTransferState::BallTransferState
 (
     ControlData*                    control,
-    double                          target,
-    MechanismTargetData::SOLENOID   solState
-) : MechanismState( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::BALL_TRANSFER), control, target, solState )
+    double                          target
+) : Mech1MotorState( MechanismFactory::GetMechanismFactory()->GetBallTransfer().get(), control, target )
 {
 }

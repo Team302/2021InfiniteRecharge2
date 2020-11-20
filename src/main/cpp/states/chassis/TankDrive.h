@@ -22,7 +22,7 @@
 // FRC includes
 
 // Team 302 include
-#include <subsys/IChassis.h>
+#include <subsys/interfaces/IChassis.h>
 #include <gamepad/TeleopControl.h>
 #include <states/IState.h>
 

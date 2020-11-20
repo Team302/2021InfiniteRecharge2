@@ -23,8 +23,7 @@
 // Team 302 includes
 #include <subsys/DragonChassis.h>
 #include <hw/interfaces/IDragonMotorController.h>
-#include <subsys/IChassis.h>
-#include <subsys/IMechanism.h>
+#include <subsys/interfaces/IChassis.h>
 #include <controllers/ControlModes.h>
 #include <subsys/MechanismTypes.h>
 #include <controllers/ControlData.h>

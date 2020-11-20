@@ -15,21 +15,16 @@
 //====================================================================================================================================================
 
 // C++ Includes
-//#include <memory>
 #include <string>
 
 // FRC includes
 #include <frc/Timer.h>
-//#include <units/units.h>
-
 
 // Team 302 includes
 #include <auton/primitives/DoNothing.h>
 #include <auton/PrimitiveParams.h>
 #include <auton/primitives/IPrimitive.h>
 #include <subsys/ChassisFactory.h>
-//#include <controllers/ControlModes.h>
-//#include <subsys/IMechanism.h>
 #include <utils/Logger.h>
 
 // Third Party Includes
@@ -45,7 +40,8 @@ using namespace frc;
 
 
 /// @brief constructor that creates/initializes the object
-DoNothing::DoNothing() : m_maxTime(0.0),
+DoNothing::DoNothing() : IPrimitive(),
+						 m_maxTime(0.0),
 						 m_currentTime(0.0),
 						 m_chassis( ChassisFactory::GetChassisFactory()->GetIChassis()),
 						 m_timer( make_unique<Timer>() )

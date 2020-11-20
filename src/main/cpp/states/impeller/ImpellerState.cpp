@@ -14,25 +14,25 @@
 /// OR OTHER DEALINGS IN THE SOFTWARE.
 //====================================================================================================================================================
 
-//C++ Includes
 
-//Team 302 Includes
+// C++ Includes
+
+// FRC includes
+
+// Team 302 includes
+#include <controllers/ControlData.h>
 #include <states/impeller/ImpellerState.h>
-#include <states/MechanismState.h>
-#include <controllers/MechanismTargetData.h>
-#include <subsys/IMechanism.h>
+#include <states/Mech1MotorState.h>
 #include <subsys/MechanismFactory.h>
 
-using namespace std;
-
+// Third Party Includes
 
 
 ImpellerState::ImpellerState
 (
     ControlData*                    control,
-    double                          target,
-    MechanismTargetData::SOLENOID   solState
-) : MechanismState( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::IMPELLER), control, target, solState )
+    double                          target
+) : Mech1MotorState( MechanismFactory::GetMechanismFactory()->GetImpeller().get(), control, target )
 {
 
 }

@@ -20,18 +20,20 @@
 /// File Description:
 /// When intake is "off", sets motors to off and brings solenoid/intake into the robot.
 ///
-
+//========================================================================================================
 
 // C++ Includes
 
 // FRC includes
-//========================================================================================================
+
 // Team 302 includes
-#include <states/intake/IntakeState.h>
-#include <states/MechanismState.h>
-#include <subsys/IMechanism.h>
-#include <subsys/MechanismFactory.h>
+#include <controllers/ControlData.h>
 #include <controllers/MechanismTargetData.h>
+#include <states/intake/IntakeState.h>
+#include <states/IState.h>
+#include <states/Mech1MotorState.h>
+#include <states/MechSolenoidState.h>
+#include <subsys/MechanismFactory.h>
 
 // Third Party Includes
 
@@ -43,7 +45,26 @@ IntakeState::IntakeState
     ControlData* control,
     double target,
     MechanismTargetData::SOLENOID solState
-) : MechanismState( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::INTAKE), control, target, solState )
+) : IState(),
+    m_motorState( make_unique<Mech1MotorState>(MechanismFactory::GetMechanismFactory()->GetIntake().get(), control, target)),
+    m_solenoidState( make_unique<MechSolenoidState>(MechanismFactory::GetMechanismFactory()->GetIntake().get(), solState))
 {
 }
 
+void IntakeState::Init()
+{
+    m_motorState.get()->Init();
+    m_solenoidState.get()->Init();
+}
+
+
+void IntakeState::Run()           
+{
+    m_motorState.get()->Run();
+    m_solenoidState.get()->Run();
+}
+
+bool IntakeState::AtTarget() const
+{
+    return ( m_motorState.get()->AtTarget() && m_solenoidState.get()->AtTarget());
+}

@@ -1,10 +1,11 @@
 #pragma once
-#include <states/IState.h>
-#include <subsys/IMechanism.h>
-#include <controllers/ControlData.h>
-#include <gamepad/TeleopControl.h>
 
-class ShooterHoodManual : public IState
+#include <states/Mech1MotorState.h>
+#include <controllers/MechanismTargetData.h>
+
+class ControlData;
+
+class ShooterHoodManual : public Mech1MotorState
 {
     public:
     ShooterHoodManual
@@ -17,14 +18,4 @@ class ShooterHoodManual : public IState
 
     void Init() override;
     void Run() override;
-    bool AtTarget() const;
-
-
-    private:
-    IMechanism* m_shooterHood;
-    ControlData* m_control;
-    double m_target;
-    TeleopControl* m_gamepad;
-
-
 };

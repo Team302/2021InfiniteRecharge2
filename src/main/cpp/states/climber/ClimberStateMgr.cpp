@@ -72,12 +72,11 @@ ClimberStateMgr::ClimberStateMgr() : m_stateVector(),
             {
                 auto controlData = td->GetController();
                 auto target = td->GetTarget();
-                auto solState = td->GetSolenoidState();
                 switch ( stateEnum )
                 {
                     case CLIMBER_STATE::OFF:
                     {   
-                        auto thisState = new ClimberState( controlData, target, solState );
+                        auto thisState = new ClimberState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                         m_currentState = thisState;
                         m_currentStateEnum = stateEnum;
@@ -87,7 +86,7 @@ ClimberStateMgr::ClimberStateMgr() : m_stateVector(),
 
                    case CLIMBER_STATE::WINCH_UP:
                     {   
-                        auto thisState = new ClimberState( controlData, target, solState );
+                        auto thisState = new ClimberState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                     }
                     break; 

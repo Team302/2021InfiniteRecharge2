@@ -22,7 +22,7 @@
 // FRC includes
 
 // Team 302 includes
-#include <subsys/IChassis.h>
+#include <subsys/interfaces/IChassis.h>
 
 // Third Party includes
 #include <pugixml/pugixml.hpp>

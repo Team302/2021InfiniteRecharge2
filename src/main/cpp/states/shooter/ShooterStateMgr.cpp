@@ -73,15 +73,12 @@ ShooterStateMgr::ShooterStateMgr() : m_stateVector(),
             {
                 auto controlData = td->GetController();
                 auto target = td->GetTarget();
-                auto solState = td->GetSolenoidState();
-                auto fbControlData = td->GetFailoverController(); // todo pass through to the states
-                auto fbTarget = td->GetFailoverTarget();  // todo pass through to the states
 
                 switch ( stateEnum )
                 {
                     case SHOOTER_STATE::OFF:
                     {   
-                        auto thisState = new ShooterState( controlData, target, fbControlData, fbTarget, solState );
+                        auto thisState = new ShooterState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                         m_currentState = thisState;
                         m_currentStateEnum = stateEnum;
@@ -91,14 +88,14 @@ ShooterStateMgr::ShooterStateMgr() : m_stateVector(),
 
                     case SHOOTER_STATE::GET_READY:
                     {   
-                        auto thisState = new ShooterState( controlData, target, fbControlData, fbTarget, solState );
+                        auto thisState = new ShooterState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                     }
                     break;
 
                     case SHOOTER_STATE::SHOOT:
                     {   
-                        auto thisState = new ShooterState( controlData, target, fbControlData, fbTarget, solState );
+                        auto thisState = new ShooterState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                     }
                     break;
@@ -126,7 +123,7 @@ ShooterStateMgr::ShooterStateMgr() : m_stateVector(),
 /// @return void
 void ShooterStateMgr::RunCurrentState()
 {
-    if ( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::SHOOTER) != nullptr)
+    if ( MechanismFactory::GetMechanismFactory()->GetShooter().get() != nullptr)
     {
         // process teleop/manual interrupts
         auto controller = TeleopControl::GetInstance();
@@ -174,7 +171,7 @@ void ShooterStateMgr::SetCurrentState
             m_currentState->Init();
             if ( run )
             {
-                if ( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::SHOOTER) != nullptr)
+                if ( MechanismFactory::GetMechanismFactory()->GetShooter().get() != nullptr)
                 {
                     m_currentState->Run();
                 }

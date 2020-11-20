@@ -16,7 +16,7 @@
 
 #pragma once
 
-#include <subsys/IMech1IndMotor.h>
+#include <subsys/interfaces/IMech1IndMotor.h>
 #include <states/IState.h>
 #include <controllers/ControlData.h>
 #include <controllers/MechanismTargetData.h>

@@ -78,33 +78,19 @@ MechanismFactory* MechanismFactory::GetMechanismFactory()
 	return MechanismFactory::m_mechanismFactory;
 }
 
-MechanismFactory::MechanismFactory()
+MechanismFactory::MechanismFactory() :  m_balltransfer(),
+										m_climber(),
+										m_controlPanel(),
+										m_crawler(),
+										m_hookDelivery(),
+										m_impeller(),
+										m_intake(),
+										m_shooter(),
+										m_shooterHood(),
+										m_turret()
 {
-	m_mechanisms.resize( MechanismTypes::MECHANISM_TYPE::MAX_MECHANISM_TYPES );
-	for ( auto inx=0; inx<MechanismTypes::MECHANISM_TYPE::MAX_MECHANISM_TYPES; ++inx )
-	{
-		m_mechanisms[inx] = nullptr;
-	}
 }
 
-/// @brief      Find the requested mechanism
-/// @param [in] MechanismTypes::MECHANISM_TYPE  type - the type of mechanism to retrieve
-/// @return     IMechanism*  pointer to the mechanism or nullptr if mechanism doesn't exist.
-IMechanism*  MechanismFactory::GetIMechanism
-(
-	MechanismTypes::MECHANISM_TYPE			type		
-)
-{
-    // See if the mechanism was created already, if it wasn't create it
-	IMechanism* subsys = m_mechanisms[type];
-	if ( subsys == nullptr )
-    {
-        string msg = "mechanism doesn't exists";
-        msg += to_string( type );
-        Logger::GetLogger()->LogError( string("MechansimFactory::GetIMechanism" ), msg );
-    }
-	return subsys;
-}
 
 
 
@@ -115,8 +101,8 @@ IMechanism*  MechanismFactory::GetIMechanism
 /// @param [in] 
 /// @param [in] 
 /// @param [in] 
-/// @return  IMechanism*  pointer to the mechanism or nullptr if mechanism couldn't be created.
-IMechanism*  MechanismFactory::CreateIMechanism
+/// @return  IMech*  pointer to the mechanism or nullptr if mechanism couldn't be created.
+void  MechanismFactory::CreateIMechanism
 (
 	MechanismTypes::MECHANISM_TYPE			type,
 	const IDragonMotorControllerMap&        motorControllers,   // <I> - Motor Controllers
@@ -128,80 +114,107 @@ IMechanism*  MechanismFactory::CreateIMechanism
 	shared_ptr<CANCoder>					canCoder
 )
 {
-    // See if the mechanism was created already, if it wasn't create it
-	IMechanism* subsys = m_mechanisms[type];
-	if ( subsys != nullptr )
-    {
-        string msg = "mechanism already exists";
-        msg += to_string( type );
-        Logger::GetLogger()->LogError( string("MechansimFactory::CreateIMechanism" ), msg );
-    }
-    else
-    {
-        // Create the mechanism
-        switch ( type )
-        {
-            case MechanismTypes::MECHANISM_TYPE::INTAKE:
-            {
+
+	bool found = false;
+	// Create the mechanism
+	switch ( type )
+	{
+		case MechanismTypes::MECHANISM_TYPE::INTAKE:
+		{
+			if (m_intake.get() == nullptr )
+			{
 				auto motor = GetMotorController( motorControllers, MotorControllerUsage::MOTOR_CONTROLLER_USAGE::INTAKE );
 				if ( motor.get() != nullptr )
 				{
 					auto solenoid = GetSolenoid( solenoids, SolenoidUsage::SOLENOID_USAGE::INTAKE );
 					if ( solenoid.get() != nullptr )
 					{
-						auto intake = new Intake( motor, solenoid );
-						subsys = dynamic_cast<IMechanism*>( intake );
+						m_intake = make_shared<Intake>( motor, solenoid );
 					}
 				}
-            }
-            break;
+			}
+			else
+			{
+				found = true;
+			}
+			
+		}
+		break;
 
-			case MechanismTypes::MECHANISM_TYPE::IMPELLER:
+		case MechanismTypes::MECHANISM_TYPE::IMPELLER:
+		{
+			if ( m_impeller.get() == nullptr )
 			{
 				auto motor = GetMotorController( motorControllers, MotorControllerUsage::MOTOR_CONTROLLER_USAGE::IMPELLER );
 				if ( motor.get() != nullptr )
 				{
-					auto impeller = new Impeller(motor, canCoder);
-					subsys = dynamic_cast<IMechanism*>(impeller);
+					m_impeller = make_shared<Impeller>( motor, canCoder );
 				}
 			}
-			break;
-			
-			case MechanismTypes::MECHANISM_TYPE::BALL_TRANSFER:
+			else
+			{
+				found = true;
+			}
+
+		}
+		break;
+		
+		case MechanismTypes::MECHANISM_TYPE::BALL_TRANSFER:
+		{
+			if ( m_balltransfer.get() != nullptr )
 			{
 				auto motor = GetMotorController( motorControllers, MotorControllerUsage::MOTOR_CONTROLLER_USAGE::BALL_TRANSFER );
 				if ( motor.get() != nullptr )
 				{
-					auto ballTrans = new BallTransfer( motor );
-					subsys = dynamic_cast<IMechanism*>( ballTrans );
+					m_balltransfer = make_shared<BallTransfer>( motor );
 				}
 			}
-			break;			
-			
-			case MechanismTypes::MECHANISM_TYPE::SHOOTER:
+			else
+			{
+				found = true;
+			}
+		}
+		break;			
+		
+		case MechanismTypes::MECHANISM_TYPE::SHOOTER:
+		{
+			if ( m_shooter.get() != nullptr )
 			{
 				auto motor1 = GetMotorController( motorControllers, MotorControllerUsage::MOTOR_CONTROLLER_USAGE::SHOOTER_1 );
 				auto motor2 = GetMotorController( motorControllers, MotorControllerUsage::MOTOR_CONTROLLER_USAGE::SHOOTER_2 );
 				if ( motor1.get() != nullptr && motor2.get() != nullptr )
 				{
-					auto shooter = new Shooter(motor1, motor2);
-					subsys = dynamic_cast<IMechanism*>(shooter);
+					m_shooter = make_shared<Shooter>(motor1, motor2);
 				}
 			}
-			break;			
-			
-			case MechanismTypes::MECHANISM_TYPE::SHOOTER_HOOD:
+			else
+			{
+				found = true;
+			}
+
+		}
+		break;			
+		
+		case MechanismTypes::MECHANISM_TYPE::SHOOTER_HOOD:
+		{
+			if ( m_shooterHood.get() != nullptr )
 			{
 				auto shooterHoodMotor = GetMotorController ( motorControllers, MotorControllerUsage::MOTOR_CONTROLLER_USAGE::SHOOTER_HOOD );
 				if ( shooterHoodMotor.get() != nullptr )
 				{
-					auto shooterHood = new ShooterHood( shooterHoodMotor, canCoder);
-					subsys = dynamic_cast<IMechanism*>(shooterHood);
+					m_shooterHood = make_shared<ShooterHood>( shooterHoodMotor, canCoder);
 				}
 			}
-			break;		
-			
-			case MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR:
+			else
+			{
+				found = true;
+			}
+		}
+		break;		
+		
+		case MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR:
+		{
+			if ( m_controlPanel.get() == nullptr )
 			{
 				auto motor = GetMotorController( motorControllers, MotorControllerUsage::MOTOR_CONTROLLER_USAGE::CONTROL_TABLE_MANIPULATOR );
 				if ( motor.get() != nullptr )
@@ -212,59 +225,79 @@ IMechanism*  MechanismFactory::CreateIMechanism
 						if ( colorSensor !=nullptr )
 						{
 							//todo color sensor pointer needs to be added to the constructor
-							auto controlPanel = new ControlPanel( motor, solenoid, colorSensor );
-							subsys = dynamic_cast<IMechanism*>(controlPanel);
+							m_controlPanel = make_shared<ControlPanel>( motor, solenoid, colorSensor );
 						}
 					}
 				}
 			}
-			break;		
-			
-			case MechanismTypes::MECHANISM_TYPE::CLIMBER:
+			else
 			{
+				found = true;
 			}
-			break;		
-			
-			case MechanismTypes::MECHANISM_TYPE::CRAWLER:
-			{
-			}
-			break;
-			
-			case MechanismTypes::MECHANISM_TYPE::TURRET:
+		}
+		break;		
+		
+		case MechanismTypes::MECHANISM_TYPE::CLIMBER:
+		{
+		}
+		break;		
+		
+		case MechanismTypes::MECHANISM_TYPE::CRAWLER:
+		{
+		}
+		break;
+		
+		case MechanismTypes::MECHANISM_TYPE::TURRET:
+		{
+			if ( m_turret.get() == nullptr )
 			{
 				auto motor = GetMotorController(motorControllers, MotorControllerUsage::MOTOR_CONTROLLER_USAGE::TURRET);
 				if(motor.get() != nullptr)
 				{
-					auto turret = new Turret(motor);
-					subsys = dynamic_cast<IMechanism*>(turret);
+					m_turret = make_shared<Turret>(motor);
 				}
 			}
-			break;
+			else
+			{
+				found = true;
+			}
+		}
+		break;
 
-			case MechanismTypes::MECHANISM_TYPE::HOOK_DELIVERY:
+		case MechanismTypes::MECHANISM_TYPE::HOOK_DELIVERY:
+		{
+			if ( m_hookDelivery.get() == nullptr )
 			{
 				auto motor = GetMotorController(motorControllers, MotorControllerUsage::MOTOR_CONTROLLER_USAGE::HOOK_DELIVERY);
 				if(motor.get() != nullptr)
 				{
-					auto hook = new HookDelivery(motor);
-					subsys = dynamic_cast<IMechanism*>(hook);
+					m_hookDelivery = make_shared<HookDelivery>(motor);
 				}
 			}
-			break;
-
-            default:
+			else
 			{
-				string msg = "unknown Mechanism type ";
-				msg += to_string( type );
-				Logger::GetLogger()->LogError( "MechanismFactory::CreateIMechanism", msg );
+				found = true;
 			}
-            break;
-        }
-		m_mechanisms[type] = subsys;
-    }
+		}
+		break;
 
-	return subsys;
+		default:
+		{
+			string msg = "unknown Mechanism type ";
+			msg += to_string( type );
+			Logger::GetLogger()->LogError( "MechanismFactory::CreateIMechanism", msg );
+		}
+		break;
+	}
+    // See if the mechanism was created already, if it wasn't create it
+	if ( found )
+    {
+        string msg = "mechanism already exists";
+        msg += to_string( type );
+        Logger::GetLogger()->LogError( string("MechansimFactory::CreateIMechanism" ), msg );
+    }
 }
+
 
 shared_ptr<IDragonMotorController> MechanismFactory::GetMotorController
 (

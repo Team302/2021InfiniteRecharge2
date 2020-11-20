@@ -22,7 +22,7 @@
 // Team 302 includes
 #include <states/IState.h>
 #include <states/MechSolenoidState.h>
-#include <subsys/IMech1Solenoid.h>
+#include <subsys/interfaces/IMech1Solenoid.h>
 #include <utils/Logger.h>
 
 #include <gamepad/TeleopControl.h>

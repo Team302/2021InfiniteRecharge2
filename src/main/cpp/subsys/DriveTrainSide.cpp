@@ -47,7 +47,8 @@ DriveTrainSide::DriveTrainSide
     shared_ptr<IDragonMotorController>                      master,
     shared_ptr<IDragonMotorController>                      follower,
     double                                                  wheelSize
-) : m_master( master ),
+) : IMechanism(),
+    m_master( master ),
     m_slave( follower ), 
     m_wheelSize( wheelSize ),
     m_target( 0.0 )

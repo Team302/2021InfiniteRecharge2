@@ -12,55 +12,48 @@
 /// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE  
 /// OR OTHER DEALINGS IN THE SOFTWARE.  
 //====================================================================================================================================================    
-  
-// C++ Includes  
-  
-// Team 302 includes 
-#include <states/turret/ShooterSaveState.h>
-#include <states/IState.h>
-#include <subsys/IMechanism.h>
+
+
+// C++ Includes
+
+// FRC includes
+
+// Team 302 includes
+#include <controllers/ControlData.h>
+#include <states/turret/HoldTurretPosition.h>
+#include <states/Mech1MotorState.h>
 #include <subsys/MechanismFactory.h>
-#include <subsys/MechanismTypes.h>
+
+#include <states/turret/ShooterSaveState.h>
 
 // Third Party Includes
+
 
 
 ShooterSaveState::ShooterSaveState
 (
     ControlData*    control,
     double          target
-) : IState(),
-    m_control( control ),
+) : Mech1MotorState( MechanismFactory::GetMechanismFactory()->GetTurret().get(), control, target ),
     m_target( target )
 
 {
-    auto factory = MechanismFactory::GetMechanismFactory();
-
-    m_turret = factory -> GetIMechanism(MechanismTypes::MECHANISM_TYPE::TURRET);
-
+    m_turret = MechanismFactory::GetMechanismFactory()->GetTurret();
 }
  
 
 void ShooterSaveState::Init()
 {
-    m_turret->SetControlConstants( m_control );
+    m_turret.get()->SetControlConstants( m_control );
 }
 
 void ShooterSaveState::Run()           
-
 {
-    m_turret -> SetOutput(m_control -> GetMode(), m_target);
+    m_turret.get()->Update();
 }
 
 
 bool ShooterSaveState::AtTarget() const                                 //confirms that it worked
 {
-    if (m_turret -> GetCurrentPosition() >= (m_target - 5) &&  m_turret -> GetCurrentPosition() <= (m_target + 5) )
-    { 
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return ( (m_turret.get()->GetPosition() >= (m_target - 5) &&  m_turret->GetPosition() <= (m_target + 5) ) );
 }

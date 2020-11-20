@@ -14,11 +14,13 @@
 //====================================================================================================================================================
 
 #pragma once
-
 #include <states/IState.h>
-#include <controllers/ControlData.h>  
-#include <subsys/IMechanism.h>
+#include <states/Mech1MotorState.h>
+#include <controllers/MechanismTargetData.h>
 #include <hw/DragonLimelight.h>
+#include <subsys/Turret.h>
+
+class ControlData;
 
 
 class LimelightAim : public IState
@@ -34,11 +36,13 @@ class LimelightAim : public IState
         bool AtTarget() const override;
         void UpdateTarget( double target );
     private:
+        std::unique_ptr<Mech1MotorState>    m_motorState;
+        std::shared_ptr<Turret>             m_turret;
+        DragonLimelight*                    m_limelight;
+
         ControlData* m_controlData;
         bool m_atTarget;
         double m_target;
-        IMechanism* m_turret;
-        DragonLimelight* m_limelight;
         double m_targetPosition;
         bool m_start;
 };

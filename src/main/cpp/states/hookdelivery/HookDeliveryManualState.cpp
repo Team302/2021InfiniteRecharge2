@@ -19,12 +19,12 @@
 // FRC includes
 
 // Team 302 includes
-#include <states/hookdelivery/HookDeliveryManualState.h>
-#include <states/MechanismState.h>
-#include <subsys/IMechanism.h>
-#include <subsys/MechanismFactory.h>
-#include <controllers/MechanismTargetData.h>
+#include <controllers/ControlData.h>
 #include <gamepad/TeleopControl.h>
+#include <states/hookdelivery/HookDeliveryManualState.h>
+#include <states/Mech1MotorState.h>
+#include <subsys/MechanismFactory.h>
+
 
 // Third Party Includes
 
@@ -34,22 +34,31 @@ using namespace std;
 HookDeliveryManualState::HookDeliveryManualState
 (
     ControlData*                    control,
-    double                          target,
-    MechanismTargetData::SOLENOID   solState
-) : MechanismState( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::HOOK_DELIVERY), control, target, solState )
+    double                          target
+) : Mech1MotorState( MechanismFactory::GetMechanismFactory()->GetHookDelivery().get(), control, target )
 {
+}
+
+void HookDeliveryManualState::Init()
+{
+    auto gamepad = TeleopControl::GetInstance();
+    if ( gamepad != nullptr )
+    {
+        gamepad ->SetAxisProfile( TeleopControl::FUNCTION_IDENTIFIER::MANUAL_HOOK_CONTROL_DOWN, IDragonGamePad::AXIS_PROFILE::CUBED );
+        gamepad ->SetAxisProfile( TeleopControl::FUNCTION_IDENTIFIER::MANUAL_HOOK_CONTROL_UP, IDragonGamePad::AXIS_PROFILE::CUBED );
+    }
 }
 
 
 void HookDeliveryManualState::Run()
 {
-    auto mech = MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::HOOK_DELIVERY);
-    auto ctl = TeleopControl::GetInstance();
-    if ( mech != nullptr && ctl != nullptr )
+    auto mech = MechanismFactory::GetMechanismFactory()->GetHookDelivery();
+    auto gamepad = TeleopControl::GetInstance();
+    if ( mech.get() != nullptr && gamepad != nullptr )
     {
-        auto up = ctl->GetAxisValue( TeleopControl::FUNCTION_IDENTIFIER::MANUAL_HOOK_CONTROL_UP );
-        auto down = ctl->GetAxisValue( TeleopControl::FUNCTION_IDENTIFIER::MANUAL_HOOK_CONTROL_DOWN );
-        mech->SetOutput( ControlModes::CONTROL_TYPE::PERCENT_OUTPUT, (up-down) );
-
+        auto up = gamepad->GetAxisValue( TeleopControl::FUNCTION_IDENTIFIER::MANUAL_HOOK_CONTROL_UP );
+        auto down = gamepad->GetAxisValue( TeleopControl::FUNCTION_IDENTIFIER::MANUAL_HOOK_CONTROL_DOWN );
+        mech.get()->UpdateTarget((up-down));
+        mech.get()->Update();
     }
 }

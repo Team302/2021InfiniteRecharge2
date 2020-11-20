@@ -16,13 +16,15 @@
 
 #pragma once
 
-#include <subsys/IMechanism.h>
 #include <states/IState.h>
-#include <states/MechanismState.h>
-#include <controllers/ControlData.h>
+#include <states/Mech1MotorState.h>
+#include <states/MechSolenoidState.h>
 #include <controllers/MechanismTargetData.h>
 
-class ControlPanelState : public MechanismState
+
+class ControlData;
+
+class ControlPanelState : public IState
 {
     public:
 
@@ -34,5 +36,13 @@ class ControlPanelState : public MechanismState
             MechanismTargetData::SOLENOID   solState
         );
         ~ControlPanelState() = default;
+        
+        void Init() override;
+        void Run() override;
+        bool AtTarget() const override;
+
+    private:
+        std::unique_ptr<Mech1MotorState>    m_motorState;
+        std::unique_ptr<MechSolenoidState>  m_solenoidState;
 };
 

@@ -15,11 +15,10 @@
 //====================================================================================================================================================
 
 // C++ Includes
-#include <memory>
 #include <string>
 
 // FRC includes
-#include <frc/Timer.h>
+#include <frc2/Timer.h>
 
 // Team 302 includes
 #include <auton/PrimitiveParams.h>
@@ -34,7 +33,7 @@
 
 
 using namespace std;
-using namespace frc;
+using namespace frc2;
 
 
 SuperDrive::SuperDrive() : m_chassis( ChassisFactory::GetChassisFactory()->GetIChassis()),

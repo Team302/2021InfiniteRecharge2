@@ -58,8 +58,7 @@ DigitalInputFactory* DigitalInputFactory::GetFactory()
 //=====================================================================================
 /// Method:         CreateInput
 /// Description:    Create the requested Digital input
-/// Returns:        IMechanism*     pointer to the mechanism or nullptr if mechanism 
-///                                 doesn't exist and cannot be created.
+/// Returns:        DragonDigitalInput*     pointer to DragonDigitalInput
 //=====================================================================================
 DragonDigitalInput* DigitalInputFactory::CreateInput
 (
@@ -82,8 +81,7 @@ DragonDigitalInput* DigitalInputFactory::CreateInput
 //=====================================================================================
 /// Method:         GetInput
 /// Description:    Get the requested Digital input
-/// Returns:        IMechanism*     pointer to the mechanism or nullptr if mechanism 
-///                                 doesn't exist.
+/// Returns:        DragonDigitalInput*     pointer to the Dragon Digital Input
 //=====================================================================================
 DragonDigitalInput* DigitalInputFactory::GetInput
 (

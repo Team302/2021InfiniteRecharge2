@@ -24,7 +24,7 @@
 #include <frc2/Timer.h>
 
 // Team 302 includes
-#include <subsys/IMech1IndMotor.h>
+#include <subsys/interfaces/IMech1IndMotor.h>
 #include <subsys/MechanismTypes.h>
 
 // Third Party Includes

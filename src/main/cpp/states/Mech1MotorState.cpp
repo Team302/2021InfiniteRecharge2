@@ -24,7 +24,7 @@
 #include <states/Mech1MotorState.h>
 #include <controllers/ControlData.h>
 #include <controllers/MechanismTargetData.h>
-#include <subsys/IMech1IndMotor.h>
+#include <subsys/interfaces/IMech1IndMotor.h>
 #include <utils/Logger.h>
 
 #include <gamepad/TeleopControl.h>

@@ -124,7 +124,7 @@ IntakeStateMgr::IntakeStateMgr() : m_stateVector(),
 /// @return void
 void IntakeStateMgr::RunCurrentState()
 {
-    if ( MechanismFactory::GetMechanismFactory()->GetIMechanism( MechanismTypes::MECHANISM_TYPE::INTAKE) != nullptr )
+    if ( MechanismFactory::GetMechanismFactory()->GetIntake().get() != nullptr )
     {
         // process teleop/manual interrupts
         auto controller = TeleopControl::GetInstance();
@@ -170,7 +170,7 @@ void IntakeStateMgr::SetCurrentState
         m_currentState->Init();
         if ( run )
         {
-            if ( MechanismFactory::GetMechanismFactory()->GetIMechanism( MechanismTypes::MECHANISM_TYPE::INTAKE) != nullptr )
+            if ( MechanismFactory::GetMechanismFactory()->GetIntake().get() != nullptr )
             {
                 m_currentState->Run();
             }

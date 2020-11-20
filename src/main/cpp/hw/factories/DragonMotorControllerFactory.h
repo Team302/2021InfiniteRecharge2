@@ -34,7 +34,6 @@
 
 
 // Team 302 includes
-#include <subsys/IMechanism.h>
 #include <xmlhw/MotorDefn.h>
 #include <hw/DragonTalon.h>
 #include <hw/DragonSparkMax.h>

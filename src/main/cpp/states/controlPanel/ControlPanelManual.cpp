@@ -15,6 +15,7 @@
 
 #include <memory>
 
+#include <gamepad/TeleopControl.h>
 #include <states/IState.h>
 #include <subsys/IMechanism.h>
 #include <subsys/MechanismFactory.h>
@@ -30,7 +31,7 @@ ControlPanelManual::ControlPanelManual(ControlData* control_data, double target)
                                                                                     m_controller( TeleopControl::GetInstance() )
 {
     auto factory = MechanismFactory::GetMechanismFactory();
-    m_control_panel_manipulator = factory -> GetIMechanism(MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR);
+    m_controlPanel = factory -> GetControlPanel();
 
     if ( m_controller == nullptr )
     {
@@ -43,11 +44,11 @@ ControlPanelManual::ControlPanelManual(ControlData* control_data, double target)
 
 void ControlPanelManual::Init()
 {
-    if ( m_controller != nullptr )
+    auto controller = TeleopControl::GetInstance();
+    if ( controller != nullptr )
     {
-        m_controller->SetAxisProfile( TeleopControl::FUNCTION_IDENTIFIER::CONTROL_PANEL_MANUAL, IDragonGamePad::AXIS_PROFILE::CUBED );
+        controller->SetAxisProfile( TeleopControl::FUNCTION_IDENTIFIER::CONTROL_PANEL_MANUAL, IDragonGamePad::AXIS_PROFILE::CUBED );
     }
-
 }
 
 
@@ -55,8 +56,8 @@ void ControlPanelManual::Run()
 {
 
 auto manipulator = m_controller->GetAxisValue( TeleopControl::FUNCTION_IDENTIFIER::CONTROL_PANEL_MANUAL );
-m_control->UpdateTarget(manipulator);
-m_control.get()->Update();
+m_controlPanel.get()->UpdateTarget(manipulator);
+m_controlPanel.get()->Update();
 
 }
 

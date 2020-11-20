@@ -27,7 +27,7 @@
 
 // Team 302 includes
 #include <controllers/ControlModes.h>
-#include <subsys/IMech.h>
+#include <subsys/interfaces/IMech.h>
 #include <subsys/MechanismTypes.h>
 #include <controllers/ControlData.h>
 // Third Party Includes

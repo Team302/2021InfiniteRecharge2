@@ -13,22 +13,17 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 //====================================================================================================================================================
 
-
-
-#include <states/shooter/ShooterState.h>
 #include <controllers/ControlData.h>
-#include <subsys/MechanismFactory.h>
-#include <subsys/IMechanism.h>
-#include <subsys/MechanismTypes.h>
-#include <states/MechanismState.h>
 #include <controllers/MechanismTargetData.h>
+#include <states/shooter/ShooterState.h>
+#include <states/Mech2MotorState.h>
+#include <subsys/MechanismFactory.h>
+
 
 ShooterState::ShooterState
 (
     ControlData*                    controlData, 
-    double                          target,
-    ControlData*                    failoverControlData,
-    double                          failoverTarget,    
-    MechanismTargetData::SOLENOID   solState
-) : MechanismState( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::SHOOTER), controlData, target, solState )
-{}
+    double                          target
+) : Mech2MotorState( MechanismFactory::GetMechanismFactory()->GetShooter().get(), controlData, target, target )
+{
+}

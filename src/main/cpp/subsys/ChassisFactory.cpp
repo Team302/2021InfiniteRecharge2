@@ -1,7 +1,7 @@
 
 #include <memory>
 
-#include <subsys/IChassis.h>
+#include <subsys/interfaces/IChassis.h>
 #include <subsys/ChassisFactory.h>
 #include <subsys/DragonChassis.h>
 #include <hw/interfaces/IDragonMotorController.h>

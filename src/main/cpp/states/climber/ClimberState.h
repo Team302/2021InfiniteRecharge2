@@ -13,20 +13,13 @@
 /// OR OTHER DEALINGS IN THE SOFTWARE.
 //====================================================================================================================================================
 
-//========================================================================================================
-/// ClimberHold.h
-//========================================================================================================
-///
-/// File Description:
-///     This controls the "hold" function of the climber
-///
-//========================================================================================================
-
-#include <subsys/IMechanism.h>
-#include <states/MechanismState.h>
+#include <states/Mech1MotorState.h>
 #include <controllers/MechanismTargetData.h>
 
-class ClimberState : public MechanismState
+class ControlData;
+
+
+class ClimberState : public Mech1MotorState
 {
     public:
 
@@ -34,8 +27,7 @@ class ClimberState : public MechanismState
         ClimberState
         (
             ControlData*                    control,
-            double                          target,
-            MechanismTargetData::SOLENOID   solState
+            double                          target
         );
         ~ClimberState() =default;
 };

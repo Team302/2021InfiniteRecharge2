@@ -121,7 +121,7 @@ ControlPanelStateMgr::ControlPanelStateMgr() :m_stateVector(),
 /// @return void
 void ControlPanelStateMgr::RunCurrentState()
 {
-    if ( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR) != nullptr )
+    if ( MechanismFactory::GetMechanismFactory()->GetControlPanel().get() != nullptr )
     {
         // process teleop/manual interrupts
         auto controller = TeleopControl::GetInstance();
@@ -174,7 +174,7 @@ void ControlPanelStateMgr::SetCurrentState
         m_currentState->Init();
         if ( run )
         {
-            if ( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR) != nullptr )
+            if ( MechanismFactory::GetMechanismFactory()->GetControlPanel().get() != nullptr )
             {
                 m_currentState->Run();
             }

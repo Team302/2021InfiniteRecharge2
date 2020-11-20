@@ -51,7 +51,6 @@ ImpellerStateMgr* ImpellerStateMgr::GetInstance()
 ImpellerStateMgr::ImpellerStateMgr() : 
                                        m_stateVector(),
                                        m_currentState(),
-                                       m_impeller(  MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::IMPELLER) ),
                                        m_reverse( false ),
                                        m_numReverseLoops( 0 ),
                                        m_consecZero( 0 )
@@ -79,12 +78,11 @@ ImpellerStateMgr::ImpellerStateMgr() :
             {
                 auto controlData = td->GetController();
                 auto target = td->GetTarget();
-                auto solState = td->GetSolenoidState();
                 switch ( stateEnum )
                 {
                     case IMPELLER_STATE::HOLD:
                     {   
-                        auto thisState = new ImpellerState(controlData, target, solState );
+                        auto thisState = new ImpellerState(controlData, target );
                         m_stateVector[stateEnum] = thisState;
                         Logger::GetLogger()->LogError("ImpellerStateMgr::ImpellerStateMgr", "Impeller Hold State added to Map");
                     }
@@ -92,7 +90,7 @@ ImpellerStateMgr::ImpellerStateMgr() :
 
                     case IMPELLER_STATE::TO_SHOOTER:
                     {   
-                        auto thisState = new ImpellerState(controlData, target, solState );
+                        auto thisState = new ImpellerState(controlData, target );
                         m_stateVector[stateEnum] = thisState;
                         Logger::GetLogger()->LogError("ImpellerStateMgr::ImpellerStateMgr", "Impeller To Shooter State added to Map");
                     }
@@ -100,7 +98,7 @@ ImpellerStateMgr::ImpellerStateMgr() :
 
                     case IMPELLER_STATE::OFF:
                     {   
-                        auto thisState = new ImpellerState(controlData, target, solState );
+                        auto thisState = new ImpellerState(controlData, target );
                         m_stateVector[stateEnum] = thisState;
                         m_currentState = thisState;
                         m_currentStateEnum = stateEnum;
@@ -111,7 +109,7 @@ ImpellerStateMgr::ImpellerStateMgr() :
 
                     case IMPELLER_STATE::AGITATE:
                     {   
-                        auto thisState = new ImpellerState(controlData, target, solState );
+                        auto thisState = new ImpellerState(controlData, target );
                         m_stateVector[stateEnum] = thisState;
                         Logger::GetLogger()->LogError("ImpellerStateMgr::ImpellerStateMgr", "Impeller Agitate State added to Map");
                     }
@@ -140,7 +138,7 @@ ImpellerStateMgr::ImpellerStateMgr() :
 /// @return void
 void ImpellerStateMgr::RunCurrentState()
 {
-    if ( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::IMPELLER) != nullptr )
+    if ( MechanismFactory::GetMechanismFactory()->GetImpeller().get() != nullptr )
     {
         // process teleop/manual interrupts
         auto controller = TeleopControl::GetInstance();
@@ -188,61 +186,6 @@ void ImpellerStateMgr::RunCurrentState()
         {
             m_currentState->Run();
             Logger::GetLogger()->LogError("Logger::SetCurrentState", "Running Current State");
-
-            /*if ( !changingStates && ( m_currentStateEnum == IMPELLER_STATE::TO_SHOOTER || 
-                                    m_currentStateEnum == IMPELLER_STATE::HOLD ) )
-            {
-                auto speed = m_impeller->GetCurrentSpeed();
-                if ( abs(speed) < 0.0002 )
-                { 
-                    m_consecZero++;
-                    if ( m_consecZero > 5 )
-                    {
-                        m_reverse = true;
-                        switch ( m_currentStateEnum )
-                        {
-                            case IMPELLER_STATE::TO_SHOOTER:
-                                SetCurrentState( IMPELLER_STATE::HOLD, false );
-                                break;
-                            
-                            case IMPELLER_STATE::HOLD:
-                                SetCurrentState( IMPELLER_STATE::TO_SHOOTER, false );
-                                break;
-                            
-                            default:
-                                break;
-                        }
-                    }
-                }
-                else
-                {
-                    m_consecZero = 0;
-                }
-
-                if ( m_reverse )
-                {
-                    m_numReverseLoops++;
-                    if ( m_numReverseLoops > 20 )
-                    {
-                        m_reverse = true;
-                        m_numReverseLoops = 0;
-                        switch ( m_currentStateEnum )
-                        {
-                            case IMPELLER_STATE::TO_SHOOTER:
-                                SetCurrentState( IMPELLER_STATE::HOLD, false );
-                                break;
-                            
-                            case IMPELLER_STATE::HOLD:
-                                SetCurrentState( IMPELLER_STATE::TO_SHOOTER, false );
-                                break;
-                            
-                            default:
-                                break;
-                        }
-
-                    }
-                }
-            }*/
         }
     }
 
@@ -256,9 +199,6 @@ void ImpellerStateMgr::SetCurrentState
     bool            run
 )
 {
-    
-  
-        
     m_currentState = m_stateVector[stateEnum];
     m_currentStateEnum = stateEnum;
     if (m_currentState != nullptr)
@@ -266,7 +206,7 @@ void ImpellerStateMgr::SetCurrentState
         m_currentState->Init();
         if ( run )
         {
-            if ( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::IMPELLER) != nullptr )
+            if ( MechanismFactory::GetMechanismFactory()->GetImpeller().get() != nullptr )
             {
                 m_currentState->Run();
             }            

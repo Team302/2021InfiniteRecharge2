@@ -15,35 +15,21 @@
 //====================================================================================================================================================
 
 // C++ Includes
-#include <memory>
-#include <string>
 
 // FRC includes
-#include <frc/Timer.h>
 
 // Team 302 includes
-#include <auton/primitives/DoNothing.h>
 #include <auton/PrimitiveParams.h>
 #include <auton/primitives/IPrimitive.h>
-#include <subsys/MechanismFactory.h>
-#include <controllers/ControlModes.h>
-#include <subsys/IMechanism.h>
-#include <utils/Logger.h>
+#include <auton/primitives/DriveToWall.h>
+#include <subsys/ChassisFactory.h>
+#include <subsys/interfaces/IChassis.h>
 
 // Third Party Includes
 
 
 using namespace std;
 using namespace frc;
-
-//Includes
-#include <cmath>
-#include <iostream>
-
-//Team302 includes
-#include <auton/primitives/DriveToWall.h>
-#include <subsys/ChassisFactory.h>
-#include <subsys/IChassis.h>
 
 DriveToWall::DriveToWall() :
 	SuperDrive(),

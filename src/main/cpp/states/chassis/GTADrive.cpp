@@ -22,7 +22,7 @@
 // Team 302 Includes
 #include <states/chassis/GTADrive.h>
 #include <gamepad/IDragonGamePad.h>
-#include <subsys/IChassis.h>
+#include <subsys/interfaces/IChassis.h>
 #include <gamepad/TeleopControl.h>
 
 #include <utils/Logger.h>

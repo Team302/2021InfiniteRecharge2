@@ -23,7 +23,6 @@
 
 // Team 302 includes
 #include <states/IState.h>
-#include <subsys/IMechanism.h>
 
 // Third Party Includes
 
@@ -69,7 +68,6 @@ class ImpellerStateMgr
         std::vector<IState*> m_stateVector;
         IState* m_currentState;
         IMPELLER_STATE m_currentStateEnum;
-        IMechanism*     m_impeller;
         bool            m_reverse;
         int             m_numReverseLoops;
         int             m_consecZero;

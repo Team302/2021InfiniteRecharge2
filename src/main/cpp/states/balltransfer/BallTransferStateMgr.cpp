@@ -27,9 +27,7 @@
 #include <controllers/MechanismTargetData.h>
 #include <utils/Logger.h>
 #include <gamepad/TeleopControl.h>
-#include <states/balltransfer/BallTransferOff.h>
-#include <states/balltransfer/BallTransferToImpeller.h>
-#include <states/balltransfer/BallTransferToShooter.h>
+#include <states/balltransfer/BallTransferState.h>
 #include <subsys/MechanismFactory.h>
 #include <subsys/MechanismTypes.h>
 
@@ -78,13 +76,12 @@ BallTransferStateMgr::BallTransferStateMgr() : m_currentState(),
             {
                 auto controlData = td->GetController();
                 auto target = td->GetTarget();
-                auto solState = td->GetSolenoidState();
                 switch ( stateEnum )
                 {
                     case BALL_TRANSFER_STATE::OFF:
                     {   
                         Logger::GetLogger()->LogError(string("creating ball transfer off"), string(""));
-                        auto thisState = new BallTransferOff( controlData, target, solState );
+                        auto thisState = new BallTransferState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                         m_currentState = thisState;
                         m_currentStateEnum = stateEnum;
@@ -95,7 +92,7 @@ BallTransferStateMgr::BallTransferStateMgr() : m_currentState(),
                     case BALL_TRANSFER_STATE::TO_IMPELLER:
                     {   
                         Logger::GetLogger()->LogError(string("creating ball transfer to impeller"), string(""));
-                        auto thisState = new BallTransferToImpeller( controlData, target, solState );
+                        auto thisState = new BallTransferState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                     }
                     break;
@@ -103,14 +100,14 @@ BallTransferStateMgr::BallTransferStateMgr() : m_currentState(),
                     case BALL_TRANSFER_STATE::TO_SHOOTER:
                     {   
                         Logger::GetLogger()->LogError(string("creating ball transfer to shooter"), string(""));
-                        auto thisState = new BallTransferToShooter( controlData, target, solState );
+                        auto thisState = new BallTransferState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                     }
                     break;
 
                     case BALL_TRANSFER_STATE::EJECT:
                     {
-                        auto thisState = new BallTransferToShooter(controlData, target, solState);
+                        auto thisState = new BallTransferState(controlData, target);
                         m_stateVector[stateEnum] = thisState;
                     
                     }
@@ -139,7 +136,7 @@ BallTransferStateMgr::BallTransferStateMgr() : m_currentState(),
 /// @return void
 void BallTransferStateMgr::RunCurrentState()
 {
-    if ( MechanismFactory::GetMechanismFactory()->GetIMechanism( MechanismTypes::MECHANISM_TYPE::BALL_TRANSFER ) != nullptr )
+    if ( MechanismFactory::GetMechanismFactory()->GetBallTransfer().get() != nullptr )
     {
         // process teleop/manual interrupts
         
@@ -195,7 +192,7 @@ void BallTransferStateMgr::SetCurrentState
         m_currentState->Init();
         if ( run )
         {
-            if ( MechanismFactory::GetMechanismFactory()->GetIMechanism( MechanismTypes::MECHANISM_TYPE::BALL_TRANSFER ) != nullptr )
+            if ( MechanismFactory::GetMechanismFactory()->GetBallTransfer().get() != nullptr )
             {
                 m_currentState->Run();
             }

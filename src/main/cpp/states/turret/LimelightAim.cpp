@@ -13,23 +13,35 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 //====================================================================================================================================================
 
-#include "states/turret/LimelightAim.h"
-#include "subsys/MechanismFactory.h"
-#include "subsys/IMechanism.h"
-#include "subsys/Turret.h"
-#include "controllers/ControlData.h"
-#include "subsys/MechanismTypes.h"
-#include "hw/DragonLimelight.h"
-#include "hw/factories/LimelightFactory.h"
-#include "frc/smartdashboard/SmartDashboard.h"
+
+// C++ Includes
+
+// FRC includes
+#include <frc/smartdashboard/SmartDashboard.h>
+
+// Team 302 includes
+#include <controllers/ControlData.h>
+#include <hw/DragonLimelight.h>
+#include <hw/factories/LimelightFactory.h>
+#include <states/turret/LimelightAim.h>
+#include <states/Mech1MotorState.h>
+#include <subsys/MechanismFactory.h>
+#include <subsys/Turret.h>
+
+// Third Party Includes
 
 using namespace std;
 
-LimelightAim::LimelightAim(ControlData* controlData, double target): m_controlData(controlData),
+LimelightAim::LimelightAim
+(
+    ControlData*    control, 
+    double          target
+) : IState(),
+    m_motorState( make_unique<Mech1MotorState>(MechanismFactory::GetMechanismFactory()->GetIntake().get(), control, target)),
+    m_turret(MechanismFactory::GetMechanismFactory()->GetTurret()),
+    m_limelight(new DragonLimelight(IDragonSensor::MAIN_LIMELIGHT, "limelight", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)),
     m_atTarget(false),
     m_target(target),
-    m_turret( MechanismFactory::GetMechanismFactory()->GetIMechanism( MechanismTypes::TURRET) ),
-    m_limelight(new DragonLimelight(IDragonSensor::MAIN_LIMELIGHT, "limelight", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)),
     m_targetPosition(0.0),
     m_start(false)
 {
@@ -37,7 +49,7 @@ LimelightAim::LimelightAim(ControlData* controlData, double target): m_controlDa
 
 void LimelightAim::Init()
 {
-    m_turret->SetControlConstants(m_controlData);
+    m_turret.get()->SetControlConstants(m_controlData);
     m_limelight->SetLEDMode(DragonLimelight::LED_ON);
 }
 
@@ -62,7 +74,7 @@ void LimelightAim::Run()
    //m_turret->SetOutput(m_controlData->GetMode(), 90.0);
    double targetHorizontalOffset = m_limelight->GetTargetHorizontalOffset();
    frc::SmartDashboard::PutNumber("horizontal offset", targetHorizontalOffset);
-   double currentPosition = m_turret->GetCurrentPosition();
+   double currentPosition = m_turret.get()->GetPosition();
    /*double scaledOffset;
    if(targetHorizontalOffset < 0)
    {
@@ -72,7 +84,9 @@ void LimelightAim::Run()
    {
        scaledOffset = targetHorizontalOffset + 2.0 + (targetHorizontalOffset/28.0) * 5.0;
    }*/
-   m_turret->SetOutput(ControlModes::POSITION_DEGREES, currentPosition + targetHorizontalOffset + 2.0);
+   //m_turret.get()->SetOutput(ControlModes::POSITION_DEGREES, currentPosition + targetHorizontalOffset + 2.0);
+   m_turret.get()->UpdateTarget((currentPosition + targetHorizontalOffset + 2.0));
+   m_turret.get()->Update();
 }
 
 bool LimelightAim::AtTarget() const

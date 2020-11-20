@@ -20,6 +20,7 @@
 #include <memory>
 
 // FRC includes
+#include <frc2/Timer.h>
 // Team 302 includes
 #include <auton/primitives/IPrimitive.h>
 
@@ -27,11 +28,6 @@
 
 
 class IChassis;
-namespace frc
-{
-	class Timer;
-}
-
 
 class SuperDrive : public IPrimitive 
 {
@@ -46,7 +42,7 @@ class SuperDrive : public IPrimitive
 		const float INCHES_PER_SECOND_SECOND = 120; //120
 		const float MIN_SPEED_SLOWDOWN       = 13;
 
-protected: 
+	protected: 
 		SuperDrive();
 		virtual ~SuperDrive() = default;
 
@@ -57,7 +53,7 @@ protected:
 		const float FEET_FORWARD_COEFF  = 0.0;
 
         std::shared_ptr<IChassis> m_chassis;
-   		std::unique_ptr<frc::Timer> m_timer;
+   		std::unique_ptr<frc2::Timer> m_timer;
 
 		float m_targetSpeed;
 		float m_currentSpeed;

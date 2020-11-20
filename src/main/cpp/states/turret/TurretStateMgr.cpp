@@ -22,8 +22,8 @@
 #include <states/turret/HoldTurretPosition.h>
 #include <hw/factories/LimelightFactory.h>
 #include <subsys/MechanismFactory.h>
-#include <subsys/IMechanism.h>
 #include <subsys/MechanismTypes.h>
+#include <subsys/Turret.h>
 
 using namespace std;
 
@@ -41,8 +41,8 @@ TurretStateMgr::TurretStateMgr() : m_stateVector(),
                                    m_currentState(),
                                    m_approxTargetAngle( 0.0 )
 {
-    auto turret = MechanismFactory::GetMechanismFactory()->GetIMechanism( MechanismTypes::TURRET );
-    m_approxTargetAngle = turret->GetCurrentPosition();
+    auto turret = MechanismFactory::GetMechanismFactory()->GetTurret();
+    m_approxTargetAngle = turret->GetPosition();
 
     // Parse the configuration file 
     auto stateXML = make_unique<StateDataDefn>();
@@ -70,7 +70,7 @@ TurretStateMgr::TurretStateMgr() : m_stateVector(),
                 {
                     case TURRET_STATE::HOLD:
                     {
-                        auto thisState = new HoldTurretPosition(controlData, m_approxTargetAngle, MechanismTargetData::SOLENOID::NONE);
+                        auto thisState = new HoldTurretPosition(controlData, m_approxTargetAngle);
                         m_stateVector[stateEnum] = thisState;
                         m_currentState = thisState;
                         m_currentStateEnum = stateEnum;
@@ -94,7 +94,7 @@ TurretStateMgr::TurretStateMgr() : m_stateVector(),
 
                     case TURRET_STATE::TURN_ANGLE:
                     {
-                        auto thisState = new TurretTurnAngle(controlData, td->GetTarget(), MechanismTargetData::SOLENOID::NONE);
+                        auto thisState = new TurretTurnAngle(controlData, td->GetTarget());
                         m_stateVector[stateEnum] = thisState;
                     }
                     break;
@@ -116,7 +116,7 @@ TurretStateMgr::TurretStateMgr() : m_stateVector(),
 
 void TurretStateMgr::RunCurrentState()
 {
-    if ( MechanismFactory::GetMechanismFactory()->GetIMechanism( MechanismTypes::MECHANISM_TYPE::TURRET) != nullptr )
+    if ( MechanismFactory::GetMechanismFactory()->GetTurret().get() != nullptr )
     {
         // process teleop/manual interrupts
         auto controller = TeleopControl::GetInstance();
@@ -131,7 +131,6 @@ void TurretStateMgr::RunCurrentState()
                 SetCurrentState( TURRET_STATE::LIMELIGHT_AIM, false, 0.0);
             }
         }
-        Logger::GetLogger()->OnDash(string("Turret State"), to_string(m_currentStateEnum));
         if ( m_currentState != nullptr )
         {
             m_currentState->Run();
@@ -145,7 +144,7 @@ void TurretStateMgr::SetCurrentState
     double       turretAngle
 )
 {
-    auto state = m_stateVector[stateEnum];
+    /**auto state = m_stateVector[stateEnum];
     if ( state != nullptr && state != m_currentState )
     {
         if (stateEnum == TURN_ANGLE)
@@ -170,11 +169,11 @@ void TurretStateMgr::SetCurrentState
         
         if ( run )
         {
-            if ( MechanismFactory::GetMechanismFactory()->GetIMechanism( MechanismTypes::MECHANISM_TYPE::TURRET) != nullptr )
+            if ( MechanismFactory::GetMechanismFactory()->GetTurret().get() != nullptr )
             {
                 m_currentState->Run();
             }
         }
         
-    }
+    }**/
 }

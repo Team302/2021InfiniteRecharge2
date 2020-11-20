@@ -17,21 +17,19 @@
 
 #pragma once
 
-#include <states/MechanismState.h>
+#include <states/Mech2MotorState.h>
 #include <controllers/MechanismTargetData.h>
 
 class ControlData;
 
-class ShooterState : public MechanismState
+
+class ShooterState : public Mech2MotorState
 {
     public:
         ShooterState
         (
             ControlData*                    controlData,
-            double                          target,
-            ControlData*                    failoverControlData,
-            double                          failoverTarget,            
-            MechanismTargetData::SOLENOID   solState
+            double                          target
         );
 
         ShooterState() = delete;

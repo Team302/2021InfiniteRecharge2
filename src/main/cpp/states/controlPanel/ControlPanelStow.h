@@ -26,5 +26,5 @@ class ControlPanelStow : public IState
 
   private:
 
-  IMechanism* m_controlPanel;
+    std::shared_ptr<ControlPanel> m_controlPanel;
 };

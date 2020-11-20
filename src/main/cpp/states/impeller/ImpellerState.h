@@ -15,20 +15,20 @@
 
 #pragma once 
 
-#include <states/MechanismState.h>
+#include <states/Mech1MotorState.h>
 #include <controllers/MechanismTargetData.h>
 
 class ControlData;
 
-class ImpellerState : public MechanismState
+
+class ImpellerState : public Mech1MotorState
 {
     public:
 
         ImpellerState
         (
             ControlData*                    control,
-            double                          target,
-            MechanismTargetData::SOLENOID   solState
+            double                          target
         );
         ImpellerState() = delete;
         ~ImpellerState() = default;

@@ -19,11 +19,14 @@
 // FRC includes
 
 // Team 302 includes
-#include <states/controlPanel/ControlPanelState.h>
-#include <states/MechanismState.h>
-#include <subsys/IMechanism.h>
-#include <subsys/MechanismFactory.h>
+#include <controllers/ControlData.h>
 #include <controllers/MechanismTargetData.h>
+#include <states/controlPanel/ControlPanelState.h>
+#include <states/IState.h>
+#include <states/Mech1MotorState.h>
+#include <states/MechSolenoidState.h>
+#include <subsys/MechanismFactory.h>
+
 
 // Third Party Includes
 
@@ -35,6 +38,27 @@ ControlPanelState::ControlPanelState
     ControlData*                    control,
     double                          target,
     MechanismTargetData::SOLENOID   solState
-) : MechanismState( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::BALL_TRANSFER), control, target, solState )
+
+) : IState(),
+    m_motorState( make_unique<Mech1MotorState>(MechanismFactory::GetMechanismFactory()->GetControlPanel().get(), control, target)),
+    m_solenoidState( make_unique<MechSolenoidState>(MechanismFactory::GetMechanismFactory()->GetControlPanel().get(), solState))
 {
+}
+
+void ControlPanelState::Init()
+{
+    m_motorState.get()->Init();
+    m_solenoidState.get()->Init();
+}
+
+
+void ControlPanelState::Run()           
+{
+    m_motorState.get()->Run();
+    m_solenoidState.get()->Run();
+}
+
+bool ControlPanelState::AtTarget() const
+{
+    return ( m_motorState.get()->AtTarget() && m_solenoidState.get()->AtTarget());
 }

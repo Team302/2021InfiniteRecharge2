@@ -15,6 +15,10 @@
 
 #pragma once
 
+#include <states/Mech1MotorState.h>
+
+class ControlData;
+
 // C++ Includes
 #include <memory>
 
@@ -28,29 +32,29 @@
 
 // Third Party Includes
 
-class ShooterSaveState : public IState
+class ShooterSaveState : public Mech1MotorState
 {
     public:
     
-    ShooterSaveState
-    (
-        ControlData*    control,
-        double          target
-    );
+        ShooterSaveState
+        (
+            ControlData*    control,
+            double          target
+        );
 
- 
-    ShooterSaveState() = delete;
-    ~ShooterSaveState() = default;
+    
+        ShooterSaveState() = delete;
+        ~ShooterSaveState() = default;
 
-    void Init() override;
-    void Run() override;
-    bool AtTarget() const override;
+        void Init() override;
+        void Run() override;
+        bool AtTarget() const override;
 
-    double degreesToTurn;
+        double degreesToTurn;
 
     private:
 
-    IMechanism*    m_turret;
-    ControlData*   m_control;
-    double         m_target;
+        std::shared_ptr<Turret>     m_turret;
+        ControlData*                m_control;
+        double                      m_target;
 };

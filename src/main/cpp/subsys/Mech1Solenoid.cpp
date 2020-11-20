@@ -22,7 +22,7 @@
 // Team 302 includes
 
 #include <subsys/Mech1Solenoid.h>
-#include <subsys/IMech1Solenoid.h>
+#include <subsys/interfaces/IMech1Solenoid.h>
 #include <hw/DragonSolenoid.h>
 #include <utils/Logger.h>
 

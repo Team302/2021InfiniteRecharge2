@@ -19,30 +19,22 @@
 #include <string>
 
 // FRC includes
-#include <frc/Timer.h>
 
 // Team 302 includes
-#include <auton/primitives/DoNothing.h>
+#include <auton/primitives/DriveDistance.h>
+#include <auton/primitives/DriveToTarget.h>
 #include <auton/PrimitiveParams.h>
-#include <auton/primitives/IPrimitive.h>
-#include <subsys/MechanismFactory.h>
-#include <controllers/ControlModes.h>
-#include <subsys/IMechanism.h>
-#include <utils/Logger.h>
-
+#include <hw/factories/DistanceSensorFactory.h>
+#include <hw/interfaces/IDragonDistanceSensor.h>
 // Third Party Includes
 
 
 using namespace std;
 using namespace frc;
 
-#include <auton/primitives/DriveDistance.h>
-#include <auton/primitives/DriveToTarget.h>
-#include <auton/PrimitiveParams.h>
-#include <hw/factories/DistanceSensorFactory.h>
-#include <hw/interfaces/IDragonDistanceSensor.h>
 
-DriveToTarget::DriveToTarget() :
+
+DriveToTarget::DriveToTarget() : DriveDistance(),
 	m_sensor( nullptr ),
 	m_underDistanceCounts( 0 ),
 	m_minTimeToRun( 0 )

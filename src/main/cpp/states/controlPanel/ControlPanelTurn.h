@@ -17,7 +17,7 @@ class ControlPanelTurn : public IState
 
     private:
 
-    IMechanism* m_control_panel_manipulator;
+    std::shared_ptr<ControlPanel> m_controlPanel;
     double m_target;
     ControlData* m_control_data;
     double m_offset;

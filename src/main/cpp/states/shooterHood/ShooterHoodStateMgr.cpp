@@ -74,28 +74,25 @@ ShooterHoodStateMgr::ShooterHoodStateMgr() : m_stateVector(),
             {
                 auto controlData = td->GetController();
                 auto target = td->GetTarget();
-                auto fbControlData = td->GetFailoverController(); // todo pass through to the states
-                auto fbTarget = td->GetFailoverTarget();  // todo pass through to the states
-
                 switch ( stateEnum )
                 {
                     case SHOOTER_HOOD_STATE::MOVE_UP:
                     {   // todo update the constructor take in controlData and target
-                        auto thisState = new ShooterHoodState(controlData, target, MechanismTargetData::SOLENOID::NONE);
+                        auto thisState = new ShooterHoodState(controlData, target);
                         m_stateVector[stateEnum] = thisState;
                     }
                     break;
 
                     case SHOOTER_HOOD_STATE::MOVE_DOWN:
                     {   // todo update the constructor take in controlData and target
-                        auto thisState = new ShooterHoodState(controlData, target, MechanismTargetData::SOLENOID::NONE);
+                        auto thisState = new ShooterHoodState(controlData, target);
                         m_stateVector[stateEnum] = thisState;
                     }
                     break;
 
                     case SHOOTER_HOOD_STATE::HOLD_POSITION:
                     {   // todo update the constructor take in controlData and target
-                        auto thisState = new ShooterHoodState(controlData, target, MechanismTargetData::SOLENOID::NONE);
+                        auto thisState = new ShooterHoodState(controlData, target);
                         m_stateVector[stateEnum] = thisState;
                         m_currentState = thisState;
                         m_currentStateEnum = stateEnum;
@@ -133,7 +130,7 @@ ShooterHoodStateMgr::ShooterHoodStateMgr() : m_stateVector(),
 /// @return void
 void ShooterHoodStateMgr::RunCurrentState()
 {
-    if ( MechanismFactory::GetMechanismFactory()->GetIMechanism( MechanismTypes::MECHANISM_TYPE::SHOOTER_HOOD) != nullptr )
+    if ( MechanismFactory::GetMechanismFactory()->GetShooterHood().get() != nullptr )
     {
         // process teleop/manual interrupts
         auto controller = TeleopControl::GetInstance();
@@ -142,7 +139,6 @@ void ShooterHoodStateMgr::RunCurrentState()
             if (controller->IsButtonPressed( TeleopControl::FUNCTION_IDENTIFIER::SHOOTER_HOOD_MANUAL_BUTTON))
             {
                 SetCurrentState( SHOOTER_HOOD_STATE::MANUAL, false ); 
-                Logger::GetLogger()->LogError("ShootHoodStateMgr::SetCurrentState", "Shooter Hood State Manual Hood");
             }
             
             /*if ( controller->IsButtonPressed( TeleopControl::FUNCTION_IDENTIFIER::SHOOTER_HOOD_MOVE_UP ) && 
@@ -162,7 +158,6 @@ void ShooterHoodStateMgr::RunCurrentState()
             }*/
         }
 
-    Logger::GetLogger()->OnDash(string("Shooterhood State"), to_string(m_currentStateEnum));
         // run the current state
         if ( m_currentState != nullptr )
         {
@@ -188,7 +183,7 @@ void ShooterHoodStateMgr::SetCurrentState
         m_currentState->Init();
         if ( run )
         {
-            if ( MechanismFactory::GetMechanismFactory()->GetIMechanism( MechanismTypes::MECHANISM_TYPE::SHOOTER_HOOD) != nullptr )
+            if ( MechanismFactory::GetMechanismFactory()->GetShooterHood().get() != nullptr )
             {
                 m_currentState->Run();
             }

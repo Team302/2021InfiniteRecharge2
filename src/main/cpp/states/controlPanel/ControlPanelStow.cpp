@@ -18,7 +18,7 @@ ControlPanelStow::ControlPanelStow()
 {
     auto factory = MechanismFactory::GetMechanismFactory();
 
-    m_controlPanel = factory -> GetIMechanism(MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR);
+    m_controlPanel = factory -> GetControlPanel();
 }
 
 void ControlPanelStow::Init() 
@@ -28,8 +28,9 @@ void ControlPanelStow::Init()
 
 void ControlPanelStow::Run() 
 {
-    m_controlPanel -> ActivateSolenoid( false ); 
-    m_controlPanel -> SetOutput( ControlModes::PERCENT_OUTPUT, 0 );
+    m_controlPanel.get()->UpdateTarget(0.0);
+    m_controlPanel.get()-> Update();
+    m_controlPanel.get()-> ActivateSolenoid( false ); 
 }
 
 bool ControlPanelStow::AtTarget() const

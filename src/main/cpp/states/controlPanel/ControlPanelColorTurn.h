@@ -42,7 +42,7 @@ class ControlPanelColorTurn : public IState
 
     private:
 
-    ControlPanel* m_controlPanel;
+    std::shared_ptr<ControlPanel> m_controlPanel;
     ControlData* m_control;
     double       m_target;
 };

@@ -81,12 +81,11 @@ HookDeliveryStateMgr::HookDeliveryStateMgr() : m_currentState(),
             {
                 auto controlData = td->GetController();
                 auto target = td->GetTarget();
-                auto solState = td->GetSolenoidState();
                 switch ( stateEnum )
                 {
                     case HOOK_DELIVERY_STATE::OFF:
                     {   
-                        auto thisState = new HookDeliveryState( controlData, target, solState );
+                        auto thisState = new HookDeliveryState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                         m_currentState = thisState;
                         m_currentStateEnum = stateEnum;
@@ -96,35 +95,35 @@ HookDeliveryStateMgr::HookDeliveryStateMgr() : m_currentState(),
 
                     case HOOK_DELIVERY_STATE::UP:
                     {   
-                        auto thisState = new HookDeliveryState( controlData, target, solState );
+                        auto thisState = new HookDeliveryState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                     }
                     break;
 
                     case HOOK_DELIVERY_STATE::DOWN:
                     {   
-                        auto thisState = new HookDeliveryState( controlData, target, solState );
+                        auto thisState = new HookDeliveryState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                     }
                     break;
 
                     /*case HOOK_DELIVERY_STATE::RAISE:
                     {   
-                        auto thisState = new HookDeliveryState( controlData, target, solState );
+                        auto thisState = new HookDeliveryState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                     }
                     break;
 
                     case HOOK_DELIVERY_STATE::HIGH:
                     {   
-                        auto thisState = new HookDeliveryState( controlData, target, solState );
+                        auto thisState = new HookDeliveryState( controlData, target );
                         m_stateVector[stateEnum] = thisState;
                     }
                     break;
 
                     case HOOK_DELIVERY_STATE::LOWER:
                     {
-                        auto thisState = new HookDeliveryState(controlData, target, solState);
+                        auto thisState = new HookDeliveryState(controlData, target);
                         m_stateVector[stateEnum] = thisState;
                     
                     }
@@ -132,7 +131,7 @@ HookDeliveryStateMgr::HookDeliveryStateMgr() : m_currentState(),
 
                     case HOOK_DELIVERY_STATE::MANUAL:
                     {
-                        auto thisState = new HookDeliveryState(controlData, target, solState);
+                        auto thisState = new HookDeliveryState(controlData, target);
                         m_stateVector[stateEnum] = thisState;
                     
                     }
@@ -161,7 +160,7 @@ HookDeliveryStateMgr::HookDeliveryStateMgr() : m_currentState(),
 /// @return void
 void HookDeliveryStateMgr::RunCurrentState()
 {
-    if ( MechanismFactory::GetMechanismFactory()->GetIMechanism( MechanismTypes::MECHANISM_TYPE::HOOK_DELIVERY ) != nullptr )
+    if ( MechanismFactory::GetMechanismFactory()->GetHookDelivery().get() != nullptr )
     {
         // process teleop/manual interrupts
         
@@ -230,7 +229,7 @@ void HookDeliveryStateMgr::SetCurrentState
         m_currentState->Init();
         if ( run )
         {
-            if ( MechanismFactory::GetMechanismFactory()->GetIMechanism( MechanismTypes::MECHANISM_TYPE::HOOK_DELIVERY ) != nullptr )
+            if ( MechanismFactory::GetMechanismFactory()->GetHookDelivery().get() != nullptr )
             {
                 m_currentState->Run();
             }

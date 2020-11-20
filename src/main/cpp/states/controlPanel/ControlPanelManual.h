@@ -35,7 +35,7 @@ class ControlPanelManual : public IState
 
     private:
 
-    IMechanism* m_control_panel_manipulator;
+    std::shared_ptr<ControlPanel> m_controlPanel;
     TeleopControl* m_controller;
     std::shared_ptr<ControlPanel> m_control;
 };

@@ -19,11 +19,10 @@
 // FRC includes
 
 // Team 302 includes
+#include <controllers/ControlData.h>
 #include <states/hookdelivery/HookDeliveryState.h>
-#include <states/MechanismState.h>
-#include <subsys/IMechanism.h>
+#include <states/Mech1MotorState.h>
 #include <subsys/MechanismFactory.h>
-#include <controllers/MechanismTargetData.h>
 
 // Third Party Includes
 
@@ -33,8 +32,7 @@ using namespace std;
 HookDeliveryState::HookDeliveryState
 (
     ControlData*                    control,
-    double                          target,
-    MechanismTargetData::SOLENOID   solState
-) : MechanismState( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::HOOK_DELIVERY), control, target, solState )
+    double                          target
+) : Mech1MotorState( MechanismFactory::GetMechanismFactory()->GetHookDelivery().get(), control, target )
 {
 }

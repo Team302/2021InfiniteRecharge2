@@ -9,6 +9,7 @@
 
 // Team 302 includes
 #include <states/IState.h>
+#include <states/controlPanel/ControlPanelState.h>
 
 // Third Party Includes
 

@@ -31,8 +31,7 @@ using namespace std;
 ControlPanelRaise::ControlPanelRaise()
 {
     auto factory = MechanismFactory::GetMechanismFactory();
-
-    m_controlPanel = factory -> GetIMechanism(MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR);
+    m_controlPanel = factory -> GetControlPanel();
 }
 
 void ControlPanelRaise::Init()
@@ -42,7 +41,7 @@ void ControlPanelRaise::Init()
 
 void ControlPanelRaise::Run()           
 {
-    m_controlPanel -> ActivateSolenoid( true );   //raises impeller
+    m_controlPanel.get() -> ActivateSolenoid( true );   //raises impeller
 }
 
 bool ControlPanelRaise::AtTarget() const                                 //confirms that it worked

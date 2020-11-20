@@ -13,33 +13,21 @@
 /// OR OTHER DEALINGS IN THE SOFTWARE.
 //====================================================================================================================================================
 
-//========================================================================================================
-/// ClimberHold.cpp
-//========================================================================================================
-///
-/// File Description:
-///     This controls the "hold" function of the climber
-///
-//========================================================================================================
-
 //C++ Includes
 #include <memory>
 
 //Team 302 Includes
+#include <controllers/ControlData.h>
 #include <states/climber/ClimberState.h>
-#include <states/MechanismState.h>
-#include <subsys/IMechanism.h>
+#include <states/Mech1MotorState.h>
 #include <subsys/MechanismFactory.h>
-#include <controllers/MechanismTargetData.h>
-
 
 
 ClimberState::ClimberState
 (
     ControlData*                    control,
-    double                          target,
-    MechanismTargetData::SOLENOID   solState
-) : MechanismState( MechanismFactory::GetMechanismFactory()->GetIMechanism(MechanismTypes::MECHANISM_TYPE::CLIMBER), control, target, solState )
+    double                          target
+) : Mech1MotorState( MechanismFactory::GetMechanismFactory()->GetClimber().get(), control, target )
 {
 
 }

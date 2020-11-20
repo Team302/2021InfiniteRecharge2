@@ -1,15 +1,9 @@
-/*
- * DragonMotorControllerFactory.cpp
- *
- */
-#include <iostream>
+
 #include <map>
 #include <string>
 
-#include <subsys/IMechanism.h>
 #include <hw/factories/DragonMotorControllerFactory.h>        
 #include <hw/usages/MotorControllerUsage.h>
-#include <xmlhw/MotorDefn.h>
 #include <hw/DragonTalon.h>
 #include <hw/DragonFalcon.h>
 #include <hw/DragonSparkMax.h>
