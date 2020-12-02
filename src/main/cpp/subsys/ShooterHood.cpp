@@ -35,11 +35,8 @@ ShooterHood::ShooterHood
 (
     shared_ptr<IDragonMotorController>     motorController,
 	shared_ptr<CANCoder>				   canCoder
-) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::SHOOTER_HOOD, 
-                   string("shooterhood.xml"), 
-                   string("ShooterHood"), 
-                   move(motorController) ),
-    m_encoder(move(canCoder))
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::SHOOTER_HOOD, string("shooterhood.xml"), string("ShooterHood"), motorController ),
+    m_encoder(canCoder)
 {
     motorController.get()->SetRemoteSensor( canCoder.get()->GetDeviceNumber(), RemoteSensorSource::RemoteSensorSource_CANCoder );
 }

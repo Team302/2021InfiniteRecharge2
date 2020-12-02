@@ -37,7 +37,7 @@ Mech1Servo::Mech1Servo
 (
     std::shared_ptr<DragonServo>                servo
 ) : IMech1Servo(),
-    m_servo(std::move(servo)) 
+    m_servo(servo) 
 {
     if (m_servo.get() == nullptr )
     {

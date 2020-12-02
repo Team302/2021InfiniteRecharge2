@@ -30,9 +30,6 @@ using namespace std;
 BallTransfer::BallTransfer
 (
     shared_ptr<IDragonMotorController>     motorController
-) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::BALL_TRANSFER, 
-                   string("balltransfer.xml"), 
-                   string("BallTransfer"), 
-                   move(motorController) )
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::BALL_TRANSFER,  string("balltransfer.xml"),  string("BallTransfer"), motorController )
 {
 }

@@ -40,10 +40,7 @@ ControlPanel::ControlPanel
     std::shared_ptr<IDragonMotorController>     motorController,
     std::shared_ptr<DragonSolenoid>             solenoid,
     ColorSensorV3*                              colorSensor
-) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR, 
-                   string("controlpanel.xml"), 
-                   string("ControlPanelNT"), 
-                   move(motorController) ),
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR,  string("controlpanel.xml"),  string("ControlPanelNT"), motorController ),
     Mech1Solenoid(solenoid),
     m_color( colorSensor ),
     m_colorMatcher( new ColorMatch())

@@ -51,8 +51,8 @@ Mech2IndMotors::Mech2IndMotors
     shared_ptr<IDragonMotorController>          primaryMotor,
     shared_ptr<IDragonMotorController>          secondaryMotor
 ) : IMech2IndMotors(),
-    m_primary( std::move(primaryMotor)),
-    m_secondary( std::move(secondaryMotor)),
+    m_primary( primaryMotor),
+    m_secondary( secondaryMotor),
     m_primaryTarget(0.0),
     m_secondaryTarget(0.0)
 {

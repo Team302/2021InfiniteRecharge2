@@ -39,7 +39,7 @@ Mech1Solenoid::Mech1Solenoid
 (
     std::shared_ptr<DragonSolenoid>             solenoid
 ) : IMech1Solenoid(),
-    m_solenoid( std::move(solenoid) )
+    m_solenoid( solenoid )
 {
     if (m_solenoid.get() == nullptr )
     {

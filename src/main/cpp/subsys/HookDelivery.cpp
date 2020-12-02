@@ -30,9 +30,6 @@ using namespace std;
 HookDelivery::HookDelivery
 (
     shared_ptr<IDragonMotorController>     motorController
-) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::HOOK_DELIVERY, 
-                   string("hookdelivery.xml"), 
-                   string("HookDelivery"), 
-                   move(motorController) )
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::HOOK_DELIVERY, string("hookdelivery.xml"),  string("HookDelivery"), motorController )
 {
 }

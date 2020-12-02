@@ -27,10 +27,7 @@ Climber::Climber
     shared_ptr<IDragonMotorController>             motorController,
     shared_ptr<DragonSolenoid>                     solenoid,
     double                                         winchDiameter
-) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::CLIMBER, 
-                   string("climber.xml"), 
-                   string("ClimberNT"), 
-                   move(motorController) ),
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::CLIMBER,  string("climber.xml"),  string("ClimberNT"), motorController ),
     Mech1Solenoid(solenoid),
     m_winchDiameter( winchDiameter)
 {

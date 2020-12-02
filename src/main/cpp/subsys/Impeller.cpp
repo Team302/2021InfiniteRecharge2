@@ -40,11 +40,8 @@ Impeller::Impeller
 (
     shared_ptr<IDragonMotorController> motor,
     shared_ptr<CANCoder> encoder
-) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::IMPELLER, 
-                   string("impeller.xml"), 
-                   string("ImpellerNT"), 
-                   move(motor) ),
-    m_encoder( move(encoder))
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::IMPELLER,  string("impeller.xml"),  string("ImpellerNT"),  motor ),
+    m_encoder( encoder )
 {
     if ( motor.get() != nullptr )
     {

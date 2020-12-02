@@ -30,10 +30,7 @@ using namespace std;
 Crawler::Crawler
 (
     std::shared_ptr<IDragonMotorController>      motorController
-) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::CRAWLER, 
-                   string("crawler.xml"), 
-                   string("CrawlerNT"), 
-                   move(motorController) )
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::CRAWLER,  string("crawler.xml"),  string("CrawlerNT"),  motorController )
 {
 }
 

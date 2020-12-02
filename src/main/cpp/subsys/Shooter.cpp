@@ -25,7 +25,7 @@ Shooter::Shooter
 (
     std::shared_ptr<IDragonMotorController> motor1,
     std::shared_ptr<IDragonMotorController> motor2
-) : Mech2IndMotors( MechanismTypes::MECHANISM_TYPE::SHOOTER, string( "shooter.xml") , string("BallTransferNT"), move(motor1), move(motor2) )
+) : Mech2IndMotors( MechanismTypes::MECHANISM_TYPE::SHOOTER, string( "shooter.xml") , string("BallTransferNT"), motor1, motor2 )
 {
 
 }

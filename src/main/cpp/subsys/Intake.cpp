@@ -32,10 +32,7 @@ Intake::Intake
 (
     std::shared_ptr<IDragonMotorController>     motorController,
     std::shared_ptr<DragonSolenoid>             solenoid
-) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::INTAKE, 
-                   string("intake.xml"), 
-                   string("IntakeNT"), 
-                   move(motorController) ),
+) : Mech1IndMotor( MechanismTypes::MECHANISM_TYPE::INTAKE,  string("intake.xml"),  string("IntakeNT"), motorController ),
     Mech1Solenoid(solenoid)
 {
 }

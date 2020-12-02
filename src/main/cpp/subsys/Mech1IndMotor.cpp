@@ -45,7 +45,7 @@ Mech1IndMotor::Mech1IndMotor
     std::string                                 controlFileName,
     std::string                                 networkTableName,
     std::shared_ptr<IDragonMotorController>     motorController
-) : m_motor( std::move(motorController) ),
+) : m_motor( motorController ),
     m_target( 0.0 )
 {
     if (m_motor.get() == nullptr )
