@@ -22,7 +22,7 @@
 #include <hw/interfaces/IDragonMotorController.h>
 #include <controllers/mechanisms/IMechController.h>
 #include <controllers/ControlData.h>
-#include <controllers/mechanisms/VelocityController.h>
+#include <controllers/mechanisms/OpenLoopController.h>
 #include <controllers/mechanisms/VelocityRPSController.h>
 
 using namespace std;
@@ -53,6 +53,7 @@ IMechController* MechControllerFactory::CreateMechController
     switch ( mode )
     {
         case ControlModes::CONTROL_TYPE::PERCENT_OUTPUT:
+            controller = new OpenLoopController( motor, target );
             break;
 
         case ControlModes::CONTROL_TYPE::POSITION_INCH:

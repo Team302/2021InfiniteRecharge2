@@ -20,43 +20,36 @@
 
 // Team 302 includes
 #include <controllers/mechanisms/IMechController.h>
-#include <controllers/mechanisms/VelocityController.h>
+#include <controllers/mechanisms/OpenLoopController.h>
 #include <controllers/ControlData.h>
 #include <utils/Logger.h>
 
 using namespace std;
 
-VelocityController::VelocityController
+OpenLoopController::OpenLoopController
 (
     shared_ptr<IDragonMotorController>     motor,
-    double                                 target,
-    shared_ptr<ControlData>                controlData
+    double                                 target
 ) : IMechController(),
     m_motor( motor ),
-    m_target( target ),
-    m_control( controlData )
+    m_target( target )
 {
     if (m_motor.get() == nullptr )
     {
-        Logger::GetLogger()->LogError( string( "VelocityController constructor" ), string( "motorController is nullptr" ) );
+        Logger::GetLogger()->LogError( string( "OpenLoopController constructor" ), string( "motorController is nullptr" ) );
     }    
-    if (m_control.get() == nullptr )
-    {
-        Logger::GetLogger()->LogError( string( "VelocityController constructor" ), string( "ControlData is nullptr" ) );
-    }
 }
 
-void VelocityController::Init()
+void OpenLoopController::Init()
 {
-    if ( m_motor.get() != nullptr && m_control.get() != nullptr )
+    if ( m_motor.get() != nullptr )
     {
-        m_motor.get()->SetControlConstants( m_control.get() );
-        m_motor.get()->SetControlMode( m_control.get()->GetMode() );
+        m_motor.get()->SetControlMode( ControlModes::PERCENT_OUTPUT );
     }
     Run();
 }
 
-void VelocityController::UpdateTarget
+void OpenLoopController::UpdateTarget
 (
     double target
 )
@@ -64,7 +57,7 @@ void VelocityController::UpdateTarget
     m_target = target;
 }
 
-void VelocityController::Run()
+void OpenLoopController::Run()
 {
     if ( m_motor.get() != nullptr )
     {
@@ -72,7 +65,7 @@ void VelocityController::Run()
     }
 }
 
-double VelocityController::GetRPS() const
+bool OpenLoopController::AtTarget()
 {
-    return m_motor.get() != nullptr ? m_motor.get()->GetRPS() : 0.0;
+    return true;
 }

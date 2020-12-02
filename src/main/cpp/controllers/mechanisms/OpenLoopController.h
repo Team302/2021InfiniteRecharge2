@@ -13,66 +13,43 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 //====================================================================================================================================================
 
+#pragma once
 
 // C++ includes
-#include <memory>
-#include <string>
 
 // Team 302 includes
-#include <controllers/mechanisms/IMechController.h>
-#include <controllers/mechanisms/VelocityController.h>
 #include <controllers/ControlData.h>
-#include <utils/Logger.h>
+#include <hw/interfaces/IDragonMotorController.h>
+#include <controllers/mechanisms/IMechController.h>
 
-using namespace std;
-
-VelocityController::VelocityController
-(
-    shared_ptr<IDragonMotorController>     motor,
-    double                                 target,
-    shared_ptr<ControlData>                controlData
-) : IMechController(),
-    m_motor( motor ),
-    m_target( target ),
-    m_control( controlData )
+class OpenLoopController : public IMechController
 {
-    if (m_motor.get() == nullptr )
-    {
-        Logger::GetLogger()->LogError( string( "VelocityController constructor" ), string( "motorController is nullptr" ) );
-    }    
-    if (m_control.get() == nullptr )
-    {
-        Logger::GetLogger()->LogError( string( "VelocityController constructor" ), string( "ControlData is nullptr" ) );
-    }
-}
+    public:
+        OpenLoopController() = delete;
+        OpenLoopController
+        (
+            std::shared_ptr<IDragonMotorController>     motor,
+            double                                      target
+        );
 
-void VelocityController::Init()
-{
-    if ( m_motor.get() != nullptr && m_control.get() != nullptr )
-    {
-        m_motor.get()->SetControlConstants( m_control.get() );
-        m_motor.get()->SetControlMode( m_control.get()->GetMode() );
-    }
-    Run();
-}
+        ~OpenLoopController() = default;
 
-void VelocityController::UpdateTarget
-(
-    double target
-)
-{
-    m_target = target;
-}
+        void Init() override;
+        void UpdateTarget
+        (
+            double target
+        ) override;
 
-void VelocityController::Run()
-{
-    if ( m_motor.get() != nullptr )
-    {
-        m_motor.get()->Set( m_target );
-    }
-}
+        void Run() override;
+        bool AtTarget() override;
 
-double VelocityController::GetRPS() const
-{
-    return m_motor.get() != nullptr ? m_motor.get()->GetRPS() : 0.0;
-}
+    protected:
+        double GetTarget() const { return m_target; }
+
+    private:
+        std::shared_ptr<IDragonMotorController>     m_motor;
+        double                                      m_target;
+
+
+
+};
