@@ -36,6 +36,10 @@ class VelocityController : public IMechController
         ~VelocityController() = default;
 
         void Init() override;
+        void UpdateTarget
+        (
+            double target
+        ) override;
 
         void Run() override;
 

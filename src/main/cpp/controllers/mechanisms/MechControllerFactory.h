@@ -13,66 +13,32 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 //====================================================================================================================================================
 
+#pragma once
 
 // C++ includes
 #include <memory>
-#include <string>
 
 // Team 302 includes
-#include <controllers/mechanisms/IMechController.h>
-#include <controllers/mechanisms/VelocityController.h>
-#include <controllers/ControlData.h>
-#include <utils/Logger.h>
 
-using namespace std;
+class IDragonMotorController;
+class IMechController;
+class ControlData;
 
-VelocityController::VelocityController
-(
-    shared_ptr<IDragonMotorController>     motor,
-    double                                 target,
-    shared_ptr<ControlData>                controlData
-) : IMechController(),
-    m_motor( motor ),
-    m_target( target ),
-    m_control( controlData )
+class MechControllerFactory
 {
-    if (m_motor.get() == nullptr )
-    {
-        Logger::GetLogger()->LogError( string( "VelocityController constructor" ), string( "motorController is nullptr" ) );
-    }    
-    if (m_control.get() == nullptr )
-    {
-        Logger::GetLogger()->LogError( string( "VelocityController constructor" ), string( "ControlData is nullptr" ) );
-    }
-}
+    public:
+		static MechControllerFactory* GetMechanismFactory();
+        IMechController* CreateMechController
+        (
+            std::shared_ptr<IDragonMotorController>     motor,
+            double                                      target,
+            std::shared_ptr<ControlData>                controlData
+        );
 
-void VelocityController::Init()
-{
-    if ( m_motor.get() != nullptr && m_control.get() != nullptr )
-    {
-        m_motor->SetControlConstants( m_control.get() );
-        m_motor->SetControlMode( m_control.get()->GetMode() );
-    }
-    Run();
-}
+    private:
+        static MechControllerFactory*                   m_factory;
 
-void VelocityController::UpdateTarget
-(
-    double target
-)
-{
-    m_target = target;
-}
+        MechControllerFactory() = default;
+        virtual ~MechControllerFactory() = default;
 
-void VelocityController::Run()
-{
-    if ( m_motor.get() != nullptr )
-    {
-        m_motor.get()->Set( m_target );
-    }
-}
-
-double VelocityController::GetRPS() const
-{
-    return m_motor.get() != nullptr ? m_motor.get()->GetRPS() : 0.0;
-}
+};

@@ -26,6 +26,10 @@ class IMechController
         virtual ~IMechController() = default;
 
         virtual void Init() = 0;
+        virtual void UpdateTarget
+        (
+            double  target
+        ) =  0;
 
         virtual void Run() = 0;
         virtual bool AtTarget() = 0;
