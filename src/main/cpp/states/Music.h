@@ -1,9 +1,12 @@
 #pragma once
 
+#include <vector>
+
 #include <frc/Joystick.h>
 #include <ctre/Phoenix.h>
 #include <string>
 #include <states/IState.h>
+#include <ctre/phoenix/motorcontrol/can/TalonFX.h>
 
 #define TALON_COUNT 4
 #define SONG_COUNT 11
@@ -13,6 +16,7 @@ class Music : public IState
     public:
         void Init() override;
         void Run() override;
+        Music(std::vector<TalonFX*> m_talon);
 
     private:
         int GetButton();
@@ -20,7 +24,7 @@ class Music : public IState
         void LoadMusicSelection(int offset);
 
         Orchestra* m_orchestra;
-        TalonFX** m_talon;
+        std::vector<TalonFX*> m_talon;
 
         std::string songs[SONG_COUNT] =
         {

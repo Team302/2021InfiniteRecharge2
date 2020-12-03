@@ -1,5 +1,15 @@
 #include <states/Music.h>
 
+
+Music::Music(std::vector<TalonFX*> falcons)
+{
+    for ( auto falcon : falcons )
+    {
+        m_talon.push_back( falcon );
+    }
+}
+
+
 int Music::GetButton() 
 {
     for (int i = 1; i < 9; i++) 
@@ -32,15 +42,7 @@ void Music::LoadMusicSelection(int offset)
 
 void Music::Init()
 {
-    m_orchestra = new Orchestra();
-
-    m_talon = new TalonFX * [TALON_COUNT];
-
-    for (int i = 0; i < TALON_COUNT; i++)
-    {
-        m_talon[i] = new TalonFX(i+1);
-        m_orchestra -> AddInstrument(*m_talon[i]);
-    }
+    
     m_joystick = new frc::Joystick(0);
 
     LoadMusicSelection(0);
