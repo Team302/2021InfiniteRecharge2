@@ -25,10 +25,6 @@ var dir_4fd9fb050d9b4e898d2c75546f70365f =
     [ "Mech2MotorState.h", "_mech2_motor_state_8h.html", [
       [ "Mech2MotorState", "class_mech2_motor_state.html", "class_mech2_motor_state" ]
     ] ],
-    [ "MechanismState.cpp", "_mechanism_state_8cpp.html", null ],
-    [ "MechanismState.h", "_mechanism_state_8h.html", [
-      [ "MechanismState", "class_mechanism_state.html", "class_mechanism_state" ]
-    ] ],
     [ "MechSolenoidState.cpp", "_mech_solenoid_state_8cpp.html", null ],
     [ "MechSolenoidState.h", "_mech_solenoid_state_8h.html", [
       [ "MechSolenoidState", "class_mech_solenoid_state.html", "class_mech_solenoid_state" ]

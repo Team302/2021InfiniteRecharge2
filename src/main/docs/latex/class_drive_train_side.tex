@@ -12,7 +12,7 @@ This is the \mbox{\hyperlink{class_drive_train_side}{Drive\+Train\+Side}} Subsys
 Inheritance diagram for Drive\+Train\+Side\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_drive_train_side}
+\includegraphics[height=4.000000cm]{class_drive_train_side}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -26,15 +26,13 @@ virtual \mbox{\hyperlink{class_drive_train_side_a4ea7b89db9c0cb64a359e48f4ad49f9
 \begin{DoxyCompactList}\small\item\em clean up memory when this object gets deleted \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{class_drive_train_side_afb3d28141117ebdf1e00af89e1f90007}{Get\+Type}} () const override
 \begin{DoxyCompactList}\small\item\em Indicates this is the \mbox{\hyperlink{class_drive_train_side}{Drive\+Train\+Side}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_drive_train_side_a780ffb564264716f6d86e6a089bd3dd3}{Set\+Output}} (\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}} control\+Type, double value) override
+void \mbox{\hyperlink{class_drive_train_side_adf51cf59529a1bf22c461030c00a1056}{Update}} () override
 \begin{DoxyCompactList}\small\item\em Run \mbox{\hyperlink{class_drive_train_side}{Drive\+Train\+Side}} as defined. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_drive_train_side_a628a1bb75d5be4a69b63c1e94eb00f49}{Activate\+Solenoid}} (bool activate) override
-\begin{DoxyCompactList}\small\item\em Activate/deactivate pneumatic solenoid. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_drive_train_side_a64ddb62d04bb2896356fcf02f7a47502}{Is\+Solenoid\+Activated}} () override
-\begin{DoxyCompactList}\small\item\em Check if the pneumatic solenoid is activated. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_drive_train_side_a557590423b84c081762e79c161d55ee9}{Get\+Current\+Position}} () const override
+void \mbox{\hyperlink{class_drive_train_side_a7c6da44a300dd21f1e2dfffe54bb17c1}{Update\+Target}} (double value) override
+\item 
+double \mbox{\hyperlink{class_drive_train_side_a9768623e1a55f352f2b6421d199a6a88}{Get\+Position}} () const override
 \begin{DoxyCompactList}\small\item\em Return the current position of the \mbox{\hyperlink{class_drive_train_side}{Drive\+Train\+Side}} in inches (positive is forward, negative is backward) \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_drive_train_side_a5b2d55207f0a6244caa19cc5197bac5e}{Get\+Current\+Speed}} () const override
+double \mbox{\hyperlink{class_drive_train_side_a34b189491b6f9e577e2c2906ee266a19}{Get\+Speed}} () const override
 \begin{DoxyCompactList}\small\item\em Return the current speed of the \mbox{\hyperlink{class_drive_train_side}{Drive\+Train\+Side}} in inches / second (positive is forward, negative is backward) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_drive_train_side_a5a706257d98af9460c245b7f34b61423}{Set\+Control\+Constants}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$pid) override
 \begin{DoxyCompactList}\small\item\em Set the control constants (e.\+g. P\+I\+DF values). \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -96,38 +94,11 @@ clean up memory when this object gets deleted
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_drive_train_side_a628a1bb75d5be4a69b63c1e94eb00f49}\label{class_drive_train_side_a628a1bb75d5be4a69b63c1e94eb00f49}} 
-\index{DriveTrainSide@{DriveTrainSide}!ActivateSolenoid@{ActivateSolenoid}}
-\index{ActivateSolenoid@{ActivateSolenoid}!DriveTrainSide@{DriveTrainSide}}
-\doxysubsubsection{\texorpdfstring{ActivateSolenoid()}{ActivateSolenoid()}}
-{\footnotesize\ttfamily void Drive\+Train\+Side\+::\+Activate\+Solenoid (\begin{DoxyParamCaption}\item[{bool}]{activate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Activate/deactivate pneumatic solenoid. 
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em bool} & -\/ true == extend, false == retract \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void ~\newline
- 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{class_i_mechanism_abef1fbd73a24f4f6f3104e255539e0d9}{I\+Mechanism}}.
-
-
-
-Definition at line 97 of file Drive\+Train\+Side.\+cpp.
-
-\mbox{\Hypertarget{class_drive_train_side_a557590423b84c081762e79c161d55ee9}\label{class_drive_train_side_a557590423b84c081762e79c161d55ee9}} 
-\index{DriveTrainSide@{DriveTrainSide}!GetCurrentPosition@{GetCurrentPosition}}
-\index{GetCurrentPosition@{GetCurrentPosition}!DriveTrainSide@{DriveTrainSide}}
-\doxysubsubsection{\texorpdfstring{GetCurrentPosition()}{GetCurrentPosition()}}
-{\footnotesize\ttfamily double Drive\+Train\+Side\+::\+Get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_drive_train_side_a9768623e1a55f352f2b6421d199a6a88}\label{class_drive_train_side_a9768623e1a55f352f2b6421d199a6a88}} 
+\index{DriveTrainSide@{DriveTrainSide}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!DriveTrainSide@{DriveTrainSide}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily double Drive\+Train\+Side\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -143,17 +114,17 @@ double position in inches (positive is forward, negative is backward)
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{class_i_mechanism_aa15197ff101d65447516a8f10bb6867d}{I\+Mechanism}}.
+Implements \mbox{\hyperlink{class_i_mech1_ind_motor_af2ef42ade0b09e684d99cf7d5cd6e154}{I\+Mech1\+Ind\+Motor}}.
 
 
 
-Definition at line 114 of file Drive\+Train\+Side.\+cpp.
+Definition at line 99 of file Drive\+Train\+Side.\+cpp.
 
-\mbox{\Hypertarget{class_drive_train_side_a5b2d55207f0a6244caa19cc5197bac5e}\label{class_drive_train_side_a5b2d55207f0a6244caa19cc5197bac5e}} 
-\index{DriveTrainSide@{DriveTrainSide}!GetCurrentSpeed@{GetCurrentSpeed}}
-\index{GetCurrentSpeed@{GetCurrentSpeed}!DriveTrainSide@{DriveTrainSide}}
-\doxysubsubsection{\texorpdfstring{GetCurrentSpeed()}{GetCurrentSpeed()}}
-{\footnotesize\ttfamily double Drive\+Train\+Side\+::\+Get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_drive_train_side_a34b189491b6f9e577e2c2906ee266a19}\label{class_drive_train_side_a34b189491b6f9e577e2c2906ee266a19}} 
+\index{DriveTrainSide@{DriveTrainSide}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!DriveTrainSide@{DriveTrainSide}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily double Drive\+Train\+Side\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -168,11 +139,11 @@ double speed in degrees per second (rotating mechansim)
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{class_i_mechanism_a9a63d6905de4454d78d7e0d1d1e28437}{I\+Mechanism}}.
+Implements \mbox{\hyperlink{class_i_mech1_ind_motor_a6ae1e4e4f8c13903cc690bafed7e8a01}{I\+Mech1\+Ind\+Motor}}.
 
 
 
-Definition at line 135 of file Drive\+Train\+Side.\+cpp.
+Definition at line 120 of file Drive\+Train\+Side.\+cpp.
 
 \mbox{\Hypertarget{class_drive_train_side_afb3d28141117ebdf1e00af89e1f90007}\label{class_drive_train_side_afb3d28141117ebdf1e00af89e1f90007}} 
 \index{DriveTrainSide@{DriveTrainSide}!GetType@{GetType}}
@@ -189,32 +160,11 @@ I\+Mechanism\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+P\+E\+::\+Drive\+Train\
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{class_i_mechanism_a62096808201ffc31609e99dc2fa92d44}{I\+Mechanism}}.
+Implements \mbox{\hyperlink{class_i_mech_aa3c52c74a67a5f1caa2c11c13dacccdb}{I\+Mech}}.
 
 
 
-Definition at line 63 of file Drive\+Train\+Side.\+cpp.
-
-\mbox{\Hypertarget{class_drive_train_side_a64ddb62d04bb2896356fcf02f7a47502}\label{class_drive_train_side_a64ddb62d04bb2896356fcf02f7a47502}} 
-\index{DriveTrainSide@{DriveTrainSide}!IsSolenoidActivated@{IsSolenoidActivated}}
-\index{IsSolenoidActivated@{IsSolenoidActivated}!DriveTrainSide@{DriveTrainSide}}
-\doxysubsubsection{\texorpdfstring{IsSolenoidActivated()}{IsSolenoidActivated()}}
-{\footnotesize\ttfamily bool Drive\+Train\+Side\+::\+Is\+Solenoid\+Activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Check if the pneumatic solenoid is activated. 
-
-\begin{DoxyReturn}{Returns}
-bool -\/ true == extended, false == retract 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{class_i_mechanism_a4c0bedb71316054749a276a67d278558}{I\+Mechanism}}.
-
-
-
-Definition at line 107 of file Drive\+Train\+Side.\+cpp.
+Definition at line 64 of file Drive\+Train\+Side.\+cpp.
 
 \mbox{\Hypertarget{class_drive_train_side_a5a706257d98af9460c245b7f34b61423}\label{class_drive_train_side_a5a706257d98af9460c245b7f34b61423}} 
 \index{DriveTrainSide@{DriveTrainSide}!SetControlConstants@{SetControlConstants}}
@@ -236,17 +186,17 @@ void
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{class_i_mechanism_acd973ca93855c485ed42d405f2fcba11}{I\+Mechanism}}.
+Implements \mbox{\hyperlink{class_i_mech1_ind_motor_adff264c6bb32f6f1d5447844e635373c}{I\+Mech1\+Ind\+Motor}}.
 
 
 
-Definition at line 157 of file Drive\+Train\+Side.\+cpp.
+Definition at line 142 of file Drive\+Train\+Side.\+cpp.
 
-\mbox{\Hypertarget{class_drive_train_side_a780ffb564264716f6d86e6a089bd3dd3}\label{class_drive_train_side_a780ffb564264716f6d86e6a089bd3dd3}} 
-\index{DriveTrainSide@{DriveTrainSide}!SetOutput@{SetOutput}}
-\index{SetOutput@{SetOutput}!DriveTrainSide@{DriveTrainSide}}
-\doxysubsubsection{\texorpdfstring{SetOutput()}{SetOutput()}}
-{\footnotesize\ttfamily void Drive\+Train\+Side\+::\+Set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control_modes_a46c77e409ac22b3b3269f7fee2d3f736}{Control\+Modes\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+PE}}}]{control\+Type,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_drive_train_side_adf51cf59529a1bf22c461030c00a1056}\label{class_drive_train_side_adf51cf59529a1bf22c461030c00a1056}} 
+\index{DriveTrainSide@{DriveTrainSide}!Update@{Update}}
+\index{Update@{Update}!DriveTrainSide@{DriveTrainSide}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Drive\+Train\+Side\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -264,15 +214,29 @@ void
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{class_i_mechanism_abc72a6d0306a828de6f43418e75c04c0}{I\+Mechanism}}.
+Implements \mbox{\hyperlink{class_i_mech1_ind_motor_ac2a4fc46e37505f96054a02496e5b5c1}{I\+Mech1\+Ind\+Motor}}.
 
 
 
-Definition at line 74 of file Drive\+Train\+Side.\+cpp.
+Definition at line 75 of file Drive\+Train\+Side.\+cpp.
+
+\mbox{\Hypertarget{class_drive_train_side_a7c6da44a300dd21f1e2dfffe54bb17c1}\label{class_drive_train_side_a7c6da44a300dd21f1e2dfffe54bb17c1}} 
+\index{DriveTrainSide@{DriveTrainSide}!UpdateTarget@{UpdateTarget}}
+\index{UpdateTarget@{UpdateTarget}!DriveTrainSide@{DriveTrainSide}}
+\doxysubsubsection{\texorpdfstring{UpdateTarget()}{UpdateTarget()}}
+{\footnotesize\ttfamily void Drive\+Train\+Side\+::\+Update\+Target (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_mech1_ind_motor_a730d0d96efa4a272289934178aa4146f}{I\+Mech1\+Ind\+Motor}}.
+
+
+
+Definition at line 79 of file Drive\+Train\+Side.\+cpp.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_drive_train_side_8h}{Drive\+Train\+Side.\+h}}\item 
-/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_drive_train_side_8cpp}{Drive\+Train\+Side.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_drive_train_side_8h}{Drive\+Train\+Side.\+h}}\item 
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_drive_train_side_8cpp}{Drive\+Train\+Side.\+cpp}}\end{DoxyCompactItemize}

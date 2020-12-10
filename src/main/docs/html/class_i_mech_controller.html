@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: IMechController Class Reference</title>
+<title>Team 302 Robot: IMechController Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -96,8 +96,10 @@ Inheritance diagram for IMechController:</div>
  <div class="center">
   <img src="class_i_mech_controller.png" usemap="#IMechController_map" alt=""/>
   <map id="IMechController_map" name="IMechController_map">
-<area href="class_velocity_controller.html" alt="VelocityController" shape="rect" coords="0,56,138,80"/>
-<area href="class_velocity_r_p_s_controller.html" alt="VelocityRPSController" shape="rect" coords="0,112,138,136"/>
+<area href="class_open_loop_controller.html" alt="OpenLoopController" shape="rect" coords="0,56,204,80"/>
+<area href="class_velocity_controller.html" alt="VelocityController" shape="rect" coords="214,56,418,80"/>
+<area href="class_velocity_degrees_per_sec_controller.html" alt="VelocityDegreesPerSecController" shape="rect" coords="107,112,311,136"/>
+<area href="class_velocity_r_p_s_controller.html" alt="VelocityRPSController" shape="rect" coords="321,112,525,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -109,6 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a146e04000c38f5a657ff3633e9c9cf4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43c564581e046a9483e469c6da589db9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mech_controller.html#a43c564581e046a9483e469c6da589db9">Init</a> ()=0</td></tr>
 <tr class="separator:a43c564581e046a9483e469c6da589db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb9b1a0f7eed26a4f6c7ca12b6aa442"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mech_controller.html#a4eb9b1a0f7eed26a4f6c7ca12b6aa442">UpdateTarget</a> (double target)=0</td></tr>
+<tr class="separator:a4eb9b1a0f7eed26a4f6c7ca12b6aa442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26c63d8b4ab0539d0f0902b2077356f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mech_controller.html#a26c63d8b4ab0539d0f0902b2077356f4">Run</a> ()=0</td></tr>
 <tr class="separator:a26c63d8b4ab0539d0f0902b2077356f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ce7d666e9a752f34a8770830bf4d075"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mech_controller.html#a5ce7d666e9a752f34a8770830bf4d075">AtTarget</a> ()=0</td></tr>
@@ -192,7 +196,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_velocity_r_p_s_controller.html#a034ac658c0f7b83cce33c931142a61e5">VelocityRPSController</a>.</p>
+<p>Implemented in <a class="el" href="class_velocity_r_p_s_controller.html#a034ac658c0f7b83cce33c931142a61e5">VelocityRPSController</a>, <a class="el" href="class_velocity_degrees_per_sec_controller.html#aa5e5c70e4b605d206c8417a0bb0aecbb">VelocityDegreesPerSecController</a>, and <a class="el" href="class_open_loop_controller.html#a7ab9db57c57eb5fe7136625bbd944514">OpenLoopController</a>.</p>
 
 </div>
 </div>
@@ -219,7 +223,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_velocity_controller.html#afe11f0564aea740b84fdec61d1828aa8">VelocityController</a>.</p>
+<p>Implemented in <a class="el" href="class_velocity_controller.html#afe11f0564aea740b84fdec61d1828aa8">VelocityController</a>, and <a class="el" href="class_open_loop_controller.html#a7ec0df76ffd1b81032b8c627eea08881">OpenLoopController</a>.</p>
 
 </div>
 </div>
@@ -246,12 +250,40 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a">VelocityController</a>.</p>
+<p>Implemented in <a class="el" href="class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a">VelocityController</a>, and <a class="el" href="class_open_loop_controller.html#aa65d5680909a0eb6df41128f8cc544de">OpenLoopController</a>.</p>
+
+</div>
+</div>
+<a id="a4eb9b1a0f7eed26a4f6c7ca12b6aa442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb9b1a0f7eed26a4f6c7ca12b6aa442">&#9670;&nbsp;</a></span>UpdateTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMechController::UpdateTarget </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_velocity_controller.html#ae05a6dfc7fc0518e907bc397c3fd8157">VelocityController</a>, and <a class="el" href="class_open_loop_controller.html#a70da12a56ed84841d1f5521c986569f8">OpenLoopController</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/controllers/mechanisms/<a class="el" href="_i_mech_controller_8h_source.html">IMechController.h</a></li>
+<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/controllers/mechanisms/<a class="el" href="_i_mech_controller_8h_source.html">IMechController.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

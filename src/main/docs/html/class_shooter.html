@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: Shooter Class Reference</title>
+<title>Team 302 Robot: Shooter Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -96,7 +96,9 @@ Inheritance diagram for Shooter:</div>
  <div class="center">
   <img src="class_shooter.png" usemap="#Shooter_map" alt=""/>
   <map id="Shooter_map" name="Shooter_map">
-<area href="class_i_mechanism.html" title="This is the interface for all subsystems." alt="IMechanism" shape="rect" coords="0,0,79,24"/>
+<area href="class_mech2_ind_motors.html" alt="Mech2IndMotors" shape="rect" coords="0,112,110,136"/>
+<area href="class_i_mech2_ind_motors.html" title="This is the interface for mechanisms that have two independently controlled motors." alt="IMech2IndMotors" shape="rect" coords="0,56,110,80"/>
+<area href="class_i_mech.html" title="This is the interface for mechanisms regardless of what control items are available." alt="IMech" shape="rect" coords="0,0,110,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -104,38 +106,66 @@ Inheritance diagram for Shooter:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad334e2512e5524bc886236e96d75bef4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shooter.html#ad334e2512e5524bc886236e96d75bef4">Shooter</a> (std::shared_ptr&lt; <a class="el" href="class_i_dragon_motor_controller.html">IDragonMotorController</a> &gt; motor1, std::shared_ptr&lt; <a class="el" href="class_i_dragon_motor_controller.html">IDragonMotorController</a> &gt; motor2)</td></tr>
 <tr class="separator:ad334e2512e5524bc886236e96d75bef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a031e6b54e1a611eeeb5f0d57f375d279"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shooter.html#a031e6b54e1a611eeeb5f0d57f375d279">GetType</a> () const override</td></tr>
-<tr class="memdesc:a031e6b54e1a611eeeb5f0d57f375d279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the type of mechanism this is.  <a href="class_shooter.html#a031e6b54e1a611eeeb5f0d57f375d279">More...</a><br /></td></tr>
-<tr class="separator:a031e6b54e1a611eeeb5f0d57f375d279"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5002bb1e9c11195e18c1c62968b5863a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shooter.html#a5002bb1e9c11195e18c1c62968b5863a">SetOutput</a> (<a class="el" href="class_control_modes.html#a46c77e409ac22b3b3269f7fee2d3f736">ControlModes::CONTROL_TYPE</a> controlType, double value) override</td></tr>
-<tr class="memdesc:a5002bb1e9c11195e18c1c62968b5863a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run mechanism as defined.  <a href="class_shooter.html#a5002bb1e9c11195e18c1c62968b5863a">More...</a><br /></td></tr>
-<tr class="separator:a5002bb1e9c11195e18c1c62968b5863a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3744531d29636a579a1e390677f1a81e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shooter.html#a3744531d29636a579a1e390677f1a81e">SetOutput</a> (<a class="el" href="class_control_modes.html#a46c77e409ac22b3b3269f7fee2d3f736">ControlModes::CONTROL_TYPE</a> controlType, double upperValue, double lowerValue)</td></tr>
-<tr class="separator:a3744531d29636a579a1e390677f1a81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa307140af6eb905d85f7d1f954de66a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shooter.html#aa307140af6eb905d85f7d1f954de66a1">ActivateSolenoid</a> (bool activate) override</td></tr>
-<tr class="memdesc:aa307140af6eb905d85f7d1f954de66a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate/deactivate pneumatic solenoid.  <a href="class_shooter.html#aa307140af6eb905d85f7d1f954de66a1">More...</a><br /></td></tr>
-<tr class="separator:aa307140af6eb905d85f7d1f954de66a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affa03878246b56a70b206d83369eefca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shooter.html#affa03878246b56a70b206d83369eefca">IsSolenoidActivated</a> () override</td></tr>
-<tr class="memdesc:affa03878246b56a70b206d83369eefca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the pneumatic solenoid is activated.  <a href="class_shooter.html#affa03878246b56a70b206d83369eefca">More...</a><br /></td></tr>
-<tr class="separator:affa03878246b56a70b206d83369eefca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaad97e62b1d45d10cbb6747b1c6a8414"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shooter.html#aaad97e62b1d45d10cbb6747b1c6a8414">GetCurrentPosition</a> () const override</td></tr>
-<tr class="memdesc:aaad97e62b1d45d10cbb6747b1c6a8414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current position of the mechanism. The value is in inches or degrees.  <a href="class_shooter.html#aaad97e62b1d45d10cbb6747b1c6a8414">More...</a><br /></td></tr>
-<tr class="separator:aaad97e62b1d45d10cbb6747b1c6a8414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa38c7c6e5aa105789119d0770ad0dc8e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shooter.html#aa38c7c6e5aa105789119d0770ad0dc8e">GetCurrentSpeed</a> () const override</td></tr>
-<tr class="memdesc:aa38c7c6e5aa105789119d0770ad0dc8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current speed of the mechanism. The value is in inches per second or degrees per second.  <a href="class_shooter.html#aa38c7c6e5aa105789119d0770ad0dc8e">More...</a><br /></td></tr>
-<tr class="separator:aa38c7c6e5aa105789119d0770ad0dc8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa12826e26eecab817ad3ca19a52dfdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shooter.html#aaa12826e26eecab817ad3ca19a52dfdc">SetControlConstants</a> (<a class="el" href="class_control_data.html">ControlData</a> *pid) override</td></tr>
-<tr class="memdesc:aaa12826e26eecab817ad3ca19a52dfdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the control constants (e.g. PIDF values).  <a href="class_shooter.html#aaa12826e26eecab817ad3ca19a52dfdc">More...</a><br /></td></tr>
-<tr class="separator:aaa12826e26eecab817ad3ca19a52dfdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_i_mechanism"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_mechanism')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_mechanism.html">IMechanism</a></td></tr>
-<tr class="memitem:a22f98b8310ad97e65dd710f3ae4ebcbf inherit pub_methods_class_i_mechanism"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mechanism.html#a22f98b8310ad97e65dd710f3ae4ebcbf">IMechanism</a> ()=default</td></tr>
-<tr class="separator:a22f98b8310ad97e65dd710f3ae4ebcbf inherit pub_methods_class_i_mechanism"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c70ef3fdee0c9fa33b70c60b91ca9c0 inherit pub_methods_class_i_mechanism"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mechanism.html#a1c70ef3fdee0c9fa33b70c60b91ca9c0">~IMechanism</a> ()=default</td></tr>
-<tr class="separator:a1c70ef3fdee0c9fa33b70c60b91ca9c0 inherit pub_methods_class_i_mechanism"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_mech2_ind_motors"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_mech2_ind_motors')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_mech2_ind_motors.html">Mech2IndMotors</a></td></tr>
+<tr class="memitem:acd6e089e48214bb86558a8e11fed54c8 inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#acd6e089e48214bb86558a8e11fed54c8">Mech2IndMotors</a> (<a class="el" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a> type, std::string controlFileName, std::string networkTableName, std::shared_ptr&lt; <a class="el" href="class_i_dragon_motor_controller.html">IDragonMotorController</a> &gt; primaryMotor, std::shared_ptr&lt; <a class="el" href="class_i_dragon_motor_controller.html">IDragonMotorController</a> &gt; secondaryMotor)</td></tr>
+<tr class="memdesc:acd6e089e48214bb86558a8e11fed54c8 inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a generic mechanism wiht 2 independent motors.  <a href="class_mech2_ind_motors.html#acd6e089e48214bb86558a8e11fed54c8">More...</a><br /></td></tr>
+<tr class="separator:acd6e089e48214bb86558a8e11fed54c8 inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedfdc8de01ac5170deef1c8aae55dfd9 inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#aedfdc8de01ac5170deef1c8aae55dfd9">Mech2IndMotors</a> ()=delete</td></tr>
+<tr class="separator:aedfdc8de01ac5170deef1c8aae55dfd9 inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc971e72b8eaa80c56d40e4a751be20 inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#affc971e72b8eaa80c56d40e4a751be20">~Mech2IndMotors</a> ()=default</td></tr>
+<tr class="separator:affc971e72b8eaa80c56d40e4a751be20 inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c469f281ad76e49274ef54f295968a inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a25c469f281ad76e49274ef54f295968a">GetType</a> () const override</td></tr>
+<tr class="memdesc:a25c469f281ad76e49274ef54f295968a inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the type of mechanism this is.  <a href="class_mech2_ind_motors.html#a25c469f281ad76e49274ef54f295968a">More...</a><br /></td></tr>
+<tr class="separator:a25c469f281ad76e49274ef54f295968a inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2446c4efe71d18dc80691ae3dc2dc4c inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#ac2446c4efe71d18dc80691ae3dc2dc4c">GetControlFileName</a> () const override</td></tr>
+<tr class="memdesc:ac2446c4efe71d18dc80691ae3dc2dc4c inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicate the file used to get the control parameters from  <a href="class_mech2_ind_motors.html#ac2446c4efe71d18dc80691ae3dc2dc4c">More...</a><br /></td></tr>
+<tr class="separator:ac2446c4efe71d18dc80691ae3dc2dc4c inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ee8e2dc100aa0d74b303bbbf3ceed5 inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a93ee8e2dc100aa0d74b303bbbf3ceed5">GetNetworkTableName</a> () const override</td></tr>
+<tr class="memdesc:a93ee8e2dc100aa0d74b303bbbf3ceed5 inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicate the Network Table name used to setting tracking parameters  <a href="class_mech2_ind_motors.html#a93ee8e2dc100aa0d74b303bbbf3ceed5">More...</a><br /></td></tr>
+<tr class="separator:a93ee8e2dc100aa0d74b303bbbf3ceed5 inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3d9f04187c82f6ff5d51db27066e3e inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a9e3d9f04187c82f6ff5d51db27066e3e">ActivateLogging</a> (units::second_t millisecondsBetweenLogging) override final</td></tr>
+<tr class="memdesc:a9e3d9f04187c82f6ff5d51db27066e3e inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates logging key values to network table.  <a href="class_mech2_ind_motors.html#a9e3d9f04187c82f6ff5d51db27066e3e">More...</a><br /></td></tr>
+<tr class="separator:a9e3d9f04187c82f6ff5d51db27066e3e inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529e95c673e272e2b7708c180964937d inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a529e95c673e272e2b7708c180964937d">DeactivateLogging</a> () override final</td></tr>
+<tr class="memdesc:a529e95c673e272e2b7708c180964937d inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop updating the key values to network table.  <a href="class_mech2_ind_motors.html#a529e95c673e272e2b7708c180964937d">More...</a><br /></td></tr>
+<tr class="separator:a529e95c673e272e2b7708c180964937d inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99038563053295d6a563c29e1ecf3b15 inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a99038563053295d6a563c29e1ecf3b15">LogData</a> () override</td></tr>
+<tr class="memdesc:a99038563053295d6a563c29e1ecf3b15 inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">log data to the network table if it is activated and time period has past  <a href="class_mech2_ind_motors.html#a99038563053295d6a563c29e1ecf3b15">More...</a><br /></td></tr>
+<tr class="separator:a99038563053295d6a563c29e1ecf3b15 inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad459458d7d1912216d61fa0cb29538db inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#ad459458d7d1912216d61fa0cb29538db">Update</a> () override</td></tr>
+<tr class="memdesc:ad459458d7d1912216d61fa0cb29538db inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the output to the mechanism using the current controller and target value(s)  <a href="class_mech2_ind_motors.html#ad459458d7d1912216d61fa0cb29538db">More...</a><br /></td></tr>
+<tr class="separator:ad459458d7d1912216d61fa0cb29538db inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c34ffd7866a584800e01e85fc0f22c inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a25c34ffd7866a584800e01e85fc0f22c">UpdateTargets</a> (double primary, double secondary) override</td></tr>
+<tr class="separator:a25c34ffd7866a584800e01e85fc0f22c inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3a95115015b59120f324ed8e03c81c8 inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#ad3a95115015b59120f324ed8e03c81c8">GetPrimaryPosition</a> () const override</td></tr>
+<tr class="memdesc:ad3a95115015b59120f324ed8e03c81c8 inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current position of the primary motor in the mechanism. The value is in inches or degrees.  <a href="class_mech2_ind_motors.html#ad3a95115015b59120f324ed8e03c81c8">More...</a><br /></td></tr>
+<tr class="separator:ad3a95115015b59120f324ed8e03c81c8 inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0925beb0009c1e598dd3231a7198fbf0 inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a0925beb0009c1e598dd3231a7198fbf0">GetSecondaryPosition</a> () const override</td></tr>
+<tr class="memdesc:a0925beb0009c1e598dd3231a7198fbf0 inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current position of the secondary motor in the mechanism. The value is in inches or degrees.  <a href="class_mech2_ind_motors.html#a0925beb0009c1e598dd3231a7198fbf0">More...</a><br /></td></tr>
+<tr class="separator:a0925beb0009c1e598dd3231a7198fbf0 inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48e430220cab35fc853ee9838243cb21 inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a48e430220cab35fc853ee9838243cb21">GetPrimarySpeed</a> () const override</td></tr>
+<tr class="memdesc:a48e430220cab35fc853ee9838243cb21 inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current speed of the primary motor in the mechanism. The value is in inches per second or degrees per second.  <a href="class_mech2_ind_motors.html#a48e430220cab35fc853ee9838243cb21">More...</a><br /></td></tr>
+<tr class="separator:a48e430220cab35fc853ee9838243cb21 inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a23357fc5b2789fdb6c93d9ca9ae79 inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#ab5a23357fc5b2789fdb6c93d9ca9ae79">GetSecondarySpeed</a> () const override</td></tr>
+<tr class="memdesc:ab5a23357fc5b2789fdb6c93d9ca9ae79 inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current speed of the secondary motor in the mechanism. The value is in inches per second or degrees per second.  <a href="class_mech2_ind_motors.html#ab5a23357fc5b2789fdb6c93d9ca9ae79">More...</a><br /></td></tr>
+<tr class="separator:ab5a23357fc5b2789fdb6c93d9ca9ae79 inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b4280e243380336ef54fd26027b5dd9 inherit pub_methods_class_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech2_ind_motors.html#a8b4280e243380336ef54fd26027b5dd9">SetControlConstants</a> (<a class="el" href="class_control_data.html">ControlData</a> *pid) override</td></tr>
+<tr class="memdesc:a8b4280e243380336ef54fd26027b5dd9 inherit pub_methods_class_mech2_ind_motors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the control constants (e.g. PIDF values).  <a href="class_mech2_ind_motors.html#a8b4280e243380336ef54fd26027b5dd9">More...</a><br /></td></tr>
+<tr class="separator:a8b4280e243380336ef54fd26027b5dd9 inherit pub_methods_class_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_mech2_ind_motors"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_mech2_ind_motors')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_mech2_ind_motors.html">IMech2IndMotors</a></td></tr>
+<tr class="memitem:aae994a9575acd84fe641a8566d53a698 inherit pub_methods_class_i_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mech2_ind_motors.html#aae994a9575acd84fe641a8566d53a698">IMech2IndMotors</a> ()=default</td></tr>
+<tr class="separator:aae994a9575acd84fe641a8566d53a698 inherit pub_methods_class_i_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a48455442ca9739822957d902536712 inherit pub_methods_class_i_mech2_ind_motors"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mech2_ind_motors.html#a1a48455442ca9739822957d902536712">~IMech2IndMotors</a> ()=default</td></tr>
+<tr class="separator:a1a48455442ca9739822957d902536712 inherit pub_methods_class_i_mech2_ind_motors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_mech"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_mech')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_mech.html">IMech</a></td></tr>
+<tr class="memitem:abc01c2761809f6a477e72da77d99595f inherit pub_methods_class_i_mech"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mech.html#abc01c2761809f6a477e72da77d99595f">IMech</a> ()=default</td></tr>
+<tr class="separator:abc01c2761809f6a477e72da77d99595f inherit pub_methods_class_i_mech"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac415971e67e52e0cd2b3c1aa1312f1a1 inherit pub_methods_class_i_mech"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mech.html#ac415971e67e52e0cd2b3c1aa1312f1a1">~IMech</a> ()=default</td></tr>
+<tr class="separator:ac415971e67e52e0cd2b3c1aa1312f1a1 inherit pub_methods_class_i_mech"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_shooter_8h_source.html#l00014">14</a> of file <a class="el" href="_shooter_8h_source.html">Shooter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_shooter_8h_source.html#l00022">22</a> of file <a class="el" href="_shooter_8h_source.html">Shooter.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad334e2512e5524bc886236e96d75bef4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad334e2512e5524bc886236e96d75bef4">&#9670;&nbsp;</a></span>Shooter()</h2>
@@ -163,307 +193,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_shooter_8cpp_source.html#l00012">12</a> of file <a class="el" href="_shooter_8cpp_source.html">Shooter.cpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa307140af6eb905d85f7d1f954de66a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa307140af6eb905d85f7d1f954de66a1">&#9670;&nbsp;</a></span>ActivateSolenoid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Shooter::ActivateSolenoid </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>activate</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Activate/deactivate pneumatic solenoid. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bool</td><td>- true == extend, false == retract </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void <br  />
- </dd></dl>
-
-<p>Implements <a class="el" href="class_i_mechanism.html#abef1fbd73a24f4f6f3104e255539e0d9">IMechanism</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_shooter_8cpp_source.html#l00065">65</a> of file <a class="el" href="_shooter_8cpp_source.html">Shooter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aaad97e62b1d45d10cbb6747b1c6a8414"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaad97e62b1d45d10cbb6747b1c6a8414">&#9670;&nbsp;</a></span>GetCurrentPosition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double Shooter::GetCurrentPosition </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the current position of the mechanism. The value is in inches or degrees. </p>
-<dl class="section return"><dt>Returns</dt><dd>double position in inches (translating mechanisms) or degrees (rotating mechanisms) </dd></dl>
-
-<p>Implements <a class="el" href="class_i_mechanism.html#aa15197ff101d65447516a8f10bb6867d">IMechanism</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_shooter_8cpp_source.html#l00073">73</a> of file <a class="el" href="_shooter_8cpp_source.html">Shooter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aa38c7c6e5aa105789119d0770ad0dc8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa38c7c6e5aa105789119d0770ad0dc8e">&#9670;&nbsp;</a></span>GetCurrentSpeed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double Shooter::GetCurrentSpeed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the current speed of the mechanism. The value is in inches per second or degrees per second. </p>
-<dl class="section return"><dt>Returns</dt><dd>double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) </dd></dl>
-
-<p>Implements <a class="el" href="class_i_mechanism.html#a9a63d6905de4454d78d7e0d1d1e28437">IMechanism</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_shooter_8cpp_source.html#l00078">78</a> of file <a class="el" href="_shooter_8cpp_source.html">Shooter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a031e6b54e1a611eeeb5f0d57f375d279"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a031e6b54e1a611eeeb5f0d57f375d279">&#9670;&nbsp;</a></span>GetType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a> Shooter::GetType </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates the type of mechanism this is. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a> </dd></dl>
-
-<p>Implements <a class="el" href="class_i_mechanism.html#a62096808201ffc31609e99dc2fa92d44">IMechanism</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_shooter_8cpp_source.html#l00019">19</a> of file <a class="el" href="_shooter_8cpp_source.html">Shooter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="affa03878246b56a70b206d83369eefca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affa03878246b56a70b206d83369eefca">&#9670;&nbsp;</a></span>IsSolenoidActivated()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Shooter::IsSolenoidActivated </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Check if the pneumatic solenoid is activated. </p>
-<dl class="section return"><dt>Returns</dt><dd>bool - true == extended, false == retract </dd></dl>
-
-<p>Implements <a class="el" href="class_i_mechanism.html#a4c0bedb71316054749a276a67d278558">IMechanism</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_shooter_8cpp_source.html#l00068">68</a> of file <a class="el" href="_shooter_8cpp_source.html">Shooter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aaa12826e26eecab817ad3ca19a52dfdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa12826e26eecab817ad3ca19a52dfdc">&#9670;&nbsp;</a></span>SetControlConstants()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Shooter::SetControlConstants </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_control_data.html">ControlData</a> *&#160;</td>
-          <td class="paramname"><em>pid</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the control constants (e.g. PIDF values). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ControlData*</td><td>pid: the control constants </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-<p>Implements <a class="el" href="class_i_mechanism.html#acd973ca93855c485ed42d405f2fcba11">IMechanism</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_shooter_8cpp_source.html#l00084">84</a> of file <a class="el" href="_shooter_8cpp_source.html">Shooter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a3744531d29636a579a1e390677f1a81e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3744531d29636a579a1e390677f1a81e">&#9670;&nbsp;</a></span>SetOutput() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Shooter::SetOutput </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_control_modes.html#a46c77e409ac22b3b3269f7fee2d3f736">ControlModes::CONTROL_TYPE</a>&#160;</td>
-          <td class="paramname"><em>controlType</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>upperValue</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>lowerValue</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_shooter_8cpp_source.html#l00044">44</a> of file <a class="el" href="_shooter_8cpp_source.html">Shooter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a5002bb1e9c11195e18c1c62968b5863a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5002bb1e9c11195e18c1c62968b5863a">&#9670;&nbsp;</a></span>SetOutput() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Shooter::SetOutput </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_control_modes.html#a46c77e409ac22b3b3269f7fee2d3f736">ControlModes::CONTROL_TYPE</a>&#160;</td>
-          <td class="paramname"><em>controlType</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Run mechanism as defined. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="class_control_modes.html#a46c77e409ac22b3b3269f7fee2d3f736">ControlModes::CONTROL_TYPE</a></td><td>controlType: How are the item(s) being controlled </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">double</td><td>value: Target (units are based on the controlType) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-<p>Implements <a class="el" href="class_i_mechanism.html#abc72a6d0306a828de6f43418e75c04c0">IMechanism</a>.</p>
-
 <p class="definition">Definition at line <a class="el" href="_shooter_8cpp_source.html#l00024">24</a> of file <a class="el" href="_shooter_8cpp_source.html">Shooter.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/<a class="el" href="_shooter_8h_source.html">Shooter.h</a></li>
-<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/<a class="el" href="_shooter_8cpp_source.html">Shooter.cpp</a></li>
+<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/<a class="el" href="_shooter_8h_source.html">Shooter.h</a></li>
+<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/<a class="el" href="_shooter_8cpp_source.html">Shooter.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

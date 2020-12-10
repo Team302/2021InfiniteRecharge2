@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/controllers/mechanisms/VelocityController.cpp Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/controllers/mechanisms/VelocityController.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -102,13 +102,13 @@ $(document).ready(function(){initNavTree('_velocity_controller_8cpp_source.html'
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// C++ includes</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// Team 302 includes</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mech_controller_8h.html">controllers/mechanisms/IMechController.h</a>&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_velocity_controller_8h.html">controllers/mechanisms/VelocityController.h</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_data_8h.html">controllers/ControlData.h</a>&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mechanism_8h.html">subsys/IMechanism.h</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Team 302 includes</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mech_controller_8h.html">controllers/mechanisms/IMechController.h</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_velocity_controller_8h.html">controllers/mechanisms/VelocityController.h</a>&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_data_8h.html">controllers/ControlData.h</a>&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_logger_8h.html">utils/Logger.h</a>&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">using namespace </span>std;</div>
@@ -137,38 +137,46 @@ $(document).ready(function(){initNavTree('_velocity_controller_8cpp_source.html'
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> ( m_motor.get() != <span class="keyword">nullptr</span> &amp;&amp; m_control.get() != <span class="keyword">nullptr</span> )</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        m_motor-&gt;SetControlConstants( m_control.get() );</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        m_motor-&gt;SetControlMode( m_control.get()-&gt;GetMode() );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        m_motor.get()-&gt;SetControlConstants( m_control.get() );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        m_motor.get()-&gt;SetControlMode( m_control.get()-&gt;GetMode() );</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a">Run</a>();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a">   59</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a">VelocityController::Run</a>()</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> ( m_motor.get() != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        m_motor.get()-&gt;Set( m_target );</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_velocity_controller.html#ae05a6dfc7fc0518e907bc397c3fd8157">   59</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_velocity_controller.html#ae05a6dfc7fc0518e907bc397c3fd8157">VelocityController::UpdateTarget</a></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;(</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">double</span> target</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    m_target = target;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_velocity_controller.html#a7236bbcd7e85be50ee6512b7c1fa1ed3">   67</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_velocity_controller.html#a7236bbcd7e85be50ee6512b7c1fa1ed3">VelocityController::GetRPS</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> m_motor.get() != <span class="keyword">nullptr</span> ? m_motor.get()-&gt;GetRPS() : 0.0;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a">VelocityController::Run</a>()</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> ( m_motor.get() != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        m_motor.get()-&gt;Set( m_target );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_velocity_controller.html#a7236bbcd7e85be50ee6512b7c1fa1ed3">   75</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_velocity_controller.html#a7236bbcd7e85be50ee6512b7c1fa1ed3">VelocityController::GetRPS</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> m_motor.get() != <span class="keyword">nullptr</span> ? m_motor.get()-&gt;GetRPS() : 0.0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="a_i_mech_controller_8h_html"><div class="ttname"><a href="_i_mech_controller_8h.html">IMechController.h</a></div></div>
-<div class="ttc" id="a_i_mechanism_8h_html"><div class="ttname"><a href="_i_mechanism_8h.html">IMechanism.h</a></div></div>
-<div class="ttc" id="aclass_velocity_controller_html_a7236bbcd7e85be50ee6512b7c1fa1ed3"><div class="ttname"><a href="class_velocity_controller.html#a7236bbcd7e85be50ee6512b7c1fa1ed3">VelocityController::GetRPS</a></div><div class="ttdeci">double GetRPS() const</div><div class="ttdef"><b>Definition:</b> <a href="_velocity_controller_8cpp_source.html#l00067">VelocityController.cpp:67</a></div></div>
+<div class="ttc" id="aclass_velocity_controller_html_a7236bbcd7e85be50ee6512b7c1fa1ed3"><div class="ttname"><a href="class_velocity_controller.html#a7236bbcd7e85be50ee6512b7c1fa1ed3">VelocityController::GetRPS</a></div><div class="ttdeci">double GetRPS() const</div><div class="ttdef"><b>Definition:</b> <a href="_velocity_controller_8cpp_source.html#l00075">VelocityController.cpp:75</a></div></div>
 <div class="ttc" id="a_control_data_8h_html"><div class="ttname"><a href="_control_data_8h.html">ControlData.h</a></div></div>
 <div class="ttc" id="a_logger_8h_html"><div class="ttname"><a href="_logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="aclass_i_mech_controller_html"><div class="ttname"><a href="class_i_mech_controller.html">IMechController</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_mech_controller_8h_source.html#l00022">IMechController.h:23</a></div></div>
-<div class="ttc" id="aclass_velocity_controller_html_aa6358fc3232691e458f996a8e8f4ce5a"><div class="ttname"><a href="class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a">VelocityController::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_velocity_controller_8cpp_source.html#l00059">VelocityController.cpp:59</a></div></div>
+<div class="ttc" id="aclass_velocity_controller_html_aa6358fc3232691e458f996a8e8f4ce5a"><div class="ttname"><a href="class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a">VelocityController::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_velocity_controller_8cpp_source.html#l00067">VelocityController.cpp:67</a></div></div>
 <div class="ttc" id="a_velocity_controller_8h_html"><div class="ttname"><a href="_velocity_controller_8h.html">VelocityController.h</a></div></div>
 <div class="ttc" id="aclass_velocity_controller_html_a86c5f295d9a510c2b2fb0c6400812f9f"><div class="ttname"><a href="class_velocity_controller.html#a86c5f295d9a510c2b2fb0c6400812f9f">VelocityController::VelocityController</a></div><div class="ttdeci">VelocityController()=delete</div></div>
 <div class="ttc" id="aclass_logger_html_a98d7aec19dcdfb9d8faa46d83d927883"><div class="ttname"><a href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">Logger::LogError</a></div><div class="ttdeci">void LogError(const std::string &amp;locationIdentifier, const std::string &amp;message)</div><div class="ttdoc">log a message</div></div>
 <div class="ttc" id="aclass_logger_html_ae85cfbef8b7e6940475a5012fa1935c6"><div class="ttname"><a href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a></div><div class="ttdeci">static Logger * GetLogger()</div><div class="ttdoc">Find or create the singleton logger.</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00049">Logger.cpp:49</a></div></div>
 <div class="ttc" id="aclass_velocity_controller_html_afe11f0564aea740b84fdec61d1828aa8"><div class="ttname"><a href="class_velocity_controller.html#afe11f0564aea740b84fdec61d1828aa8">VelocityController::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_velocity_controller_8cpp_source.html#l00049">VelocityController.cpp:49</a></div></div>
+<div class="ttc" id="aclass_velocity_controller_html_ae05a6dfc7fc0518e907bc397c3fd8157"><div class="ttname"><a href="class_velocity_controller.html#ae05a6dfc7fc0518e907bc397c3fd8157">VelocityController::UpdateTarget</a></div><div class="ttdeci">void UpdateTarget(double target) override</div><div class="ttdef"><b>Definition:</b> <a href="_velocity_controller_8cpp_source.html#l00059">VelocityController.cpp:60</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

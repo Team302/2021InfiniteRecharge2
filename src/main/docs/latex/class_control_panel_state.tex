@@ -7,7 +7,7 @@
 Inheritance diagram for Control\+Panel\+State\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_control_panel_state}
+\includegraphics[height=2.000000cm]{class_control_panel_state}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -18,19 +18,19 @@ Inheritance diagram for Control\+Panel\+State\+:\begin{figure}[H]
 \mbox{\hyperlink{class_control_panel_state_ac92ce50ff22873dd3174108681d3ea8b}{Control\+Panel\+State}} (\mbox{\hyperlink{class_control_data}{Control\+Data}} $\ast$control, double target, \mbox{\hyperlink{class_mechanism_target_data_a1bd7dca52842f28088b36d001b0ac125}{Mechanism\+Target\+Data\+::\+S\+O\+L\+E\+N\+O\+ID}} sol\+State)
 \item 
 \mbox{\hyperlink{class_control_panel_state_ab3441e85207ec0b6abd873139c628d62}{$\sim$\+Control\+Panel\+State}} ()=default
+\item 
+void \mbox{\hyperlink{class_control_panel_state_a97bce1883fd03ba934fb0fb04cf72f6b}{Init}} () override
+\item 
+void \mbox{\hyperlink{class_control_panel_state_a837f72e59def28722019631aedfa2fed}{Run}} () override
+\item 
+bool \mbox{\hyperlink{class_control_panel_state_a6109bf8b5ac46ca29e6bb27bce7d93fc}{At\+Target}} () const override
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Copyright 2020 Lake Orion Robotics F\+I\+R\+ST Team 302
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE. 
-
-Definition at line 25 of file Control\+Panel\+State.\+h.
+Definition at line 27 of file Control\+Panel\+State.\+h.
 
 
 
@@ -49,7 +49,7 @@ Definition at line 25 of file Control\+Panel\+State.\+h.
 
 
 
-Definition at line 33 of file Control\+Panel\+State.\+cpp.
+Definition at line 36 of file Control\+Panel\+State.\+cpp.
 
 \mbox{\Hypertarget{class_control_panel_state_ab3441e85207ec0b6abd873139c628d62}\label{class_control_panel_state_ab3441e85207ec0b6abd873139c628d62}} 
 \index{ControlPanelState@{ControlPanelState}!````~ControlPanelState@{$\sim$ControlPanelState}}
@@ -59,7 +59,52 @@ Definition at line 33 of file Control\+Panel\+State.\+cpp.
 
 
 
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_control_panel_state_a6109bf8b5ac46ca29e6bb27bce7d93fc}\label{class_control_panel_state_a6109bf8b5ac46ca29e6bb27bce7d93fc}} 
+\index{ControlPanelState@{ControlPanelState}!AtTarget@{AtTarget}}
+\index{AtTarget@{AtTarget}!ControlPanelState@{ControlPanelState}}
+\doxysubsubsection{\texorpdfstring{AtTarget()}{AtTarget()}}
+{\footnotesize\ttfamily bool Control\+Panel\+State\+::\+At\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_state_a15624686c47f28cf90f76bb28e938937}{I\+State}}.
+
+
+
+Definition at line 61 of file Control\+Panel\+State.\+cpp.
+
+\mbox{\Hypertarget{class_control_panel_state_a97bce1883fd03ba934fb0fb04cf72f6b}\label{class_control_panel_state_a97bce1883fd03ba934fb0fb04cf72f6b}} 
+\index{ControlPanelState@{ControlPanelState}!Init@{Init}}
+\index{Init@{Init}!ControlPanelState@{ControlPanelState}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Control\+Panel\+State\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_state_ac1400e68fde2f088873f5ec283309977}{I\+State}}.
+
+
+
+Definition at line 48 of file Control\+Panel\+State.\+cpp.
+
+\mbox{\Hypertarget{class_control_panel_state_a837f72e59def28722019631aedfa2fed}\label{class_control_panel_state_a837f72e59def28722019631aedfa2fed}} 
+\index{ControlPanelState@{ControlPanelState}!Run@{Run}}
+\index{Run@{Run}!ControlPanelState@{ControlPanelState}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Control\+Panel\+State\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_state_a1dc31736da7d9e9322c1cc417672ea0f}{I\+State}}.
+
+
+
+Definition at line 55 of file Control\+Panel\+State.\+cpp.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/states/control\+Panel/\mbox{\hyperlink{_control_panel_state_8h}{Control\+Panel\+State.\+h}}\item 
-/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/states/control\+Panel/\mbox{\hyperlink{_control_panel_state_8cpp}{Control\+Panel\+State.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/states/control\+Panel/\mbox{\hyperlink{_control_panel_state_8h}{Control\+Panel\+State.\+h}}\item 
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/states/control\+Panel/\mbox{\hyperlink{_control_panel_state_8cpp}{Control\+Panel\+State.\+cpp}}\end{DoxyCompactItemize}

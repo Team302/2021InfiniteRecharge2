@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/states/controlPanel/ControlPanelRaise.cpp Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/controlPanel/ControlPanelRaise.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -107,47 +107,44 @@ $(document).ready(function(){initNavTree('_control_panel_raise_8cpp_source.html'
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Team 302 includes</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_state_8h.html">states/IState.h</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mechanism_8h.html">subsys/IMechanism.h</a>&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_factory_8h.html">subsys/MechanismFactory.h</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_panel_raise_8h.html">states/controlPanel/ControlPanelRaise.h</a>&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Third Party Includes</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_control_panel_raise.html#a4feff2ef9eece18e655d13860002344b">   31</a></span>&#160;<a class="code" href="class_control_panel_raise.html#a4feff2ef9eece18e655d13860002344b">ControlPanelRaise::ControlPanelRaise</a>()</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">auto</span> factory = <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    m_controlPanel = factory -&gt; GetIMechanism(MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_control_panel_raise.html#af8847f86f0a335629e651d7137ff7cbc">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_control_panel_raise.html#af8847f86f0a335629e651d7137ff7cbc">ControlPanelRaise::Init</a>()</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_factory_8h.html">subsys/MechanismFactory.h</a>&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_panel_raise_8h.html">states/controlPanel/ControlPanelRaise.h</a>&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// Third Party Includes</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_control_panel_raise.html#a4feff2ef9eece18e655d13860002344b">   30</a></span>&#160;<a class="code" href="class_control_panel_raise.html#a4feff2ef9eece18e655d13860002344b">ControlPanelRaise::ControlPanelRaise</a>()</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">auto</span> factory = <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    m_controlPanel = factory -&gt; GetControlPanel();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_control_panel_raise.html#af8847f86f0a335629e651d7137ff7cbc">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_control_panel_raise.html#af8847f86f0a335629e651d7137ff7cbc">ControlPanelRaise::Init</a>()</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_control_panel_raise.html#a052866f8fe8969cffd365febc061168e">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_control_panel_raise.html#a052866f8fe8969cffd365febc061168e">ControlPanelRaise::Run</a>()           </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    m_controlPanel -&gt; ActivateSolenoid( <span class="keyword">true</span> );   <span class="comment">//raises impeller</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_control_panel_raise.html#af185da8408a9e229df84cf3008f455de">   48</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_control_panel_raise.html#af185da8408a9e229df84cf3008f455de">ControlPanelRaise::AtTarget</a>() const                                 <span class="comment">//confirms that it worked</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_control_panel_raise.html#a052866f8fe8969cffd365febc061168e">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_control_panel_raise.html#a052866f8fe8969cffd365febc061168e">ControlPanelRaise::Run</a>()           </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    m_controlPanel.get() -&gt; ActivateSolenoid( <span class="keyword">true</span> );   <span class="comment">//raises impeller</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_control_panel_raise.html#af185da8408a9e229df84cf3008f455de">   46</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_control_panel_raise.html#af185da8408a9e229df84cf3008f455de">ControlPanelRaise::AtTarget</a>() const                                 <span class="comment">//confirms that it worked</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="a_control_panel_raise_8h_html"><div class="ttname"><a href="_control_panel_raise_8h.html">ControlPanelRaise.h</a></div></div>
-<div class="ttc" id="a_i_mechanism_8h_html"><div class="ttname"><a href="_i_mechanism_8h.html">IMechanism.h</a></div></div>
 <div class="ttc" id="a_mechanism_factory_8h_html"><div class="ttname"><a href="_mechanism_factory_8h.html">MechanismFactory.h</a></div></div>
-<div class="ttc" id="aclass_control_panel_raise_html_af185da8408a9e229df84cf3008f455de"><div class="ttname"><a href="class_control_panel_raise.html#af185da8408a9e229df84cf3008f455de">ControlPanelRaise::AtTarget</a></div><div class="ttdeci">bool AtTarget() const override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_raise_8cpp_source.html#l00048">ControlPanelRaise.cpp:48</a></div></div>
-<div class="ttc" id="aclass_control_panel_raise_html_a4feff2ef9eece18e655d13860002344b"><div class="ttname"><a href="class_control_panel_raise.html#a4feff2ef9eece18e655d13860002344b">ControlPanelRaise::ControlPanelRaise</a></div><div class="ttdeci">ControlPanelRaise()</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_raise_8cpp_source.html#l00031">ControlPanelRaise.cpp:31</a></div></div>
-<div class="ttc" id="aclass_control_panel_raise_html_af8847f86f0a335629e651d7137ff7cbc"><div class="ttname"><a href="class_control_panel_raise.html#af8847f86f0a335629e651d7137ff7cbc">ControlPanelRaise::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_raise_8cpp_source.html#l00038">ControlPanelRaise.cpp:38</a></div></div>
+<div class="ttc" id="aclass_control_panel_raise_html_af185da8408a9e229df84cf3008f455de"><div class="ttname"><a href="class_control_panel_raise.html#af185da8408a9e229df84cf3008f455de">ControlPanelRaise::AtTarget</a></div><div class="ttdeci">bool AtTarget() const override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_raise_8cpp_source.html#l00046">ControlPanelRaise.cpp:46</a></div></div>
+<div class="ttc" id="aclass_control_panel_raise_html_a4feff2ef9eece18e655d13860002344b"><div class="ttname"><a href="class_control_panel_raise.html#a4feff2ef9eece18e655d13860002344b">ControlPanelRaise::ControlPanelRaise</a></div><div class="ttdeci">ControlPanelRaise()</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_raise_8cpp_source.html#l00030">ControlPanelRaise.cpp:30</a></div></div>
+<div class="ttc" id="aclass_control_panel_raise_html_af8847f86f0a335629e651d7137ff7cbc"><div class="ttname"><a href="class_control_panel_raise.html#af8847f86f0a335629e651d7137ff7cbc">ControlPanelRaise::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_raise_8cpp_source.html#l00036">ControlPanelRaise.cpp:36</a></div></div>
 <div class="ttc" id="a_i_state_8h_html"><div class="ttname"><a href="_i_state_8h.html">IState.h</a></div></div>
-<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00072">MechanismFactory.cpp:72</a></div></div>
-<div class="ttc" id="aclass_control_panel_raise_html_a052866f8fe8969cffd365febc061168e"><div class="ttname"><a href="class_control_panel_raise.html#a052866f8fe8969cffd365febc061168e">ControlPanelRaise::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_raise_8cpp_source.html#l00043">ControlPanelRaise.cpp:43</a></div></div>
+<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00071">MechanismFactory.cpp:71</a></div></div>
+<div class="ttc" id="aclass_control_panel_raise_html_a052866f8fe8969cffd365febc061168e"><div class="ttname"><a href="class_control_panel_raise.html#a052866f8fe8969cffd365febc061168e">ControlPanelRaise::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_raise_8cpp_source.html#l00041">ControlPanelRaise.cpp:41</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

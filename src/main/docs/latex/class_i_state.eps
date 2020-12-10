@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 1133.333374
+%%BoundingBox: 0 0 500 1000.000000
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,12 +19,12 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 0.441176 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 0.500000 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 17 def
+/rows 15 def
 /cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
@@ -178,17 +178,15 @@ boxfont setfont
 (ControlPanelColorTurn) cw
 (ControlPanelManual) cw
 (ControlPanelRaise) cw
+(ControlPanelState) cw
 (ControlPanelStow) cw
 (ControlPanelTurn) cw
 (CyclePrimitives) cw
+(IntakeState) cw
 (LimelightAim) cw
-(ManualAim) cw
 (Mech1MotorState) cw
 (Mech2MotorState) cw
-(MechanismState) cw
 (MechSolenoidState) cw
-(ShooterHoodManual) cw
-(ShooterSaveState) cw
 (TankDrive) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
@@ -201,34 +199,29 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (IState) 0.000000 16.000000 box
- (ArcadeDrive) 1.000000 15.000000 box
-1.000000 15.000000 mark
- (ControlPanelColorTurn) 1.000000 14.000000 box
- (ControlPanelManual) 1.000000 13.000000 box
- (ControlPanelRaise) 1.000000 12.000000 box
- (ControlPanelStow) 1.000000 11.000000 box
- (ControlPanelTurn) 1.000000 10.000000 box
- (CyclePrimitives) 1.000000 9.000000 box
- (LimelightAim) 1.000000 8.000000 box
- (ManualAim) 1.000000 7.000000 box
- (Mech1MotorState) 1.000000 6.000000 box
- (Mech2MotorState) 1.000000 5.000000 box
- (MechanismState) 1.000000 4.000000 box
-1.000000 4.000000 mark
- (MechSolenoidState) 1.000000 3.000000 box
- (ShooterHoodManual) 1.000000 2.000000 box
- (ShooterSaveState) 1.000000 1.000000 box
+ (IState) 0.000000 14.000000 box
+ (ArcadeDrive) 1.000000 13.000000 box
+1.000000 13.000000 mark
+ (ControlPanelColorTurn) 1.000000 12.000000 box
+ (ControlPanelManual) 1.000000 11.000000 box
+ (ControlPanelRaise) 1.000000 10.000000 box
+ (ControlPanelState) 1.000000 9.000000 box
+ (ControlPanelStow) 1.000000 8.000000 box
+ (ControlPanelTurn) 1.000000 7.000000 box
+ (CyclePrimitives) 1.000000 6.000000 box
+ (IntakeState) 1.000000 5.000000 box
+ (LimelightAim) 1.000000 4.000000 box
+ (Mech1MotorState) 1.000000 3.000000 box
+1.000000 3.000000 mark
+ (Mech2MotorState) 1.000000 2.000000 box
+1.000000 2.000000 mark
+ (MechSolenoidState) 1.000000 1.000000 box
  (TankDrive) 1.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-1 0.000000 15.250000 out
-solid
-0 0.000000 15.500000 hedge
-solid
-0 0.000000 14.500000 hedge
+1 0.000000 13.250000 out
 solid
 0 0.000000 13.500000 hedge
 solid
@@ -258,4 +251,4 @@ solid
 solid
 0 0.000000 0.500000 hedge
 solid
-0.000000 16.000000 0.500000 vedge
+0.000000 14.000000 0.500000 vedge

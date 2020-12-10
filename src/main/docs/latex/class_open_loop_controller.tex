@@ -1,0 +1,137 @@
+\hypertarget{class_open_loop_controller}{}\doxysection{Open\+Loop\+Controller Class Reference}
+\label{class_open_loop_controller}\index{OpenLoopController@{OpenLoopController}}
+
+
+{\ttfamily \#include $<$Open\+Loop\+Controller.\+h$>$}
+
+Inheritance diagram for Open\+Loop\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_open_loop_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_loop_controller_ad4d548449424596bd20422c62750648f}{Open\+Loop\+Controller}} ()=delete
+\item 
+\mbox{\hyperlink{class_open_loop_controller_ad3bfc04973047df8e8edd5d0b42a2416}{Open\+Loop\+Controller}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$ motor, double target)
+\item 
+\mbox{\hyperlink{class_open_loop_controller_a2e3418577afa70bb75845a170b90afe5}{$\sim$\+Open\+Loop\+Controller}} ()=default
+\item 
+void \mbox{\hyperlink{class_open_loop_controller_a7ec0df76ffd1b81032b8c627eea08881}{Init}} () override
+\item 
+void \mbox{\hyperlink{class_open_loop_controller_a70da12a56ed84841d1f5521c986569f8}{Update\+Target}} (double target) override
+\item 
+void \mbox{\hyperlink{class_open_loop_controller_aa65d5680909a0eb6df41128f8cc544de}{Run}} () override
+\item 
+bool \mbox{\hyperlink{class_open_loop_controller_a7ab9db57c57eb5fe7136625bbd944514}{At\+Target}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_open_loop_controller_aaa05e8fb948e5255dea98291f2c40014}{Get\+Target}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 25 of file Open\+Loop\+Controller.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_loop_controller_ad4d548449424596bd20422c62750648f}\label{class_open_loop_controller_ad4d548449424596bd20422c62750648f}} 
+\index{OpenLoopController@{OpenLoopController}!OpenLoopController@{OpenLoopController}}
+\index{OpenLoopController@{OpenLoopController}!OpenLoopController@{OpenLoopController}}
+\doxysubsubsection{\texorpdfstring{OpenLoopController()}{OpenLoopController()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Open\+Loop\+Controller\+::\+Open\+Loop\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_open_loop_controller_ad3bfc04973047df8e8edd5d0b42a2416}\label{class_open_loop_controller_ad3bfc04973047df8e8edd5d0b42a2416}} 
+\index{OpenLoopController@{OpenLoopController}!OpenLoopController@{OpenLoopController}}
+\index{OpenLoopController@{OpenLoopController}!OpenLoopController@{OpenLoopController}}
+\doxysubsubsection{\texorpdfstring{OpenLoopController()}{OpenLoopController()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Open\+Loop\+Controller\+::\+Open\+Loop\+Controller (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_dragon_motor_controller}{I\+Dragon\+Motor\+Controller}} $>$}]{motor,  }\item[{double}]{target }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_open_loop_controller_a2e3418577afa70bb75845a170b90afe5}\label{class_open_loop_controller_a2e3418577afa70bb75845a170b90afe5}} 
+\index{OpenLoopController@{OpenLoopController}!````~OpenLoopController@{$\sim$OpenLoopController}}
+\index{````~OpenLoopController@{$\sim$OpenLoopController}!OpenLoopController@{OpenLoopController}}
+\doxysubsubsection{\texorpdfstring{$\sim$OpenLoopController()}{~OpenLoopController()}}
+{\footnotesize\ttfamily Open\+Loop\+Controller\+::$\sim$\+Open\+Loop\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_loop_controller_a7ab9db57c57eb5fe7136625bbd944514}\label{class_open_loop_controller_a7ab9db57c57eb5fe7136625bbd944514}} 
+\index{OpenLoopController@{OpenLoopController}!AtTarget@{AtTarget}}
+\index{AtTarget@{AtTarget}!OpenLoopController@{OpenLoopController}}
+\doxysubsubsection{\texorpdfstring{AtTarget()}{AtTarget()}}
+{\footnotesize\ttfamily bool Open\+Loop\+Controller\+::\+At\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_mech_controller_a5ce7d666e9a752f34a8770830bf4d075}{I\+Mech\+Controller}}.
+
+
+
+Definition at line 68 of file Open\+Loop\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_open_loop_controller_aaa05e8fb948e5255dea98291f2c40014}\label{class_open_loop_controller_aaa05e8fb948e5255dea98291f2c40014}} 
+\index{OpenLoopController@{OpenLoopController}!GetTarget@{GetTarget}}
+\index{GetTarget@{GetTarget}!OpenLoopController@{OpenLoopController}}
+\doxysubsubsection{\texorpdfstring{GetTarget()}{GetTarget()}}
+{\footnotesize\ttfamily double Open\+Loop\+Controller\+::\+Get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 47 of file Open\+Loop\+Controller.\+h.
+
+\mbox{\Hypertarget{class_open_loop_controller_a7ec0df76ffd1b81032b8c627eea08881}\label{class_open_loop_controller_a7ec0df76ffd1b81032b8c627eea08881}} 
+\index{OpenLoopController@{OpenLoopController}!Init@{Init}}
+\index{Init@{Init}!OpenLoopController@{OpenLoopController}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Open\+Loop\+Controller\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_mech_controller_a43c564581e046a9483e469c6da589db9}{I\+Mech\+Controller}}.
+
+
+
+Definition at line 43 of file Open\+Loop\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_open_loop_controller_aa65d5680909a0eb6df41128f8cc544de}\label{class_open_loop_controller_aa65d5680909a0eb6df41128f8cc544de}} 
+\index{OpenLoopController@{OpenLoopController}!Run@{Run}}
+\index{Run@{Run}!OpenLoopController@{OpenLoopController}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Open\+Loop\+Controller\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_mech_controller_a26c63d8b4ab0539d0f0902b2077356f4}{I\+Mech\+Controller}}.
+
+
+
+Definition at line 60 of file Open\+Loop\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_open_loop_controller_a70da12a56ed84841d1f5521c986569f8}\label{class_open_loop_controller_a70da12a56ed84841d1f5521c986569f8}} 
+\index{OpenLoopController@{OpenLoopController}!UpdateTarget@{UpdateTarget}}
+\index{UpdateTarget@{UpdateTarget}!OpenLoopController@{OpenLoopController}}
+\doxysubsubsection{\texorpdfstring{UpdateTarget()}{UpdateTarget()}}
+{\footnotesize\ttfamily void Open\+Loop\+Controller\+::\+Update\+Target (\begin{DoxyParamCaption}\item[{double}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_mech_controller_a4eb9b1a0f7eed26a4f6c7ca12b6aa442}{I\+Mech\+Controller}}.
+
+
+
+Definition at line 52 of file Open\+Loop\+Controller.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/controllers/mechanisms/\mbox{\hyperlink{_open_loop_controller_8h}{Open\+Loop\+Controller.\+h}}\item 
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/controllers/mechanisms/\mbox{\hyperlink{_open_loop_controller_8cpp}{Open\+Loop\+Controller.\+cpp}}\end{DoxyCompactItemize}

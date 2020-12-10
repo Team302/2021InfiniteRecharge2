@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "2021InfiniteRecharge2", "index.html", [
+  [ "Team 302 Robot", "index.html", [
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -57,15 +57,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_analog_axis_8cpp.html",
-"_dragon_pigeon_8cpp.html",
-"_logger_8h_source.html",
-"_ultrasonic_factory_8cpp_source.html",
-"class_control_panel_color_turn.html#aa34995c7a425dfa2f494947f4cf60ada",
-"class_dragon_solenoid.html",
-"class_i_chassis.html#aef1d1542c93a347d2a4915f50085bd8a",
-"class_intake_state.html#ae1195d76d579acabdc080b078ad2f2e1",
-"class_p_o_v_button.html#a3abe58c3923464a631a9b0e1d5b65466",
-"class_turn_angle.html#ae4ce91356672270c9ee1c2f17bc8ef93"
+"_dragon_position_sensor_8h_source.html",
+"_mech1_ind_motor_8h_source.html",
+"_velocity_controller_8cpp_source.html",
+"class_control_panel_manual.html#ad4601f47031df5787bbff8cfa161c1ff",
+"class_dragon_solenoid.html#a532b8bb498212618426a5cc0aecf7c3b",
+"class_i_chassis.html#af807aa5e885b101e6a1de7f9911272c7",
+"class_intake_state.html#adeac4631054b5970e71a88f952473cda",
+"class_open_loop_controller.html#a7ec0df76ffd1b81032b8c627eea08881",
+"class_turn_angle.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

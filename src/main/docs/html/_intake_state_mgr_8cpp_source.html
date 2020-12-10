@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/states/intake/IntakeStateMgr.cpp Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/intake/IntakeStateMgr.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -208,7 +208,7 @@ $(document).ready(function(){initNavTree('_intake_state_mgr_8cpp_source.html',''
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_intake_state_mgr.html#ac27ccde795f471c38f5ae0c123e1ada3">  125</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_intake_state_mgr.html#ac27ccde795f471c38f5ae0c123e1ada3">IntakeStateMgr::RunCurrentState</a>()</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;GetIMechanism( MechanismTypes::MECHANISM_TYPE::INTAKE) != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;GetIntake().get() != <span class="keyword">nullptr</span> )</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    {</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="comment">// process teleop/manual interrupts</span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keyword">auto</span> controller = <a class="code" href="class_teleop_control.html#abcca1fa489e538a5f42c920747a4f598">TeleopControl::GetInstance</a>();</div>
@@ -252,7 +252,7 @@ $(document).ready(function(){initNavTree('_intake_state_mgr_8cpp_source.html',''
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        m_currentState-&gt;<a class="code" href="class_i_state.html#ac1400e68fde2f088873f5ec283309977">Init</a>();</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">if</span> ( run )</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;GetIMechanism( MechanismTypes::MECHANISM_TYPE::INTAKE) != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;GetIntake().get() != <span class="keyword">nullptr</span> )</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            {</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                m_currentState-&gt;<a class="code" href="class_i_state.html#a1dc31736da7d9e9322c1cc417672ea0f">Run</a>();</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            }</div>
@@ -282,10 +282,10 @@ $(document).ready(function(){initNavTree('_intake_state_mgr_8cpp_source.html',''
 <div class="ttc" id="aclass_intake_state_mgr_html_a1e25c496c344124e7a52b7bbdfa09f87"><div class="ttname"><a href="class_intake_state_mgr.html#a1e25c496c344124e7a52b7bbdfa09f87">IntakeStateMgr::SetCurrentState</a></div><div class="ttdeci">void SetCurrentState(INTAKE_STATE state, bool run)</div><div class="ttdoc">set the current state, initialize it and run it</div><div class="ttdef"><b>Definition:</b> <a href="_intake_state_mgr_8cpp_source.html#l00159">IntakeStateMgr.cpp:160</a></div></div>
 <div class="ttc" id="aclass_intake_state_mgr_html_aaa5d73e08f73a95dca5c6aaa1de6b56c"><div class="ttname"><a href="class_intake_state_mgr.html#aaa5d73e08f73a95dca5c6aaa1de6b56c">IntakeStateMgr::INTAKE_STATE</a></div><div class="ttdeci">INTAKE_STATE</div><div class="ttdef"><b>Definition:</b> <a href="_intake_state_mgr_8h_source.html#l00033">IntakeStateMgr.h:34</a></div></div>
 <div class="ttc" id="aclass_teleop_control_html_abcca1fa489e538a5f42c920747a4f598"><div class="ttname"><a href="class_teleop_control.html#abcca1fa489e538a5f42c920747a4f598">TeleopControl::GetInstance</a></div><div class="ttdeci">static TeleopControl * GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_teleop_control_8cpp_source.html#l00044">TeleopControl.cpp:44</a></div></div>
-<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00072">MechanismFactory.cpp:72</a></div></div>
+<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00071">MechanismFactory.cpp:71</a></div></div>
 <div class="ttc" id="aclass_intake_state_mgr_html_ac27ccde795f471c38f5ae0c123e1ada3"><div class="ttname"><a href="class_intake_state_mgr.html#ac27ccde795f471c38f5ae0c123e1ada3">IntakeStateMgr::RunCurrentState</a></div><div class="ttdeci">void RunCurrentState()</div><div class="ttdoc">run the current state</div><div class="ttdef"><b>Definition:</b> <a href="_intake_state_mgr_8cpp_source.html#l00125">IntakeStateMgr.cpp:125</a></div></div>
 <div class="ttc" id="a_mechanism_types_8h_html"><div class="ttname"><a href="_mechanism_types_8h.html">MechanismTypes.h</a></div></div>
-<div class="ttc" id="aclass_intake_state_html"><div class="ttname"><a href="class_intake_state.html">IntakeState</a></div><div class="ttdoc">IntakeOff.h.</div><div class="ttdef"><b>Definition:</b> <a href="_intake_state_8h_source.html#l00031">IntakeState.h:32</a></div></div>
+<div class="ttc" id="aclass_intake_state_html"><div class="ttname"><a href="class_intake_state.html">IntakeState</a></div><div class="ttdef"><b>Definition:</b> <a href="_intake_state_8h_source.html#l00025">IntakeState.h:26</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

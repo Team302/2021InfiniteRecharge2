@@ -30,6 +30,7 @@ var hierarchy =
     [ "DigitalInputFactory", "class_digital_input_factory.html", null ],
     [ "DigitalInputUsage", "class_digital_input_usage.html", null ],
     [ "DistanceSensorFactory", "class_distance_sensor_factory.html", null ],
+    [ "DragonBlinkin", "class_dragon_blinkin.html", null ],
     [ "DragonDigitalInput", "class_dragon_digital_input.html", null ],
     [ "DragonMotorControllerFactory", "class_dragon_motor_controller_factory.html", null ],
     [ "DragonPDP", "class_dragon_p_d_p.html", null ],
@@ -94,6 +95,7 @@ var hierarchy =
           [ "Climber", "class_climber.html", null ],
           [ "ControlPanel", "class_control_panel.html", null ],
           [ "Crawler", "class_crawler.html", null ],
+          [ "DriveTrainSide", "class_drive_train_side.html", null ],
           [ "HookDelivery", "class_hook_delivery.html", null ],
           [ "Impeller", "class_impeller.html", null ],
           [ "Intake", "class_intake.html", null ],
@@ -102,7 +104,9 @@ var hierarchy =
         ] ]
       ] ],
       [ "IMech2IndMotors", "class_i_mech2_ind_motors.html", [
-        [ "Mech2IndMotors", "class_mech2_ind_motors.html", null ]
+        [ "Mech2IndMotors", "class_mech2_ind_motors.html", [
+          [ "Shooter", "class_shooter.html", null ]
+        ] ]
       ] ],
       [ "Mech", "class_mech.html", null ]
     ] ],
@@ -117,12 +121,11 @@ var hierarchy =
         [ "Intake", "class_intake.html", null ]
       ] ]
     ] ],
-    [ "IMechanism", "class_i_mechanism.html", [
-      [ "DriveTrainSide", "class_drive_train_side.html", null ],
-      [ "Shooter", "class_shooter.html", null ]
-    ] ],
+    [ "IMechanism", "class_i_mechanism.html", null ],
     [ "IMechController", "class_i_mech_controller.html", [
+      [ "OpenLoopController", "class_open_loop_controller.html", null ],
       [ "VelocityController", "class_velocity_controller.html", [
+        [ "VelocityDegreesPerSecController", "class_velocity_degrees_per_sec_controller.html", null ],
         [ "VelocityRPSController", "class_velocity_r_p_s_controller.html", null ]
       ] ]
     ] ],
@@ -153,32 +156,29 @@ var hierarchy =
       [ "ControlPanelColorTurn", "class_control_panel_color_turn.html", null ],
       [ "ControlPanelManual", "class_control_panel_manual.html", null ],
       [ "ControlPanelRaise", "class_control_panel_raise.html", null ],
+      [ "ControlPanelState", "class_control_panel_state.html", null ],
       [ "ControlPanelStow", "class_control_panel_stow.html", null ],
       [ "ControlPanelTurn", "class_control_panel_turn.html", null ],
       [ "CyclePrimitives", "class_cycle_primitives.html", null ],
+      [ "IntakeState", "class_intake_state.html", null ],
       [ "LimelightAim", "class_limelight_aim.html", null ],
-      [ "ManualAim", "class_manual_aim.html", null ],
-      [ "Mech1MotorState", "class_mech1_motor_state.html", null ],
-      [ "Mech2MotorState", "class_mech2_motor_state.html", null ],
-      [ "MechanismState", "class_mechanism_state.html", [
-        [ "BallTransferOff", "class_ball_transfer_off.html", null ],
+      [ "Mech1MotorState", "class_mech1_motor_state.html", [
         [ "BallTransferState", "class_ball_transfer_state.html", null ],
-        [ "BallTransferToImpeller", "class_ball_transfer_to_impeller.html", null ],
-        [ "BallTransferToShooter", "class_ball_transfer_to_shooter.html", null ],
         [ "ClimberState", "class_climber_state.html", null ],
-        [ "ControlPanelState", "class_control_panel_state.html", null ],
         [ "HoldTurretPosition", "class_hold_turret_position.html", null ],
         [ "HookDeliveryManualState", "class_hook_delivery_manual_state.html", null ],
         [ "HookDeliveryState", "class_hook_delivery_state.html", null ],
         [ "ImpellerState", "class_impeller_state.html", null ],
-        [ "IntakeState", "class_intake_state.html", null ],
+        [ "ManualAim", "class_manual_aim.html", null ],
+        [ "ShooterHoodManual", "class_shooter_hood_manual.html", null ],
         [ "ShooterHoodState", "class_shooter_hood_state.html", null ],
-        [ "ShooterState", "class_shooter_state.html", null ],
+        [ "ShooterSaveState", "class_shooter_save_state.html", null ],
         [ "TurretTurnAngle", "class_turret_turn_angle.html", null ]
       ] ],
+      [ "Mech2MotorState", "class_mech2_motor_state.html", [
+        [ "ShooterState", "class_shooter_state.html", null ]
+      ] ],
       [ "MechSolenoidState", "class_mech_solenoid_state.html", null ],
-      [ "ShooterHoodManual", "class_shooter_hood_manual.html", null ],
-      [ "ShooterSaveState", "class_shooter_save_state.html", null ],
       [ "TankDrive", "class_tank_drive.html", null ]
     ] ],
     [ "IStateTest", "class_i_state_test.html", [
@@ -201,6 +201,7 @@ var hierarchy =
     [ "MechanismTargetDefn", "class_mechanism_target_defn.html", null ],
     [ "MechanismTypes", "class_mechanism_types.html", null ],
     [ "MechansimDefn", "class_mechansim_defn.html", null ],
+    [ "MechControllerFactory", "class_mech_controller_factory.html", null ],
     [ "MotorControllerUsage", "class_motor_controller_usage.html", null ],
     [ "MotorDefn", "class_motor_defn.html", null ],
     [ "OdometryDefn", "class_odometry_defn.html", null ],

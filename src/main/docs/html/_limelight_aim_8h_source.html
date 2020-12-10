@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/states/turret/LimelightAim.h Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/turret/LimelightAim.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -101,50 +101,54 @@ $(document).ready(function(){initNavTree('_limelight_aim_8h_source.html',''); in
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//====================================================================================================================================================</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_state_8h.html">states/IState.h</a>&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_data_8h.html">controllers/ControlData.h</a>&gt;</span>  </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mechanism_8h.html">subsys/IMechanism.h</a>&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_dragon_limelight_8h.html">hw/DragonLimelight.h</a>&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_state_8h.html">states/IState.h</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mech1_motor_state_8h.html">states/Mech1MotorState.h</a>&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_target_data_8h.html">controllers/MechanismTargetData.h</a>&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_dragon_limelight_8h.html">hw/DragonLimelight.h</a>&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_turret_8h.html">subsys/Turret.h</a>&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_limelight_aim.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_limelight_aim.html">LimelightAim</a> : <span class="keyword">public</span> <a class="code" href="class_i_state.html">IState</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_limelight_aim.html#ae29439a656fe4e430962ddc15205b819">LimelightAim</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        (</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <a class="code" href="class_control_data.html">ControlData</a>* controlData,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordtype">double</span> target</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        );</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_limelight_aim.html#a2247a913c594a63077af4d65fe98a80d">Init</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_limelight_aim.html#a19be92bb02e89226329ef01666904fe8">Run</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_limelight_aim.html#accee6775e1b1f3702ab5d9ba64bcafbf">AtTarget</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_limelight_aim.html#ab80516598f3bea2c227ede5cd1c83fbb">UpdateTarget</a>( <span class="keywordtype">double</span> target );</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="class_control_data.html">ControlData</a>* m_controlData;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">bool</span> m_atTarget;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">double</span> m_target;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_i_mechanism.html">IMechanism</a>* m_turret;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_dragon_limelight.html">DragonLimelight</a>* m_limelight;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">double</span> m_targetPosition;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">bool</span> m_start;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">class </span><a class="code" href="class_control_data.html">ControlData</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_limelight_aim.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_limelight_aim.html">LimelightAim</a> : <span class="keyword">public</span> <a class="code" href="class_i_state.html">IState</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_limelight_aim.html#ae29439a656fe4e430962ddc15205b819">LimelightAim</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        (</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="class_control_data.html">ControlData</a>* controlData,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordtype">double</span> target</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        );</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_limelight_aim.html#a2247a913c594a63077af4d65fe98a80d">Init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_limelight_aim.html#a19be92bb02e89226329ef01666904fe8">Run</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_limelight_aim.html#accee6775e1b1f3702ab5d9ba64bcafbf">AtTarget</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_limelight_aim.html#ab80516598f3bea2c227ede5cd1c83fbb">UpdateTarget</a>( <span class="keywordtype">double</span> target );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::unique_ptr&lt;Mech1MotorState&gt;    m_motorState;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::shared_ptr&lt;Turret&gt;             m_turret;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_dragon_limelight.html">DragonLimelight</a>*                    m_limelight;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="class_control_data.html">ControlData</a>* m_controlData;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">bool</span> m_atTarget;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">double</span> m_target;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">double</span> m_targetPosition;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">bool</span> m_start;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_i_state_html"><div class="ttname"><a href="class_i_state.html">IState</a></div><div class="ttdoc">Interface for state classes.</div><div class="ttdef"><b>Definition:</b> <a href="_i_state_8h_source.html#l00021">IState.h:22</a></div></div>
-<div class="ttc" id="aclass_limelight_aim_html_a19be92bb02e89226329ef01666904fe8"><div class="ttname"><a href="class_limelight_aim.html#a19be92bb02e89226329ef01666904fe8">LimelightAim::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_limelight_aim_8cpp_source.html#l00044">LimelightAim.cpp:44</a></div></div>
-<div class="ttc" id="aclass_limelight_aim_html_a2247a913c594a63077af4d65fe98a80d"><div class="ttname"><a href="class_limelight_aim.html#a2247a913c594a63077af4d65fe98a80d">LimelightAim::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_limelight_aim_8cpp_source.html#l00038">LimelightAim.cpp:38</a></div></div>
+<div class="ttc" id="aclass_limelight_aim_html_a19be92bb02e89226329ef01666904fe8"><div class="ttname"><a href="class_limelight_aim.html#a19be92bb02e89226329ef01666904fe8">LimelightAim::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_limelight_aim_8cpp_source.html#l00056">LimelightAim.cpp:56</a></div></div>
+<div class="ttc" id="aclass_limelight_aim_html_a2247a913c594a63077af4d65fe98a80d"><div class="ttname"><a href="class_limelight_aim.html#a2247a913c594a63077af4d65fe98a80d">LimelightAim::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_limelight_aim_8cpp_source.html#l00050">LimelightAim.cpp:50</a></div></div>
 <div class="ttc" id="a_dragon_limelight_8h_html"><div class="ttname"><a href="_dragon_limelight_8h.html">DragonLimelight.h</a></div></div>
-<div class="ttc" id="a_i_mechanism_8h_html"><div class="ttname"><a href="_i_mechanism_8h.html">IMechanism.h</a></div></div>
-<div class="ttc" id="a_control_data_8h_html"><div class="ttname"><a href="_control_data_8h.html">ControlData.h</a></div></div>
-<div class="ttc" id="aclass_limelight_aim_html_ae29439a656fe4e430962ddc15205b819"><div class="ttname"><a href="class_limelight_aim.html#ae29439a656fe4e430962ddc15205b819">LimelightAim::LimelightAim</a></div><div class="ttdeci">LimelightAim(ControlData *controlData, double target)</div><div class="ttdef"><b>Definition:</b> <a href="_limelight_aim_8cpp_source.html#l00028">LimelightAim.cpp:28</a></div></div>
+<div class="ttc" id="a_mech1_motor_state_8h_html"><div class="ttname"><a href="_mech1_motor_state_8h.html">Mech1MotorState.h</a></div></div>
+<div class="ttc" id="a_mechanism_target_data_8h_html"><div class="ttname"><a href="_mechanism_target_data_8h.html">MechanismTargetData.h</a></div></div>
+<div class="ttc" id="aclass_limelight_aim_html_ae29439a656fe4e430962ddc15205b819"><div class="ttname"><a href="class_limelight_aim.html#ae29439a656fe4e430962ddc15205b819">LimelightAim::LimelightAim</a></div><div class="ttdeci">LimelightAim(ControlData *controlData, double target)</div><div class="ttdef"><b>Definition:</b> <a href="_limelight_aim_8cpp_source.html#l00035">LimelightAim.cpp:36</a></div></div>
 <div class="ttc" id="aclass_dragon_limelight_html"><div class="ttname"><a href="class_dragon_limelight.html">DragonLimelight</a></div><div class="ttdef"><b>Definition:</b> <a href="_dragon_limelight_8h_source.html#l00035">DragonLimelight.h:36</a></div></div>
-<div class="ttc" id="aclass_limelight_aim_html_accee6775e1b1f3702ab5d9ba64bcafbf"><div class="ttname"><a href="class_limelight_aim.html#accee6775e1b1f3702ab5d9ba64bcafbf">LimelightAim::AtTarget</a></div><div class="ttdeci">bool AtTarget() const override</div><div class="ttdef"><b>Definition:</b> <a href="_limelight_aim_8cpp_source.html#l00078">LimelightAim.cpp:78</a></div></div>
+<div class="ttc" id="aclass_limelight_aim_html_accee6775e1b1f3702ab5d9ba64bcafbf"><div class="ttname"><a href="class_limelight_aim.html#accee6775e1b1f3702ab5d9ba64bcafbf">LimelightAim::AtTarget</a></div><div class="ttdeci">bool AtTarget() const override</div><div class="ttdef"><b>Definition:</b> <a href="_limelight_aim_8cpp_source.html#l00092">LimelightAim.cpp:92</a></div></div>
+<div class="ttc" id="a_turret_8h_html"><div class="ttname"><a href="_turret_8h.html">Turret.h</a></div></div>
 <div class="ttc" id="a_i_state_8h_html"><div class="ttname"><a href="_i_state_8h.html">IState.h</a></div></div>
 <div class="ttc" id="aclass_control_data_html"><div class="ttname"><a href="class_control_data.html">ControlData</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_data_8h_source.html#l00022">ControlData.h:23</a></div></div>
-<div class="ttc" id="aclass_i_mechanism_html"><div class="ttname"><a href="class_i_mechanism.html">IMechanism</a></div><div class="ttdoc">This is the interface for all subsystems.</div><div class="ttdef"><b>Definition:</b> <a href="_i_mechanism_8h_source.html#l00038">IMechanism.h:39</a></div></div>
-<div class="ttc" id="aclass_limelight_aim_html_ab80516598f3bea2c227ede5cd1c83fbb"><div class="ttname"><a href="class_limelight_aim.html#ab80516598f3bea2c227ede5cd1c83fbb">LimelightAim::UpdateTarget</a></div><div class="ttdeci">void UpdateTarget(double target)</div><div class="ttdef"><b>Definition:</b> <a href="_limelight_aim_8cpp_source.html#l00083">LimelightAim.cpp:84</a></div></div>
-<div class="ttc" id="aclass_limelight_aim_html"><div class="ttname"><a href="class_limelight_aim.html">LimelightAim</a></div><div class="ttdef"><b>Definition:</b> <a href="_limelight_aim_8h_source.html#l00024">LimelightAim.h:25</a></div></div>
+<div class="ttc" id="aclass_limelight_aim_html_ab80516598f3bea2c227ede5cd1c83fbb"><div class="ttname"><a href="class_limelight_aim.html#ab80516598f3bea2c227ede5cd1c83fbb">LimelightAim::UpdateTarget</a></div><div class="ttdeci">void UpdateTarget(double target)</div><div class="ttdef"><b>Definition:</b> <a href="_limelight_aim_8cpp_source.html#l00097">LimelightAim.cpp:98</a></div></div>
+<div class="ttc" id="aclass_limelight_aim_html"><div class="ttname"><a href="class_limelight_aim.html">LimelightAim</a></div><div class="ttdef"><b>Definition:</b> <a href="_limelight_aim_8h_source.html#l00026">LimelightAim.h:27</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

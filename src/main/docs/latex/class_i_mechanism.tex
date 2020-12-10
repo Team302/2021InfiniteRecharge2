@@ -9,12 +9,6 @@ This is the interface for all subsystems.
 
 {\ttfamily \#include $<$I\+Mechanism.\+h$>$}
 
-Inheritance diagram for I\+Mechanism\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_i_mechanism}
-\end{center}
-\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -82,10 +76,6 @@ Activate/deactivate pneumatic solenoid.
 void ~\newline
  
 \end{DoxyReturn}
-
-
-Implemented in \mbox{\hyperlink{class_shooter_aa307140af6eb905d85f7d1f954de66a1}{Shooter}}, and \mbox{\hyperlink{class_drive_train_side_a628a1bb75d5be4a69b63c1e94eb00f49}{Drive\+Train\+Side}}.
-
 \mbox{\Hypertarget{class_i_mechanism_aa15197ff101d65447516a8f10bb6867d}\label{class_i_mechanism_aa15197ff101d65447516a8f10bb6867d}} 
 \index{IMechanism@{IMechanism}!GetCurrentPosition@{GetCurrentPosition}}
 \index{GetCurrentPosition@{GetCurrentPosition}!IMechanism@{IMechanism}}
@@ -99,10 +89,6 @@ Return the current position of the mechanism. The value is in inches or degrees.
 \begin{DoxyReturn}{Returns}
 double position in inches (translating mechanisms) or degrees (rotating mechanisms) 
 \end{DoxyReturn}
-
-
-Implemented in \mbox{\hyperlink{class_shooter_aaad97e62b1d45d10cbb6747b1c6a8414}{Shooter}}, and \mbox{\hyperlink{class_drive_train_side_a557590423b84c081762e79c161d55ee9}{Drive\+Train\+Side}}.
-
 \mbox{\Hypertarget{class_i_mechanism_a9a63d6905de4454d78d7e0d1d1e28437}\label{class_i_mechanism_a9a63d6905de4454d78d7e0d1d1e28437}} 
 \index{IMechanism@{IMechanism}!GetCurrentSpeed@{GetCurrentSpeed}}
 \index{GetCurrentSpeed@{GetCurrentSpeed}!IMechanism@{IMechanism}}
@@ -116,10 +102,6 @@ Get the current speed of the mechanism. The value is in inches per second or deg
 \begin{DoxyReturn}{Returns}
 double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) 
 \end{DoxyReturn}
-
-
-Implemented in \mbox{\hyperlink{class_shooter_aa38c7c6e5aa105789119d0770ad0dc8e}{Shooter}}, and \mbox{\hyperlink{class_drive_train_side_a5b2d55207f0a6244caa19cc5197bac5e}{Drive\+Train\+Side}}.
-
 \mbox{\Hypertarget{class_i_mechanism_a62096808201ffc31609e99dc2fa92d44}\label{class_i_mechanism_a62096808201ffc31609e99dc2fa92d44}} 
 \index{IMechanism@{IMechanism}!GetType@{GetType}}
 \index{GetType@{GetType}!IMechanism@{IMechanism}}
@@ -133,10 +115,6 @@ Indicates the type of mechanism this is.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{class_mechanism_types_adad17689ea795c3d65e2062bdc09284b}{Mechanism\+Types\+::\+M\+E\+C\+H\+A\+N\+I\+S\+M\+\_\+\+T\+Y\+PE}} 
 \end{DoxyReturn}
-
-
-Implemented in \mbox{\hyperlink{class_shooter_a031e6b54e1a611eeeb5f0d57f375d279}{Shooter}}, and \mbox{\hyperlink{class_drive_train_side_afb3d28141117ebdf1e00af89e1f90007}{Drive\+Train\+Side}}.
-
 \mbox{\Hypertarget{class_i_mechanism_a4c0bedb71316054749a276a67d278558}\label{class_i_mechanism_a4c0bedb71316054749a276a67d278558}} 
 \index{IMechanism@{IMechanism}!IsSolenoidActivated@{IsSolenoidActivated}}
 \index{IsSolenoidActivated@{IsSolenoidActivated}!IMechanism@{IMechanism}}
@@ -150,10 +128,6 @@ Check if the pneumatic solenoid is activated.
 \begin{DoxyReturn}{Returns}
 bool -\/ true == extended, false == retract 
 \end{DoxyReturn}
-
-
-Implemented in \mbox{\hyperlink{class_shooter_affa03878246b56a70b206d83369eefca}{Shooter}}, and \mbox{\hyperlink{class_drive_train_side_a64ddb62d04bb2896356fcf02f7a47502}{Drive\+Train\+Side}}.
-
 \mbox{\Hypertarget{class_i_mechanism_acd973ca93855c485ed42d405f2fcba11}\label{class_i_mechanism_acd973ca93855c485ed42d405f2fcba11}} 
 \index{IMechanism@{IMechanism}!SetControlConstants@{SetControlConstants}}
 \index{SetControlConstants@{SetControlConstants}!IMechanism@{IMechanism}}
@@ -172,10 +146,6 @@ Set the control constants (e.\+g. P\+I\+DF values).
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-
-
-Implemented in \mbox{\hyperlink{class_shooter_aaa12826e26eecab817ad3ca19a52dfdc}{Shooter}}, and \mbox{\hyperlink{class_drive_train_side_a5a706257d98af9460c245b7f34b61423}{Drive\+Train\+Side}}.
-
 \mbox{\Hypertarget{class_i_mechanism_abc72a6d0306a828de6f43418e75c04c0}\label{class_i_mechanism_abc72a6d0306a828de6f43418e75c04c0}} 
 \index{IMechanism@{IMechanism}!SetOutput@{SetOutput}}
 \index{SetOutput@{SetOutput}!IMechanism@{IMechanism}}
@@ -198,10 +168,6 @@ void
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{class_shooter_a5002bb1e9c11195e18c1c62968b5863a}{Shooter}}, and \mbox{\hyperlink{class_drive_train_side_a780ffb564264716f6d86e6a089bd3dd3}{Drive\+Train\+Side}}.
-
-
-
 The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_i_mechanism_8h}{I\+Mechanism.\+h}}\end{DoxyCompactItemize}
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/subsys/\mbox{\hyperlink{_i_mechanism_8h}{I\+Mechanism.\+h}}\end{DoxyCompactItemize}

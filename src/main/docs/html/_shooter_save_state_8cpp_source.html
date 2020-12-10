@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/states/turret/ShooterSaveState.cpp Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/turret/ShooterSaveState.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -87,73 +87,67 @@ $(document).ready(function(){initNavTree('_shooter_save_state_8cpp_source.html',
 <div class="contents">
 <a href="_shooter_save_state_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//====================================================================================================================================================   </span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span><span class="comment">//====================================================================================================================================================    </span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// C++ Includes  </span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Team 302 includes </span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_shooter_save_state_8h.html">states/turret/ShooterSaveState.h</a>&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_state_8h.html">states/IState.h</a>&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mechanism_8h.html">subsys/IMechanism.h</a>&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_factory_8h.html">subsys/MechanismFactory.h</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_types_8h.html">subsys/MechanismTypes.h</a>&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// Third Party Includes</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// C++ Includes</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// FRC includes</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Team 302 includes</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_data_8h.html">controllers/ControlData.h</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_hold_turret_position_8h.html">states/turret/HoldTurretPosition.h</a>&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mech1_motor_state_8h.html">states/Mech1MotorState.h</a>&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_factory_8h.html">subsys/MechanismFactory.h</a>&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_shooter_save_state.html#aaf9dd2f9b05f38ab513bd05108d649da">   28</a></span>&#160;<a class="code" href="class_shooter_save_state.html#af9c560a083cc3da208e4ce60a8750743">ShooterSaveState::ShooterSaveState</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;(</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_control_data.html">ControlData</a>*    control,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">double</span>          target</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;) : <a class="code" href="class_i_state.html">IState</a>(),</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    m_control( control ),</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    m_target( target )</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">auto</span> factory = <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    m_turret = factory -&gt; GetIMechanism(MechanismTypes::MECHANISM_TYPE::TURRET);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_shooter_save_state_8h.html">states/turret/ShooterSaveState.h</a>&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// Third Party Includes</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_shooter_save_state.html#aaf9dd2f9b05f38ab513bd05108d649da">   33</a></span>&#160;<a class="code" href="class_shooter_save_state.html#af9c560a083cc3da208e4ce60a8750743">ShooterSaveState::ShooterSaveState</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;(</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_control_data.html">ControlData</a>*    control,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">double</span>          target</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;) : <a class="code" href="class_mech1_motor_state.html">Mech1MotorState</a>( <a class="code" href="class_mechanism_factory.html">MechanismFactory</a>::GetMechanismFactory()-&gt;GetTurret().get(), control, target ),</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    m_target( target )</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    m_turret = <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;<a class="code" href="class_mechanism_factory.html#a4d6057325cf48bb971137d1227ea573c">GetTurret</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_shooter_save_state.html#a7b06af7fb1e6a69be0b45376343a7a7b">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_shooter_save_state.html#a7b06af7fb1e6a69be0b45376343a7a7b">ShooterSaveState::Init</a>()</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    m_turret-&gt;<a class="code" href="class_i_mechanism.html#acd973ca93855c485ed42d405f2fcba11">SetControlConstants</a>( m_control );</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_shooter_save_state.html#ab73cf3781e2ee9415a7d92d2024396f9">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_shooter_save_state.html#ab73cf3781e2ee9415a7d92d2024396f9">ShooterSaveState::Run</a>()           </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_shooter_save_state.html#a7b06af7fb1e6a69be0b45376343a7a7b">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_shooter_save_state.html#a7b06af7fb1e6a69be0b45376343a7a7b">ShooterSaveState::Init</a>()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    m_turret.get()-&gt;SetControlConstants( m_control );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_shooter_save_state.html#ab73cf3781e2ee9415a7d92d2024396f9">   50</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_shooter_save_state.html#ab73cf3781e2ee9415a7d92d2024396f9">ShooterSaveState::Run</a>()           </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    m_turret -&gt; SetOutput(m_control -&gt; GetMode(), m_target);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    m_turret.get()-&gt;Update();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_shooter_save_state.html#abb8e2f927b0b0acedcc1af6367e5ef40">   56</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_shooter_save_state.html#abb8e2f927b0b0acedcc1af6367e5ef40">ShooterSaveState::AtTarget</a>() const                                 <span class="comment">//confirms that it worked</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (m_turret -&gt; GetCurrentPosition() &gt;= (m_target - 5) &amp;&amp;  m_turret -&gt; GetCurrentPosition() &lt;= (m_target + 5) )</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    { </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> ( (m_turret.get()-&gt;GetPosition() &gt;= (m_target - 5) &amp;&amp;  m_turret-&gt;GetPosition() &lt;= (m_target + 5) ) );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_shooter_save_state_html_a7b06af7fb1e6a69be0b45376343a7a7b"><div class="ttname"><a href="class_shooter_save_state.html#a7b06af7fb1e6a69be0b45376343a7a7b">ShooterSaveState::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_shooter_save_state_8cpp_source.html#l00044">ShooterSaveState.cpp:44</a></div></div>
-<div class="ttc" id="aclass_i_state_html"><div class="ttname"><a href="class_i_state.html">IState</a></div><div class="ttdoc">Interface for state classes.</div><div class="ttdef"><b>Definition:</b> <a href="_i_state_8h_source.html#l00021">IState.h:22</a></div></div>
-<div class="ttc" id="aclass_shooter_save_state_html_ab73cf3781e2ee9415a7d92d2024396f9"><div class="ttname"><a href="class_shooter_save_state.html#ab73cf3781e2ee9415a7d92d2024396f9">ShooterSaveState::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_shooter_save_state_8cpp_source.html#l00049">ShooterSaveState.cpp:49</a></div></div>
-<div class="ttc" id="a_i_mechanism_8h_html"><div class="ttname"><a href="_i_mechanism_8h.html">IMechanism.h</a></div></div>
-<div class="ttc" id="aclass_i_mechanism_html_acd973ca93855c485ed42d405f2fcba11"><div class="ttname"><a href="class_i_mechanism.html#acd973ca93855c485ed42d405f2fcba11">IMechanism::SetControlConstants</a></div><div class="ttdeci">virtual void SetControlConstants(ControlData *pid)=0</div><div class="ttdoc">Set the control constants (e.g. PIDF values).</div></div>
+<div class="ttc" id="aclass_shooter_save_state_html_a7b06af7fb1e6a69be0b45376343a7a7b"><div class="ttname"><a href="class_shooter_save_state.html#a7b06af7fb1e6a69be0b45376343a7a7b">ShooterSaveState::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_shooter_save_state_8cpp_source.html#l00045">ShooterSaveState.cpp:45</a></div></div>
+<div class="ttc" id="aclass_shooter_save_state_html_ab73cf3781e2ee9415a7d92d2024396f9"><div class="ttname"><a href="class_shooter_save_state.html#ab73cf3781e2ee9415a7d92d2024396f9">ShooterSaveState::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_shooter_save_state_8cpp_source.html#l00050">ShooterSaveState.cpp:50</a></div></div>
 <div class="ttc" id="a_mechanism_factory_8h_html"><div class="ttname"><a href="_mechanism_factory_8h.html">MechanismFactory.h</a></div></div>
 <div class="ttc" id="aclass_shooter_save_state_html_abb8e2f927b0b0acedcc1af6367e5ef40"><div class="ttname"><a href="class_shooter_save_state.html#abb8e2f927b0b0acedcc1af6367e5ef40">ShooterSaveState::AtTarget</a></div><div class="ttdeci">bool AtTarget() const override</div><div class="ttdef"><b>Definition:</b> <a href="_shooter_save_state_8cpp_source.html#l00056">ShooterSaveState.cpp:56</a></div></div>
+<div class="ttc" id="a_mech1_motor_state_8h_html"><div class="ttname"><a href="_mech1_motor_state_8h.html">Mech1MotorState.h</a></div></div>
+<div class="ttc" id="a_control_data_8h_html"><div class="ttname"><a href="_control_data_8h.html">ControlData.h</a></div></div>
+<div class="ttc" id="aclass_mechanism_factory_html"><div class="ttname"><a href="class_mechanism_factory.html">MechanismFactory</a></div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8h_source.html#l00073">MechanismFactory.h:74</a></div></div>
+<div class="ttc" id="aclass_mech1_motor_state_html"><div class="ttname"><a href="class_mech1_motor_state.html">Mech1MotorState</a></div><div class="ttdoc">information about the control (open loop, closed loop position, closed loop velocity,...</div><div class="ttdef"><b>Definition:</b> <a href="_mech1_motor_state_8h_source.html#l00024">Mech1MotorState.h:25</a></div></div>
+<div class="ttc" id="a_hold_turret_position_8h_html"><div class="ttname"><a href="_hold_turret_position_8h.html">HoldTurretPosition.h</a></div></div>
 <div class="ttc" id="aclass_shooter_save_state_html_af9c560a083cc3da208e4ce60a8750743"><div class="ttname"><a href="class_shooter_save_state.html#af9c560a083cc3da208e4ce60a8750743">ShooterSaveState::ShooterSaveState</a></div><div class="ttdeci">ShooterSaveState()=delete</div></div>
-<div class="ttc" id="a_i_state_8h_html"><div class="ttname"><a href="_i_state_8h.html">IState.h</a></div></div>
 <div class="ttc" id="aclass_control_data_html"><div class="ttname"><a href="class_control_data.html">ControlData</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_data_8h_source.html#l00022">ControlData.h:23</a></div></div>
 <div class="ttc" id="a_shooter_save_state_8h_html"><div class="ttname"><a href="_shooter_save_state_8h.html">ShooterSaveState.h</a></div></div>
-<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00072">MechanismFactory.cpp:72</a></div></div>
-<div class="ttc" id="a_mechanism_types_8h_html"><div class="ttname"><a href="_mechanism_types_8h.html">MechanismTypes.h</a></div></div>
+<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00071">MechanismFactory.cpp:71</a></div></div>
+<div class="ttc" id="aclass_mechanism_factory_html_a4d6057325cf48bb971137d1227ea573c"><div class="ttname"><a href="class_mechanism_factory.html#a4d6057325cf48bb971137d1227ea573c">MechanismFactory::GetTurret</a></div><div class="ttdeci">std::shared_ptr&lt; Turret &gt; GetTurret() const</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8h_source.html#l00107">MechanismFactory.h:107</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

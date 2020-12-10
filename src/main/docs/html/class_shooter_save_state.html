@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: ShooterSaveState Class Reference</title>
+<title>Team 302 Robot: ShooterSaveState Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -97,6 +97,7 @@ Inheritance diagram for ShooterSaveState:</div>
  <div class="center">
   <img src="class_shooter_save_state.png" usemap="#ShooterSaveState_map" alt=""/>
   <map id="ShooterSaveState_map" name="ShooterSaveState_map">
+<area href="class_mech1_motor_state.html" title="information about the control (open loop, closed loop position, closed loop velocity,..." alt="Mech1MotorState" shape="rect" coords="0,56,113,80"/>
 <area href="class_i_state.html" title="Interface for state classes." alt="IState" shape="rect" coords="0,0,113,24"/>
   </map>
 </div></div>
@@ -115,6 +116,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab73cf3781e2ee9415a7d92d2024396f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb8e2f927b0b0acedcc1af6367e5ef40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shooter_save_state.html#abb8e2f927b0b0acedcc1af6367e5ef40">AtTarget</a> () const override</td></tr>
 <tr class="separator:abb8e2f927b0b0acedcc1af6367e5ef40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_mech1_motor_state"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_mech1_motor_state')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_mech1_motor_state.html">Mech1MotorState</a></td></tr>
+<tr class="memitem:ae73188a25453e6f2070a2b2c1a4724bd inherit pub_methods_class_mech1_motor_state"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech1_motor_state.html#ae73188a25453e6f2070a2b2c1a4724bd">Mech1MotorState</a> (<a class="el" href="class_i_mech1_ind_motor.html">IMech1IndMotor</a> *mechanism, <a class="el" href="class_control_data.html">ControlData</a> *control, double target)</td></tr>
+<tr class="separator:ae73188a25453e6f2070a2b2c1a4724bd inherit pub_methods_class_mech1_motor_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7beebafa90ae9d283785e8c75e80f42f inherit pub_methods_class_mech1_motor_state"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech1_motor_state.html#a7beebafa90ae9d283785e8c75e80f42f">Mech1MotorState</a> ()=delete</td></tr>
+<tr class="separator:a7beebafa90ae9d283785e8c75e80f42f inherit pub_methods_class_mech1_motor_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0da2d25ceabce3f52feaa3df4f714bc3 inherit pub_methods_class_mech1_motor_state"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mech1_motor_state.html#a0da2d25ceabce3f52feaa3df4f714bc3">~Mech1MotorState</a> ()=default</td></tr>
+<tr class="separator:a0da2d25ceabce3f52feaa3df4f714bc3 inherit pub_methods_class_mech1_motor_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_state"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_state')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_state.html">IState</a></td></tr>
 <tr class="memitem:ae6590bd1d41bcb788780f9f0f4767f66 inherit pub_methods_class_i_state"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_state.html#ae6590bd1d41bcb788780f9f0f4767f66">IState</a> ()=default</td></tr>
 <tr class="separator:ae6590bd1d41bcb788780f9f0f4767f66 inherit pub_methods_class_i_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,21 +135,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aacf2be539ffd3d9422d8c2288c0a6378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Copyright 2020 Lake Orion Robotics FIRST Team 302 <br  />
-</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), <br  />
- to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, <br  />
- and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: <br  />
-</p>
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. <br  />
-</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF <br  />
- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, <br  />
- DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE <br  />
- OR OTHER DEALINGS IN THE SOFTWARE. <br  />
- </p>
-
-<p class="definition">Definition at line <a class="el" href="_shooter_save_state_8h_source.html#l00031">31</a> of file <a class="el" href="_shooter_save_state_8h_source.html">ShooterSaveState.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_shooter_save_state_8h_source.html#l00034">34</a> of file <a class="el" href="_shooter_save_state_8h_source.html">ShooterSaveState.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aaf9dd2f9b05f38ab513bd05108d649da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf9dd2f9b05f38ab513bd05108d649da">&#9670;&nbsp;</a></span>ShooterSaveState() <span class="overload">[1/2]</span></h2>
@@ -182,7 +177,7 @@ Public Attributes</h2></td></tr>
  OR OTHER DEALINGS IN THE SOFTWARE. <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="_shooter_save_state_8cpp_source.html#l00028">28</a> of file <a class="el" href="_shooter_save_state_8cpp_source.html">ShooterSaveState.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_shooter_save_state_8cpp_source.html#l00033">33</a> of file <a class="el" href="_shooter_save_state_8cpp_source.html">ShooterSaveState.cpp</a>.</p>
 
 </div>
 </div>
@@ -260,7 +255,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_i_state.html#a15624686c47f28cf90f76bb28e938937">IState</a>.</p>
+<p>Reimplemented from <a class="el" href="class_mech1_motor_state.html#a2afad3f2ca75fc545da82d843fbfcefc">Mech1MotorState</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_shooter_save_state_8cpp_source.html#l00056">56</a> of file <a class="el" href="_shooter_save_state_8cpp_source.html">ShooterSaveState.cpp</a>.</p>
 
@@ -289,9 +284,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_i_state.html#ac1400e68fde2f088873f5ec283309977">IState</a>.</p>
+<p>Reimplemented from <a class="el" href="class_mech1_motor_state.html#afe74c8988e329bd3ecbc7ac7c87ee5df">Mech1MotorState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_shooter_save_state_8cpp_source.html#l00044">44</a> of file <a class="el" href="_shooter_save_state_8cpp_source.html">ShooterSaveState.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_shooter_save_state_8cpp_source.html#l00045">45</a> of file <a class="el" href="_shooter_save_state_8cpp_source.html">ShooterSaveState.cpp</a>.</p>
 
 </div>
 </div>
@@ -318,9 +313,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_i_state.html#a1dc31736da7d9e9322c1cc417672ea0f">IState</a>.</p>
+<p>Reimplemented from <a class="el" href="class_mech1_motor_state.html#a7e279d902538a6b49b40d08bcef8efb9">Mech1MotorState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_shooter_save_state_8cpp_source.html#l00049">49</a> of file <a class="el" href="_shooter_save_state_8cpp_source.html">ShooterSaveState.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_shooter_save_state_8cpp_source.html#l00050">50</a> of file <a class="el" href="_shooter_save_state_8cpp_source.html">ShooterSaveState.cpp</a>.</p>
 
 </div>
 </div>
@@ -337,13 +332,13 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_shooter_save_state_8h_source.html#l00049">49</a> of file <a class="el" href="_shooter_save_state_8h_source.html">ShooterSaveState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_shooter_save_state_8h_source.html#l00052">52</a> of file <a class="el" href="_shooter_save_state_8h_source.html">ShooterSaveState.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/turret/<a class="el" href="_shooter_save_state_8h_source.html">ShooterSaveState.h</a></li>
-<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/turret/<a class="el" href="_shooter_save_state_8cpp_source.html">ShooterSaveState.cpp</a></li>
+<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/turret/<a class="el" href="_shooter_save_state_8h_source.html">ShooterSaveState.h</a></li>
+<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/turret/<a class="el" href="_shooter_save_state_8cpp_source.html">ShooterSaveState.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

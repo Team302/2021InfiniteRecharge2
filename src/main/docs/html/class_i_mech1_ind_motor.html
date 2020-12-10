@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: IMech1IndMotor Interface Reference</title>
+<title>Team 302 Robot: IMech1IndMotor Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -105,11 +105,12 @@ Inheritance diagram for IMech1IndMotor:</div>
 <area href="class_climber.html" title="The Climber subsystem. Includes pneumatic extender and winch." alt="Climber" shape="rect" coords="114,224,218,248"/>
 <area href="class_control_panel.html" alt="ControlPanel" shape="rect" coords="114,280,218,304"/>
 <area href="class_crawler.html" alt="Crawler" shape="rect" coords="114,336,218,360"/>
-<area href="class_hook_delivery.html" alt="HookDelivery" shape="rect" coords="114,392,218,416"/>
-<area href="class_impeller.html" alt="Impeller" shape="rect" coords="114,448,218,472"/>
-<area href="class_intake.html" alt="Intake" shape="rect" coords="114,504,218,528"/>
-<area href="class_shooter_hood.html" alt="ShooterHood" shape="rect" coords="114,560,218,584"/>
-<area href="class_turret.html" alt="Turret" shape="rect" coords="114,616,218,640"/>
+<area href="class_drive_train_side.html" title="This is the DriveTrainSide Subsystem." alt="DriveTrainSide" shape="rect" coords="114,392,218,416"/>
+<area href="class_hook_delivery.html" alt="HookDelivery" shape="rect" coords="114,448,218,472"/>
+<area href="class_impeller.html" alt="Impeller" shape="rect" coords="114,504,218,528"/>
+<area href="class_intake.html" alt="Intake" shape="rect" coords="114,560,218,584"/>
+<area href="class_shooter_hood.html" alt="ShooterHood" shape="rect" coords="114,616,218,640"/>
+<area href="class_turret.html" alt="Turret" shape="rect" coords="114,672,218,696"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -240,7 +241,7 @@ Public Member Functions</h2></td></tr>
 <p>Return the current position of the mechanism. The value is in inches or degrees. </p>
 <dl class="section return"><dt>Returns</dt><dd>double position in inches (translating mechanisms) or degrees (rotating mechanisms) </dd></dl>
 
-<p>Implemented in <a class="el" href="class_shooter_hood.html#a0c9bbbff64bcb45ff119818e658045b5">ShooterHood</a>, <a class="el" href="class_mech1_ind_motor.html#a3f2d85ee70cab5942178f9fa15d0abb6">Mech1IndMotor</a>, <a class="el" href="class_impeller.html#ad88ff94a768d7584cb45207a71d2ade9">Impeller</a>, and <a class="el" href="class_climber.html#a572eef9c0daaf5f5ef87d372cde0d9b6">Climber</a>.</p>
+<p>Implemented in <a class="el" href="class_shooter_hood.html#a0c9bbbff64bcb45ff119818e658045b5">ShooterHood</a>, <a class="el" href="class_mech1_ind_motor.html#a3f2d85ee70cab5942178f9fa15d0abb6">Mech1IndMotor</a>, <a class="el" href="class_impeller.html#ad88ff94a768d7584cb45207a71d2ade9">Impeller</a>, <a class="el" href="class_drive_train_side.html#a9768623e1a55f352f2b6421d199a6a88">DriveTrainSide</a>, and <a class="el" href="class_climber.html#a572eef9c0daaf5f5ef87d372cde0d9b6">Climber</a>.</p>
 
 </div>
 </div>
@@ -270,7 +271,7 @@ Public Member Functions</h2></td></tr>
 <p>Get the current speed of the mechanism. The value is in inches per second or degrees per second. </p>
 <dl class="section return"><dt>Returns</dt><dd>double speed in inches/second (translating mechanisms) or degrees/second (rotating mechanisms) </dd></dl>
 
-<p>Implemented in <a class="el" href="class_shooter_hood.html#af0c23e222033f6bfa6cec3ff26776f32">ShooterHood</a>, <a class="el" href="class_mech1_ind_motor.html#af1c04bfbb55bc4fcd9f2972e61ddd7b0">Mech1IndMotor</a>, <a class="el" href="class_impeller.html#a6fe9c758b4b59f43ae31595fd5fd8c9b">Impeller</a>, and <a class="el" href="class_climber.html#aa355b80054f704d66dcda0d792146677">Climber</a>.</p>
+<p>Implemented in <a class="el" href="class_shooter_hood.html#af0c23e222033f6bfa6cec3ff26776f32">ShooterHood</a>, <a class="el" href="class_mech1_ind_motor.html#af1c04bfbb55bc4fcd9f2972e61ddd7b0">Mech1IndMotor</a>, <a class="el" href="class_impeller.html#a6fe9c758b4b59f43ae31595fd5fd8c9b">Impeller</a>, <a class="el" href="class_drive_train_side.html#a34b189491b6f9e577e2c2906ee266a19">DriveTrainSide</a>, and <a class="el" href="class_climber.html#aa355b80054f704d66dcda0d792146677">Climber</a>.</p>
 
 </div>
 </div>
@@ -307,7 +308,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Implemented in <a class="el" href="class_mech1_ind_motor.html#a8278edecfa6865dad58493ce6f4012e2">Mech1IndMotor</a>.</p>
+<p>Implemented in <a class="el" href="class_mech1_ind_motor.html#a8278edecfa6865dad58493ce6f4012e2">Mech1IndMotor</a>, and <a class="el" href="class_drive_train_side.html#a5a706257d98af9460c245b7f34b61423">DriveTrainSide</a>.</p>
 
 </div>
 </div>
@@ -338,7 +339,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>void <br  />
  </dd></dl>
 
-<p>Implemented in <a class="el" href="class_mech1_ind_motor.html#a55626a8ad6f24b69b6472465fbcda416">Mech1IndMotor</a>.</p>
+<p>Implemented in <a class="el" href="class_mech1_ind_motor.html#a55626a8ad6f24b69b6472465fbcda416">Mech1IndMotor</a>, and <a class="el" href="class_drive_train_side.html#adf51cf59529a1bf22c461030c00a1056">DriveTrainSide</a>.</p>
 
 </div>
 </div>
@@ -366,12 +367,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_mech1_ind_motor.html#a999fd41ccd8773e87018d5e6ac849e84">Mech1IndMotor</a>.</p>
+<p>Implemented in <a class="el" href="class_drive_train_side.html#a7c6da44a300dd21f1e2dfffe54bb17c1">DriveTrainSide</a>, and <a class="el" href="class_mech1_ind_motor.html#a999fd41ccd8773e87018d5e6ac849e84">Mech1IndMotor</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/<a class="el" href="_i_mech1_ind_motor_8h_source.html">IMech1IndMotor.h</a></li>
+<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/interfaces/<a class="el" href="_i_mech1_ind_motor_8h_source.html">IMech1IndMotor.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

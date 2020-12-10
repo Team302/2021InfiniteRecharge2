@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/DriveTrainSide.cpp Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/DriveTrainSide.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('_drive_train_side_8cpp_source.html',''
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// Team 302 includes</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_dragon_motor_controller_factory_8h.html">hw/factories/DragonMotorControllerFactory.h</a>&gt;</span>        </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_dragon_motor_controller_8h.html">hw/interfaces/IDragonMotorController.h</a>&gt;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mechanism_8h.html">subsys/IMechanism.h</a>&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mech1_ind_motor_8h.html">subsys/Mech1IndMotor.h</a>&gt;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_drive_train_side_8h.html">subsys/DriveTrainSide.h</a>&gt;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_modes_8h.html">controllers/ControlModes.h</a>&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_types_8h.html">subsys/MechanismTypes.h</a>&gt;</span></div>
@@ -128,126 +128,116 @@ $(document).ready(function(){initNavTree('_drive_train_side_8cpp_source.html',''
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    shared_ptr&lt;IDragonMotorController&gt;                      master,</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    shared_ptr&lt;IDragonMotorController&gt;                      follower,</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">double</span>                                                  wheelSize</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;) : m_master( master ),</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    m_slave( follower ), </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    m_wheelSize( wheelSize ),</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    m_target( 0.0 )</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> ( m_master.get() == <span class="keyword">nullptr</span> ) </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>( <span class="stringliteral">&quot;DriveTrainSide constructor&quot;</span> ), <span class="keywordtype">string</span>( <span class="stringliteral">&quot;master is nullptr&quot;</span> ) );</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#afb3d28141117ebdf1e00af89e1f90007">   63</a></span>&#160;<a class="code" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a> <a class="code" href="class_drive_train_side.html#afb3d28141117ebdf1e00af89e1f90007">DriveTrainSide::GetType</a>()<span class="keyword"> const </span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> MechanismTypes::MECHANISM_TYPE::DRIVETRAIN_SIDE;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;) : <a class="code" href="class_mech1_ind_motor.html">Mech1IndMotor</a>( <a class="code" href="class_mechanism_types.html">MechanismTypes</a>::MECHANISM_TYPE::DRIVETRAIN_SIDE, string(<span class="stringliteral">&quot;drivetrainside.xml&quot;</span>), string(<span class="stringliteral">&quot;DriveTrainSideNT&quot;</span>), master ),</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    m_primary( master ),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    m_secondary( follower ), </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    m_wheelSize( wheelSize ),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    m_target( 0.0 )</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> ( m_primary.get() == <span class="keyword">nullptr</span> ) </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>( <span class="stringliteral">&quot;DriveTrainSide constructor&quot;</span> ), <span class="keywordtype">string</span>( <span class="stringliteral">&quot;master is nullptr&quot;</span> ) );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#afb3d28141117ebdf1e00af89e1f90007">   64</a></span>&#160;<a class="code" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a> <a class="code" href="class_drive_train_side.html#afb3d28141117ebdf1e00af89e1f90007">DriveTrainSide::GetType</a>()<span class="keyword"> const </span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> MechanismTypes::MECHANISM_TYPE::DRIVETRAIN_SIDE;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#a780ffb564264716f6d86e6a089bd3dd3">   74</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_drive_train_side.html#a780ffb564264716f6d86e6a089bd3dd3">DriveTrainSide::SetOutput</a></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;(</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="class_control_modes.html#a46c77e409ac22b3b3269f7fee2d3f736">ControlModes::CONTROL_TYPE</a>              controlType,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">double</span>                                  value       </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;) </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    m_target = value;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> ( m_master.get() != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">// todo map mechanism control mode to motor control mode (create method)</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        m_master.get()-&gt;SetControlMode( controlType );</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        m_master.get()-&gt;Set( value );</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="stringliteral">&quot;DriveTrainSide::SetOutput&quot;</span>, <span class="stringliteral">&quot;No master&quot;</span> );</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#a628a1bb75d5be4a69b63c1e94eb00f49">   97</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_drive_train_side.html#a628a1bb75d5be4a69b63c1e94eb00f49">DriveTrainSide::ActivateSolenoid</a></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;(</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">bool</span>     activate</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;)</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">// nothing to do</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#a64ddb62d04bb2896356fcf02f7a47502">  107</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_drive_train_side.html#a64ddb62d04bb2896356fcf02f7a47502">DriveTrainSide::IsSolenoidActivated</a>()</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#a557590423b84c081762e79c161d55ee9">  114</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_drive_train_side.html#a557590423b84c081762e79c161d55ee9">DriveTrainSide::GetCurrentPosition</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">double</span> distance = 0.0;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> ( m_master.get() != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        distance = ( m_wheelSize * M_PI );          <span class="comment">// distance the wheel travels per revolution</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keyword">auto</span> nRotations = m_master.get()-&gt;GetRotations(); <span class="comment">// number of rotations</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        distance *= nRotations;                     <span class="comment">// distance per revolution * number of revolutions is the distance</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#adf51cf59529a1bf22c461030c00a1056">   75</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_drive_train_side.html#adf51cf59529a1bf22c461030c00a1056">DriveTrainSide::Update</a>()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#a7c6da44a300dd21f1e2dfffe54bb17c1">   79</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_drive_train_side.html#a7c6da44a300dd21f1e2dfffe54bb17c1">DriveTrainSide::UpdateTarget</a></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;(</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">double</span>                                  value       </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;) </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    m_target = value;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> ( m_primary.get() != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">// todo map mechanism control mode to motor control mode (create method)</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        m_primary.get()-&gt;Set( value );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="stringliteral">&quot;DriveTrainSide::SetOutput&quot;</span>, <span class="stringliteral">&quot;No master&quot;</span> );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#a9768623e1a55f352f2b6421d199a6a88">   99</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_drive_train_side.html#a9768623e1a55f352f2b6421d199a6a88">DriveTrainSide::GetPosition</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">double</span> distance = 0.0;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> ( m_primary.get() != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        distance = ( m_wheelSize * M_PI );          <span class="comment">// distance the wheel travels per revolution</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">auto</span> nRotations = m_primary.get()-&gt;GetRotations(); <span class="comment">// number of rotations</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        distance *= nRotations;                     <span class="comment">// distance per revolution * number of revolutions is the distance</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="stringliteral">&quot;DriveTrainSide::SetOutput&quot;</span>, <span class="stringliteral">&quot;No master&quot;</span> );</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> distance;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#a34b189491b6f9e577e2c2906ee266a19">  120</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_drive_train_side.html#a34b189491b6f9e577e2c2906ee266a19">DriveTrainSide::GetSpeed</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">double</span> speed = 0.0;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">if</span> ( m_primary.get() != <span class="keyword">nullptr</span> )</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="stringliteral">&quot;DriveTrainSide::SetOutput&quot;</span>, <span class="stringliteral">&quot;No master&quot;</span> );</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> distance;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#a5b2d55207f0a6244caa19cc5197bac5e">  135</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_drive_train_side.html#a5b2d55207f0a6244caa19cc5197bac5e">DriveTrainSide::GetCurrentSpeed</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">double</span> speed = 0.0;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">if</span> ( m_master.get() != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    {</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        speed = ( m_wheelSize * M_PI ); <span class="comment">// distance the wheel travels per revolution (inches)</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keyword">auto</span> rps = m_master.get()-&gt;GetRPS();  <span class="comment">// number of rotations per second</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        speed *= rps;                   <span class="comment">// distance per revolution * revolutions per second is inches per second</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="stringliteral">&quot;DriveTrainSide::SetOutput&quot;</span>, <span class="stringliteral">&quot;No master&quot;</span> );</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> speed;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        speed = ( m_wheelSize * M_PI ); <span class="comment">// distance the wheel travels per revolution (inches)</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">auto</span> rps = m_primary.get()-&gt;GetRPS();  <span class="comment">// number of rotations per second</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        speed *= rps;                   <span class="comment">// distance per revolution * revolutions per second is inches per second</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="stringliteral">&quot;DriveTrainSide::SetOutput&quot;</span>, <span class="stringliteral">&quot;No master&quot;</span> );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> speed;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#a5a706257d98af9460c245b7f34b61423">  142</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_drive_train_side.html#a5a706257d98af9460c245b7f34b61423">DriveTrainSide::SetControlConstants</a></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;(</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="class_control_data.html">ControlData</a>*                                 pid                 </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    m_primary.get()-&gt;SetControlConstants( pid );</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_drive_train_side.html#a5a706257d98af9460c245b7f34b61423">  157</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_drive_train_side.html#a5a706257d98af9460c245b7f34b61423">DriveTrainSide::SetControlConstants</a></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;(</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="class_control_data.html">ControlData</a>*                                 pid                 </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;)</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    m_master.get()-&gt;SetControlConstants( pid );</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="a_drive_train_side_8h_html"><div class="ttname"><a href="_drive_train_side_8h.html">DriveTrainSide.h</a></div></div>
-<div class="ttc" id="aclass_drive_train_side_html_a628a1bb75d5be4a69b63c1e94eb00f49"><div class="ttname"><a href="class_drive_train_side.html#a628a1bb75d5be4a69b63c1e94eb00f49">DriveTrainSide::ActivateSolenoid</a></div><div class="ttdeci">void ActivateSolenoid(bool activate) override</div><div class="ttdoc">Activate/deactivate pneumatic solenoid.</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00097">DriveTrainSide.cpp:98</a></div></div>
+<div class="ttc" id="aclass_drive_train_side_html_a9768623e1a55f352f2b6421d199a6a88"><div class="ttname"><a href="class_drive_train_side.html#a9768623e1a55f352f2b6421d199a6a88">DriveTrainSide::GetPosition</a></div><div class="ttdeci">double GetPosition() const override</div><div class="ttdoc">Return the current position of the DriveTrainSide in inches (positive is forward, negative is backwar...</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00099">DriveTrainSide.cpp:99</a></div></div>
+<div class="ttc" id="aclass_drive_train_side_html_a7c6da44a300dd21f1e2dfffe54bb17c1"><div class="ttname"><a href="class_drive_train_side.html#a7c6da44a300dd21f1e2dfffe54bb17c1">DriveTrainSide::UpdateTarget</a></div><div class="ttdeci">void UpdateTarget(double value) override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00079">DriveTrainSide.cpp:80</a></div></div>
+<div class="ttc" id="aclass_mech1_ind_motor_html"><div class="ttname"><a href="class_mech1_ind_motor.html">Mech1IndMotor</a></div><div class="ttdef"><b>Definition:</b> <a href="_mech1_ind_motor_8h_source.html#l00040">Mech1IndMotor.h:41</a></div></div>
+<div class="ttc" id="aclass_mechanism_types_html"><div class="ttname"><a href="class_mechanism_types.html">MechanismTypes</a></div><div class="ttdoc">This contains the enum for the mechanism types.</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_types_8h_source.html#l00023">MechanismTypes.h:24</a></div></div>
 <div class="ttc" id="a_dragon_motor_controller_factory_8h_html"><div class="ttname"><a href="_dragon_motor_controller_factory_8h.html">DragonMotorControllerFactory.h</a></div></div>
-<div class="ttc" id="a_i_mechanism_8h_html"><div class="ttname"><a href="_i_mechanism_8h.html">IMechanism.h</a></div></div>
-<div class="ttc" id="aclass_drive_train_side_html_a5a706257d98af9460c245b7f34b61423"><div class="ttname"><a href="class_drive_train_side.html#a5a706257d98af9460c245b7f34b61423">DriveTrainSide::SetControlConstants</a></div><div class="ttdeci">void SetControlConstants(ControlData *pid) override</div><div class="ttdoc">Set the control constants (e.g. PIDF values).</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00157">DriveTrainSide.cpp:158</a></div></div>
-<div class="ttc" id="aclass_drive_train_side_html_a557590423b84c081762e79c161d55ee9"><div class="ttname"><a href="class_drive_train_side.html#a557590423b84c081762e79c161d55ee9">DriveTrainSide::GetCurrentPosition</a></div><div class="ttdeci">double GetCurrentPosition() const override</div><div class="ttdoc">Return the current position of the DriveTrainSide in inches (positive is forward, negative is backwar...</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00114">DriveTrainSide.cpp:114</a></div></div>
+<div class="ttc" id="aclass_drive_train_side_html_a5a706257d98af9460c245b7f34b61423"><div class="ttname"><a href="class_drive_train_side.html#a5a706257d98af9460c245b7f34b61423">DriveTrainSide::SetControlConstants</a></div><div class="ttdeci">void SetControlConstants(ControlData *pid) override</div><div class="ttdoc">Set the control constants (e.g. PIDF values).</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00142">DriveTrainSide.cpp:143</a></div></div>
 <div class="ttc" id="a_logger_8h_html"><div class="ttname"><a href="_logger_8h.html">Logger.h</a></div></div>
+<div class="ttc" id="aclass_drive_train_side_html_a34b189491b6f9e577e2c2906ee266a19"><div class="ttname"><a href="class_drive_train_side.html#a34b189491b6f9e577e2c2906ee266a19">DriveTrainSide::GetSpeed</a></div><div class="ttdeci">double GetSpeed() const override</div><div class="ttdoc">Return the current speed of the DriveTrainSide in inches / second (positive is forward,...</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00120">DriveTrainSide.cpp:120</a></div></div>
 <div class="ttc" id="aclass_mechanism_types_html_adad17689ea795c3d65e2062bdc09284b"><div class="ttname"><a href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a></div><div class="ttdeci">MECHANISM_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_types_8h_source.html#l00031">MechanismTypes.h:32</a></div></div>
-<div class="ttc" id="aclass_drive_train_side_html_a64ddb62d04bb2896356fcf02f7a47502"><div class="ttname"><a href="class_drive_train_side.html#a64ddb62d04bb2896356fcf02f7a47502">DriveTrainSide::IsSolenoidActivated</a></div><div class="ttdeci">bool IsSolenoidActivated() override</div><div class="ttdoc">Check if the pneumatic solenoid is activated.</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00107">DriveTrainSide.cpp:107</a></div></div>
+<div class="ttc" id="aclass_drive_train_side_html_adf51cf59529a1bf22c461030c00a1056"><div class="ttname"><a href="class_drive_train_side.html#adf51cf59529a1bf22c461030c00a1056">DriveTrainSide::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">Run DriveTrainSide as defined.</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00075">DriveTrainSide.cpp:75</a></div></div>
 <div class="ttc" id="aclass_drive_train_side_html_a00bafd1aef6c17238ef5a180cbe21dc1"><div class="ttname"><a href="class_drive_train_side.html#a00bafd1aef6c17238ef5a180cbe21dc1">DriveTrainSide::DriveTrainSide</a></div><div class="ttdeci">DriveTrainSide()=delete</div></div>
 <div class="ttc" id="aclass_logger_html_a98d7aec19dcdfb9d8faa46d83d927883"><div class="ttname"><a href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">Logger::LogError</a></div><div class="ttdeci">void LogError(const std::string &amp;locationIdentifier, const std::string &amp;message)</div><div class="ttdoc">log a message</div></div>
+<div class="ttc" id="a_mech1_ind_motor_8h_html"><div class="ttname"><a href="_mech1_ind_motor_8h.html">Mech1IndMotor.h</a></div></div>
 <div class="ttc" id="aclass_logger_html_ae85cfbef8b7e6940475a5012fa1935c6"><div class="ttname"><a href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a></div><div class="ttdeci">static Logger * GetLogger()</div><div class="ttdoc">Find or create the singleton logger.</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00049">Logger.cpp:49</a></div></div>
 <div class="ttc" id="aclass_control_data_html"><div class="ttname"><a href="class_control_data.html">ControlData</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_data_8h_source.html#l00022">ControlData.h:23</a></div></div>
-<div class="ttc" id="aclass_drive_train_side_html_afb3d28141117ebdf1e00af89e1f90007"><div class="ttname"><a href="class_drive_train_side.html#afb3d28141117ebdf1e00af89e1f90007">DriveTrainSide::GetType</a></div><div class="ttdeci">MechanismTypes::MECHANISM_TYPE GetType() const override</div><div class="ttdoc">Indicates this is the DriveTrainSide.</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00063">DriveTrainSide.cpp:63</a></div></div>
-<div class="ttc" id="aclass_drive_train_side_html_a780ffb564264716f6d86e6a089bd3dd3"><div class="ttname"><a href="class_drive_train_side.html#a780ffb564264716f6d86e6a089bd3dd3">DriveTrainSide::SetOutput</a></div><div class="ttdeci">void SetOutput(ControlModes::CONTROL_TYPE controlType, double value) override</div><div class="ttdoc">Run DriveTrainSide as defined.</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00074">DriveTrainSide.cpp:75</a></div></div>
-<div class="ttc" id="aclass_drive_train_side_html_a5b2d55207f0a6244caa19cc5197bac5e"><div class="ttname"><a href="class_drive_train_side.html#a5b2d55207f0a6244caa19cc5197bac5e">DriveTrainSide::GetCurrentSpeed</a></div><div class="ttdeci">double GetCurrentSpeed() const override</div><div class="ttdoc">Return the current speed of the DriveTrainSide in inches / second (positive is forward,...</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00135">DriveTrainSide.cpp:135</a></div></div>
+<div class="ttc" id="aclass_drive_train_side_html_afb3d28141117ebdf1e00af89e1f90007"><div class="ttname"><a href="class_drive_train_side.html#afb3d28141117ebdf1e00af89e1f90007">DriveTrainSide::GetType</a></div><div class="ttdeci">MechanismTypes::MECHANISM_TYPE GetType() const override</div><div class="ttdoc">Indicates this is the DriveTrainSide.</div><div class="ttdef"><b>Definition:</b> <a href="_drive_train_side_8cpp_source.html#l00064">DriveTrainSide.cpp:64</a></div></div>
 <div class="ttc" id="a_i_dragon_motor_controller_8h_html"><div class="ttname"><a href="_i_dragon_motor_controller_8h.html">IDragonMotorController.h</a></div></div>
 <div class="ttc" id="a_control_modes_8h_html"><div class="ttname"><a href="_control_modes_8h.html">ControlModes.h</a></div></div>
 <div class="ttc" id="a_mechanism_types_8h_html"><div class="ttname"><a href="_mechanism_types_8h.html">MechanismTypes.h</a></div></div>
-<div class="ttc" id="aclass_control_modes_html_a46c77e409ac22b3b3269f7fee2d3f736"><div class="ttname"><a href="class_control_modes.html#a46c77e409ac22b3b3269f7fee2d3f736">ControlModes::CONTROL_TYPE</a></div><div class="ttdeci">CONTROL_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="_control_modes_8h_source.html#l00024">ControlModes.h:25</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

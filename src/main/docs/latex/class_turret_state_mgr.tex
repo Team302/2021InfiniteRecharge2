@@ -158,13 +158,25 @@ set the current state, initialize it and run it
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+auto state = m\+\_\+state\+Vector\mbox{[}state\+Enum\mbox{]}; if ( state != nullptr \&\& state != m\+\_\+current\+State ) \{ if (state\+Enum == T\+U\+R\+N\+\_\+\+A\+N\+G\+LE) \{ auto cd\+State = dynamic\+\_\+cast$<$\+Turret\+Turn\+Angle$\ast$$>$(state); auto cd = cd\+State-\/$>$Get\+Control\+Data(); m\+\_\+state\+Vector\mbox{[}state\+Enum\mbox{]} = new \mbox{\hyperlink{class_turret_turn_angle}{Turret\+Turn\+Angle(cd,turret\+Angle, Mechanism\+Target\+Data\+::\+S\+O\+L\+E\+N\+O\+I\+D\+::\+N\+O\+N\+E)}}; state = m\+\_\+state\+Vector\mbox{[}state\+Enum\mbox{]}; \} m\+\_\+current\+State = state; m\+\_\+current\+State\+Enum = state\+Enum; m\+\_\+current\+State-\/$>$Init(); if ( state\+Enum == L\+I\+M\+E\+L\+I\+G\+H\+T\+\_\+\+A\+IM ) \{ auto ll\+Aim = dynamic\+\_\+cast$<$\+Limelight\+Aim$\ast$$>$(m\+\_\+current\+State); if ( ll\+Aim != nullptr ) \{ ll\+Aim-\/$>$Update\+Target( m\+\_\+approx\+Target\+Angle ); \} \}
+
+\begin{DoxyVerb}if ( run )
+{
+    if ( MechanismFactory::GetMechanismFactory()->GetTurret().get() != nullptr )
+    {
+        m_currentState->Run();
+    }
+}
+\end{DoxyVerb}
 
 
-Definition at line 141 of file Turret\+State\+Mgr.\+cpp.
+\}
+
+Definition at line 140 of file Turret\+State\+Mgr.\+cpp.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/states/turret/\mbox{\hyperlink{_turret_state_mgr_8h}{Turret\+State\+Mgr.\+h}}\item 
-/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/states/turret/\mbox{\hyperlink{_turret_state_mgr_8cpp}{Turret\+State\+Mgr.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/states/turret/\mbox{\hyperlink{_turret_state_mgr_8h}{Turret\+State\+Mgr.\+h}}\item 
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/states/turret/\mbox{\hyperlink{_turret_state_mgr_8cpp}{Turret\+State\+Mgr.\+cpp}}\end{DoxyCompactItemize}

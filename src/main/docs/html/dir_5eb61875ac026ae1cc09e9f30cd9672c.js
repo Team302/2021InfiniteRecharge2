@@ -5,6 +5,10 @@ var dir_5eb61875ac026ae1cc09e9f30cd9672c =
     [ "usages", "dir_d80f0c8fcb2ed61179389d96084cc4e3.html", "dir_d80f0c8fcb2ed61179389d96084cc4e3" ],
     [ "DragonAnalogInput.cpp", "_dragon_analog_input_8cpp.html", null ],
     [ "DragonAnalogInput.h", "_dragon_analog_input_8h.html", "_dragon_analog_input_8h" ],
+    [ "DragonBlinkin.cpp", "_dragon_blinkin_8cpp.html", null ],
+    [ "DragonBlinkin.h", "_dragon_blinkin_8h.html", [
+      [ "DragonBlinkin", "class_dragon_blinkin.html", "class_dragon_blinkin" ]
+    ] ],
     [ "DragonDigitalInput.cpp", "_dragon_digital_input_8cpp.html", null ],
     [ "DragonDigitalInput.h", "_dragon_digital_input_8h.html", [
       [ "DragonDigitalInput", "class_dragon_digital_input.html", "class_dragon_digital_input" ]

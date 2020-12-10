@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/Mech.h Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/Mech.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -111,49 +111,50 @@ $(document).ready(function(){initNavTree('_mech_8h_source.html',''); initResizab
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;frc2/Timer.h&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// Team 302 includes</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mech_8h.html">subsys/IMech.h</a>&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mech_8h.html">subsys/interfaces/IMech.h</a>&gt;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_types_8h.html">subsys/MechanismTypes.h</a>&gt;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// Third Party Includes</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;units/units.h&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//#include &lt;units/units.h&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;units/time.h&gt;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_mech.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_mech.html">Mech</a> : <span class="keyword">public</span> <a class="code" href="class_i_mech.html">IMech</a></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a> <a class="code" href="class_mech.html#acb9e3f4091481906e0a191e10f2f0a04">GetType</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::string <a class="code" href="class_mech.html#a920a923776b0a1b827e5ad689bc6ecf8">GetControlFileName</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        std::string <a class="code" href="class_mech.html#a502d8be2ff8725323c22371cba93dd37">GetNetworkTableName</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_mech.html#ad2cfbcb9033be2844d450aeea6a92f78">ActivateLogging</a></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        (</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            units::second_t                 millisecondsBetweenLogging</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        ) <span class="keyword">override</span> <span class="keyword">final</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_mech.html#ac9ad0746220c95dde4abe97c34710fc2">DeactivateLogging</a>() <span class="keyword">override</span> <span class="keyword">final</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_mech.html#ab8e245e9cf0061ef1acf09a9103e41c4">LogData</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="class_mech.html#aff77a20e8a7746aef8bac427c60c3586">Mech</a></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        (</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a>  type,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            std::string                     controlFileName,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            std::string                     networkTableName</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        );</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_mech.html#aff77a20e8a7746aef8bac427c60c3586">   74</a></span>&#160;        <a class="code" href="class_mech.html#aff77a20e8a7746aef8bac427c60c3586">Mech</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_mech.html#a8214b4f377b97b64c8d93a248bc21460">   75</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_mech.html#a8214b4f377b97b64c8d93a248bc21460">~Mech</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a>  m_type;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        std::string                     m_controlFile;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::string                     m_ntName;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">bool</span>                            m_logging;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        units::second_t                 m_milliSecondsBetweenLogging;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        units::second_t                 m_lastTime;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::unique_ptr&lt;frc2::Timer&gt;    m_timer;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_mech.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_mech.html">Mech</a> : <span class="keyword">public</span> <a class="code" href="class_i_mech.html">IMech</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a> <a class="code" href="class_mech.html#acb9e3f4091481906e0a191e10f2f0a04">GetType</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::string <a class="code" href="class_mech.html#a920a923776b0a1b827e5ad689bc6ecf8">GetControlFileName</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::string <a class="code" href="class_mech.html#a502d8be2ff8725323c22371cba93dd37">GetNetworkTableName</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_mech.html#ad2cfbcb9033be2844d450aeea6a92f78">ActivateLogging</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        (</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            units::second_t                 millisecondsBetweenLogging</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        ) <span class="keyword">override</span> <span class="keyword">final</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_mech.html#ac9ad0746220c95dde4abe97c34710fc2">DeactivateLogging</a>() <span class="keyword">override</span> <span class="keyword">final</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_mech.html#ab8e245e9cf0061ef1acf09a9103e41c4">LogData</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="class_mech.html#aff77a20e8a7746aef8bac427c60c3586">Mech</a></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        (</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a>  type,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            std::string                     controlFileName,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            std::string                     networkTableName</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        );</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_mech.html#aff77a20e8a7746aef8bac427c60c3586">   75</a></span>&#160;        <a class="code" href="class_mech.html#aff77a20e8a7746aef8bac427c60c3586">Mech</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_mech.html#a8214b4f377b97b64c8d93a248bc21460">   76</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_mech.html#a8214b4f377b97b64c8d93a248bc21460">~Mech</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a>  m_type;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::string                     m_controlFile;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        std::string                     m_ntName;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">bool</span>                            m_logging;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        units::second_t                 m_milliSecondsBetweenLogging;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        units::second_t                 m_lastTime;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        std::unique_ptr&lt;frc2::Timer&gt;    m_timer;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_mech_html_a8214b4f377b97b64c8d93a248bc21460"><div class="ttname"><a href="class_mech.html#a8214b4f377b97b64c8d93a248bc21460">Mech::~Mech</a></div><div class="ttdeci">virtual ~Mech()=default</div></div>
@@ -161,10 +162,10 @@ $(document).ready(function(){initNavTree('_mech_8h_source.html',''); initResizab
 <div class="ttc" id="aclass_mech_html_aff77a20e8a7746aef8bac427c60c3586"><div class="ttname"><a href="class_mech.html#aff77a20e8a7746aef8bac427c60c3586">Mech::Mech</a></div><div class="ttdeci">Mech()=delete</div></div>
 <div class="ttc" id="aclass_mech_html_ac9ad0746220c95dde4abe97c34710fc2"><div class="ttname"><a href="class_mech.html#ac9ad0746220c95dde4abe97c34710fc2">Mech::DeactivateLogging</a></div><div class="ttdeci">void DeactivateLogging() override final</div><div class="ttdoc">Stop updating the key values to network table.</div><div class="ttdef"><b>Definition:</b> <a href="_mech_8cpp_source.html#l00115">Mech.cpp:115</a></div></div>
 <div class="ttc" id="aclass_mech_html_ab8e245e9cf0061ef1acf09a9103e41c4"><div class="ttname"><a href="class_mech.html#ab8e245e9cf0061ef1acf09a9103e41c4">Mech::LogData</a></div><div class="ttdeci">void LogData() override</div><div class="ttdoc">log data to the network table if it is activated and time period has past</div><div class="ttdef"><b>Definition:</b> <a href="_mech_8cpp_source.html#l00102">Mech.cpp:102</a></div></div>
-<div class="ttc" id="aclass_mech_html"><div class="ttname"><a href="class_mech.html">Mech</a></div><div class="ttdef"><b>Definition:</b> <a href="_mech_8h_source.html#l00036">Mech.h:37</a></div></div>
+<div class="ttc" id="aclass_mech_html"><div class="ttname"><a href="class_mech.html">Mech</a></div><div class="ttdef"><b>Definition:</b> <a href="_mech_8h_source.html#l00037">Mech.h:38</a></div></div>
 <div class="ttc" id="aclass_mechanism_types_html_adad17689ea795c3d65e2062bdc09284b"><div class="ttname"><a href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a></div><div class="ttdeci">MECHANISM_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_types_8h_source.html#l00031">MechanismTypes.h:32</a></div></div>
 <div class="ttc" id="aclass_mech_html_a502d8be2ff8725323c22371cba93dd37"><div class="ttname"><a href="class_mech.html#a502d8be2ff8725323c22371cba93dd37">Mech::GetNetworkTableName</a></div><div class="ttdeci">std::string GetNetworkTableName() const override</div><div class="ttdoc">indicate the Network Table name used to setting tracking parameters</div><div class="ttdef"><b>Definition:</b> <a href="_mech_8cpp_source.html#l00085">Mech.cpp:85</a></div></div>
-<div class="ttc" id="aclass_i_mech_html"><div class="ttname"><a href="class_i_mech.html">IMech</a></div><div class="ttdoc">This is the interface for mechanisms regardless of what control items are available.</div><div class="ttdef"><b>Definition:</b> <a href="_i_mech_8h_source.html#l00039">IMech.h:40</a></div></div>
+<div class="ttc" id="aclass_i_mech_html"><div class="ttname"><a href="class_i_mech.html">IMech</a></div><div class="ttdoc">This is the interface for mechanisms regardless of what control items are available.</div><div class="ttdef"><b>Definition:</b> <a href="_i_mech_8h_source.html#l00040">IMech.h:41</a></div></div>
 <div class="ttc" id="aclass_mech_html_a920a923776b0a1b827e5ad689bc6ecf8"><div class="ttname"><a href="class_mech.html#a920a923776b0a1b827e5ad689bc6ecf8">Mech::GetControlFileName</a></div><div class="ttdeci">std::string GetControlFileName() const override</div><div class="ttdoc">indicate the file used to get the control parameters from</div><div class="ttdef"><b>Definition:</b> <a href="_mech_8cpp_source.html#l00077">Mech.cpp:77</a></div></div>
 <div class="ttc" id="aclass_mech_html_acb9e3f4091481906e0a191e10f2f0a04"><div class="ttname"><a href="class_mech.html#acb9e3f4091481906e0a191e10f2f0a04">Mech::GetType</a></div><div class="ttdeci">MechanismTypes::MECHANISM_TYPE GetType() const override</div><div class="ttdoc">Indicates the type of mechanism this is.</div><div class="ttdef"><b>Definition:</b> <a href="_mech_8cpp_source.html#l00070">Mech.cpp:70</a></div></div>
 <div class="ttc" id="a_mechanism_types_8h_html"><div class="ttname"><a href="_mechanism_types_8h.html">MechanismTypes.h</a></div></div>

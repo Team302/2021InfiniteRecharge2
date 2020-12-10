@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: IMech Interface Reference</title>
+<title>Team 302 Robot: IMech Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -100,19 +100,21 @@ Inheritance diagram for IMech:</div>
   <img src="class_i_mech.png" usemap="#IMech_map" alt=""/>
   <map id="IMech_map" name="IMech_map">
 <area href="class_i_mech1_ind_motor.html" title="This is the interface for mechanisms that have one independently controlled motor." alt="IMech1IndMotor" shape="rect" coords="0,56,110,80"/>
-<area href="class_i_mech2_ind_motors.html" title="This is the interface for mechanisms that have two independently controlled motors." alt="IMech2IndMotors" shape="rect" coords="120,56,230,80"/>
-<area href="class_mech.html" alt="Mech" shape="rect" coords="240,56,350,80"/>
+<area href="class_i_mech2_ind_motors.html" title="This is the interface for mechanisms that have two independently controlled motors." alt="IMech2IndMotors" shape="rect" coords="240,56,350,80"/>
+<area href="class_mech.html" alt="Mech" shape="rect" coords="360,56,470,80"/>
 <area href="class_mech1_ind_motor.html" alt="Mech1IndMotor" shape="rect" coords="0,112,110,136"/>
-<area href="class_mech2_ind_motors.html" alt="Mech2IndMotors" shape="rect" coords="120,112,230,136"/>
+<area href="class_mech2_ind_motors.html" alt="Mech2IndMotors" shape="rect" coords="240,112,350,136"/>
 <area href="class_ball_transfer.html" alt="BallTransfer" shape="rect" coords="120,168,230,192"/>
 <area href="class_climber.html" title="The Climber subsystem. Includes pneumatic extender and winch." alt="Climber" shape="rect" coords="120,224,230,248"/>
 <area href="class_control_panel.html" alt="ControlPanel" shape="rect" coords="120,280,230,304"/>
 <area href="class_crawler.html" alt="Crawler" shape="rect" coords="120,336,230,360"/>
-<area href="class_hook_delivery.html" alt="HookDelivery" shape="rect" coords="120,392,230,416"/>
-<area href="class_impeller.html" alt="Impeller" shape="rect" coords="120,448,230,472"/>
-<area href="class_intake.html" alt="Intake" shape="rect" coords="120,504,230,528"/>
-<area href="class_shooter_hood.html" alt="ShooterHood" shape="rect" coords="120,560,230,584"/>
-<area href="class_turret.html" alt="Turret" shape="rect" coords="120,616,230,640"/>
+<area href="class_drive_train_side.html" title="This is the DriveTrainSide Subsystem." alt="DriveTrainSide" shape="rect" coords="120,392,230,416"/>
+<area href="class_hook_delivery.html" alt="HookDelivery" shape="rect" coords="120,448,230,472"/>
+<area href="class_impeller.html" alt="Impeller" shape="rect" coords="120,504,230,528"/>
+<area href="class_intake.html" alt="Intake" shape="rect" coords="120,560,230,584"/>
+<area href="class_shooter_hood.html" alt="ShooterHood" shape="rect" coords="120,616,230,640"/>
+<area href="class_turret.html" alt="Turret" shape="rect" coords="120,672,230,696"/>
+<area href="class_shooter.html" alt="Shooter" shape="rect" coords="240,168,350,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -145,7 +147,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>This is the interface for mechanisms regardless of what control items are available. </p>
 <p>Interface for subsystems. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_mech_8h_source.html#l00039">39</a> of file <a class="el" href="_i_mech_8h_source.html">IMech.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_mech_8h_source.html#l00040">40</a> of file <a class="el" href="_i_mech_8h_source.html">IMech.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abc01c2761809f6a477e72da77d99595f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc01c2761809f6a477e72da77d99595f">&#9670;&nbsp;</a></span>IMech()</h2>
@@ -352,7 +354,7 @@ Public Member Functions</h2></td></tr>
 <p>Indicates the type of mechanism this is. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_mechanism_types.html#adad17689ea795c3d65e2062bdc09284b">MechanismTypes::MECHANISM_TYPE</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="class_mech2_ind_motors.html#a25c469f281ad76e49274ef54f295968a">Mech2IndMotors</a>, <a class="el" href="class_mech1_ind_motor.html#a15be2c611560b84ec8d5955cbb09408f">Mech1IndMotor</a>, and <a class="el" href="class_mech.html#acb9e3f4091481906e0a191e10f2f0a04">Mech</a>.</p>
+<p>Implemented in <a class="el" href="class_mech2_ind_motors.html#a25c469f281ad76e49274ef54f295968a">Mech2IndMotors</a>, <a class="el" href="class_mech1_ind_motor.html#a15be2c611560b84ec8d5955cbb09408f">Mech1IndMotor</a>, <a class="el" href="class_mech.html#acb9e3f4091481906e0a191e10f2f0a04">Mech</a>, and <a class="el" href="class_drive_train_side.html#afb3d28141117ebdf1e00af89e1f90007">DriveTrainSide</a>.</p>
 
 </div>
 </div>
@@ -386,7 +388,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/<a class="el" href="_i_mech_8h_source.html">IMech.h</a></li>
+<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/interfaces/<a class="el" href="_i_mech_8h_source.html">IMech.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

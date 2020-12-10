@@ -6,5 +6,6 @@ var class_velocity_controller =
     [ "GetRPS", "class_velocity_controller.html#a7236bbcd7e85be50ee6512b7c1fa1ed3", null ],
     [ "GetTarget", "class_velocity_controller.html#a79f69365c8c277125757b3b15119bcfc", null ],
     [ "Init", "class_velocity_controller.html#afe11f0564aea740b84fdec61d1828aa8", null ],
-    [ "Run", "class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a", null ]
+    [ "Run", "class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a", null ],
+    [ "UpdateTarget", "class_velocity_controller.html#ae05a6dfc7fc0518e907bc397c3fd8157", null ]
 ];

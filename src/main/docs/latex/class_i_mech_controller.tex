@@ -7,7 +7,7 @@
 Inheritance diagram for I\+Mech\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_i_mech_controller}
+\includegraphics[height=2.641510cm]{class_i_mech_controller}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -18,6 +18,8 @@ Inheritance diagram for I\+Mech\+Controller\+:\begin{figure}[H]
 virtual \mbox{\hyperlink{class_i_mech_controller_a146e04000c38f5a657ff3633e9c9cf4e}{$\sim$\+I\+Mech\+Controller}} ()=default
 \item 
 virtual void \mbox{\hyperlink{class_i_mech_controller_a43c564581e046a9483e469c6da589db9}{Init}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_i_mech_controller_a4eb9b1a0f7eed26a4f6c7ca12b6aa442}{Update\+Target}} (double target)=0
 \item 
 virtual void \mbox{\hyperlink{class_i_mech_controller_a26c63d8b4ab0539d0f0902b2077356f4}{Run}} ()=0
 \item 
@@ -56,7 +58,7 @@ Definition at line 22 of file I\+Mech\+Controller.\+h.
 
 
 
-Implemented in \mbox{\hyperlink{class_velocity_r_p_s_controller_a034ac658c0f7b83cce33c931142a61e5}{Velocity\+R\+P\+S\+Controller}}.
+Implemented in \mbox{\hyperlink{class_velocity_r_p_s_controller_a034ac658c0f7b83cce33c931142a61e5}{Velocity\+R\+P\+S\+Controller}}, \mbox{\hyperlink{class_velocity_degrees_per_sec_controller_aa5e5c70e4b605d206c8417a0bb0aecbb}{Velocity\+Degrees\+Per\+Sec\+Controller}}, and \mbox{\hyperlink{class_open_loop_controller_a7ab9db57c57eb5fe7136625bbd944514}{Open\+Loop\+Controller}}.
 
 \mbox{\Hypertarget{class_i_mech_controller_a43c564581e046a9483e469c6da589db9}\label{class_i_mech_controller_a43c564581e046a9483e469c6da589db9}} 
 \index{IMechController@{IMechController}!Init@{Init}}
@@ -66,7 +68,7 @@ Implemented in \mbox{\hyperlink{class_velocity_r_p_s_controller_a034ac658c0f7b83
 
 
 
-Implemented in \mbox{\hyperlink{class_velocity_controller_afe11f0564aea740b84fdec61d1828aa8}{Velocity\+Controller}}.
+Implemented in \mbox{\hyperlink{class_velocity_controller_afe11f0564aea740b84fdec61d1828aa8}{Velocity\+Controller}}, and \mbox{\hyperlink{class_open_loop_controller_a7ec0df76ffd1b81032b8c627eea08881}{Open\+Loop\+Controller}}.
 
 \mbox{\Hypertarget{class_i_mech_controller_a26c63d8b4ab0539d0f0902b2077356f4}\label{class_i_mech_controller_a26c63d8b4ab0539d0f0902b2077356f4}} 
 \index{IMechController@{IMechController}!Run@{Run}}
@@ -76,10 +78,20 @@ Implemented in \mbox{\hyperlink{class_velocity_controller_afe11f0564aea740b84fde
 
 
 
-Implemented in \mbox{\hyperlink{class_velocity_controller_aa6358fc3232691e458f996a8e8f4ce5a}{Velocity\+Controller}}.
+Implemented in \mbox{\hyperlink{class_velocity_controller_aa6358fc3232691e458f996a8e8f4ce5a}{Velocity\+Controller}}, and \mbox{\hyperlink{class_open_loop_controller_aa65d5680909a0eb6df41128f8cc544de}{Open\+Loop\+Controller}}.
+
+\mbox{\Hypertarget{class_i_mech_controller_a4eb9b1a0f7eed26a4f6c7ca12b6aa442}\label{class_i_mech_controller_a4eb9b1a0f7eed26a4f6c7ca12b6aa442}} 
+\index{IMechController@{IMechController}!UpdateTarget@{UpdateTarget}}
+\index{UpdateTarget@{UpdateTarget}!IMechController@{IMechController}}
+\doxysubsubsection{\texorpdfstring{UpdateTarget()}{UpdateTarget()}}
+{\footnotesize\ttfamily virtual void I\+Mech\+Controller\+::\+Update\+Target (\begin{DoxyParamCaption}\item[{double}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_velocity_controller_ae05a6dfc7fc0518e907bc397c3fd8157}{Velocity\+Controller}}, and \mbox{\hyperlink{class_open_loop_controller_a70da12a56ed84841d1f5521c986569f8}{Open\+Loop\+Controller}}.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/controllers/mechanisms/\mbox{\hyperlink{_i_mech_controller_8h}{I\+Mech\+Controller.\+h}}\end{DoxyCompactItemize}
+C\+:/\+Git\+Repos/2021\+Infinite\+Recharge2/src/main/cpp/controllers/mechanisms/\mbox{\hyperlink{_i_mech_controller_8h}{I\+Mech\+Controller.\+h}}\end{DoxyCompactItemize}

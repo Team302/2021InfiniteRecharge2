@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/auton/primitives/DoNothing.cpp Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/auton/primitives/DoNothing.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -102,72 +102,68 @@ $(document).ready(function(){initNavTree('_do_nothing_8cpp_source.html',''); ini
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//====================================================================================================================================================</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// C++ Includes</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// FRC includes</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;frc/Timer.h&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;units/units.h&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// Team 302 includes</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_do_nothing_8h.html">auton/primitives/DoNothing.h</a>&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_primitive_params_8h.html">auton/PrimitiveParams.h</a>&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_primitive_8h.html">auton/primitives/IPrimitive.h</a>&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_chassis_factory_8h.html">subsys/ChassisFactory.h</a>&gt;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_modes_8h.html">controllers/ControlModes.h</a>&gt;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mechanism_8h.html">subsys/IMechanism.h</a>&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_logger_8h.html">utils/Logger.h</a>&gt;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// Third Party Includes</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// FRC includes</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;frc/Timer.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// Team 302 includes</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_do_nothing_8h.html">auton/primitives/DoNothing.h</a>&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_primitive_params_8h.html">auton/PrimitiveParams.h</a>&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_primitive_8h.html">auton/primitives/IPrimitive.h</a>&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_chassis_factory_8h.html">subsys/ChassisFactory.h</a>&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_logger_8h.html">utils/Logger.h</a>&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// Third Party Includes</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacefrc.html">frc</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacefrc.html">frc</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//========================================================================================================</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span><span class="comment">//========================================================================================================</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_do_nothing.html#abf265c7a54cd2b174ff759099e34b8fb">   47</a></span>&#160;<a class="code" href="class_do_nothing.html#abf265c7a54cd2b174ff759099e34b8fb">DoNothing::DoNothing</a>() : m_maxTime(0.0),</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                         m_currentTime(0.0),</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                         m_chassis( <a class="code" href="class_chassis_factory.html">ChassisFactory</a>::GetChassisFactory()-&gt;GetIChassis()),</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                         m_timer( make_unique&lt;Timer&gt;() )</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_do_nothing.html#aa05ad0a633ed8380cc8725b9b7747660">   57</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_do_nothing.html#aa05ad0a633ed8380cc8725b9b7747660">DoNothing::Init</a>(<a class="code" href="class_primitive_params.html">PrimitiveParams</a>* params) </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    m_maxTime = params-&gt;<a class="code" href="class_primitive_params.html#a478d763e9de6526e13de4d23d1dca71c">GetTime</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    m_timer-&gt;Reset();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    m_timer-&gt;Start();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_do_nothing.html#ac38d4823e478cbfab5903ffbad04a778">   66</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_do_nothing.html#ac38d4823e478cbfab5903ffbad04a778">DoNothing::Run</a>() </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>() -&gt; LogError(<span class="keywordtype">string</span>(<span class="stringliteral">&quot;DoNothing::Run()&quot;</span>), <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Arrived!&quot;</span>));</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> ( m_chassis != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//========================================================================================================</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span><span class="comment">//========================================================================================================</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_do_nothing.html#abf265c7a54cd2b174ff759099e34b8fb">   43</a></span>&#160;<a class="code" href="class_do_nothing.html#abf265c7a54cd2b174ff759099e34b8fb">DoNothing::DoNothing</a>() : <a class="code" href="class_i_primitive.html">IPrimitive</a>(),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                         m_maxTime(0.0),</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                         m_currentTime(0.0),</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                         m_chassis( <a class="code" href="class_chassis_factory.html">ChassisFactory</a>::GetChassisFactory()-&gt;GetIChassis()),</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                         m_timer( make_unique&lt;Timer&gt;() )</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_do_nothing.html#aa05ad0a633ed8380cc8725b9b7747660">   54</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_do_nothing.html#aa05ad0a633ed8380cc8725b9b7747660">DoNothing::Init</a>(<a class="code" href="class_primitive_params.html">PrimitiveParams</a>* params) </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    m_maxTime = params-&gt;<a class="code" href="class_primitive_params.html#a478d763e9de6526e13de4d23d1dca71c">GetTime</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    m_timer-&gt;Reset();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    m_timer-&gt;Start();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_do_nothing.html#ac38d4823e478cbfab5903ffbad04a778">   63</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_do_nothing.html#ac38d4823e478cbfab5903ffbad04a778">DoNothing::Run</a>() </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> ( m_chassis != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        m_chassis-&gt;SetOutput( ControlModes::CONTROL_TYPE::PERCENT_OUTPUT, 0.0, 0.0 );  </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        m_chassis-&gt;SetOutput( ControlModes::CONTROL_TYPE::PERCENT_OUTPUT, 0.0, 0.0 );  </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( Logger::LOGGER_LEVEL::ERROR_ONCE, <span class="keywordtype">string</span>( <span class="stringliteral">&quot;DoNothing::Run&quot;</span> ), <span class="keywordtype">string</span>( <span class="stringliteral">&quot;chassis not found&quot;</span>) );</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>( <span class="stringliteral">&quot;DoNothing::Run&quot;</span> ), <span class="keywordtype">string</span>( <span class="stringliteral">&quot;chassis not found&quot;</span>) );</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_do_nothing.html#a921cf984d26cf9991de393a609719188">   81</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_do_nothing.html#a921cf984d26cf9991de393a609719188">DoNothing::IsDone</a>() </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> m_timer-&gt;HasPeriodPassed( m_maxTime );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_do_nothing.html#a921cf984d26cf9991de393a609719188">   77</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_do_nothing.html#a921cf984d26cf9991de393a609719188">DoNothing::IsDone</a>() </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> m_timer-&gt;HasPeriodPassed( m_maxTime );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_do_nothing_html_ac38d4823e478cbfab5903ffbad04a778"><div class="ttname"><a href="class_do_nothing.html#ac38d4823e478cbfab5903ffbad04a778">DoNothing::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdoc">run the primitive (periodic routine)</div><div class="ttdef"><b>Definition:</b> <a href="_do_nothing_8cpp_source.html#l00066">DoNothing.cpp:66</a></div></div>
+<div class="ttc" id="aclass_do_nothing_html_ac38d4823e478cbfab5903ffbad04a778"><div class="ttname"><a href="class_do_nothing.html#ac38d4823e478cbfab5903ffbad04a778">DoNothing::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdoc">run the primitive (periodic routine)</div><div class="ttdef"><b>Definition:</b> <a href="_do_nothing_8cpp_source.html#l00063">DoNothing.cpp:63</a></div></div>
 <div class="ttc" id="a_i_primitive_8h_html"><div class="ttname"><a href="_i_primitive_8h.html">IPrimitive.h</a></div></div>
-<div class="ttc" id="a_i_mechanism_8h_html"><div class="ttname"><a href="_i_mechanism_8h.html">IMechanism.h</a></div></div>
-<div class="ttc" id="aclass_do_nothing_html_aa05ad0a633ed8380cc8725b9b7747660"><div class="ttname"><a href="class_do_nothing.html#aa05ad0a633ed8380cc8725b9b7747660">DoNothing::Init</a></div><div class="ttdeci">void Init(PrimitiveParams *params) override</div><div class="ttdoc">initialize this usage of the primitive</div><div class="ttdef"><b>Definition:</b> <a href="_do_nothing_8cpp_source.html#l00057">DoNothing.cpp:57</a></div></div>
+<div class="ttc" id="aclass_i_primitive_html"><div class="ttname"><a href="class_i_primitive.html">IPrimitive</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_primitive_8h_source.html#l00021">IPrimitive.h:22</a></div></div>
+<div class="ttc" id="aclass_do_nothing_html_aa05ad0a633ed8380cc8725b9b7747660"><div class="ttname"><a href="class_do_nothing.html#aa05ad0a633ed8380cc8725b9b7747660">DoNothing::Init</a></div><div class="ttdeci">void Init(PrimitiveParams *params) override</div><div class="ttdoc">initialize this usage of the primitive</div><div class="ttdef"><b>Definition:</b> <a href="_do_nothing_8cpp_source.html#l00054">DoNothing.cpp:54</a></div></div>
 <div class="ttc" id="aclass_primitive_params_html"><div class="ttname"><a href="class_primitive_params.html">PrimitiveParams</a></div><div class="ttdef"><b>Definition:</b> <a href="_primitive_params_8h_source.html#l00035">PrimitiveParams.h:36</a></div></div>
 <div class="ttc" id="a_chassis_factory_8h_html"><div class="ttname"><a href="_chassis_factory_8h.html">ChassisFactory.h</a></div></div>
-<div class="ttc" id="aclass_do_nothing_html_a921cf984d26cf9991de393a609719188"><div class="ttname"><a href="class_do_nothing.html#a921cf984d26cf9991de393a609719188">DoNothing::IsDone</a></div><div class="ttdeci">bool IsDone() override</div><div class="ttdoc">check if the end condition has been met</div><div class="ttdef"><b>Definition:</b> <a href="_do_nothing_8cpp_source.html#l00081">DoNothing.cpp:81</a></div></div>
+<div class="ttc" id="aclass_do_nothing_html_a921cf984d26cf9991de393a609719188"><div class="ttname"><a href="class_do_nothing.html#a921cf984d26cf9991de393a609719188">DoNothing::IsDone</a></div><div class="ttdeci">bool IsDone() override</div><div class="ttdoc">check if the end condition has been met</div><div class="ttdef"><b>Definition:</b> <a href="_do_nothing_8cpp_source.html#l00077">DoNothing.cpp:77</a></div></div>
 <div class="ttc" id="a_logger_8h_html"><div class="ttname"><a href="_logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="aclass_chassis_factory_html"><div class="ttname"><a href="class_chassis_factory.html">ChassisFactory</a></div><div class="ttdef"><b>Definition:</b> <a href="_chassis_factory_8h_source.html#l00010">ChassisFactory.h:11</a></div></div>
 <div class="ttc" id="a_do_nothing_8h_html"><div class="ttname"><a href="_do_nothing_8h.html">DoNothing.h</a></div></div>
@@ -176,8 +172,7 @@ $(document).ready(function(){initNavTree('_do_nothing_8cpp_source.html',''); ini
 <div class="ttc" id="aclass_primitive_params_html_a478d763e9de6526e13de4d23d1dca71c"><div class="ttname"><a href="class_primitive_params.html#a478d763e9de6526e13de4d23d1dca71c">PrimitiveParams::GetTime</a></div><div class="ttdeci">float GetTime() const</div><div class="ttdef"><b>Definition:</b> <a href="_primitive_params_8cpp_source.html#l00043">PrimitiveParams.cpp:43</a></div></div>
 <div class="ttc" id="a_primitive_params_8h_html"><div class="ttname"><a href="_primitive_params_8h.html">PrimitiveParams.h</a></div></div>
 <div class="ttc" id="anamespacefrc_html"><div class="ttname"><a href="namespacefrc.html">frc</a></div><div class="ttdef"><b>Definition:</b> <a href="_do_nothing_8h_source.html#l00034">DoNothing.h:35</a></div></div>
-<div class="ttc" id="aclass_do_nothing_html_abf265c7a54cd2b174ff759099e34b8fb"><div class="ttname"><a href="class_do_nothing.html#abf265c7a54cd2b174ff759099e34b8fb">DoNothing::DoNothing</a></div><div class="ttdeci">DoNothing()</div><div class="ttdoc">constructor that creates/initializes the object</div><div class="ttdef"><b>Definition:</b> <a href="_do_nothing_8cpp_source.html#l00047">DoNothing.cpp:47</a></div></div>
-<div class="ttc" id="a_control_modes_8h_html"><div class="ttname"><a href="_control_modes_8h.html">ControlModes.h</a></div></div>
+<div class="ttc" id="aclass_do_nothing_html_abf265c7a54cd2b174ff759099e34b8fb"><div class="ttname"><a href="class_do_nothing.html#abf265c7a54cd2b174ff759099e34b8fb">DoNothing::DoNothing</a></div><div class="ttdeci">DoNothing()</div><div class="ttdoc">constructor that creates/initializes the object</div><div class="ttdef"><b>Definition:</b> <a href="_do_nothing_8cpp_source.html#l00043">DoNothing.cpp:43</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

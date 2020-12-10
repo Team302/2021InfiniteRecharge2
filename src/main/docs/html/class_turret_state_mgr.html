@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: TurretStateMgr Class Reference</title>
+<title>Team 302 Robot: TurretStateMgr Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -305,14 +305,23 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<p>auto state = m_stateVector[stateEnum]; if ( state != nullptr &amp;&amp; state != m_currentState ) { if (stateEnum == TURN_ANGLE) { auto cdState = dynamic_cast&lt;TurretTurnAngle*&gt;(state); auto cd = cdState-&gt;GetControlData(); m_stateVector[stateEnum] = new <a class="el" href="class_turret_turn_angle.html">TurretTurnAngle(cd,turretAngle, MechanismTargetData::SOLENOID::NONE)</a>; state = m_stateVector[stateEnum]; } m_currentState = state; m_currentStateEnum = stateEnum; m_currentState-&gt;Init(); if ( stateEnum == LIMELIGHT_AIM ) { auto llAim = dynamic_cast&lt;LimelightAim*&gt;(m_currentState); if ( llAim != nullptr ) { llAim-&gt;UpdateTarget( m_approxTargetAngle ); } }</p>
+<pre class="fragment">if ( run )
+{
+    if ( MechanismFactory::GetMechanismFactory()-&gt;GetTurret().get() != nullptr )
+    {
+        m_currentState-&gt;Run();
+    }
+}
+</pre><p>}</p>
 
-<p class="definition">Definition at line <a class="el" href="_turret_state_mgr_8cpp_source.html#l00141">141</a> of file <a class="el" href="_turret_state_mgr_8cpp_source.html">TurretStateMgr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_turret_state_mgr_8cpp_source.html#l00140">140</a> of file <a class="el" href="_turret_state_mgr_8cpp_source.html">TurretStateMgr.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/turret/<a class="el" href="_turret_state_mgr_8h_source.html">TurretStateMgr.h</a></li>
-<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/turret/<a class="el" href="_turret_state_mgr_8cpp_source.html">TurretStateMgr.cpp</a></li>
+<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/turret/<a class="el" href="_turret_state_mgr_8h_source.html">TurretStateMgr.h</a></li>
+<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/turret/<a class="el" href="_turret_state_mgr_8cpp_source.html">TurretStateMgr.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

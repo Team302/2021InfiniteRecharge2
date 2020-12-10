@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: VelocityController Class Reference</title>
+<title>Team 302 Robot: VelocityController Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -97,8 +97,9 @@ Inheritance diagram for VelocityController:</div>
  <div class="center">
   <img src="class_velocity_controller.png" usemap="#VelocityController_map" alt=""/>
   <map id="VelocityController_map" name="VelocityController_map">
-<area href="class_i_mech_controller.html" alt="IMechController" shape="rect" coords="0,0,138,24"/>
-<area href="class_velocity_r_p_s_controller.html" alt="VelocityRPSController" shape="rect" coords="0,112,138,136"/>
+<area href="class_i_mech_controller.html" alt="IMechController" shape="rect" coords="107,0,311,24"/>
+<area href="class_velocity_degrees_per_sec_controller.html" alt="VelocityDegreesPerSecController" shape="rect" coords="0,112,204,136"/>
+<area href="class_velocity_r_p_s_controller.html" alt="VelocityRPSController" shape="rect" coords="214,112,418,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -112,6 +113,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad10bdb7a1a3e7739371cf1dd324c7169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe11f0564aea740b84fdec61d1828aa8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#afe11f0564aea740b84fdec61d1828aa8">Init</a> () override</td></tr>
 <tr class="separator:afe11f0564aea740b84fdec61d1828aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae05a6dfc7fc0518e907bc397c3fd8157"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#ae05a6dfc7fc0518e907bc397c3fd8157">UpdateTarget</a> (double target) override</td></tr>
+<tr class="separator:ae05a6dfc7fc0518e907bc397c3fd8157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6358fc3232691e458f996a8e8f4ce5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_velocity_controller.html#aa6358fc3232691e458f996a8e8f4ce5a">Run</a> () override</td></tr>
 <tr class="separator:aa6358fc3232691e458f996a8e8f4ce5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_mech_controller"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_mech_controller')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_mech_controller.html">IMechController</a></td></tr>
@@ -241,7 +244,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_velocity_controller_8cpp_source.html#l00067">67</a> of file <a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_velocity_controller_8cpp_source.html#l00075">75</a> of file <a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a>.</p>
 
 </div>
 </div>
@@ -268,7 +271,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_velocity_controller_8h_source.html#l00044">44</a> of file <a class="el" href="_velocity_controller_8h_source.html">VelocityController.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_velocity_controller_8h_source.html#l00048">48</a> of file <a class="el" href="_velocity_controller_8h_source.html">VelocityController.h</a>.</p>
 
 </div>
 </div>
@@ -326,13 +329,43 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_mech_controller.html#a26c63d8b4ab0539d0f0902b2077356f4">IMechController</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_velocity_controller_8cpp_source.html#l00067">67</a> of file <a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae05a6dfc7fc0518e907bc397c3fd8157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae05a6dfc7fc0518e907bc397c3fd8157">&#9670;&nbsp;</a></span>UpdateTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VelocityController::UpdateTarget </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_i_mech_controller.html#a4eb9b1a0f7eed26a4f6c7ca12b6aa442">IMechController</a>.</p>
+
 <p class="definition">Definition at line <a class="el" href="_velocity_controller_8cpp_source.html#l00059">59</a> of file <a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/controllers/mechanisms/<a class="el" href="_velocity_controller_8h_source.html">VelocityController.h</a></li>
-<li>/GitRepos/2021InfiniteRecharge2/src/main/cpp/controllers/mechanisms/<a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a></li>
+<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/controllers/mechanisms/<a class="el" href="_velocity_controller_8h_source.html">VelocityController.h</a></li>
+<li>C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/controllers/mechanisms/<a class="el" href="_velocity_controller_8cpp_source.html">VelocityController.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

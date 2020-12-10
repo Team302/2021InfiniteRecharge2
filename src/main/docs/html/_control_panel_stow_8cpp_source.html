@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/states/controlPanel/ControlPanelStow.cpp Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/controlPanel/ControlPanelStow.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -95,28 +95,28 @@ $(document).ready(function(){initNavTree('_control_panel_stow_8cpp_source.html',
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_panel_stow_8h.html">states/controlPanel/ControlPanelStow.h</a>&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_panel_8h.html">subsys/ControlPanel.h</a>&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_factory_8h.html">subsys/MechanismFactory.h</a>&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mechanism_8h.html">subsys/IMechanism.h</a>&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_state_8h.html">states/IState.h</a>&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_control_panel_stow.html#a2aea3083dad0852b8ec101a4515714ca">   17</a></span>&#160;<a class="code" href="class_control_panel_stow.html#a2aea3083dad0852b8ec101a4515714ca">ControlPanelStow::ControlPanelStow</a>() </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">auto</span> factory = <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    m_controlPanel = factory -&gt; GetIMechanism(MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_control_panel_stow.html#ab3d9ab6458cea4d98240113efea0b54a">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_control_panel_stow.html#ab3d9ab6458cea4d98240113efea0b54a">ControlPanelStow::Init</a>() </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_control_panel_stow.html#a9b17b53b1ebc357dfc3cb29977aaf140">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_control_panel_stow.html#a9b17b53b1ebc357dfc3cb29977aaf140">ControlPanelStow::Run</a>() </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    m_controlPanel -&gt; ActivateSolenoid( <span class="keyword">false</span> ); </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    m_controlPanel -&gt; SetOutput( <a class="code" href="class_control_modes.html#a46c77e409ac22b3b3269f7fee2d3f736afde847a5129bd0258b65c4fafeca8b78">ControlModes::PERCENT_OUTPUT</a>, 0 );</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_state_8h.html">states/IState.h</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_control_panel_stow.html#a2aea3083dad0852b8ec101a4515714ca">   16</a></span>&#160;<a class="code" href="class_control_panel_stow.html#a2aea3083dad0852b8ec101a4515714ca">ControlPanelStow::ControlPanelStow</a>() </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">auto</span> factory = <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    m_controlPanel = factory -&gt; GetControlPanel();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_control_panel_stow.html#ab3d9ab6458cea4d98240113efea0b54a">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_control_panel_stow.html#ab3d9ab6458cea4d98240113efea0b54a">ControlPanelStow::Init</a>() </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_control_panel_stow.html#a9b17b53b1ebc357dfc3cb29977aaf140">   28</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_control_panel_stow.html#a9b17b53b1ebc357dfc3cb29977aaf140">ControlPanelStow::Run</a>() </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    m_controlPanel.get()-&gt;UpdateTarget(0.0);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    m_controlPanel.get()-&gt; Update();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    m_controlPanel.get()-&gt; ActivateSolenoid( <span class="keyword">false</span> ); </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_control_panel_stow.html#a2f33179204da626e0c587f649436de4b">   35</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_control_panel_stow.html#a2f33179204da626e0c587f649436de4b">ControlPanelStow::AtTarget</a>()<span class="keyword"> const</span></div>
@@ -125,16 +125,14 @@ $(document).ready(function(){initNavTree('_control_panel_stow_8cpp_source.html',
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;} </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_control_panel_stow_html_a9b17b53b1ebc357dfc3cb29977aaf140"><div class="ttname"><a href="class_control_panel_stow.html#a9b17b53b1ebc357dfc3cb29977aaf140">ControlPanelStow::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_stow_8cpp_source.html#l00029">ControlPanelStow.cpp:29</a></div></div>
-<div class="ttc" id="a_i_mechanism_8h_html"><div class="ttname"><a href="_i_mechanism_8h.html">IMechanism.h</a></div></div>
+<div class="ttc" id="aclass_control_panel_stow_html_a9b17b53b1ebc357dfc3cb29977aaf140"><div class="ttname"><a href="class_control_panel_stow.html#a9b17b53b1ebc357dfc3cb29977aaf140">ControlPanelStow::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_stow_8cpp_source.html#l00028">ControlPanelStow.cpp:28</a></div></div>
 <div class="ttc" id="a_mechanism_factory_8h_html"><div class="ttname"><a href="_mechanism_factory_8h.html">MechanismFactory.h</a></div></div>
-<div class="ttc" id="aclass_control_panel_stow_html_a2aea3083dad0852b8ec101a4515714ca"><div class="ttname"><a href="class_control_panel_stow.html#a2aea3083dad0852b8ec101a4515714ca">ControlPanelStow::ControlPanelStow</a></div><div class="ttdeci">ControlPanelStow()</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_stow_8cpp_source.html#l00017">ControlPanelStow.cpp:17</a></div></div>
-<div class="ttc" id="aclass_control_panel_stow_html_ab3d9ab6458cea4d98240113efea0b54a"><div class="ttname"><a href="class_control_panel_stow.html#ab3d9ab6458cea4d98240113efea0b54a">ControlPanelStow::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_stow_8cpp_source.html#l00024">ControlPanelStow.cpp:24</a></div></div>
+<div class="ttc" id="aclass_control_panel_stow_html_a2aea3083dad0852b8ec101a4515714ca"><div class="ttname"><a href="class_control_panel_stow.html#a2aea3083dad0852b8ec101a4515714ca">ControlPanelStow::ControlPanelStow</a></div><div class="ttdeci">ControlPanelStow()</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_stow_8cpp_source.html#l00016">ControlPanelStow.cpp:16</a></div></div>
+<div class="ttc" id="aclass_control_panel_stow_html_ab3d9ab6458cea4d98240113efea0b54a"><div class="ttname"><a href="class_control_panel_stow.html#ab3d9ab6458cea4d98240113efea0b54a">ControlPanelStow::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_stow_8cpp_source.html#l00023">ControlPanelStow.cpp:23</a></div></div>
 <div class="ttc" id="a_i_state_8h_html"><div class="ttname"><a href="_i_state_8h.html">IState.h</a></div></div>
 <div class="ttc" id="aclass_control_panel_stow_html_a2f33179204da626e0c587f649436de4b"><div class="ttname"><a href="class_control_panel_stow.html#a2f33179204da626e0c587f649436de4b">ControlPanelStow::AtTarget</a></div><div class="ttdeci">bool AtTarget() const override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_stow_8cpp_source.html#l00035">ControlPanelStow.cpp:35</a></div></div>
 <div class="ttc" id="a_control_panel_8h_html"><div class="ttname"><a href="_control_panel_8h.html">ControlPanel.h</a></div></div>
-<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00072">MechanismFactory.cpp:72</a></div></div>
-<div class="ttc" id="aclass_control_modes_html_a46c77e409ac22b3b3269f7fee2d3f736afde847a5129bd0258b65c4fafeca8b78"><div class="ttname"><a href="class_control_modes.html#a46c77e409ac22b3b3269f7fee2d3f736afde847a5129bd0258b65c4fafeca8b78">ControlModes::PERCENT_OUTPUT</a></div><div class="ttdeci">@ PERCENT_OUTPUT</div><div class="ttdef"><b>Definition:</b> <a href="_control_modes_8h_source.html#l00026">ControlModes.h:26</a></div></div>
+<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00071">MechanismFactory.cpp:71</a></div></div>
 <div class="ttc" id="a_control_panel_stow_8h_html"><div class="ttname"><a href="_control_panel_stow_8h.html">ControlPanelStow.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

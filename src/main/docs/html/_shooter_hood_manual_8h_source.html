@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/states/shooterHood/ShooterHoodManual.h Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/shooterHood/ShooterHoodManual.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -86,51 +86,37 @@ $(document).ready(function(){initNavTree('_shooter_hood_manual_8h_source.html','
 </div><!--header-->
 <div class="contents">
 <a href="_shooter_hood_manual_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_state_8h.html">states/IState.h</a>&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mechanism_8h.html">subsys/IMechanism.h</a>&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_data_8h.html">controllers/ControlData.h</a>&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_teleop_control_8h.html">gamepad/TeleopControl.h</a>&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_shooter_hood_manual.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_shooter_hood_manual.html">ShooterHoodManual</a> : <span class="keyword">public</span> <a class="code" href="class_i_state.html">IState</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_shooter_hood_manual.html#a523e67f3894b568d253ddae465fe1ac0">ShooterHoodManual</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    (</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_control_data.html">ControlData</a>* control,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">double</span> target</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    );</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_shooter_hood_manual.html#a523e67f3894b568d253ddae465fe1ac0">   15</a></span>&#160;    <a class="code" href="class_shooter_hood_manual.html#a523e67f3894b568d253ddae465fe1ac0">ShooterHoodManual</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_shooter_hood_manual.html#ae6ff430d9fcbb02edcf7d6cc4864f1ad">   16</a></span>&#160;    <a class="code" href="class_shooter_hood_manual.html#ae6ff430d9fcbb02edcf7d6cc4864f1ad">~ShooterHoodManual</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_shooter_hood_manual.html#a9ba03aabad3263cd283777165009bbb3">Init</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_shooter_hood_manual.html#a9fb9dba6f3dca6691557ec19f3555305">Run</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_shooter_hood_manual.html#a64c886e162665a27233b730552282d3b">AtTarget</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_i_mechanism.html">IMechanism</a>* m_shooterHood;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_control_data.html">ControlData</a>* m_control;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">double</span> m_target;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_teleop_control.html">TeleopControl</a>* m_gamepad;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mech1_motor_state_8h.html">states/Mech1MotorState.h</a>&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_target_data_8h.html">controllers/MechanismTargetData.h</a>&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">class </span><a class="code" href="class_control_data.html">ControlData</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_shooter_hood_manual.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_shooter_hood_manual.html">ShooterHoodManual</a> : <span class="keyword">public</span> <a class="code" href="class_mech1_motor_state.html">Mech1MotorState</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_shooter_hood_manual.html#a523e67f3894b568d253ddae465fe1ac0">ShooterHoodManual</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    (</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="class_control_data.html">ControlData</a>* control,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">double</span> target</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    );</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_shooter_hood_manual.html#a523e67f3894b568d253ddae465fe1ac0">   16</a></span>&#160;    <a class="code" href="class_shooter_hood_manual.html#a523e67f3894b568d253ddae465fe1ac0">ShooterHoodManual</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_shooter_hood_manual.html#ae6ff430d9fcbb02edcf7d6cc4864f1ad">   17</a></span>&#160;    <a class="code" href="class_shooter_hood_manual.html#ae6ff430d9fcbb02edcf7d6cc4864f1ad">~ShooterHoodManual</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_shooter_hood_manual.html#a9ba03aabad3263cd283777165009bbb3">Init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_shooter_hood_manual.html#a9fb9dba6f3dca6691557ec19f3555305">Run</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_i_state_html"><div class="ttname"><a href="class_i_state.html">IState</a></div><div class="ttdoc">Interface for state classes.</div><div class="ttdef"><b>Definition:</b> <a href="_i_state_8h_source.html#l00021">IState.h:22</a></div></div>
-<div class="ttc" id="a_teleop_control_8h_html"><div class="ttname"><a href="_teleop_control_8h.html">TeleopControl.h</a></div></div>
-<div class="ttc" id="a_i_mechanism_8h_html"><div class="ttname"><a href="_i_mechanism_8h.html">IMechanism.h</a></div></div>
 <div class="ttc" id="aclass_shooter_hood_manual_html_ae6ff430d9fcbb02edcf7d6cc4864f1ad"><div class="ttname"><a href="class_shooter_hood_manual.html#ae6ff430d9fcbb02edcf7d6cc4864f1ad">ShooterHoodManual::~ShooterHoodManual</a></div><div class="ttdeci">~ShooterHoodManual()=default</div></div>
-<div class="ttc" id="a_control_data_8h_html"><div class="ttname"><a href="_control_data_8h.html">ControlData.h</a></div></div>
+<div class="ttc" id="a_mech1_motor_state_8h_html"><div class="ttname"><a href="_mech1_motor_state_8h.html">Mech1MotorState.h</a></div></div>
 <div class="ttc" id="aclass_shooter_hood_manual_html_a523e67f3894b568d253ddae465fe1ac0"><div class="ttname"><a href="class_shooter_hood_manual.html#a523e67f3894b568d253ddae465fe1ac0">ShooterHoodManual::ShooterHoodManual</a></div><div class="ttdeci">ShooterHoodManual()=delete</div></div>
-<div class="ttc" id="aclass_shooter_hood_manual_html"><div class="ttname"><a href="class_shooter_hood_manual.html">ShooterHoodManual</a></div><div class="ttdef"><b>Definition:</b> <a href="_shooter_hood_manual_8h_source.html#l00007">ShooterHoodManual.h:8</a></div></div>
-<div class="ttc" id="a_i_state_8h_html"><div class="ttname"><a href="_i_state_8h.html">IState.h</a></div></div>
+<div class="ttc" id="a_mechanism_target_data_8h_html"><div class="ttname"><a href="_mechanism_target_data_8h.html">MechanismTargetData.h</a></div></div>
+<div class="ttc" id="aclass_mech1_motor_state_html"><div class="ttname"><a href="class_mech1_motor_state.html">Mech1MotorState</a></div><div class="ttdoc">information about the control (open loop, closed loop position, closed loop velocity,...</div><div class="ttdef"><b>Definition:</b> <a href="_mech1_motor_state_8h_source.html#l00024">Mech1MotorState.h:25</a></div></div>
+<div class="ttc" id="aclass_shooter_hood_manual_html"><div class="ttname"><a href="class_shooter_hood_manual.html">ShooterHoodManual</a></div><div class="ttdef"><b>Definition:</b> <a href="_shooter_hood_manual_8h_source.html#l00008">ShooterHoodManual.h:9</a></div></div>
 <div class="ttc" id="aclass_control_data_html"><div class="ttname"><a href="class_control_data.html">ControlData</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_data_8h_source.html#l00022">ControlData.h:23</a></div></div>
-<div class="ttc" id="aclass_teleop_control_html"><div class="ttname"><a href="class_teleop_control.html">TeleopControl</a></div><div class="ttdef"><b>Definition:</b> <a href="_teleop_control_8h_source.html#l00034">TeleopControl.h:35</a></div></div>
-<div class="ttc" id="aclass_shooter_hood_manual_html_a9ba03aabad3263cd283777165009bbb3"><div class="ttname"><a href="class_shooter_hood_manual.html#a9ba03aabad3263cd283777165009bbb3">ShooterHoodManual::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_shooter_hood_manual_8cpp_source.html#l00025">ShooterHoodManual.cpp:25</a></div></div>
-<div class="ttc" id="aclass_shooter_hood_manual_html_a64c886e162665a27233b730552282d3b"><div class="ttname"><a href="class_shooter_hood_manual.html#a64c886e162665a27233b730552282d3b">ShooterHoodManual::AtTarget</a></div><div class="ttdeci">bool AtTarget() const</div><div class="ttdef"><b>Definition:</b> <a href="_shooter_hood_manual_8cpp_source.html#l00035">ShooterHoodManual.cpp:35</a></div></div>
-<div class="ttc" id="aclass_i_mechanism_html"><div class="ttname"><a href="class_i_mechanism.html">IMechanism</a></div><div class="ttdoc">This is the interface for all subsystems.</div><div class="ttdef"><b>Definition:</b> <a href="_i_mechanism_8h_source.html#l00038">IMechanism.h:39</a></div></div>
-<div class="ttc" id="aclass_shooter_hood_manual_html_a9fb9dba6f3dca6691557ec19f3555305"><div class="ttname"><a href="class_shooter_hood_manual.html#a9fb9dba6f3dca6691557ec19f3555305">ShooterHoodManual::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_shooter_hood_manual_8cpp_source.html#l00030">ShooterHoodManual.cpp:30</a></div></div>
+<div class="ttc" id="aclass_shooter_hood_manual_html_a9ba03aabad3263cd283777165009bbb3"><div class="ttname"><a href="class_shooter_hood_manual.html#a9ba03aabad3263cd283777165009bbb3">ShooterHoodManual::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_shooter_hood_manual_8cpp_source.html#l00039">ShooterHoodManual.cpp:39</a></div></div>
+<div class="ttc" id="aclass_shooter_hood_manual_html_a9fb9dba6f3dca6691557ec19f3555305"><div class="ttname"><a href="class_shooter_hood_manual.html#a9fb9dba6f3dca6691557ec19f3555305">ShooterHoodManual::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_shooter_hood_manual_8cpp_source.html#l00049">ShooterHoodManual.cpp:49</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/auton/primitives/DriveToTarget.cpp Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/auton/primitives/DriveToTarget.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -106,106 +106,93 @@ $(document).ready(function(){initNavTree('_drive_to_target_8cpp_source.html','')
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// FRC includes</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;frc/Timer.h&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// Team 302 includes</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_do_nothing_8h.html">auton/primitives/DoNothing.h</a>&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// Team 302 includes</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_drive_distance_8h.html">auton/primitives/DriveDistance.h</a>&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_drive_to_target_8h.html">auton/primitives/DriveToTarget.h</a>&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_primitive_params_8h.html">auton/PrimitiveParams.h</a>&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_primitive_8h.html">auton/primitives/IPrimitive.h</a>&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_factory_8h.html">subsys/MechanismFactory.h</a>&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_modes_8h.html">controllers/ControlModes.h</a>&gt;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mechanism_8h.html">subsys/IMechanism.h</a>&gt;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_logger_8h.html">utils/Logger.h</a>&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// Third Party Includes</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_distance_sensor_factory_8h.html">hw/factories/DistanceSensorFactory.h</a>&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_dragon_distance_sensor_8h.html">hw/interfaces/IDragonDistanceSensor.h</a>&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// Third Party Includes</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacefrc.html">frc</a>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacefrc.html">frc</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_drive_distance_8h.html">auton/primitives/DriveDistance.h</a>&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_drive_to_target_8h.html">auton/primitives/DriveToTarget.h</a>&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_primitive_params_8h.html">auton/PrimitiveParams.h</a>&gt;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_distance_sensor_factory_8h.html">hw/factories/DistanceSensorFactory.h</a>&gt;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_dragon_distance_sensor_8h.html">hw/interfaces/IDragonDistanceSensor.h</a>&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_drive_to_target.html#a74a34143222aaf914cf400e1bebc5c7c">   45</a></span>&#160;<a class="code" href="class_drive_to_target.html#a74a34143222aaf914cf400e1bebc5c7c">DriveToTarget::DriveToTarget</a>() :</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    m_sensor( nullptr ),</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    m_underDistanceCounts( 0 ),</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    m_minTimeToRun( 0 )</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">auto</span> factory = <a class="code" href="class_distance_sensor_factory.html#ac26949a95d6b5582d689f3d2100dff3e">DistanceSensorFactory::GetFactory</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> ( factory != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="comment">//  m_sensor = factory-&gt;GetSensor( IDragonSensor::SENSOR_USAGE::FORWARD_SENSOR );</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_drive_to_target.html#a6ec218d441ef1c263d8c417ca5933af8">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_drive_to_target.html#a6ec218d441ef1c263d8c417ca5933af8">DriveToTarget::Init</a></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;(</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_primitive_params.html">PrimitiveParams</a>* params</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> ( m_sensor != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        params-&gt;<a class="code" href="class_primitive_params.html#a9338f36c76fd412ec8d05dcfc300b18d">SetDistance</a>( m_sensor-&gt;GetDistance() );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        printf(<span class="stringliteral">&quot;heyyy that lidar is nullptr \n&quot;</span>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    m_minTimeToRun = 0.3;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    m_underDistanceCounts = 0;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_drive_distance.html#a7a4a90ed63d01052a9bfb8b13b402fc7">DriveDistance::Init</a>( params );</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_drive_to_target.html#a38a22ee94a41374f2985b94e92c54163">   78</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_drive_to_target.html#a38a22ee94a41374f2985b94e92c54163">DriveToTarget::Run</a>()</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="class_drive_distance.html#a5658e8083b0b1cc87580297e173a9a27">DriveDistance::Run</a>();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (m_minTimeToRun &lt;= 0) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">if</span> ( m_sensor-&gt;GetDistance() &lt;= MIN_CUBE_DISTANCE ) </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            m_underDistanceCounts++;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    m_minTimeToRun -= <a class="code" href="class_i_primitive.html#acd3b9501892b1950113c63ccb699cb37">IPrimitive::LOOP_LENGTH</a>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_drive_to_target.html#a5620ac5a9477525bee0b2b38563c3801">   91</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_drive_to_target.html#a5620ac5a9477525bee0b2b38563c3801">DriveToTarget::IsDone</a>()</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">bool</span> done = m_underDistanceCounts &gt;= UNDER_DISTANCE_COUNT_THRESHOLD;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> ( <a class="code" href="class_drive_distance.html#acbd6bfcdbecd3b81ddb9201d8025f0d6">DriveDistance::IsDone</a>() || done );</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_drive_to_target.html#a74a34143222aaf914cf400e1bebc5c7c">   37</a></span>&#160;<a class="code" href="class_drive_to_target.html#a74a34143222aaf914cf400e1bebc5c7c">DriveToTarget::DriveToTarget</a>() : <a class="code" href="class_drive_distance.html">DriveDistance</a>(),</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    m_sensor( nullptr ),</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    m_underDistanceCounts( 0 ),</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    m_minTimeToRun( 0 )</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">auto</span> factory = <a class="code" href="class_distance_sensor_factory.html#ac26949a95d6b5582d689f3d2100dff3e">DistanceSensorFactory::GetFactory</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> ( factory != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="comment">//  m_sensor = factory-&gt;GetSensor( IDragonSensor::SENSOR_USAGE::FORWARD_SENSOR );</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_drive_to_target.html#a6ec218d441ef1c263d8c417ca5933af8">   50</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_drive_to_target.html#a6ec218d441ef1c263d8c417ca5933af8">DriveToTarget::Init</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;(</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_primitive_params.html">PrimitiveParams</a>* params</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> ( m_sensor != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        params-&gt;<a class="code" href="class_primitive_params.html#a9338f36c76fd412ec8d05dcfc300b18d">SetDistance</a>( m_sensor-&gt;GetDistance() );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        printf(<span class="stringliteral">&quot;heyyy that lidar is nullptr \n&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    m_minTimeToRun = 0.3;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    m_underDistanceCounts = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="class_drive_distance.html#a7a4a90ed63d01052a9bfb8b13b402fc7">DriveDistance::Init</a>( params );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_drive_to_target.html#a38a22ee94a41374f2985b94e92c54163">   70</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_drive_to_target.html#a38a22ee94a41374f2985b94e92c54163">DriveToTarget::Run</a>()</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_drive_distance.html#a5658e8083b0b1cc87580297e173a9a27">DriveDistance::Run</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (m_minTimeToRun &lt;= 0) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">if</span> ( m_sensor-&gt;GetDistance() &lt;= MIN_CUBE_DISTANCE ) </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            m_underDistanceCounts++;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    m_minTimeToRun -= <a class="code" href="class_i_primitive.html#acd3b9501892b1950113c63ccb699cb37">IPrimitive::LOOP_LENGTH</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_drive_to_target.html#a5620ac5a9477525bee0b2b38563c3801">   83</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_drive_to_target.html#a5620ac5a9477525bee0b2b38563c3801">DriveToTarget::IsDone</a>()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">bool</span> done = m_underDistanceCounts &gt;= UNDER_DISTANCE_COUNT_THRESHOLD;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> ( <a class="code" href="class_drive_distance.html#acbd6bfcdbecd3b81ddb9201d8025f0d6">DriveDistance::IsDone</a>() || done );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_drive_to_target_html_a5620ac5a9477525bee0b2b38563c3801"><div class="ttname"><a href="class_drive_to_target.html#a5620ac5a9477525bee0b2b38563c3801">DriveToTarget::IsDone</a></div><div class="ttdeci">bool IsDone() override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_to_target_8cpp_source.html#l00091">DriveToTarget.cpp:91</a></div></div>
+<div class="ttc" id="aclass_drive_to_target_html_a5620ac5a9477525bee0b2b38563c3801"><div class="ttname"><a href="class_drive_to_target.html#a5620ac5a9477525bee0b2b38563c3801">DriveToTarget::IsDone</a></div><div class="ttdeci">bool IsDone() override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_to_target_8cpp_source.html#l00083">DriveToTarget.cpp:83</a></div></div>
 <div class="ttc" id="aclass_distance_sensor_factory_html_ac26949a95d6b5582d689f3d2100dff3e"><div class="ttname"><a href="class_distance_sensor_factory.html#ac26949a95d6b5582d689f3d2100dff3e">DistanceSensorFactory::GetFactory</a></div><div class="ttdeci">static DistanceSensorFactory * GetFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_distance_sensor_factory_8cpp_source.html#l00048">DistanceSensorFactory.cpp:48</a></div></div>
-<div class="ttc" id="a_i_primitive_8h_html"><div class="ttname"><a href="_i_primitive_8h.html">IPrimitive.h</a></div></div>
 <div class="ttc" id="aclass_primitive_params_html_a9338f36c76fd412ec8d05dcfc300b18d"><div class="ttname"><a href="class_primitive_params.html#a9338f36c76fd412ec8d05dcfc300b18d">PrimitiveParams::SetDistance</a></div><div class="ttdeci">void SetDistance(float distance)</div><div class="ttdef"><b>Definition:</b> <a href="_primitive_params_8cpp_source.html#l00089">PrimitiveParams.cpp:89</a></div></div>
-<div class="ttc" id="aclass_drive_to_target_html_a38a22ee94a41374f2985b94e92c54163"><div class="ttname"><a href="class_drive_to_target.html#a38a22ee94a41374f2985b94e92c54163">DriveToTarget::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_to_target_8cpp_source.html#l00078">DriveToTarget.cpp:78</a></div></div>
-<div class="ttc" id="a_i_mechanism_8h_html"><div class="ttname"><a href="_i_mechanism_8h.html">IMechanism.h</a></div></div>
-<div class="ttc" id="a_mechanism_factory_8h_html"><div class="ttname"><a href="_mechanism_factory_8h.html">MechanismFactory.h</a></div></div>
+<div class="ttc" id="aclass_drive_to_target_html_a38a22ee94a41374f2985b94e92c54163"><div class="ttname"><a href="class_drive_to_target.html#a38a22ee94a41374f2985b94e92c54163">DriveToTarget::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_to_target_8cpp_source.html#l00070">DriveToTarget.cpp:70</a></div></div>
 <div class="ttc" id="aclass_primitive_params_html"><div class="ttname"><a href="class_primitive_params.html">PrimitiveParams</a></div><div class="ttdef"><b>Definition:</b> <a href="_primitive_params_8h_source.html#l00035">PrimitiveParams.h:36</a></div></div>
-<div class="ttc" id="aclass_drive_to_target_html_a6ec218d441ef1c263d8c417ca5933af8"><div class="ttname"><a href="class_drive_to_target.html#a6ec218d441ef1c263d8c417ca5933af8">DriveToTarget::Init</a></div><div class="ttdeci">void Init(PrimitiveParams *params) override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_to_target_8cpp_source.html#l00058">DriveToTarget.cpp:59</a></div></div>
-<div class="ttc" id="a_logger_8h_html"><div class="ttname"><a href="_logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="aclass_drive_distance_html_acbd6bfcdbecd3b81ddb9201d8025f0d6"><div class="ttname"><a href="class_drive_distance.html#acbd6bfcdbecd3b81ddb9201d8025f0d6">DriveDistance::IsDone</a></div><div class="ttdeci">bool IsDone() override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_distance_8cpp_source.html#l00114">DriveDistance.cpp:114</a></div></div>
-<div class="ttc" id="a_do_nothing_8h_html"><div class="ttname"><a href="_do_nothing_8h.html">DoNothing.h</a></div></div>
-<div class="ttc" id="aclass_drive_distance_html_a7a4a90ed63d01052a9bfb8b13b402fc7"><div class="ttname"><a href="class_drive_distance.html#a7a4a90ed63d01052a9bfb8b13b402fc7">DriveDistance::Init</a></div><div class="ttdeci">void Init(PrimitiveParams *params) override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_distance_8cpp_source.html#l00066">DriveDistance.cpp:66</a></div></div>
+<div class="ttc" id="aclass_drive_to_target_html_a6ec218d441ef1c263d8c417ca5933af8"><div class="ttname"><a href="class_drive_to_target.html#a6ec218d441ef1c263d8c417ca5933af8">DriveToTarget::Init</a></div><div class="ttdeci">void Init(PrimitiveParams *params) override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_to_target_8cpp_source.html#l00050">DriveToTarget.cpp:51</a></div></div>
+<div class="ttc" id="aclass_drive_distance_html_acbd6bfcdbecd3b81ddb9201d8025f0d6"><div class="ttname"><a href="class_drive_distance.html#acbd6bfcdbecd3b81ddb9201d8025f0d6">DriveDistance::IsDone</a></div><div class="ttdeci">bool IsDone() override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_distance_8cpp_source.html#l00110">DriveDistance.cpp:110</a></div></div>
+<div class="ttc" id="aclass_drive_distance_html_a7a4a90ed63d01052a9bfb8b13b402fc7"><div class="ttname"><a href="class_drive_distance.html#a7a4a90ed63d01052a9bfb8b13b402fc7">DriveDistance::Init</a></div><div class="ttdeci">void Init(PrimitiveParams *params) override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_distance_8cpp_source.html#l00062">DriveDistance.cpp:62</a></div></div>
 <div class="ttc" id="aclass_i_primitive_html_acd3b9501892b1950113c63ccb699cb37"><div class="ttname"><a href="class_i_primitive.html#acd3b9501892b1950113c63ccb699cb37">IPrimitive::LOOP_LENGTH</a></div><div class="ttdeci">const float LOOP_LENGTH</div><div class="ttdef"><b>Definition:</b> <a href="_i_primitive_8h_source.html#l00024">IPrimitive.h:24</a></div></div>
 <div class="ttc" id="a_drive_distance_8h_html"><div class="ttname"><a href="_drive_distance_8h.html">DriveDistance.h</a></div></div>
 <div class="ttc" id="a_drive_to_target_8h_html"><div class="ttname"><a href="_drive_to_target_8h.html">DriveToTarget.h</a></div></div>
-<div class="ttc" id="aclass_drive_distance_html_a5658e8083b0b1cc87580297e173a9a27"><div class="ttname"><a href="class_drive_distance.html#a5658e8083b0b1cc87580297e173a9a27">DriveDistance::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_distance_8cpp_source.html#l00083">DriveDistance.cpp:83</a></div></div>
+<div class="ttc" id="aclass_drive_distance_html"><div class="ttname"><a href="class_drive_distance.html">DriveDistance</a></div><div class="ttdef"><b>Definition:</b> <a href="_drive_distance_8h_source.html#l00031">DriveDistance.h:32</a></div></div>
+<div class="ttc" id="aclass_drive_distance_html_a5658e8083b0b1cc87580297e173a9a27"><div class="ttname"><a href="class_drive_distance.html#a5658e8083b0b1cc87580297e173a9a27">DriveDistance::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_drive_distance_8cpp_source.html#l00079">DriveDistance.cpp:79</a></div></div>
 <div class="ttc" id="a_primitive_params_8h_html"><div class="ttname"><a href="_primitive_params_8h.html">PrimitiveParams.h</a></div></div>
 <div class="ttc" id="anamespacefrc_html"><div class="ttname"><a href="namespacefrc.html">frc</a></div><div class="ttdef"><b>Definition:</b> <a href="_do_nothing_8h_source.html#l00034">DoNothing.h:35</a></div></div>
 <div class="ttc" id="a_distance_sensor_factory_8h_html"><div class="ttname"><a href="_distance_sensor_factory_8h.html">DistanceSensorFactory.h</a></div></div>
 <div class="ttc" id="a_i_dragon_distance_sensor_8h_html"><div class="ttname"><a href="_i_dragon_distance_sensor_8h.html">IDragonDistanceSensor.h</a></div></div>
-<div class="ttc" id="aclass_drive_to_target_html_a74a34143222aaf914cf400e1bebc5c7c"><div class="ttname"><a href="class_drive_to_target.html#a74a34143222aaf914cf400e1bebc5c7c">DriveToTarget::DriveToTarget</a></div><div class="ttdeci">DriveToTarget()</div><div class="ttdef"><b>Definition:</b> <a href="_drive_to_target_8cpp_source.html#l00045">DriveToTarget.cpp:45</a></div></div>
-<div class="ttc" id="a_control_modes_8h_html"><div class="ttname"><a href="_control_modes_8h.html">ControlModes.h</a></div></div>
+<div class="ttc" id="aclass_drive_to_target_html_a74a34143222aaf914cf400e1bebc5c7c"><div class="ttname"><a href="class_drive_to_target.html#a74a34143222aaf914cf400e1bebc5c7c">DriveToTarget::DriveToTarget</a></div><div class="ttdeci">DriveToTarget()</div><div class="ttdef"><b>Definition:</b> <a href="_drive_to_target_8cpp_source.html#l00037">DriveToTarget.cpp:37</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

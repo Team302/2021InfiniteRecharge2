@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/Impeller.cpp Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/subsys/Impeller.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -127,54 +127,51 @@ $(document).ready(function(){initNavTree('_impeller_8cpp_source.html',''); initR
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;(</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    shared_ptr&lt;IDragonMotorController&gt; motor,</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    shared_ptr&lt;CANCoder&gt; encoder</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;) : <a class="code" href="class_mech1_ind_motor.html">Mech1IndMotor</a>( <a class="code" href="class_mechanism_types.html">MechanismTypes</a>::MECHANISM_TYPE::IMPELLER, </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                   string(<span class="stringliteral">&quot;impeller.xml&quot;</span>), </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                   string(<span class="stringliteral">&quot;ImpellerNT&quot;</span>), </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                   move(motor) ),</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    m_encoder( move(encoder))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> ( motor.get() != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> ( encoder.get() != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            motor.get()-&gt;SetRemoteSensor( encoder.get()-&gt;GetDeviceNumber(), RemoteSensorSource::RemoteSensorSource_CANCoder );</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Impeller::Impeller&quot;</span>), <span class="keywordtype">string</span>(<span class="stringliteral">&quot;No encoder&quot;</span>));</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Impeller::Impeller&quot;</span>), <span class="keywordtype">string</span>(<span class="stringliteral">&quot;No motor&quot;</span>));</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_impeller.html#ad88ff94a768d7584cb45207a71d2ade9">   69</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_impeller.html#ad88ff94a768d7584cb45207a71d2ade9">Impeller::GetPosition</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">return</span> m_encoder.get() != <span class="keyword">nullptr</span> ? m_encoder.get()-&gt;GetAbsolutePosition() : 0.0;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_impeller.html#a6fe9c758b4b59f43ae31595fd5fd8c9b">   77</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_impeller.html#a6fe9c758b4b59f43ae31595fd5fd8c9b">Impeller::GetSpeed</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> m_encoder.get() != <span class="keyword">nullptr</span> ? m_encoder.get()-&gt;GetVelocity()*10.0 : 0.0;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;) : <a class="code" href="class_mech1_ind_motor.html">Mech1IndMotor</a>( <a class="code" href="class_mechanism_types.html">MechanismTypes</a>::MECHANISM_TYPE::IMPELLER,  string(<span class="stringliteral">&quot;impeller.xml&quot;</span>),  string(<span class="stringliteral">&quot;ImpellerNT&quot;</span>),  motor ),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    m_encoder( encoder )</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> ( motor.get() != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> ( encoder.get() != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            motor.get()-&gt;SetRemoteSensor( encoder.get()-&gt;GetDeviceNumber(), RemoteSensorSource::RemoteSensorSource_CANCoder );</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Impeller::Impeller&quot;</span>), <span class="keywordtype">string</span>(<span class="stringliteral">&quot;No encoder&quot;</span>));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a>()-&gt;<a class="code" href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">LogError</a>( <span class="keywordtype">string</span>(<span class="stringliteral">&quot;Impeller::Impeller&quot;</span>), <span class="keywordtype">string</span>(<span class="stringliteral">&quot;No motor&quot;</span>));</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_impeller.html#ad88ff94a768d7584cb45207a71d2ade9">   66</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_impeller.html#ad88ff94a768d7584cb45207a71d2ade9">Impeller::GetPosition</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> m_encoder.get() != <span class="keyword">nullptr</span> ? m_encoder.get()-&gt;GetAbsolutePosition() : 0.0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_impeller.html#a6fe9c758b4b59f43ae31595fd5fd8c9b">   74</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_impeller.html#a6fe9c758b4b59f43ae31595fd5fd8c9b">Impeller::GetSpeed</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> m_encoder.get() != <span class="keyword">nullptr</span> ? m_encoder.get()-&gt;GetVelocity()*10.0 : 0.0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_impeller_html_ad88ff94a768d7584cb45207a71d2ade9"><div class="ttname"><a href="class_impeller.html#ad88ff94a768d7584cb45207a71d2ade9">Impeller::GetPosition</a></div><div class="ttdeci">double GetPosition() const override</div><div class="ttdoc">Return the current position of the impeller in degrees (positive is cw, negative is ccw)</div><div class="ttdef"><b>Definition:</b> <a href="_impeller_8cpp_source.html#l00069">Impeller.cpp:69</a></div></div>
-<div class="ttc" id="aclass_mech1_ind_motor_html"><div class="ttname"><a href="class_mech1_ind_motor.html">Mech1IndMotor</a></div><div class="ttdef"><b>Definition:</b> <a href="_mech1_ind_motor_8h_source.html#l00039">Mech1IndMotor.h:40</a></div></div>
+<div class="ttc" id="aclass_impeller_html_ad88ff94a768d7584cb45207a71d2ade9"><div class="ttname"><a href="class_impeller.html#ad88ff94a768d7584cb45207a71d2ade9">Impeller::GetPosition</a></div><div class="ttdeci">double GetPosition() const override</div><div class="ttdoc">Return the current position of the impeller in degrees (positive is cw, negative is ccw)</div><div class="ttdef"><b>Definition:</b> <a href="_impeller_8cpp_source.html#l00066">Impeller.cpp:66</a></div></div>
+<div class="ttc" id="aclass_mech1_ind_motor_html"><div class="ttname"><a href="class_mech1_ind_motor.html">Mech1IndMotor</a></div><div class="ttdef"><b>Definition:</b> <a href="_mech1_ind_motor_8h_source.html#l00040">Mech1IndMotor.h:41</a></div></div>
 <div class="ttc" id="aclass_mechanism_types_html"><div class="ttname"><a href="class_mechanism_types.html">MechanismTypes</a></div><div class="ttdoc">This contains the enum for the mechanism types.</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_types_8h_source.html#l00023">MechanismTypes.h:24</a></div></div>
-<div class="ttc" id="aclass_impeller_html_a6fe9c758b4b59f43ae31595fd5fd8c9b"><div class="ttname"><a href="class_impeller.html#a6fe9c758b4b59f43ae31595fd5fd8c9b">Impeller::GetSpeed</a></div><div class="ttdeci">double GetSpeed() const override</div><div class="ttdoc">Return the current position of the impeller in degrees per second (positive is cw,...</div><div class="ttdef"><b>Definition:</b> <a href="_impeller_8cpp_source.html#l00077">Impeller.cpp:77</a></div></div>
+<div class="ttc" id="aclass_impeller_html_a6fe9c758b4b59f43ae31595fd5fd8c9b"><div class="ttname"><a href="class_impeller.html#a6fe9c758b4b59f43ae31595fd5fd8c9b">Impeller::GetSpeed</a></div><div class="ttdeci">double GetSpeed() const override</div><div class="ttdoc">Return the current position of the impeller in degrees per second (positive is cw,...</div><div class="ttdef"><b>Definition:</b> <a href="_impeller_8cpp_source.html#l00074">Impeller.cpp:74</a></div></div>
 <div class="ttc" id="a_logger_8h_html"><div class="ttname"><a href="_logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="a_impeller_8h_html"><div class="ttname"><a href="_impeller_8h.html">Impeller.h</a></div></div>
 <div class="ttc" id="aclass_logger_html_a98d7aec19dcdfb9d8faa46d83d927883"><div class="ttname"><a href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">Logger::LogError</a></div><div class="ttdeci">void LogError(const std::string &amp;locationIdentifier, const std::string &amp;message)</div><div class="ttdoc">log a message</div></div>
 <div class="ttc" id="aclass_logger_html_ae85cfbef8b7e6940475a5012fa1935c6"><div class="ttname"><a href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a></div><div class="ttdeci">static Logger * GetLogger()</div><div class="ttdoc">Find or create the singleton logger.</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00049">Logger.cpp:49</a></div></div>
 <div class="ttc" id="aclass_impeller_html_a33b858e848272f5e03f0ede9c4cfac4a"><div class="ttname"><a href="class_impeller.html#a33b858e848272f5e03f0ede9c4cfac4a">Impeller::Impeller</a></div><div class="ttdeci">Impeller()=delete</div></div>
 <div class="ttc" id="a_conversion_utils_8h_html"><div class="ttname"><a href="_conversion_utils_8h.html">ConversionUtils.h</a></div></div>
-<div class="ttc" id="anamespacectre_1_1phoenix_1_1sensors_html"><div class="ttname"><a href="namespacectre_1_1phoenix_1_1sensors.html">ctre::phoenix::sensors</a></div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8h_source.html#l00057">MechanismFactory.h:58</a></div></div>
+<div class="ttc" id="anamespacectre_1_1phoenix_1_1sensors_html"><div class="ttname"><a href="namespacectre_1_1phoenix_1_1sensors.html">ctre::phoenix::sensors</a></div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8h_source.html#l00061">MechanismFactory.h:62</a></div></div>
 <div class="ttc" id="a_i_dragon_motor_controller_8h_html"><div class="ttname"><a href="_i_dragon_motor_controller_8h.html">IDragonMotorController.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

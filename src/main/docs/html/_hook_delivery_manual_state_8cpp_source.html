@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/states/hookdelivery/HookDeliveryManualState.cpp Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/hookdelivery/HookDeliveryManualState.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -94,56 +94,63 @@ $(document).ready(function(){initNavTree('_hook_delivery_manual_state_8cpp_sourc
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// FRC includes</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Team 302 includes</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_hook_delivery_manual_state_8h.html">states/hookdelivery/HookDeliveryManualState.h</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_state_8h.html">states/MechanismState.h</a>&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mechanism_8h.html">subsys/IMechanism.h</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_factory_8h.html">subsys/MechanismFactory.h</a>&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_target_data_8h.html">controllers/MechanismTargetData.h</a>&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_teleop_control_8h.html">gamepad/TeleopControl.h</a>&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_data_8h.html">controllers/ControlData.h</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_teleop_control_8h.html">gamepad/TeleopControl.h</a>&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_hook_delivery_manual_state_8h.html">states/hookdelivery/HookDeliveryManualState.h</a>&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mech1_motor_state_8h.html">states/Mech1MotorState.h</a>&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_factory_8h.html">subsys/MechanismFactory.h</a>&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// Third Party Includes</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_hook_delivery_manual_state.html#a386e1a2f4249f60adb5c51ceb8b2ab64">   34</a></span>&#160;<a class="code" href="class_hook_delivery_manual_state.html#ac92499ba5d136f0400b4fe00be5c6341">HookDeliveryManualState::HookDeliveryManualState</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_hook_delivery_manual_state.html#a1809768e2d97c52d87f0bb3e4af7ba62">   34</a></span>&#160;<a class="code" href="class_hook_delivery_manual_state.html#ac92499ba5d136f0400b4fe00be5c6341">HookDeliveryManualState::HookDeliveryManualState</a></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;(</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_control_data.html">ControlData</a>*                    control,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">double</span>                          target,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_mechanism_target_data.html#a1bd7dca52842f28088b36d001b0ac125">MechanismTargetData::SOLENOID</a>   solState</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;) : <a class="code" href="class_mechanism_state.html">MechanismState</a>( <a class="code" href="class_mechanism_factory.html">MechanismFactory</a>::GetMechanismFactory()-&gt;GetIMechanism(<a class="code" href="class_mechanism_types.html">MechanismTypes</a>::MECHANISM_TYPE::HOOK_DELIVERY), control, target, solState )</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_hook_delivery_manual_state.html#a7efa972895fab2797b3ef6a5ff31de6e">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hook_delivery_manual_state.html#a7efa972895fab2797b3ef6a5ff31de6e">HookDeliveryManualState::Run</a>()</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">auto</span> mech = <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;<a class="code" href="class_mechanism_factory.html#ac998fa26f866713a30093ce0c2ed5f80">GetIMechanism</a>(MechanismTypes::MECHANISM_TYPE::HOOK_DELIVERY);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">auto</span> ctl = <a class="code" href="class_teleop_control.html#abcca1fa489e538a5f42c920747a4f598">TeleopControl::GetInstance</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> ( mech != <span class="keyword">nullptr</span> &amp;&amp; ctl != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">auto</span> up = ctl-&gt;GetAxisValue( TeleopControl::FUNCTION_IDENTIFIER::MANUAL_HOOK_CONTROL_UP );</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">auto</span> down = ctl-&gt;GetAxisValue( TeleopControl::FUNCTION_IDENTIFIER::MANUAL_HOOK_CONTROL_DOWN );</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        mech-&gt;SetOutput( ControlModes::CONTROL_TYPE::PERCENT_OUTPUT, (up-down) );</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">double</span>                          target</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;) : <a class="code" href="class_mech1_motor_state.html">Mech1MotorState</a>( <a class="code" href="class_mechanism_factory.html">MechanismFactory</a>::GetMechanismFactory()-&gt;GetHookDelivery().get(), control, target )</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_hook_delivery_manual_state.html#a6f9b8ea4a79cfc4533951253c0e53153">   42</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hook_delivery_manual_state.html#a6f9b8ea4a79cfc4533951253c0e53153">HookDeliveryManualState::Init</a>()</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">auto</span> gamepad = <a class="code" href="class_teleop_control.html#abcca1fa489e538a5f42c920747a4f598">TeleopControl::GetInstance</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> ( gamepad != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        gamepad -&gt;SetAxisProfile( TeleopControl::FUNCTION_IDENTIFIER::MANUAL_HOOK_CONTROL_DOWN, IDragonGamePad::AXIS_PROFILE::CUBED );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        gamepad -&gt;SetAxisProfile( TeleopControl::FUNCTION_IDENTIFIER::MANUAL_HOOK_CONTROL_UP, IDragonGamePad::AXIS_PROFILE::CUBED );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_hook_delivery_manual_state.html#a7efa972895fab2797b3ef6a5ff31de6e">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hook_delivery_manual_state.html#a7efa972895fab2797b3ef6a5ff31de6e">HookDeliveryManualState::Run</a>()</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">auto</span> mech = <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;<a class="code" href="class_mechanism_factory.html#aa3cf1d3ba9bc8f92025e46391044789a">GetHookDelivery</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">auto</span> gamepad = <a class="code" href="class_teleop_control.html#abcca1fa489e538a5f42c920747a4f598">TeleopControl::GetInstance</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> ( mech.get() != <span class="keyword">nullptr</span> &amp;&amp; gamepad != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">auto</span> up = gamepad-&gt;GetAxisValue( TeleopControl::FUNCTION_IDENTIFIER::MANUAL_HOOK_CONTROL_UP );</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">auto</span> down = gamepad-&gt;GetAxisValue( TeleopControl::FUNCTION_IDENTIFIER::MANUAL_HOOK_CONTROL_DOWN );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        mech.get()-&gt;UpdateTarget((up-down));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        mech.get()-&gt;Update();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_mechanism_factory_html_ac998fa26f866713a30093ce0c2ed5f80"><div class="ttname"><a href="class_mechanism_factory.html#ac998fa26f866713a30093ce0c2ed5f80">MechanismFactory::GetIMechanism</a></div><div class="ttdeci">IMechanism * GetIMechanism(MechanismTypes::MECHANISM_TYPE type)</div><div class="ttdoc">Find the requested mechanism.</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00093">MechanismFactory.cpp:94</a></div></div>
-<div class="ttc" id="aclass_mechanism_target_data_html_a1bd7dca52842f28088b36d001b0ac125"><div class="ttname"><a href="class_mechanism_target_data.html#a1bd7dca52842f28088b36d001b0ac125">MechanismTargetData::SOLENOID</a></div><div class="ttdeci">SOLENOID</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_target_data_8h_source.html#l00025">MechanismTargetData.h:26</a></div></div>
 <div class="ttc" id="a_teleop_control_8h_html"><div class="ttname"><a href="_teleop_control_8h.html">TeleopControl.h</a></div></div>
-<div class="ttc" id="aclass_mechanism_types_html"><div class="ttname"><a href="class_mechanism_types.html">MechanismTypes</a></div><div class="ttdoc">This contains the enum for the mechanism types.</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_types_8h_source.html#l00023">MechanismTypes.h:24</a></div></div>
-<div class="ttc" id="a_mechanism_state_8h_html"><div class="ttname"><a href="_mechanism_state_8h.html">MechanismState.h</a></div></div>
-<div class="ttc" id="a_i_mechanism_8h_html"><div class="ttname"><a href="_i_mechanism_8h.html">IMechanism.h</a></div></div>
+<div class="ttc" id="aclass_hook_delivery_manual_state_html_a6f9b8ea4a79cfc4533951253c0e53153"><div class="ttname"><a href="class_hook_delivery_manual_state.html#a6f9b8ea4a79cfc4533951253c0e53153">HookDeliveryManualState::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_hook_delivery_manual_state_8cpp_source.html#l00042">HookDeliveryManualState.cpp:42</a></div></div>
 <div class="ttc" id="a_mechanism_factory_8h_html"><div class="ttname"><a href="_mechanism_factory_8h.html">MechanismFactory.h</a></div></div>
-<div class="ttc" id="a_mechanism_target_data_8h_html"><div class="ttname"><a href="_mechanism_target_data_8h.html">MechanismTargetData.h</a></div></div>
-<div class="ttc" id="aclass_mechanism_factory_html"><div class="ttname"><a href="class_mechanism_factory.html">MechanismFactory</a></div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8h_source.html#l00069">MechanismFactory.h:70</a></div></div>
-<div class="ttc" id="aclass_hook_delivery_manual_state_html_a7efa972895fab2797b3ef6a5ff31de6e"><div class="ttname"><a href="class_hook_delivery_manual_state.html#a7efa972895fab2797b3ef6a5ff31de6e">HookDeliveryManualState::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_hook_delivery_manual_state_8cpp_source.html#l00044">HookDeliveryManualState.cpp:44</a></div></div>
+<div class="ttc" id="a_mech1_motor_state_8h_html"><div class="ttname"><a href="_mech1_motor_state_8h.html">Mech1MotorState.h</a></div></div>
+<div class="ttc" id="a_control_data_8h_html"><div class="ttname"><a href="_control_data_8h.html">ControlData.h</a></div></div>
+<div class="ttc" id="aclass_mechanism_factory_html"><div class="ttname"><a href="class_mechanism_factory.html">MechanismFactory</a></div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8h_source.html#l00073">MechanismFactory.h:74</a></div></div>
+<div class="ttc" id="aclass_mech1_motor_state_html"><div class="ttname"><a href="class_mech1_motor_state.html">Mech1MotorState</a></div><div class="ttdoc">information about the control (open loop, closed loop position, closed loop velocity,...</div><div class="ttdef"><b>Definition:</b> <a href="_mech1_motor_state_8h_source.html#l00024">Mech1MotorState.h:25</a></div></div>
+<div class="ttc" id="aclass_mechanism_factory_html_aa3cf1d3ba9bc8f92025e46391044789a"><div class="ttname"><a href="class_mechanism_factory.html#aa3cf1d3ba9bc8f92025e46391044789a">MechanismFactory::GetHookDelivery</a></div><div class="ttdeci">std::shared_ptr&lt; HookDelivery &gt; GetHookDelivery() const</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8h_source.html#l00102">MechanismFactory.h:102</a></div></div>
+<div class="ttc" id="aclass_hook_delivery_manual_state_html_a7efa972895fab2797b3ef6a5ff31de6e"><div class="ttname"><a href="class_hook_delivery_manual_state.html#a7efa972895fab2797b3ef6a5ff31de6e">HookDeliveryManualState::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_hook_delivery_manual_state_8cpp_source.html#l00053">HookDeliveryManualState.cpp:53</a></div></div>
 <div class="ttc" id="aclass_control_data_html"><div class="ttname"><a href="class_control_data.html">ControlData</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_data_8h_source.html#l00022">ControlData.h:23</a></div></div>
 <div class="ttc" id="aclass_teleop_control_html_abcca1fa489e538a5f42c920747a4f598"><div class="ttname"><a href="class_teleop_control.html#abcca1fa489e538a5f42c920747a4f598">TeleopControl::GetInstance</a></div><div class="ttdeci">static TeleopControl * GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_teleop_control_8cpp_source.html#l00044">TeleopControl.cpp:44</a></div></div>
-<div class="ttc" id="aclass_mechanism_state_html"><div class="ttname"><a href="class_mechanism_state.html">MechanismState</a></div><div class="ttdoc">information about the control (open loop, closed loop position, closed loop velocity,...</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_state_8h_source.html#l00024">MechanismState.h:25</a></div></div>
-<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00072">MechanismFactory.cpp:72</a></div></div>
+<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00071">MechanismFactory.cpp:71</a></div></div>
 <div class="ttc" id="aclass_hook_delivery_manual_state_html_ac92499ba5d136f0400b4fe00be5c6341"><div class="ttname"><a href="class_hook_delivery_manual_state.html#ac92499ba5d136f0400b4fe00be5c6341">HookDeliveryManualState::HookDeliveryManualState</a></div><div class="ttdeci">HookDeliveryManualState()=delete</div></div>
 <div class="ttc" id="a_hook_delivery_manual_state_8h_html"><div class="ttname"><a href="_hook_delivery_manual_state_8h.html">HookDeliveryManualState.h</a></div></div>
 <!-- start footer part -->

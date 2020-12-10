@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/states/controlPanel/ControlPanelStateMgr.cpp Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/controlPanel/ControlPanelStateMgr.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -205,7 +205,7 @@ $(document).ready(function(){initNavTree('_control_panel_state_mgr_8cpp_source.h
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
 <div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_control_panel_state_mgr.html#a1e3c91c110f9fe2251f35dbd23d29220">  122</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_control_panel_state_mgr.html#a1e3c91c110f9fe2251f35dbd23d29220">ControlPanelStateMgr::RunCurrentState</a>()</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;GetIMechanism(MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR) != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;GetControlPanel().get() != <span class="keyword">nullptr</span> )</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">// process teleop/manual interrupts</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keyword">auto</span> controller = <a class="code" href="class_teleop_control.html#abcca1fa489e538a5f42c920747a4f598">TeleopControl::GetInstance</a>();</div>
@@ -256,7 +256,7 @@ $(document).ready(function(){initNavTree('_control_panel_state_mgr_8cpp_source.h
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        m_currentState-&gt;<a class="code" href="class_i_state.html#ac1400e68fde2f088873f5ec283309977">Init</a>();</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">if</span> ( run )</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;GetIMechanism(MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR) != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>()-&gt;GetControlPanel().get() != <span class="keyword">nullptr</span> )</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            {</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                m_currentState-&gt;<a class="code" href="class_i_state.html#a1dc31736da7d9e9322c1cc417672ea0f">Run</a>();</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            }</div>
@@ -269,7 +269,7 @@ $(document).ready(function(){initNavTree('_control_panel_state_mgr_8cpp_source.h
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="a_control_panel_manual_8h_html"><div class="ttname"><a href="_control_panel_manual_8h.html">ControlPanelManual.h</a></div></div>
-<div class="ttc" id="aclass_control_panel_state_html"><div class="ttname"><a href="class_control_panel_state.html">ControlPanelState</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_state_8h_source.html#l00025">ControlPanelState.h:26</a></div></div>
+<div class="ttc" id="aclass_control_panel_state_html"><div class="ttname"><a href="class_control_panel_state.html">ControlPanelState</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_state_8h_source.html#l00027">ControlPanelState.h:28</a></div></div>
 <div class="ttc" id="a_teleop_control_8h_html"><div class="ttname"><a href="_teleop_control_8h.html">TeleopControl.h</a></div></div>
 <div class="ttc" id="a_mechanism_factory_8h_html"><div class="ttname"><a href="_mechanism_factory_8h.html">MechanismFactory.h</a></div></div>
 <div class="ttc" id="aclass_i_state_html_ac1400e68fde2f088873f5ec283309977"><div class="ttname"><a href="class_i_state.html#ac1400e68fde2f088873f5ec283309977">IState::Init</a></div><div class="ttdeci">virtual void Init()=0</div></div>
@@ -285,10 +285,10 @@ $(document).ready(function(){initNavTree('_control_panel_state_mgr_8cpp_source.h
 <div class="ttc" id="aclass_control_panel_state_mgr_html_a1e3c91c110f9fe2251f35dbd23d29220"><div class="ttname"><a href="class_control_panel_state_mgr.html#a1e3c91c110f9fe2251f35dbd23d29220">ControlPanelStateMgr::RunCurrentState</a></div><div class="ttdeci">void RunCurrentState()</div><div class="ttdoc">run the current state</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_state_mgr_8cpp_source.html#l00122">ControlPanelStateMgr.cpp:122</a></div></div>
 <div class="ttc" id="a_control_panel_state_mgr_8h_html"><div class="ttname"><a href="_control_panel_state_mgr_8h.html">ControlPanelStateMgr.h</a></div></div>
 <div class="ttc" id="aclass_teleop_control_html_abcca1fa489e538a5f42c920747a4f598"><div class="ttname"><a href="class_teleop_control.html#abcca1fa489e538a5f42c920747a4f598">TeleopControl::GetInstance</a></div><div class="ttdeci">static TeleopControl * GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_teleop_control_8cpp_source.html#l00044">TeleopControl.cpp:44</a></div></div>
-<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00072">MechanismFactory.cpp:72</a></div></div>
-<div class="ttc" id="aclass_control_panel_state_mgr_html_a87648a2688942ba2bbbaee7adb895c3a"><div class="ttname"><a href="class_control_panel_state_mgr.html#a87648a2688942ba2bbbaee7adb895c3a">ControlPanelStateMgr::CONTROL_PANEL_STATE</a></div><div class="ttdeci">CONTROL_PANEL_STATE</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_state_mgr_8h_source.html#l00019">ControlPanelStateMgr.h:20</a></div></div>
-<div class="ttc" id="aclass_control_panel_state_mgr_html"><div class="ttname"><a href="class_control_panel_state_mgr.html">ControlPanelStateMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_state_mgr_8h_source.html#l00015">ControlPanelStateMgr.h:16</a></div></div>
-<div class="ttc" id="aclass_control_panel_manual_html"><div class="ttname"><a href="class_control_panel_manual.html">ControlPanelManual</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_manual_8h_source.html#l00025">ControlPanelManual.h:26</a></div></div>
+<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00071">MechanismFactory.cpp:71</a></div></div>
+<div class="ttc" id="aclass_control_panel_state_mgr_html_a87648a2688942ba2bbbaee7adb895c3a"><div class="ttname"><a href="class_control_panel_state_mgr.html#a87648a2688942ba2bbbaee7adb895c3a">ControlPanelStateMgr::CONTROL_PANEL_STATE</a></div><div class="ttdeci">CONTROL_PANEL_STATE</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_state_mgr_8h_source.html#l00020">ControlPanelStateMgr.h:21</a></div></div>
+<div class="ttc" id="aclass_control_panel_state_mgr_html"><div class="ttname"><a href="class_control_panel_state_mgr.html">ControlPanelStateMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_state_mgr_8h_source.html#l00016">ControlPanelStateMgr.h:17</a></div></div>
+<div class="ttc" id="aclass_control_panel_manual_html"><div class="ttname"><a href="class_control_panel_manual.html">ControlPanelManual</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_manual_8h_source.html#l00024">ControlPanelManual.h:25</a></div></div>
 <div class="ttc" id="a_control_panel_state_8h_html"><div class="ttname"><a href="_control_panel_state_8h.html">ControlPanelState.h</a></div></div>
 <div class="ttc" id="a_mechanism_types_8h_html"><div class="ttname"><a href="_mechanism_types_8h.html">MechanismTypes.h</a></div></div>
 <!-- start footer part -->

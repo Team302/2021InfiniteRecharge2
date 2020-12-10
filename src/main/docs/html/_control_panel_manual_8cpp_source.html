@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>2021InfiniteRecharge2: /GitRepos/2021InfiniteRecharge2/src/main/cpp/states/controlPanel/ControlPanelManual.cpp Source File</title>
+<title>Team 302 Robot: C:/GitRepos/2021InfiniteRecharge2/src/main/cpp/states/controlPanel/ControlPanelManual.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">2021InfiniteRecharge2
+   <div id="projectname">Team 302 Robot
    </div>
   </td>
  </tr>
@@ -102,8 +102,8 @@ $(document).ready(function(){initNavTree('_control_panel_manual_8cpp_source.html
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_state_8h.html">states/IState.h</a>&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_mechanism_8h.html">subsys/IMechanism.h</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_teleop_control_8h.html">gamepad/TeleopControl.h</a>&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_i_state_8h.html">states/IState.h</a>&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_mechanism_factory_8h.html">subsys/MechanismFactory.h</a>&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_panel_8h.html">subsys/ControlPanel.h</a>&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_control_panel_manual_8h.html">states/controlPanel/ControlPanelManual.h</a>&gt;</span></div>
@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('_control_panel_manual_8cpp_source.html
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                                                                    m_controller( <a class="code" href="class_teleop_control.html">TeleopControl</a>::GetInstance() )</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">auto</span> factory = <a class="code" href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    m_control_panel_manipulator = factory -&gt; GetIMechanism(MechanismTypes::MECHANISM_TYPE::CONTROL_TABLE_MANIPULATOR);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    m_controlPanel = factory -&gt; GetControlPanel();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span> ( m_controller == <span class="keyword">nullptr</span> )</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
@@ -130,11 +130,11 @@ $(document).ready(function(){initNavTree('_control_panel_manual_8cpp_source.html
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_control_panel_manual.html#a98716b103b2aa09edef5485f26715202">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_control_panel_manual.html#a98716b103b2aa09edef5485f26715202">ControlPanelManual::Init</a>()</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> ( m_controller != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        m_controller-&gt;<a class="code" href="class_teleop_control.html#a31176133035fb6d4acc3b10e22246077">SetAxisProfile</a>( TeleopControl::FUNCTION_IDENTIFIER::CONTROL_PANEL_MANUAL, IDragonGamePad::AXIS_PROFILE::CUBED );</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">auto</span> controller = <a class="code" href="class_teleop_control.html#abcca1fa489e538a5f42c920747a4f598">TeleopControl::GetInstance</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> ( controller != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        controller-&gt;SetAxisProfile( TeleopControl::FUNCTION_IDENTIFIER::CONTROL_PANEL_MANUAL, IDragonGamePad::AXIS_PROFILE::CUBED );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
@@ -142,8 +142,8 @@ $(document).ready(function(){initNavTree('_control_panel_manual_8cpp_source.html
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">auto</span> manipulator = m_controller-&gt;<a class="code" href="class_teleop_control.html#a9c6affa7d87ae898c531e567fce73b15">GetAxisValue</a>( TeleopControl::FUNCTION_IDENTIFIER::CONTROL_PANEL_MANUAL );</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;m_control-&gt;UpdateTarget(manipulator);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;m_control.get()-&gt;Update();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;m_controlPanel.get()-&gt;UpdateTarget(manipulator);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;m_controlPanel.get()-&gt;Update();</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
@@ -156,14 +156,13 @@ $(document).ready(function(){initNavTree('_control_panel_manual_8cpp_source.html
 </div><!-- doc-content -->
 <div class="ttc" id="a_control_panel_manual_8h_html"><div class="ttname"><a href="_control_panel_manual_8h.html">ControlPanelManual.h</a></div></div>
 <div class="ttc" id="aclass_i_state_html"><div class="ttname"><a href="class_i_state.html">IState</a></div><div class="ttdoc">Interface for state classes.</div><div class="ttdef"><b>Definition:</b> <a href="_i_state_8h_source.html#l00021">IState.h:22</a></div></div>
-<div class="ttc" id="a_i_mechanism_8h_html"><div class="ttname"><a href="_i_mechanism_8h.html">IMechanism.h</a></div></div>
+<div class="ttc" id="a_teleop_control_8h_html"><div class="ttname"><a href="_teleop_control_8h.html">TeleopControl.h</a></div></div>
 <div class="ttc" id="a_mechanism_factory_8h_html"><div class="ttname"><a href="_mechanism_factory_8h.html">MechanismFactory.h</a></div></div>
 <div class="ttc" id="a_control_data_8h_html"><div class="ttname"><a href="_control_data_8h.html">ControlData.h</a></div></div>
 <div class="ttc" id="aclass_control_panel_manual_html_a49a0fa8b5ddd45144035d9efc921453a"><div class="ttname"><a href="class_control_panel_manual.html#a49a0fa8b5ddd45144035d9efc921453a">ControlPanelManual::ControlPanelManual</a></div><div class="ttdeci">ControlPanelManual()=delete</div></div>
 <div class="ttc" id="a_logger_8h_html"><div class="ttname"><a href="_logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="aclass_teleop_control_html_a9c6affa7d87ae898c531e567fce73b15"><div class="ttname"><a href="class_teleop_control.html#a9c6affa7d87ae898c531e567fce73b15">TeleopControl::GetAxisValue</a></div><div class="ttdeci">float GetAxisValue(TeleopControl::FUNCTION_IDENTIFIER axis) const</div><div class="ttdef"><b>Definition:</b> <a href="_teleop_control_8cpp_source.html#l00355">TeleopControl.cpp:356</a></div></div>
 <div class="ttc" id="aclass_control_panel_manual_html_a98716b103b2aa09edef5485f26715202"><div class="ttname"><a href="class_control_panel_manual.html#a98716b103b2aa09edef5485f26715202">ControlPanelManual::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_manual_8cpp_source.html#l00044">ControlPanelManual.cpp:44</a></div></div>
-<div class="ttc" id="aclass_teleop_control_html_a31176133035fb6d4acc3b10e22246077"><div class="ttname"><a href="class_teleop_control.html#a31176133035fb6d4acc3b10e22246077">TeleopControl::SetAxisProfile</a></div><div class="ttdeci">void SetAxisProfile(TeleopControl::FUNCTION_IDENTIFIER axis, IDragonGamePad::AXIS_PROFILE profile)</div><div class="ttdef"><b>Definition:</b> <a href="_teleop_control_8cpp_source.html#l00332">TeleopControl.cpp:333</a></div></div>
 <div class="ttc" id="aclass_logger_html_a98d7aec19dcdfb9d8faa46d83d927883"><div class="ttname"><a href="class_logger.html#a98d7aec19dcdfb9d8faa46d83d927883">Logger::LogError</a></div><div class="ttdeci">void LogError(const std::string &amp;locationIdentifier, const std::string &amp;message)</div><div class="ttdoc">log a message</div></div>
 <div class="ttc" id="a_i_state_8h_html"><div class="ttname"><a href="_i_state_8h.html">IState.h</a></div></div>
 <div class="ttc" id="aclass_logger_html_ae85cfbef8b7e6940475a5012fa1935c6"><div class="ttname"><a href="class_logger.html#ae85cfbef8b7e6940475a5012fa1935c6">Logger::GetLogger</a></div><div class="ttdeci">static Logger * GetLogger()</div><div class="ttdoc">Find or create the singleton logger.</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00049">Logger.cpp:49</a></div></div>
@@ -171,7 +170,8 @@ $(document).ready(function(){initNavTree('_control_panel_manual_8cpp_source.html
 <div class="ttc" id="a_control_panel_8h_html"><div class="ttname"><a href="_control_panel_8h.html">ControlPanel.h</a></div></div>
 <div class="ttc" id="aclass_control_panel_manual_html_a1a3f6936d9834f9b8aff92f5cab937cb"><div class="ttname"><a href="class_control_panel_manual.html#a1a3f6936d9834f9b8aff92f5cab937cb">ControlPanelManual::AtTarget</a></div><div class="ttdeci">bool AtTarget() const override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_manual_8cpp_source.html#l00064">ControlPanelManual.cpp:64</a></div></div>
 <div class="ttc" id="aclass_teleop_control_html"><div class="ttname"><a href="class_teleop_control.html">TeleopControl</a></div><div class="ttdef"><b>Definition:</b> <a href="_teleop_control_8h_source.html#l00034">TeleopControl.h:35</a></div></div>
-<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00072">MechanismFactory.cpp:72</a></div></div>
+<div class="ttc" id="aclass_teleop_control_html_abcca1fa489e538a5f42c920747a4f598"><div class="ttname"><a href="class_teleop_control.html#abcca1fa489e538a5f42c920747a4f598">TeleopControl::GetInstance</a></div><div class="ttdeci">static TeleopControl * GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_teleop_control_8cpp_source.html#l00044">TeleopControl.cpp:44</a></div></div>
+<div class="ttc" id="aclass_mechanism_factory_html_a11b20a573ca93c56cb5da66ac5cbd2c0"><div class="ttname"><a href="class_mechanism_factory.html#a11b20a573ca93c56cb5da66ac5cbd2c0">MechanismFactory::GetMechanismFactory</a></div><div class="ttdeci">static MechanismFactory * GetMechanismFactory()</div><div class="ttdef"><b>Definition:</b> <a href="_mechanism_factory_8cpp_source.html#l00071">MechanismFactory.cpp:71</a></div></div>
 <div class="ttc" id="a_control_modes_8h_html"><div class="ttname"><a href="_control_modes_8h.html">ControlModes.h</a></div></div>
 <div class="ttc" id="aclass_control_panel_manual_html_a80feb5dd2a5106d5b0584a26fded5e10"><div class="ttname"><a href="class_control_panel_manual.html#a80feb5dd2a5106d5b0584a26fded5e10">ControlPanelManual::Run</a></div><div class="ttdeci">void Run() override</div><div class="ttdef"><b>Definition:</b> <a href="_control_panel_manual_8cpp_source.html#l00054">ControlPanelManual.cpp:54</a></div></div>
 <!-- start footer part -->
