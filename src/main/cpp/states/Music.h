@@ -2,26 +2,30 @@
 
 #include <vector>
 
-#include <frc/Joystick.h>
 #include <ctre/Phoenix.h>
 #include <string>
-#include <states/IState.h>
 #include <ctre/phoenix/motorcontrol/can/TalonFX.h>
 
 #define TALON_COUNT 4
 #define SONG_COUNT 11
 
-class Music : public IState
+class Music  
 {
     public:
-        void Init() override;
-        void Run() override;
+        enum STATES 
+        {
+            CLIMB,
+            AUTON
+        };
+        void Run();
+        void LoadMusicSelection(STATES state);
         Music(std::vector<TalonFX*> m_talon);
+        
 
     private:
-        int GetButton();
+        
 
-        void LoadMusicSelection(int offset);
+        
 
         Orchestra* m_orchestra;
         std::vector<TalonFX*> m_talon;
@@ -44,9 +48,7 @@ class Music : public IState
         int songSelection = 0;
         int timeToPlayLoops = 0;
 
-        frc::Joystick* m_joystick;
-        int lastButton = 0;
-        int lastPOV = 0;
+        
 
 
 };
