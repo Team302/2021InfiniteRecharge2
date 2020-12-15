@@ -57,9 +57,9 @@ private:
 	float m_minSpeed;
 	bool m_arcing;
 
-	const float SPEED_THRESHOLD = 1.5;
-	const float MIN_SPEED_COUNT_TIME = 0.5; //seconds before we start checking for wall collisions
+	const double SPEED_THRESHOLD = 1.5;
+	const double MIN_SPEED_COUNT_TIME = 0.5; //seconds before we start checking for wall collisions
 	const int UNDER_SPEED_COUNT_THRESHOLD = 4;
-	const float DECEL_TIME_MULTIPLIER = 0.85; //0.75
+	const double DECEL_TIME_MULTIPLIER = 0.85; //0.75
 };
 

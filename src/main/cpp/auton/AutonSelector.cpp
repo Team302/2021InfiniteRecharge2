@@ -15,9 +15,15 @@
 //====================================================================================================================================================
 
 //Includes
+//#include <filesystem>
+#include <iostream>
 #include <string>
+#include <system_error>
 #include <vector>
-#include <dirent.h>
+//#include <dirent.h>
+
+#include <wpi/FileSystem.h>
+#include <wpi/Twine.h>
 
 #include <frc/SmartDashboard/SendableChooser.h>
 #include <frc/SmartDashboard/SmartDashboard.h>
@@ -28,6 +34,9 @@
 
 
 using namespace std;
+using namespace wpi;
+using namespace wpi::sys::fs;
+//using namespace std::filesystem;
 
 //---------------------------------------------------------------------
 // Method: 		<<constructor>>
@@ -63,6 +72,18 @@ std::string AutonSelector::GetSelectedAutoFile()
 //---------------------------------------------------------------------
 void AutonSelector::FindXMLFileNames()
 {
+    Twine path ("/home/lvuser/auton/");
+	error_code error;
+	directory_iterator it (path, error);
+	while ( it != directory_iterator() )
+	{
+		auto file = it->path();
+		m_xmlFiles.emplace_back(string(file));
+		it.increment(error);
+	}
+
+	
+	/**
 	DIR* directory = opendir("/home/lvuser/auton/");
 	if (directory != nullptr)
 	{
@@ -88,6 +109,7 @@ void AutonSelector::FindXMLFileNames()
 	{
 		// error condition need to handle
 	}
+	**/
 }
 
 //---------------------------------------------------------------------

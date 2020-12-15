@@ -24,6 +24,7 @@
 #include <controllers/ControlData.h>
 #include <controllers/mechanisms/OpenLoopController.h>
 #include <controllers/mechanisms/VelocityRPSController.h>
+#include <controllers/mechanisms/VelocityDegreesPerSecController.h>
 
 using namespace std;
 
@@ -66,6 +67,7 @@ IMechController* MechControllerFactory::CreateMechController
             break;
 
         case ControlModes::CONTROL_TYPE::VELOCITY_DEGREES:
+            controller = new VelocityDegreesPerSecController( motor, target, controlData );
             break;
 
         case ControlModes::CONTROL_TYPE::VELOCITY_RPS:

@@ -16,12 +16,13 @@
 
 // C++ Includes
 #include <algorithm>
-#include <cmath>
+//#include <cmath>
 #include <memory>
 #include <string>
 
 // FRC includes
 #include <frc/Timer.h>
+#include <wpi/math>
 
 // Team 302 includes
 #include <auton/PrimitiveParams.h>
@@ -40,6 +41,10 @@
 
 using namespace std;
 using namespace frc;
+
+//constexpr double PI = 3.14159265358979323846;
+
+using namespace wpi::math;
 
 //Team302 includes
 
@@ -112,7 +117,7 @@ void TurnAngle::Init
 	// This won't be entirely accurate because of scrub and slippage, the encoder may show a slightly different distance
 	// but we'll use this to get approximately there and then use the gyro and a slow speed to finish it up. 
 	auto turningRadius = m_chassis->GetTrack() / 2.0;
-	auto arcLen = ((2.0 * M_PI * turningRadius) * delta) / 360.0;
+	auto arcLen = ((2.0 * pi * turningRadius) * delta) / 360.0;
 	m_leftPos = m_chassis->GetCurrentLeftPosition() + arcLen;
 	m_rightPos = m_chassis->GetCurrentRightPosition() - arcLen;
 
