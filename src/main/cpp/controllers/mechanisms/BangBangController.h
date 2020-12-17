@@ -22,18 +22,18 @@
 
 using namespace std;
 
-class TrapezoidController : public IMechController
+class BangBangController : public IMechController
 {
     public:
-        TrapezoidController() = delete;
-        TrapezoidController
+        BangBangController() = delete;
+        BangBangController
         (
-            shared_ptr<IDragonMotorController>     motor,
-            double                                 target,
-            shared_ptr<ControlData>                ControlData
+            shared_ptr<IDragonMotorController>      motor,
+            double                                  target,
+            shared_ptr<ControlData>                 ControlData
         );
 
-        ~TrapezoidController() = default;
+         ~BangBangController() = default;
 
         void Init() override;
         void UpdateTarget
@@ -41,13 +41,20 @@ class TrapezoidController : public IMechController
             double target
         ) override;
 
-        void Run()override;
+        void Run() override;
+
+        bool AtTarget() override;
 
     protected:
         double GetTarget() const { return m_target; }
+        double GetRPS() const;
 
     private:
         shared_ptr<IDragonMotorController>      m_motor;
         double                                  m_target;
         shared_ptr<ControlData>                 m_control;
+
 };
+
+/*Like velocitycontrol but with attarget,contol mode is percent output, if below target, 
+motor is 100% power, if above target motor is 0% power*/
