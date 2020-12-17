@@ -22,7 +22,7 @@
 				secondcrosshairy="0.25" />
 
 	<blinkin position = "front" 
-			 pwmId = 0/>
+			 pwmId = "0"/>
 
 	<!-- odometry xloc="0.0"
 	          yloc="0.0"
