@@ -70,6 +70,12 @@ DragonDigitalInput* DigitalInputFactory::CreateInput
     DragonDigitalInput* sensor = nullptr;
     switch ( type )
     {
+        case DigitalInputUsage::DIGITAL_SENSOR_USAGE::TURRET_ANGLE_MIN:
+            break;
+
+        case DigitalInputUsage::DIGITAL_SENSOR_USAGE::TURRET_ANGLE_MAX:
+            break;
+            
         default:
             std::cout << "==>>DigitalInputFactory::CreateInput unknown type " << type << std::endl;
             break;

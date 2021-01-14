@@ -104,4 +104,5 @@ DragonBlinkin* BlinkinDefn::ParseXML
     {
         blinkin = new DragonBlinkin(pwmId);
     }
+    return blinkin;
 }
